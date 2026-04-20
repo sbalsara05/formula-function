@@ -1,0 +1,287 @@
+<div style="background: #000; color: #fff; font-family: var(--font-sans); margin: -1rem -1.25rem; padding: 0; border-radius: var(--border-radius-lg); overflow: hidden; position: relative; min-height: 1100px;">
+
+  <div style="position: relative; z-index: 2;">
+
+    <div style="padding: 1rem 1.75rem; display: flex; justify-content: space-between; align-items: center; border-bottom: 0.5px solid #1a1a1a; background: rgba(0,0,0,0.7); position: relative; z-index: 10;">
+      <div style="display: flex; align-items: center; gap: 20px;">
+        <span style="font-family: var(--font-mono); font-size: 18px; font-weight: 500; letter-spacing: -0.5px;">f(x)</span>
+        <div style="display: flex; align-items: center; gap: 8px; font-family: var(--font-mono); font-size: 10px; letter-spacing: 1.5px; color: #666;">
+          <span>f(1)</span><span style="color: #333;">/</span><span>DRIVERS</span><span style="color: #333;">/</span><span>VETTEL</span><span style="color: #333;">/</span><span style="color: #aaa;">ANALYZE A LAP</span>
+        </div>
+      </div>
+      <div style="display: flex; gap: 8px;">
+        <button style="background: transparent; border: 0.5px solid #2a2a2a; color: #aaa; font-family: var(--font-mono); font-size: 10px; letter-spacing: 1px; padding: 6px 12px; border-radius: 4px; cursor: pointer;" onclick="sendPrompt('Upload my own onboard for analysis')">UPLOAD YOUR OWN ↗</button>
+        <button style="background: transparent; border: 0.5px solid #2a2a2a; color: #aaa; font-family: var(--font-mono); font-size: 10px; letter-spacing: 1px; padding: 6px 12px; border-radius: 4px; cursor: pointer;" onclick="sendPrompt('Back to Vettel page')">← BACK</button>
+      </div>
+    </div>
+
+    <div style="padding: 3rem 1.75rem 2rem;">
+      <div style="max-width: 640px;">
+        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 14px;">
+          <span style="width: 6px; height: 6px; border-radius: 50%; background: #1E3A8A;"></span>
+          <span style="font-family: var(--font-mono); font-size: 10px; letter-spacing: 2px; color: #aaa;">ANALYZE A LAP · SEBASTIAN VETTEL</span>
+        </div>
+        <h1 style="font-size: 42px; font-weight: 400; margin: 0 0 14px; letter-spacing: -1.5px; line-height: 1; color: #fff;">Pick a lap to reconstruct.</h1>
+        <p style="font-size: 14px; color: #888; line-height: 1.7; margin: 0 0 8px; max-width: 540px;">847 Vettel laps have been analyzed from onboard video using computer vision. Steering, braking, throttle, and racing-line data reconstructed frame-by-frame. Pick one to see the full breakdown.</p>
+        <p style="font-family: var(--font-mono); font-size: 10px; color: #555; letter-spacing: 1px;">CV PIPELINE · V2.3 · UPDATED BI-WEEKLY</p>
+      </div>
+    </div>
+
+    <div style="padding: 0 1.75rem 1.5rem;">
+      <div style="background: #080808; border: 1px solid #1a1a1a; border-radius: 10px; padding: 20px;">
+        <p style="font-family: var(--font-mono); font-size: 9px; letter-spacing: 1.5px; color: #555; margin: 0 0 14px;">FILTERS</p>
+
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;">
+
+          <div>
+            <p style="font-family: var(--font-mono); font-size: 9px; color: #888; letter-spacing: 0.5px; margin: 0 0 8px;">SEASON</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 4px;">
+              <span style="font-family: var(--font-mono); font-size: 10px; padding: 4px 8px; border-radius: 3px; background: #FF1E56; color: #fff; cursor: pointer;">ALL</span>
+              <span style="font-family: var(--font-mono); font-size: 10px; padding: 4px 8px; border-radius: 3px; border: 0.5px solid #2a2a2a; color: #aaa; cursor: pointer;">'07–'08 TR</span>
+              <span style="font-family: var(--font-mono); font-size: 10px; padding: 4px 8px; border-radius: 3px; border: 0.5px solid #2a2a2a; color: #aaa; cursor: pointer;">'09–'14 RB</span>
+              <span style="font-family: var(--font-mono); font-size: 10px; padding: 4px 8px; border-radius: 3px; border: 0.5px solid #2a2a2a; color: #aaa; cursor: pointer;">'15–'20 FER</span>
+              <span style="font-family: var(--font-mono); font-size: 10px; padding: 4px 8px; border-radius: 3px; border: 0.5px solid #2a2a2a; color: #aaa; cursor: pointer;">'21–'22 AM</span>
+            </div>
+          </div>
+
+          <div>
+            <p style="font-family: var(--font-mono); font-size: 9px; color: #888; letter-spacing: 0.5px; margin: 0 0 8px;">SESSION</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 4px;">
+              <span style="font-family: var(--font-mono); font-size: 10px; padding: 4px 8px; border-radius: 3px; background: #FF1E56; color: #fff; cursor: pointer;">ALL</span>
+              <span style="font-family: var(--font-mono); font-size: 10px; padding: 4px 8px; border-radius: 3px; border: 0.5px solid #2a2a2a; color: #aaa; cursor: pointer;">QUALI</span>
+              <span style="font-family: var(--font-mono); font-size: 10px; padding: 4px 8px; border-radius: 3px; border: 0.5px solid #2a2a2a; color: #aaa; cursor: pointer;">RACE</span>
+              <span style="font-family: var(--font-mono); font-size: 10px; padding: 4px 8px; border-radius: 3px; border: 0.5px solid #2a2a2a; color: #aaa; cursor: pointer;">PRACTICE</span>
+            </div>
+          </div>
+
+          <div>
+            <p style="font-family: var(--font-mono); font-size: 9px; color: #888; letter-spacing: 0.5px; margin: 0 0 8px;">CONDITIONS</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 4px;">
+              <span style="font-family: var(--font-mono); font-size: 10px; padding: 4px 8px; border-radius: 3px; background: #FF1E56; color: #fff; cursor: pointer;">ALL</span>
+              <span style="font-family: var(--font-mono); font-size: 10px; padding: 4px 8px; border-radius: 3px; border: 0.5px solid #2a2a2a; color: #aaa; cursor: pointer;">DRY</span>
+              <span style="font-family: var(--font-mono); font-size: 10px; padding: 4px 8px; border-radius: 3px; border: 0.5px solid #2a2a2a; color: #aaa; cursor: pointer;">WET</span>
+              <span style="font-family: var(--font-mono); font-size: 10px; padding: 4px 8px; border-radius: 3px; border: 0.5px solid #2a2a2a; color: #aaa; cursor: pointer;">MIXED</span>
+            </div>
+          </div>
+
+          <div>
+            <p style="font-family: var(--font-mono); font-size: 9px; color: #888; letter-spacing: 0.5px; margin: 0 0 8px;">TRACK</p>
+            <input type="text" placeholder="Search track..." style="width: 100%; font-size: 11px; padding: 4px 8px; background: #0a0a0a; border: 0.5px solid #2a2a2a; border-radius: 3px; color: #fff; font-family: var(--font-mono); box-sizing: border-box;"/>
+          </div>
+        </div>
+
+        <div style="border-top: 0.5px solid #1a1a1a; margin-top: 16px; padding-top: 14px; display: flex; justify-content: space-between; align-items: center;">
+          <p style="font-family: var(--font-mono); font-size: 10px; color: #888; margin: 0; letter-spacing: 0.5px;">847 LAPS AVAILABLE · SHOWING 8</p>
+          <div style="display: flex; gap: 4px; font-family: var(--font-mono); font-size: 10px;">
+            <span style="color: #666;">SORT:</span>
+            <span style="color: #FF1E56; cursor: pointer;">FEATURED</span>
+            <span style="color: #333;">·</span>
+            <span style="color: #aaa; cursor: pointer;">CHRONOLOGICAL</span>
+            <span style="color: #333;">·</span>
+            <span style="color: #aaa; cursor: pointer;">FASTEST</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="padding: 0 1.75rem 2rem;">
+      <p style="font-family: var(--font-mono); font-size: 10px; letter-spacing: 2px; color: #FF1E56; margin: 0 0 6px;">FEATURED LAPS</p>
+      <p style="font-size: 13px; color: #888; margin: 0 0 18px; max-width: 520px; line-height: 1.6;">Career-defining laps, curated. Each has been analyzed in depth — click to see the reconstruction.</p>
+
+      <div style="display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 12px;">
+
+        <div style="aspect-ratio: 16/10; background: linear-gradient(135deg, #000814, #000); border: 1px solid #1E3A8A; border-radius: 8px; overflow: hidden; position: relative; cursor: pointer; grid-row: span 2;" onclick="sendPrompt('Analyze Vettel Monaco 2011 Q3 lap')">
+          <div style="position: absolute; inset: 0; background: radial-gradient(ellipse at 40% 40%, #1E3A8A 0%, transparent 60%); opacity: 0.6;"></div>
+          <div style="position: absolute; inset: 0; background: radial-gradient(circle at 50% 50%, transparent 35%, #000 92%);"></div>
+          <svg viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice" style="position: absolute; inset: 0; width: 100%; height: 100%;" aria-hidden="true">
+            <path d="M 30 140 L 60 140 Q 75 130, 85 90 L 120 90 Q 140 105, 155 140 L 195 140 Q 215 155, 230 195 L 260 198 Q 275 180, 290 140 L 330 140 Q 345 120, 360 80 L 380 80" stroke="#FF1E56" stroke-width="1.8" fill="none" opacity="0.85"/>
+          </svg>
+          <div style="position: absolute; top: 14px; left: 14px; display: flex; gap: 6px;">
+            <span style="font-family: var(--font-mono); font-size: 9px; padding: 3px 7px; background: rgba(255,215,0,0.15); border: 0.5px solid rgba(255,215,0,0.4); border-radius: 3px; color: #FFD700; letter-spacing: 1.5px;">POLE</span>
+            <span style="font-family: var(--font-mono); font-size: 9px; padding: 3px 7px; background: rgba(255,30,86,0.15); border: 0.5px solid rgba(255,30,86,0.4); border-radius: 3px; color: #FF1E56; letter-spacing: 1.5px;">FEATURED</span>
+          </div>
+          <div style="position: absolute; bottom: 14px; left: 18px; right: 18px;">
+            <p style="font-family: var(--font-mono); font-size: 9px; color: #FFD700; letter-spacing: 1.5px; margin: 0 0 4px;">2011 · MONACO · Q3</p>
+            <p style="font-size: 22px; font-weight: 400; margin: 0; color: #fff; letter-spacing: -0.5px;">Monaco pole lap</p>
+            <p style="font-family: var(--font-mono); font-size: 10px; color: #aaa; margin: 4px 0 0; letter-spacing: 1px;">1:13.556 · RED BULL RB7</p>
+          </div>
+        </div>
+
+        <div style="aspect-ratio: 16/10; background: linear-gradient(135deg, #1a0d00, #000); border: 0.5px solid #2a1500; border-radius: 8px; overflow: hidden; position: relative; cursor: pointer;" onclick="sendPrompt('Analyze Vettel Monza 2008 Q3 lap')">
+          <div style="position: absolute; inset: 0; background: radial-gradient(ellipse at 40% 50%, #E60000 0%, transparent 60%); opacity: 0.5;"></div>
+          <div style="position: absolute; inset: 0; background: radial-gradient(circle at 50% 50%, transparent 35%, #000 92%);"></div>
+          <svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" style="position: absolute; inset: 0; width: 100%; height: 100%;" aria-hidden="true">
+            <path d="M 30 120 L 90 120 Q 112 108, 130 70 L 180 70 Q 210 88, 230 120 L 290 120 Q 310 104, 325 72 L 370 72" stroke="#FF1E56" stroke-width="1.5" fill="none" opacity="0.8"/>
+          </svg>
+          <div style="position: absolute; top: 12px; left: 14px;"><span style="font-family: var(--font-mono); font-size: 9px; padding: 3px 7px; background: rgba(255,215,0,0.15); border: 0.5px solid rgba(255,215,0,0.4); border-radius: 3px; color: #FFD700; letter-spacing: 1.5px;">FIRST POLE</span></div>
+          <div style="position: absolute; bottom: 12px; left: 14px;">
+            <p style="font-family: var(--font-mono); font-size: 9px; color: #FFD700; letter-spacing: 1.5px; margin: 0;">2008 · MONZA</p>
+            <p style="font-size: 15px; font-weight: 500; margin: 4px 0 0; color: #fff;">Youngest pole-sitter</p>
+            <p style="font-family: var(--font-mono); font-size: 9px; color: #aaa; margin: 2px 0 0;">1:37.555 · TORO ROSSO</p>
+          </div>
+        </div>
+
+        <div style="aspect-ratio: 16/10; background: linear-gradient(135deg, #000814, #000); border: 0.5px solid #1a2847; border-radius: 8px; overflow: hidden; position: relative; cursor: pointer;" onclick="sendPrompt('Analyze Vettel Abu Dhabi 2010 Q3')">
+          <div style="position: absolute; inset: 0; background: radial-gradient(ellipse at 55% 50%, #1E3A8A 0%, transparent 60%); opacity: 0.55;"></div>
+          <div style="position: absolute; inset: 0; background: radial-gradient(circle at 50% 50%, transparent 35%, #000 92%);"></div>
+          <svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" style="position: absolute; inset: 0; width: 100%; height: 100%;" aria-hidden="true">
+            <path d="M 30 120 Q 60 110, 85 85 L 145 85 Q 175 98, 195 120 L 255 120 Q 285 105, 310 80 L 370 80" stroke="#FF1E56" stroke-width="1.5" fill="none" opacity="0.8"/>
+          </svg>
+          <div style="position: absolute; top: 12px; left: 14px;"><span style="font-family: var(--font-mono); font-size: 9px; padding: 3px 7px; background: rgba(255,215,0,0.15); border: 0.5px solid rgba(255,215,0,0.4); border-radius: 3px; color: #FFD700; letter-spacing: 1.5px;">TITLE DECIDER</span></div>
+          <div style="position: absolute; bottom: 12px; left: 14px;">
+            <p style="font-family: var(--font-mono); font-size: 9px; color: #FFD700; letter-spacing: 1.5px; margin: 0;">2010 · ABU DHABI</p>
+            <p style="font-size: 15px; font-weight: 500; margin: 4px 0 0; color: #fff;">First WDC secured</p>
+            <p style="font-family: var(--font-mono); font-size: 9px; color: #aaa; margin: 2px 0 0;">1:39.394 · RED BULL</p>
+          </div>
+        </div>
+
+        <div style="aspect-ratio: 16/10; background: linear-gradient(135deg, #000814, #000); border: 0.5px solid #1a2847; border-radius: 8px; overflow: hidden; position: relative; cursor: pointer;" onclick="sendPrompt('Analyze Vettel Malaysia 2012 Q3')">
+          <div style="position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 50%, #1E3A8A 0%, transparent 60%); opacity: 0.55;"></div>
+          <div style="position: absolute; inset: 0; background: radial-gradient(circle at 50% 50%, transparent 35%, #000 92%);"></div>
+          <svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" style="position: absolute; inset: 0; width: 100%; height: 100%;" aria-hidden="true">
+            <path d="M 30 120 L 75 120 Q 95 108, 110 75 L 160 75 Q 180 90, 195 120 L 240 120 Q 260 135, 275 165 L 320 165 Q 340 140, 355 120" stroke="#FF1E56" stroke-width="1.5" fill="none" opacity="0.8"/>
+          </svg>
+          <div style="position: absolute; top: 12px; left: 14px;"><span style="font-family: var(--font-mono); font-size: 9px; padding: 3px 7px; background: rgba(0,229,255,0.15); border: 0.5px solid rgba(0,229,255,0.4); border-radius: 3px; color: #00E5FF; letter-spacing: 1.5px;">MIXED</span></div>
+          <div style="position: absolute; bottom: 12px; left: 14px;">
+            <p style="font-family: var(--font-mono); font-size: 9px; color: #FFD700; letter-spacing: 1.5px; margin: 0;">2012 · MALAYSIA</p>
+            <p style="font-size: 15px; font-weight: 500; margin: 4px 0 0; color: #fff;">Wet-dry masterclass</p>
+            <p style="font-family: var(--font-mono); font-size: 9px; color: #aaa; margin: 2px 0 0;">+0.6 TO TEAMMATE</p>
+          </div>
+        </div>
+
+        <div style="aspect-ratio: 16/10; background: linear-gradient(135deg, #000814, #000); border: 0.5px solid #1a2847; border-radius: 8px; overflow: hidden; position: relative; cursor: pointer;" onclick="sendPrompt('Analyze Vettel Singapore 2013')">
+          <div style="position: absolute; inset: 0; background: radial-gradient(ellipse at 55% 50%, #1E3A8A 0%, transparent 60%); opacity: 0.55;"></div>
+          <div style="position: absolute; inset: 0; background: radial-gradient(circle at 50% 50%, transparent 35%, #000 92%);"></div>
+          <svg viewBox="0 0 400 225" preserveAspectRatio="xMidYMid slice" style="position: absolute; inset: 0; width: 100%; height: 100%;" aria-hidden="true">
+            <path d="M 30 120 Q 65 110, 95 80 L 150 80 Q 180 95, 205 120 L 255 120 Q 285 138, 310 170 L 370 170" stroke="#FF1E56" stroke-width="1.5" fill="none" opacity="0.8"/>
+          </svg>
+          <div style="position: absolute; top: 12px; left: 14px;"><span style="font-family: var(--font-mono); font-size: 9px; padding: 3px 7px; background: rgba(255,215,0,0.15); border: 0.5px solid rgba(255,215,0,0.4); border-radius: 3px; color: #FFD700; letter-spacing: 1.5px;">WIN</span></div>
+          <div style="position: absolute; bottom: 12px; left: 14px;">
+            <p style="font-family: var(--font-mono); font-size: 9px; color: #FFD700; letter-spacing: 1.5px; margin: 0;">2013 · SINGAPORE</p>
+            <p style="font-size: 15px; font-weight: 500; margin: 4px 0 0; color: #fff;">Peak dominance</p>
+            <p style="font-family: var(--font-mono); font-size: 9px; color: #aaa; margin: 2px 0 0;">+32.6s MARGIN</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="padding: 0 1.75rem 3rem;">
+      <p style="font-family: var(--font-mono); font-size: 10px; letter-spacing: 2px; color: #FF1E56; margin: 0 0 6px;">ALL ANALYZED LAPS</p>
+      <p style="font-size: 13px; color: #888; margin: 0 0 18px; max-width: 520px; line-height: 1.6;">Scroll or filter the full library. Every lap opens into the analysis page.</p>
+
+      <div style="background: #080808; border: 1px solid #1a1a1a; border-radius: 10px; overflow: hidden;">
+        <div style="display: grid; grid-template-columns: 0.7fr 1.6fr 1.2fr 1fr 0.8fr 0.8fr 0.5fr; padding: 12px 20px; border-bottom: 0.5px solid #1a1a1a; font-family: var(--font-mono); font-size: 9px; color: #555; letter-spacing: 1.5px;">
+          <span>YEAR</span><span>TRACK</span><span>TEAM</span><span>SESSION</span><span>TIME</span><span>RESULT</span><span></span>
+        </div>
+
+        <div class="lap-row" style="display: grid; grid-template-columns: 0.7fr 1.6fr 1.2fr 1fr 0.8fr 0.8fr 0.5fr; padding: 14px 20px; border-bottom: 0.5px solid #1a1a1a; font-size: 12px; align-items: center; cursor: pointer; transition: background 0.15s;" onclick="sendPrompt('Analyze Vettel Suzuka 2009 Q3')">
+          <span style="font-family: var(--font-mono); color: #888;">2009</span>
+          <span style="color: #fff;">Suzuka · Japan</span>
+          <span style="color: #aaa;"><span style="width: 6px; height: 6px; background: #1E3A8A; border-radius: 50%; display: inline-block; margin-right: 6px;"></span>Red Bull</span>
+          <span style="font-family: var(--font-mono); color: #aaa; font-size: 10px; letter-spacing: 0.5px;">QUALI Q3</span>
+          <span style="font-family: var(--font-mono); color: #fff; font-size: 11px;">1:32.160</span>
+          <span style="font-family: var(--font-mono); color: #FFD700; font-size: 10px; letter-spacing: 0.5px;">POLE · WIN</span>
+          <span style="font-family: var(--font-mono); color: #FF1E56; font-size: 10px; letter-spacing: 1px;">→</span>
+        </div>
+
+        <div class="lap-row" style="display: grid; grid-template-columns: 0.7fr 1.6fr 1.2fr 1fr 0.8fr 0.8fr 0.5fr; padding: 14px 20px; border-bottom: 0.5px solid #1a1a1a; font-size: 12px; align-items: center; cursor: pointer; transition: background 0.15s;" onclick="sendPrompt('Analyze Vettel Silverstone 2010')">
+          <span style="font-family: var(--font-mono); color: #888;">2010</span>
+          <span style="color: #fff;">Silverstone · UK</span>
+          <span style="color: #aaa;"><span style="width: 6px; height: 6px; background: #1E3A8A; border-radius: 50%; display: inline-block; margin-right: 6px;"></span>Red Bull</span>
+          <span style="font-family: var(--font-mono); color: #aaa; font-size: 10px; letter-spacing: 0.5px;">QUALI Q3</span>
+          <span style="font-family: var(--font-mono); color: #fff; font-size: 11px;">1:29.615</span>
+          <span style="font-family: var(--font-mono); color: #FFD700; font-size: 10px; letter-spacing: 0.5px;">POLE</span>
+          <span style="font-family: var(--font-mono); color: #FF1E56; font-size: 10px; letter-spacing: 1px;">→</span>
+        </div>
+
+        <div class="lap-row" style="display: grid; grid-template-columns: 0.7fr 1.6fr 1.2fr 1fr 0.8fr 0.8fr 0.5fr; padding: 14px 20px; border-bottom: 0.5px solid #1a1a1a; font-size: 12px; align-items: center; cursor: pointer; transition: background 0.15s;" onclick="sendPrompt('Analyze Vettel Spa 2013')">
+          <span style="font-family: var(--font-mono); color: #888;">2013</span>
+          <span style="color: #fff;">Spa · Belgium</span>
+          <span style="color: #aaa;"><span style="width: 6px; height: 6px; background: #1E3A8A; border-radius: 50%; display: inline-block; margin-right: 6px;"></span>Red Bull</span>
+          <span style="font-family: var(--font-mono); color: #aaa; font-size: 10px; letter-spacing: 0.5px;">RACE L42</span>
+          <span style="font-family: var(--font-mono); color: #fff; font-size: 11px;">1:50.756</span>
+          <span style="font-family: var(--font-mono); color: #FFD700; font-size: 10px; letter-spacing: 0.5px;">WIN</span>
+          <span style="font-family: var(--font-mono); color: #FF1E56; font-size: 10px; letter-spacing: 1px;">→</span>
+        </div>
+
+        <div class="lap-row" style="display: grid; grid-template-columns: 0.7fr 1.6fr 1.2fr 1fr 0.8fr 0.8fr 0.5fr; padding: 14px 20px; border-bottom: 0.5px solid #1a1a1a; font-size: 12px; align-items: center; cursor: pointer; transition: background 0.15s;" onclick="sendPrompt('Analyze Vettel India 2013')">
+          <span style="font-family: var(--font-mono); color: #888;">2013</span>
+          <span style="color: #fff;">Buddh · India</span>
+          <span style="color: #aaa;"><span style="width: 6px; height: 6px; background: #1E3A8A; border-radius: 50%; display: inline-block; margin-right: 6px;"></span>Red Bull</span>
+          <span style="font-family: var(--font-mono); color: #aaa; font-size: 10px; letter-spacing: 0.5px;">QUALI Q3</span>
+          <span style="font-family: var(--font-mono); color: #fff; font-size: 11px;">1:24.119</span>
+          <span style="font-family: var(--font-mono); color: #FFD700; font-size: 10px; letter-spacing: 0.5px;">POLE · WDC4</span>
+          <span style="font-family: var(--font-mono); color: #FF1E56; font-size: 10px; letter-spacing: 1px;">→</span>
+        </div>
+
+        <div class="lap-row" style="display: grid; grid-template-columns: 0.7fr 1.6fr 1.2fr 1fr 0.8fr 0.8fr 0.5fr; padding: 14px 20px; border-bottom: 0.5px solid #1a1a1a; font-size: 12px; align-items: center; cursor: pointer; transition: background 0.15s;" onclick="sendPrompt('Analyze Vettel Hungary 2015')">
+          <span style="font-family: var(--font-mono); color: #888;">2015</span>
+          <span style="color: #fff;">Hungaroring</span>
+          <span style="color: #aaa;"><span style="width: 6px; height: 6px; background: #DC0000; border-radius: 50%; display: inline-block; margin-right: 6px;"></span>Ferrari</span>
+          <span style="font-family: var(--font-mono); color: #aaa; font-size: 10px; letter-spacing: 0.5px;">RACE L69</span>
+          <span style="font-family: var(--font-mono); color: #fff; font-size: 11px;">1:24.921</span>
+          <span style="font-family: var(--font-mono); color: #FFD700; font-size: 10px; letter-spacing: 0.5px;">WIN</span>
+          <span style="font-family: var(--font-mono); color: #FF1E56; font-size: 10px; letter-spacing: 1px;">→</span>
+        </div>
+
+        <div class="lap-row" style="display: grid; grid-template-columns: 0.7fr 1.6fr 1.2fr 1fr 0.8fr 0.8fr 0.5fr; padding: 14px 20px; border-bottom: 0.5px solid #1a1a1a; font-size: 12px; align-items: center; cursor: pointer; transition: background 0.15s;" onclick="sendPrompt('Analyze Vettel Azerbaijan 2017')">
+          <span style="font-family: var(--font-mono); color: #888;">2017</span>
+          <span style="color: #fff;">Baku · Azerbaijan</span>
+          <span style="color: #aaa;"><span style="width: 6px; height: 6px; background: #DC0000; border-radius: 50%; display: inline-block; margin-right: 6px;"></span>Ferrari</span>
+          <span style="font-family: var(--font-mono); color: #aaa; font-size: 10px; letter-spacing: 0.5px;">RACE L22</span>
+          <span style="font-family: var(--font-mono); color: #fff; font-size: 11px;">1:43.882</span>
+          <span style="font-family: var(--font-mono); color: #aaa; font-size: 10px; letter-spacing: 0.5px;">P4</span>
+          <span style="font-family: var(--font-mono); color: #FF1E56; font-size: 10px; letter-spacing: 1px;">→</span>
+        </div>
+
+        <div class="lap-row" style="display: grid; grid-template-columns: 0.7fr 1.6fr 1.2fr 1fr 0.8fr 0.8fr 0.5fr; padding: 14px 20px; border-bottom: 0.5px solid #1a1a1a; font-size: 12px; align-items: center; cursor: pointer; transition: background 0.15s;" onclick="sendPrompt('Analyze Vettel Canada 2019')">
+          <span style="font-family: var(--font-mono); color: #888;">2019</span>
+          <span style="color: #fff;">Montreal · Canada</span>
+          <span style="color: #aaa;"><span style="width: 6px; height: 6px; background: #DC0000; border-radius: 50%; display: inline-block; margin-right: 6px;"></span>Ferrari</span>
+          <span style="font-family: var(--font-mono); color: #aaa; font-size: 10px; letter-spacing: 0.5px;">RACE L48</span>
+          <span style="font-family: var(--font-mono); color: #fff; font-size: 11px;">1:13.078</span>
+          <span style="font-family: var(--font-mono); color: #aaa; font-size: 10px; letter-spacing: 0.5px;">P2 · CONTESTED</span>
+          <span style="font-family: var(--font-mono); color: #FF1E56; font-size: 10px; letter-spacing: 1px;">→</span>
+        </div>
+
+        <div class="lap-row" style="display: grid; grid-template-columns: 0.7fr 1.6fr 1.2fr 1fr 0.8fr 0.8fr 0.5fr; padding: 14px 20px; font-size: 12px; align-items: center; cursor: pointer; transition: background 0.15s;" onclick="sendPrompt('Analyze Vettel Baku 2021')">
+          <span style="font-family: var(--font-mono); color: #888;">2021</span>
+          <span style="color: #fff;">Baku · Azerbaijan</span>
+          <span style="color: #aaa;"><span style="width: 6px; height: 6px; background: #006F62; border-radius: 50%; display: inline-block; margin-right: 6px;"></span>Aston Martin</span>
+          <span style="font-family: var(--font-mono); color: #aaa; font-size: 10px; letter-spacing: 0.5px;">RACE L49</span>
+          <span style="font-family: var(--font-mono); color: #fff; font-size: 11px;">1:46.114</span>
+          <span style="font-family: var(--font-mono); color: #FFD700; font-size: 10px; letter-spacing: 0.5px;">P2 PODIUM</span>
+          <span style="font-family: var(--font-mono); color: #FF1E56; font-size: 10px; letter-spacing: 1px;">→</span>
+        </div>
+
+        <div style="padding: 12px 20px; text-align: center; border-top: 0.5px solid #1a1a1a;">
+          <button style="background: transparent; border: 0.5px solid #2a2a2a; color: #aaa; font-family: var(--font-mono); font-size: 10px; letter-spacing: 1px; padding: 8px 16px; border-radius: 4px; cursor: pointer;" onclick="sendPrompt('Load more Vettel laps')">LOAD MORE · 839 REMAINING ↗</button>
+        </div>
+      </div>
+    </div>
+
+    <div style="padding: 0 1.75rem 2rem;">
+      <div style="background: #050505; border: 0.5px solid #1a1a1a; border-radius: 10px; padding: 20px; display: flex; gap: 20px; align-items: center;">
+        <div style="width: 50px; height: 50px; border-radius: 8px; background: linear-gradient(135deg, #1a0d00, #000); display: flex; align-items: center; justify-content: center; flex-shrink: 0; border: 0.5px solid #3a2a00;">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M 3 17 L 11 6 L 19 17 Z" stroke="#FFD700" stroke-width="1.2" fill="none"/></svg>
+        </div>
+        <div style="flex: 1;">
+          <p style="font-family: var(--font-mono); font-size: 10px; color: #FFD700; letter-spacing: 1.5px; margin: 0 0 4px;">HAVE YOUR OWN ONBOARD?</p>
+          <p style="font-size: 13px; color: #ccc; margin: 0 0 2px;">Upload a video, we'll run the CV pipeline on it.</p>
+          <p style="font-family: var(--font-mono); font-size: 10px; color: #666; margin: 0; letter-spacing: 0.5px;">MP4 · MOV · YOUTUBE LINK · PROCESSING ~8 MIN</p>
+        </div>
+        <button style="background: transparent; border: 0.5px solid #3a2a00; color: #FFD700; font-family: var(--font-mono); font-size: 10px; letter-spacing: 1.5px; padding: 10px 18px; border-radius: 4px; cursor: pointer; flex-shrink: 0;" onclick="sendPrompt('Upload my onboard for CV analysis')">UPLOAD ↗</button>
+      </div>
+    </div>
+
+    <div style="padding: 0 1.75rem 2rem; text-align: center; border-top: 0.5px solid #1a1a1a; padding-top: 16px;">
+      <p style="font-family: var(--font-mono); font-size: 9px; color: #555; letter-spacing: 1px;">[PLACEHOLDER · LAP LIBRARY COUNT ILLUSTRATIVE · FILTER STATE NOT WIRED]</p>
+    </div>
+
+  </div>
+
+  <style>
+    .lap-row:hover { background: rgba(255,30,86,0.04); }
+  </style>
+
+</div>

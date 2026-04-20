@@ -1,0 +1,123 @@
+@import "tailwindcss";
+
+/* ─── Dynamic / per-page CSS vars ─────────────────────────────────────────── */
+/*
+  --color-entity is the only truly dynamic color.
+  Set it on a page's root element via inline style to scope entity colors:
+    <main style={{ "--color-entity": "var(--color-ferrari)" } as React.CSSProperties}>
+  All child components reference var(--color-entity) for accent treatments.
+*/
+:root {
+  --color-entity: #ffffff;
+}
+
+/* ─── Tailwind v4 theme ────────────────────────────────────────────────────── */
+@theme {
+  /* Series identity */
+  --color-f1: #ff1e56;
+  --color-f2: #00e5ff;
+  --color-f3: #b026ff;
+
+  /* System neutrals */
+  --color-surface: #080808;
+  --color-surface-elevated: #0a0a0a;
+  --color-border-subtle: #1a1a1a;
+  --color-border-visible: #2a2a2a;
+
+  /* Text scale */
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #aaaaaa;
+  --color-text-dim: #666666;
+  --color-text-disabled: #333333;
+
+  /* Semantic */
+  --color-positive: #5fb87c;
+  --color-warning: #ffd700;
+  --color-negative: #ff1e56;
+  --color-rain: #378add;
+
+  /* Team liveries — resolved from data via var(--color-{team}) */
+  --color-ferrari: #dc0000;
+  --color-ferrari-accent: #ffd700;
+  --color-redbull: #1e3a8a;
+  --color-mercedes: #00d2be;
+  --color-mclaren: #ff8700;
+  --color-astonmartin: #006f62;
+  --color-prema: #e8001c;
+  --color-mclaren-papaya: #ff8700;
+
+  /* Driver-specific */
+  --color-senna: #ff8700;
+  --color-vettel: #1e3a8a;
+  --color-leclerc: #dc0000;
+  --color-hamilton: #00d2be;
+
+  /* Venue palettes */
+  --color-spa: #5fb87c;
+  --color-spa-deep: #2c5f3e;
+
+  /* Border radius */
+  --radius-pill: 4px;
+  --radius-card-sm: 6px;
+  --radius-card-md: 8px;
+  --radius-card-lg: 10px;
+
+  /* Spacing */
+  --page-padding-x: 1.75rem;
+  --hero-height: 620px;
+
+  /* Animation */
+  --reel-dwell: 5000ms;
+  --reel-transition: 900ms;
+}
+
+/* Font stack — mapped from next/font variables set on <html> */
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-serif: var(--font-spectral);
+}
+
+/* ─── Base ─────────────────────────────────────────────────────────────────── */
+html {
+  background: #000;
+  color-scheme: dark;
+}
+
+body {
+  background: #000;
+  color: #fff;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Monospace utility — applied to all UI labels, stats, metadata */
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+/* ─── Reel trace draw animation ────────────────────────────────────────────── */
+@keyframes traceIn {
+  0%   { stroke-dashoffset: 500; opacity: 0; }
+  15%  { opacity: 0.88; }
+  70%  { stroke-dashoffset: 0; opacity: 0.88; }
+  100% { stroke-dashoffset: 0; opacity: 0.88; }
+}
+
+/* ─── Scrollbar ────────────────────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #000;
+}
+::-webkit-scrollbar-thumb {
+  background: #2a2a2a;
+  border-radius: 2px;
+}

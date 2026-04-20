@@ -1,0 +1,422 @@
+<div style="background: #000; color: #fff; font-family: var(--font-sans); margin: -1rem -1.25rem; padding: 0; border-radius: var(--border-radius-lg); overflow: hidden; position: relative; min-height: 2200px;">
+
+  <div style="position: relative; z-index: 2;">
+
+    <div style="padding: 1rem 1.75rem; display: flex; justify-content: space-between; align-items: center; border-bottom: 0.5px solid #1a1a1a; background: rgba(0,0,0,0.7); position: relative; z-index: 10;">
+      <div style="display: flex; align-items: center; gap: 20px;">
+        <span style="font-family: var(--font-mono); font-size: 18px; font-weight: 500; letter-spacing: -0.5px;">f(x)</span>
+        <div style="display: flex; align-items: center; gap: 8px; font-family: var(--font-mono); font-size: 10px; letter-spacing: 1.5px; color: #666;">
+          <span>f(2) / f(3)</span><span style="color: #333;">/</span><span>TEAMS</span><span style="color: #333;">/</span><span style="color: #aaa;">PREMA RACING</span>
+        </div>
+      </div>
+      <div style="display: flex; gap: 8px;">
+        <button style="background: transparent; border: 0.5px solid #2a2a2a; color: #aaa; font-family: var(--font-mono); font-size: 10px; letter-spacing: 1px; padding: 6px 12px; border-radius: 4px; cursor: pointer;" onclick="sendPrompt('Compare Prema to another junior team')">COMPARE ↗</button>
+        <button style="background: transparent; border: 0.5px solid #00557a; color: #00E5FF; font-family: var(--font-mono); font-size: 10px; letter-spacing: 1px; padding: 6px 12px; border-radius: 4px; cursor: pointer;" onclick="sendPrompt('Analyze a Prema lap')">ANALYZE A LAP ↗</button>
+        <button style="background: transparent; border: 0.5px solid #2a2a2a; color: #aaa; font-family: var(--font-mono); font-size: 10px; letter-spacing: 1px; padding: 6px 12px; border-radius: 4px; cursor: pointer;">SHARE</button>
+      </div>
+    </div>
+
+    <div style="position: relative; width: 100%; height: 620px; overflow: hidden;">
+      <div style="position: absolute; inset: 0; background: linear-gradient(180deg, #000 0%, #001520 25%, #002030 50%, #001520 78%, #000 100%);"></div>
+      <div style="position: absolute; inset: 0; background: radial-gradient(ellipse at 60% 50%, #00E5FF 0%, #00E5FF 8%, transparent 40%); opacity: 0.28;"></div>
+      <div style="position: absolute; inset: 0; background: radial-gradient(ellipse at 80% 80%, transparent 30%, #000 85%);"></div>
+
+      <svg style="position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0.22;" viewBox="0 0 800 620" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <defs><filter id="prG" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="3"/></filter></defs>
+        <g filter="url(#prG)">
+          <path d="M 0 140 Q 200 100, 400 180 T 800 160" stroke="#00E5FF" stroke-width="1" fill="none"/>
+          <path d="M 0 440 Q 300 480, 550 420 T 800 460" stroke="#00557a" stroke-width="1" fill="none"/>
+        </g>
+      </svg>
+
+      <div id="preReel" style="position: absolute; top: 40px; bottom: 120px; left: 48%; right: 5%; border-radius: 12px; overflow: hidden; border: 0.5px solid #003a47; background: #000;">
+
+        <div class="pre-slide" data-i="0" style="position: absolute; inset: 0; opacity: 1; transition: opacity 0.9s ease;">
+          <div style="position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 35%, #DC0000 0%, #DC0000 25%, transparent 62%); opacity: 0.75;"></div>
+          <div style="position: absolute; inset: 0; background: radial-gradient(circle at 50% 50%, transparent 32%, #000 94%);"></div>
+          <div style="position: absolute; top: 14px; left: 16px; font-family: var(--font-mono); font-size: 9px; color: #DC0000; letter-spacing: 1.5px;">GRADUATE · 01</div>
+          <div style="position: absolute; top: 14px; right: 16px; font-family: var(--font-mono); font-size: 10px; color: #fff; letter-spacing: 1.5px; background: rgba(0,0,0,0.5); padding: 3px 9px; border-radius: 3px; border: 0.5px solid #333;">F2 CHAMPION</div>
+          <div style="position: absolute; bottom: 44px; left: 20px; right: 20px;">
+            <p style="font-family: var(--font-mono); font-size: 9px; color: #00E5FF; letter-spacing: 1.5px; margin: 0 0 4px;">F2 2017 · FDA · → FERRARI F1</p>
+            <p style="font-size: 28px; font-weight: 400; margin: 0; color: #fff; letter-spacing: -0.8px;">Charles Leclerc</p>
+            <p style="font-family: var(--font-mono); font-size: 10px; color: #aaa; margin: 6px 0 0; letter-spacing: 1px;">7 WINS · DOMINANT ROOKIE F2 SEASON</p>
+          </div>
+        </div>
+
+        <div class="pre-slide" data-i="1" style="position: absolute; inset: 0; opacity: 0; transition: opacity 0.9s ease;">
+          <div style="position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 35%, #00D2BE 0%, #00D2BE 22%, transparent 62%); opacity: 0.7;"></div>
+          <div style="position: absolute; inset: 0; background: radial-gradient(circle at 50% 50%, transparent 32%, #000 94%);"></div>
+          <div style="position: absolute; top: 14px; left: 16px; font-family: var(--font-mono); font-size: 9px; color: #00D2BE; letter-spacing: 1.5px;">GRADUATE · 02</div>
+          <div style="position: absolute; top: 14px; right: 16px; font-family: var(--font-mono); font-size: 10px; color: #fff; letter-spacing: 1.5px; background: rgba(0,0,0,0.5); padding: 3px 9px; border-radius: 3px; border: 0.5px solid #333;">F2 CHAMPION</div>
+          <div style="position: absolute; bottom: 44px; left: 20px; right: 20px;">
+            <p style="font-family: var(--font-mono); font-size: 9px; color: #00E5FF; letter-spacing: 1.5px; margin: 0 0 4px;">F2 2018 · MERC JR · → WILLIAMS · MERCEDES F1</p>
+            <p style="font-size: 28px; font-weight: 400; margin: 0; color: #fff; letter-spacing: -0.8px;">George Russell</p>
+            <p style="font-family: var(--font-mono); font-size: 10px; color: #aaa; margin: 6px 0 0; letter-spacing: 1px;">ROOKIE TITLE · WIRE-TO-WIRE</p>
+          </div>
+        </div>
+
+        <div class="pre-slide" data-i="2" style="position: absolute; inset: 0; opacity: 0; transition: opacity 0.9s ease;">
+          <div style="position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 35%, #FF8700 0%, #FF8700 22%, transparent 62%); opacity: 0.7;"></div>
+          <div style="position: absolute; inset: 0; background: radial-gradient(circle at 50% 50%, transparent 32%, #000 94%);"></div>
+          <div style="position: absolute; top: 14px; left: 16px; font-family: var(--font-mono); font-size: 9px; color: #FF8700; letter-spacing: 1.5px;">GRADUATE · 03</div>
+          <div style="position: absolute; top: 14px; right: 16px; font-family: var(--font-mono); font-size: 10px; color: #fff; letter-spacing: 1.5px; background: rgba(0,0,0,0.5); padding: 3px 9px; border-radius: 3px; border: 0.5px solid #333;">F2 CHAMPION</div>
+          <div style="position: absolute; bottom: 44px; left: 20px; right: 20px;">
+            <p style="font-family: var(--font-mono); font-size: 9px; color: #00E5FF; letter-spacing: 1.5px; margin: 0 0 4px;">F2 2021 · ALPINE ACADEMY · → McLAREN F1</p>
+            <p style="font-size: 28px; font-weight: 400; margin: 0; color: #fff; letter-spacing: -0.8px;">Oscar Piastri</p>
+            <p style="font-family: var(--font-mono); font-size: 10px; color: #aaa; margin: 6px 0 0; letter-spacing: 1px;">F3 '20 · F2 '21 · BACK-TO-BACK TITLES</p>
+          </div>
+        </div>
+
+        <div class="pre-slide" data-i="3" style="position: absolute; inset: 0; opacity: 0; transition: opacity 0.9s ease;">
+          <div style="position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 35%, #DC0000 0%, #DC0000 22%, transparent 62%); opacity: 0.7;"></div>
+          <div style="position: absolute; inset: 0; background: radial-gradient(circle at 50% 50%, transparent 32%, #000 94%);"></div>
+          <div style="position: absolute; top: 14px; left: 16px; font-family: var(--font-mono); font-size: 9px; color: #DC0000; letter-spacing: 1.5px;">GRADUATE · 04</div>
+          <div style="position: absolute; top: 14px; right: 16px; font-family: var(--font-mono); font-size: 10px; color: #fff; letter-spacing: 1.5px; background: rgba(0,0,0,0.5); padding: 3px 9px; border-radius: 3px; border: 0.5px solid #333;">F2 CHAMPION</div>
+          <div style="position: absolute; bottom: 44px; left: 20px; right: 20px;">
+            <p style="font-family: var(--font-mono); font-size: 9px; color: #00E5FF; letter-spacing: 1.5px; margin: 0 0 4px;">F2 2020 · FDA · → HAAS · WILLIAMS F1</p>
+            <p style="font-size: 28px; font-weight: 400; margin: 0; color: #fff; letter-spacing: -0.8px;">Mick Schumacher</p>
+            <p style="font-family: var(--font-mono); font-size: 10px; color: #aaa; margin: 6px 0 0; letter-spacing: 1px;">F3 '18 · F2 '20 · BACK-TO-BACK TITLES</p>
+          </div>
+        </div>
+
+        <div class="pre-slide" data-i="4" style="position: absolute; inset: 0; opacity: 0; transition: opacity 0.9s ease;">
+          <div style="position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 35%, #DC0000 0%, #DC0000 22%, transparent 62%); opacity: 0.7;"></div>
+          <div style="position: absolute; inset: 0; background: radial-gradient(circle at 50% 50%, transparent 32%, #000 94%);"></div>
+          <div style="position: absolute; top: 14px; left: 16px; font-family: var(--font-mono); font-size: 9px; color: #DC0000; letter-spacing: 1.5px;">GRADUATE · 05 · CURRENT</div>
+          <div style="position: absolute; top: 14px; right: 16px; font-family: var(--font-mono); font-size: 10px; color: #fff; letter-spacing: 1.5px; background: rgba(0,0,0,0.5); padding: 3px 9px; border-radius: 3px; border: 0.5px solid #333;">2024</div>
+          <div style="position: absolute; bottom: 44px; left: 20px; right: 20px;">
+            <p style="font-family: var(--font-mono); font-size: 9px; color: #00E5FF; letter-spacing: 1.5px; margin: 0 0 4px;">F2 2024 · FDA · → HAAS F1 2025</p>
+            <p style="font-size: 28px; font-weight: 400; margin: 0; color: #fff; letter-spacing: -0.8px;">Oliver Bearman</p>
+            <p style="font-family: var(--font-mono); font-size: 10px; color: #aaa; margin: 6px 0 0; letter-spacing: 1px;">F1 DEBUT SUB · SIGNED FOR 2025</p>
+          </div>
+        </div>
+
+        <div class="pre-slide" data-i="5" style="position: absolute; inset: 0; opacity: 0; transition: opacity 0.9s ease;">
+          <div style="position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 35%, #00D2BE 0%, #00D2BE 22%, transparent 62%); opacity: 0.7;"></div>
+          <div style="position: absolute; inset: 0; background: radial-gradient(circle at 50% 50%, transparent 32%, #000 94%);"></div>
+          <div style="position: absolute; top: 14px; left: 16px; font-family: var(--font-mono); font-size: 9px; color: #00D2BE; letter-spacing: 1.5px;">GRADUATE · 06 · CURRENT</div>
+          <div style="position: absolute; top: 14px; right: 16px; font-family: var(--font-mono); font-size: 10px; color: #fff; letter-spacing: 1.5px; background: rgba(0,0,0,0.5); padding: 3px 9px; border-radius: 3px; border: 0.5px solid #333;">2025</div>
+          <div style="position: absolute; bottom: 44px; left: 20px; right: 20px;">
+            <p style="font-family: var(--font-mono); font-size: 9px; color: #00E5FF; letter-spacing: 1.5px; margin: 0 0 4px;">F2 2024 P3 · MERC JR · → MERCEDES F1 2025</p>
+            <p style="font-size: 28px; font-weight: 400; margin: 0; color: #fff; letter-spacing: -0.8px;">Kimi Antonelli</p>
+            <p style="font-family: var(--font-mono); font-size: 10px; color: #aaa; margin: 6px 0 0; letter-spacing: 1px;">HAMILTON'S REPLACEMENT AT 18</p>
+          </div>
+        </div>
+
+        <div id="preProg" style="position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: rgba(255,255,255,0.08);">
+          <div id="preProgFill" style="height: 100%; width: 0%; background: #00E5FF; transition: width 0.1s linear;"></div>
+        </div>
+
+        <div style="position: absolute; bottom: 10px; left: 20px; display: flex; gap: 4px;">
+          <span class="pre-dot" data-i="0" style="width: 18px; height: 2px; background: #fff; cursor: pointer;"></span>
+          <span class="pre-dot" data-i="1" style="width: 18px; height: 2px; background: rgba(255,255,255,0.25); cursor: pointer;"></span>
+          <span class="pre-dot" data-i="2" style="width: 18px; height: 2px; background: rgba(255,255,255,0.25); cursor: pointer;"></span>
+          <span class="pre-dot" data-i="3" style="width: 18px; height: 2px; background: rgba(255,255,255,0.25); cursor: pointer;"></span>
+          <span class="pre-dot" data-i="4" style="width: 18px; height: 2px; background: rgba(255,255,255,0.25); cursor: pointer;"></span>
+          <span class="pre-dot" data-i="5" style="width: 18px; height: 2px; background: rgba(255,255,255,0.25); cursor: pointer;"></span>
+        </div>
+      </div>
+
+      <div style="position: absolute; top: 50%; left: 5%; transform: translateY(-50%); max-width: 40%;">
+        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 14px;">
+          <span style="width: 6px; height: 6px; border-radius: 50%; background: #00E5FF;"></span>
+          <span style="width: 6px; height: 6px; border-radius: 50%; background: #B026FF;"></span>
+          <span style="font-family: var(--font-mono); font-size: 10px; letter-spacing: 2px; color: #aaa;">FORMULA 2 · FORMULA 3 · ACTIVE SINCE 1983</span>
+        </div>
+        <p style="font-size: 14px; color: #888; margin: 0 0 4px; letter-spacing: 0.5px;">Scuderia</p>
+        <h1 style="font-size: 68px; font-weight: 400; margin: 0; letter-spacing: -2.5px; line-height: 0.9; color: #fff;">Prema</h1>
+        <p style="font-family: var(--font-mono); font-size: 11px; color: #888; margin: 18px 0 0; letter-spacing: 1px;">GRISIGNANO DI ZOCCO, ITALY · FOUNDED 1983</p>
+        <p style="font-family: var(--font-serif); font-size: 15px; color: #bbb; font-style: italic; line-height: 1.6; margin: 18px 0 0; max-width: 380px;">The dominant junior outfit of the modern era. A graduate list that reads like half the current F1 grid.</p>
+        <p style="font-family: var(--font-mono); font-size: 9px; color: #555; margin: 14px 0 0; letter-spacing: 0.5px;">[QUOTE PLACEHOLDER]</p>
+      </div>
+
+      <div style="position: absolute; bottom: 24px; left: 0; right: 0; padding: 0 1.75rem; display: flex; justify-content: center; gap: 28px;">
+        <div style="text-align: center;">
+          <p style="font-family: var(--font-mono); font-size: 9px; letter-spacing: 1.5px; color: #888; margin: 0 0 4px;">F2 TITLES</p>
+          <p style="font-size: 26px; font-weight: 400; margin: 0; color: #00E5FF; letter-spacing: -1px;">6</p>
+          <p style="font-family: var(--font-mono); font-size: 8px; color: #666; margin: 2px 0 0;">DRIVERS' + TEAMS'</p>
+        </div>
+        <div style="width: 0.5px; background: #2a2a2a;"></div>
+        <div style="text-align: center;">
+          <p style="font-family: var(--font-mono); font-size: 9px; letter-spacing: 1.5px; color: #888; margin: 0 0 4px;">F3 TITLES</p>
+          <p style="font-size: 26px; font-weight: 400; margin: 0; color: #B026FF; letter-spacing: -1px;">5</p>
+          <p style="font-family: var(--font-mono); font-size: 8px; color: #666; margin: 2px 0 0;">SINCE 2019</p>
+        </div>
+        <div style="width: 0.5px; background: #2a2a2a;"></div>
+        <div style="text-align: center;">
+          <p style="font-family: var(--font-mono); font-size: 9px; letter-spacing: 1.5px; color: #888; margin: 0 0 4px;">F1 GRADUATES</p>
+          <p style="font-size: 26px; font-weight: 400; margin: 0; color: #FFD700; letter-spacing: -1px;">14</p>
+          <p style="font-family: var(--font-mono); font-size: 8px; color: #666; margin: 2px 0 0;">PROGRESSED TO F1</p>
+        </div>
+        <div style="width: 0.5px; background: #2a2a2a;"></div>
+        <div style="text-align: center;">
+          <p style="font-family: var(--font-mono); font-size: 9px; letter-spacing: 1.5px; color: #888; margin: 0 0 4px;">F2 WINS</p>
+          <p style="font-size: 26px; font-weight: 400; margin: 0; color: #fff; letter-spacing: -1px;">72</p>
+          <p style="font-family: var(--font-mono); font-size: 8px; color: #666; margin: 2px 0 0;">ALL-TIME</p>
+        </div>
+        <div style="width: 0.5px; background: #2a2a2a;"></div>
+        <div style="text-align: center;">
+          <p style="font-family: var(--font-mono); font-size: 9px; letter-spacing: 1.5px; color: #888; margin: 0 0 4px;">GRADUATION RATE</p>
+          <p style="font-size: 26px; font-weight: 400; margin: 0; color: #fff; letter-spacing: -1px;">44<span style="font-size: 13px; color: #888; letter-spacing: 0;">%</span></p>
+          <p style="font-family: var(--font-mono); font-size: 8px; color: #666; margin: 2px 0 0;">F2 → F1</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="padding: 1rem 1.75rem 0; text-align: center;">
+      <p style="font-family: var(--font-mono); font-size: 9px; color: #555; letter-spacing: 0.5px;">[STATS PLACEHOLDER · FIGURES ILLUSTRATIVE · NEED VERIFICATION + LIVE DATA SOURCE]</p>
+    </div>
+
+    <div style="padding: 2rem 1.75rem 2rem;">
+      <div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 6px;">
+        <p style="font-family: var(--font-mono); font-size: 10px; letter-spacing: 2px; color: #00E5FF; margin: 0;">GRADUATE ALUMNI</p>
+        <p style="font-family: var(--font-mono); font-size: 9px; letter-spacing: 1px; color: #555;">THE TEAM'S ACHIEVEMENT</p>
+      </div>
+      <p style="font-size: 13px; color: #888; margin: 0 0 24px; max-width: 520px; line-height: 1.6;">Every driver who raced for Prema, where they went next, and how they're doing now. Spec chassis means the team's real product is drivers — this grid is their portfolio.</p>
+
+      <div style="background: #080808; border: 1px solid #1a1a1a; border-radius: 10px; overflow: hidden;">
+
+        <div style="display: grid; grid-template-columns: 1.5fr 0.8fr 0.8fr 1fr 1fr 0.6fr; padding: 12px 20px; border-bottom: 0.5px solid #1a1a1a; font-family: var(--font-mono); font-size: 9px; color: #555; letter-spacing: 1.5px;">
+          <span>DRIVER</span><span>F3</span><span>F2</span><span>GRADUATED TO</span><span>CURRENT</span><span style="text-align: right;">STATUS</span>
+        </div>
+
+        <div class="grad-row" style="display: grid; grid-template-columns: 1.5fr 0.8fr 0.8fr 1fr 1fr 0.6fr; padding: 14px 20px; border-bottom: 0.5px solid #1a1a1a; font-size: 12px; align-items: center; cursor: pointer;" onclick="sendPrompt('Open Leclerc driver page')">
+          <span style="color: #fff; font-weight: 500;">Charles Leclerc</span>
+          <span style="font-family: var(--font-mono); color: #666; font-size: 10px;">—</span>
+          <span style="font-family: var(--font-mono); color: #FFD700; font-size: 10px;">CHAMP '17</span>
+          <span style="color: #aaa; font-size: 11px;"><span style="width: 6px; height: 6px; background: #DC0000; border-radius: 50%; display: inline-block; margin-right: 6px;"></span>Ferrari</span>
+          <span style="color: #aaa; font-size: 11px;"><span style="width: 6px; height: 6px; background: #DC0000; border-radius: 50%; display: inline-block; margin-right: 6px;"></span>Ferrari F1</span>
+          <span style="font-family: var(--font-mono); color: #5FB87C; font-size: 10px; text-align: right;">ACTIVE F1</span>
+        </div>
+
+        <div class="grad-row" style="display: grid; grid-template-columns: 1.5fr 0.8fr 0.8fr 1fr 1fr 0.6fr; padding: 14px 20px; border-bottom: 0.5px solid #1a1a1a; font-size: 12px; align-items: center; cursor: pointer;" onclick="sendPrompt('Open Russell driver page')">
+          <span style="color: #fff; font-weight: 500;">George Russell</span>
+          <span style="font-family: var(--font-mono); color: #666; font-size: 10px;">—</span>
+          <span style="font-family: var(--font-mono); color: #FFD700; font-size: 10px;">CHAMP '18</span>
+          <span style="color: #aaa; font-size: 11px;"><span style="width: 6px; height: 6px; background: #005AFF; border-radius: 50%; display: inline-block; margin-right: 6px;"></span>Williams</span>
+          <span style="color: #aaa; font-size: 11px;"><span style="width: 6px; height: 6px; background: #00D2BE; border-radius: 50%; display: inline-block; margin-right: 6px;"></span>Mercedes F1</span>
+          <span style="font-family: var(--font-mono); color: #5FB87C; font-size: 10px; text-align: right;">ACTIVE F1</span>
+        </div>
+
+        <div class="grad-row" style="display: grid; grid-template-columns: 1.5fr 0.8fr 0.8fr 1fr 1fr 0.6fr; padding: 14px 20px; border-bottom: 0.5px solid #1a1a1a; font-size: 12px; align-items: center; cursor: pointer;" onclick="sendPrompt('Open Piastri driver page')">
+          <span style="color: #fff; font-weight: 500;">Oscar Piastri</span>
+          <span style="font-family: var(--font-mono); color: #FFD700; font-size: 10px;">CHAMP '20</span>
+          <span style="font-family: var(--font-mono); color: #FFD700; font-size: 10px;">CHAMP '21</span>
+          <span style="color: #aaa; font-size: 11px;"><span style="width: 6px; height: 6px; background: #FF8700; border-radius: 50%; display: inline-block; margin-right: 6px;"></span>McLaren</span>
+          <span style="color: #aaa; font-size: 11px;"><span style="width: 6px; height: 6px; background: #FF8700; border-radius: 50%; display: inline-block; margin-right: 6px;"></span>McLaren F1</span>
+          <span style="font-family: var(--font-mono); color: #5FB87C; font-size: 10px; text-align: right;">ACTIVE F1</span>
+        </div>
+
+        <div class="grad-row" style="display: grid; grid-template-columns: 1.5fr 0.8fr 0.8fr 1fr 1fr 0.6fr; padding: 14px 20px; border-bottom: 0.5px solid #1a1a1a; font-size: 12px; align-items: center; cursor: pointer;" onclick="sendPrompt('Open Schumacher driver page')">
+          <span style="color: #fff; font-weight: 500;">Mick Schumacher</span>
+          <span style="font-family: var(--font-mono); color: #FFD700; font-size: 10px;">CHAMP '18</span>
+          <span style="font-family: var(--font-mono); color: #FFD700; font-size: 10px;">CHAMP '20</span>
+          <span style="color: #aaa; font-size: 11px;"><span style="width: 6px; height: 6px; background: #B6BABD; border-radius: 50%; display: inline-block; margin-right: 6px;"></span>Haas</span>
+          <span style="color: #aaa; font-size: 11px;"><span style="width: 6px; height: 6px; background: #00D2BE; border-radius: 50%; display: inline-block; margin-right: 6px;"></span>Merc Reserve</span>
+          <span style="font-family: var(--font-mono); color: #FFD700; font-size: 10px; text-align: right;">WEC</span>
+        </div>
+
+        <div class="grad-row" style="display: grid; grid-template-columns: 1.5fr 0.8fr 0.8fr 1fr 1fr 0.6fr; padding: 14px 20px; border-bottom: 0.5px solid #1a1a1a; font-size: 12px; align-items: center; cursor: pointer;" onclick="sendPrompt('Open Bearman driver page')">
+          <span style="color: #fff; font-weight: 500;">Oliver Bearman</span>
+          <span style="font-family: var(--font-mono); color: #aaa; font-size: 10px;">P3 '22</span>
+          <span style="font-family: var(--font-mono); color: #aaa; font-size: 10px;">P4 '24</span>
+          <span style="color: #aaa; font-size: 11px;"><span style="width: 6px; height: 6px; background: #B6BABD; border-radius: 50%; display: inline-block; margin-right: 6px;"></span>Haas 2025</span>
+          <span style="color: #aaa; font-size: 11px;"><span style="width: 6px; height: 6px; background: #B6BABD; border-radius: 50%; display: inline-block; margin-right: 6px;"></span>Haas F1</span>
+          <span style="font-family: var(--font-mono); color: #5FB87C; font-size: 10px; text-align: right;">F1 ROOKIE</span>
+        </div>
+
+        <div class="grad-row" style="display: grid; grid-template-columns: 1.5fr 0.8fr 0.8fr 1fr 1fr 0.6fr; padding: 14px 20px; border-bottom: 0.5px solid #1a1a1a; font-size: 12px; align-items: center; cursor: pointer;" onclick="sendPrompt('Open Antonelli driver page')">
+          <span style="color: #fff; font-weight: 500;">Kimi Antonelli</span>
+          <span style="font-family: var(--font-mono); color: #aaa; font-size: 10px;">—</span>
+          <span style="font-family: var(--font-mono); color: #aaa; font-size: 10px;">P3 '24</span>
+          <span style="color: #aaa; font-size: 11px;"><span style="width: 6px; height: 6px; background: #00D2BE; border-radius: 50%; display: inline-block; margin-right: 6px;"></span>Mercedes 2025</span>
+          <span style="color: #aaa; font-size: 11px;"><span style="width: 6px; height: 6px; background: #00D2BE; border-radius: 50%; display: inline-block; margin-right: 6px;"></span>Mercedes F1</span>
+          <span style="font-family: var(--font-mono); color: #5FB87C; font-size: 10px; text-align: right;">F1 ROOKIE</span>
+        </div>
+
+        <div class="grad-row" style="display: grid; grid-template-columns: 1.5fr 0.8fr 0.8fr 1fr 1fr 0.6fr; padding: 14px 20px; border-bottom: 0.5px solid #1a1a1a; font-size: 12px; align-items: center; cursor: pointer;" onclick="sendPrompt('Open Vesti driver page')">
+          <span style="color: #fff; font-weight: 500;">Frederik Vesti</span>
+          <span style="font-family: var(--font-mono); color: #aaa; font-size: 10px;">P4 '21</span>
+          <span style="font-family: var(--font-mono); color: #aaa; font-size: 10px;">P2 '23</span>
+          <span style="color: #aaa; font-size: 11px;"><span style="width: 6px; height: 6px; background: #00D2BE; border-radius: 50%; display: inline-block; margin-right: 6px;"></span>Merc Jr</span>
+          <span style="color: #aaa; font-size: 11px;"><span style="width: 6px; height: 6px; background: #666; border-radius: 50%; display: inline-block; margin-right: 6px;"></span>WEC / FE</span>
+          <span style="font-family: var(--font-mono); color: #888; font-size: 10px; text-align: right;">ENDURANCE</span>
+        </div>
+
+        <div class="grad-row" style="display: grid; grid-template-columns: 1.5fr 0.8fr 0.8fr 1fr 1fr 0.6fr; padding: 14px 20px; border-bottom: 0.5px solid #1a1a1a; font-size: 12px; align-items: center; cursor: pointer;" onclick="sendPrompt('Open Shwartzman driver page')">
+          <span style="color: #fff; font-weight: 500;">Robert Shwartzman</span>
+          <span style="font-family: var(--font-mono); color: #FFD700; font-size: 10px;">CHAMP '19</span>
+          <span style="font-family: var(--font-mono); color: #aaa; font-size: 10px;">P2 '20</span>
+          <span style="color: #aaa; font-size: 11px;"><span style="width: 6px; height: 6px; background: #DC0000; border-radius: 50%; display: inline-block; margin-right: 6px;"></span>Ferrari Reserve</span>
+          <span style="color: #aaa; font-size: 11px;"><span style="width: 6px; height: 6px; background: #666; border-radius: 50%; display: inline-block; margin-right: 6px;"></span>WEC Hypercar</span>
+          <span style="font-family: var(--font-mono); color: #888; font-size: 10px; text-align: right;">ENDURANCE</span>
+        </div>
+
+        <div style="padding: 12px 20px; text-align: center; border-top: 0.5px solid #1a1a1a;">
+          <button style="background: transparent; border: 0.5px solid #2a2a2a; color: #aaa; font-family: var(--font-mono); font-size: 10px; letter-spacing: 1px; padding: 8px 16px; border-radius: 4px; cursor: pointer;" onclick="sendPrompt('Show full Prema graduate list')">SHOW ALL GRADUATES ↗</button>
+        </div>
+      </div>
+      <p style="font-family: var(--font-mono); font-size: 9px; color: #555; margin: 12px 0 0; letter-spacing: 0.5px;">[PLACEHOLDER · ROSTER AND OUTCOMES NEED VERIFICATION · LEGEND: GOLD = TITLE, GREEN = ACTIVE F1]</p>
+    </div>
+
+    <div style="padding: 0 1.75rem 2rem;">
+      <div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 6px;">
+        <p style="font-family: var(--font-mono); font-size: 10px; letter-spacing: 2px; color: #00E5FF; margin: 0;">OPERATIONAL SIGNATURE</p>
+        <p style="font-family: var(--font-mono); font-size: 9px; letter-spacing: 1px; color: #555;">TEAM FINGERPRINT</p>
+      </div>
+      <p style="font-size: 13px; color: #888; margin: 0 0 24px; max-width: 520px; line-height: 1.6;">Spec chassis, same car as every rival — so the team's real product is how they run it. These are the operational dimensions that differentiate junior outfits.</p>
+
+      <div style="background: #080808; border: 1px solid #1a1a1a; border-radius: 10px; padding: 32px;">
+
+        <div style="margin-bottom: 20px;">
+          <p style="font-family: var(--font-mono); font-size: 9px; letter-spacing: 1.5px; color: #555; margin: 0 0 4px;">THE OPERATIONAL CHARACTER</p>
+          <p style="font-size: 15px; color: #ccc; margin: 0; font-weight: 400;">Strong qualifying setup, excellent race engineering, high graduation rate. Historically strongest with Italian-speaking driver pairings. Pit-wall decisions are conservative-to-patient.</p>
+          <p style="font-family: var(--font-mono); font-size: 9px; color: #555; margin: 10px 0 0; letter-spacing: 0.5px;">[EDITORIAL PLACEHOLDER · NEEDS JUNIOR-SERIES DESK VERIFICATION]</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 18px;">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 4px;">
+              <span style="font-size: 13px; color: #ccc;">Qualifying setup</span>
+              <span style="font-family: var(--font-mono); font-size: 11px; color: #00E5FF; letter-spacing: 1px;">STRONG</span>
+            </div>
+            <div style="height: 4px; background: #1a1a1a; border-radius: 2px; overflow: hidden;"><div style="width: 86%; height: 100%; background: #00E5FF;"></div></div>
+            <p style="font-family: var(--font-mono); font-size: 9px; color: #666; margin: 4px 0 0; letter-spacing: 0.5px;">AVG Q POSITION P3.2</p>
+          </div>
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 4px;">
+              <span style="font-size: 13px; color: #ccc;">Race pace conversion</span>
+              <span style="font-family: var(--font-mono); font-size: 11px; color: #00E5FF; letter-spacing: 1px;">HIGH</span>
+            </div>
+            <div style="height: 4px; background: #1a1a1a; border-radius: 2px; overflow: hidden;"><div style="width: 78%; height: 100%; background: #00E5FF;"></div></div>
+            <p style="font-family: var(--font-mono); font-size: 9px; color: #666; margin: 4px 0 0; letter-spacing: 0.5px;">GAIN P0.4 AVG FROM GRID</p>
+          </div>
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 4px;">
+              <span style="font-size: 13px; color: #ccc;">Strategy aggression</span>
+              <span style="font-family: var(--font-mono); font-size: 11px; color: #888; letter-spacing: 1px;">CONSERVATIVE</span>
+            </div>
+            <div style="height: 4px; background: #1a1a1a; border-radius: 2px; overflow: hidden;"><div style="width: 38%; height: 100%; background: #888;"></div></div>
+            <p style="font-family: var(--font-mono); font-size: 9px; color: #666; margin: 4px 0 0; letter-spacing: 0.5px;">LOW-VARIANCE PIT CALLS</p>
+          </div>
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 4px;">
+              <span style="font-size: 13px; color: #ccc;">Rookie conversion</span>
+              <span style="font-family: var(--font-mono); font-size: 11px; color: #00E5FF; letter-spacing: 1px;">EXCEPTIONAL</span>
+            </div>
+            <div style="height: 4px; background: #1a1a1a; border-radius: 2px; overflow: hidden;"><div style="width: 92%; height: 100%; background: #00E5FF;"></div></div>
+            <p style="font-family: var(--font-mono); font-size: 9px; color: #666; margin: 4px 0 0; letter-spacing: 0.5px;">ROOKIES REACH P5+ IN YEAR 1</p>
+          </div>
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 4px;">
+              <span style="font-size: 13px; color: #ccc;">Wet-weather execution</span>
+              <span style="font-family: var(--font-mono); font-size: 11px; color: #888; letter-spacing: 1px;">STRONG</span>
+            </div>
+            <div style="height: 4px; background: #1a1a1a; border-radius: 2px; overflow: hidden;"><div style="width: 74%; height: 100%; background: #888;"></div></div>
+            <p style="font-family: var(--font-mono); font-size: 9px; color: #666; margin: 4px 0 0; letter-spacing: 0.5px;">SETUP FLEX IN CHANGING CONDITIONS</p>
+          </div>
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 4px;">
+              <span style="font-size: 13px; color: #ccc;">F1 graduation rate</span>
+              <span style="font-family: var(--font-mono); font-size: 11px; color: #FFD700; letter-spacing: 1px;">BEST-IN-CLASS</span>
+            </div>
+            <div style="height: 4px; background: #1a1a1a; border-radius: 2px; overflow: hidden;"><div style="width: 96%; height: 100%; background: #FFD700;"></div></div>
+            <p style="font-family: var(--font-mono); font-size: 9px; color: #666; margin: 4px 0 0; letter-spacing: 0.5px;">44% F2 GRADUATES REACH F1</p>
+          </div>
+        </div>
+        <p style="font-family: var(--font-mono); font-size: 9px; color: #555; margin: 16px 0 0; letter-spacing: 0.5px; text-align: center;">[PLACEHOLDER · OPERATIONAL METRICS NEED DATA VALIDATION]</p>
+      </div>
+    </div>
+
+    <div style="padding: 0 1.75rem 2rem;">
+      <div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 6px;">
+        <p style="font-family: var(--font-mono); font-size: 10px; letter-spacing: 2px; color: #00E5FF; margin: 0;">CURRENT SEASON · 2024–25</p>
+        <p style="font-family: var(--font-mono); font-size: 9px; letter-spacing: 1px; color: #555;">ACTIVE LINEUP</p>
+      </div>
+      <p style="font-size: 13px; color: #888; margin: 0 0 24px; max-width: 520px; line-height: 1.6;">Who Prema is running right now across F2, F3, and F1 Academy.</p>
+
+      <div style="background: #080808; border: 1px solid #1a1a1a; border-radius: 10px; padding: 24px;">
+        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px;">
+          <div>
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 14px;">
+              <span style="width: 8px; height: 8px; background: #00E5FF; border-radius: 50%;"></span>
+              <p style="font-family: var(--font-mono); font-size: 9px; color: #00E5FF; letter-spacing: 1.5px; margin: 0;">F2 LINEUP</p>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 8px;">
+              <div style="padding: 10px 12px; background: #0a0a0a; border-radius: 6px;"><p style="font-size: 13px; color: #fff; margin: 0; font-weight: 500;">Gabriele Minì</p><p style="font-family: var(--font-mono); font-size: 9px; color: #888; margin: 2px 0 0; letter-spacing: 0.5px;">ALPINE ACADEMY</p></div>
+              <div style="padding: 10px 12px; background: #0a0a0a; border-radius: 6px;"><p style="font-size: 13px; color: #fff; margin: 0; font-weight: 500;">Dino Beganovic</p><p style="font-family: var(--font-mono); font-size: 9px; color: #888; margin: 2px 0 0; letter-spacing: 0.5px;">FERRARI FDA</p></div>
+            </div>
+          </div>
+
+          <div>
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 14px;">
+              <span style="width: 8px; height: 8px; background: #B026FF; border-radius: 50%;"></span>
+              <p style="font-family: var(--font-mono); font-size: 9px; color: #B026FF; letter-spacing: 1.5px; margin: 0;">F3 LINEUP</p>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 8px;">
+              <div style="padding: 10px 12px; background: #0a0a0a; border-radius: 6px;"><p style="font-size: 13px; color: #fff; margin: 0; font-weight: 500;">Rafael Câmara</p><p style="font-family: var(--font-mono); font-size: 9px; color: #888; margin: 2px 0 0; letter-spacing: 0.5px;">FERRARI FDA</p></div>
+              <div style="padding: 10px 12px; background: #0a0a0a; border-radius: 6px;"><p style="font-size: 13px; color: #fff; margin: 0; font-weight: 500;">Sebastián Montoya</p><p style="font-family: var(--font-mono); font-size: 9px; color: #888; margin: 2px 0 0; letter-spacing: 0.5px;">RED BULL JR</p></div>
+            </div>
+          </div>
+
+          <div>
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 14px;">
+              <span style="width: 8px; height: 8px; background: #FF1E8C; border-radius: 50%;"></span>
+              <p style="font-family: var(--font-mono); font-size: 9px; color: #FF1E8C; letter-spacing: 1.5px; margin: 0;">F1 ACADEMY</p>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 8px;">
+              <div style="padding: 10px 12px; background: #0a0a0a; border-radius: 6px;"><p style="font-size: 13px; color: #fff; margin: 0; font-weight: 500;">Maya Weug</p><p style="font-family: var(--font-mono); font-size: 9px; color: #888; margin: 2px 0 0; letter-spacing: 0.5px;">FERRARI FDA</p></div>
+              <div style="padding: 10px 12px; background: #0a0a0a; border-radius: 6px;"><p style="font-size: 13px; color: #fff; margin: 0; font-weight: 500;">Aurelia Nobels</p><p style="font-family: var(--font-mono); font-size: 9px; color: #888; margin: 2px 0 0; letter-spacing: 0.5px;">FERRARI FDA</p></div>
+            </div>
+          </div>
+        </div>
+        <p style="font-family: var(--font-mono); font-size: 9px; color: #555; margin: 16px 0 0; letter-spacing: 0.5px; text-align: center;">[CURRENT LINEUP PLACEHOLDER · NEEDS VERIFICATION · UPDATES EACH SEASON]</p>
+      </div>
+    </div>
+
+    <div style="padding: 0 1.75rem 2rem; text-align: center; border-top: 0.5px solid #1a1a1a; padding-top: 16px;">
+      <p style="font-family: var(--font-mono); font-size: 9px; letter-spacing: 2px; color: #333;">SCROLL · SEASON-BY-SEASON · HISTORICAL CHAMPIONSHIPS · FULL GRADUATE LIST</p>
+    </div>
+
+  </div>
+
+  <script>
+    (function() {
+      const slides = document.querySelectorAll('.pre-slide');
+      const dots = document.querySelectorAll('.pre-dot');
+      const progress = document.getElementById('preProgFill');
+      const reelEl = document.getElementById('preReel');
+      let current = 0, paused = false, pct = 0;
+      const DWELL = 5500, TICK = 50;
+
+      function show(idx) {
+        slides.forEach((s, i) => { s.style.opacity = i === idx ? '1' : '0'; });
+        dots.forEach((d, i) => { d.style.background = i === idx ? '#fff' : 'rgba(255,255,255,0.25)'; });
+        pct = 0;
+        progress.style.width = '0%';
+      }
+
+      setInterval(() => {
+        if (paused) return;
+        pct += (TICK / DWELL) * 100;
+        progress.style.width = Math.min(pct, 100) + '%';
+        if (pct >= 100) { current = (current + 1) % slides.length; show(current); }
+      }, TICK);
+
+      reelEl.addEventListener('click', (e) => {
+        if (e.target.classList.contains('pre-dot')) return;
+        paused = !paused;
+      });
+
+      dots.forEach(d => {
+        d.addEventListener('click', (e) => {
+          e.stopPropagation();
+          current = parseInt(d.dataset.i);
+          show(current);
+          paused = false;
+        });
+      });
+    })();
+  </script>
+
+</div>

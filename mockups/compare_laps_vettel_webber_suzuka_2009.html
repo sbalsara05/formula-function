@@ -1,0 +1,428 @@
+<div style="background: #000; color: #fff; font-family: var(--font-sans); margin: -1rem -1.25rem; padding: 0; border-radius: var(--border-radius-lg); overflow: hidden; position: relative; min-height: 2400px;">
+
+  <div style="position: relative; z-index: 2;">
+
+    <div style="padding: 1rem 1.75rem; display: flex; justify-content: space-between; align-items: center; border-bottom: 0.5px solid #1a1a1a; background: rgba(0,0,0,0.7); position: relative; z-index: 10;">
+      <div style="display: flex; align-items: center; gap: 20px;">
+        <span style="font-family: var(--font-mono); font-size: 18px; font-weight: 500; letter-spacing: -0.5px;">f(x)</span>
+        <div style="display: flex; align-items: center; gap: 8px; font-family: var(--font-mono); font-size: 10px; letter-spacing: 1.5px; color: #666;">
+          <span>f(1)</span><span style="color: #333;">/</span><span>COMPARE</span><span style="color: #333;">/</span><span style="color: #aaa;">LAPS</span>
+        </div>
+      </div>
+      <div style="display: flex; gap: 8px;">
+        <button style="background: transparent; border: 0.5px solid #2a2a2a; color: #aaa; font-family: var(--font-mono); font-size: 10px; letter-spacing: 1px; padding: 6px 12px; border-radius: 4px; cursor: pointer;" onclick="sendPrompt('Swap the two laps being compared')">⇄ SWAP</button>
+        <button style="background: transparent; border: 0.5px solid #2a2a2a; color: #aaa; font-family: var(--font-mono); font-size: 10px; letter-spacing: 1px; padding: 6px 12px; border-radius: 4px; cursor: pointer;" onclick="sendPrompt('Add a third lap to compare')">+ ADD LAP</button>
+        <button style="background: transparent; border: 0.5px solid #2a2a2a; color: #aaa; font-family: var(--font-mono); font-size: 10px; letter-spacing: 1px; padding: 6px 12px; border-radius: 4px; cursor: pointer;">SHARE</button>
+        <button style="background: transparent; border: 0.5px solid #2a2a2a; color: #aaa; font-family: var(--font-mono); font-size: 10px; letter-spacing: 1px; padding: 6px 12px; border-radius: 4px; cursor: pointer;" onclick="sendPrompt('Back to analysis')">← BACK</button>
+      </div>
+    </div>
+
+    <div style="padding: 3rem 1.75rem 1.5rem;">
+      <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 14px;">
+        <span style="width: 6px; height: 6px; border-radius: 50%; background: #FF1E56;"></span>
+        <span style="width: 6px; height: 6px; border-radius: 50%; background: #00E5FF;"></span>
+        <span style="font-family: var(--font-mono); font-size: 10px; letter-spacing: 2px; color: #aaa;">COMPARING TWO LAPS</span>
+      </div>
+      <h1 style="font-size: 44px; font-weight: 400; margin: 0; letter-spacing: -1.5px; line-height: 1.05; color: #fff; max-width: 720px;">Suzuka · 2009 · Q3<br/><span style="color: #666; font-size: 32px;">Vettel vs. Webber</span></h1>
+      <p style="font-size: 14px; color: #888; margin: 16px 0 0; max-width: 560px; line-height: 1.7;">Same car. Same session. Same track. The gap was 0.122 seconds — here's where it came from.</p>
+    </div>
+
+    <div style="padding: 0 1.75rem 2rem;">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+
+        <div style="background: linear-gradient(180deg, #1a0a12 0%, #000 100%); border: 1px solid #3a1028; border-radius: 10px; padding: 20px; position: relative;">
+          <div style="position: absolute; top: 0; left: 20px; right: 20px; height: 2px; background: #FF1E56;"></div>
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 14px;">
+            <div>
+              <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                <span style="font-family: var(--font-mono); font-size: 9px; padding: 2px 6px; background: rgba(255,30,86,0.15); border: 0.5px solid rgba(255,30,86,0.4); border-radius: 3px; color: #FF1E56; letter-spacing: 1.5px;">LAP A</span>
+                <span style="width: 6px; height: 6px; border-radius: 50%; background: #1E3A8A;"></span>
+                <span style="font-family: var(--font-mono); font-size: 10px; color: #aaa; letter-spacing: 1px;">RED BULL</span>
+              </div>
+              <p style="font-size: 20px; font-weight: 500; margin: 0; color: #fff; letter-spacing: -0.3px;">Sebastian Vettel</p>
+              <p style="font-family: var(--font-mono); font-size: 10px; color: #888; margin: 4px 0 0; letter-spacing: 0.5px;">Q3 · DRY · POLE · WIN</p>
+            </div>
+            <div style="text-align: right;">
+              <p style="font-size: 28px; font-weight: 400; margin: 0; color: #fff; letter-spacing: -0.5px;">1:32.160</p>
+              <p style="font-family: var(--font-mono); font-size: 10px; color: #FFD700; margin: 4px 0 0; letter-spacing: 1px;">P1</p>
+            </div>
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; padding-top: 12px; border-top: 0.5px solid #1a1a1a;">
+            <div><p style="font-family: var(--font-mono); font-size: 9px; color: #555; letter-spacing: 1px; margin: 0 0 2px;">S1</p><p style="font-family: var(--font-mono); font-size: 12px; color: #fff; margin: 0;">30.421</p></div>
+            <div><p style="font-family: var(--font-mono); font-size: 9px; color: #555; letter-spacing: 1px; margin: 0 0 2px;">S2</p><p style="font-family: var(--font-mono); font-size: 12px; color: #fff; margin: 0;">36.890</p></div>
+            <div><p style="font-family: var(--font-mono); font-size: 9px; color: #555; letter-spacing: 1px; margin: 0 0 2px;">S3</p><p style="font-family: var(--font-mono); font-size: 12px; color: #fff; margin: 0;">24.849</p></div>
+          </div>
+        </div>
+
+        <div style="background: linear-gradient(180deg, #001a1f 0%, #000 100%); border: 1px solid #003a47; border-radius: 10px; padding: 20px; position: relative;">
+          <div style="position: absolute; top: 0; left: 20px; right: 20px; height: 2px; background: #00E5FF;"></div>
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 14px;">
+            <div>
+              <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                <span style="font-family: var(--font-mono); font-size: 9px; padding: 2px 6px; background: rgba(0,229,255,0.15); border: 0.5px solid rgba(0,229,255,0.4); border-radius: 3px; color: #00E5FF; letter-spacing: 1.5px;">LAP B</span>
+                <span style="width: 6px; height: 6px; border-radius: 50%; background: #1E3A8A;"></span>
+                <span style="font-family: var(--font-mono); font-size: 10px; color: #aaa; letter-spacing: 1px;">RED BULL</span>
+              </div>
+              <p style="font-size: 20px; font-weight: 500; margin: 0; color: #fff; letter-spacing: -0.3px;">Mark Webber</p>
+              <p style="font-family: var(--font-mono); font-size: 10px; color: #888; margin: 4px 0 0; letter-spacing: 0.5px;">Q3 · DRY · TEAMMATE</p>
+            </div>
+            <div style="text-align: right;">
+              <p style="font-size: 28px; font-weight: 400; margin: 0; color: #fff; letter-spacing: -0.5px;">1:32.282</p>
+              <p style="font-family: var(--font-mono); font-size: 10px; color: #888; margin: 4px 0 0; letter-spacing: 1px;">P2 · +0.122</p>
+            </div>
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; padding-top: 12px; border-top: 0.5px solid #1a1a1a;">
+            <div><p style="font-family: var(--font-mono); font-size: 9px; color: #555; letter-spacing: 1px; margin: 0 0 2px;">S1</p><p style="font-family: var(--font-mono); font-size: 12px; color: #fff; margin: 0;">30.489</p></div>
+            <div><p style="font-family: var(--font-mono); font-size: 9px; color: #555; letter-spacing: 1px; margin: 0 0 2px;">S2</p><p style="font-family: var(--font-mono); font-size: 12px; color: #fff; margin: 0;">36.846</p></div>
+            <div><p style="font-family: var(--font-mono); font-size: 9px; color: #555; letter-spacing: 1px; margin: 0 0 2px;">S3</p><p style="font-family: var(--font-mono); font-size: 12px; color: #fff; margin: 0;">24.947</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="padding: 0 1.75rem 2rem;">
+      <p style="font-family: var(--font-mono); font-size: 10px; letter-spacing: 2px; color: #FF1E56; margin: 0 0 6px;">TIME DELTA · WHERE THE GAP CAME FROM</p>
+      <p style="font-size: 13px; color: #888; margin: 0 0 18px; max-width: 520px; line-height: 1.6;">Cumulative time difference across the lap. When the line rises, Vettel is pulling ahead. When it falls, Webber is catching up.</p>
+
+      <div style="background: #080808; border: 1px solid #1a1a1a; border-radius: 10px; padding: 24px;">
+
+        <div style="margin-bottom: 8px;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+            <div style="display: flex; gap: 20px; align-items: center;">
+              <div style="display: flex; align-items: center; gap: 6px;">
+                <span style="width: 10px; height: 2px; background: #FF1E56;"></span>
+                <span style="font-family: var(--font-mono); font-size: 9px; color: #FF1E56; letter-spacing: 1px;">VETTEL AHEAD</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 6px;">
+                <span style="width: 10px; height: 2px; background: #00E5FF;"></span>
+                <span style="font-family: var(--font-mono); font-size: 9px; color: #00E5FF; letter-spacing: 1px;">WEBBER CATCHING UP</span>
+              </div>
+            </div>
+            <span style="font-family: var(--font-mono); font-size: 10px; color: #888; letter-spacing: 0.5px;">FINAL: VETTEL −0.122s</span>
+          </div>
+
+          <svg viewBox="0 0 800 180" style="width: 100%; height: 180px;" aria-hidden="true">
+            <line x1="0" y1="90" x2="800" y2="90" stroke="#2a2a2a" stroke-width="0.5" stroke-dasharray="3,3"/>
+
+            <line x1="100" y1="20" x2="100" y2="160" stroke="#1a1a1a" stroke-width="0.3"/>
+            <line x1="200" y1="20" x2="200" y2="160" stroke="#1a1a1a" stroke-width="0.3"/>
+            <line x1="280" y1="20" x2="280" y2="160" stroke="#1a1a1a" stroke-width="0.3"/>
+            <line x1="380" y1="20" x2="380" y2="160" stroke="#1a1a1a" stroke-width="0.3"/>
+            <line x1="480" y1="20" x2="480" y2="160" stroke="#1a1a1a" stroke-width="0.3"/>
+            <line x1="580" y1="20" x2="580" y2="160" stroke="#1a1a1a" stroke-width="0.3"/>
+            <line x1="680" y1="20" x2="680" y2="160" stroke="#1a1a1a" stroke-width="0.3"/>
+
+            <rect x="0" y="20" width="264" height="70" fill="url(#deltaGradA)" opacity="0.15"/>
+            <rect x="264" y="20" width="336" height="70" fill="url(#deltaGradA)" opacity="0.05"/>
+            <rect x="600" y="20" width="200" height="70" fill="url(#deltaGradA)" opacity="0.15"/>
+
+            <defs>
+              <linearGradient id="deltaGradA" x1="0%" y1="100%" x2="0%" y2="0%"><stop offset="0%" style="stop-color:#FF1E56;stop-opacity:0"/><stop offset="100%" style="stop-color:#FF1E56;stop-opacity:0.5"/></linearGradient>
+              <linearGradient id="deltaGradB" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" style="stop-color:#00E5FF;stop-opacity:0"/><stop offset="100%" style="stop-color:#00E5FF;stop-opacity:0.5"/></linearGradient>
+            </defs>
+
+            <path d="M 0 90 L 50 85 L 100 75 L 150 68 L 200 62 L 264 58 L 320 66 L 380 74 L 430 82 L 480 88 L 540 100 L 600 108 L 650 96 L 700 80 L 750 66 L 800 58"
+              stroke="#FF1E56" stroke-width="2" fill="none"/>
+
+            <circle cx="264" cy="58" r="3" fill="#FF1E56"/>
+            <circle cx="600" cy="108" r="3" fill="#00E5FF"/>
+            <circle cx="800" cy="58" r="4" fill="#FF1E56"/>
+
+            <text x="50" y="14" text-anchor="middle" font-family="monospace" font-size="8" fill="#555" letter-spacing="0.5">T1</text>
+            <text x="150" y="14" text-anchor="middle" font-family="monospace" font-size="8" fill="#555" letter-spacing="0.5">S</text>
+            <text x="240" y="14" text-anchor="middle" font-family="monospace" font-size="8" fill="#FFD700" letter-spacing="0.5">DEGNER</text>
+            <text x="330" y="14" text-anchor="middle" font-family="monospace" font-size="8" fill="#555" letter-spacing="0.5">↓ S1/S2</text>
+            <text x="430" y="14" text-anchor="middle" font-family="monospace" font-size="8" fill="#555" letter-spacing="0.5">HAIRPIN</text>
+            <text x="530" y="14" text-anchor="middle" font-family="monospace" font-size="8" fill="#555" letter-spacing="0.5">↓ S2/S3</text>
+            <text x="640" y="14" text-anchor="middle" font-family="monospace" font-size="8" fill="#FFD700" letter-spacing="0.5">SPOON</text>
+            <text x="740" y="14" text-anchor="middle" font-family="monospace" font-size="8" fill="#555" letter-spacing="0.5">130R</text>
+
+            <text x="-5" y="94" text-anchor="end" font-family="monospace" font-size="9" fill="#555">0.00</text>
+            <text x="-5" y="64" text-anchor="end" font-family="monospace" font-size="9" fill="#FF1E56">−0.10</text>
+            <text x="-5" y="34" text-anchor="end" font-family="monospace" font-size="9" fill="#FF1E56">−0.20</text>
+            <text x="-5" y="124" text-anchor="end" font-family="monospace" font-size="9" fill="#00E5FF">+0.10</text>
+            <text x="-5" y="154" text-anchor="end" font-family="monospace" font-size="9" fill="#00E5FF">+0.20</text>
+          </svg>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 16px;">
+          <div style="background: #0a0a0a; border-left: 2px solid #FF1E56; border-radius: 0 6px 6px 0; padding: 12px 14px;">
+            <p style="font-family: var(--font-mono); font-size: 9px; color: #FF1E56; letter-spacing: 1.5px; margin: 0 0 4px;">DEGNER COMPLEX</p>
+            <p style="font-size: 12px; color: #fff; margin: 0 0 4px; line-height: 1.5;">Vettel gained 0.16s with a committed late-brake entry</p>
+            <p style="font-family: var(--font-mono); font-size: 10px; color: #888; margin: 0;">BIGGEST SINGLE GAIN</p>
+          </div>
+          <div style="background: #0a0a0a; border-left: 2px solid #00E5FF; border-radius: 0 6px 6px 0; padding: 12px 14px;">
+            <p style="font-family: var(--font-mono); font-size: 9px; color: #00E5FF; letter-spacing: 1.5px; margin: 0 0 4px;">HAIRPIN TO S2 EXIT</p>
+            <p style="font-size: 12px; color: #fff; margin: 0 0 4px; line-height: 1.5;">Webber clawed back 0.10s through slow-corner section</p>
+            <p style="font-family: var(--font-mono); font-size: 10px; color: #888; margin: 0;">VETTEL'S WEAK POINT</p>
+          </div>
+          <div style="background: #0a0a0a; border-left: 2px solid #FF1E56; border-radius: 0 6px 6px 0; padding: 12px 14px;">
+            <p style="font-family: var(--font-mono); font-size: 9px; color: #FF1E56; letter-spacing: 1.5px; margin: 0 0 4px;">SPOON → 130R</p>
+            <p style="font-size: 12px; color: #fff; margin: 0 0 4px; line-height: 1.5;">Vettel reopened the gap through fast sweepers · +0.08s</p>
+            <p style="font-family: var(--font-mono); font-size: 10px; color: #888; margin: 0;">DECISIVE FINAL SECTOR</p>
+          </div>
+        </div>
+        <p style="font-family: var(--font-mono); font-size: 9px; color: #555; margin: 14px 0 0; letter-spacing: 0.5px; text-align: center;">[DELTA CURVE ILLUSTRATIVE · ACTUAL SHAPE FROM CV PIPELINE WILL DIFFER]</p>
+      </div>
+    </div>
+
+    <div style="padding: 0 1.75rem 2rem;">
+      <p style="font-family: var(--font-mono); font-size: 10px; letter-spacing: 2px; color: #FF1E56; margin: 0 0 6px;">RACING LINES OVERLAID</p>
+      <p style="font-size: 13px; color: #888; margin: 0 0 18px; max-width: 520px; line-height: 1.6;">Both trajectories on the same track. Where the lines diverge tells you where the styles differed.</p>
+
+      <div style="background: #080808; border: 1px solid #1a1a1a; border-radius: 10px; padding: 24px; display: grid; grid-template-columns: 1.6fr 1fr; gap: 24px;">
+        <div style="position: relative; aspect-ratio: 4/3; background: linear-gradient(180deg, #0a0a0a 0%, #000 100%); border-radius: 8px; overflow: hidden;">
+          <svg viewBox="0 0 400 300" style="position: absolute; inset: 0; width: 100%; height: 100%;" role="img" aria-label="Racing lines overlaid">
+            <path d="M 40 232 L 110 232 Q 125 230, 135 222 L 170 202 Q 185 190, 195 177 L 220 152 Q 235 137, 240 122 L 245 97 Q 245 82, 235 77 L 215 72 Q 200 72, 195 84 L 190 102 Q 190 117, 195 127 L 210 147 Q 220 157, 225 172 L 225 197 Q 220 212, 205 217 L 165 227 Q 140 227, 120 217 L 95 197 Q 85 182, 80 162 L 80 132 Q 85 112, 100 102 L 140 77 Q 160 67, 180 67 L 265 62 Q 290 62, 305 74 L 325 94 Q 335 112, 335 130 L 335 172 Q 330 192, 315 202 L 285 217 Q 265 224, 250 232 L 230 247 Q 215 260, 200 262 L 115 264 Q 85 264, 70 254 L 50 242 Q 40 237, 40 232 Z"
+              stroke="#1a1a1a" stroke-width="14" fill="none" stroke-linejoin="round"/>
+
+            <path d="M 40 230 L 110 230 Q 125 228, 135 220 L 170 200 Q 185 188, 195 175 L 220 150 Q 235 135, 240 120 L 245 95 Q 245 80, 235 75 L 215 70 Q 200 70, 195 82 L 190 100 Q 190 115, 195 125 L 210 145 Q 220 155, 225 170 L 225 195 Q 220 210, 205 215 L 165 225 Q 140 225, 120 215 L 95 195 Q 85 180, 80 160 L 80 130 Q 85 110, 100 100 L 140 75 Q 160 65, 180 65 L 265 60 Q 290 60, 305 72 L 325 92 Q 335 110, 335 128 L 335 170 Q 330 190, 315 200 L 285 215 Q 265 222, 250 230 L 230 245 Q 215 258, 200 260 L 115 262 Q 85 262, 70 252 L 50 240 Q 40 235, 40 230 Z"
+              stroke="#FF1E56" stroke-width="2" fill="none" stroke-linejoin="round" opacity="0.9"/>
+
+            <path d="M 42 232 L 112 232 Q 128 230, 140 223 L 175 205 Q 190 193, 200 181 L 224 156 Q 238 141, 243 126 L 247 100 Q 246 84, 236 80 L 217 74 Q 202 74, 198 87 L 194 104 Q 194 118, 199 128 L 214 150 Q 224 161, 229 176 L 229 198 Q 225 213, 210 218 L 168 226 Q 143 225, 123 215 L 98 198 Q 88 184, 84 164 L 84 133 Q 88 114, 103 105 L 142 79 Q 162 69, 182 69 L 266 64 Q 290 64, 304 77 L 324 97 Q 333 114, 333 131 L 333 173 Q 328 193, 313 203 L 283 217 Q 263 224, 248 232 L 228 246 Q 213 260, 198 262 L 114 263 Q 85 264, 70 255 L 51 243 Q 42 237, 42 232 Z"
+              stroke="#00E5FF" stroke-width="1.5" fill="none" stroke-linejoin="round" opacity="0.8" stroke-dasharray="0"/>
+
+            <circle cx="40" cy="230" r="3.5" fill="#FFD700"/>
+            <text x="36" y="252" font-family="monospace" font-size="7" fill="#FFD700" letter-spacing="1">START</text>
+
+            <circle cx="245" cy="95" r="4" fill="none" stroke="#FF1E56" stroke-width="1.5"/>
+            <text x="252" y="92" font-family="monospace" font-size="7" fill="#FF1E56" letter-spacing="0.5">DEGNER · +0.16</text>
+
+            <circle cx="300" cy="72" r="4" fill="none" stroke="#00E5FF" stroke-width="1.5"/>
+            <text x="308" y="68" font-family="monospace" font-size="7" fill="#00E5FF" letter-spacing="0.5">HAIRPIN · −0.10</text>
+
+            <circle cx="335" cy="170" r="4" fill="none" stroke="#FF1E56" stroke-width="1.5"/>
+            <text x="328" y="188" text-anchor="end" font-family="monospace" font-size="7" fill="#FF1E56" letter-spacing="0.5">SPOON · +0.08</text>
+          </svg>
+
+          <div style="position: absolute; bottom: 10px; right: 12px; background: rgba(0,0,0,0.7); border: 0.5px solid #2a2a2a; border-radius: 4px; padding: 8px 12px; display: flex; flex-direction: column; gap: 4px;">
+            <div style="display: flex; align-items: center; gap: 6px; font-family: var(--font-mono); font-size: 9px;"><span style="width: 14px; height: 2px; background: #FF1E56;"></span><span style="color: #FF1E56; letter-spacing: 0.5px;">VETTEL</span></div>
+            <div style="display: flex; align-items: center; gap: 6px; font-family: var(--font-mono); font-size: 9px;"><span style="width: 14px; height: 1.5px; background: #00E5FF;"></span><span style="color: #00E5FF; letter-spacing: 0.5px;">WEBBER</span></div>
+          </div>
+        </div>
+
+        <div>
+          <p style="font-family: var(--font-mono); font-size: 9px; color: #555; letter-spacing: 1.5px; margin: 0 0 14px;">LINE DIVERGENCE</p>
+          <p style="font-size: 13px; color: #ccc; line-height: 1.7; margin: 0 0 16px;">Vettel carried a tighter inside line through the fast corners, turning earlier and relying on the Red Bull's rear-end rotation. Webber stayed more conservative — wider entries, later apex, prioritizing traction over minimum radius.</p>
+
+          <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 16px;">
+            <div style="display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 0.5px solid #1a1a1a; font-family: var(--font-mono); font-size: 10px;">
+              <span style="color: #888; letter-spacing: 0.5px;">MAX DIVERGENCE</span>
+              <span style="color: #fff;">2.1m at T1</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 0.5px solid #1a1a1a; font-family: var(--font-mono); font-size: 10px;">
+              <span style="color: #888; letter-spacing: 0.5px;">AVG DIVERGENCE</span>
+              <span style="color: #fff;">0.7m</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; padding: 6px 0; font-family: var(--font-mono); font-size: 10px;">
+              <span style="color: #888; letter-spacing: 0.5px;">OVERLAP</span>
+              <span style="color: #fff;">74% of lap</span>
+            </div>
+          </div>
+          <p style="font-family: var(--font-mono); font-size: 9px; color: #555; margin: 12px 0 0; letter-spacing: 0.5px;">[DIVERGENCE METRICS PLACEHOLDER]</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="padding: 0 1.75rem 2rem;">
+      <p style="font-family: var(--font-mono); font-size: 10px; letter-spacing: 2px; color: #FF1E56; margin: 0 0 6px;">TELEMETRY OVERLAY</p>
+      <p style="font-size: 13px; color: #888; margin: 0 0 18px; max-width: 520px; line-height: 1.6;">Each input, both laps. Scrub to step through — positions on the track map update in sync.</p>
+
+      <div style="background: #080808; border: 1px solid #1a1a1a; border-radius: 10px; padding: 24px;">
+
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px; padding: 12px 16px; background: #0a0a0a; border-radius: 6px;">
+          <button style="background: #FF1E56; border: none; color: #fff; font-family: var(--font-mono); font-size: 11px; letter-spacing: 1px; padding: 7px 14px; border-radius: 4px; cursor: pointer;">▶ PLAY</button>
+          <input type="range" min="0" max="100" value="35" style="flex: 1;" id="compScrub"/>
+          <span style="font-family: var(--font-mono); font-size: 11px; color: #fff; min-width: 80px; text-align: right;" id="compTime">00:32.256</span>
+          <span style="font-family: var(--font-mono); font-size: 10px; color: #666;">/</span>
+          <span style="font-family: var(--font-mono); font-size: 10px; color: #666;">01:32.160</span>
+        </div>
+
+        <div style="margin-bottom: 18px;">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px;">
+            <span style="font-family: var(--font-mono); font-size: 10px; color: #aaa; letter-spacing: 1.5px;">STEERING</span>
+            <div style="display: flex; gap: 14px;">
+              <span style="font-family: var(--font-mono); font-size: 10px; color: #FF1E56;" id="sValA">VETTEL −42°</span>
+              <span style="font-family: var(--font-mono); font-size: 10px; color: #00E5FF;" id="sValB">WEBBER −38°</span>
+            </div>
+          </div>
+          <svg viewBox="0 0 800 60" style="width: 100%; height: 50px;" aria-hidden="true">
+            <line x1="0" y1="30" x2="800" y2="30" stroke="#1a1a1a" stroke-width="0.5"/>
+            <path d="M 0 30 L 40 30 Q 55 22, 75 8 L 120 8 Q 140 16, 155 30 L 195 30 Q 210 38, 225 52 L 250 52 Q 265 44, 280 30 L 320 30 Q 335 22, 350 10 L 390 10 Q 405 18, 420 30 L 455 30 Q 470 38, 485 48 L 515 48 Q 530 40, 545 30 L 585 30 Q 600 22, 615 12 L 655 12 Q 670 20, 685 30 L 720 30 Q 735 38, 750 50 L 800 50" stroke="#FF1E56" stroke-width="1.5" fill="none"/>
+            <path d="M 0 30 L 42 30 Q 58 24, 76 12 L 122 12 Q 142 18, 157 30 L 197 30 Q 213 38, 228 50 L 252 50 Q 268 44, 282 30 L 322 30 Q 338 24, 352 14 L 392 14 Q 408 20, 422 30 L 457 30 Q 472 38, 487 46 L 517 46 Q 532 40, 547 30 L 587 30 Q 602 24, 618 16 L 657 16 Q 672 22, 687 30 L 722 30 Q 737 38, 752 48 L 800 48" stroke="#00E5FF" stroke-width="1.3" fill="none" opacity="0.9"/>
+            <line id="cL1" x1="280" y1="0" x2="280" y2="60" stroke="#fff" stroke-width="0.8" opacity="0.4"/>
+          </svg>
+        </div>
+
+        <div style="margin-bottom: 18px;">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px;">
+            <span style="font-family: var(--font-mono); font-size: 10px; color: #aaa; letter-spacing: 1.5px;">BRAKE</span>
+            <div style="display: flex; gap: 14px;">
+              <span style="font-family: var(--font-mono); font-size: 10px; color: #FF1E56;" id="bValA">VETTEL 0%</span>
+              <span style="font-family: var(--font-mono); font-size: 10px; color: #00E5FF;" id="bValB">WEBBER 0%</span>
+            </div>
+          </div>
+          <svg viewBox="0 0 800 60" style="width: 100%; height: 50px;" aria-hidden="true">
+            <line x1="0" y1="50" x2="800" y2="50" stroke="#1a1a1a" stroke-width="0.5"/>
+            <path d="M 0 50 L 55 50 L 58 12 L 82 12 L 85 50 L 150 50 L 153 22 L 200 22 L 203 50 L 275 50 L 278 18 L 310 18 L 313 50 L 390 50 L 393 14 L 430 14 L 433 50 L 500 50 L 503 28 L 545 28 L 548 50 L 625 50 L 628 18 L 665 18 L 668 50 L 735 50 L 738 30 L 780 30 L 783 50 L 800 50" stroke="#FF1E56" stroke-width="1.5" fill="none"/>
+            <path d="M 0 50 L 50 50 L 54 18 L 80 18 L 84 50 L 148 50 L 152 26 L 202 26 L 206 50 L 270 50 L 274 22 L 312 22 L 316 50 L 386 50 L 390 18 L 432 18 L 436 50 L 498 50 L 502 32 L 547 32 L 551 50 L 622 50 L 626 22 L 667 22 L 671 50 L 733 50 L 737 34 L 782 34 L 786 50 L 800 50" stroke="#00E5FF" stroke-width="1.3" fill="none" opacity="0.9"/>
+            <line id="cL2" x1="280" y1="0" x2="280" y2="60" stroke="#fff" stroke-width="0.8" opacity="0.4"/>
+          </svg>
+        </div>
+
+        <div style="margin-bottom: 18px;">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px;">
+            <span style="font-family: var(--font-mono); font-size: 10px; color: #aaa; letter-spacing: 1.5px;">THROTTLE</span>
+            <div style="display: flex; gap: 14px;">
+              <span style="font-family: var(--font-mono); font-size: 10px; color: #FF1E56;" id="tValA">VETTEL 98%</span>
+              <span style="font-family: var(--font-mono); font-size: 10px; color: #00E5FF;" id="tValB">WEBBER 92%</span>
+            </div>
+          </div>
+          <svg viewBox="0 0 800 60" style="width: 100%; height: 50px;" aria-hidden="true">
+            <line x1="0" y1="50" x2="800" y2="50" stroke="#1a1a1a" stroke-width="0.5"/>
+            <path d="M 0 10 L 52 10 L 60 48 L 85 48 L 95 10 L 148 10 L 155 44 L 205 44 L 215 10 L 275 10 L 282 42 L 315 42 L 325 10 L 388 10 L 395 38 L 435 38 L 445 10 L 498 10 L 505 42 L 550 42 L 560 10 L 622 10 L 630 38 L 670 38 L 680 10 L 733 10 L 740 40 L 785 40 L 795 10 L 800 10" stroke="#FF1E56" stroke-width="1.5" fill="none"/>
+            <path d="M 0 12 L 48 12 L 58 46 L 82 46 L 92 14 L 146 14 L 156 42 L 208 42 L 218 14 L 272 14 L 284 40 L 318 40 L 328 14 L 385 14 L 397 36 L 438 36 L 448 14 L 495 14 L 507 40 L 552 40 L 562 14 L 620 14 L 632 36 L 672 36 L 682 14 L 730 14 L 742 38 L 788 38 L 798 14 L 800 14" stroke="#00E5FF" stroke-width="1.3" fill="none" opacity="0.9"/>
+            <line id="cL3" x1="280" y1="0" x2="280" y2="60" stroke="#fff" stroke-width="0.8" opacity="0.4"/>
+          </svg>
+        </div>
+
+        <div>
+          <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px;">
+            <span style="font-family: var(--font-mono); font-size: 10px; color: #aaa; letter-spacing: 1.5px;">SPEED</span>
+            <div style="display: flex; gap: 14px;">
+              <span style="font-family: var(--font-mono); font-size: 10px; color: #FF1E56;" id="spValA">VETTEL 264 km/h</span>
+              <span style="font-family: var(--font-mono); font-size: 10px; color: #00E5FF;" id="spValB">WEBBER 258 km/h</span>
+            </div>
+          </div>
+          <svg viewBox="0 0 800 60" style="width: 100%; height: 50px;" aria-hidden="true">
+            <line x1="0" y1="50" x2="800" y2="50" stroke="#1a1a1a" stroke-width="0.5"/>
+            <path d="M 0 15 Q 30 14, 55 22 L 80 44 Q 85 46, 95 32 L 145 14 Q 155 14, 158 24 L 200 40 Q 210 42, 215 30 L 275 12 Q 285 16, 288 28 L 315 42 Q 325 44, 330 32 L 388 14 Q 398 16, 400 26 L 435 40 Q 445 42, 450 30 L 500 14 Q 510 16, 512 30 L 550 40 Q 560 42, 565 30 L 625 14 Q 635 16, 638 28 L 670 38 Q 680 40, 685 28 L 738 14 Q 748 16, 750 30 L 788 40 Q 798 42, 800 30" stroke="#FF1E56" stroke-width="1.5" fill="none"/>
+            <path d="M 0 17 Q 32 16, 56 24 L 78 42 Q 82 44, 94 30 L 146 16 Q 156 16, 160 26 L 202 38 Q 212 40, 218 28 L 276 14 Q 286 18, 290 28 L 316 40 Q 326 42, 332 30 L 390 16 Q 398 18, 402 26 L 436 38 Q 446 40, 452 28 L 502 16 Q 510 18, 514 28 L 552 38 Q 562 40, 568 28 L 628 16 Q 636 18, 640 28 L 672 36 Q 682 38, 688 28 L 740 16 Q 750 18, 754 28 L 790 38 Q 798 40, 800 28" stroke="#00E5FF" stroke-width="1.3" fill="none" opacity="0.9"/>
+            <line id="cL4" x1="280" y1="0" x2="280" y2="60" stroke="#fff" stroke-width="0.8" opacity="0.4"/>
+          </svg>
+        </div>
+
+        <p style="font-family: var(--font-mono); font-size: 9px; color: #555; margin: 16px 0 0; letter-spacing: 0.5px; text-align: center;">[TRACE SHAPES ILLUSTRATIVE]</p>
+      </div>
+    </div>
+
+    <div style="padding: 0 1.75rem 2rem;">
+      <p style="font-family: var(--font-mono); font-size: 10px; letter-spacing: 2px; color: #FF1E56; margin: 0 0 6px;">SECTOR-BY-SECTOR</p>
+      <p style="font-size: 13px; color: #888; margin: 0 0 18px; max-width: 520px; line-height: 1.6;">Three sectors, three head-to-head outcomes.</p>
+
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;">
+        <div style="background: #080808; border: 1px solid #1a1a1a; border-radius: 10px; padding: 20px;">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 14px;">
+            <span style="font-family: var(--font-mono); font-size: 10px; color: #888; letter-spacing: 1.5px;">SECTOR 1</span>
+            <span style="font-family: var(--font-mono); font-size: 9px; color: #FF1E56; letter-spacing: 1px;">VETTEL +0.068</span>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 3px;">
+                <span style="font-family: var(--font-mono); font-size: 9px; color: #FF1E56; letter-spacing: 1px;">VETTEL</span>
+                <span style="font-family: var(--font-mono); font-size: 12px; color: #fff;">30.421</span>
+              </div>
+              <div style="height: 3px; background: #1a1a1a; border-radius: 1.5px; overflow: hidden;"><div style="width: 92%; height: 100%; background: #FF1E56;"></div></div>
+            </div>
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 3px;">
+                <span style="font-family: var(--font-mono); font-size: 9px; color: #00E5FF; letter-spacing: 1px;">WEBBER</span>
+                <span style="font-family: var(--font-mono); font-size: 12px; color: #fff;">30.489</span>
+              </div>
+              <div style="height: 3px; background: #1a1a1a; border-radius: 1.5px; overflow: hidden;"><div style="width: 88%; height: 100%; background: #00E5FF;"></div></div>
+            </div>
+          </div>
+          <p style="font-family: var(--font-mono); font-size: 9px; color: #555; margin: 12px 0 0; letter-spacing: 0.5px;">KEY: T1 ENTRY · ESSES COMMIT</p>
+        </div>
+
+        <div style="background: #080808; border: 1px solid #1a1a1a; border-radius: 10px; padding: 20px;">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 14px;">
+            <span style="font-family: var(--font-mono); font-size: 10px; color: #888; letter-spacing: 1.5px;">SECTOR 2</span>
+            <span style="font-family: var(--font-mono); font-size: 9px; color: #00E5FF; letter-spacing: 1px;">WEBBER −0.044</span>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 3px;">
+                <span style="font-family: var(--font-mono); font-size: 9px; color: #FF1E56; letter-spacing: 1px;">VETTEL</span>
+                <span style="font-family: var(--font-mono); font-size: 12px; color: #fff;">36.890</span>
+              </div>
+              <div style="height: 3px; background: #1a1a1a; border-radius: 1.5px; overflow: hidden;"><div style="width: 85%; height: 100%; background: #FF1E56;"></div></div>
+            </div>
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 3px;">
+                <span style="font-family: var(--font-mono); font-size: 9px; color: #00E5FF; letter-spacing: 1px;">WEBBER</span>
+                <span style="font-family: var(--font-mono); font-size: 12px; color: #fff;">36.846</span>
+              </div>
+              <div style="height: 3px; background: #1a1a1a; border-radius: 1.5px; overflow: hidden;"><div style="width: 87%; height: 100%; background: #00E5FF;"></div></div>
+            </div>
+          </div>
+          <p style="font-family: var(--font-mono); font-size: 9px; color: #555; margin: 12px 0 0; letter-spacing: 0.5px;">KEY: HAIRPIN · DEGNER EXIT</p>
+        </div>
+
+        <div style="background: #080808; border: 1px solid #1a1a1a; border-radius: 10px; padding: 20px;">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 14px;">
+            <span style="font-family: var(--font-mono); font-size: 10px; color: #888; letter-spacing: 1.5px;">SECTOR 3</span>
+            <span style="font-family: var(--font-mono); font-size: 9px; color: #FF1E56; letter-spacing: 1px;">VETTEL +0.098</span>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 3px;">
+                <span style="font-family: var(--font-mono); font-size: 9px; color: #FF1E56; letter-spacing: 1px;">VETTEL</span>
+                <span style="font-family: var(--font-mono); font-size: 12px; color: #fff;">24.849</span>
+              </div>
+              <div style="height: 3px; background: #1a1a1a; border-radius: 1.5px; overflow: hidden;"><div style="width: 94%; height: 100%; background: #FF1E56;"></div></div>
+            </div>
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 3px;">
+                <span style="font-family: var(--font-mono); font-size: 9px; color: #00E5FF; letter-spacing: 1px;">WEBBER</span>
+                <span style="font-family: var(--font-mono); font-size: 12px; color: #fff;">24.947</span>
+              </div>
+              <div style="height: 3px; background: #1a1a1a; border-radius: 1.5px; overflow: hidden;"><div style="width: 89%; height: 100%; background: #00E5FF;"></div></div>
+            </div>
+          </div>
+          <p style="font-family: var(--font-mono); font-size: 9px; color: #555; margin: 12px 0 0; letter-spacing: 0.5px;">KEY: SPOON · 130R COMMIT</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="padding: 0 1.75rem 2rem;">
+      <p style="font-family: var(--font-mono); font-size: 10px; letter-spacing: 2px; color: #FF1E56; margin: 0 0 6px;">THE TAKEAWAY</p>
+      <p style="font-size: 13px; color: #888; margin: 0 0 18px; max-width: 520px; line-height: 1.6;">What this comparison reveals.</p>
+
+      <div style="background: #080808; border: 1px solid #1a1a1a; border-radius: 10px; padding: 32px;">
+        <p style="font-family: var(--font-serif); font-size: 18px; color: #ddd; line-height: 1.75; margin: 0 0 16px; font-style: italic;">Same car, same session, same tires — and yet 0.122 seconds apart. The gap came almost entirely from two corners: Degner 1, where Vettel's aggressive late-brake found a tenth Webber wouldn't risk, and Spoon, where Vettel's willingness to rotate the car earlier let him pick up throttle a fraction sooner.</p>
+        <p style="font-family: var(--font-serif); font-size: 18px; color: #ddd; line-height: 1.75; margin: 0;">The hairpin told the other story: the slow, technical section where Webber's cleaner, more conservative style actually clawed time back. Over a lap, Vettel's high-risk, high-commitment approach won the aggregate — which is why he was the faster qualifier that year, and why he sits on pole on Saturday and loses fewer race stints on Sunday.</p>
+        <p style="font-family: var(--font-mono); font-size: 9px; color: #555; margin: 16px 0 0; letter-spacing: 0.5px;">[EDITORIAL PROSE PLACEHOLDER · NARRATIVE VOICE NEEDS REVIEW]</p>
+      </div>
+    </div>
+
+    <div style="padding: 0 1.75rem 2rem; text-align: center; border-top: 0.5px solid #1a1a1a; padding-top: 16px;">
+      <p style="font-family: var(--font-mono); font-size: 9px; color: #333; letter-spacing: 2px;">CV PIPELINE · 2 LAPS · 1,694 FRAMES · ALIGNED TO SHARED TRACK REFERENCE</p>
+    </div>
+
+  </div>
+
+  <script>
+    (function() {
+      const scrub = document.getElementById('compScrub');
+      const time = document.getElementById('compTime');
+      const lines = ['cL1','cL2','cL3','cL4'].map(id => document.getElementById(id));
+
+      function formatTime(pct) {
+        const totalMs = 92160;
+        const currentMs = (pct / 100) * totalMs;
+        const mins = Math.floor(currentMs / 60000);
+        const secs = ((currentMs % 60000) / 1000);
+        return String(mins).padStart(2, '0') + ':' + secs.toFixed(3).padStart(6, '0');
+      }
+
+      scrub.addEventListener('input', (e) => {
+        const pct = parseFloat(e.target.value);
+        const x = (pct / 100) * 800;
+        lines.forEach(l => { l.setAttribute('x1', x); l.setAttribute('x2', x); });
+        time.textContent = formatTime(pct);
+      });
+    })();
+  </script>
+
+</div>

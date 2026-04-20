@@ -1,0 +1,377 @@
+<div style="background: #000; color: #fff; font-family: var(--font-sans); margin: -1rem -1.25rem; padding: 0; border-radius: var(--border-radius-lg); overflow: hidden; position: relative; min-height: 960px;">
+
+  <div id="ghost-layer" style="position: absolute; inset: 0; pointer-events: none; z-index: 5; opacity: 0;"></div>
+
+  <svg style="position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; opacity: 0.3; z-index: 1;" viewBox="0 0 800 960" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <defs>
+      <filter id="glow5" x="-20%" y="-20%" width="140%" height="140%">
+        <feGaussianBlur stdDeviation="2.5"/>
+      </filter>
+    </defs>
+    <g filter="url(#glow5)">
+      <path d="M 0 140 Q 200 100, 400 180 T 800 160" stroke="#FF1E56" stroke-width="1" fill="none"/>
+      <path d="M 0 220 Q 250 280, 500 240 T 800 280" stroke="#00E5FF" stroke-width="1" fill="none"/>
+      <path d="M 0 560 Q 180 500, 380 580 T 800 540" stroke="#B026FF" stroke-width="1" fill="none"/>
+      <path d="M 0 820 Q 300 860, 550 800 T 800 840" stroke="#00FF94" stroke-width="1" fill="none"/>
+    </g>
+  </svg>
+
+  <div id="main-content" style="position: relative; z-index: 2; transition: opacity 0.5s ease;">
+
+    <div style="padding: 1.25rem 1.75rem; display: flex; justify-content: space-between; align-items: center; border-bottom: 0.5px solid #1a1a1a;">
+      <span style="font-family: var(--font-mono); font-size: 20px; font-weight: 500; letter-spacing: -0.5px; color: #fff;">f(x)</span>
+      <span style="font-family: var(--font-mono); font-size: 10px; letter-spacing: 2px; color: #555;">FORMULA ANALYTICS</span>
+    </div>
+
+    <div style="padding: 4rem 1.75rem 2.5rem; text-align: center;">
+      <p style="font-family: var(--font-mono); font-size: 10px; letter-spacing: 3px; color: #666; margin: 0 0 20px;">DRIVING STYLE · SETUP · PREDICTIONS</p>
+      <h1 style="font-size: 44px; font-weight: 400; margin: 0 0 14px; letter-spacing: -1px; line-height: 1.05; color: #fff;">The function of<br/>the grid.</h1>
+      <p style="font-size: 14px; color: #888; margin: 0 auto; max-width: 420px; line-height: 1.6;">Every driver. Every track. Every team. Across three series and six decades of the sport.</p>
+    </div>
+
+    <div style="padding: 0 1.75rem 3rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px;">
+
+      <div class="series-card" data-series="f1" data-color="#FF1E56" style="position: relative; background: #080808; border: 1px solid #1a1a1a; border-radius: 10px; padding: 24px 20px; cursor: pointer; overflow: hidden; transition: all 0.3s;" onclick="sendPrompt('Take me to the F1 section')">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px;">
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <span style="font-family: var(--font-mono); font-size: 34px; font-weight: 400; color: #FF1E56; letter-spacing: -1px;">f(1)</span>
+            <div style="display: flex; flex-direction: column; align-items: flex-start; padding: 3px 8px; border: 0.5px solid #2a2a2a; border-radius: 3px; line-height: 1;">
+              <span style="font-family: var(--font-mono); font-size: 8px; letter-spacing: 1px; color: #666;">FORMULA</span>
+              <span style="font-family: var(--font-mono); font-size: 16px; font-weight: 500; color: #FF1E56; font-style: italic; margin-top: 2px;">1</span>
+            </div>
+          </div>
+          <span style="font-family: var(--font-mono); font-size: 10px; letter-spacing: 1.5px; color: #666;">TIER 1</span>
+        </div>
+
+        <svg viewBox="0 0 240 24" style="width: 100%; height: 20px; margin: 0 0 16px;" aria-hidden="true">
+          <path d="M 0 12 L 40 12 L 50 2 L 80 22 L 110 6 L 140 18 L 170 10 L 200 16 L 240 12" stroke="#FF1E56" stroke-width="1.2" fill="none" opacity="0.9"/>
+        </svg>
+
+        <p style="font-size: 13px; color: #aaa; margin: 0 0 18px; line-height: 1.5;">The pinnacle. Championships, constructors, and the drivers who shaped the modern era.</p>
+
+        <div style="border-top: 0.5px solid #1a1a1a; padding-top: 14px;">
+          <p style="font-family: var(--font-mono); font-size: 9px; letter-spacing: 1.5px; color: #555; margin: 0 0 12px;">ICONS</p>
+          <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px;">
+            <div style="aspect-ratio: 1; background: linear-gradient(135deg, #1a1300, #000); border: 0.5px solid #222; border-radius: 4px; overflow: hidden; position: relative;">
+              <div style="position: absolute; inset: 0; background: radial-gradient(circle at 50% 35%, #FFD700 0%, #FFD700 22%, transparent 40%); opacity: 0.7;"></div>
+              <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 40%; background: linear-gradient(to top, #000, transparent);"></div>
+              <span style="position: absolute; bottom: 3px; left: 4px; font-family: var(--font-mono); font-size: 7px; color: #888;">AS</span>
+            </div>
+            <div style="aspect-ratio: 1; background: linear-gradient(135deg, #1a0000, #000); border: 0.5px solid #222; border-radius: 4px; overflow: hidden; position: relative;">
+              <div style="position: absolute; inset: 0; background: radial-gradient(circle at 50% 35%, #E10600 0%, #E10600 22%, transparent 40%); opacity: 0.7;"></div>
+              <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 40%; background: linear-gradient(to top, #000, transparent);"></div>
+              <span style="position: absolute; bottom: 3px; left: 4px; font-family: var(--font-mono); font-size: 7px; color: #888;">AP</span>
+            </div>
+            <div style="aspect-ratio: 1; background: linear-gradient(135deg, #1a0000, #000); border: 0.5px solid #222; border-radius: 4px; overflow: hidden; position: relative;">
+              <div style="position: absolute; inset: 0; background: radial-gradient(circle at 50% 35%, #DC0000 0%, #DC0000 22%, transparent 40%); opacity: 0.7;"></div>
+              <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 40%; background: linear-gradient(to top, #000, transparent);"></div>
+              <span style="position: absolute; bottom: 3px; left: 4px; font-family: var(--font-mono); font-size: 7px; color: #888;">MS</span>
+            </div>
+            <div style="aspect-ratio: 1; background: linear-gradient(135deg, #000814, #000); border: 0.5px solid #222; border-radius: 4px; overflow: hidden; position: relative;">
+              <div style="position: absolute; inset: 0; background: radial-gradient(circle at 50% 35%, #1E3A8A 0%, #1E3A8A 22%, transparent 40%); opacity: 0.8;"></div>
+              <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 40%; background: linear-gradient(to top, #000, transparent);"></div>
+              <span style="position: absolute; bottom: 3px; left: 4px; font-family: var(--font-mono); font-size: 7px; color: #888;">SV</span>
+            </div>
+            <div style="aspect-ratio: 1; background: linear-gradient(135deg, #001a17, #000); border: 0.5px solid #222; border-radius: 4px; overflow: hidden; position: relative;">
+              <div style="position: absolute; inset: 0; background: radial-gradient(circle at 50% 35%, #00D2BE 0%, #00D2BE 22%, transparent 40%); opacity: 0.7;"></div>
+              <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 40%; background: linear-gradient(to top, #000, transparent);"></div>
+              <span style="position: absolute; bottom: 3px; left: 4px; font-family: var(--font-mono); font-size: 7px; color: #888;">LH</span>
+            </div>
+          </div>
+        </div>
+
+        <p style="font-family: var(--font-mono); font-size: 10px; color: #FF1E56; letter-spacing: 1.5px; margin: 18px 0 0;">ENTER →</p>
+      </div>
+
+      <div class="series-card" data-series="f2" data-color="#00E5FF" style="position: relative; background: #080808; border: 1px solid #1a1a1a; border-radius: 10px; padding: 24px 20px; cursor: pointer; overflow: hidden; transition: all 0.3s;" onclick="sendPrompt('Take me to the F2 section')">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px;">
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <span style="font-family: var(--font-mono); font-size: 34px; font-weight: 400; color: #00E5FF; letter-spacing: -1px;">f(2)</span>
+            <div style="display: flex; flex-direction: column; align-items: flex-start; padding: 3px 8px; border: 0.5px solid #2a2a2a; border-radius: 3px; line-height: 1;">
+              <span style="font-family: var(--font-mono); font-size: 8px; letter-spacing: 1px; color: #666;">FORMULA</span>
+              <span style="font-family: var(--font-mono); font-size: 16px; font-weight: 500; color: #00E5FF; font-style: italic; margin-top: 2px;">2</span>
+            </div>
+          </div>
+          <span style="font-family: var(--font-mono); font-size: 10px; letter-spacing: 1.5px; color: #666;">TIER 2</span>
+        </div>
+
+        <svg viewBox="0 0 240 24" style="width: 100%; height: 20px; margin: 0 0 16px;" aria-hidden="true">
+          <path d="M 0 12 L 30 12 L 45 2 L 70 20 L 100 6 L 130 16 L 160 10 L 195 14 L 240 12" stroke="#00E5FF" stroke-width="1.2" fill="none" opacity="0.9"/>
+        </svg>
+
+        <p style="font-size: 13px; color: #aaa; margin: 0 0 18px; line-height: 1.5;">The proving ground. Where the next generation of F1 talent earns the call-up.</p>
+
+        <div style="border-top: 0.5px solid #1a1a1a; padding-top: 14px;">
+          <p style="font-family: var(--font-mono); font-size: 9px; letter-spacing: 1.5px; color: #555; margin: 0 0 12px;">GRADUATED TO F1</p>
+          <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px;">
+            <div style="aspect-ratio: 1; background: linear-gradient(135deg, #001a17, #000); border: 0.5px solid #222; border-radius: 4px; overflow: hidden; position: relative;">
+              <div style="position: absolute; inset: 0; background: radial-gradient(circle at 50% 35%, #00D2BE 0%, #00D2BE 22%, transparent 40%); opacity: 0.7;"></div>
+              <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 40%; background: linear-gradient(to top, #000, transparent);"></div>
+              <span style="position: absolute; bottom: 3px; left: 4px; font-family: var(--font-mono); font-size: 7px; color: #888;">GR</span>
+            </div>
+            <div style="aspect-ratio: 1; background: linear-gradient(135deg, #1a0000, #000); border: 0.5px solid #222; border-radius: 4px; overflow: hidden; position: relative;">
+              <div style="position: absolute; inset: 0; background: radial-gradient(circle at 50% 35%, #DC0000 0%, #DC0000 22%, transparent 40%); opacity: 0.7;"></div>
+              <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 40%; background: linear-gradient(to top, #000, transparent);"></div>
+              <span style="position: absolute; bottom: 3px; left: 4px; font-family: var(--font-mono); font-size: 7px; color: #888;">CL</span>
+            </div>
+            <div style="aspect-ratio: 1; background: linear-gradient(135deg, #1a0c00, #000); border: 0.5px solid #222; border-radius: 4px; overflow: hidden; position: relative;">
+              <div style="position: absolute; inset: 0; background: radial-gradient(circle at 50% 35%, #FF8700 0%, #FF8700 22%, transparent 40%); opacity: 0.7;"></div>
+              <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 40%; background: linear-gradient(to top, #000, transparent);"></div>
+              <span style="position: absolute; bottom: 3px; left: 4px; font-family: var(--font-mono); font-size: 7px; color: #888;">OP</span>
+            </div>
+            <div style="aspect-ratio: 1; background: linear-gradient(135deg, #000a14, #000); border: 0.5px solid #222; border-radius: 4px; overflow: hidden; position: relative;">
+              <div style="position: absolute; inset: 0; background: radial-gradient(circle at 50% 35%, #0090FF 0%, #0090FF 22%, transparent 40%); opacity: 0.7;"></div>
+              <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 40%; background: linear-gradient(to top, #000, transparent);"></div>
+              <span style="position: absolute; bottom: 3px; left: 4px; font-family: var(--font-mono); font-size: 7px; color: #888;">MS</span>
+            </div>
+            <div style="aspect-ratio: 1; background: linear-gradient(135deg, #001a00, #000); border: 0.5px solid #222; border-radius: 4px; overflow: hidden; position: relative;">
+              <div style="position: absolute; inset: 0; background: radial-gradient(circle at 50% 35%, #00FF00 0%, #00FF00 22%, transparent 40%); opacity: 0.6;"></div>
+              <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 40%; background: linear-gradient(to top, #000, transparent);"></div>
+              <span style="position: absolute; bottom: 3px; left: 4px; font-family: var(--font-mono); font-size: 7px; color: #888;">GB</span>
+            </div>
+          </div>
+        </div>
+
+        <p style="font-family: var(--font-mono); font-size: 10px; color: #00E5FF; letter-spacing: 1.5px; margin: 18px 0 0;">ENTER →</p>
+      </div>
+
+      <div class="series-card" data-series="f3" data-color="#B026FF" style="position: relative; background: #080808; border: 1px solid #1a1a1a; border-radius: 10px; padding: 24px 20px; cursor: pointer; overflow: hidden; transition: all 0.3s;" onclick="sendPrompt('Take me to the F3 section')">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px;">
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <span style="font-family: var(--font-mono); font-size: 34px; font-weight: 400; color: #B026FF; letter-spacing: -1px;">f(3)</span>
+            <div style="display: flex; flex-direction: column; align-items: flex-start; padding: 3px 8px; border: 0.5px solid #2a2a2a; border-radius: 3px; line-height: 1;">
+              <span style="font-family: var(--font-mono); font-size: 8px; letter-spacing: 1px; color: #666;">FORMULA</span>
+              <span style="font-family: var(--font-mono); font-size: 16px; font-weight: 500; color: #B026FF; font-style: italic; margin-top: 2px;">3</span>
+            </div>
+          </div>
+          <span style="font-family: var(--font-mono); font-size: 10px; letter-spacing: 1.5px; color: #666;">TIER 3</span>
+        </div>
+
+        <svg viewBox="0 0 240 24" style="width: 100%; height: 20px; margin: 0 0 16px;" aria-hidden="true">
+          <path d="M 0 12 L 25 12 L 40 4 L 65 18 L 95 8 L 125 16 L 155 6 L 190 16 L 240 12" stroke="#B026FF" stroke-width="1.2" fill="none" opacity="0.9"/>
+        </svg>
+
+        <p style="font-size: 13px; color: #aaa; margin: 0 0 18px; line-height: 1.5;">The first rung. Where raw talent meets the pyramid for the first time.</p>
+
+        <div style="border-top: 0.5px solid #1a1a1a; padding-top: 14px;">
+          <p style="font-family: var(--font-mono); font-size: 9px; letter-spacing: 1.5px; color: #555; margin: 0 0 12px;">NOTABLE ALUMNI</p>
+          <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px;">
+            <div style="aspect-ratio: 1; background: linear-gradient(135deg, #1a0c00, #000); border: 0.5px solid #222; border-radius: 4px; overflow: hidden; position: relative;">
+              <div style="position: absolute; inset: 0; background: radial-gradient(circle at 50% 35%, #FF8700 0%, #FF8700 22%, transparent 40%); opacity: 0.7;"></div>
+              <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 40%; background: linear-gradient(to top, #000, transparent);"></div>
+              <span style="position: absolute; bottom: 3px; left: 4px; font-family: var(--font-mono); font-size: 7px; color: #888;">LN</span>
+            </div>
+            <div style="aspect-ratio: 1; background: linear-gradient(135deg, #001a17, #000); border: 0.5px solid #222; border-radius: 4px; overflow: hidden; position: relative;">
+              <div style="position: absolute; inset: 0; background: radial-gradient(circle at 50% 35%, #00D2BE 0%, #00D2BE 22%, transparent 40%); opacity: 0.7;"></div>
+              <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 40%; background: linear-gradient(to top, #000, transparent);"></div>
+              <span style="position: absolute; bottom: 3px; left: 4px; font-family: var(--font-mono); font-size: 7px; color: #888;">GR</span>
+            </div>
+            <div style="aspect-ratio: 1; background: linear-gradient(135deg, #1a0c00, #000); border: 0.5px solid #222; border-radius: 4px; overflow: hidden; position: relative;">
+              <div style="position: absolute; inset: 0; background: radial-gradient(circle at 50% 35%, #FF8700 0%, #FF8700 22%, transparent 40%); opacity: 0.7;"></div>
+              <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 40%; background: linear-gradient(to top, #000, transparent);"></div>
+              <span style="position: absolute; bottom: 3px; left: 4px; font-family: var(--font-mono); font-size: 7px; color: #888;">OP</span>
+            </div>
+            <div style="aspect-ratio: 1; background: linear-gradient(135deg, #001a17, #000); border: 0.5px solid #222; border-radius: 4px; overflow: hidden; position: relative;">
+              <div style="position: absolute; inset: 0; background: radial-gradient(circle at 50% 35%, #00D2BE 0%, #00D2BE 22%, transparent 40%); opacity: 0.7;"></div>
+              <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 40%; background: linear-gradient(to top, #000, transparent);"></div>
+              <span style="position: absolute; bottom: 3px; left: 4px; font-family: var(--font-mono); font-size: 7px; color: #888;">KA</span>
+            </div>
+            <div style="aspect-ratio: 1; background: linear-gradient(135deg, #000814, #000); border: 0.5px solid #222; border-radius: 4px; overflow: hidden; position: relative;">
+              <div style="position: absolute; inset: 0; background: radial-gradient(circle at 50% 35%, #1E3A8A 0%, #1E3A8A 22%, transparent 40%); opacity: 0.8;"></div>
+              <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 40%; background: linear-gradient(to top, #000, transparent);"></div>
+              <span style="position: absolute; bottom: 3px; left: 4px; font-family: var(--font-mono); font-size: 7px; color: #888;">AL</span>
+            </div>
+          </div>
+        </div>
+
+        <p style="font-family: var(--font-mono); font-size: 10px; color: #B026FF; letter-spacing: 1.5px; margin: 18px 0 0;">ENTER →</p>
+      </div>
+    </div>
+
+    <div style="padding: 2.5rem 1.75rem 2rem; text-align: center; border-top: 0.5px solid #1a1a1a;">
+      <p style="font-family: var(--font-mono); font-size: 10px; letter-spacing: 2px; color: #444; margin: 0 0 24px;">— IN MEMORY OF THE GREATS WHO WROTE THE FUNCTION —</p>
+      <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; font-family: var(--font-serif); font-size: 14px; color: #999; font-style: italic;">
+        <span>Fangio</span><span style="color: #444;">·</span>
+        <span>Clark</span><span style="color: #444;">·</span>
+        <span>Stewart</span><span style="color: #444;">·</span>
+        <span>Lauda</span><span style="color: #444;">·</span>
+        <span>Senna</span><span style="color: #444;">·</span>
+        <span>Prost</span><span style="color: #444;">·</span>
+        <span>Schumacher</span>
+      </div>
+    </div>
+
+    <div style="padding: 1rem 1.75rem; border-top: 0.5px solid #1a1a1a; display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 10px; letter-spacing: 1.5px; color: #444;">
+      <span>f(x) · v0.1</span>
+      <span>EST. 2026</span>
+    </div>
+
+  </div>
+
+  <script>
+    (function() {
+      const ghostLayer = document.getElementById('ghost-layer');
+      const mainContent = document.getElementById('main-content');
+      const cards = document.querySelectorAll('.series-card');
+
+      const moments = {
+        f1: [
+          { name: 'Senna', moment: 'Monaco 87', livery: '#FFD700', initials: 'AS' },
+          { name: 'Senna', moment: 'Donington 93', livery: '#FFD700', initials: 'AS' },
+          { name: 'Senna', moment: 'Interlagos 91', livery: '#FFD700', initials: 'AS' },
+          { name: 'Prost', moment: 'Suzuka 89', livery: '#E10600', initials: 'AP' },
+          { name: 'Prost', moment: 'Adelaide 86', livery: '#FFFFFF', initials: 'AP' },
+          { name: 'Schumacher', moment: 'Spa 92', livery: '#FFD700', initials: 'MS' },
+          { name: 'Schumacher', moment: 'Monza 00', livery: '#DC0000', initials: 'MS' },
+          { name: 'Schumacher', moment: 'Suzuka 00', livery: '#DC0000', initials: 'MS' },
+          { name: 'Vettel', moment: 'Abu Dhabi 10', livery: '#1E3A8A', initials: 'SV' },
+          { name: 'Vettel', moment: 'Singapore 13', livery: '#1E3A8A', initials: 'SV' },
+          { name: 'Hamilton', moment: 'Interlagos 08', livery: '#B0B0B0', initials: 'LH' },
+          { name: 'Hamilton', moment: 'Silverstone 20', livery: '#00D2BE', initials: 'LH' }
+        ],
+        f2: [
+          { name: 'Russell', moment: 'Abu Dhabi 18', livery: '#D4D4D4', initials: 'GR' },
+          { name: 'Russell', moment: 'F2 title 18', livery: '#D4D4D4', initials: 'GR' },
+          { name: 'Leclerc', moment: 'Monaco 17', livery: '#DC0000', initials: 'CL' },
+          { name: 'Leclerc', moment: 'Baku 17', livery: '#DC0000', initials: 'CL' },
+          { name: 'Piastri', moment: 'Silverstone 21', livery: '#FF8700', initials: 'OP' },
+          { name: 'Piastri', moment: 'F2 title 21', livery: '#FF8700', initials: 'OP' },
+          { name: 'M. Schumacher', moment: 'Monza 20', livery: '#0090FF', initials: 'MS' },
+          { name: 'M. Schumacher', moment: 'Sochi 20', livery: '#0090FF', initials: 'MS' },
+          { name: 'Bortoleto', moment: 'Silverstone 24', livery: '#00FF00', initials: 'GB' },
+          { name: 'Bortoleto', moment: 'Monza 24', livery: '#00FF00', initials: 'GB' },
+          { name: 'Gasly', moment: 'Suzuka 16', livery: '#2293D1', initials: 'PG' },
+          { name: 'Gasly', moment: 'GP2 title 16', livery: '#2293D1', initials: 'PG' }
+        ],
+        f3: [
+          { name: 'Norris', moment: 'Spa 18', livery: '#FFD700', initials: 'LN' },
+          { name: 'Norris', moment: 'Monza 18', livery: '#FFD700', initials: 'LN' },
+          { name: 'Russell', moment: 'GP3 title 17', livery: '#00FF99', initials: 'GR' },
+          { name: 'Piastri', moment: 'F3 title 20', livery: '#FFFFFF', initials: 'OP' },
+          { name: 'Piastri', moment: 'Spielberg 20', livery: '#FFFFFF', initials: 'OP' },
+          { name: 'Antonelli', moment: 'Monza 23', livery: '#D4D4D4', initials: 'KA' },
+          { name: 'Antonelli', moment: 'Spielberg 23', livery: '#D4D4D4', initials: 'KA' },
+          { name: 'Lindblad', moment: 'Silverstone 24', livery: '#1E3A8A', initials: 'AL' },
+          { name: 'Lindblad', moment: 'Monza 24', livery: '#1E3A8A', initials: 'AL' },
+          { name: 'Hadjar', moment: 'Baku 24', livery: '#2293D1', initials: 'IH' },
+          { name: 'Hadjar', moment: 'Spa 24', livery: '#2293D1', initials: 'IH' },
+          { name: 'Norris', moment: 'F3 podium 17', livery: '#FFD700', initials: 'LN' }
+        ]
+      };
+
+      const positions = [
+        { side: 'left', top: '8%', size: 110 },
+        { side: 'left', top: '28%', size: 95 },
+        { side: 'left', top: '50%', size: 120 },
+        { side: 'left', top: '72%', size: 100 },
+        { side: 'right', top: '6%', size: 105 },
+        { side: 'right', top: '26%', size: 115 },
+        { side: 'right', top: '48%', size: 95 },
+        { side: 'right', top: '70%', size: 110 },
+        { side: 'bottom', left: '12%', size: 100 },
+        { side: 'bottom', left: '32%', size: 115 },
+        { side: 'bottom', left: '54%', size: 95 },
+        { side: 'bottom', left: '74%', size: 110 },
+        { side: 'left', top: '88%', size: 85 }
+      ];
+
+      function renderGhosts(series) {
+        const items = moments[series];
+        ghostLayer.innerHTML = '';
+
+        items.forEach((m, i) => {
+          if (i >= positions.length) return;
+          const pos = positions[i];
+          const delay = Math.random() * 0.7;
+
+          let fromTransform, finalLeft, finalRight, finalTop, finalBottom;
+          const size = pos.size;
+
+          if (pos.side === 'left') {
+            fromTransform = 'translateX(-40px)';
+            finalLeft = '2%';
+            finalTop = pos.top;
+          } else if (pos.side === 'right') {
+            fromTransform = 'translateX(40px)';
+            finalRight = '2%';
+            finalTop = pos.top;
+          } else {
+            fromTransform = 'translateY(40px)';
+            finalLeft = pos.left;
+            finalBottom = '4%';
+          }
+
+          const ghost = document.createElement('div');
+          ghost.style.cssText = [
+            'position: absolute',
+            finalLeft ? 'left: ' + finalLeft : '',
+            finalRight ? 'right: ' + finalRight : '',
+            finalTop ? 'top: ' + finalTop : '',
+            finalBottom ? 'bottom: ' + finalBottom : '',
+            'width: ' + size + 'px',
+            'height: ' + Math.round(size * 1.25) + 'px',
+            'opacity: 0',
+            'transform: ' + fromTransform,
+            'transition: opacity 0.7s ease ' + delay + 's, transform 0.9s ease ' + delay + 's'
+          ].filter(Boolean).join('; ');
+
+          ghost.innerHTML = [
+            '<div style="width:100%;height:100%;background:linear-gradient(135deg,' + m.livery + '22,#000 60%);border:0.5px solid ' + m.livery + '55;border-radius:6px;overflow:hidden;position:relative;">',
+              '<div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 38%,' + m.livery + ' 0%,' + m.livery + ' 25%,transparent 55%);opacity:0.8;"></div>',
+              '<div style="position:absolute;inset:0;background:radial-gradient(circle at 50% 50%,transparent 35%,#000 92%);"></div>',
+              '<div style="position:absolute;top:6px;right:6px;font-family:var(--font-mono);font-size:7px;color:' + m.livery + ';letter-spacing:1px;">' + m.initials + '</div>',
+              '<div style="position:absolute;bottom:14px;left:0;right:0;text-align:center;font-family:var(--font-sans);font-size:9px;font-weight:500;color:#fff;letter-spacing:0.5px;">' + m.name + '</div>',
+              '<div style="position:absolute;bottom:4px;left:0;right:0;text-align:center;font-family:var(--font-mono);font-size:7px;color:#888;letter-spacing:1px;">' + m.moment.toUpperCase() + '</div>',
+            '</div>'
+          ].join('');
+
+          ghostLayer.appendChild(ghost);
+
+          requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+              ghost.style.opacity = '0.92';
+              ghost.style.transform = 'translate(0,0)';
+            });
+          });
+        });
+      }
+
+      function showGhosts(series) {
+        renderGhosts(series);
+        ghostLayer.style.opacity = '1';
+        mainContent.style.opacity = '0.2';
+      }
+
+      function hideGhosts() {
+        ghostLayer.querySelectorAll('div').forEach(g => {
+          if (g.parentElement === ghostLayer) {
+            g.style.opacity = '0';
+          }
+        });
+        setTimeout(() => {
+          if (ghostLayer.style.opacity === '0' || !ghostLayer.querySelector('[style*="opacity: 0.92"]')) {
+            ghostLayer.innerHTML = '';
+          }
+        }, 600);
+        ghostLayer.style.opacity = '0';
+        mainContent.style.opacity = '1';
+      }
+
+      cards.forEach(card => {
+        const color = card.dataset.color;
+        const series = card.dataset.series;
+        card.addEventListener('mouseenter', () => {
+          card.style.borderColor = color;
+          card.style.boxShadow = '0 0 32px ' + color + '55';
+          showGhosts(series);
+        });
+        card.addEventListener('mouseleave', () => {
+          card.style.borderColor = '#1a1a1a';
+          card.style.boxShadow = 'none';
+          hideGhosts();
+        });
+      });
+    })();
+  </script>
+
+</div>

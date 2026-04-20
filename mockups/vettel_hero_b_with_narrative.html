@@ -1,0 +1,441 @@
+<div style="background: #000; color: #fff; font-family: var(--font-sans); margin: -1rem -1.25rem; padding: 0; border-radius: var(--border-radius-lg); overflow: hidden; position: relative; min-height: 1700px;">
+
+  <div style="position: relative; z-index: 2;">
+
+    <div style="padding: 1rem 1.75rem; display: flex; justify-content: space-between; align-items: center; border-bottom: 0.5px solid #1a1a1a; background: rgba(0,0,0,0.7); position: relative; z-index: 10;">
+      <div style="display: flex; align-items: center; gap: 20px;">
+        <span style="font-family: var(--font-mono); font-size: 18px; font-weight: 500; letter-spacing: -0.5px;">f(x)</span>
+        <div style="display: flex; align-items: center; gap: 8px; font-family: var(--font-mono); font-size: 10px; letter-spacing: 1.5px; color: #666;">
+          <span>f(1)</span><span style="color: #333;">/</span><span>DRIVERS</span><span style="color: #333;">/</span><span style="color: #aaa;">VETTEL</span>
+        </div>
+      </div>
+      <div style="display: flex; gap: 8px;">
+        <button style="background: transparent; border: 0.5px solid #2a2a2a; color: #aaa; font-family: var(--font-mono); font-size: 10px; letter-spacing: 1px; padding: 6px 12px; border-radius: 4px; cursor: pointer;" onclick="sendPrompt('Compare Vettel with another driver')">COMPARE ↗</button>
+        <button style="background: transparent; border: 0.5px solid #FF1E56; color: #FF1E56; font-family: var(--font-mono); font-size: 10px; letter-spacing: 1px; padding: 6px 12px; border-radius: 4px; cursor: pointer;" onclick="sendPrompt('Analyze a specific lap from Vettel')">ANALYZE A LAP ↗</button>
+        <button style="background: transparent; border: 0.5px solid #2a2a2a; color: #aaa; font-family: var(--font-mono); font-size: 10px; letter-spacing: 1px; padding: 6px 12px; border-radius: 4px; cursor: pointer;">SHARE</button>
+      </div>
+    </div>
+
+    <div style="position: relative; width: 100%; height: 620px; overflow: hidden;">
+
+      <div style="position: absolute; inset: 0; background: linear-gradient(180deg, #000 0%, #000814 25%, #0a1428 50%, #000814 78%, #000 100%);"></div>
+      <div style="position: absolute; inset: 0; background: radial-gradient(ellipse at 60% 50%, #1E3A8A 0%, #1E3A8A 10%, transparent 45%); opacity: 0.5;"></div>
+      <div style="position: absolute; inset: 0; background: radial-gradient(ellipse at 80% 80%, transparent 30%, #000 85%);"></div>
+
+      <svg style="position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0.2;" viewBox="0 0 800 620" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <defs><filter id="g13" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="3"/></filter></defs>
+        <g filter="url(#g13)">
+          <path d="M 0 120 Q 200 80, 400 160 T 800 140" stroke="#FF1E56" stroke-width="1" fill="none"/>
+          <path d="M 0 480 Q 300 520, 550 460 T 800 500" stroke="#1E3A8A" stroke-width="1" fill="none"/>
+        </g>
+      </svg>
+
+      <div style="position: absolute; top: 40px; bottom: 120px; left: 36%; width: 18%; border-radius: 12px; overflow: hidden; border: 0.5px solid #1a2847; background: linear-gradient(180deg, #0a1428 0%, #000 100%);">
+        <div style="position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 25%, #1E3A8A 0%, #1E3A8A 18%, transparent 50%); opacity: 0.75;"></div>
+        <div style="position: absolute; inset: 10% 20% 0 20%; background: radial-gradient(ellipse at 50% 35%, #1E3A8A 0%, #1E3A8A 35%, transparent 70%); opacity: 0.55;"></div>
+        <div style="position: absolute; inset: 0; background: radial-gradient(circle at 50% 50%, transparent 30%, #000 95%);"></div>
+        <div style="position: absolute; top: 14px; left: 14px; font-family: var(--font-mono); font-size: 9px; color: #FFD700; letter-spacing: 1.5px;">SV · 05</div>
+        <div style="position: absolute; top: 14px; right: 14px; font-family: var(--font-mono); font-size: 8px; color: #555; letter-spacing: 1px;">PLACEHOLDER</div>
+        <div style="position: absolute; bottom: 40px; left: 0; right: 0; text-align: center; font-family: var(--font-mono); font-size: 8px; color: #888; letter-spacing: 2px;">FULL BODY</div>
+        <div style="position: absolute; bottom: 18px; left: 0; right: 0; text-align: center; font-family: var(--font-mono); font-size: 7px; color: #666; letter-spacing: 1.5px;">RED BULL ERA</div>
+      </div>
+
+      <div id="reel-container5" style="position: absolute; top: 40px; bottom: 120px; left: 56%; right: 5%; border-radius: 12px; overflow: hidden; border: 0.5px solid #1a2847; background: #000;">
+
+        <div class="reel5-slide" data-i="0" style="position: absolute; inset: 0; opacity: 1; transition: opacity 0.9s ease;">
+          <div style="position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 40%, #E60000 0%, #E60000 30%, transparent 68%); opacity: 0.85;"></div>
+          <div style="position: absolute; inset: 0; background: radial-gradient(circle at 50% 50%, transparent 35%, #000 94%);"></div>
+          <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" style="position: absolute; inset: 0; width: 100%; height: 100%;" aria-hidden="true">
+            <path class="trace5-anim" d="M 30 160 L 90 160 Q 112 148, 130 100 L 180 100 Q 210 116, 230 160 L 290 160 Q 310 144, 325 104 L 370 100" stroke="#FF1E56" stroke-width="1.8" fill="none" opacity="0.88"/>
+          </svg>
+          <div style="position: absolute; top: 14px; left: 16px; font-family: var(--font-mono); font-size: 9px; color: #FFD700; letter-spacing: 1.5px;">SV · 05</div>
+          <div style="position: absolute; top: 14px; right: 16px; font-family: var(--font-mono); font-size: 10px; color: #fff; letter-spacing: 1.5px; background: rgba(0,0,0,0.5); padding: 3px 9px; border-radius: 3px; border: 0.5px solid #333;">POLE</div>
+          <div style="position: absolute; bottom: 44px; left: 20px; right: 20px;">
+            <p style="font-family: var(--font-mono); font-size: 9px; color: #FFD700; letter-spacing: 1.5px; margin: 0 0 4px;">FIRST F1 POLE · YOUNGEST POLE-SITTER</p>
+            <p style="font-size: 24px; font-weight: 400; margin: 0; color: #fff; letter-spacing: -0.5px;">Monza</p>
+            <p style="font-family: var(--font-mono); font-size: 10px; color: #aaa; margin: 4px 0 0; letter-spacing: 1px;">2008 · TORO ROSSO · 1:37.555</p>
+          </div>
+        </div>
+
+        <div class="reel5-slide" data-i="1" style="position: absolute; inset: 0; opacity: 0; transition: opacity 0.9s ease;">
+          <div style="position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 40%, #1E3A8A 0%, #1E3A8A 32%, transparent 68%); opacity: 0.88;"></div>
+          <div style="position: absolute; inset: 0; background: radial-gradient(circle at 50% 50%, transparent 35%, #000 94%);"></div>
+          <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" style="position: absolute; inset: 0; width: 100%; height: 100%;" aria-hidden="true">
+            <path class="trace5-anim" d="M 30 160 Q 60 150, 85 115 L 145 115 Q 175 135, 195 160 L 255 160 Q 285 140, 310 100 L 370 100" stroke="#FF1E56" stroke-width="1.8" fill="none" opacity="0.88"/>
+          </svg>
+          <div style="position: absolute; top: 14px; left: 16px; font-family: var(--font-mono); font-size: 9px; color: #FFD700; letter-spacing: 1.5px;">SV · 05</div>
+          <div style="position: absolute; top: 14px; right: 16px; font-family: var(--font-mono); font-size: 10px; color: #fff; letter-spacing: 1.5px; background: rgba(0,0,0,0.5); padding: 3px 9px; border-radius: 3px; border: 0.5px solid #333;">TITLE</div>
+          <div style="position: absolute; bottom: 44px; left: 20px; right: 20px;">
+            <p style="font-family: var(--font-mono); font-size: 9px; color: #FFD700; letter-spacing: 1.5px; margin: 0 0 4px;">FIRST WORLD TITLE · WDC #1</p>
+            <p style="font-size: 24px; font-weight: 400; margin: 0; color: #fff; letter-spacing: -0.5px;">Abu Dhabi</p>
+            <p style="font-family: var(--font-mono); font-size: 10px; color: #aaa; margin: 4px 0 0; letter-spacing: 1px;">2010 · RED BULL · "I'M WORLD CHAMPION, BOYS"</p>
+          </div>
+        </div>
+
+        <div class="reel5-slide" data-i="2" style="position: absolute; inset: 0; opacity: 0; transition: opacity 0.9s ease;">
+          <div style="position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 40%, #1E3A8A 0%, #1E3A8A 32%, transparent 68%); opacity: 0.88;"></div>
+          <div style="position: absolute; inset: 0; background: radial-gradient(circle at 50% 50%, transparent 35%, #000 94%);"></div>
+          <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" style="position: absolute; inset: 0; width: 100%; height: 100%;" aria-hidden="true">
+            <path class="trace5-anim" d="M 30 160 L 75 160 Q 95 148, 110 100 L 160 100 Q 180 118, 195 160 L 240 160 Q 260 172, 275 220 L 320 220 Q 340 190, 355 160" stroke="#FF1E56" stroke-width="1.8" fill="none" opacity="0.88"/>
+          </svg>
+          <div style="position: absolute; top: 14px; left: 16px; font-family: var(--font-mono); font-size: 9px; color: #FFD700; letter-spacing: 1.5px;">SV · 01</div>
+          <div style="position: absolute; top: 14px; right: 16px; font-family: var(--font-mono); font-size: 10px; color: #fff; letter-spacing: 1.5px; background: rgba(0,0,0,0.5); padding: 3px 9px; border-radius: 3px; border: 0.5px solid #333;">POLE</div>
+          <div style="position: absolute; bottom: 44px; left: 20px; right: 20px;">
+            <p style="font-family: var(--font-mono); font-size: 9px; color: #FFD700; letter-spacing: 1.5px; margin: 0 0 4px;">WET-DRY MASTERCLASS · +0.6s TO TEAMMATE</p>
+            <p style="font-size: 24px; font-weight: 400; margin: 0; color: #fff; letter-spacing: -0.5px;">Malaysia</p>
+            <p style="font-family: var(--font-mono); font-size: 10px; color: #aaa; margin: 4px 0 0; letter-spacing: 1px;">2012 · RED BULL · MIXED CONDITIONS</p>
+          </div>
+        </div>
+
+        <div class="reel5-slide" data-i="3" style="position: absolute; inset: 0; opacity: 0; transition: opacity 0.9s ease;">
+          <div style="position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 40%, #1E3A8A 0%, #1E3A8A 32%, transparent 68%); opacity: 0.88;"></div>
+          <div style="position: absolute; inset: 0; background: radial-gradient(circle at 50% 50%, transparent 35%, #000 94%);"></div>
+          <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" style="position: absolute; inset: 0; width: 100%; height: 100%;" aria-hidden="true">
+            <path class="trace5-anim" d="M 30 160 Q 65 148, 95 112 L 150 112 Q 180 130, 205 160 L 255 160 Q 285 178, 310 215 L 370 215" stroke="#FF1E56" stroke-width="1.8" fill="none" opacity="0.88"/>
+            <circle cx="245" cy="145" r="4" fill="#FFD700" opacity="0.9"/>
+            <circle cx="310" cy="178" r="4" fill="#fff" opacity="0.9"/>
+          </svg>
+          <div style="position: absolute; top: 14px; left: 16px; font-family: var(--font-mono); font-size: 9px; color: #FFD700; letter-spacing: 1.5px;">SV · 01</div>
+          <div style="position: absolute; top: 14px; right: 16px; font-family: var(--font-mono); font-size: 10px; color: #fff; letter-spacing: 1.5px; background: rgba(0,0,0,0.5); padding: 3px 9px; border-radius: 3px; border: 0.5px solid #333;">DEFENSE</div>
+          <div style="position: absolute; bottom: 44px; left: 20px; right: 20px;">
+            <p style="font-family: var(--font-mono); font-size: 9px; color: #FFD700; letter-spacing: 1.5px; margin: 0 0 4px;">HELD OFF WEBBER · CRITICAL WIN</p>
+            <p style="font-size: 24px; font-weight: 400; margin: 0; color: #fff; letter-spacing: -0.5px;">Suzuka</p>
+            <p style="font-family: var(--font-mono); font-size: 10px; color: #aaa; margin: 4px 0 0; letter-spacing: 1px;">2009 · RED BULL · POLE TO WIN</p>
+          </div>
+        </div>
+
+        <div class="reel5-slide" data-i="4" style="position: absolute; inset: 0; opacity: 0; transition: opacity 0.9s ease;">
+          <div style="position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 40%, #1E3A8A 0%, #1E3A8A 32%, transparent 68%); opacity: 0.88;"></div>
+          <div style="position: absolute; inset: 0; background: radial-gradient(circle at 50% 50%, transparent 35%, #000 94%);"></div>
+          <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" style="position: absolute; inset: 0; width: 100%; height: 100%;" aria-hidden="true">
+            <path class="trace5-anim" d="M 30 160 Q 70 150, 100 115 L 150 115 Q 180 135, 205 160 L 260 160 Q 290 180, 315 218 L 360 218 Q 385 180, 395 145" stroke="#FF1E56" stroke-width="1.8" fill="none" opacity="0.88"/>
+          </svg>
+          <div style="position: absolute; top: 14px; left: 16px; font-family: var(--font-mono); font-size: 9px; color: #FFD700; letter-spacing: 1.5px;">SV · 01</div>
+          <div style="position: absolute; top: 14px; right: 16px; font-family: var(--font-mono); font-size: 10px; color: #fff; letter-spacing: 1.5px; background: rgba(0,0,0,0.5); padding: 3px 9px; border-radius: 3px; border: 0.5px solid #333;">WIN</div>
+          <div style="position: absolute; bottom: 44px; left: 20px; right: 20px;">
+            <p style="font-family: var(--font-mono); font-size: 9px; color: #FFD700; letter-spacing: 1.5px; margin: 0 0 4px;">PEAK DOMINANCE · LAPPED THE FIELD</p>
+            <p style="font-size: 24px; font-weight: 400; margin: 0; color: #fff; letter-spacing: -0.5px;">Singapore</p>
+            <p style="font-family: var(--font-mono); font-size: 10px; color: #aaa; margin: 4px 0 0; letter-spacing: 1px;">2013 · RED BULL · 32.6s MARGIN</p>
+          </div>
+        </div>
+
+        <div class="reel5-slide" data-i="5" style="position: absolute; inset: 0; opacity: 0; transition: opacity 0.9s ease;">
+          <div style="position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 40%, #1E3A8A 0%, #1E3A8A 32%, transparent 68%); opacity: 0.88;"></div>
+          <div style="position: absolute; inset: 0; background: radial-gradient(circle at 50% 50%, transparent 35%, #000 94%);"></div>
+          <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" style="position: absolute; inset: 0; width: 100%; height: 100%;" aria-hidden="true">
+            <path class="trace5-anim" d="M 30 160 L 90 160 Q 112 148, 130 105 L 190 105 Q 215 122, 235 160 L 290 160 Q 315 138, 335 104 L 370 104" stroke="#FF1E56" stroke-width="1.8" fill="none" opacity="0.88"/>
+          </svg>
+          <div style="position: absolute; top: 14px; left: 16px; font-family: var(--font-mono); font-size: 9px; color: #FFD700; letter-spacing: 1.5px;">SV · 01</div>
+          <div style="position: absolute; top: 14px; right: 16px; font-family: var(--font-mono); font-size: 10px; color: #fff; letter-spacing: 1.5px; background: rgba(0,0,0,0.5); padding: 3px 9px; border-radius: 3px; border: 0.5px solid #333;">TITLE</div>
+          <div style="position: absolute; bottom: 44px; left: 20px; right: 20px;">
+            <p style="font-family: var(--font-mono); font-size: 9px; color: #FFD700; letter-spacing: 1.5px; margin: 0 0 4px;">4TH CONSECUTIVE TITLE · RECORD</p>
+            <p style="font-size: 24px; font-weight: 400; margin: 0; color: #fff; letter-spacing: -0.5px;">India</p>
+            <p style="font-family: var(--font-mono); font-size: 10px; color: #aaa; margin: 4px 0 0; letter-spacing: 1px;">2013 · RED BULL · TITLE-CLINCHING RACE</p>
+          </div>
+        </div>
+
+        <div id="reel5-progress" style="position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: rgba(255,255,255,0.08);">
+          <div id="reel5-progress-fill" style="height: 100%; width: 0%; background: #FF1E56; transition: width 0.1s linear;"></div>
+        </div>
+
+        <div id="reel5-dots" style="position: absolute; bottom: 10px; left: 20px; display: flex; gap: 4px;">
+          <span class="reel5-dot" data-i="0" style="width: 18px; height: 2px; background: #fff; cursor: pointer;"></span>
+          <span class="reel5-dot" data-i="1" style="width: 18px; height: 2px; background: rgba(255,255,255,0.25); cursor: pointer;"></span>
+          <span class="reel5-dot" data-i="2" style="width: 18px; height: 2px; background: rgba(255,255,255,0.25); cursor: pointer;"></span>
+          <span class="reel5-dot" data-i="3" style="width: 18px; height: 2px; background: rgba(255,255,255,0.25); cursor: pointer;"></span>
+          <span class="reel5-dot" data-i="4" style="width: 18px; height: 2px; background: rgba(255,255,255,0.25); cursor: pointer;"></span>
+          <span class="reel5-dot" data-i="5" style="width: 18px; height: 2px; background: rgba(255,255,255,0.25); cursor: pointer;"></span>
+        </div>
+      </div>
+
+      <div style="position: absolute; top: 50%; left: 5%; transform: translateY(-50%); max-width: 30%;">
+        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 14px;">
+          <span style="width: 6px; height: 6px; border-radius: 50%; background: #1E3A8A;"></span>
+          <span style="font-family: var(--font-mono); font-size: 10px; letter-spacing: 2px; color: #aaa;">FORMULA 1 · RETIRED 2022</span>
+        </div>
+        <p style="font-size: 14px; color: #888; margin: 0 0 4px; letter-spacing: 0.5px;">Sebastian</p>
+        <h1 style="font-size: 68px; font-weight: 400; margin: 0; letter-spacing: -2.5px; line-height: 0.88; color: #fff;">Vettel</h1>
+        <p style="font-family: var(--font-mono); font-size: 11px; color: #888; margin: 18px 0 0; letter-spacing: 1px;">HEPPENHEIM, DE · BORN 03.07.1987</p>
+        <p style="font-family: var(--font-serif); font-size: 14px; color: #bbb; font-style: italic; line-height: 1.6; margin: 18px 0 0; max-width: 260px;">"The youngest world champion. Four consecutive titles. Clean inputs and single-lap dominance."</p>
+      </div>
+
+      <div style="position: absolute; bottom: 24px; left: 0; right: 0; padding: 0 1.75rem; display: flex; justify-content: center; gap: 40px;">
+        <div style="text-align: center;">
+          <p style="font-family: var(--font-mono); font-size: 9px; letter-spacing: 1.5px; color: #888; margin: 0 0 4px;">TITLES</p>
+          <p style="font-size: 28px; font-weight: 400; margin: 0; color: #FF1E56; letter-spacing: -1px;">4</p>
+        </div>
+        <div style="width: 0.5px; background: #2a2a2a;"></div>
+        <div style="text-align: center;">
+          <p style="font-family: var(--font-mono); font-size: 9px; letter-spacing: 1.5px; color: #888; margin: 0 0 4px;">WINS</p>
+          <p style="font-size: 28px; font-weight: 400; margin: 0; color: #fff; letter-spacing: -1px;">53</p>
+        </div>
+        <div style="width: 0.5px; background: #2a2a2a;"></div>
+        <div style="text-align: center;">
+          <p style="font-family: var(--font-mono); font-size: 9px; letter-spacing: 1.5px; color: #888; margin: 0 0 4px;">POLES</p>
+          <p style="font-size: 28px; font-weight: 400; margin: 0; color: #fff; letter-spacing: -1px;">57</p>
+        </div>
+        <div style="width: 0.5px; background: #2a2a2a;"></div>
+        <div style="text-align: center;">
+          <p style="font-family: var(--font-mono); font-size: 9px; letter-spacing: 1.5px; color: #888; margin: 0 0 4px;">PODIUMS</p>
+          <p style="font-size: 28px; font-weight: 400; margin: 0; color: #fff; letter-spacing: -1px;">122</p>
+        </div>
+        <div style="width: 0.5px; background: #2a2a2a;"></div>
+        <div style="text-align: center;">
+          <p style="font-family: var(--font-mono); font-size: 9px; letter-spacing: 1.5px; color: #888; margin: 0 0 4px;">CAREER</p>
+          <p style="font-size: 28px; font-weight: 400; margin: 0; color: #fff; letter-spacing: -1px;">15y</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="padding: 0 1.75rem; background: #000;">
+      <div style="margin-top: -20px; position: relative; z-index: 5;">
+        <p style="font-family: var(--font-mono); font-size: 9px; letter-spacing: 1.5px; color: #666; margin: 0 0 10px;">ERAS</p>
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px;">
+          <div style="aspect-ratio: 16/10; background: linear-gradient(135deg, #1a0d00, #000); border: 0.5px solid #222; border-radius: 6px; overflow: hidden; position: relative;">
+            <div style="position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 45%, #E60000 0%, #E60000 28%, transparent 60%); opacity: 0.65;"></div>
+            <div style="position: absolute; inset: 0; background: radial-gradient(circle at 50% 50%, transparent 35%, #000 92%);"></div>
+            <div style="position: absolute; top: 8px; left: 10px; font-family: var(--font-mono); font-size: 8px; color: #E60000; letter-spacing: 1px;">TORO ROSSO</div>
+            <div style="position: absolute; bottom: 8px; left: 10px; font-family: var(--font-mono); font-size: 9px; color: #fff; letter-spacing: 1px;">2007–2008</div>
+            <div style="position: absolute; bottom: 8px; right: 10px; font-family: var(--font-mono); font-size: 8px; color: #888;">1W · 1P</div>
+          </div>
+          <div style="aspect-ratio: 16/10; background: linear-gradient(135deg, #000814, #000); border: 0.5px solid #1a2847; border-radius: 6px; overflow: hidden; position: relative;">
+            <div style="position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 45%, #1E3A8A 0%, #1E3A8A 30%, transparent 60%); opacity: 0.75;"></div>
+            <div style="position: absolute; inset: 0; background: radial-gradient(circle at 50% 50%, transparent 35%, #000 92%);"></div>
+            <div style="position: absolute; top: 8px; left: 10px; font-family: var(--font-mono); font-size: 8px; color: #FFD700; letter-spacing: 1px;">RED BULL</div>
+            <div style="position: absolute; bottom: 8px; left: 10px; font-family: var(--font-mono); font-size: 9px; color: #fff; letter-spacing: 1px;">2009–2014</div>
+            <div style="position: absolute; bottom: 8px; right: 10px; font-family: var(--font-mono); font-size: 8px; color: #FFD700;">4× WDC</div>
+          </div>
+          <div style="aspect-ratio: 16/10; background: linear-gradient(135deg, #1a0000, #000); border: 0.5px solid #2a0000; border-radius: 6px; overflow: hidden; position: relative;">
+            <div style="position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 45%, #DC0000 0%, #DC0000 28%, transparent 60%); opacity: 0.7;"></div>
+            <div style="position: absolute; inset: 0; background: radial-gradient(circle at 50% 50%, transparent 35%, #000 92%);"></div>
+            <div style="position: absolute; top: 8px; left: 10px; font-family: var(--font-mono); font-size: 8px; color: #DC0000; letter-spacing: 1px;">FERRARI</div>
+            <div style="position: absolute; bottom: 8px; left: 10px; font-family: var(--font-mono); font-size: 9px; color: #fff; letter-spacing: 1px;">2015–2020</div>
+            <div style="position: absolute; bottom: 8px; right: 10px; font-family: var(--font-mono); font-size: 8px; color: #888;">14W · 2nd×2</div>
+          </div>
+          <div style="aspect-ratio: 16/10; background: linear-gradient(135deg, #001a14, #000); border: 0.5px solid #013d30; border-radius: 6px; overflow: hidden; position: relative;">
+            <div style="position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 45%, #006F62 0%, #006F62 28%, transparent 60%); opacity: 0.7;"></div>
+            <div style="position: absolute; inset: 0; background: radial-gradient(circle at 50% 50%, transparent 35%, #000 92%);"></div>
+            <div style="position: absolute; top: 8px; left: 10px; font-family: var(--font-mono); font-size: 8px; color: #006F62; letter-spacing: 1px;">ASTON MARTIN</div>
+            <div style="position: absolute; bottom: 8px; left: 10px; font-family: var(--font-mono); font-size: 9px; color: #fff; letter-spacing: 1px;">2021–2022</div>
+            <div style="position: absolute; bottom: 8px; right: 10px; font-family: var(--font-mono); font-size: 8px; color: #888;">1 PODIUM</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="padding: 2.5rem 1.75rem 2rem;">
+      <div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 6px;">
+        <p style="font-family: var(--font-mono); font-size: 10px; letter-spacing: 2px; color: #FF1E56; margin: 0;">DRIVING SIGNATURE</p>
+        <div style="display: flex; align-items: center; gap: 8px; font-family: var(--font-mono); font-size: 9px; color: #555;">
+          <span>COMPARE:</span>
+          <span style="padding: 3px 8px; border: 0.5px solid #2a2a2a; border-radius: 3px; color: #fff; background: #111;">2007–2022 ERA</span>
+          <span style="padding: 3px 8px; color: #555; cursor: pointer;">ALL-TIME</span>
+          <span style="padding: 3px 8px; color: #555; cursor: pointer;">CHAMPIONS</span>
+          <span style="padding: 3px 8px; color: #555; cursor: pointer;">TEAMMATES</span>
+        </div>
+      </div>
+      <p style="font-size: 13px; color: #888; margin: 0 0 24px; max-width: 520px; line-height: 1.6;">The shape of Vettel's driving — extracted from 847 onboard laps. Compared against F1 drivers who raced 2007–2022.</p>
+
+      <div style="background: #080808; border: 1px solid #1a1a1a; border-radius: 10px; padding: 32px;">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px;">
+          <div>
+            <p style="font-family: var(--font-mono); font-size: 9px; letter-spacing: 1.5px; color: #555; margin: 0 0 4px;">THE FINGERPRINT</p>
+            <p style="font-size: 15px; color: #ccc; margin: 0; font-weight: 400;">Clean single-input steering. Aggressive corner entry. Low correction rate.</p>
+          </div>
+          <div style="font-family: var(--font-mono); font-size: 9px; color: #666; letter-spacing: 1px;">vs. 2007–2022 ERA</div>
+        </div>
+
+        <div style="display: flex; justify-content: center; padding: 24px 0;">
+          <svg viewBox="0 0 340 340" style="width: 100%; max-width: 420px; height: auto;" role="img" aria-label="Vettel driving signature radar chart">
+            <g transform="translate(170, 170)">
+              <polygon points="0,-140 121,-70 121,70 0,140 -121,70 -121,-70" fill="none" stroke="#1a1a1a" stroke-width="0.5"/>
+              <polygon points="0,-105 91,-52 91,52 0,105 -91,52 -91,-52" fill="none" stroke="#1a1a1a" stroke-width="0.5"/>
+              <polygon points="0,-70 61,-35 61,35 0,70 -61,35 -61,-35" fill="none" stroke="#1a1a1a" stroke-width="0.5"/>
+              <polygon points="0,-35 30,-17 30,17 0,35 -30,17 -30,-17" fill="none" stroke="#1a1a1a" stroke-width="0.5"/>
+              <line x1="0" y1="0" x2="0" y2="-140" stroke="#222" stroke-width="0.5"/>
+              <line x1="0" y1="0" x2="121" y2="-70" stroke="#222" stroke-width="0.5"/>
+              <line x1="0" y1="0" x2="121" y2="70" stroke="#222" stroke-width="0.5"/>
+              <line x1="0" y1="0" x2="0" y2="140" stroke="#222" stroke-width="0.5"/>
+              <line x1="0" y1="0" x2="-121" y2="70" stroke="#222" stroke-width="0.5"/>
+              <line x1="0" y1="0" x2="-121" y2="-70" stroke="#222" stroke-width="0.5"/>
+              <polygon points="0,-84 97,-56 85,49 0,112 -73,42 -97,-56" fill="#444" fill-opacity="0.15" stroke="#555" stroke-width="0.5" stroke-dasharray="2,2"/>
+              <polygon points="0,-118 109,-63 73,42 0,84 -85,49 -79,-46" fill="#FF1E56" fill-opacity="0.18" stroke="#FF1E56" stroke-width="1.5"/>
+              <circle cx="0" cy="-118" r="3" fill="#FF1E56"/>
+              <circle cx="109" cy="-63" r="3" fill="#FF1E56"/>
+              <circle cx="73" cy="42" r="3" fill="#FF1E56"/>
+              <circle cx="0" cy="84" r="3" fill="#FF1E56"/>
+              <circle cx="-85" cy="49" r="3" fill="#FF1E56"/>
+              <circle cx="-79" cy="-46" r="3" fill="#FF1E56"/>
+              <text x="0" y="-154" text-anchor="middle" font-family="monospace" font-size="10" fill="#888" letter-spacing="0.5">STEERING SMOOTHNESS</text>
+              <text x="138" y="-72" text-anchor="start" font-family="monospace" font-size="10" fill="#888">ENTRY</text>
+              <text x="138" y="78" text-anchor="start" font-family="monospace" font-size="10" fill="#888">TIRE MGMT</text>
+              <text x="0" y="160" text-anchor="middle" font-family="monospace" font-size="10" fill="#888">THROTTLE</text>
+              <text x="-138" y="78" text-anchor="end" font-family="monospace" font-size="10" fill="#888">BRAKING</text>
+              <text x="-138" y="-72" text-anchor="end" font-family="monospace" font-size="10" fill="#888">CONSISTENCY</text>
+            </g>
+          </svg>
+        </div>
+
+        <div style="display: flex; gap: 20px; justify-content: center; margin-top: 4px; font-family: var(--font-mono); font-size: 10px;">
+          <span style="display: flex; align-items: center; gap: 6px;"><span style="width: 10px; height: 10px; background: #FF1E56; border-radius: 1px;"></span><span style="color: #ccc; letter-spacing: 1px;">VETTEL</span></span>
+          <span style="display: flex; align-items: center; gap: 6px;"><span style="width: 10px; height: 10px; border: 1px dashed #888; border-radius: 1px;"></span><span style="color: #888; letter-spacing: 1px;">ERA AVG</span></span>
+        </div>
+
+        <div style="border-top: 0.5px solid #1a1a1a; margin-top: 28px; padding-top: 14px; display: flex; justify-content: flex-end;">
+          <button style="background: transparent; border: 0.5px solid #2a2a2a; color: #aaa; font-family: var(--font-mono); font-size: 10px; letter-spacing: 1px; padding: 7px 13px; border-radius: 4px; cursor: pointer;" onclick="sendPrompt('Show Vettel full metrics breakdown')">FULL METRICS ↗</button>
+        </div>
+      </div>
+
+    </div>
+
+    <div style="padding: 0 1.75rem 3rem;">
+      <div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 6px;">
+        <p style="font-family: var(--font-mono); font-size: 10px; letter-spacing: 2px; color: #FF1E56; margin: 0;">SETUP & STYLE</p>
+        <p style="font-family: var(--font-mono); font-size: 9px; letter-spacing: 1px; color: #555;">SCOUTING REPORT</p>
+      </div>
+      <p style="font-size: 13px; color: #888; margin: 0 0 24px; max-width: 520px; line-height: 1.6;">How Vettel set up the car, and the style that emerged from it.</p>
+
+      <div style="background: #080808; border: 1px solid #1a1a1a; border-radius: 10px; padding: 32px; display: grid; grid-template-columns: 1.2fr 1fr; gap: 32px;">
+
+        <div>
+          <p style="font-family: var(--font-mono); font-size: 9px; letter-spacing: 1.5px; color: #555; margin: 0 0 14px;">THE REPORT</p>
+          <p style="font-family: var(--font-serif); font-size: 16px; color: #ddd; line-height: 1.75; margin: 0 0 16px;">Vettel preferred a <span style="color: #FF1E56; font-style: normal; font-family: var(--font-sans);">pointy front end</span> — a car that rotated willingly into corners, even at the cost of rear stability. He trusted the rear to hold and turned in aggressively, often earlier and sharper than his teammates.</p>
+          <p style="font-family: var(--font-serif); font-size: 16px; color: #ddd; line-height: 1.75; margin: 0 0 16px;">The Red Bull era suited him perfectly — Newey's blown-diffuser cars generated enormous rear downforce, letting Vettel over-rotate without penalty. When that aero advantage evaporated after 2013, and later at Ferrari with understeery balance, his signature strength became a liability. He never fully adapted.</p>
+          <p style="font-family: var(--font-serif); font-size: 16px; color: #ddd; line-height: 1.75; margin: 0;">Built his reputation on <span style="color: #FF1E56; font-style: normal; font-family: var(--font-sans);">single-lap pace</span> over race management. Four consecutive titles owe more to his Saturday than his Sunday.</p>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 18px;">
+
+          <div>
+            <p style="font-family: var(--font-mono); font-size: 9px; letter-spacing: 1.5px; color: #555; margin: 0 0 10px;">SETUP PREFERENCE</p>
+            <div style="display: flex; flex-direction: column; gap: 10px;">
+              <div>
+                <div style="display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 9px; color: #888; letter-spacing: 0.5px; margin-bottom: 4px;">
+                  <span>UNDERSTEER</span><span>OVERSTEER</span>
+                </div>
+                <div style="height: 2px; background: #1a1a1a; border-radius: 1px; position: relative;">
+                  <div style="position: absolute; left: 72%; top: -3px; width: 2px; height: 8px; background: #FF1E56;"></div>
+                </div>
+                <p style="font-family: var(--font-mono); font-size: 9px; color: #FF1E56; letter-spacing: 0.5px; margin: 4px 0 0;">POINTY · ROTATES ON ENTRY</p>
+              </div>
+              <div>
+                <div style="display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 9px; color: #888; letter-spacing: 0.5px; margin-bottom: 4px;">
+                  <span>SOFT</span><span>STIFF</span>
+                </div>
+                <div style="height: 2px; background: #1a1a1a; border-radius: 1px; position: relative;">
+                  <div style="position: absolute; left: 62%; top: -3px; width: 2px; height: 8px; background: #FF1E56;"></div>
+                </div>
+                <p style="font-family: var(--font-mono); font-size: 9px; color: #888; letter-spacing: 0.5px; margin: 4px 0 0;">STIFF · KERB-RESPONSIVE</p>
+              </div>
+              <div>
+                <div style="display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 9px; color: #888; letter-spacing: 0.5px; margin-bottom: 4px;">
+                  <span>LOW AERO</span><span>HIGH AERO</span>
+                </div>
+                <div style="height: 2px; background: #1a1a1a; border-radius: 1px; position: relative;">
+                  <div style="position: absolute; left: 78%; top: -3px; width: 2px; height: 8px; background: #FF1E56;"></div>
+                </div>
+                <p style="font-family: var(--font-mono); font-size: 9px; color: #888; letter-spacing: 0.5px; margin: 4px 0 0;">HIGH DOWNFORCE PREFERRED</p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <p style="font-family: var(--font-mono); font-size: 9px; letter-spacing: 1.5px; color: #555; margin: 0 0 10px;">EXCELLED AT</p>
+            <div style="display: flex; flex-direction: column; gap: 6px;">
+              <div style="display: flex; align-items: center; gap: 8px; font-size: 12px; color: #ddd;">
+                <span style="width: 3px; height: 3px; background: #FF1E56; border-radius: 50%;"></span>Single-lap qualifying pace
+              </div>
+              <div style="display: flex; align-items: center; gap: 8px; font-size: 12px; color: #ddd;">
+                <span style="width: 3px; height: 3px; background: #FF1E56; border-radius: 50%;"></span>High-downforce circuits (Suzuka, Singapore)
+              </div>
+              <div style="display: flex; align-items: center; gap: 8px; font-size: 12px; color: #ddd;">
+                <span style="width: 3px; height: 3px; background: #FF1E56; border-radius: 50%;"></span>Dry conditions with consistent grip
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <p style="font-family: var(--font-mono); font-size: 9px; letter-spacing: 1.5px; color: #555; margin: 0 0 10px;">STRUGGLED WITH</p>
+            <div style="display: flex; flex-direction: column; gap: 6px;">
+              <div style="display: flex; align-items: center; gap: 8px; font-size: 12px; color: #aaa;">
+                <span style="width: 3px; height: 3px; background: #555; border-radius: 50%;"></span>Understeery car balance
+              </div>
+              <div style="display: flex; align-items: center; gap: 8px; font-size: 12px; color: #aaa;">
+                <span style="width: 3px; height: 3px; background: #555; border-radius: 50%;"></span>Tire degradation management
+              </div>
+              <div style="display: flex; align-items: center; gap: 8px; font-size: 12px; color: #aaa;">
+                <span style="width: 3px; height: 3px; background: #555; border-radius: 50%;"></span>Close wheel-to-wheel pressure
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="padding: 0 1.75rem 2rem; text-align: center;">
+      <p style="font-family: var(--font-mono); font-size: 9px; letter-spacing: 2px; color: #333;">SCROLL · TRACKS · NOTABLE LAPS</p>
+      <div style="width: 1px; height: 20px; background: linear-gradient(to bottom, #333, transparent); margin: 8px auto 0;"></div>
+    </div>
+
+  </div>
+
+  <style>
+    @keyframes traceIn5 {
+      0% { stroke-dashoffset: 500; opacity: 0; }
+      15% { opacity: 0.88; }
+      70% { stroke-dashoffset: 0; opacity: 0.88; }
+      100% { stroke-dashoffset: 0; opacity: 0.88; }
+    }
+    .trace5-anim { stroke-dasharray: 500; stroke-dashoffset: 500; }
+    .reel5-slide[style*="opacity: 1"] .trace5-anim { animation: traceIn5 4.5s ease forwards; }
+  </style>
+
+  <script>
+    (function() {
+      const slides = document.querySelectorAll('.reel5-slide');
+      const dots = document.querySelectorAll('.reel5-dot');
+      const progress = document.getElementById('reel5-progress-fill');
+      const reelEl = document.getElementById('reel-container5');
+
+      let current = 0;
+      let paused = false;
+      let pct = 0;
+      const DWELL = 5000, TICK = 50;
+
+      function show(idx) {
+        slides.forEach((s, i) => {
+          s.style.opacity = i === idx ? '1' : '0';
+          if (i === idx) {
+            const t = s.querySelector('.trace5-anim');
+            if (t) { t.style.animation = 'none'; t.offsetHeight; t.style.animation = ''; }
+          }
+        });
+        dots.forEach((d, i) => { d.style.background = i === idx ? '#fff' : 'rgba(255,255,255,0.25)'; });
+        pct = 0;
+        progress.style.width = '0%';
+      }
+
+      setInterval(() => {
+        if (paused) return;
+        pct += (TICK / DWELL) * 100;
+        progress.style.width = Math.min(pct, 100) + '%';
+        if (pct >= 100) { current = (current + 1) % slides.length; show(current); }
+      }, TICK);
+
+      reelEl.addEventListener('click', (e) => {
+        if (e.target.classList.contains('reel5-dot')) return;
+        paused = !paused;
+      });
+
+      dots.forEach(d => {
+        d.addEventListener('click', (e) => {
+          e.stopPropagation();
+          current = parseInt(d.dataset.i);
+          show(current);
+          paused = false;
+        });
+      });
+    })();
+  </script>
+
+</div>

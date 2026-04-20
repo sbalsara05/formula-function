@@ -1,0 +1,366 @@
+<div style="background: #000; color: #fff; font-family: var(--font-sans); margin: -1rem -1.25rem; padding: 0; border-radius: var(--border-radius-lg); overflow: hidden; position: relative; min-height: 2000px;">
+
+  <div style="position: relative; z-index: 2;">
+
+    <div style="padding: 1rem 1.75rem; display: flex; justify-content: space-between; align-items: center; border-bottom: 0.5px solid #1a1a1a; background: rgba(0,0,0,0.7); position: relative; z-index: 10;">
+      <div style="display: flex; align-items: center; gap: 20px;">
+        <span style="font-family: var(--font-mono); font-size: 18px; font-weight: 500; letter-spacing: -0.5px;">f(x)</span>
+        <div style="display: flex; align-items: center; gap: 8px; font-family: var(--font-mono); font-size: 10px; letter-spacing: 1.5px; color: #666;">
+          <span>f(1)</span><span style="color: #333;">/</span><span>VENUES</span><span style="color: #333;">/</span><span style="color: #aaa;">SPA-FRANCORCHAMPS</span>
+        </div>
+      </div>
+      <div style="display: flex; gap: 8px;">
+        <button style="background: transparent; border: 0.5px solid #2a2a2a; color: #aaa; font-family: var(--font-mono); font-size: 10px; letter-spacing: 1px; padding: 6px 12px; border-radius: 4px; cursor: pointer;" onclick="sendPrompt('Compare Spa to another venue')">COMPARE ↗</button>
+        <button style="background: transparent; border: 0.5px solid #2C5F3E; color: #5FB87C; font-family: var(--font-mono); font-size: 10px; letter-spacing: 1px; padding: 6px 12px; border-radius: 4px; cursor: pointer;" onclick="sendPrompt('Analyze a lap at Spa')">ANALYZE A LAP ↗</button>
+        <button style="background: transparent; border: 0.5px solid #2a2a2a; color: #aaa; font-family: var(--font-mono); font-size: 10px; letter-spacing: 1px; padding: 6px 12px; border-radius: 4px; cursor: pointer;">SHARE</button>
+      </div>
+    </div>
+
+    <div style="position: relative; width: 100%; height: 620px; overflow: hidden;">
+      <div style="position: absolute; inset: 0; background: linear-gradient(180deg, #000 0%, #0a1a10 25%, #0f2518 50%, #0a1a10 78%, #000 100%);"></div>
+      <div style="position: absolute; inset: 0; background: radial-gradient(ellipse at 30% 40%, #2C5F3E 0%, #2C5F3E 12%, transparent 50%); opacity: 0.4;"></div>
+      <div style="position: absolute; inset: 0; background: radial-gradient(ellipse at 80% 80%, transparent 30%, #000 85%);"></div>
+
+      <svg style="position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0.22;" viewBox="0 0 800 620" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <defs><filter id="spaG" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="3"/></filter></defs>
+        <g filter="url(#spaG)">
+          <path d="M 0 140 Q 200 100, 400 180 T 800 160" stroke="#5FB87C" stroke-width="1" fill="none"/>
+          <path d="M 0 440 Q 300 480, 550 420 T 800 460" stroke="#2C5F3E" stroke-width="1" fill="none"/>
+        </g>
+      </svg>
+
+      <div id="trackC" style="position: absolute; top: 40px; bottom: 120px; left: 48%; right: 5%; border-radius: 12px; overflow: hidden; border: 0.5px solid #1a3a24; background: linear-gradient(180deg, #0a1a10 0%, #000 100%);">
+        <div id="mapL" style="position: absolute; inset: 0; transition: opacity 0.5s ease;">
+          <div style="position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 30%, #2C5F3E 0%, #2C5F3E 20%, transparent 55%); opacity: 0.4;"></div>
+          <div style="position: absolute; inset: 0; background: radial-gradient(circle at 50% 50%, transparent 40%, #000 95%);"></div>
+
+          <svg viewBox="0 0 400 300" style="position: absolute; inset: 0; width: 100%; height: 100%;" role="img" aria-label="Spa with overtake hotspots and legendary corner">
+            <path d="M 50 180 L 80 180 Q 85 180, 90 175 L 120 145 Q 125 138, 130 145 L 150 175 Q 155 182, 155 190 L 155 210 Q 155 220, 165 222 L 200 225 Q 215 225, 220 215 L 240 180 Q 245 170, 255 170 L 290 172 Q 300 172, 302 162 L 310 130 Q 312 120, 320 118 L 345 115 Q 355 114, 355 104 L 355 75 Q 355 65, 348 60 L 320 48 Q 310 44, 302 50 L 275 70 Q 268 75, 260 72 L 230 60 Q 222 57, 218 65 L 205 90 Q 200 98, 192 96 L 160 88 Q 150 85, 144 92 L 120 120 Q 113 128, 105 126 L 75 118 Q 65 115, 60 125 L 48 155 Q 43 168, 50 180 Z" stroke="#5FB87C" stroke-width="2" fill="none" stroke-linejoin="round"/>
+
+            <circle cx="50" cy="180" r="3" fill="#FFD700"/>
+            <text x="50" y="200" text-anchor="middle" font-family="monospace" font-size="7" fill="#FFD700" letter-spacing="0.5">START</text>
+
+            <g>
+              <circle cx="130" cy="145" r="3.5" fill="none" stroke="#FF1E56" stroke-width="1" stroke-dasharray="1,1" opacity="0.85"/>
+              <text x="130" y="132" text-anchor="middle" font-family="monospace" font-size="8" fill="#FF1E56" letter-spacing="0.5">EAU ROUGE</text>
+              <rect x="108" y="152" width="44" height="10" rx="2" fill="rgba(255,30,86,0.12)" stroke="#FF1E56" stroke-width="0.5" opacity="0.9"/>
+              <text x="130" y="159" text-anchor="middle" font-family="monospace" font-size="6" fill="#FF1E56" letter-spacing="1">LEGENDARY</text>
+            </g>
+
+            <g class="oh" data-title="Les Combes" data-year="2000" data-moment="Häkkinen on Schumacher — the Zonta lap" data-driver="McLAREN over FERRARI" style="cursor: pointer;">
+              <circle cx="220" cy="215" r="6" fill="#FFD700" class="od"/>
+              <circle cx="220" cy="215" r="12" fill="#FFD700" opacity="0" class="op"/>
+              <text x="236" y="230" text-anchor="start" font-family="monospace" font-size="7" fill="#ccc">LES COMBES</text>
+            </g>
+
+            <g class="oh" data-title="La Source" data-year="2019" data-moment="Leclerc on Hamilton at start" data-driver="FERRARI over MERCEDES" style="cursor: pointer;">
+              <circle cx="90" cy="175" r="6" fill="#FFD700" class="od"/>
+              <circle cx="90" cy="175" r="12" fill="#FFD700" opacity="0" class="op"/>
+              <text x="75" y="170" text-anchor="end" font-family="monospace" font-size="7" fill="#ccc">LA SOURCE</text>
+            </g>
+
+            <g class="oh" data-title="Bus Stop" data-year="2011" data-moment="Webber on Alonso — last-lap pass" data-driver="RED BULL over FERRARI" style="cursor: pointer;">
+              <circle cx="60" cy="125" r="6" fill="#FFD700" class="od"/>
+              <circle cx="60" cy="125" r="12" fill="#FFD700" opacity="0" class="op"/>
+              <text x="50" y="115" text-anchor="end" font-family="monospace" font-size="7" fill="#ccc">BUS STOP</text>
+            </g>
+
+            <g class="oh" data-title="Kemmel Straight" data-year="2008" data-moment="Hamilton on Räikkönen — final laps wet" data-driver="McLAREN over FERRARI" style="cursor: pointer;">
+              <circle cx="165" cy="125" r="6" fill="#FFD700" class="od"/>
+              <circle cx="165" cy="125" r="12" fill="#FFD700" opacity="0" class="op"/>
+              <text x="165" y="112" text-anchor="middle" font-family="monospace" font-size="7" fill="#ccc">KEMMEL</text>
+            </g>
+
+            <circle cx="302" cy="162" r="2" fill="#555"/>
+            <text x="316" y="158" text-anchor="start" font-family="monospace" font-size="7" fill="#666">POUHON</text>
+            <circle cx="348" cy="60" r="2" fill="#555"/>
+            <text x="362" y="58" text-anchor="start" font-family="monospace" font-size="7" fill="#666">STAVELOT</text>
+            <circle cx="192" cy="96" r="2" fill="#555"/>
+            <text x="205" y="92" text-anchor="start" font-family="monospace" font-size="7" fill="#666">BLANCHIMONT</text>
+          </svg>
+
+          <div style="position: absolute; bottom: 14px; left: 14px; font-family: var(--font-mono); font-size: 8px; color: #666; letter-spacing: 1px;">CLICK CORNERS FOR OVERTAKES</div>
+          <div style="position: absolute; top: 14px; right: 14px; font-family: var(--font-mono); font-size: 8px; color: #5FB87C; letter-spacing: 1px;">ARDENNES · BE</div>
+          <div style="position: absolute; bottom: 14px; right: 14px; display: flex; align-items: center; gap: 12px;">
+            <div style="display: flex; align-items: center; gap: 6px;"><span style="width: 8px; height: 8px; background: #FFD700; border-radius: 50%;"></span><span style="font-family: var(--font-mono); font-size: 7px; color: #FFD700; letter-spacing: 1px;">OVERTAKE</span></div>
+            <div style="display: flex; align-items: center; gap: 6px;"><span style="width: 8px; height: 8px; border: 1px solid #FF1E56; border-radius: 50%; background: transparent;"></span><span style="font-family: var(--font-mono); font-size: 7px; color: #FF1E56; letter-spacing: 1px;">LEGENDARY</span></div>
+          </div>
+        </div>
+
+        <div id="movO" style="position: absolute; inset: 0; opacity: 0; pointer-events: none; transition: opacity 0.5s ease; background: #000;">
+          <div id="movG" style="position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 40%, #FFD700 0%, #FFD700 25%, transparent 60%); opacity: 0;"></div>
+          <div style="position: absolute; inset: 0; background: radial-gradient(circle at 50% 50%, transparent 30%, #000 92%);"></div>
+
+          <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" style="position: absolute; inset: 0; width: 100%; height: 100%;" aria-hidden="true">
+            <path id="trL" d="M 60 170 L 140 170 Q 170 165, 195 150 L 260 145 Q 290 148, 320 160" stroke="#888" stroke-width="1.4" fill="none" opacity="0" stroke-dasharray="3,3"/>
+            <path id="trF" d="M 60 185 L 140 185 Q 175 180, 200 155 L 265 148 Q 295 145, 330 150" stroke="#fff" stroke-width="1.8" fill="none" opacity="0"/>
+          </svg>
+
+          <button id="movX" style="position: absolute; top: 14px; right: 14px; background: rgba(0,0,0,0.6); border: 0.5px solid #333; color: #aaa; font-family: var(--font-mono); font-size: 10px; letter-spacing: 1px; padding: 6px 12px; border-radius: 4px; cursor: pointer; z-index: 20;">× CLOSE</button>
+
+          <div style="position: absolute; top: 14px; left: 14px; display: flex; align-items: center; gap: 10px;">
+            <span style="font-family: var(--font-mono); font-size: 8px; color: #FFD700; background: rgba(255,215,0,0.1); padding: 3px 7px; border-radius: 3px; border: 0.5px solid rgba(255,215,0,0.3); letter-spacing: 1.5px;">OVERTAKE</span>
+            <span id="movCL" style="font-family: var(--font-mono); font-size: 9px; color: #FFD700; letter-spacing: 1.5px;">CORNER</span>
+          </div>
+
+          <div style="position: absolute; bottom: 60px; left: 22px; right: 22px;">
+            <p id="movM" style="font-family: var(--font-mono); font-size: 9px; color: #FFD700; letter-spacing: 1.5px; margin: 0 0 6px;">YEAR · CONTEXT</p>
+            <p id="movT" style="font-size: 22px; font-weight: 400; margin: 0; color: #fff; letter-spacing: -0.5px; line-height: 1.15;">Moment</p>
+            <p id="movD" style="font-family: var(--font-mono); font-size: 10px; color: #aaa; margin: 6px 0 0; letter-spacing: 1px;">DRIVER vs DRIVER</p>
+          </div>
+
+          <div style="position: absolute; bottom: 14px; left: 22px; right: 22px; display: flex; justify-content: space-between; align-items: center;">
+            <div style="display: flex; gap: 12px; align-items: center; font-family: var(--font-mono); font-size: 8px; color: #888; letter-spacing: 1px;">
+              <span style="display: flex; align-items: center; gap: 4px;"><span style="width: 10px; height: 1.5px; background: #fff;"></span>OVERTAKER</span>
+              <span style="display: flex; align-items: center; gap: 4px;"><span style="width: 10px; height: 1.5px; background: #888; border-top: 1px dashed #888;"></span>DEFENDER</span>
+            </div>
+            <span style="font-family: var(--font-mono); font-size: 8px; color: #555;">[PLACEHOLDER · VERIFICATION PENDING]</span>
+          </div>
+        </div>
+
+        <div id="tipC" style="position: absolute; display: none; background: rgba(0,0,0,0.95); border: 0.5px solid #2a2a2a; border-radius: 6px; padding: 10px 12px; font-family: var(--font-mono); font-size: 10px; color: #fff; pointer-events: none; z-index: 15; min-width: 180px;">
+          <div id="tipCor" style="color: #FFD700; letter-spacing: 1px; font-size: 8px; margin-bottom: 4px;">CORNER</div>
+          <div id="tipMom" style="color: #fff; letter-spacing: 0.3px; font-size: 11px; margin-bottom: 4px; font-family: var(--font-sans);">Moment</div>
+          <div id="tipMet" style="color: #888; letter-spacing: 1px; font-size: 8px;">YEAR · DRIVER</div>
+        </div>
+      </div>
+
+      <div style="position: absolute; top: 50%; left: 5%; transform: translateY(-50%); max-width: 40%;">
+        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 14px;"><span style="width: 6px; height: 6px; border-radius: 50%; background: #5FB87C;"></span><span style="font-family: var(--font-mono); font-size: 10px; letter-spacing: 2px; color: #aaa;">FORMULA 1 · BELGIAN GP</span></div>
+        <p style="font-size: 14px; color: #888; margin: 0 0 4px; letter-spacing: 0.5px;">Circuit de</p>
+        <h1 style="font-size: 62px; font-weight: 400; margin: 0; letter-spacing: -2px; line-height: 0.92; color: #fff;">Spa-Francorchamps</h1>
+        <p style="font-family: var(--font-mono); font-size: 11px; color: #888; margin: 18px 0 0; letter-spacing: 1px;">STAVELOT, BELGIUM · EST. 1921</p>
+        <p style="font-family: var(--font-serif); font-size: 15px; color: #bbb; font-style: italic; line-height: 1.6; margin: 18px 0 0; max-width: 400px;">"The most beautiful race track in the world" — a cliché because it's true. Seven kilometers through the Ardennes forest, defined by Eau Rouge and the weather that moves across it one corner at a time.</p>
+        <p style="font-family: var(--font-mono); font-size: 9px; color: #555; margin: 14px 0 0; letter-spacing: 0.5px;">[QUOTE PLACEHOLDER · NEEDS ATTRIBUTION]</p>
+      </div>
+
+      <div style="position: absolute; bottom: 24px; left: 0; right: 0; padding: 0 1.75rem; display: flex; justify-content: center; gap: 32px;">
+        <div style="text-align: center;"><p style="font-family: var(--font-mono); font-size: 9px; letter-spacing: 1.5px; color: #888; margin: 0 0 4px;">LENGTH</p><p style="font-size: 24px; font-weight: 400; margin: 0; color: #fff; letter-spacing: -1px;">7.004<span style="font-size: 13px; color: #888; letter-spacing: 0;">km</span></p></div>
+        <div style="width: 0.5px; background: #2a2a2a;"></div>
+        <div style="text-align: center;"><p style="font-family: var(--font-mono); font-size: 9px; letter-spacing: 1.5px; color: #888; margin: 0 0 4px;">CORNERS</p><p style="font-size: 24px; font-weight: 400; margin: 0; color: #fff; letter-spacing: -1px;">19</p></div>
+        <div style="width: 0.5px; background: #2a2a2a;"></div>
+        <div style="text-align: center;"><p style="font-family: var(--font-mono); font-size: 9px; letter-spacing: 1.5px; color: #888; margin: 0 0 4px;">LAP RECORD</p><p style="font-size: 24px; font-weight: 400; margin: 0; color: #fff; letter-spacing: -1px;">1:46.286</p><p style="font-family: var(--font-mono); font-size: 8px; color: #666; margin: 2px 0 0;">HAMILTON · '20</p></div>
+        <div style="width: 0.5px; background: #2a2a2a;"></div>
+        <div style="text-align: center;"><p style="font-family: var(--font-mono); font-size: 9px; letter-spacing: 1.5px; color: #888; margin: 0 0 4px;">ELEVATION</p><p style="font-size: 24px; font-weight: 400; margin: 0; color: #fff; letter-spacing: -1px;">102<span style="font-size: 13px; color: #888; letter-spacing: 0;">m</span></p></div>
+        <div style="width: 0.5px; background: #2a2a2a;"></div>
+        <div style="text-align: center;"><p style="font-family: var(--font-mono); font-size: 9px; letter-spacing: 1.5px; color: #888; margin: 0 0 4px;">F1 SINCE</p><p style="font-size: 24px; font-weight: 400; margin: 0; color: #fff; letter-spacing: -1px;">1950</p></div>
+      </div>
+    </div>
+
+    <div style="padding: 2rem 1.75rem 2rem;">
+      <div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 6px;"><p style="font-family: var(--font-mono); font-size: 10px; letter-spacing: 2px; color: #5FB87C; margin: 0;">TRACK FINGERPRINT</p><p style="font-family: var(--font-mono); font-size: 9px; letter-spacing: 1px; color: #555;">SENSITIVITY PROFILE</p></div>
+      <p style="font-size: 13px; color: #888; margin: 0 0 24px; max-width: 520px; line-height: 1.6;">What the car and driver need to excel here. Calibrated against F1 venue averages.</p>
+
+      <div style="background: #080808; border: 1px solid #1a1a1a; border-radius: 10px; padding: 32px;">
+        <div style="margin-bottom: 20px;"><p style="font-family: var(--font-mono); font-size: 9px; letter-spacing: 1.5px; color: #555; margin: 0 0 4px;">WHAT MATTERS HERE</p><p style="font-size: 15px; color: #ccc; margin: 0; font-weight: 400;">Engine power, aero efficiency, and bravery through Eau Rouge. Rewards cars that carry speed.</p></div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 18px;">
+          <div><div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 4px;"><span style="font-size: 13px; color: #ccc;">Engine power</span><span style="font-family: var(--font-mono); font-size: 11px; color: #5FB87C; letter-spacing: 1px;">CRITICAL</span></div><div style="height: 4px; background: #1a1a1a; border-radius: 2px; overflow: hidden;"><div style="width: 92%; height: 100%; background: #5FB87C;"></div></div><p style="font-family: var(--font-mono); font-size: 9px; color: #666; margin: 4px 0 0; letter-spacing: 0.5px;">KEMMEL STRAIGHT · 320+ KM/H</p></div>
+          <div><div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 4px;"><span style="font-size: 13px; color: #ccc;">Aero efficiency</span><span style="font-family: var(--font-mono); font-size: 11px; color: #5FB87C; letter-spacing: 1px;">HIGH</span></div><div style="height: 4px; background: #1a1a1a; border-radius: 2px; overflow: hidden;"><div style="width: 78%; height: 100%; background: #5FB87C;"></div></div><p style="font-family: var(--font-mono); font-size: 9px; color: #666; margin: 4px 0 0; letter-spacing: 0.5px;">LOW-DRAG SETUP WINS</p></div>
+          <div><div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 4px;"><span style="font-size: 13px; color: #ccc;">Mechanical grip</span><span style="font-family: var(--font-mono); font-size: 11px; color: #888; letter-spacing: 1px;">MODERATE</span></div><div style="height: 4px; background: #1a1a1a; border-radius: 2px; overflow: hidden;"><div style="width: 52%; height: 100%; background: #888;"></div></div><p style="font-family: var(--font-mono); font-size: 9px; color: #666; margin: 4px 0 0; letter-spacing: 0.5px;">SECTOR 2 TECHNICAL</p></div>
+          <div><div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 4px;"><span style="font-size: 13px; color: #ccc;">Braking stability</span><span style="font-family: var(--font-mono); font-size: 11px; color: #888; letter-spacing: 1px;">MODERATE</span></div><div style="height: 4px; background: #1a1a1a; border-radius: 2px; overflow: hidden;"><div style="width: 48%; height: 100%; background: #888;"></div></div><p style="font-family: var(--font-mono); font-size: 9px; color: #666; margin: 4px 0 0; letter-spacing: 0.5px;">LES COMBES · BUS STOP</p></div>
+          <div><div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 4px;"><span style="font-size: 13px; color: #ccc;">Tire degradation</span><span style="font-family: var(--font-mono); font-size: 11px; color: #888; letter-spacing: 1px;">LOW</span></div><div style="height: 4px; background: #1a1a1a; border-radius: 2px; overflow: hidden;"><div style="width: 32%; height: 100%; background: #888;"></div></div><p style="font-family: var(--font-mono); font-size: 9px; color: #666; margin: 4px 0 0; letter-spacing: 0.5px;">ABRASIVENESS · LOW</p></div>
+          <div><div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 4px;"><span style="font-size: 13px; color: #ccc;">Driver bravery</span><span style="font-family: var(--font-mono); font-size: 11px; color: #FF1E56; letter-spacing: 1px;">EXTREME</span></div><div style="height: 4px; background: #1a1a1a; border-radius: 2px; overflow: hidden;"><div style="width: 96%; height: 100%; background: #FF1E56;"></div></div><p style="font-family: var(--font-mono); font-size: 9px; color: #666; margin: 4px 0 0; letter-spacing: 0.5px;">EAU ROUGE · COMMITMENT</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div style="padding: 0 1.75rem 2rem;">
+      <div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 6px;"><p style="font-family: var(--font-mono); font-size: 10px; letter-spacing: 2px; color: #5FB87C; margin: 0;">WEATHER · THE ARDENNES EFFECT</p><p style="font-family: var(--font-mono); font-size: 9px; letter-spacing: 1px; color: #555;">1985–PRESENT</p></div>
+      <p style="font-size: 13px; color: #888; margin: 0 0 24px; max-width: 520px; line-height: 1.6;">Spa's weather is famously local. Rain can fall at Stavelot while the start-finish straight stays dry — producing the most unpredictable races on the calendar.</p>
+
+      <div style="background: #080808; border: 1px solid #1a1a1a; border-radius: 10px; padding: 32px; display: grid; grid-template-columns: 1fr 1fr; gap: 32px;">
+        <div>
+          <p style="font-family: var(--font-mono); font-size: 9px; letter-spacing: 1.5px; color: #555; margin: 0 0 16px;">CONDITIONS BREAKDOWN</p>
+          <div style="display: flex; gap: 4px; height: 48px; margin-bottom: 14px; border-radius: 4px; overflow: hidden;">
+            <div style="flex: 42; background: #FFD700; display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-size: 10px; color: #4a3800; font-weight: 500;">DRY 42%</div>
+            <div style="flex: 31; background: #5FB87C; display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-size: 10px; color: #0a2512; font-weight: 500;">MIXED 31%</div>
+            <div style="flex: 27; background: #378ADD; display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-size: 10px; color: #042c53; font-weight: 500;">WET 27%</div>
+          </div>
+          <p style="font-family: var(--font-mono); font-size: 9px; color: #666; margin: 0; letter-spacing: 0.5px;">OF 40 F1 RACES SINCE 1985 · [FIGURES PLACEHOLDER]</p>
+
+          <div style="margin-top: 24px;">
+            <p style="font-family: var(--font-mono); font-size: 9px; letter-spacing: 1.5px; color: #555; margin: 0 0 10px;">MOST CHAOTIC RACES</p>
+            <div style="display: flex; flex-direction: column; gap: 8px;">
+              <div style="display: flex; justify-content: space-between; font-size: 12px; padding: 6px 0; border-bottom: 0.5px solid #1a1a1a;"><span style="color: #ccc;">2021 · "The race that wasn't"</span><span style="font-family: var(--font-mono); color: #378ADD; font-size: 10px;">RAIN</span></div>
+              <div style="display: flex; justify-content: space-between; font-size: 12px; padding: 6px 0; border-bottom: 0.5px solid #1a1a1a;"><span style="color: #ccc;">1998 · Lap-1 13-car pile-up</span><span style="font-family: var(--font-mono); color: #378ADD; font-size: 10px;">RAIN</span></div>
+              <div style="display: flex; justify-content: space-between; font-size: 12px; padding: 6px 0;"><span style="color: #ccc;">1992 · Senna wet masterclass</span><span style="font-family: var(--font-mono); color: #5FB87C; font-size: 10px;">MIXED</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <p style="font-family: var(--font-mono); font-size: 9px; letter-spacing: 1.5px; color: #555; margin: 0 0 16px;">THE CROSS-TRACK EFFECT</p>
+          <svg viewBox="0 0 300 200" style="width: 100%; height: auto; margin-bottom: 12px;" role="img" aria-label="Spa weather microclimate diagram">
+            <path d="M 30 120 L 55 120 Q 60 120, 65 115 L 90 95 Q 95 88, 100 95 L 115 115 Q 120 120, 120 130 L 120 145 Q 120 150, 130 152 L 160 155 Q 170 155, 175 148 L 190 125 Q 195 115, 205 115 L 225 117 Q 232 117, 235 110 L 245 85 Q 247 77, 253 75 L 265 72 L 265 50 L 260 42 L 235 32 Q 225 28, 220 32 L 200 48 Q 193 52, 188 50 L 170 42 Q 163 40, 158 45 L 150 62 Q 146 68, 140 66 L 115 58 Q 108 56, 105 60 L 88 82 Q 82 88, 76 86 L 52 80 Q 44 77, 40 85 L 32 105 Q 28 112, 30 120 Z" stroke="#5FB87C" stroke-width="1.5" fill="none"/>
+            <circle cx="55" cy="120" r="22" fill="#FFD700" opacity="0.18"/><text x="55" y="124" text-anchor="middle" font-family="monospace" font-size="8" fill="#FFD700">DRY</text>
+            <circle cx="165" cy="155" r="24" fill="#5FB87C" opacity="0.22"/><text x="165" y="159" text-anchor="middle" font-family="monospace" font-size="8" fill="#5FB87C">DAMP</text>
+            <circle cx="240" cy="90" r="26" fill="#378ADD" opacity="0.25"/><text x="240" y="94" text-anchor="middle" font-family="monospace" font-size="8" fill="#378ADD">RAIN</text>
+            <text x="30" y="145" font-family="monospace" font-size="6" fill="#888">START</text>
+            <text x="165" y="178" text-anchor="middle" font-family="monospace" font-size="6" fill="#888">POUHON</text>
+            <text x="240" y="115" text-anchor="middle" font-family="monospace" font-size="6" fill="#888">STAVELOT</text>
+          </svg>
+          <p style="font-size: 12px; color: #aaa; line-height: 1.6; margin: 0;">The 7 km length means weather can vary across sectors. Drivers emerge from a dry Eau Rouge into rain at Les Combes — or the reverse.</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="padding: 0 1.75rem 2rem;">
+      <div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 6px;"><p style="font-family: var(--font-mono); font-size: 10px; letter-spacing: 2px; color: #5FB87C; margin: 0;">DRIVER-TRACK FIT</p><p style="font-family: var(--font-mono); font-size: 9px; letter-spacing: 1px; color: #555;">HISTORICAL</p></div>
+      <p style="font-size: 13px; color: #888; margin: 0 0 24px; max-width: 520px; line-height: 1.6;">Drivers whose style correlates most strongly with success at Spa. Not the same as most wins — this accounts for car strength.</p>
+
+      <div style="background: #080808; border: 1px solid #1a1a1a; border-radius: 10px; padding: 24px;">
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <div style="display: grid; grid-template-columns: 1.5fr 2.5fr 0.8fr 0.8fr; gap: 16px; align-items: center; padding: 10px 14px; background: #0a0a0a; border-radius: 6px; border-left: 2px solid #FFD700;">
+            <div><p style="font-size: 13px; font-weight: 500; margin: 0; color: #fff;">Michael Schumacher</p><p style="font-family: var(--font-mono); font-size: 9px; color: #888; margin: 2px 0 0; letter-spacing: 0.5px;">BENETTON · FERRARI</p></div>
+            <div style="height: 4px; background: #1a1a1a; border-radius: 2px; overflow: hidden;"><div style="width: 94%; height: 100%; background: #5FB87C;"></div></div>
+            <span style="font-family: var(--font-mono); font-size: 16px; color: #5FB87C; text-align: right; font-weight: 500;">94</span>
+            <span style="font-family: var(--font-mono); font-size: 10px; color: #888; text-align: right;">6 WINS</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 1.5fr 2.5fr 0.8fr 0.8fr; gap: 16px; align-items: center; padding: 10px 14px; background: #0a0a0a; border-radius: 6px;">
+            <div><p style="font-size: 13px; font-weight: 500; margin: 0; color: #fff;">Lewis Hamilton</p><p style="font-family: var(--font-mono); font-size: 9px; color: #888; margin: 2px 0 0; letter-spacing: 0.5px;">McLAREN · MERCEDES</p></div>
+            <div style="height: 4px; background: #1a1a1a; border-radius: 2px; overflow: hidden;"><div style="width: 89%; height: 100%; background: #5FB87C;"></div></div>
+            <span style="font-family: var(--font-mono); font-size: 16px; color: #5FB87C; text-align: right; font-weight: 500;">89</span>
+            <span style="font-family: var(--font-mono); font-size: 10px; color: #888; text-align: right;">4 WINS</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 1.5fr 2.5fr 0.8fr 0.8fr; gap: 16px; align-items: center; padding: 10px 14px; background: #0a0a0a; border-radius: 6px;">
+            <div><p style="font-size: 13px; font-weight: 500; margin: 0; color: #fff;">Ayrton Senna</p><p style="font-family: var(--font-mono); font-size: 9px; color: #888; margin: 2px 0 0; letter-spacing: 0.5px;">McLAREN</p></div>
+            <div style="height: 4px; background: #1a1a1a; border-radius: 2px; overflow: hidden;"><div style="width: 87%; height: 100%; background: #5FB87C;"></div></div>
+            <span style="font-family: var(--font-mono); font-size: 16px; color: #5FB87C; text-align: right; font-weight: 500;">87</span>
+            <span style="font-family: var(--font-mono); font-size: 10px; color: #888; text-align: right;">5 WINS</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 1.5fr 2.5fr 0.8fr 0.8fr; gap: 16px; align-items: center; padding: 10px 14px; background: #0a0a0a; border-radius: 6px;">
+            <div><p style="font-size: 13px; font-weight: 500; margin: 0; color: #fff;">Max Verstappen</p><p style="font-family: var(--font-mono); font-size: 9px; color: #888; margin: 2px 0 0; letter-spacing: 0.5px;">RED BULL</p></div>
+            <div style="height: 4px; background: #1a1a1a; border-radius: 2px; overflow: hidden;"><div style="width: 85%; height: 100%; background: #5FB87C;"></div></div>
+            <span style="font-family: var(--font-mono); font-size: 16px; color: #5FB87C; text-align: right; font-weight: 500;">85</span>
+            <span style="font-family: var(--font-mono); font-size: 10px; color: #888; text-align: right;">3 WINS</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 1.5fr 2.5fr 0.8fr 0.8fr; gap: 16px; align-items: center; padding: 10px 14px; background: #0a0a0a; border-radius: 6px;">
+            <div><p style="font-size: 13px; font-weight: 500; margin: 0; color: #fff;">Kimi Räikkönen</p><p style="font-family: var(--font-mono); font-size: 9px; color: #888; margin: 2px 0 0; letter-spacing: 0.5px;">McLAREN · FERRARI</p></div>
+            <div style="height: 4px; background: #1a1a1a; border-radius: 2px; overflow: hidden;"><div style="width: 82%; height: 100%; background: #5FB87C;"></div></div>
+            <span style="font-family: var(--font-mono); font-size: 16px; color: #5FB87C; text-align: right; font-weight: 500;">82</span>
+            <span style="font-family: var(--font-mono); font-size: 10px; color: #888; text-align: right;">4 WINS</span>
+          </div>
+        </div>
+        <p style="font-family: var(--font-mono); font-size: 9px; color: #555; margin: 16px 0 0; letter-spacing: 0.5px; text-align: center;">[PLACEHOLDER · FIT SCORES ARE ILLUSTRATIVE]</p>
+      </div>
+    </div>
+
+    <div style="padding: 0 1.75rem 3rem;">
+      <div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 6px;"><p style="font-family: var(--font-mono); font-size: 10px; letter-spacing: 2px; color: #5FB87C; margin: 0;">ICONIC MOMENTS</p><p style="font-family: var(--font-mono); font-size: 9px; letter-spacing: 1px; color: #555;">THE ARCHIVE</p></div>
+      <p style="font-size: 13px; color: #888; margin: 0 0 24px; max-width: 520px; line-height: 1.6;">Races and laps that define Spa. Beyond the corner overtakes — wet masterclasses, debuts, and the races people still talk about.</p>
+
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;">
+        <div style="aspect-ratio: 16/10; background: linear-gradient(135deg, #0a1a10, #000); border: 0.5px solid #1a3a24; border-radius: 6px; overflow: hidden; position: relative; cursor: pointer;" onclick="sendPrompt('Show Senna Spa 1992')">
+          <div style="position: absolute; inset: 0; background: radial-gradient(ellipse at 40% 50%, #FFD700 0%, transparent 60%); opacity: 0.45;"></div>
+          <div style="position: absolute; inset: 0; background: radial-gradient(circle at 50% 50%, transparent 35%, #000 92%);"></div>
+          <div style="position: absolute; top: 10px; left: 12px; font-family: var(--font-mono); font-size: 9px; color: #5FB87C; letter-spacing: 1px;">1992</div>
+          <div style="position: absolute; top: 10px; right: 12px; font-family: var(--font-mono); font-size: 8px; color: #378ADD; letter-spacing: 1px;">WET</div>
+          <div style="position: absolute; bottom: 10px; left: 12px;"><p style="font-size: 12px; color: #fff; margin: 0; font-weight: 500;">Senna's wet masterclass</p><p style="font-family: var(--font-mono); font-size: 9px; color: #888; margin: 2px 0 0; letter-spacing: 0.5px;">McLAREN · 5 POSITIONS</p></div>
+        </div>
+        <div style="aspect-ratio: 16/10; background: linear-gradient(135deg, #0a1a10, #000); border: 0.5px solid #1a3a24; border-radius: 6px; overflow: hidden; position: relative; cursor: pointer;" onclick="sendPrompt('Show Schumacher Spa 1991 debut')">
+          <div style="position: absolute; inset: 0; background: radial-gradient(ellipse at 60% 50%, #FFD700 0%, transparent 60%); opacity: 0.45;"></div>
+          <div style="position: absolute; inset: 0; background: radial-gradient(circle at 50% 50%, transparent 35%, #000 92%);"></div>
+          <div style="position: absolute; top: 10px; left: 12px; font-family: var(--font-mono); font-size: 9px; color: #5FB87C; letter-spacing: 1px;">1991</div>
+          <div style="position: absolute; top: 10px; right: 12px; font-family: var(--font-mono); font-size: 8px; color: #FFD700; letter-spacing: 1px;">DEBUT</div>
+          <div style="position: absolute; bottom: 10px; left: 12px;"><p style="font-size: 12px; color: #fff; margin: 0; font-weight: 500;">Schumacher F1 debut</p><p style="font-family: var(--font-mono); font-size: 9px; color: #888; margin: 2px 0 0; letter-spacing: 0.5px;">JORDAN · Q7</p></div>
+        </div>
+        <div style="aspect-ratio: 16/10; background: linear-gradient(135deg, #0a1a10, #000); border: 0.5px solid #1a3a24; border-radius: 6px; overflow: hidden; position: relative; cursor: pointer;" onclick="sendPrompt('Show Spa 1998 lap 1 crash')">
+          <div style="position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 50%, #378ADD 0%, transparent 60%); opacity: 0.5;"></div>
+          <div style="position: absolute; inset: 0; background: radial-gradient(circle at 50% 50%, transparent 35%, #000 92%);"></div>
+          <div style="position: absolute; top: 10px; left: 12px; font-family: var(--font-mono); font-size: 9px; color: #5FB87C; letter-spacing: 1px;">1998</div>
+          <div style="position: absolute; top: 10px; right: 12px; font-family: var(--font-mono); font-size: 8px; color: #378ADD; letter-spacing: 1px;">RAIN</div>
+          <div style="position: absolute; bottom: 10px; left: 12px;"><p style="font-size: 12px; color: #fff; margin: 0; font-weight: 500;">13-car lap 1 pile-up</p><p style="font-family: var(--font-mono); font-size: 9px; color: #888; margin: 2px 0 0; letter-spacing: 0.5px;">RED FLAG · RESTART</p></div>
+        </div>
+        <div style="aspect-ratio: 16/10; background: linear-gradient(135deg, #0a1a10, #000); border: 0.5px solid #1a3a24; border-radius: 6px; overflow: hidden; position: relative; cursor: pointer;" onclick="sendPrompt('Show Hamilton Rosberg Spa 2014')">
+          <div style="position: absolute; inset: 0; background: radial-gradient(ellipse at 45% 50%, #00D2BE 0%, transparent 60%); opacity: 0.4;"></div>
+          <div style="position: absolute; inset: 0; background: radial-gradient(circle at 50% 50%, transparent 35%, #000 92%);"></div>
+          <div style="position: absolute; top: 10px; left: 12px; font-family: var(--font-mono); font-size: 9px; color: #5FB87C; letter-spacing: 1px;">2014</div>
+          <div style="position: absolute; top: 10px; right: 12px; font-family: var(--font-mono); font-size: 8px; color: #FF1E56; letter-spacing: 1px;">CLASH</div>
+          <div style="position: absolute; bottom: 10px; left: 12px;"><p style="font-size: 12px; color: #fff; margin: 0; font-weight: 500;">Hamilton vs. Rosberg</p><p style="font-family: var(--font-mono); font-size: 9px; color: #888; margin: 2px 0 0; letter-spacing: 0.5px;">TEAMMATE COLLISION</p></div>
+        </div>
+        <div style="aspect-ratio: 16/10; background: linear-gradient(135deg, #0a1a10, #000); border: 0.5px solid #1a3a24; border-radius: 6px; overflow: hidden; position: relative; cursor: pointer;" onclick="sendPrompt('Show Verstappen Spa 2016 rain')">
+          <div style="position: absolute; inset: 0; background: radial-gradient(ellipse at 55% 50%, #0600EF 0%, transparent 60%); opacity: 0.5;"></div>
+          <div style="position: absolute; inset: 0; background: radial-gradient(circle at 50% 50%, transparent 35%, #000 92%);"></div>
+          <div style="position: absolute; top: 10px; left: 12px; font-family: var(--font-mono); font-size: 9px; color: #5FB87C; letter-spacing: 1px;">2016</div>
+          <div style="position: absolute; top: 10px; right: 12px; font-family: var(--font-mono); font-size: 8px; color: #378ADD; letter-spacing: 1px;">RAIN</div>
+          <div style="position: absolute; bottom: 10px; left: 12px;"><p style="font-size: 12px; color: #fff; margin: 0; font-weight: 500;">Young Verstappen's drive</p><p style="font-family: var(--font-mono); font-size: 9px; color: #888; margin: 2px 0 0; letter-spacing: 0.5px;">P11 TO P3 · RAIN</p></div>
+        </div>
+        <div style="aspect-ratio: 16/10; background: linear-gradient(135deg, #0a1a10, #000); border: 0.5px solid #1a3a24; border-radius: 6px; overflow: hidden; position: relative; cursor: pointer;" onclick="sendPrompt('Show Spa 2021 non-race')">
+          <div style="position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 50%, #378ADD 0%, transparent 65%); opacity: 0.55;"></div>
+          <div style="position: absolute; inset: 0; background: radial-gradient(circle at 50% 50%, transparent 35%, #000 92%);"></div>
+          <div style="position: absolute; top: 10px; left: 12px; font-family: var(--font-mono); font-size: 9px; color: #5FB87C; letter-spacing: 1px;">2021</div>
+          <div style="position: absolute; top: 10px; right: 12px; font-family: var(--font-mono); font-size: 8px; color: #FF1E56; letter-spacing: 1px;">VOID</div>
+          <div style="position: absolute; bottom: 10px; left: 12px;"><p style="font-size: 12px; color: #fff; margin: 0; font-weight: 500;">The race that wasn't</p><p style="font-family: var(--font-mono); font-size: 9px; color: #888; margin: 2px 0 0; letter-spacing: 0.5px;">2 LAPS · SC ONLY</p></div>
+        </div>
+      </div>
+      <p style="font-family: var(--font-mono); font-size: 9px; color: #555; margin: 16px 0 0; letter-spacing: 0.5px;">[PLACEHOLDER COPY · EVENT SUMMARIES NEED VERIFICATION]</p>
+    </div>
+
+    <div style="padding: 0 1.75rem 2rem; text-align: center; border-top: 0.5px solid #1a1a1a; padding-top: 16px;">
+      <p style="font-family: var(--font-mono); font-size: 9px; letter-spacing: 2px; color: #333;">SCROLL · CORNER-BY-CORNER · HISTORICAL RACES</p>
+      <p style="font-family: var(--font-mono); font-size: 9px; color: #333; letter-spacing: 1px; margin: 8px 0 0;">[SCHEMATIC MAP · PRODUCTION USES VERIFIED TRACK VECTORS]</p>
+    </div>
+
+  </div>
+
+  <style>
+    @keyframes opz { 0% { opacity: 0.7; transform: scale(1); } 100% { opacity: 0; transform: scale(2.2); } }
+    .oh:hover .od { r: 8; filter: brightness(1.3); }
+    .oh:hover .op { animation: opz 1.2s ease-out infinite; transform-origin: center; transform-box: fill-box; }
+  </style>
+
+  <script>
+    (function() {
+      const hs = document.querySelectorAll('.oh');
+      const tip = document.getElementById('tipC');
+      const tCor = document.getElementById('tipCor'), tMom = document.getElementById('tipMom'), tMet = document.getElementById('tipMet');
+      const mL = document.getElementById('mapL'), ov = document.getElementById('movO'), ovG = document.getElementById('movG');
+      const trL = document.getElementById('trL'), trF = document.getElementById('trF');
+      const mCL = document.getElementById('movCL'), mM = document.getElementById('movM'), mT = document.getElementById('movT'), mD = document.getElementById('movD');
+      const xBtn = document.getElementById('movX'), cont = document.getElementById('trackC');
+
+      hs.forEach(h => {
+        h.addEventListener('mouseenter', () => {
+          tCor.textContent = h.dataset.title.toUpperCase();
+          tMom.textContent = h.dataset.moment;
+          tMet.textContent = h.dataset.year + ' · ' + h.dataset.driver;
+          tip.style.display = 'block';
+        });
+        h.addEventListener('mousemove', (e) => {
+          const r = cont.getBoundingClientRect();
+          tip.style.left = Math.min(e.clientX - r.left + 12, r.width - 200) + 'px';
+          tip.style.top = Math.min(e.clientY - r.top + 12, r.height - 90) + 'px';
+        });
+        h.addEventListener('mouseleave', () => { tip.style.display = 'none'; });
+        h.addEventListener('click', () => {
+          const c = '#FFD700';
+          ovG.style.background = 'radial-gradient(ellipse at 50% 40%, ' + c + ' 0%, ' + c + ' 25%, transparent 60%)';
+          ovG.style.opacity = '0.7';
+          mCL.textContent = h.dataset.title.toUpperCase();
+          mM.textContent = h.dataset.year + ' · ' + h.dataset.driver;
+          mT.textContent = h.dataset.moment;
+          mD.textContent = h.dataset.driver;
+          mL.style.opacity = '0.15'; ov.style.opacity = '1'; ov.style.pointerEvents = 'auto';
+          tip.style.display = 'none';
+          trL.style.animation = 'none'; trF.style.animation = 'none';
+          trL.style.opacity = '0'; trF.style.opacity = '0';
+          trL.style.strokeDasharray = '500'; trL.style.strokeDashoffset = '500';
+          trF.style.strokeDasharray = '500'; trF.style.strokeDashoffset = '500';
+          requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+              trL.style.transition = 'stroke-dashoffset 2.2s ease, opacity 0.6s ease';
+              trL.style.opacity = '0.5'; trL.style.strokeDashoffset = '0';
+              setTimeout(() => {
+                trF.style.transition = 'stroke-dashoffset 1.8s ease, opacity 0.6s ease';
+                trF.style.opacity = '0.9'; trF.style.strokeDashoffset = '0';
+              }, 400);
+            });
+          });
+        });
+      });
+      xBtn.addEventListener('click', () => { ov.style.opacity = '0'; ov.style.pointerEvents = 'none'; mL.style.opacity = '1'; });
+    })();
+  </script>
+
+</div>
