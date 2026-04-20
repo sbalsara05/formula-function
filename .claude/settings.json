@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -c ' *)",
+      "Bash(python3 -m json.tool)",
+      "WebFetch(domain:api.jolpi.ca)",
+      "WebFetch(domain:api.openf1.org)",
+      "WebFetch(domain:www.formula1.com)"
+    ]
+  }
+}

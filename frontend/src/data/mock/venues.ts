@@ -104,10 +104,6 @@ export const spaDriverFit: DriverTrackFit[] = [
    x/y are percentages (0–100) of the 500×500 SVG viewBox.
    Positions calibrated to the GPS-derived track path.
    ─────────────────────────────────────────────────────────────────────────── */
-/* ─── Hotspot positions calibrated to the GPS-derived 500×500 SVG path ────────
-   All x/y values are percentages (0–100) of the 500×500 viewBox.
-   Computed by tracing the actual bezier endpoints in the path data.
-   ─────────────────────────────────────────────────────────────────────────── */
 export const spaHotspots: Hotspot[] = [
   // Legendary (no click overlay)
   { id: "spa-eau-rouge", venueId: "spa", cornerLabel: "Eau Rouge / Raidillon", x: 48, y: 13, type: "legendary" },

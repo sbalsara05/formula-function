@@ -114,13 +114,15 @@ export default function LapAnalysisPage({
           </div>
         </div>
         <div style={{ display: 'flex', gap: 8 }}>
-          <button style={{
-            background: 'transparent', border: '0.5px solid #FF1E56', color: '#FF1E56',
-            fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: 1,
-            padding: '6px 12px', borderRadius: 4, cursor: 'pointer',
-          }}>
-            COMPARE WITH ANOTHER LAP ↗
-          </button>
+          <Link href={`/f/${seriesNum}/compare/laps/${analysis.lapId}/webber-suzuka-2009-q3`} style={{ textDecoration: 'none' }}>
+            <button style={{
+              background: 'transparent', border: '0.5px solid #FF1E56', color: '#FF1E56',
+              fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: 1,
+              padding: '6px 12px', borderRadius: 4, cursor: 'pointer',
+            }}>
+              COMPARE WITH ANOTHER LAP ↗
+            </button>
+          </Link>
           <button style={{
             background: 'transparent', border: '0.5px solid #2a2a2a', color: '#aaa',
             fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: 1,
@@ -454,13 +456,15 @@ export default function LapAnalysisPage({
           <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, color: '#666', letterSpacing: 0.5, margin: '0 0 20px' }}>
             SUGGESTED: VETTEL 2013 SUZUKA Q3 · WEBBER 2009 SUZUKA Q3 · HAMILTON 2009 SUZUKA Q3
           </p>
-          <button style={{
-            background: 'transparent', border: '0.5px solid #FF1E56', color: '#FF1E56',
-            fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: 1.5,
-            padding: '10px 20px', borderRadius: 4, cursor: 'pointer',
-          }}>
-            COMPARE ↗
-          </button>
+          <Link href={`/f/${seriesNum}/compare/laps/${analysis.lapId}/webber-suzuka-2009-q3`} style={{ textDecoration: 'none' }}>
+            <button style={{
+              background: 'transparent', border: '0.5px solid #FF1E56', color: '#FF1E56',
+              fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: 1.5,
+              padding: '10px 20px', borderRadius: 4, cursor: 'pointer',
+            }}>
+              COMPARE ↗
+            </button>
+          </Link>
         </div>
       </div>
 

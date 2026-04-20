@@ -26,6 +26,8 @@ export const ferrari: Team = {
   entityColor: "ferrari",
   liveryHex: "#DC0000",
   bio: "The oldest and most storied constructor in Formula 1. The Scuderia has won more constructor championships than any other team and remains the emotional heart of the sport.",
+  quote: "What's behind you doesn't matter.",
+  quoteContext: "Enzo Ferrari",
 };
 
 export const ferrariStats: TeamStats = {
@@ -33,7 +35,7 @@ export const ferrariStats: TeamStats = {
   constructorsTitles: 16,
   driversTitles: 15,
   wins: 243,
-  podiums: 793,
+  podiums: 815,
   seasons: 75,
   firstSeason: 1950,
 };
@@ -83,11 +85,11 @@ export const ferrariEras: TeamEngineeringEra[] = [
   {
     teamId: "ferrari",
     label: "Post-Schumacher",
-    seasons: "2007–PRESENT",
+    seasons: "2007–",
     description:
-      "Near-misses with Alonso (2010, 2012). Vettel's title challenge (2017–2018). Leclerc era beginning. Still searching for a return to sustained dominance.",
+      "Near-misses with Alonso (2010, 2012) and Vettel (2017–2018). Leclerc's emergence as an F1 generational talent. 2024: P2 WCC, 5 wins. 2025: Lewis Hamilton joins — the most anticipated partnership in the sport's history.",
     championships: 1,
-    driverNames: "RÄIKKÖNEN · ALONSO · VETTEL · LECLERC",
+    driverNames: "RÄIKKÖNEN · ALONSO · VETTEL · LECLERC · HAMILTON",
     champLabel: "1× WDC (RÄIKKÖNEN '07)",
     current: true,
   },
@@ -213,11 +215,11 @@ export const ferrariReelSlides: ReelSlide[] = [
   },
   {
     slotLabel: "CHASSIS 06 · CURRENT",
-    badge: "2024",
+    badge: "2025",
     glowColor: "#DC0000",
-    kicker: "MODERN ERA · LECLERC/SAINZ",
-    headline: "SF-24",
-    meta: "VASSEUR ERA · P2 CONSTRUCTORS",
+    kicker: "HAMILTON ERA · LECLERC/HAMILTON",
+    headline: "SF-25",
+    meta: "99% REDESIGNED · PULL-ROD FRONT SUSPENSION",
     svgPath:
       "M 55 170 L 118 165 Q 140 158 155 145 L 185 130 Q 215 128 238 138 L 268 154 Q 285 164 298 168 L 345 170",
     circles: [
@@ -230,14 +232,16 @@ export const ferrariReelSlides: ReelSlide[] = [
 /* ─── Ferrari Driver Academy ─────────────────────────────────────────────── */
 
 export const ferrariAcademy: TeamAcademyDriver[] = [
-  { name: "Charles Leclerc", tier: "f1", note: "FDA '16" },
-  { name: "Carlos Sainz", tier: "f1", note: "EXTERNAL" },
-  { name: "Ollie Bearman", tier: "junior", note: "F2" },
-  { name: "Dino Beganovic", tier: "junior", note: "F3" },
-  { name: "Aurelia Nobels", tier: "junior", note: "F1 ACADEMY" },
-  { name: "Jules Bianchi", tier: "alumni", note: "'09–'15", deceased: true },
-  { name: "Lance Stroll", tier: "alumni", note: "'10–'15" },
-  { name: "Raffaele Marciello", tier: "alumni", note: "'10–'15" },
+  { name: "Charles Leclerc",     tier: "f1",     note: "FDA '16 · RACE SEAT" },
+  { name: "Lewis Hamilton",      tier: "f1",     note: "EXTERNAL · 7× WDC" },
+  { name: "Oliver Bearman",      tier: "f1",     note: "FDA · HAAS 2025" },
+  { name: "Dino Beganovic",      tier: "junior", note: "F2 2025 · HITECH" },
+  { name: "Rafael Câmara",       tier: "junior", note: "F3 CHAMP 2025 · TRIDENT" },
+  { name: "Tuukka Taponen",      tier: "junior", note: "F3 2025 · ART" },
+  { name: "Maya Weug",           tier: "junior", note: "F1 ACADEMY 2025" },
+  { name: "Jules Bianchi",       tier: "alumni", note: "'09–'15", deceased: true },
+  { name: "Mick Schumacher",     tier: "alumni", note: "FDA '15–'17" },
+  { name: "Lance Stroll",        tier: "alumni", note: "'10–'15" },
 ];
 
 /* ─── Ferrari iconic cars ────────────────────────────────────────────────── */
@@ -248,7 +252,7 @@ export const ferrariIconicCars: TeamIconicCar[] = [
   { name: "F310B", year: 1997, subtitle: "Schumacher's first WDC fight", meta: "JEREZ '97" },
   { name: "F2002", year: 2002, subtitle: "Peak dominance begins", meta: "15 WINS FROM 17" },
   { name: "F2004", year: 2004, subtitle: "Arguably the greatest", meta: "DOUBLE TITLE · 15/18 WINS", peak: true },
-  { name: "SF-24", year: 2024, subtitle: "Current era", meta: "VASSEUR · LECLERC / SAINZ" },
+  { name: "SF-25", year: 2025, subtitle: "Hamilton era begins", meta: "LECLERC / HAMILTON · 2025" },
 ];
 
 /* ─── Red Bull ─────────────────────────────────────────────────────────────── */

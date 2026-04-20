@@ -30,3 +30,14 @@ async def root():
 @app.get("/health")
 async def health():
     return {"status": "ok"}
+
+
+@app.get("/api/v1/standings/current")
+async def live_standings():
+    from app.services import jolpica
+    try:
+        constructors = await jolpica.get_constructor_standings("current")
+        drivers = await jolpica.get_driver_standings("current")
+        return {"constructors": constructors, "drivers": drivers}
+    except Exception as e:
+        return {"error": str(e)}

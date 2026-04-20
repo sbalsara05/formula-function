@@ -14,6 +14,12 @@ import type {
   LapSector,
   TelemetryTrace,
   LapAnalysis,
+  ComparisonLap,
+  DeltaInsight,
+  SectorComparison,
+  OverlayTrace,
+  LineAnnotation,
+  LapComparisonData,
 } from "@/lib/types";
 
 /* ─── Vettel ─────────────────────────────────────────────────────────────────
@@ -866,6 +872,114 @@ export const vettelSuzuka2009Analysis: LapAnalysis = {
   framesAnalyzed: 847,
   processingTimeS: 4.2,
   videoSource: "OFFICIAL F1 CHANNEL",
+};
+
+export const vettelWebberSuzuka2009: LapComparisonData = {
+  id: "vtl-suzuka-2009-q3-vs-web-suzuka-2009-q3",
+  title: "Suzuka · 2009 · Q3",
+  subtitle: "Vettel vs. Webber",
+  description: "Same car. Same session. Same track. The gap was 0.122 seconds — here's where it came from.",
+  colorA: "#FF1E56",
+  colorB: "#00E5FF",
+  lapA: {
+    name: "Sebastian Vettel",
+    teamName: "Red Bull",
+    teamColor: "#1E3A8A",
+    lapTime: "1:32.160",
+    lapTimeMs: 92160,
+    result: "P1",
+    resultColor: "#FFD700",
+    meta: "Q3 · DRY · POLE · WIN",
+    sectors: [
+      { label: "S1", time: "30.421" },
+      { label: "S2", time: "36.890" },
+      { label: "S3", time: "24.849" },
+    ],
+  },
+  lapB: {
+    name: "Mark Webber",
+    teamName: "Red Bull",
+    teamColor: "#1E3A8A",
+    lapTime: "1:32.282",
+    lapTimeMs: 92282,
+    result: "P2 · +0.122",
+    resultColor: "#888",
+    meta: "Q3 · DRY · TEAMMATE",
+    sectors: [
+      { label: "S1", time: "30.489" },
+      { label: "S2", time: "36.846" },
+      { label: "S3", time: "24.947" },
+    ],
+  },
+  deltaPath: "M 0 90 L 50 85 L 100 75 L 150 68 L 200 62 L 264 58 L 320 66 L 380 74 L 430 82 L 480 88 L 540 100 L 600 108 L 650 96 L 700 80 L 750 66 L 800 58",
+  deltaInsights: [
+    { label: "DEGNER COMPLEX", description: "Vettel gained 0.16s with a committed late-brake entry", note: "BIGGEST SINGLE GAIN", winner: "a" },
+    { label: "HAIRPIN TO S2 EXIT", description: "Webber clawed back 0.10s through slow-corner section", note: "VETTEL'S WEAK POINT", winner: "b" },
+    { label: "SPOON → 130R", description: "Vettel reopened the gap through fast sweepers · +0.08s", note: "DECISIVE FINAL SECTOR", winner: "a" },
+  ],
+  circuitPath: "M 40 232 L 110 232 Q 125 230, 135 222 L 170 202 Q 185 190, 195 177 L 220 152 Q 235 137, 240 122 L 245 97 Q 245 82, 235 77 L 215 72 Q 200 72, 195 84 L 190 102 Q 190 117, 195 127 L 210 147 Q 220 157, 225 172 L 225 197 Q 220 212, 205 217 L 165 227 Q 140 227, 120 217 L 95 197 Q 85 182, 80 162 L 80 132 Q 85 112, 100 102 L 140 77 Q 160 67, 180 67 L 265 62 Q 290 62, 305 74 L 325 94 Q 335 112, 335 130 L 335 172 Q 330 192, 315 202 L 285 217 Q 265 224, 250 232 L 230 247 Q 215 260, 200 262 L 115 264 Q 85 264, 70 254 L 50 242 Q 40 237, 40 232 Z",
+  linePathA: "M 40 230 L 110 230 Q 125 228, 135 220 L 170 200 Q 185 188, 195 175 L 220 150 Q 235 135, 240 120 L 245 95 Q 245 80, 235 75 L 215 70 Q 200 70, 195 82 L 190 100 Q 190 115, 195 125 L 210 145 Q 220 155, 225 170 L 225 195 Q 220 210, 205 215 L 165 225 Q 140 225, 120 215 L 95 195 Q 85 180, 80 160 L 80 130 Q 85 110, 100 100 L 140 75 Q 160 65, 180 65 L 265 60 Q 290 60, 305 72 L 325 92 Q 335 110, 335 128 L 335 170 Q 330 190, 315 200 L 285 215 Q 265 222, 250 230 L 230 245 Q 215 258, 200 260 L 115 262 Q 85 262, 70 252 L 50 240 Q 40 235, 40 230 Z",
+  linePathB: "M 42 232 L 112 232 Q 128 230, 140 223 L 175 205 Q 190 193, 200 181 L 224 156 Q 238 141, 243 126 L 247 100 Q 246 84, 236 80 L 217 74 Q 202 74, 198 87 L 194 104 Q 194 118, 199 128 L 214 150 Q 224 161, 229 176 L 229 198 Q 225 213, 210 218 L 168 226 Q 143 225, 123 215 L 98 198 Q 88 184, 84 164 L 84 133 Q 88 114, 103 105 L 142 79 Q 162 69, 182 69 L 266 64 Q 290 64, 304 77 L 324 97 Q 333 114, 333 131 L 333 173 Q 328 193, 313 203 L 283 217 Q 263 224, 248 232 L 228 246 Q 213 260, 198 262 L 114 263 Q 85 264, 70 255 L 51 243 Q 42 237, 42 232 Z",
+  lineAnnotations: [
+    { cx: 245, cy: 95, winner: "a", label: "DEGNER · +0.16", textAnchor: "start", dx: 7, dy: -3 },
+    { cx: 300, cy: 72, winner: "b", label: "HAIRPIN · −0.10", textAnchor: "start", dx: 7, dy: -4 },
+    { cx: 335, cy: 170, winner: "a", label: "SPOON · +0.08", textAnchor: "end", dx: -7, dy: 18 },
+  ],
+  divergence: { maxM: 2.1, maxLocation: "T1", avgM: 0.7, overlapPct: 74, note: "[DIVERGENCE METRICS PLACEHOLDER]" },
+  divergenceDescription: "Vettel carried a tighter inside line through the fast corners, turning earlier and relying on the Red Bull's rear-end rotation. Webber stayed more conservative — wider entries, later apex, prioritizing traction over minimum radius.",
+  overlayTraces: [
+    {
+      label: "STEERING",
+      pathA: "M 0 30 L 40 30 Q 55 22, 75 8 L 120 8 Q 140 16, 155 30 L 195 30 Q 210 38, 225 52 L 250 52 Q 265 44, 280 30 L 320 30 Q 335 22, 350 10 L 390 10 Q 405 18, 420 30 L 455 30 Q 470 38, 485 48 L 515 48 Q 530 40, 545 30 L 585 30 Q 600 22, 615 12 L 655 12 Q 670 20, 685 30 L 720 30 Q 735 38, 750 50 L 800 50",
+      pathB: "M 0 30 L 42 30 Q 58 24, 76 12 L 122 12 Q 142 18, 157 30 L 197 30 Q 213 38, 228 50 L 252 50 Q 268 44, 282 30 L 322 30 Q 338 24, 352 14 L 392 14 Q 408 20, 422 30 L 457 30 Q 472 38, 487 46 L 517 46 Q 532 40, 547 30 L 587 30 Q 602 24, 618 16 L 657 16 Q 672 22, 687 30 L 722 30 Q 737 38, 752 48 L 800 48",
+    },
+    {
+      label: "BRAKE",
+      pathA: "M 0 50 L 55 50 L 58 12 L 82 12 L 85 50 L 150 50 L 153 22 L 200 22 L 203 50 L 275 50 L 278 18 L 310 18 L 313 50 L 390 50 L 393 14 L 430 14 L 433 50 L 500 50 L 503 28 L 545 28 L 548 50 L 625 50 L 628 18 L 665 18 L 668 50 L 735 50 L 738 30 L 780 30 L 783 50 L 800 50",
+      pathB: "M 0 50 L 50 50 L 54 18 L 80 18 L 84 50 L 148 50 L 152 26 L 202 26 L 206 50 L 270 50 L 274 22 L 312 22 L 316 50 L 386 50 L 390 18 L 432 18 L 436 50 L 498 50 L 502 32 L 547 32 L 551 50 L 622 50 L 626 22 L 667 22 L 671 50 L 733 50 L 737 34 L 782 34 L 786 50 L 800 50",
+    },
+    {
+      label: "THROTTLE",
+      pathA: "M 0 10 L 52 10 L 60 48 L 85 48 L 95 10 L 148 10 L 155 44 L 205 44 L 215 10 L 275 10 L 282 42 L 315 42 L 325 10 L 388 10 L 395 38 L 435 38 L 445 10 L 498 10 L 505 42 L 550 42 L 560 10 L 622 10 L 630 38 L 670 38 L 680 10 L 733 10 L 740 40 L 785 40 L 795 10 L 800 10",
+      pathB: "M 0 12 L 48 12 L 58 46 L 82 46 L 92 14 L 146 14 L 156 42 L 208 42 L 218 14 L 272 14 L 284 40 L 318 40 L 328 14 L 385 14 L 397 36 L 438 36 L 448 14 L 495 14 L 507 40 L 552 40 L 562 14 L 620 14 L 632 36 L 672 36 L 682 14 L 730 14 L 742 38 L 788 38 L 798 14 L 800 14",
+    },
+    {
+      label: "SPEED",
+      pathA: "M 0 15 Q 30 14, 55 22 L 80 44 Q 85 46, 95 32 L 145 14 Q 155 14, 158 24 L 200 40 Q 210 42, 215 30 L 275 12 Q 285 16, 288 28 L 315 42 Q 325 44, 330 32 L 388 14 Q 398 16, 400 26 L 435 40 Q 445 42, 450 30 L 500 14 Q 510 16, 512 30 L 550 40 Q 560 42, 565 30 L 625 14 Q 635 16, 638 28 L 670 38 Q 680 40, 685 28 L 738 14 Q 748 16, 750 30 L 788 40 Q 798 42, 800 30",
+      pathB: "M 0 17 Q 32 16, 56 24 L 78 42 Q 82 44, 94 30 L 146 16 Q 156 16, 160 26 L 202 38 Q 212 40, 218 28 L 276 14 Q 286 18, 290 28 L 316 40 Q 326 42, 332 30 L 390 16 Q 398 18, 402 26 L 436 38 Q 446 40, 452 28 L 502 16 Q 510 18, 514 28 L 552 38 Q 562 40, 568 28 L 628 16 Q 636 18, 640 28 L 672 36 Q 682 38, 688 28 L 740 16 Q 750 18, 754 28 L 790 38 Q 798 40, 800 28",
+    },
+  ],
+  sectors: [
+    {
+      label: "SECTOR 1",
+      winnerLabel: "VETTEL +0.068",
+      winnerColor: "#FF1E56",
+      lapA: { time: "30.421", barWidth: 92 },
+      lapB: { time: "30.489", barWidth: 88 },
+      keyNote: "KEY: T1 ENTRY · ESSES COMMIT",
+    },
+    {
+      label: "SECTOR 2",
+      winnerLabel: "WEBBER −0.044",
+      winnerColor: "#00E5FF",
+      lapA: { time: "36.890", barWidth: 85 },
+      lapB: { time: "36.846", barWidth: 87 },
+      keyNote: "KEY: HAIRPIN · DEGNER EXIT",
+    },
+    {
+      label: "SECTOR 3",
+      winnerLabel: "VETTEL +0.098",
+      winnerColor: "#FF1E56",
+      lapA: { time: "24.849", barWidth: 94 },
+      lapB: { time: "24.947", barWidth: 89 },
+      keyNote: "KEY: SPOON · 130R COMMIT",
+    },
+  ],
+  takeaway: [
+    "Same car, same session, same tires — and yet 0.122 seconds apart. The gap came almost entirely from two corners: Degner 1, where Vettel's aggressive late-brake found a tenth Webber wouldn't risk, and Spoon, where Vettel's willingness to rotate the car earlier let him pick up throttle a fraction sooner.",
+    "The hairpin told the other story: the slow, technical section where Webber's cleaner, more conservative style actually clawed time back. Over a lap, Vettel's high-risk, high-commitment approach won the aggregate — which is why he was the faster qualifier that year.",
+  ],
+  totalFrames: 1694,
 };
 
 /* ─── Export index ────────────────────────────────────────────────────────── */

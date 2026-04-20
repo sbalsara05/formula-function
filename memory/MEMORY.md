@@ -1,2 +1,3 @@
 - [f(x) tech stack](project_stack.md) — Next.js 16 + React 19 + Tailwind v4 + FastAPI; scaffolded 2026-04-19
 - [f(x) project structure](project_structure.md) — directory layout, foundational files, what's built vs. not yet built
+- [Database architecture](project_db_architecture.md) — Supabase/PostgreSQL chosen; schema, seeding script, Jolpica/OpenF1 API integration
