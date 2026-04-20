@@ -315,7 +315,7 @@ function ErasSection({ eras, entityHex }: { eras: TeamEngineeringEra[]; entityHe
 
 /* ─── Signature ───────────────────────────────────────────────────────────── */
 
-function SignatureSection({ bars, entityHex }: { bars: TeamSignatureBar[]; entityHex: string }) {
+function SignatureSection({ bars, entityHex, description }: { bars: TeamSignatureBar[]; entityHex: string; description?: string }) {
   return (
     <div style={{ padding: '0 1.75rem 2rem' }}>
       <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', marginBottom: 6 }}>
@@ -332,7 +332,7 @@ function SignatureSection({ bars, entityHex }: { bars: TeamSignatureBar[]; entit
         <div style={{ marginBottom: 20 }}>
           <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, letterSpacing: 1.5, color: '#555', margin: '0 0 4px' }}>THE CAR CHARACTER</p>
           <p style={{ fontSize: 15, color: '#ccc', margin: 0, fontWeight: 400 }}>
-            High-downforce, qualifying-oriented cars. Strong one-lap pace, historically weaker race stint management. Mechanical grip advantage in wet conditions.
+            {description ?? 'High-downforce, qualifying-oriented cars. Strong one-lap pace, historically weaker race stint management. Mechanical grip advantage in wet conditions.'}
           </p>
         </div>
 
@@ -362,7 +362,7 @@ function SignatureSection({ bars, entityHex }: { bars: TeamSignatureBar[]; entit
 
 /* ─── Academy ─────────────────────────────────────────────────────────────── */
 
-function AcademySection({ academy, entityHex }: { academy: TeamAcademyDriver[]; entityHex: string }) {
+function AcademySection({ academy, entityHex, title, subtitle }: { academy: TeamAcademyDriver[]; entityHex: string; title?: string; subtitle?: string }) {
   const f1Drivers = academy.filter(d => d.tier === 'f1')
   const juniors = academy.filter(d => d.tier === 'junior')
   const alumni = academy.filter(d => d.tier === 'alumni')
@@ -371,9 +371,9 @@ function AcademySection({ academy, entityHex }: { academy: TeamAcademyDriver[]; 
     <div style={{ padding: '0 1.75rem 2rem' }}>
       <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', marginBottom: 6 }}>
         <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: 2, color: entityHex, margin: 0 }}>
-          DRIVER ACADEMY · FDA
+          {title ?? 'DRIVER ACADEMY · FDA'}
         </p>
-        <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, letterSpacing: 1, color: '#555' }}>PIPELINE · 2025</p>
+        <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, letterSpacing: 1, color: '#555' }}>{subtitle ?? 'PIPELINE · 2025'}</p>
       </div>
       <p style={{ fontSize: 13, color: '#888', margin: '0 0 24px', maxWidth: 520, lineHeight: 1.6 }}>
         Ferrari Driver Academy since 2009. Graduates include Leclerc, Bianchi, Bearman, and others who&apos;ve risen through the junior pyramid.
@@ -485,11 +485,15 @@ export interface TeamPageProps {
   currentStandings?: ConstructorStandingEntry[]
   standingsMeta?: StandingsMeta
   jolpicaId?: string
+  signatureDescription?: string
+  academyTitle?: string
+  academySubtitle?: string
 }
 
 export default function TeamPage({
   team, stats, eras, signatureBars, reelSlides, academy, iconicCars, series,
   liveStats, currentStandings = [], standingsMeta = { season: '', round: '' }, jolpicaId = '',
+  signatureDescription, academyTitle, academySubtitle,
 }: TeamPageProps) {
   const entityHex = team.liveryHex
 
@@ -513,8 +517,8 @@ export default function TeamPage({
         entityHex={entityHex}
       />
       <ErasSection eras={eras} entityHex={entityHex} />
-      <SignatureSection bars={signatureBars} entityHex={entityHex} />
-      <AcademySection academy={academy} entityHex={entityHex} />
+      <SignatureSection bars={signatureBars} entityHex={entityHex} description={signatureDescription} />
+      <AcademySection academy={academy} entityHex={entityHex} title={academyTitle} subtitle={academySubtitle} />
       <IconicCarsSection cars={iconicCars} entityHex={entityHex} />
 
       <div style={{ padding: '1rem 1.75rem 2rem', textAlign: 'center', borderTop: '0.5px solid #1a1a1a' }}>

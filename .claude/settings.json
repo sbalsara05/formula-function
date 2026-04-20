@@ -5,7 +5,11 @@
       "Bash(python3 -m json.tool)",
       "WebFetch(domain:api.jolpi.ca)",
       "WebFetch(domain:api.openf1.org)",
-      "WebFetch(domain:www.formula1.com)"
+      "WebFetch(domain:www.formula1.com)",
+      "Bash(npm install *)",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); s=d['MRData']['StandingsTable']['StandingsLists'][0]['DriverStandings'][0]; print\\(s['Driver']['familyName'], s['Constructors'][0]['name'], s['wins']\\)\")",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\('total:', d['MRData']['total']\\)\")",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); dr=d['MRData']['DriverTable']['Drivers'][0]; print\\(dr['givenName'], dr['familyName'], dr['nationality'], dr['permanentNumber']\\)\")"
     ]
   }
 }

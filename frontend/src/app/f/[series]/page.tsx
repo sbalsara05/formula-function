@@ -80,6 +80,7 @@ const F1_CHAMPIONS = [
   { year: 2022, driver: 'Verstappen', team: 'Red Bull',   color: '#1E3A8A' },
   { year: 2023, driver: 'Verstappen', team: 'Red Bull',   color: '#1E3A8A' },
   { year: 2024, driver: 'Verstappen', team: 'Red Bull',   color: '#1E3A8A' },
+  { year: 2025, driver: 'Norris',     team: 'McLaren',    color: '#FF8000' },
 ]
 
 const MULTI_CHAMPS = [
