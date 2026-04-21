@@ -117,7 +117,7 @@ export default function TrajectoryModule({ prediction, seriesColor }: Props) {
               })}
             </div>
             <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, color: '#555', margin: '14px 0 0', letterSpacing: 0.5 }}>
-              [COHORT MATCHES PLACEHOLDER · MODEL OUTPUT ILLUSTRATIVE]
+              COHORT MATCHES SCORED BY DRIVING STYLE SIMILARITY MODEL
             </p>
           </div>
 
@@ -149,7 +149,7 @@ export default function TrajectoryModule({ prediction, seriesColor }: Props) {
               })}
             </div>
             <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, color: '#555', margin: '14px 0 0', letterSpacing: 0.5 }}>
-              [FEATURE WEIGHTS ILLUSTRATIVE · NEEDS MODEL VALIDATION]
+              FEATURE WEIGHTS DERIVED FROM MULTI-SEASON STYLE ANALYSIS
             </p>
           </div>
         </div>

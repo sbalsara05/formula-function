@@ -256,7 +256,7 @@ const FEATURED_LINKS: FeaturedLink[] = [
     series: 'f(2)', seriesColor: '#00E5FF',
     type: 'DRIVER',
     name: 'Oliver Bearman',
-    tagline: 'FDA · 2024 F2 P4 · Haas 2025',
+    tagline: 'FDA · Haas F1 2025–26 · P4 Mexico',
     entityColor: '#DC0000',
   },
   {

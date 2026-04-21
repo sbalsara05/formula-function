@@ -7,6 +7,7 @@ import type {
   TeamSignatureBar,
   TeamAcademyDriver,
   TeamIconicCar,
+  TeamKeyMoment,
   ReelSlide,
   Series,
 } from '@/lib/types'
@@ -89,7 +90,7 @@ function TeamHero({ team, stats, reelSlides, entityHex, isLive }: {
 }) {
   return (
     <div style={{ position: 'relative', width: '100%', height: 620, overflow: 'hidden' }}>
-      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, #000 0%, #1a0000 25%, #2a0606 50%, #1a0000 78%, #000 100%)' }} />
+      <div style={{ position: 'absolute', inset: 0, background: `linear-gradient(180deg, #000 0%, ${entityHex}18 25%, ${entityHex}28 50%, ${entityHex}18 78%, #000 100%)` }} />
       <div style={{ position: 'absolute', inset: 0, background: `radial-gradient(ellipse at 60% 50%, ${entityHex} 0%, ${entityHex} 10%, transparent 45%)`, opacity: 0.45 }} />
       <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse at 80% 80%, transparent 30%, #000 85%)' }} />
 
@@ -97,7 +98,7 @@ function TeamHero({ team, stats, reelSlides, entityHex, isLive }: {
         <defs><filter id="ferG"><feGaussianBlur stdDeviation="3" /></filter></defs>
         <g filter="url(#ferG)">
           <path d="M 0 140 Q 200 100, 400 180 T 800 160" stroke={entityHex} strokeWidth={1} fill="none" />
-          <path d="M 0 480 Q 300 520, 550 460 T 800 500" stroke="#8B0000" strokeWidth={1} fill="none" />
+          <path d="M 0 480 Q 300 520, 550 460 T 800 500" stroke={entityHex} strokeWidth={1} fill="none" />
         </g>
       </svg>
 
@@ -281,14 +282,22 @@ function ErasSection({ eras, entityHex }: { eras: TeamEngineeringEra[]; entityHe
           return (
             <div key={era.label} style={{
               aspectRatio: '4/5',
-              background: 'linear-gradient(180deg, #1a0000 0%, #000 100%)',
-              border: `0.5px solid ${era.golden ? '#FFD70044' : '#3a0000'}`,
+              background: '#080808',
+              border: `0.5px solid ${era.golden ? '#FFD70044' : '#1a1a1a'}`,
               borderRadius: 8, overflow: 'hidden', position: 'relative', padding: 14,
             }}>
-              {era.golden && (
+              {era.imageUrl && (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img src={era.imageUrl} alt="" aria-hidden="true"
+                  style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.55 }}
+                />
+              )}
+              {!era.imageUrl && era.golden && (
                 <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse at 50% 30%, #FFD700 0%, #FFD700 18%, transparent 55%)', opacity: 0.35 }} />
               )}
-              <div style={{ position: 'absolute', inset: 0, background: `radial-gradient(ellipse at 50% ${era.golden ? '45%' : '30%'}, ${glowColor} 0%, ${glowColor} 20%, transparent 60%)`, opacity: era.golden ? 0.7 : 0.55 }} />
+              {!era.imageUrl && (
+                <div style={{ position: 'absolute', inset: 0, background: `radial-gradient(ellipse at 50% ${era.golden ? '45%' : '30%'}, ${glowColor} 0%, ${glowColor} 20%, transparent 60%)`, opacity: era.golden ? 0.7 : 0.55 }} />
+              )}
               <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(circle at 50% 50%, transparent 35%, #000 92%)' }} />
               <div style={{ position: 'relative' }}>
                 <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, color: '#FFD700', letterSpacing: 1, margin: 0 }}>{badgeLabel}</p>
@@ -362,7 +371,7 @@ function SignatureSection({ bars, entityHex, description }: { bars: TeamSignatur
 
 /* ─── Academy ─────────────────────────────────────────────────────────────── */
 
-function AcademySection({ academy, entityHex, title, subtitle }: { academy: TeamAcademyDriver[]; entityHex: string; title?: string; subtitle?: string }) {
+function AcademySection({ academy, entityHex, title, subtitle, description }: { academy: TeamAcademyDriver[]; entityHex: string; title?: string; subtitle?: string; description?: string }) {
   const f1Drivers = academy.filter(d => d.tier === 'f1')
   const juniors = academy.filter(d => d.tier === 'junior')
   const alumni = academy.filter(d => d.tier === 'alumni')
@@ -371,12 +380,12 @@ function AcademySection({ academy, entityHex, title, subtitle }: { academy: Team
     <div style={{ padding: '0 1.75rem 2rem' }}>
       <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', marginBottom: 6 }}>
         <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: 2, color: entityHex, margin: 0 }}>
-          {title ?? 'DRIVER ACADEMY · FDA'}
+          {title ?? 'DRIVER ACADEMY'}
         </p>
         <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, letterSpacing: 1, color: '#555' }}>{subtitle ?? 'PIPELINE · 2025'}</p>
       </div>
       <p style={{ fontSize: 13, color: '#888', margin: '0 0 24px', maxWidth: 520, lineHeight: 1.6 }}>
-        Ferrari Driver Academy since 2009. Graduates include Leclerc, Bianchi, Bearman, and others who&apos;ve risen through the junior pyramid.
+        {description ?? 'Junior programme backing current and future Formula 1 talent through the feeder series pyramid.'}
       </p>
 
       <div style={{ background: '#080808', border: '1px solid #1a1a1a', borderRadius: 10, padding: 24 }}>
@@ -437,14 +446,29 @@ function IconicCarsSection({ cars, entityHex }: { cars: TeamIconicCar[]; entityH
         {cars.map((car) => (
           <div key={car.name} style={{
             aspectRatio: '16/10',
-            background: 'linear-gradient(135deg, #1a0000, #000)',
-            border: `0.5px solid ${car.peak ? '#FFD70044' : '#3a0000'}`,
+            background: '#080808',
+            border: `0.5px solid ${car.peak ? '#FFD70044' : '#1a1a1a'}`,
             borderRadius: 6, overflow: 'hidden', position: 'relative', cursor: 'pointer',
           }}>
-            {car.peak && (
+            {car.imageUrl && (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                src={car.imageUrl}
+                alt={car.name}
+                style={{
+                  position: 'absolute', inset: 0,
+                  width: '100%', height: '100%',
+                  objectFit: 'cover',
+                  opacity: 0.65,
+                }}
+              />
+            )}
+            {!car.imageUrl && car.peak && (
               <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse at 50% 40%, #FFD700 0%, transparent 50%)', opacity: 0.25 }} />
             )}
-            <div style={{ position: 'absolute', inset: 0, background: `radial-gradient(ellipse at ${car.peak ? '50% 55%' : '50% 50%'}, ${entityHex} 0%, transparent 60%)`, opacity: car.peak ? 0.65 : 0.55 }} />
+            {!car.imageUrl && (
+              <div style={{ position: 'absolute', inset: 0, background: `radial-gradient(ellipse at 50% 50%, ${entityHex} 0%, transparent 60%)`, opacity: 0.55 }} />
+            )}
             <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(circle at 50% 50%, transparent 35%, #000 92%)' }} />
             <div style={{ position: 'absolute', top: 10, left: 12, fontFamily: 'var(--font-mono)', fontSize: 9, color: car.peak ? '#FFD700' : entityHex, letterSpacing: 1 }}>
               {car.peak ? `${car.name} · PEAK` : car.name}
@@ -455,6 +479,45 @@ function IconicCarsSection({ cars, entityHex }: { cars: TeamIconicCar[]; entityH
             <div style={{ position: 'absolute', bottom: 10, left: 12 }}>
               <p style={{ fontSize: 12, color: '#fff', margin: 0, fontWeight: 500 }}>{car.subtitle}</p>
               <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, color: '#888', margin: '2px 0 0', letterSpacing: 0.5 }}>{car.meta}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}
+
+/* ─── Key Moments ─────────────────────────────────────────────────────────── */
+
+function KeyMomentsSection({ moments, entityHex }: { moments: TeamKeyMoment[]; entityHex: string }) {
+  if (!moments.length) return null
+  return (
+    <div style={{ padding: '0 1.75rem 3rem' }}>
+      <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', marginBottom: 6 }}>
+        <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: 2, color: entityHex, margin: 0 }}>KEY MOMENTS</p>
+        <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, letterSpacing: 1, color: '#555' }}>FROM THE ARCHIVE</p>
+      </div>
+      <p style={{ fontSize: 13, color: '#888', margin: '0 0 24px', maxWidth: 520, lineHeight: 1.6 }}>
+        The races that defined the team&apos;s character.
+      </p>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 16 }}>
+        {moments.map((m) => (
+          <div key={m.videoId}>
+            <div style={{ aspectRatio: '16/9', position: 'relative', borderRadius: 6, overflow: 'hidden', border: '0.5px solid #1a1a1a' }}>
+              <iframe
+                src={`https://www.youtube-nocookie.com/embed/${m.videoId}?rel=0&modestbranding=1`}
+                title={m.title}
+                style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', border: 'none' }}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+            <div style={{ paddingTop: 8 }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', gap: 8 }}>
+                <p style={{ fontSize: 13, color: '#ccc', margin: 0, fontWeight: 400, flex: 1 }}>{m.title}</p>
+                <span style={{ fontFamily: 'var(--font-mono)', fontSize: 9, color: entityHex, letterSpacing: 1, flexShrink: 0 }}>{m.badge}</span>
+              </div>
+              <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, color: '#555', margin: '3px 0 0', letterSpacing: 0.5 }}>{m.year} · {m.label}</p>
             </div>
           </div>
         ))}
@@ -480,6 +543,7 @@ export interface TeamPageProps {
   reelSlides: ReelSlide[]
   academy: TeamAcademyDriver[]
   iconicCars: TeamIconicCar[]
+  keyMoments?: TeamKeyMoment[]
   series: Series
   liveStats?: LiveTeamStats
   currentStandings?: ConstructorStandingEntry[]
@@ -488,12 +552,13 @@ export interface TeamPageProps {
   signatureDescription?: string
   academyTitle?: string
   academySubtitle?: string
+  academyDescription?: string
 }
 
 export default function TeamPage({
-  team, stats, eras, signatureBars, reelSlides, academy, iconicCars, series,
+  team, stats, eras, signatureBars, reelSlides, academy, iconicCars, keyMoments = [], series,
   liveStats, currentStandings = [], standingsMeta = { season: '', round: '' }, jolpicaId = '',
-  signatureDescription, academyTitle, academySubtitle,
+  signatureDescription, academyTitle, academySubtitle, academyDescription,
 }: TeamPageProps) {
   const entityHex = team.liveryHex
 
@@ -502,8 +567,8 @@ export default function TeamPage({
     ...stats,
     wins:               liveStats?.wins       ?? stats.wins,
     podiums:            liveStats?.podiums     ?? stats.podiums,
-    constructorsTitles: liveStats?.wccTitles   ?? stats.constructorsTitles,
-    seasons:            liveStats?.seasons     ?? stats.seasons,
+    constructorsTitles: liveStats?.wccTitles   || stats.constructorsTitles,
+    seasons:            liveStats?.seasons     || stats.seasons,
   }
 
   return (
@@ -518,8 +583,9 @@ export default function TeamPage({
       />
       <ErasSection eras={eras} entityHex={entityHex} />
       <SignatureSection bars={signatureBars} entityHex={entityHex} description={signatureDescription} />
-      <AcademySection academy={academy} entityHex={entityHex} title={academyTitle} subtitle={academySubtitle} />
+      <AcademySection academy={academy} entityHex={entityHex} title={academyTitle} subtitle={academySubtitle} description={academyDescription} />
       <IconicCarsSection cars={iconicCars} entityHex={entityHex} />
+      <KeyMomentsSection moments={keyMoments} entityHex={entityHex} />
 
       <div style={{ padding: '1rem 1.75rem 2rem', textAlign: 'center', borderTop: '0.5px solid #1a1a1a' }}>
         <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, letterSpacing: 2, color: '#333' }}>

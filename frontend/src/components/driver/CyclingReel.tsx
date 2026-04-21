@@ -78,41 +78,70 @@ export default function CyclingReel({ slides, traceColor, left = '56%', borderCo
               transition: 'opacity 0.9s ease',
             }}
           >
-            {/* Livery glow */}
-            <div style={{
-              position: 'absolute', inset: 0,
-              background: `radial-gradient(ellipse at 50% 40%, ${slide.glowColor} 0%, ${slide.glowColor} 30%, transparent 68%)`,
-              opacity: 0.85,
-            }} />
-            {/* Vignette */}
+            {slide.videoId && isActive && (
+              <iframe
+                src={`https://www.youtube-nocookie.com/embed/${slide.videoId}?autoplay=1&mute=1&start=${slide.videoStart ?? 0}&controls=0&loop=1&playlist=${slide.videoId}&disablekb=1&modestbranding=1&rel=0&iv_load_policy=3`}
+                allow="autoplay; encrypted-media"
+                title=""
+                aria-hidden="true"
+                style={{
+                  position: 'absolute', inset: '-10%',
+                  width: '120%', height: '120%',
+                  border: 'none',
+                  opacity: 0.6,
+                  pointerEvents: 'none',
+                }}
+              />
+            )}
+            {slide.imageUrl && !slide.videoId && (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                src={slide.imageUrl}
+                alt=""
+                aria-hidden="true"
+                style={{
+                  position: 'absolute', inset: 0,
+                  width: '100%', height: '100%',
+                  objectFit: 'cover',
+                  opacity: 0.5,
+                }}
+              />
+            )}
+            {/* Glow + trace only on pure-dark slides (no media) */}
+            {!slide.imageUrl && !slide.videoId && (<>
+              <div style={{
+                position: 'absolute', inset: 0,
+                background: `radial-gradient(ellipse at 50% 40%, ${slide.glowColor} 0%, ${slide.glowColor} 30%, transparent 68%)`,
+                opacity: 0.85,
+              }} />
+              <svg
+                viewBox="0 0 400 300"
+                preserveAspectRatio="xMidYMid slice"
+                style={{ position: 'absolute', inset: 0, width: '100%', height: '100%' }}
+                aria-hidden="true"
+              >
+                <path
+                  key={isActive ? traceVersion : -1}
+                  d={slide.svgPath}
+                  stroke={traceColor}
+                  strokeWidth={1.8}
+                  fill="none"
+                  style={{
+                    strokeDasharray: 500,
+                    strokeDashoffset: 500,
+                    animation: isActive ? 'traceIn 4.5s ease forwards' : 'none',
+                  }}
+                />
+                {slide.circles?.map((c, ci) => (
+                  <circle key={ci} cx={c.cx} cy={c.cy} r={c.r} fill={c.fill} opacity={0.9} />
+                ))}
+              </svg>
+            </>)}
+            {/* Vignette always — darkens edges so text stays readable over any media */}
             <div style={{
               position: 'absolute', inset: 0,
               background: 'radial-gradient(circle at 50% 50%, transparent 35%, #000 94%)',
             }} />
-
-            {/* Telemetry trace — key={traceVersion} forces remount on slide activation */}
-            <svg
-              viewBox="0 0 400 300"
-              preserveAspectRatio="xMidYMid slice"
-              style={{ position: 'absolute', inset: 0, width: '100%', height: '100%' }}
-              aria-hidden="true"
-            >
-              <path
-                key={isActive ? traceVersion : -1}
-                d={slide.svgPath}
-                stroke={traceColor}
-                strokeWidth={1.8}
-                fill="none"
-                style={{
-                  strokeDasharray: 500,
-                  strokeDashoffset: 500,
-                  animation: isActive ? 'traceIn 4.5s ease forwards' : 'none',
-                }}
-              />
-              {slide.circles?.map((c, ci) => (
-                <circle key={ci} cx={c.cx} cy={c.cy} r={c.r} fill={c.fill} opacity={0.9} />
-              ))}
-            </svg>
 
             {/* Top-left slot label */}
             <div style={{

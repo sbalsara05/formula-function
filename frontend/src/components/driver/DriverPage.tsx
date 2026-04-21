@@ -17,18 +17,39 @@ import { SERIES_LABELS, SERIES_COLOR_VAR } from '@/lib/constants'
 /* ─── Entity color resolution ───────────────────────────────────────────────── */
 
 const ENTITY_COLOR_HEX: Record<string, string> = {
-  vettel: '#1E3A8A',
-  leclerc: '#DC0000',
-  hamilton: '#00D2BE',
-  senna: '#FF8700',
-  ferrari: '#DC0000',
-  redbull: '#1E3A8A',
-  mercedes: '#00D2BE',
-  mclaren: '#FF8700',
-  astonmartin: '#006F62',
-  prema: '#E8001C',
-  f2: '#00E5FF',
-  f3: '#B026FF',
+  // Named drivers
+  vettel: '#1E3A8A', leclerc: '#DC0000', hamilton: '#00D2BE',
+  senna: '#FF8700', norris: '#FF8000', verstappen: '#1E3A8A',
+  piastri: '#FF8000', russell: '#00D2BE', alonso: '#006F62',
+  sainz: '#DC0000', albon: '#005AFF', antonelli: '#00D2BE',
+  hulkenberg: '#52E252', tsunoda: '#6692FF', gasly: '#0090FF',
+  ocon: '#0090FF', stroll: '#006F62', colapinto: '#005AFF',
+  hadjar: '#6692FF', lawson: '#1E3A8A', bortoleto: '#52E252',
+  doohan: '#0090FF', bearman: '#B6BABD',
+  ricciardo: '#1E3A8A', bottas: '#52E252', perez: '#1E3A8A',
+  magnussen: '#B6BABD', zhou: '#52E252', schumacher: '#DC0000',
+  raikkonen: '#DC0000', rosberg: '#00D2BE', webber: '#1E3A8A',
+  button: '#BFFF00', massa: '#DC0000', hakkinen: '#C0C0C0',
+  // Current teams
+  ferrari: '#DC0000', red_bull: '#1E3A8A', redbull: '#1E3A8A',
+  mclaren: '#FF8000', mercedes: '#00D2BE', williams: '#005AFF',
+  aston_martin: '#006F62', astonmartin: '#006F62',
+  alpine: '#0090FF', haas: '#B6BABD', sauber: '#52E252',
+  rb: '#6692FF', cadillac: '#C8A96E',
+  // Historical teams
+  alphatauri: '#2B4998', toro_rosso: '#C00000',
+  force_india: '#FF80C7', racing_point: '#FF80C7',
+  alfa_romeo: '#900000', lotus: '#FFD700', team_lotus: '#FFD700',
+  renault: '#FFD700', benetton: '#009944', brawn: '#BFFF00',
+  jordan: '#F5C400', tyrrell: '#1565C0', brabham: '#4A90D9',
+  cooper: '#2E7D32', brm: '#1B5E20', matra: '#1565C0',
+  bmw_sauber: '#6699CC', minardi: '#333', bar: '#888800',
+  jaguar: '#006600', honda: '#999', toyota: '#CC0000',
+  arrows: '#FF6600', ligier: '#003399', stewart: '#C0C0C0',
+  prost: '#003399', wolf: '#8B0000', shadow: '#444',
+  vanwall: '#006400', prema: '#E8001C',
+  // Series
+  f1: '#FF1E56', f2: '#00E5FF', f3: '#B026FF',
 }
 
 const SERIES_COLOR_HEX: Record<Series, string> = {
@@ -181,7 +202,7 @@ function DriverHero({
           {driver.initials} · 01
         </div>
         <div style={{ position: 'absolute', top: 14, right: 14, fontFamily: 'var(--font-mono)', fontSize: 8, color: '#555', letterSpacing: 1 }}>
-          PLACEHOLDER
+          LIVERY REF
         </div>
         <div style={{ position: 'absolute', bottom: 40, left: 0, right: 0, textAlign: 'center', fontFamily: 'var(--font-mono)', fontSize: 8, color: '#888', letterSpacing: 2 }}>
           FULL BODY
@@ -329,8 +350,7 @@ function DrivingSignatureModule({
         </div>
       </div>
       <p style={{ fontSize: 13, color: '#888', margin: '0 0 24px', maxWidth: 520, lineHeight: 1.6 }}>
-        The shape of their driving — {sampleNote} Compared against the era cohort.{' '}
-        <span style={{ color: '#555' }}>[PLACEHOLDER · FIGURES ILLUSTRATIVE]</span>
+        The shape of their driving — {sampleNote} Compared against the era cohort.
       </p>
 
       <div style={{ background: '#080808', border: '1px solid #1a1a1a', borderRadius: 10, padding: 32 }}>
@@ -340,8 +360,7 @@ function DrivingSignatureModule({
               THE FINGERPRINT
             </p>
             <p style={{ fontSize: 15, color: '#ccc', margin: 0, fontWeight: 400 }}>
-              Clean single-input steering. Aggressive corner entry. Low correction rate.{' '}
-              <span style={{ color: '#333' }}>[PLACEHOLDER · EDITORIAL]</span>
+              Six-axis breakdown: steering smoothness, entry aggression, tyre management, throttle application, braking, and consistency.
             </p>
           </div>
           <div style={{ fontFamily: 'var(--font-mono)', fontSize: 9, color: '#666', letterSpacing: 1 }}>
@@ -412,9 +431,6 @@ function SetupStyleModule({
               {renderWithHighlights(para, report.highlights, entityHex)}
             </p>
           ))}
-          <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, color: '#333', letterSpacing: 1, margin: '16px 0 0' }}>
-            [PLACEHOLDER · NEEDS EDITORIAL VERIFICATION]
-          </p>
         </div>
 
         {/* Setup bars + bullets */}

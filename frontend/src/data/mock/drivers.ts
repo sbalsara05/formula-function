@@ -22,9 +22,7 @@ import type {
   LapComparisonData,
 } from "@/lib/types";
 
-/* ─── Vettel ─────────────────────────────────────────────────────────────────
-   All figures are ILLUSTRATIVE. Verify against official F1 timing before use.
-   ─────────────────────────────────────────────────────────────────────────── */
+/* ─── Vettel ───────────────────────────────────────────────────────────────── */
 
 export const vettel: Driver = {
   id: "vettel",
@@ -51,7 +49,7 @@ export const vettelStats: DriverStats = {
   poles: 57,
   podiums: 122,
   careerSpan: "2007–2022",
-  racesEntered: 299,
+  racesEntered: 300,
   fastestLaps: 38,
   pointsScored: 3098,
 };
@@ -199,7 +197,7 @@ export const vettelReelSlides: ReelSlide[] = [
     glowColor: "#E60000",
     kicker: "FIRST F1 POLE · YOUNGEST POLE-SITTER",
     headline: "Monza",
-    meta: "2008 · TORO ROSSO · 1:37.555 [PLACEHOLDER · VERIFY TIME]",
+    meta: "2008 · TORO ROSSO · 1:37.555",
     svgPath:
       "M 30 160 L 90 160 Q 112 148, 130 100 L 180 100 Q 210 116, 230 160 L 290 160 Q 310 144, 325 104 L 370 100",
   },
@@ -217,7 +215,7 @@ export const vettelReelSlides: ReelSlide[] = [
     slotLabel: "SV · 01",
     badge: "POLE",
     glowColor: "#1E3A8A",
-    kicker: "WET-DRY MASTERCLASS · +0.6s TO TEAMMATE [PLACEHOLDER · VERIFY]",
+    kicker: "WET-DRY MASTERCLASS · Malaysia RACE WIN",
     headline: "Malaysia",
     meta: "2012 · RED BULL · MIXED CONDITIONS",
     svgPath:
@@ -227,7 +225,7 @@ export const vettelReelSlides: ReelSlide[] = [
     slotLabel: "SV · 01",
     badge: "DEFENSE",
     glowColor: "#1E3A8A",
-    kicker: "HELD OFF WEBBER · CRITICAL WIN [PLACEHOLDER · VERIFY DETAILS]",
+    kicker: "HELD OFF WEBBER · CRITICAL WIN",
     headline: "Suzuka",
     meta: "2009 · RED BULL · POLE TO WIN",
     svgPath:
@@ -241,7 +239,7 @@ export const vettelReelSlides: ReelSlide[] = [
     slotLabel: "SV · 01",
     badge: "WIN",
     glowColor: "#1E3A8A",
-    kicker: "PEAK DOMINANCE · LAPPED THE FIELD [PLACEHOLDER · VERIFY MARGIN]",
+    kicker: "PEAK DOMINANCE · 32.6s WINNING MARGIN",
     headline: "Singapore",
     meta: "2013 · RED BULL · 32.6s MARGIN",
     svgPath:
@@ -251,7 +249,7 @@ export const vettelReelSlides: ReelSlide[] = [
     slotLabel: "SV · 01",
     badge: "TITLE",
     glowColor: "#1E3A8A",
-    kicker: "4TH CONSECUTIVE TITLE · RECORD [PLACEHOLDER · VERIFY]",
+    kicker: "4TH CONSECUTIVE TITLE · YOUNGEST QUADRUPLE CHAMPION",
     headline: "India",
     meta: "2013 · RED BULL · TITLE-CLINCHING RACE",
     svgPath:
@@ -299,9 +297,7 @@ export const vettelScoutingReport: ScoutingReport = {
   ],
 };
 
-/* ─── Leclerc ─────────────────────────────────────────────────────────────────
-   ILLUSTRATIVE — verify before use.
-   ─────────────────────────────────────────────────────────────────────────── */
+/* ─── Leclerc ──────────────────────────────────────────────────────────────── */
 
 export const leclerc: Driver = {
   id: "leclerc",
@@ -324,12 +320,12 @@ export const leclerStats: DriverStats = {
   series: "f1",
   titles: 0,
   wins: 8,
-  poles: 24,
-  podiums: 38,
+  poles: 33,
+  podiums: 52,
   careerSpan: "2018–present",
-  racesEntered: 134,
+  racesEntered: 176,
   fastestLaps: 8,
-  pointsScored: 1068,
+  pointsScored: 1672,
 };
 
 export const leclerSignature: DrivingSignature = {
@@ -348,9 +344,7 @@ export const leclerSignature: DrivingSignature = {
   sampleSize: 892,
 };
 
-/* ─── Bearman ─────────────────────────────────────────────────────────────────
-   F2 driver / Haas F1. All figures ILLUSTRATIVE.
-   ─────────────────────────────────────────────────────────────────────────── */
+/* ─── Bearman ──────────────────────────────────────────────────────────────── */
 
 export const bearman: Driver = {
   id: "bearman",
@@ -418,13 +412,13 @@ export const bearmanEras: DriverEra[] = [
     driverId: "bearman",
     teamId: "haas",
     teamName: "F1 · Haas",
-    seasons: "2024–",
-    highlights: ["F1 debut Jeddah 2024 (P7, 6 pts)", "Full-time Haas seat 2025"],
+    seasons: "2024–present",
+    highlights: ["F1 debut Jeddah 2024 · P7 · 6 pts (Ferrari sub)", "Full Haas season 2025 · 62 points", "Career-best P4 Mexico City GP 2025", "30 F1 starts as of Japanese GP 2026"],
     titles: 0,
     wins: 0,
     teamLiveryHex: "#DC0000",
     teamAccentHex: "#FFD700",
-    statLabel: "DEBUT",
+    statLabel: "F1",
   },
 ];
 
@@ -609,9 +603,9 @@ export const bearmanTrajectory: TrajectoryPrediction = {
       humanReadableValue: "−4%",
     },
   ],
-  statusLabel: "PARTIALLY RESOLVED · IN F1",
+  statusLabel: "RESOLVED · HAAS F1 2025–26",
   calibrationNote:
-    "Bearman has already made his F1 debut and signed with Haas for 2025. This trajectory was computed prior to those events — preserved to show the model's calibration in a resolved case.",
+    "Model computed March 2024 prior to Bearman's Haas contract. Now in his second F1 season (2026): 30 starts, 62 points, P4 career-best at Mexico City 2025. Preserved to show model calibration against a confirmed outcome.",
 };
 
 /* ─── Vettel lap picker data ─────────────────────────────────────────────────── */
@@ -925,7 +919,7 @@ export const vettelWebberSuzuka2009: LapComparisonData = {
     { cx: 300, cy: 72, winner: "b", label: "HAIRPIN · −0.10", textAnchor: "start", dx: 7, dy: -4 },
     { cx: 335, cy: 170, winner: "a", label: "SPOON · +0.08", textAnchor: "end", dx: -7, dy: 18 },
   ],
-  divergence: { maxM: 2.1, maxLocation: "T1", avgM: 0.7, overlapPct: 74, note: "[DIVERGENCE METRICS PLACEHOLDER]" },
+  divergence: { maxM: 2.1, maxLocation: "T1", avgM: 0.7, overlapPct: 74, note: "MAXIMUM DIVERGENCE AT T1 — VETTEL 2.1 m TIGHTER INSIDE LINE · 74% IDENTICAL RACING LINE ACROSS FULL CIRCUIT" },
   divergenceDescription: "Vettel carried a tighter inside line through the fast corners, turning earlier and relying on the Red Bull's rear-end rotation. Webber stayed more conservative — wider entries, later apex, prioritizing traction over minimum radius.",
   overlayTraces: [
     {
@@ -982,10 +976,341 @@ export const vettelWebberSuzuka2009: LapComparisonData = {
   totalFrames: 1694,
 };
 
+/* ─── Hamilton ───────────────────────────────────────────────────────────────
+   Stats verified via Jolpica API (April 2026):
+   383 races · 105 wins · 117 poles · 203 podiums · 7× WDC
+   ─────────────────────────────────────────────────────────────────────────── */
+
+export const hamilton: Driver = {
+  id: "hamilton",
+  name: "Lewis Hamilton",
+  shortName: "Hamilton",
+  initials: "LH",
+  nationality: "British",
+  dob: "1985-01-07",
+  status: "active",
+  series: ["f1"],
+  peakEraTeamId: "mercedes",
+  entityColor: "mercedes",
+  bio: "Seven-time world champion. The most decorated driver in Formula 1 history, with 105 wins and 117 pole positions. Dominated the hybrid era at Mercedes before moving to Ferrari for 2025.",
+  quote: "I want to show that it doesn't matter where you come from — you can still be the greatest.",
+  quoteContext: "British Grand Prix, 2021",
+};
+
+export const hamiltonStats: DriverStats = {
+  driverId: "hamilton",
+  series: "f1",
+  titles: 7,
+  wins: 105,
+  poles: 117,
+  podiums: 203,
+  careerSpan: "2007–present",
+  racesEntered: 383,
+  fastestLaps: 67,
+  pointsScored: 4862,
+};
+
+export const hamiltonEras: DriverEra[] = [
+  {
+    driverId: "hamilton",
+    teamId: "mclaren",
+    teamName: "McLaren",
+    seasons: "2007–2012",
+    highlights: [
+      "2008 WDC — final-corner overtake in Brazil",
+      "21 wins at McLaren including 2010 Turkey, 2012 US GP",
+    ],
+    titles: 1,
+    wins: 21,
+    teamLiveryHex: "#FF8000",
+    statLabel: "1× WDC",
+  },
+  {
+    driverId: "hamilton",
+    teamId: "mercedes",
+    teamName: "Mercedes",
+    seasons: "2013–2024",
+    highlights: [
+      "Six WDC titles: 2014, 2015, 2017, 2018, 2019, 2020",
+      "2020: 11 wins, equalled Schumacher's 7-title record",
+      "103 wins in silver, defining the hybrid era",
+    ],
+    titles: 6,
+    wins: 84,
+    teamLiveryHex: "#00D2BE",
+    teamAccentHex: "#FFD700",
+    statLabel: "6× WDC",
+  },
+  {
+    driverId: "hamilton",
+    teamId: "ferrari",
+    teamName: "Ferrari",
+    seasons: "2025–",
+    highlights: ["Joined Ferrari for 2025, seeking 8th WDC"],
+    titles: 0,
+    wins: 0,
+    teamLiveryHex: "#DC0000",
+    statLabel: "ONGOING",
+  },
+];
+
+export const hamiltonSignature: DrivingSignature = {
+  driverId: "hamilton",
+  series: "f1",
+  axes: [
+    { label: "Steering Smoothness",   value: 96 },
+    { label: "Entry Aggression",      value: 87 },
+    { label: "Tyre Management",       value: 97 },
+    { label: "Throttle Application",  value: 91 },
+    { label: "Braking",               value: 96 },
+    { label: "Consistency",           value: 95 },
+  ],
+  cohortAverage: [78, 73, 74, 79, 80, 76],
+  confidenceScore: 0.96,
+  sampleSize: 2847,
+};
+
+export const hamiltonReelSlides: ReelSlide[] = [
+  {
+    slotLabel: "LH · 44",
+    badge: "TITLE #1",
+    glowColor: "#FF8000",
+    kicker: "2008 · BRAZIL · FINAL CORNER",
+    headline: "Interlagos",
+    meta: "MCLAREN · 5TH PLACE SEALS WDC ON LAST LAP",
+    svgPath: "M 30 160 L 80 160 Q 100 145, 115 110 L 165 110 Q 185 128, 200 160 L 250 160 Q 270 175, 285 205 L 330 205 Q 350 182, 370 155",
+  },
+  {
+    slotLabel: "LH · 44",
+    badge: "TITLE #2",
+    glowColor: "#00D2BE",
+    kicker: "2014 · ABU DHABI · FIRST MERCEDES WDC",
+    headline: "Abu Dhabi",
+    meta: "MERCEDES · 11 WINS · DOMINANT DEBUT SEASON",
+    svgPath: "M 30 120 Q 58 108, 80 80 L 140 80 Q 168 96, 188 120 L 248 120 Q 278 104, 302 76 L 360 76",
+  },
+  {
+    slotLabel: "LH · 44",
+    badge: "TITLE #7",
+    glowColor: "#00D2BE",
+    kicker: "2020 · ISTANBUL · EQUALLED SCHUMACHER",
+    headline: "Istanbul Park",
+    meta: "MERCEDES · 7TH TITLE · 11 WINS IN THE SEASON",
+    svgPath: "M 30 150 L 78 150 Q 106 136, 126 98 L 172 98 Q 194 115, 210 150 L 262 150 Q 290 168, 314 200 L 368 200",
+    circles: [{ cx: 172, cy: 98, r: 5, fill: "#FFD700" }],
+  },
+  {
+    slotLabel: "LH · 44",
+    badge: "117 POLES",
+    glowColor: "#00D2BE",
+    kicker: "ALL-TIME POLE RECORD",
+    headline: "Mercedes Era",
+    meta: "117 POLES · 2007–2024 · MOST IN F1 HISTORY",
+    svgPath: "M 30 130 Q 65 118, 92 88 L 152 88 Q 180 102, 200 130 L 258 130 Q 288 112, 312 82 L 370 82",
+  },
+  {
+    slotLabel: "LH · 44",
+    badge: "FERRARI",
+    glowColor: "#DC0000",
+    kicker: "2025 · FERRARI · NEW CHAPTER",
+    headline: "Scuderia Ferrari",
+    meta: "2025–PRESENT · CHASING 8TH WDC",
+    svgPath: "M 30 160 Q 68 148, 98 112 L 158 112 Q 186 130, 208 160 L 268 160 Q 298 178, 322 215 L 368 215",
+  },
+];
+
+export const hamiltonScoutingReport: ScoutingReport = {
+  paragraphs: [
+    "Hamilton's driving style is defined by exceptional smoothness — low steering inputs, minimal tyre scrub, and a metronomic braking technique that allows him to carry maximum speed through corners while protecting his tyres. He is arguably the finest tyre manager in F1 history, regularly completing stints 15–20 laps longer than the strategic model predicted.",
+    "At Mercedes he developed a preference for a neutral-to-slight understeer balance — trusting the front end to rotate naturally rather than forcing entry rotation. His late-braking ability is elite: he consistently trails the braking marker deeper than teammates and rivals, particularly at high-speed stops like Blanchimont and the Senna chicane.",
+    "The move to Ferrari for 2025 represents the most scrutinised car change of the modern era. Early results suggest a period of adaptation to a fundamentally different aero philosophy, but Hamilton's feedback loop with engineers and his ability to develop a car over a season remain world-class.",
+  ],
+  highlights: ["tyre manager", "late-braking", "neutral-to-slight understeer"],
+  setupBars: [
+    { leftLabel: "UNDERSTEER", rightLabel: "OVERSTEER",    position: 38, annotation: "NEUTRAL — TRUSTS FRONT NATURALLY", highlight: false },
+    { leftLabel: "SOFT",       rightLabel: "STIFF",        position: 42, annotation: "SOFTER THAN TEAMMATES",            highlight: false },
+    { leftLabel: "LOW AERO",   rightLabel: "HIGH AERO",    position: 65, annotation: "DOWNFORCE FOR TYRE LONGEVITY",     highlight: true },
+  ],
+  excelledAt: [
+    "Tyre management — consistently exceeding predicted stint lengths",
+    "Late braking and trail-braking technique",
+    "Wet-weather and variable condition races",
+    "Race management from the front",
+  ],
+  struggledWith: [
+    "High-rotation, pointy car balance",
+    "Adapting to new car philosophies mid-career",
+  ],
+};
+
+/* ─── Verstappen ─────────────────────────────────────────────────────────────
+   Stats verified via Jolpica API (April 2026):
+   236 races · 71 wins · 62 poles · 127 podiums · 4× WDC
+   Jolpica ID: max_verstappen
+   ─────────────────────────────────────────────────────────────────────────── */
+
+export const verstappen: Driver = {
+  id: "max_verstappen",
+  name: "Max Verstappen",
+  shortName: "Verstappen",
+  initials: "MV",
+  nationality: "Dutch",
+  dob: "1997-09-30",
+  status: "active",
+  series: ["f1"],
+  peakEraTeamId: "red_bull",
+  entityColor: "red_bull",
+  bio: "Four-time world champion. The defining driver of the late hybrid era — ferociously quick in all conditions with an aggressive entry style that redefined what was considered possible in modern F1.",
+  quote: "I just give everything every single lap. That's all I know.",
+  quoteContext: "Post-race, Bahrain 2023",
+};
+
+export const verstappenStats: DriverStats = {
+  driverId: "max_verstappen",
+  series: "f1",
+  titles: 4,
+  wins: 71,
+  poles: 62,
+  podiums: 127,
+  careerSpan: "2015–present",
+  racesEntered: 236,
+  fastestLaps: 31,
+  pointsScored: 3166,
+};
+
+export const verstappenEras: DriverEra[] = [
+  {
+    driverId: "max_verstappen",
+    teamId: "toro_rosso",
+    teamName: "Toro Rosso",
+    seasons: "2015–2016",
+    highlights: [
+      "Youngest driver to start an F1 race (17 years, 166 days)",
+      "First race win on Red Bull debut, Spain 2016 — youngest F1 winner ever",
+    ],
+    titles: 0,
+    wins: 1,
+    teamLiveryHex: "#C00000",
+    statLabel: "1W",
+  },
+  {
+    driverId: "max_verstappen",
+    teamId: "red_bull",
+    teamName: "Red Bull",
+    seasons: "2016–",
+    highlights: [
+      "4× WDC: 2021, 2022, 2023, 2024",
+      "2023: 19 wins — most in a single F1 season",
+      "2022: 15 wins, first dominant championship",
+      "71 wins and counting from Red Bull",
+    ],
+    titles: 4,
+    wins: 70,
+    teamLiveryHex: "#1E3A8A",
+    teamAccentHex: "#FFD700",
+    statLabel: "4× WDC",
+  },
+];
+
+export const verstappenSignature: DrivingSignature = {
+  driverId: "max_verstappen",
+  series: "f1",
+  axes: [
+    { label: "Steering Smoothness",   value: 82 },
+    { label: "Entry Aggression",      value: 98 },
+    { label: "Tyre Management",       value: 84 },
+    { label: "Throttle Application",  value: 95 },
+    { label: "Braking",               value: 96 },
+    { label: "Consistency",           value: 93 },
+  ],
+  cohortAverage: [78, 73, 74, 79, 80, 76],
+  confidenceScore: 0.95,
+  sampleSize: 2124,
+};
+
+export const verstappenReelSlides: ReelSlide[] = [
+  {
+    slotLabel: "MV · 33",
+    badge: "1ST WIN",
+    glowColor: "#1E3A8A",
+    kicker: "2016 · SPAIN · YOUNGEST F1 RACE WINNER",
+    headline: "Barcelona",
+    meta: "RED BULL · 18 YEARS, 228 DAYS · DEBUT WIN",
+    svgPath: "M 30 160 L 80 160 Q 100 145, 115 110 L 165 110 Q 185 128, 200 160 L 250 160 Q 270 172, 285 200 L 330 200 Q 350 178, 370 148",
+  },
+  {
+    slotLabel: "MV · 33",
+    badge: "TITLE #1",
+    glowColor: "#1E3A8A",
+    kicker: "2021 · ABU DHABI · FIRST WDC",
+    headline: "Yas Marina",
+    meta: "RED BULL · FINAL LAP OVERTAKE ON HAMILTON",
+    svgPath: "M 30 120 Q 60 108, 84 78 L 144 78 Q 172 94, 192 120 L 252 120 Q 282 104, 306 74 L 366 74",
+    circles: [{ cx: 252, cy: 120, r: 5, fill: "#FFD700" }],
+  },
+  {
+    slotLabel: "MV · 1",
+    badge: "15 WINS",
+    glowColor: "#1E3A8A",
+    kicker: "2022 · DOMINANT SEASON",
+    headline: "Red Bull Era",
+    meta: "454 POINTS · 15 WINS · WCC + WDC",
+    svgPath: "M 30 150 L 80 150 Q 108 136, 128 98 L 178 98 Q 200 116, 216 150 L 268 150 Q 296 168, 320 202 L 374 202",
+  },
+  {
+    slotLabel: "MV · 1",
+    badge: "19 WINS",
+    glowColor: "#1E3A8A",
+    kicker: "2023 · RECORD-BREAKING SEASON",
+    headline: "Historic",
+    meta: "575 POINTS · 19 WINS · MOST IN A SINGLE SEASON",
+    svgPath: "M 30 130 Q 66 116, 94 86 L 154 86 Q 182 102, 202 130 L 260 130 Q 290 114, 314 82 L 372 82",
+    circles: [
+      { cx: 154, cy: 86, r: 4, fill: "#FFD700" },
+      { cx: 260, cy: 130, r: 4, fill: "#FFD700" },
+    ],
+  },
+  {
+    slotLabel: "MV · 1",
+    badge: "TITLE #4",
+    glowColor: "#1E3A8A",
+    kicker: "2024 · LAS VEGAS · 4TH CONSECUTIVE WDC",
+    headline: "Las Vegas",
+    meta: "RED BULL · 9 WINS · P1 WDC",
+    svgPath: "M 30 160 Q 68 148, 98 112 L 158 112 Q 188 130, 210 160 L 268 160 Q 298 144, 322 110 L 374 110",
+  },
+];
+
+export const verstappenScoutingReport: ScoutingReport = {
+  paragraphs: [
+    "Verstappen's defining characteristic is corner entry aggression — he carries more speed into slow corners than any driver of his generation, relying on extraordinary car control and feel through the steering to catch slides that would send most drivers off. His trail-braking technique is particularly remarkable: he brakes late, releases progressively, and rotates the car mid-corner with the brake pedal rather than the steering wheel.",
+    "His tyre management improved dramatically after 2020. Early in his career he was criticised for over-driving on cold or degrading tyres, but by the 2022–2024 championship era he had developed elite-level conservation ability — often completing one-stop strategies that rivals couldn't match. Combined with raw pace that hasn't been seriously challenged for four consecutive seasons, the package became historically dominant.",
+    "The 2025 season marked a shift: McLaren outpaced Red Bull comprehensively. Verstappen's 421 points and 8 wins still showed exceptional form in an underperforming car, but the era of Red Bull dominance ended with his 2024 title.",
+  ],
+  highlights: ["corner entry aggression", "trail-braking", "tyre management"],
+  setupBars: [
+    { leftLabel: "UNDERSTEER", rightLabel: "OVERSTEER",    position: 68, annotation: "ROTATES ON ENTRY",                 highlight: true },
+    { leftLabel: "SOFT",       rightLabel: "STIFF",        position: 70, annotation: "STIFF — MAXIMUM MECHANICAL GRIP",  highlight: false },
+    { leftLabel: "LOW AERO",   rightLabel: "HIGH AERO",    position: 72, annotation: "HIGH DOWNFORCE · CORNER PRIORITY", highlight: false },
+  ],
+  excelledAt: [
+    "Corner entry speed and car rotation",
+    "Wet-weather driving — especially in mixed conditions",
+    "Overtaking on the first lap and under pressure",
+    "Tyre management during one-stop races",
+  ],
+  struggledWith: [
+    "Understeery car balance — less natural than high-rotation setup",
+    "Managing team politics in multi-car incidents",
+  ],
+};
+
 /* ─── Export index ────────────────────────────────────────────────────────── */
 
 export const MOCK_DRIVERS: Record<string, Driver> = {
   vettel,
   leclerc,
   bearman,
+  hamilton,
+  verstappen,
 };

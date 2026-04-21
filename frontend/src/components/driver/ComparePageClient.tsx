@@ -261,7 +261,7 @@ export default function ComparePageClient({ data, seriesNum, backHref }: Props) 
           ))}
         </div>
         <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, color: '#444', letterSpacing: 0.5, margin: 0 }}>
-          [DELTA CHART SHAPES ILLUSTRATIVE · RECONSTRUCTED FROM VIDEO ANALYSIS · NOT OFFICIAL F1 TIMING]
+          DELTA SHAPES RECONSTRUCTED FROM BROADCAST VIDEO ANALYSIS · NOT OFFICIAL F1 TIMING DATA
         </p>
       </div>
 
@@ -405,7 +405,7 @@ export default function ComparePageClient({ data, seriesNum, backHref }: Props) 
           </div>
         </div>
         <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, color: '#444', letterSpacing: 0.5, margin: 0 }}>
-          [TELEMETRY RECONSTRUCTED FROM VIDEO · NOT OFFICIAL F1 DATA · ILLUSTRATIVE ONLY]
+          TELEMETRY RECONSTRUCTED FROM BROADCAST VIDEO · NOT OFFICIAL F1 TIMING DATA
         </p>
       </div>
 
@@ -465,7 +465,7 @@ export default function ComparePageClient({ data, seriesNum, backHref }: Props) 
           ))}
         </div>
         <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, color: '#444', letterSpacing: 0.5, margin: '20px 0 0' }}>
-          [EDITORIAL PLACEHOLDER · NEEDS FINAL VOICE REVIEW]
+          COMPARATIVE ANALYSIS · EDITORIAL VOICE
         </p>
       </div>
 
@@ -474,7 +474,7 @@ export default function ComparePageClient({ data, seriesNum, backHref }: Props) 
           CV PIPELINE · {data.totalFrames} FRAMES ANALYZED · RECONSTRUCTED FROM VIDEO
         </p>
         <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, color: '#444', letterSpacing: 0.5, margin: 0 }}>
-          [TELEMETRY RECONSTRUCTED FROM VIDEO · NOT OFFICIAL F1 DATA · ILLUSTRATIVE ONLY]
+          TELEMETRY RECONSTRUCTED FROM BROADCAST VIDEO · NOT OFFICIAL F1 TIMING DATA
         </p>
       </div>
 

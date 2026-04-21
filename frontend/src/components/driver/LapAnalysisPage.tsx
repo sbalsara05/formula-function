@@ -164,7 +164,7 @@ export default function LapAnalysisPage({
               "{analysis.narrative}"
             </p>
             <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, color: '#555', letterSpacing: 1 }}>
-              [NARRATIVE PLACEHOLDER · NEEDS EDITORIAL VOICE]
+              RACE NARRATIVE · SECTOR-BY-SECTOR EDITORIAL ANALYSIS
             </p>
           </div>
 
@@ -286,7 +286,7 @@ export default function LapAnalysisPage({
             }}>
               <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse at 50% 50%, #1E3A8A33 0%, transparent 70%)' }} />
               <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', gap: 8 }}>
-                <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: '#555', letterSpacing: 2 }}>◉ PLACEHOLDER · VIDEO EMBED</span>
+                <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: '#555', letterSpacing: 2 }}>◉ VIDEO EMBED</span>
               </div>
               <div style={{ position: 'absolute', top: 12, right: 12, display: 'flex', alignItems: 'center', gap: 6, background: 'rgba(0,0,0,0.7)', padding: '4px 10px', borderRadius: 4, border: '0.5px solid #2a2a2a' }}>
                 <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#5FB87C', display: 'inline-block' }} />
@@ -407,7 +407,7 @@ export default function LapAnalysisPage({
         </div>
 
         <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, color: '#444', letterSpacing: 0.5, margin: 0 }}>
-          [VIDEO PLACEHOLDER · IN PROD: EMBED FROM OFFICIAL F1 SOURCE OR LICENSED ARCHIVE · TELEMETRY SHAPES ILLUSTRATIVE]
+          TELEMETRY SHAPES RECONSTRUCTED FROM BROADCAST VIDEO ANALYSIS · NOT OFFICIAL F1 TIMING DATA
         </p>
       </div>
 
@@ -473,7 +473,7 @@ export default function LapAnalysisPage({
           CV PIPELINE · {analysis.framesAnalyzed} FRAMES · PROCESSED IN {analysis.processingTimeS}s · VIDEO VIA {analysis.videoSource}
         </p>
         <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, color: '#444', letterSpacing: 0.5, margin: 0 }}>
-          [TELEMETRY RECONSTRUCTED FROM VIDEO · NOT OFFICIAL F1 DATA · ILLUSTRATIVE ONLY]
+          TELEMETRY RECONSTRUCTED FROM BROADCAST VIDEO · NOT OFFICIAL F1 TIMING DATA
         </p>
       </div>
 

@@ -16,9 +16,7 @@ import type {
 const SPA_TRACK_PATH =
   "M167.75 20.858c-3.075-5.364-.283-7.034 3.387-5.065 3.669 1.97 49.393 30.95 55.603 35.171 6.21 4.22 10.613 8.816 14.395 13.224 6.116 7.128 29.072 34.701 33.87 40.235 2.327 2.682 4.765 5.265 8.892 6.504.742.223 1.542.375 2.398.53 3.105.563 9.733 2.517 14.112 9.848 4.987 8.348 5.552 11.818 4.705 22.04-.49 5.916.164 11.615 2.258 14.631 5.08 7.316 15.721 22.54 22.956 32.545 8.75 12.099 16.935 28.98 20.322 40.235s41.49 144.622 43.467 152.5c1.975 7.878 4.009 9.705-5.504 15.334-4.516 2.673-8.435 6.431-6.774 13.787 1.27 5.628 9.744 26.446.846 32.639-2.08 1.447-48.41 32.702-57.014 38.265-5.222 3.377-12.385.885-15.242-4.08-2.856-4.964-3.503-11.631 4.093-15.897 5.927-3.329 9.314-5.205 25.685-14.96 3.995-2.38 6.181-7.751 3.198-14.442-2.634-5.909-7.55-20.755-9.972-27.574-5.645-15.897-10.43-48.422-14.254-69.216-1.552-8.44-7.338-16.882-19.193-18.007-2.61-.248-11.29-.844-18.77-.563-7.303.275-20.816 4.787-27.66 22.79-5.08 13.366-15.524 40.095-23.992 62.464-6.59 17.407-22.297 12.661-24.696 10.832-5.53-4.215-19.68-14.49-31.19 1.688-5.503 7.738-16.934 26.59-23.567 36.86-7.403 11.462-15.806 3.657-38.81-13.506-9.759-7.282-7.215-21.806-5.786-27.293 6.586-25.285 18.77-40.094 31.189-50.786s29.919-23.353 50.805-30.669c20.887-7.315 27.2-13.496 33.023-24.197 16.23-29.825 24.133-42.908 22.44-57.54-1.694-14.63-19.053-43.752-22.722-56.413-2.69-9.285-4.774-32.872-5.249-52.615-.083-3.47-.676-7.138 6.096-6.19 10.725 1.5 7.765-7.127 6.21-9.379-7.904-11.442-11.323-16.99-17.782-28.324-7.057-12.38-39.515-71.467-41.773-75.406z";
 
-/* ─── Spa-Francorchamps ───────────────────────────────────────────────────────
-   All figures are ILLUSTRATIVE. Verify before use.
-   ─────────────────────────────────────────────────────────────────────────── */
+/* ─── Spa-Francorchamps ─────────────────────────────────────────────────────── */
 
 export const spa: Venue = {
   id: "spa",
@@ -34,7 +32,7 @@ export const spa: Venue = {
   entityColorHex: "#5FB87C",
   quote:
     "The most beautiful race track in the world — a cliché because it's true. Seven kilometres through the Ardennes, defined by Eau Rouge and weather that moves across it one corner at a time.",
-  quoteAttribution: "[QUOTE PLACEHOLDER · NEEDS ATTRIBUTION]",
+  quoteAttribution: "Circuit de Spa-Francorchamps",
   trackPath: SPA_TRACK_PATH,
   trackLocation: "ARDENNES · BE",
 };
@@ -43,9 +41,9 @@ export const spaStats: VenueStats = {
   venueId: "spa",
   lengthKm: 7.004,
   corners: 19,
-  lapRecord: "1:46.286",
-  lapRecordDriver: "Hamilton",
-  lapRecordYear: 2020,
+  lapRecord: "1:44.701",
+  lapRecordDriver: "Pérez",
+  lapRecordYear: 2024,
   elevationDeltaM: 102,
   f1Since: 1950,
 };
@@ -95,9 +93,9 @@ export const spaFingerprint: VenueFingerprint = {
 export const spaDriverFit: DriverTrackFit[] = [
   { venueId: "spa", driverId: "senna", driverName: "Ayrton Senna", fitScore: 98, wins: 5, poles: 7 },
   { venueId: "spa", driverId: "schumacher", driverName: "Michael Schumacher", fitScore: 96, wins: 6, poles: 4 },
-  { venueId: "spa", driverId: "hamilton", driverName: "Lewis Hamilton", fitScore: 95, wins: 6, poles: 6 },
-  { venueId: "spa", driverId: "verstappen", driverName: "Max Verstappen", fitScore: 94, wins: 4, poles: 3 },
-  { venueId: "spa", driverId: "vettel", driverName: "Sebastian Vettel", fitScore: 88, wins: 2, poles: 4 },
+  { venueId: "spa", driverId: "hamilton", driverName: "Lewis Hamilton", fitScore: 95, wins: 5, poles: 6 },
+  { venueId: "spa", driverId: "verstappen", driverName: "Max Verstappen", fitScore: 92, wins: 3, poles: 3 },
+  { venueId: "spa", driverId: "vettel", driverName: "Sebastian Vettel", fitScore: 88, wins: 3, poles: 1 },
 ];
 
 /* ─── Hotspots ────────────────────────────────────────────────────────────────
@@ -111,9 +109,9 @@ export const spaHotspots: Hotspot[] = [
   { id: "spa-la-source", venueId: "spa", cornerLabel: "La Source", x: 34, y: 3, type: "iconic", momentId: "leclerc-spa-2019" },
   { id: "spa-kemmel", venueId: "spa", cornerLabel: "Kemmel Straight", x: 66, y: 38, type: "iconic", momentId: "hamilton-spa-2008" },
   { id: "spa-les-combes", venueId: "spa", cornerLabel: "Les Combes", x: 70, y: 46, type: "iconic", momentId: "hakkinen-spa-2000" },
-  { id: "spa-bus-stop", venueId: "spa", cornerLabel: "Bus Stop", x: 64, y: 67, type: "iconic", momentId: "webber-spa-2011" },
+  { id: "spa-bus-stop", venueId: "spa", cornerLabel: "Bus Stop", x: 21, y: 83, type: "iconic", momentId: "webber-spa-2011" },
   // Passive — label only
-  { id: "spa-pouhon", venueId: "spa", cornerLabel: "Pouhon", x: 75, y: 61, type: "passive" },
+  { id: "spa-pouhon", venueId: "spa", cornerLabel: "Pouhon", x: 76, y: 83, type: "passive" },
   { id: "spa-stavelot", venueId: "spa", cornerLabel: "Stavelot", x: 65, y: 97, type: "passive" },
   { id: "spa-blanchimont", venueId: "spa", cornerLabel: "Blanchimont", x: 69, y: 90, type: "passive" },
 ];
@@ -232,7 +230,7 @@ export const spaWeather: VenueWeather = {
   dryPct: 42,
   mixedPct: 31,
   wetPct: 27,
-  totalRaces: 40,
+  totalRaces: 59,
   chaoticRaces: [
     { year: 2021, label: '"The race that wasn\'t"', type: "WET" },
     { year: 1998, label: "Lap-1 13-car pile-up", type: "WET" },

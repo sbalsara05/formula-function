@@ -4,12 +4,18 @@ import PremaPage from '@/components/team/PremaPage'
 import {
   ferrari, ferrariStats, ferrariEras, ferrariSignatureBars,
   ferrariReelSlides, ferrariAcademy, ferrariIconicCars,
+  redbull, redbullStats, redbullEras, redbullSignatureBars,
+  redbullReelSlides, redbullAcademy, redbullIconicCars, redbullKeyMoments,
+  mclaren, mclarenStats, mclarenEras, mclarenSignatureBars,
+  mclarenReelSlides, mclarenAcademy, mclarenIconicCars,
+  mercedes, mercedesStats, mercedesEras, mercedesSignatureBars,
+  mercedesReelSlides, mercedesAcademy, mercedesIconicCars,
   prema, premaStats, premaReelSlides, premaSignatureBars,
   premaGraduates, premaCurrentSeason,
 } from '@/data/mock/teams'
 import type {
   Series, Team, TeamStats, TeamEngineeringEra, TeamSignatureBar,
-  TeamAcademyDriver, TeamIconicCar, ReelSlide, TeamLivery,
+  TeamAcademyDriver, TeamIconicCar, TeamKeyMoment, ReelSlide, TeamLivery,
 } from '@/lib/types'
 
 const SERIES_MAP: Record<string, Series> = {
@@ -26,6 +32,10 @@ interface TeamBundle {
   reelSlides: ReelSlide[]
   academy: TeamAcademyDriver[]
   iconicCars: TeamIconicCar[]
+  keyMoments?: TeamKeyMoment[]
+  academyTitle?: string
+  academySubtitle?: string
+  academyDescription?: string
 }
 
 const TEAM_REGISTRY: Partial<Record<Series, Record<string, TeamBundle>>> = {
@@ -38,6 +48,46 @@ const TEAM_REGISTRY: Partial<Record<Series, Record<string, TeamBundle>>> = {
       reelSlides: ferrariReelSlides,
       academy: ferrariAcademy,
       iconicCars: ferrariIconicCars,
+      academyTitle: 'DRIVER ACADEMY · FDA',
+      academySubtitle: 'PIPELINE · 2026',
+      academyDescription: 'Ferrari Driver Academy founded 2009. Graduates include Leclerc, Bearman, and Mick Schumacher. Current pipeline: Beganovic (F2), Câmara (F3), Taponen (F3).',
+    },
+    'red-bull': {
+      team: redbull,
+      stats: redbullStats,
+      eras: redbullEras,
+      signatureBars: redbullSignatureBars,
+      reelSlides: redbullReelSlides,
+      academy: redbullAcademy,
+      iconicCars: redbullIconicCars,
+      keyMoments: redbullKeyMoments,
+      academyTitle: 'DRIVER ACADEMY · RBJ',
+      academySubtitle: 'PIPELINE · 2026',
+      academyDescription: 'Red Bull Junior Team has produced four World Champions. Verstappen, Vettel, Ricciardo, and Gasly all passed through the programme. Hadjar and Lindblad are the latest graduates into F1.',
+    },
+    mclaren: {
+      team: mclaren,
+      stats: mclarenStats,
+      eras: mclarenEras,
+      signatureBars: mclarenSignatureBars,
+      reelSlides: mclarenReelSlides,
+      academy: mclarenAcademy,
+      iconicCars: mclarenIconicCars,
+      academyTitle: 'DRIVER ACADEMY · MCA',
+      academySubtitle: 'PIPELINE · 2026',
+      academyDescription: 'McLaren Automotive young driver programme backed Norris and Piastri through the junior ranks. Ugochukwu leads the current F2 pipeline.',
+    },
+    mercedes: {
+      team: mercedes,
+      stats: mercedesStats,
+      eras: mercedesEras,
+      signatureBars: mercedesSignatureBars,
+      reelSlides: mercedesReelSlides,
+      academy: mercedesAcademy,
+      iconicCars: mercedesIconicCars,
+      academyTitle: 'DRIVER ACADEMY · MAF',
+      academySubtitle: 'PIPELINE · 2025',
+      academyDescription: 'Mercedes-AMG F1 junior programme produced Kimi Antonelli (F1 2025) and continues to develop talent across F2 and the wider feeder series pyramid.',
     },
   },
 }
@@ -45,70 +95,154 @@ const TEAM_REGISTRY: Partial<Record<Series, Record<string, TeamBundle>>> = {
 /* ─── Slug → Jolpica constructor ID ──────────────────────────────────────── */
 
 const SLUG_TO_JOLPICA: Record<string, string> = {
+  // Current 2026 grid
   ferrari: 'ferrari', mclaren: 'mclaren', mercedes: 'mercedes',
   'red-bull': 'red_bull', williams: 'williams', 'aston-martin': 'aston_martin',
   alpine: 'alpine', haas: 'haas', sauber: 'sauber', rb: 'rb',
-  'kick-sauber': 'sauber', 'racing-bulls': 'rb',
-  lotus: 'lotus', tyrrell: 'tyrrell', brabham: 'brabham', benetton: 'benetton',
-  renault: 'renault', brawn: 'brawn', jordan: 'jordan',
+  'kick-sauber': 'sauber', 'racing-bulls': 'rb', cadillac: 'cadillac',
+  // 2000s–2020s
+  alphatauri: 'alphatauri', 'alpha-tauri': 'alphatauri',
+  'bmw-sauber': 'bmw_sauber', bmwsauber: 'bmw_sauber',
+  'super-aguri': 'super_aguri', 'super-aguri-f1': 'super_aguri',
+  hrt: 'hrt', caterham: 'caterham', marussia: 'marussia',
+  manor: 'manor', virgin: 'virgin', 'virgin-racing': 'virgin',
+  'lotus-f1': 'lotus_f1', 'lotus-racing': 'lotus_racing',
+  spyker: 'spyker',
+  // 1990s
+  jordan: 'jordan', stewart: 'stewart', prost: 'prost',
   'force-india': 'force_india', 'racing-point': 'racing_point',
   'alfa-romeo': 'alfa_romeo', 'toro-rosso': 'toro_rosso', minardi: 'minardi',
   bar: 'bar', jaguar: 'jaguar', honda: 'honda', toyota: 'toyota',
-  cooper: 'cooper', matra: 'matra', march: 'march', wolf: 'wolf',
-  ligier: 'ligier', arrows: 'arrows', maserati: 'maserati', vanwall: 'vanwall',
-  brm: 'brm', lancia: 'lancia', stewart: 'stewart', prost: 'prost',
-  'super-aguri': 'super_aguri', hrt: 'hrt', caterham: 'caterham', marussia: 'marussia',
+  arrows: 'arrows', footwork: 'footwork',
+  dallara: 'dallara', pacific: 'pacific', simtek: 'simtek',
+  forti: 'forti', coloni: 'coloni', rial: 'rial', onyx: 'onyx',
+  eurobrun: 'eurobrun', moda: 'moda', 'andrea-moda': 'moda',
+  // 1980s
+  benetton: 'benetton', renault: 'renault', brawn: 'brawn',
+  toleman: 'toleman', zakspeed: 'zakspeed', ags: 'ags', osella: 'osella',
+  life: 'life', ram: 'ram', spirit: 'spirit',
+  larrousse: 'larrousse', 'leyton-house': 'leyton', leyton: 'leyton',
+  // 1970s
+  ligier: 'ligier', wolf: 'wolf', fittipaldi: 'fittipaldi',
+  hesketh: 'hesketh', shadow: 'shadow', surtees: 'surtees',
+  ensign: 'ensign', penske: 'penske', lola: 'lola',
+  'iso-marlboro': 'iso_marlboro', merzario: 'merzario', theodore: 'theodore',
+  // 1960s
+  march: 'march', brabham: 'brabham', tyrrell: 'tyrrell',
+  eagle: 'eagle-weslake', matra: 'matra',
+  // Historical champions
+  lotus: 'team_lotus', 'team-lotus': 'team_lotus',
+  cooper: 'cooper', brm: 'brm', vanwall: 'vanwall',
+  lancia: 'lancia', maserati: 'maserati',
+  gordini: 'gordini',
 }
 
 /* ─── Static meta: display name, short name, color, nationality ───────────── */
 
-const TEAM_META: Record<string, { name: string; short: string; color: string; nat: string }> = {
-  ferrari:       { name: 'Scuderia Ferrari',          short: 'Ferrari',       color: '#DC0000', nat: 'Italian' },
-  mclaren:       { name: 'McLaren',                   short: 'McLaren',       color: '#FF8000', nat: 'British' },
-  mercedes:      { name: 'Mercedes-AMG Petronas',     short: 'Mercedes',      color: '#00D2BE', nat: 'German' },
-  red_bull:      { name: 'Red Bull Racing',           short: 'Red Bull',      color: '#1E3A8A', nat: 'Austrian' },
-  williams:      { name: 'Williams Racing',           short: 'Williams',      color: '#005AFF', nat: 'British' },
-  aston_martin:  { name: 'Aston Martin',              short: 'Aston Martin',  color: '#006F62', nat: 'British' },
-  alpine:        { name: 'Alpine F1 Team',            short: 'Alpine',        color: '#0090FF', nat: 'French' },
-  haas:          { name: 'Haas F1 Team',              short: 'Haas',          color: '#B6BABD', nat: 'American' },
-  sauber:        { name: 'Kick Sauber',               short: 'Sauber',        color: '#52E252', nat: 'Swiss' },
-  rb:            { name: 'Racing Bulls',              short: 'Racing Bulls',  color: '#6692FF', nat: 'Italian' },
-  lotus:         { name: 'Team Lotus',                short: 'Lotus',         color: '#FFD700', nat: 'British' },
-  tyrrell:       { name: 'Tyrrell Racing',            short: 'Tyrrell',       color: '#1565C0', nat: 'British' },
-  brabham:       { name: 'Brabham',                   short: 'Brabham',       color: '#4A90D9', nat: 'British' },
-  benetton:      { name: 'Benetton Formula',          short: 'Benetton',      color: '#009944', nat: 'British' },
-  renault:       { name: 'Renault F1 Team',           short: 'Renault',       color: '#FFD700', nat: 'French' },
-  brawn:         { name: 'Brawn GP',                  short: 'Brawn',         color: '#BFFF00', nat: 'British' },
-  jordan:        { name: 'Jordan Grand Prix',         short: 'Jordan',        color: '#FFD700', nat: 'Irish' },
-  force_india:   { name: 'Force India',               short: 'Force India',   color: '#FF80C7', nat: 'Indian' },
-  racing_point:  { name: 'Racing Point',              short: 'Racing Point',  color: '#FF80C7', nat: 'British' },
-  alfa_romeo:    { name: 'Alfa Romeo Racing',         short: 'Alfa Romeo',    color: '#900000', nat: 'Swiss' },
-  toro_rosso:    { name: 'Scuderia Toro Rosso',       short: 'Toro Rosso',    color: '#C00000', nat: 'Italian' },
-  minardi:       { name: 'Minardi',                   short: 'Minardi',       color: '#333333', nat: 'Italian' },
-  bar:           { name: 'BAR',                       short: 'BAR',           color: '#800080', nat: 'British' },
-  jaguar:        { name: 'Jaguar Racing',             short: 'Jaguar',        color: '#006600', nat: 'British' },
-  honda:         { name: 'Honda Racing F1',           short: 'Honda',         color: '#999999', nat: 'Japanese' },
-  toyota:        { name: 'Toyota F1',                 short: 'Toyota',        color: '#CC0000', nat: 'Japanese' },
-  cooper:        { name: 'Cooper',                    short: 'Cooper',        color: '#2E7D32', nat: 'British' },
-  matra:         { name: 'Matra',                     short: 'Matra',         color: '#1565C0', nat: 'French' },
-  brm:           { name: 'BRM',                       short: 'BRM',           color: '#1B5E20', nat: 'British' },
-  maserati:      { name: 'Maserati',                  short: 'Maserati',      color: '#1A3A5C', nat: 'Italian' },
-  vanwall:       { name: 'Vanwall',                   short: 'Vanwall',       color: '#006400', nat: 'British' },
-  march:         { name: 'March',                     short: 'March',         color: '#CC0000', nat: 'British' },
-  wolf:          { name: 'Wolf',                      short: 'Wolf',          color: '#8B0000', nat: 'Canadian' },
-  ligier:        { name: 'Ligier',                    short: 'Ligier',        color: '#003399', nat: 'French' },
-  arrows:        { name: 'Arrows',                    short: 'Arrows',        color: '#FF6600', nat: 'British' },
-  stewart:       { name: 'Stewart Grand Prix',        short: 'Stewart',       color: '#FFFFFF', nat: 'British' },
-  prost:         { name: 'Prost Grand Prix',          short: 'Prost',         color: '#003399', nat: 'French' },
+// wcc/wdc = historical titles (hardcoded — Jolpica multi-season standings endpoint is broken)
+// founded = first F1 season as a constructor
+const TEAM_META: Record<string, { name: string; short: string; color: string; nat: string; wcc: number; wdc: number; founded: number }> = {
+  // ── Current 2026 grid ─────────────────────────────────────────────────────
+  ferrari:       { name: 'Scuderia Ferrari',          short: 'Ferrari',       color: '#DC0000', nat: 'Italian',   wcc: 16, wdc: 15, founded: 1950 },
+  mclaren:       { name: 'McLaren',                   short: 'McLaren',       color: '#FF8000', nat: 'British',   wcc: 10, wdc: 13, founded: 1966 },
+  mercedes:      { name: 'Mercedes-AMG Petronas',     short: 'Mercedes',      color: '#00D2BE', nat: 'German',    wcc:  8, wdc:  7, founded: 2010 },
+  red_bull:      { name: 'Red Bull Racing',           short: 'Red Bull',      color: '#1E3A8A', nat: 'Austrian',  wcc:  6, wdc:  8, founded: 2005 },
+  williams:      { name: 'Williams Racing',           short: 'Williams',      color: '#005AFF', nat: 'British',   wcc:  9, wdc:  7, founded: 1975 },
+  aston_martin:  { name: 'Aston Martin',              short: 'Aston Martin',  color: '#006F62', nat: 'British',   wcc:  0, wdc:  0, founded: 2021 },
+  alpine:        { name: 'Alpine F1 Team',            short: 'Alpine',        color: '#0090FF', nat: 'French',    wcc:  0, wdc:  0, founded: 2021 },
+  haas:          { name: 'Haas F1 Team',              short: 'Haas',          color: '#B6BABD', nat: 'American',  wcc:  0, wdc:  0, founded: 2016 },
+  sauber:        { name: 'Kick Sauber',               short: 'Sauber',        color: '#52E252', nat: 'Swiss',     wcc:  0, wdc:  0, founded: 1993 },
+  rb:            { name: 'Racing Bulls',              short: 'Racing Bulls',  color: '#6692FF', nat: 'Italian',   wcc:  0, wdc:  0, founded: 2006 },
+  cadillac:      { name: 'Cadillac F1 Team',          short: 'Cadillac',      color: '#C8A96E', nat: 'American',  wcc:  0, wdc:  0, founded: 2026 },
+  // ── 2000s–2020s ────────────────────────────────────────────────────────────
+  alphatauri:    { name: 'Scuderia AlphaTauri',       short: 'AlphaTauri',    color: '#2B4998', nat: 'Italian',   wcc:  0, wdc:  0, founded: 2020 },
+  bmw_sauber:    { name: 'BMW Sauber F1',             short: 'BMW Sauber',    color: '#1E90FF', nat: 'German',    wcc:  0, wdc:  0, founded: 2006 },
+  super_aguri:   { name: 'Super Aguri F1',            short: 'Super Aguri',   color: '#CC0000', nat: 'Japanese',  wcc:  0, wdc:  0, founded: 2006 },
+  hrt:           { name: 'HRT F1 Team',               short: 'HRT',           color: '#666666', nat: 'Spanish',   wcc:  0, wdc:  0, founded: 2010 },
+  caterham:      { name: 'Caterham F1 Team',          short: 'Caterham',      color: '#004225', nat: 'British',   wcc:  0, wdc:  0, founded: 2012 },
+  marussia:      { name: 'Marussia F1 Team',          short: 'Marussia',      color: '#CC0000', nat: 'British',   wcc:  0, wdc:  0, founded: 2012 },
+  manor:         { name: 'Manor Marussia F1',         short: 'Manor',         color: '#CC0000', nat: 'British',   wcc:  0, wdc:  0, founded: 2015 },
+  virgin:        { name: 'Virgin Racing',             short: 'Virgin',        color: '#CC0000', nat: 'British',   wcc:  0, wdc:  0, founded: 2010 },
+  lotus_f1:      { name: 'Lotus F1 Team',             short: 'Lotus F1',      color: '#FFD700', nat: 'British',   wcc:  0, wdc:  0, founded: 2012 },
+  lotus_racing:  { name: 'Lotus Racing',              short: 'Lotus Racing',  color: '#FFD700', nat: 'British',   wcc:  0, wdc:  0, founded: 2010 },
+  spyker:        { name: 'Spyker F1',                 short: 'Spyker',        color: '#FF6600', nat: 'Dutch',     wcc:  0, wdc:  0, founded: 2007 },
+  force_india:   { name: 'Force India',               short: 'Force India',   color: '#FF80C7', nat: 'Indian',    wcc:  0, wdc:  0, founded: 2008 },
+  racing_point:  { name: 'Racing Point',              short: 'Racing Point',  color: '#FF80C7', nat: 'British',   wcc:  0, wdc:  0, founded: 2019 },
+  alfa_romeo:    { name: 'Alfa Romeo Racing',         short: 'Alfa Romeo',    color: '#900000', nat: 'Swiss',     wcc:  0, wdc:  0, founded: 2019 },
+  toro_rosso:    { name: 'Scuderia Toro Rosso',       short: 'Toro Rosso',    color: '#C00000', nat: 'Italian',   wcc:  0, wdc:  0, founded: 2006 },
+  // ── 1990s ─────────────────────────────────────────────────────────────────
+  jordan:        { name: 'Jordan Grand Prix',         short: 'Jordan',        color: '#FFD700', nat: 'Irish',     wcc:  0, wdc:  0, founded: 1991 },
+  stewart:       { name: 'Stewart Grand Prix',        short: 'Stewart',       color: '#DDDDDD', nat: 'British',   wcc:  0, wdc:  0, founded: 1997 },
+  prost:         { name: 'Prost Grand Prix',          short: 'Prost',         color: '#003399', nat: 'French',    wcc:  0, wdc:  0, founded: 1997 },
+  bar:           { name: 'BAR',                       short: 'BAR',           color: '#800080', nat: 'British',   wcc:  0, wdc:  0, founded: 1999 },
+  jaguar:        { name: 'Jaguar Racing',             short: 'Jaguar',        color: '#006600', nat: 'British',   wcc:  0, wdc:  0, founded: 2000 },
+  honda:         { name: 'Honda Racing F1',           short: 'Honda',         color: '#999999', nat: 'Japanese',  wcc:  0, wdc:  0, founded: 2006 },
+  toyota:        { name: 'Toyota F1',                 short: 'Toyota',        color: '#CC0000', nat: 'Japanese',  wcc:  0, wdc:  0, founded: 2002 },
+  minardi:       { name: 'Minardi',                   short: 'Minardi',       color: '#222222', nat: 'Italian',   wcc:  0, wdc:  0, founded: 1985 },
+  arrows:        { name: 'Arrows',                    short: 'Arrows',        color: '#FF6600', nat: 'British',   wcc:  0, wdc:  0, founded: 1978 },
+  footwork:      { name: 'Footwork Arrows',           short: 'Footwork',      color: '#FF6600', nat: 'British',   wcc:  0, wdc:  0, founded: 1991 },
+  dallara:       { name: 'Scuderia Italia',           short: 'Dallara',       color: '#003366', nat: 'Italian',   wcc:  0, wdc:  0, founded: 1988 },
+  pacific:       { name: 'Pacific Grand Prix',        short: 'Pacific',       color: '#004488', nat: 'British',   wcc:  0, wdc:  0, founded: 1994 },
+  simtek:        { name: 'Simtek Grand Prix',         short: 'Simtek',        color: '#444444', nat: 'British',   wcc:  0, wdc:  0, founded: 1994 },
+  forti:         { name: 'Forti Corse',               short: 'Forti',         color: '#FFCC00', nat: 'Italian',   wcc:  0, wdc:  0, founded: 1995 },
+  coloni:        { name: 'Coloni',                    short: 'Coloni',        color: '#CC0000', nat: 'Italian',   wcc:  0, wdc:  0, founded: 1987 },
+  rial:          { name: 'Rial Racing',               short: 'Rial',          color: '#444444', nat: 'German',    wcc:  0, wdc:  0, founded: 1988 },
+  onyx:          { name: 'Onyx Grand Prix',           short: 'Onyx',          color: '#336699', nat: 'British',   wcc:  0, wdc:  0, founded: 1989 },
+  eurobrun:      { name: 'EuroBrun Racing',           short: 'EuroBrun',      color: '#CC0000', nat: 'Italian',   wcc:  0, wdc:  0, founded: 1988 },
+  moda:          { name: 'Andrea Moda Formula',       short: 'Moda',          color: '#222222', nat: 'Italian',   wcc:  0, wdc:  0, founded: 1992 },
+  // ── 1980s ─────────────────────────────────────────────────────────────────
+  benetton:      { name: 'Benetton Formula',          short: 'Benetton',      color: '#009944', nat: 'British',   wcc:  1, wdc:  2, founded: 1986 },
+  renault:       { name: 'Renault F1 Team',           short: 'Renault',       color: '#FFD700', nat: 'French',    wcc:  2, wdc:  2, founded: 2002 },
+  brawn:         { name: 'Brawn GP',                  short: 'Brawn',         color: '#BFFF00', nat: 'British',   wcc:  1, wdc:  1, founded: 2009 },
+  toleman:       { name: 'Toleman Motorsport',        short: 'Toleman',       color: '#CC0000', nat: 'British',   wcc:  0, wdc:  0, founded: 1981 },
+  zakspeed:      { name: 'Zakspeed',                  short: 'Zakspeed',      color: '#CC0000', nat: 'German',    wcc:  0, wdc:  0, founded: 1985 },
+  ags:           { name: 'AGS',                       short: 'AGS',           color: '#555555', nat: 'French',    wcc:  0, wdc:  0, founded: 1986 },
+  osella:        { name: 'Osella Squadra Corse',      short: 'Osella',        color: '#0033AA', nat: 'Italian',   wcc:  0, wdc:  0, founded: 1980 },
+  life:          { name: 'Life Racing Engines',       short: 'Life',          color: '#333333', nat: 'Italian',   wcc:  0, wdc:  0, founded: 1990 },
+  ram:           { name: 'RAM Racing',                short: 'RAM',           color: '#CC0000', nat: 'British',   wcc:  0, wdc:  0, founded: 1983 },
+  spirit:        { name: 'Spirit Racing',             short: 'Spirit',        color: '#CC0000', nat: 'British',   wcc:  0, wdc:  0, founded: 1983 },
+  leyton:        { name: 'Leyton House Racing',       short: 'Leyton House',  color: '#00AACC', nat: 'British',   wcc:  0, wdc:  0, founded: 1987 },
+  larrousse:     { name: 'Larrousse F1',              short: 'Larrousse',     color: '#FFCC00', nat: 'French',    wcc:  0, wdc:  0, founded: 1987 },
+  // ── 1970s ─────────────────────────────────────────────────────────────────
+  ligier:        { name: 'Ligier',                    short: 'Ligier',        color: '#003399', nat: 'French',    wcc:  0, wdc:  0, founded: 1976 },
+  wolf:          { name: 'Wolf Racing',               short: 'Wolf',          color: '#8B0000', nat: 'Canadian',  wcc:  0, wdc:  1, founded: 1977 },
+  fittipaldi:    { name: 'Fittipaldi Automotive',     short: 'Fittipaldi',    color: '#006600', nat: 'Brazilian', wcc:  0, wdc:  0, founded: 1975 },
+  hesketh:       { name: 'Hesketh Racing',            short: 'Hesketh',       color: '#DDDDDD', nat: 'British',   wcc:  0, wdc:  0, founded: 1974 },
+  shadow:        { name: 'Shadow Racing Cars',        short: 'Shadow',        color: '#222222', nat: 'British',   wcc:  0, wdc:  0, founded: 1973 },
+  surtees:       { name: 'Team Surtees',              short: 'Surtees',       color: '#CC6600', nat: 'British',   wcc:  0, wdc:  0, founded: 1970 },
+  ensign:        { name: 'Ensign Racing',             short: 'Ensign',        color: '#0033AA', nat: 'British',   wcc:  0, wdc:  0, founded: 1973 },
+  penske:        { name: 'Penske Racing',             short: 'Penske',        color: '#003399', nat: 'American',  wcc:  0, wdc:  0, founded: 1974 },
+  lola:          { name: 'Lola Cars',                 short: 'Lola',          color: '#555555', nat: 'British',   wcc:  0, wdc:  0, founded: 1962 },
+  iso_marlboro:  { name: 'Iso Marlboro',              short: 'Iso Marlboro',  color: '#CC0000', nat: 'British',   wcc:  0, wdc:  0, founded: 1973 },
+  merzario:      { name: 'Merzario',                  short: 'Merzario',      color: '#CC0000', nat: 'Italian',   wcc:  0, wdc:  0, founded: 1978 },
+  theodore:      { name: 'Theodore Racing',           short: 'Theodore',      color: '#CC0000', nat: 'British',   wcc:  0, wdc:  0, founded: 1978 },
+  march:         { name: 'March Engineering',         short: 'March',         color: '#CC0000', nat: 'British',   wcc:  0, wdc:  0, founded: 1970 },
+  // ── Historical champions ──────────────────────────────────────────────────
+  team_lotus:    { name: 'Team Lotus',                short: 'Lotus',         color: '#FFD700', nat: 'British',   wcc:  7, wdc:  6, founded: 1958 },
+  tyrrell:       { name: 'Tyrrell Racing',            short: 'Tyrrell',       color: '#1565C0', nat: 'British',   wcc:  1, wdc:  1, founded: 1970 },
+  brabham:       { name: 'Brabham',                   short: 'Brabham',       color: '#4A90D9', nat: 'British',   wcc:  2, wdc:  2, founded: 1962 },
+  matra:         { name: 'Matra',                     short: 'Matra',         color: '#1565C0', nat: 'French',    wcc:  1, wdc:  1, founded: 1966 },
+  cooper:        { name: 'Cooper',                    short: 'Cooper',        color: '#2E7D32', nat: 'British',   wcc:  2, wdc:  2, founded: 1950 },
+  brm:           { name: 'BRM',                       short: 'BRM',           color: '#1B5E20', nat: 'British',   wcc:  1, wdc:  1, founded: 1951 },
+  vanwall:       { name: 'Vanwall',                   short: 'Vanwall',       color: '#006400', nat: 'British',   wcc:  1, wdc:  0, founded: 1954 },
+  lancia:        { name: 'Lancia',                    short: 'Lancia',        color: '#003399', nat: 'Italian',   wcc:  0, wdc:  0, founded: 1954 },
+  maserati:      { name: 'Maserati',                  short: 'Maserati',      color: '#1A3A5C', nat: 'Italian',   wcc:  0, wdc:  0, founded: 1950 },
+  gordini:       { name: 'Gordini',                   short: 'Gordini',       color: '#003399', nat: 'French',    wcc:  0, wdc:  0, founded: 1950 },
+  'eagle-weslake': { name: 'Eagle',                   short: 'Eagle',         color: '#003366', nat: 'American',  wcc:  0, wdc:  0, founded: 1966 },
 }
 
 /* ─── Jolpica helpers ─────────────────────────────────────────────────────── */
 
 async function jolpicaTotal(url: string): Promise<number> {
-  const res = await fetch(url, { next: { revalidate: 86400 } })
-  if (!res.ok) throw new Error(`HTTP ${res.status}`)
-  const d = await res.json()
-  return parseInt(d?.MRData?.total ?? '0', 10)
+  try {
+    const res = await fetch(url, { next: { revalidate: 86400 } })
+    if (!res.ok) return 0
+    const d = await res.json()
+    if (!d?.MRData) return 0
+    return parseInt(d.MRData.total ?? '0', 10)
+  } catch {
+    return 0
+  }
 }
 
 interface FullTeamStats {
@@ -119,6 +253,13 @@ interface FullTeamStats {
   driverTitles: number
   wccTitles: number
   seasons: number
+}
+
+interface RaceStats {
+  races: number
+  wins: number
+  podiums: number
+  poles: number
 }
 
 interface TeamSeasonResult {
@@ -136,23 +277,16 @@ interface GenericTeamDriver {
   permanentNumber?: string
 }
 
-async function fetchFullTeamStats(jolpicaId: string): Promise<FullTeamStats | null> {
+async function fetchRaceStats(jolpicaId: string): Promise<RaceStats> {
   const base = `https://api.jolpi.ca/ergast/f1/constructors/${jolpicaId}`
-  try {
-    const [races, wins, p2, p3, poles, driverTitles, wcc, seasons] = await Promise.all([
-      jolpicaTotal(`${base}/results.json?limit=1`),
-      jolpicaTotal(`${base}/results/1.json?limit=1`),
-      jolpicaTotal(`${base}/results/2.json?limit=1`),
-      jolpicaTotal(`${base}/results/3.json?limit=1`),
-      jolpicaTotal(`${base}/qualifying/1.json?limit=1`),
-      jolpicaTotal(`${base}/driverstandings/1.json?limit=1`),
-      jolpicaTotal(`${base}/constructorstandings/1.json?limit=1`),
-      jolpicaTotal(`${base}/seasons.json?limit=1`),
-    ])
-    return { races, wins, podiums: wins + p2 + p3, poles, driverTitles, wccTitles: wcc, seasons }
-  } catch {
-    return null
-  }
+  const [races, wins, p2, p3, poles] = await Promise.all([
+    jolpicaTotal(`${base}/results.json?limit=1`),
+    jolpicaTotal(`${base}/results/1.json?limit=1`),
+    jolpicaTotal(`${base}/results/2.json?limit=1`),
+    jolpicaTotal(`${base}/results/3.json?limit=1`),
+    jolpicaTotal(`${base}/qualifying/1.json?limit=1`),
+  ])
+  return { races, wins, podiums: wins + p2 + p3, poles }
 }
 
 async function fetchCurrentStandings(): Promise<{
@@ -189,25 +323,66 @@ async function fetchCurrentDrivers(jolpicaId: string): Promise<GenericTeamDriver
   } catch { return [] }
 }
 
-async function fetchTeamSeasonHistory(jolpicaId: string): Promise<TeamSeasonResult[]> {
+interface SeasonHistoryResult {
+  history: TeamSeasonResult[]
+  totalSeasons: number
+  firstSeason: number
+}
+
+async function fetchTeamSeasonHistory(jolpicaId: string): Promise<SeasonHistoryResult> {
   try {
-    const res = await fetch(
-      `https://api.jolpi.ca/ergast/f1/constructors/${jolpicaId}/constructorstandings.json?limit=100`,
+    // Jolpica broke the multi-season endpoint — fetch seasons list then per-year standings
+    const seasonsRes = await fetch(
+      `https://api.jolpi.ca/ergast/f1/constructors/${jolpicaId}/seasons.json?limit=100`,
       { next: { revalidate: 86400 } },
     )
-    if (!res.ok) return []
-    const data = await res.json()
-    const lists: Array<Record<string, unknown>> = data?.MRData?.StandingsTable?.StandingsLists ?? []
-    return lists.map(l => {
-      const s = (l.ConstructorStandings as Array<Record<string, string>>)?.[0]
-      return {
-        season: parseInt(l.season as string),
-        position: parseInt(s?.position ?? '0'),
-        points: parseFloat(s?.points ?? '0'),
-        wins: parseInt(s?.wins ?? '0'),
+    if (!seasonsRes.ok) return { history: [], totalSeasons: 0, firstSeason: 0 }
+    const seasonsData = await seasonsRes.json()
+    const allYears: string[] = (seasonsData?.MRData?.SeasonTable?.Seasons ?? [])
+      .map((s: { season: string }) => s.season)
+    if (!allYears.length) return { history: [], totalSeasons: 0, firstSeason: 0 }
+
+    const totalSeasons = parseInt(seasonsData?.MRData?.total ?? '0') || allYears.length
+    const firstSeason = parseInt(allYears[0])
+
+    // Fetch last 35 seasons for carousel/eras display — full stats come from TEAM_META
+    const years = allYears.slice(-35)
+    const BATCH = 7
+    const history: TeamSeasonResult[] = []
+
+    for (let i = 0; i < years.length; i += BATCH) {
+      const batch = years.slice(i, i + BATCH)
+      const settled = await Promise.allSettled(
+        batch.map(async (year) => {
+          const res = await fetch(
+            `https://api.jolpi.ca/ergast/f1/${year}/constructors/${jolpicaId}/constructorstandings.json`,
+            { next: { revalidate: 86400 } },
+          )
+          if (!res.ok) return null
+          const data = await res.json()
+          const list = data?.MRData?.StandingsTable?.StandingsLists?.[0]
+          if (!list) return null
+          const s = list.ConstructorStandings?.[0]
+          if (!s) return null
+          return {
+            season: parseInt(year),
+            position: parseInt(s.position ?? '0'),
+            points: parseFloat(s.points ?? '0'),
+            wins: parseInt(s.wins ?? '0'),
+          }
+        }),
+      )
+      for (const r of settled) {
+        if (r.status === 'fulfilled' && r.value) history.push(r.value)
       }
-    }).filter(r => r.season > 0 && r.position > 0)
-  } catch { return [] }
+    }
+
+    return {
+      history: history.filter(r => r.season > 0 && r.position > 0).sort((a, b) => a.season - b.season),
+      totalSeasons,
+      firstSeason,
+    }
+  } catch { return { history: [], totalSeasons: 0, firstSeason: 0 } }
 }
 
 /* ─── Data builders ───────────────────────────────────────────────────────── */
@@ -331,7 +506,7 @@ function buildSignatureBars(stats: FullTeamStats): TeamSignatureBar[] {
   ]
 }
 
-function buildAcademy(drivers: GenericTeamDriver[], year: string): TeamAcademyDriver[] {
+function buildAcademy(drivers: GenericTeamDriver[]): TeamAcademyDriver[] {
   return drivers.map(d => ({
     name: `${d.givenName} ${d.familyName}`,
     tier: 'f1' as const,
@@ -395,18 +570,28 @@ export default async function TeamRoute({
   const bundle = TEAM_REGISTRY[series]?.[lcSlug]
   if (bundle) {
     const jolpicaId = SLUG_TO_JOLPICA[lcSlug] ?? lcSlug
-    const [liveStats, { standings, meta }] = await Promise.all([
-      series === 'f1' ? fetchFullTeamStats(jolpicaId) : Promise.resolve(null),
+    const [raceStats, { standings, meta }] = await Promise.all([
+      series === 'f1' ? fetchRaceStats(jolpicaId) : Promise.resolve({ races: 0, wins: 0, podiums: 0, poles: 0 }),
       series === 'f1' ? fetchCurrentStandings() : Promise.resolve({ standings: [], meta: { season: '', round: '' } }),
     ])
-    const simpleLive: LiveTeamStats | undefined = liveStats
-      ? { wins: liveStats.wins, podiums: liveStats.podiums, wccTitles: liveStats.wccTitles, seasons: liveStats.seasons }
+    // Blueprint pages have accurate mock data for WCC/seasons — only update race-derived counts
+    const simpleLive: LiveTeamStats | undefined = raceStats.races > 0
+      ? {
+          wins: raceStats.wins || bundle.stats.wins,
+          podiums: raceStats.podiums || bundle.stats.podiums,
+          wccTitles: bundle.stats.constructorsTitles,
+          seasons: bundle.stats.seasons,
+        }
       : undefined
     return (
       <TeamPage
         {...bundle} series={series}
+        keyMoments={bundle.keyMoments ?? []}
         liveStats={simpleLive}
         currentStandings={standings} standingsMeta={meta} jolpicaId={jolpicaId}
+        academyTitle={bundle.academyTitle}
+        academySubtitle={bundle.academySubtitle}
+        academyDescription={bundle.academyDescription}
       />
     )
   }
@@ -417,19 +602,32 @@ export default async function TeamRoute({
     const meta = TEAM_META[jolpicaId]
     if (!meta) notFound()
 
-    const [fullStats, { standings, standingsMeta }, currentDrivers, seasonHistory] = await Promise.all([
-      fetchFullTeamStats(jolpicaId),
+    const [raceStats, { standings, standingsMeta }, currentDrivers, { history: seasonHistory, totalSeasons, firstSeason: apiFirstSeason }] = await Promise.all([
+      fetchRaceStats(jolpicaId),
       fetchCurrentStandings().then(r => ({ standings: r.standings, standingsMeta: r.meta })),
       fetchCurrentDrivers(jolpicaId),
       fetchTeamSeasonHistory(jolpicaId),
     ])
 
-    if (!fullStats) notFound()
+    // Use hardcoded TEAM_META for titles/founded — Jolpica multi-season standings endpoint is broken
+    const wccTitles = meta.wcc
+    const seasons   = totalSeasons || seasonHistory.length
+    const firstSeason = meta.founded || apiFirstSeason || 1950
 
-    const firstSeason = seasonHistory.length
-      ? Math.min(...seasonHistory.map(s => s.season))
-      : 1950
-    const isActive = seasonHistory.some(s => s.season >= 2024)
+    const fullStats: FullTeamStats = {
+      races:        raceStats.races,
+      wins:         raceStats.wins,
+      podiums:      raceStats.podiums,
+      poles:        raceStats.poles,
+      driverTitles: meta.wdc,
+      wccTitles,
+      seasons,
+    }
+
+    const lastSeason = seasonHistory.length
+      ? Math.max(...seasonHistory.map(s => s.season))
+      : firstSeason
+    const isActive = lastSeason >= 2024
     const currentYear = standingsMeta.season || new Date().getFullYear().toString()
 
     const team: Team = {
@@ -440,44 +638,47 @@ export default async function TeamRoute({
       series: ['f1'],
       founded: firstSeason,
       current: isActive,
-      entityColor: 'ferrari' as TeamLivery, // type placeholder — liveryHex drives all visuals
+      entityColor: 'ferrari' as TeamLivery,
       liveryHex: meta.color,
-      bio: fullStats.wccTitles > 0
-        ? `${meta.name} has won ${fullStats.wccTitles} World Constructors' Championship${fullStats.wccTitles > 1 ? 's' : ''} and ${fullStats.wins} races across ${fullStats.seasons} Formula 1 seasons since ${firstSeason}.`
-        : `${meta.name} has competed in ${fullStats.seasons} Formula 1 seasons since ${firstSeason}, accumulating ${fullStats.wins} race wins and ${fullStats.podiums} podium finishes.`,
+      bio: wccTitles > 0
+        ? `${meta.name} has won ${wccTitles} World Constructors' Championship${wccTitles > 1 ? 's' : ''} and ${raceStats.wins} races across ${seasons} Formula 1 seasons since ${firstSeason}.`
+        : `${meta.name} has competed in ${seasons} Formula 1 seasons since ${firstSeason}, accumulating ${raceStats.wins} race wins and ${fullStats.podiums} podium finishes.`,
     }
 
     const teamStats: TeamStats = {
       teamId: jolpicaId,
-      constructorsTitles: fullStats.wccTitles,
-      driversTitles: fullStats.driverTitles,
-      wins: fullStats.wins,
+      constructorsTitles: wccTitles,
+      driversTitles: meta.wdc,
+      wins: raceStats.wins,
       podiums: fullStats.podiums,
-      seasons: fullStats.seasons,
+      seasons,
       firstSeason,
     }
 
     const simpleLive: LiveTeamStats = {
-      wins: fullStats.wins,
+      wins: raceStats.wins,
       podiums: fullStats.podiums,
-      wccTitles: fullStats.wccTitles,
-      seasons: fullStats.seasons,
+      wccTitles,
+      seasons,
     }
 
     const reelSlides   = buildReelSlides(seasonHistory, meta.short, meta.color)
     const eras         = buildEras(seasonHistory, jolpicaId)
     const sigBars      = buildSignatureBars(fullStats)
-    const academy      = buildAcademy(currentDrivers, currentYear)
+    const academy      = buildAcademy(currentDrivers)
     const iconicCars   = buildIconicCars(seasonHistory)
 
-    const sigDescription = fullStats.wccTitles > 0
-      ? `${meta.name} has claimed ${fullStats.wccTitles} Constructors' title${fullStats.wccTitles > 1 ? 's' : ''} with a ${((fullStats.wins / Math.max(fullStats.races, 1)) * 100).toFixed(1)}% win rate and ${((fullStats.poles / Math.max(fullStats.races, 1)) * 100).toFixed(1)}% pole rate across ${fullStats.seasons} seasons.`
-      : `${meta.name} has entered ${fullStats.races} races across ${fullStats.seasons} seasons, taking ${fullStats.wins} wins, ${fullStats.podiums} podiums, and ${fullStats.poles} pole positions.`
+    const sigDescription = wccTitles > 0
+      ? `${meta.name} has claimed ${wccTitles} Constructors' title${wccTitles > 1 ? 's' : ''} with a ${((raceStats.wins / Math.max(raceStats.races, 1)) * 100).toFixed(1)}% win rate and ${((raceStats.poles / Math.max(raceStats.races, 1)) * 100).toFixed(1)}% pole rate across ${seasons} seasons.`
+      : `${meta.name} has entered ${raceStats.races} races across ${seasons} seasons, taking ${raceStats.wins} wins, ${fullStats.podiums} podiums, and ${raceStats.poles} pole positions.`
 
     const academyTitle = isActive
       ? `CURRENT LINEUP · ${currentYear}`
-      : `DRIVER HISTORY · ${firstSeason}–${seasonHistory.length ? Math.max(...seasonHistory.map(s => s.season)) : firstSeason}`
+      : `DRIVER HISTORY · ${firstSeason}–${lastSeason}`
     const academySubtitle = `${meta.nat.toUpperCase()} · ${meta.short.toUpperCase()}`
+    const academyDescription = isActive
+      ? `${currentDrivers.length} driver${currentDrivers.length !== 1 ? 's' : ''} representing ${meta.name} in the ${currentYear} Formula 1 season.`
+      : `${meta.name} competed in Formula 1 from ${firstSeason} to ${lastSeason}, fielding drivers across ${seasons} seasons.`
 
     return (
       <TeamPage
@@ -489,6 +690,7 @@ export default async function TeamRoute({
         signatureDescription={sigDescription}
         academyTitle={academyTitle}
         academySubtitle={academySubtitle}
+        academyDescription={academyDescription}
       />
     )
   }

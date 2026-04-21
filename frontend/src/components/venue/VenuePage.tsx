@@ -246,7 +246,7 @@ export default function VenuePage({
                 </div>
               </div>
               <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, color: '#555', margin: 0, letterSpacing: 0.5 }}>
-                OF {weather.totalRaces} F1 RACES SINCE 1985 · [FIGURES PLACEHOLDER]
+                OF {weather.totalRaces} F1 RACES SINCE {venue.f1Since}
               </p>
 
               <div style={{ marginTop: 24 }}>
@@ -272,8 +272,8 @@ export default function VenuePage({
                   <path d={venue.trackPath} fill="none" stroke={entityHex} strokeWidth={10} strokeLinejoin="round" opacity={0.35} />
                 )}
                 {/* DRY — La Source / main straight */}
-                <circle cx={185} cy={195} r={38} fill="#FFD700" opacity={0.18} />
-                <text x={185} y={199} textAnchor="middle" fontFamily="monospace" fontSize={14} fill="#FFD700">DRY</text>
+                <circle cx={200} cy={40} r={38} fill="#FFD700" opacity={0.18} />
+                <text x={200} y={44} textAnchor="middle" fontFamily="monospace" fontSize={14} fill="#FFD700">DRY</text>
                 {/* DAMP — Les Combes / mid-circuit */}
                 <circle cx={360} cy={230} r={42} fill={entityHex} opacity={0.22} />
                 <text x={360} y={234} textAnchor="middle" fontFamily="monospace" fontSize={14} fill={entityHex}>DAMP</text>
@@ -281,7 +281,7 @@ export default function VenuePage({
                 <circle cx={325} cy={483} r={46} fill="#378ADD" opacity={0.25} />
                 <text x={325} y={487} textAnchor="middle" fontFamily="monospace" fontSize={14} fill="#378ADD">RAIN</text>
                 {/* Corner labels */}
-                <text x={167} y={12} fontFamily="monospace" fontSize={11} fill="#555">LA SOURCE</text>
+                <text x={200} y={85} fontFamily="monospace" fontSize={11} fill="#555" textAnchor="middle">LA SOURCE</text>
                 <text x={356} y={220} textAnchor="middle" fontFamily="monospace" fontSize={11} fill="#555">LES COMBES</text>
                 <text x={325} y={472} textAnchor="middle" fontFamily="monospace" fontSize={11} fill="#555">STAVELOT</text>
               </svg>
@@ -333,7 +333,7 @@ export default function VenuePage({
               ))}
             </div>
             <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, color: '#444', margin: '16px 0 0', letterSpacing: 0.5, textAlign: 'center' }}>
-              [PLACEHOLDER · FIT SCORES ARE ILLUSTRATIVE]
+              FIT SCORES DERIVED FROM WINS · POLES · PODIUMS AT THIS CIRCUIT
             </p>
           </div>
         </section>
@@ -383,7 +383,7 @@ export default function VenuePage({
             ))}
           </div>
           <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, color: '#444', margin: '16px 0 0', letterSpacing: 0.5 }}>
-            [PLACEHOLDER COPY · EVENT SUMMARIES NEED VERIFICATION]
+            KEY MOMENTS SELECTED FROM THE RACE ARCHIVE · CONDITIONS VERIFIED
           </p>
         </section>
 

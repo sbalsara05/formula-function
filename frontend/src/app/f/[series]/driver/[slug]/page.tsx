@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation'
 import DriverPage from '@/components/driver/DriverPage'
-import GenericDriverPage, {
+import {
   type GenericDriverStats,
   type DriverCareerSeason,
 } from '@/components/driver/GenericDriverPage'
@@ -9,6 +9,10 @@ import {
   vettelReelSlides, vettelScoutingReport,
   bearman, bearmanStats, bearmanEras, bearmanSignature,
   bearmanReelSlides, bearmanScoutingReport, bearmanTrajectory,
+  hamilton, hamiltonStats, hamiltonEras, hamiltonSignature,
+  hamiltonReelSlides, hamiltonScoutingReport,
+  verstappen, verstappenStats, verstappenEras, verstappenSignature,
+  verstappenReelSlides, verstappenScoutingReport,
 } from '@/data/mock/drivers'
 import type {
   Series, Driver, DriverStats, DriverEra, DrivingSignature,
@@ -42,6 +46,22 @@ const DRIVER_REGISTRY: Partial<Record<Series, Record<string, DriverBundle>>> = {
       reelSlides: vettelReelSlides,
       scoutingReport: vettelScoutingReport,
     },
+    hamilton: {
+      driver: hamilton,
+      stats: hamiltonStats,
+      eras: hamiltonEras,
+      signature: hamiltonSignature,
+      reelSlides: hamiltonReelSlides,
+      scoutingReport: hamiltonScoutingReport,
+    },
+    verstappen: {
+      driver: verstappen,
+      stats: verstappenStats,
+      eras: verstappenEras,
+      signature: verstappenSignature,
+      reelSlides: verstappenReelSlides,
+      scoutingReport: verstappenScoutingReport,
+    },
   },
   f2: {
     bearman: {
@@ -53,11 +73,11 @@ const DRIVER_REGISTRY: Partial<Record<Series, Record<string, DriverBundle>>> = {
       scoutingReport: bearmanScoutingReport,
       trajectoryPrediction: bearmanTrajectory,
       heroStatRows: [
-        { label: 'F2 POS', value: 'P4', sub: '2024', accent: true },
-        { label: 'F2 WINS', value: '3' },
-        { label: 'F1 STARTS', value: '3', sub: 'SUB · 2024' },
-        { label: 'F1 POINTS', value: '6', sub: 'JEDDAH P7' },
-        { label: '2025', value: 'HAAS', sub: 'FULL-TIME F1' },
+        { label: '2025 WDC', value: 'P13', sub: 'HAAS', accent: true },
+        { label: '2025 PTS', value: '41' },
+        { label: 'F1 STARTS', value: '27', sub: '3 SUB + 24 HAAS' },
+        { label: 'BEST RESULT', value: 'P4', sub: 'MEXICO 2025' },
+        { label: '2026', value: 'HAAS', sub: 'F1 ONGOING' },
       ],
     },
   },
@@ -69,7 +89,7 @@ const DRIVER_SLUG_TO_JOLPICA: Record<string, string> = {
   // Current grid
   norris: 'norris',
   piastri: 'piastri',
-  verstappen: 'verstappen',
+  verstappen: 'max_verstappen',
   leclerc: 'leclerc',
   hamilton: 'hamilton',
   russell: 'russell',
@@ -170,10 +190,15 @@ const TEAM_COLORS: Record<string, string> = {
 /* ─── Jolpica helpers ─────────────────────────────────────────────────────── */
 
 async function jolpicaTotal(url: string): Promise<number> {
-  const res = await fetch(url, { next: { revalidate: 86400 } })
-  if (!res.ok) throw new Error(`HTTP ${res.status}`)
-  const d = await res.json()
-  return parseInt(d?.MRData?.total ?? '0', 10)
+  try {
+    const res = await fetch(url, { next: { revalidate: 86400 } })
+    if (!res.ok) return 0
+    const d = await res.json()
+    if (!d?.MRData) return 0
+    return parseInt(d.MRData.total ?? '0', 10)
+  } catch {
+    return 0
+  }
 }
 
 interface JolpicaDriverInfo {
@@ -209,16 +234,15 @@ async function fetchDriverInfo(jolpicaId: string): Promise<JolpicaDriverInfo | n
 async function fetchDriverAllTimeStats(jolpicaId: string): Promise<GenericDriverStats | null> {
   const base = `https://api.jolpi.ca/ergast/f1/drivers/${jolpicaId}`
   try {
-    const [races, wins, p2, p3, poles, championships, seasons] = await Promise.all([
+    const [races, wins, p2, p3, poles, seasons] = await Promise.all([
       jolpicaTotal(`${base}/results.json?limit=1`),
       jolpicaTotal(`${base}/results/1.json?limit=1`),
       jolpicaTotal(`${base}/results/2.json?limit=1`),
       jolpicaTotal(`${base}/results/3.json?limit=1`),
       jolpicaTotal(`${base}/qualifying/1.json?limit=1`),
-      jolpicaTotal(`${base}/driverstandings/1.json?limit=1`),
       jolpicaTotal(`${base}/seasons.json?limit=1`),
     ])
-    return { races, wins, poles, podiums: wins + p2 + p3, championships, seasons }
+    return { races, wins, poles, podiums: wins + p2 + p3, championships: 0, seasons }
   } catch {
     return null
   }
@@ -261,29 +285,225 @@ async function fetchDriverCurrentStanding(jolpicaId: string): Promise<{
 
 async function fetchDriverCareerHistory(jolpicaId: string): Promise<DriverCareerSeason[]> {
   try {
-    const res = await fetch(
-      `https://api.jolpi.ca/ergast/f1/drivers/${jolpicaId}/driverstandings.json?limit=100`,
+    const seasonsRes = await fetch(
+      `https://api.jolpi.ca/ergast/f1/drivers/${jolpicaId}/seasons.json?limit=100`,
       { next: { revalidate: 86400 } },
     )
-    if (!res.ok) return []
-    const data = await res.json()
-    const lists: Array<Record<string, unknown>> = data?.MRData?.StandingsTable?.StandingsLists ?? []
-    return lists
-      .map(l => {
-        const s = (l.DriverStandings as Array<Record<string, unknown>>)?.[0]
-        const constructor = (s?.Constructors as Array<Record<string, string>>)?.[0]
-        return {
-          season: parseInt(l.season as string),
-          position: parseInt((s?.position as string) ?? '0'),
-          points: parseFloat((s?.points as string) ?? '0'),
-          wins: parseInt((s?.wins as string) ?? '0'),
-          constructorId: constructor?.constructorId ?? 'unknown',
-          constructorName: constructor?.name ?? 'Unknown',
-        }
-      })
-      .filter(r => r.season > 0)
+    if (!seasonsRes.ok) return []
+    const seasonsData = await seasonsRes.json()
+    const allYears: string[] = (seasonsData?.MRData?.SeasonTable?.Seasons ?? []).map((s: { season: string }) => s.season)
+    if (!allYears.length) return []
+
+    const BATCH = 8
+    const history: DriverCareerSeason[] = []
+
+    for (let i = 0; i < allYears.length; i += BATCH) {
+      const batch = allYears.slice(i, i + BATCH)
+      const settled = await Promise.allSettled(
+        batch.map(async (year) => {
+          const res = await fetch(
+            `https://api.jolpi.ca/ergast/f1/${year}/drivers/${jolpicaId}/driverstandings.json`,
+            { next: { revalidate: 86400 } },
+          )
+          if (!res.ok) return null
+          const data = await res.json()
+          const list = data?.MRData?.StandingsTable?.StandingsLists?.[0]
+          if (!list) return null
+          const s = list.DriverStandings?.[0]
+          if (!s) return null
+          const constructor = (s.Constructors as Array<Record<string, string>>)?.[0]
+          return {
+            season: parseInt(year),
+            position: parseInt(s.position ?? '0'),
+            points: parseFloat(s.points ?? '0'),
+            wins: parseInt(s.wins ?? '0'),
+            constructorId: constructor?.constructorId ?? 'unknown',
+            constructorName: constructor?.name ?? 'Unknown',
+          } as DriverCareerSeason
+        }),
+      )
+      for (const r of settled) {
+        if (r.status === 'fulfilled' && r.value) history.push(r.value)
+      }
+    }
+
+    return history.filter(r => r.season > 0 && r.position > 0).sort((a, b) => a.season - b.season)
   } catch {
     return []
+  }
+}
+
+/* ─── Generic driver bundle builder ─────────────────────────────────────────── */
+
+const REEL_PATHS = [
+  'M 30 160 L 80 160 Q 100 145, 115 110 L 160 110 Q 180 125, 195 160 L 235 160 Q 255 175, 270 205 L 310 205 Q 330 185, 350 155 L 380 155',
+  'M 30 120 L 90 120 Q 112 108, 130 70 L 180 70 Q 210 88, 230 120 L 290 120 Q 310 104, 325 72 L 370 72',
+  'M 30 140 L 60 140 Q 75 130, 85 90 L 120 90 Q 140 105, 155 140 L 195 140 Q 215 155, 230 195 L 260 198 Q 275 180, 290 140 L 330 140 Q 345 120, 360 80 L 380 80',
+  'M 30 120 Q 60 110, 85 85 L 145 85 Q 175 98, 195 120 L 255 120 Q 285 105, 310 80 L 370 80',
+  'M 30 150 L 80 150 Q 110 138, 130 100 L 175 100 Q 195 115, 210 150 L 260 150 Q 290 170, 315 200 L 370 200',
+]
+
+function groupCareerByTeam(history: DriverCareerSeason[]) {
+  if (!history.length) return []
+  const sorted = [...history].sort((a, b) => a.season - b.season)
+  const groups: Array<{ constructorId: string; constructorName: string; startYear: number; endYear: number; seasons: DriverCareerSeason[] }> = []
+  let cur = { constructorId: sorted[0].constructorId, constructorName: sorted[0].constructorName, startYear: sorted[0].season, endYear: sorted[0].season, seasons: [sorted[0]] }
+  for (let i = 1; i < sorted.length; i++) {
+    const s = sorted[i]
+    if (s.constructorId === cur.constructorId) { cur.seasons.push(s); cur.endYear = s.season }
+    else { groups.push(cur); cur = { constructorId: s.constructorId, constructorName: s.constructorName, startYear: s.season, endYear: s.season, seasons: [s] } }
+  }
+  groups.push(cur)
+  return groups
+}
+
+function buildErasFromHistory(driverId: string, careerHistory: DriverCareerSeason[]): DriverEra[] {
+  return groupCareerByTeam(careerHistory).map(g => {
+    const titles = g.seasons.filter(s => s.position === 1).length
+    const wins = g.seasons.reduce((sum, s) => sum + s.wins, 0)
+    const bestPos = Math.min(...g.seasons.map(s => s.position || 99))
+    const statLabel = titles > 0 ? `${titles}× WDC` : wins > 0 ? `${wins}W` : bestPos <= 3 ? `P${bestPos}` : undefined
+    const color = TEAM_COLORS[g.constructorId] ?? '#888'
+    return {
+      driverId, teamId: g.constructorId, teamName: g.constructorName,
+      seasons: g.startYear === g.endYear ? `${g.startYear}` : `${g.startYear}–${g.endYear}`,
+      highlights: [], titles, wins, teamLiveryHex: color,
+      teamAccentHex: titles > 0 ? '#FFD700' : undefined, statLabel,
+    } as DriverEra
+  })
+}
+
+function buildSignatureFromStats(driverId: string, stats: GenericDriverStats): DrivingSignature {
+  const w = stats.races > 0 ? stats.wins / stats.races : 0
+  const p = stats.races > 0 ? stats.poles / stats.races : 0
+  const pod = stats.races > 0 ? stats.podiums / stats.races : 0
+  const c = stats.championships
+  return {
+    driverId, series: 'f1',
+    axes: [
+      { label: 'Steering Smoothness',   value: Math.min(95, Math.round(73 + c * 2.5 + p * 10)) },
+      { label: 'Entry Aggression',      value: Math.min(97, Math.round(65 + w * 80 + pod * 10)) },
+      { label: 'Tyre Management',       value: Math.min(93, Math.round(72 + pod * 18 + c * 2)) },
+      { label: 'Throttle Application',  value: Math.min(95, Math.round(70 + w * 50 + p * 10)) },
+      { label: 'Braking',               value: Math.min(97, Math.round(68 + p * 90 + c * 2)) },
+      { label: 'Consistency',           value: Math.min(96, Math.round(68 + pod * 28 + c * 3)) },
+    ],
+    cohortAverage: [74, 72, 74, 73, 75, 74],
+    confidenceScore: 0.55,
+    sampleSize: stats.races * 45,
+  }
+}
+
+function buildReelSlidesFromHistory(
+  initials: string, stats: GenericDriverStats,
+  careerHistory: DriverCareerSeason[], teamColor: string,
+): ReelSlide[] {
+  const sorted = [...careerHistory].sort((a, b) => a.season - b.season)
+  const y2 = (y: number) => String(y).slice(2)
+  const slides: ReelSlide[] = []
+  const used = new Set<number>()
+
+  for (const s of sorted.filter(s => s.position === 1)) {
+    if (slides.length >= 5) break
+    used.add(s.season)
+    slides.push({ slotLabel: `${initials} · ${y2(s.season)}`, badge: 'WORLD CHAMPION', glowColor: TEAM_COLORS[s.constructorId] ?? teamColor, kicker: `${s.season} · ${s.constructorName.toUpperCase()} · WDC`, headline: s.constructorName.toUpperCase(), meta: `${s.wins}W · ${s.points}PTS · P1`, svgPath: REEL_PATHS[slides.length % REEL_PATHS.length] })
+  }
+  for (const s of [...sorted].sort((a, b) => b.wins - a.wins)) {
+    if (slides.length >= 5) break
+    if (used.has(s.season) || s.wins === 0) continue
+    used.add(s.season)
+    slides.push({ slotLabel: `${initials} · ${y2(s.season)}`, badge: `${s.wins} WIN${s.wins > 1 ? 'S' : ''}`, glowColor: TEAM_COLORS[s.constructorId] ?? teamColor, kicker: `${s.season} · ${s.constructorName.toUpperCase()}`, headline: s.constructorName.toUpperCase(), meta: `${s.wins}W · ${s.points}PTS · P${s.position}`, svgPath: REEL_PATHS[slides.length % REEL_PATHS.length] })
+  }
+  for (const s of [...sorted].reverse()) {
+    if (slides.length >= 5) break
+    if (used.has(s.season)) continue
+    used.add(s.season)
+    slides.push({ slotLabel: `${initials} · ${y2(s.season)}`, badge: `P${s.position} ${s.season}`, glowColor: TEAM_COLORS[s.constructorId] ?? teamColor, kicker: `${s.season} · ${s.constructorName.toUpperCase()}`, headline: s.constructorName.toUpperCase(), meta: `P${s.position} · ${s.points}PTS${s.wins > 0 ? ` · ${s.wins}W` : ''}`, svgPath: REEL_PATHS[slides.length % REEL_PATHS.length] })
+  }
+
+  if (!slides.length) {
+    slides.push({ slotLabel: `${initials}`, badge: 'F1', glowColor: teamColor, kicker: 'FORMULA 1', headline: 'CAREER', meta: `${stats.races}R · ${stats.wins}W · ${stats.poles}P`, svgPath: REEL_PATHS[0] })
+  }
+  return slides.slice(0, 5)
+}
+
+function buildScoutingReportFromStats(
+  firstName: string, lastName: string,
+  stats: GenericDriverStats, careerHistory: DriverCareerSeason[],
+  currentStanding: { constructorName: string } | null,
+): ScoutingReport {
+  const winPct  = stats.races > 0 ? ((stats.wins   / stats.races) * 100).toFixed(1) : '0'
+  const polePct = stats.races > 0 ? ((stats.poles  / stats.races) * 100).toFixed(1) : '0'
+  const podPct  = stats.races > 0 ? ((stats.podiums / stats.races) * 100).toFixed(1) : '0'
+  const champYears = careerHistory.filter(s => s.position === 1).map(s => s.season).sort((a, b) => a - b)
+  const sorted = [...careerHistory].sort((a, b) => a.season - b.season)
+  const firstYear = sorted[0]?.season ?? ''
+  const isActive = !!currentStanding
+  const champLine = champYears.length > 0 ? ` World champion in ${champYears.join(', ')}.` : ''
+  const statusLine = isActive ? ` Currently racing for ${currentStanding.constructorName}.` : ' Now retired from Formula 1.'
+
+  const p1 = `${firstName} ${lastName} has competed in Formula 1 across ${stats.seasons} season${stats.seasons !== 1 ? 's' : ''}, accumulating ${stats.wins} win${stats.wins !== 1 ? 's' : ''}, ${stats.poles} pole position${stats.poles !== 1 ? 's' : ''} and ${stats.podiums} podium${stats.podiums !== 1 ? 's' : ''} from ${stats.races} starts since ${firstYear}.${champLine}${statusLine}`
+  const p2 = `A win rate of ${winPct}% and podium conversion of ${podPct}% characterise ${lastName}'s approach — ${parseFloat(polePct) > 15 ? 'elite single-lap pace and strong qualifying ability' : 'consistent race-day execution'} ${parseFloat(winPct) > 15 ? 'combined with championship-level ruthlessness at the front' : 'across a sustained career at the top level'}.`
+
+  return {
+    paragraphs: [p1, p2],
+    highlights: [lastName, champYears.length > 0 ? 'World champion' : ''].filter(Boolean),
+    setupBars: [
+      { leftLabel: 'MECHANICAL GRIP', rightLabel: 'AERO BALANCE',   position: 52, annotation: 'Balanced preference',       highlight: false },
+      { leftLabel: 'LOW DOWNFORCE',   rightLabel: 'HIGH DOWNFORCE',  position: 58, annotation: 'Corner-speed oriented',     highlight: false },
+      { leftLabel: 'EARLY THROTTLE', rightLabel: 'LATE THROTTLE',   position: 55, annotation: 'Mid-corner commitment',     highlight: false },
+    ],
+    excelledAt: [
+      stats.wins > 30 ? 'Race management and tyre conservation' : 'Racecraft and wheel-to-wheel battles',
+      parseFloat(polePct) > 20 ? 'Single-lap pace · Qualifying supremacy' : 'Race consistency and points accumulation',
+      champYears.length > 0 ? 'Pressure management · Championship mentality' : 'Development driving and car feedback',
+    ],
+    struggledWith: [
+      stats.seasons < 4 ? 'Career still developing — full picture emerging' : 'Requires telemetry access for deeper analysis',
+    ],
+  }
+}
+
+function buildDriverBundle(
+  jolpicaId: string,
+  info: JolpicaDriverInfo,
+  stats: GenericDriverStats,
+  currentStanding: { position: number; points: string; wins: string; season: string; constructorId: string; constructorName: string } | null,
+  careerHistory: DriverCareerSeason[],
+  teamColor: string,
+): { driver: Driver; stats: DriverStats; eras: DriverEra[]; signature: DrivingSignature; reelSlides: ReelSlide[]; scoutingReport: ScoutingReport } {
+  const firstName = info.givenName
+  const lastName  = info.familyName
+  const initials  = `${firstName[0]}${lastName[0]}`
+  const isActive  = !!currentStanding
+  const sorted    = [...careerHistory].sort((a, b) => a.season - b.season)
+  const firstYear = sorted[0]?.season ?? 2000
+  const lastYear  = sorted[sorted.length - 1]?.season ?? new Date().getFullYear()
+  const careerSpan = isActive ? `${firstYear}–present` : `${firstYear}–${lastYear}`
+
+  const teamWins: Record<string, number> = {}
+  for (const s of careerHistory) teamWins[s.constructorId] = (teamWins[s.constructorId] ?? 0) + s.wins
+  const peakTeamId = Object.entries(teamWins).sort(([, a], [, b]) => b - a)[0]?.[0] ?? (currentStanding?.constructorId ?? 'unknown')
+  const entityColor = currentStanding?.constructorId ?? peakTeamId
+
+  const driver: Driver = {
+    id: jolpicaId, name: `${firstName} ${lastName}`, shortName: lastName, initials,
+    nationality: info.nationality, dob: info.dateOfBirth ?? '1990-01-01',
+    status: isActive ? 'active' : 'retired', series: ['f1'], peakEraTeamId: peakTeamId,
+    entityColor,
+    bio: `${firstName} ${lastName} — Formula 1 driver.${stats.championships > 0 ? ` ${stats.championships}× World Champion.` : ''} ${stats.wins} wins, ${stats.poles} poles, ${stats.podiums} podiums.`,
+  }
+  const driverStats: DriverStats = {
+    driverId: jolpicaId, series: 'f1', titles: stats.championships, wins: stats.wins,
+    poles: stats.poles, podiums: stats.podiums, careerSpan, racesEntered: stats.races,
+  }
+
+  return {
+    driver, stats: driverStats,
+    eras:          buildErasFromHistory(jolpicaId, careerHistory),
+    signature:     buildSignatureFromStats(jolpicaId, stats),
+    reelSlides:    buildReelSlidesFromHistory(initials, stats, careerHistory, teamColor),
+    scoutingReport: buildScoutingReportFromStats(firstName, lastName, stats, careerHistory, currentStanding),
   }
 }
 
@@ -326,30 +546,14 @@ export default async function DriverRoute({
         ? (TEAM_COLORS[careerHistory.reduce((a, b) => (a.season > b.season ? a : b)).constructorId] ?? '#888')
         : '#888'
 
-    return (
-      <GenericDriverPage
-        jolpicaId={jolpicaId}
-        givenName={info.givenName}
-        familyName={info.familyName}
-        nationality={info.nationality}
-        permanentNumber={info.permanentNumber}
-        dateOfBirth={info.dateOfBirth}
-        currentTeamName={currentStanding?.constructorName}
-        currentTeamColor={teamColor}
-        liveStats={liveStats}
-        currentStanding={
-          currentStanding
-            ? {
-                position: currentStanding.position,
-                points: currentStanding.points,
-                wins: currentStanding.wins,
-                season: currentStanding.season,
-              }
-            : undefined
-        }
-        careerHistory={careerHistory}
-      />
-    )
+    const championsFromHistory = careerHistory.filter(s => s.position === 1).length
+    const effectiveStats: GenericDriverStats = {
+      ...(liveStats ?? { races: 0, wins: 0, poles: 0, podiums: 0, championships: 0, seasons: 0 }),
+      championships: championsFromHistory,
+    }
+    const bundle = buildDriverBundle(jolpicaId, info, effectiveStats, currentStanding, careerHistory, teamColor)
+
+    return <DriverPage {...bundle} series={series} />
   }
 
   notFound()

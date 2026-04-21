@@ -373,7 +373,7 @@ export default function LapPickerPage({
       {/* Footer note */}
       <div style={{ padding: '0 1.75rem 2rem', textAlign: 'center', borderTop: '0.5px solid #1a1a1a', paddingTop: 16 }}>
         <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, color: '#555', letterSpacing: 1 }}>
-          [PLACEHOLDER · LAP LIBRARY COUNT ILLUSTRATIVE · FILTER STATE NOT WIRED TO LIVE DATA]
+          LAP LIBRARY · DEMO BUILD · FILTER STATE ILLUSTRATIVE
         </p>
       </div>
 

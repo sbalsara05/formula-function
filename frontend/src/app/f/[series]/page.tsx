@@ -132,10 +132,10 @@ const F1_ERAS = [
     years: '2014–present',
     color: '#00D2BE',
     accent: '#007A73',
-    drivers: 'Hamilton · Rosberg · Verstappen',
-    stat1: { label: 'HAMILTON WINS', value: '103' },
-    stat2: { label: 'TITLES IN ERA', value: '11' },
-    flavor: 'Mercedes then Red Bull. Two eras of dominance back to back. 11 of 11 titles split between them.',
+    drivers: 'Hamilton · Verstappen · Norris',
+    stat1: { label: 'HAMILTON WINS', value: '105' },
+    stat2: { label: 'TITLES IN ERA', value: '12' },
+    flavor: 'Mercedes then Red Bull, then McLaren. Twelve titles across the hybrid era — three separate dynasties in one technical generation.',
   },
 ]
 
@@ -146,7 +146,7 @@ const W = 'https://en.wikipedia.org/wiki/Special:FilePath/'
 const F1_CONSTRUCTORS = [
   // ── CURRENT GRID (2025) ──────────────────────────────────────────────────────
   { name: 'Scuderia Ferrari',        short: 'Ferrari',       abbr: 'FER', wcc: 16, active: '1950–',    color: '#DC0000', status: 'current', slug: 'ferrari',       logo: W + 'Scuderia_Ferrari_Logo.svg' },
-  { name: 'McLaren Racing',          short: 'McLaren',       abbr: 'MCL', wcc: 8,  active: '1966–',    color: '#FF8700', status: 'current', slug: 'mclaren',       logo: W + 'McLaren_Racing_logo.svg' },
+  { name: 'McLaren Racing',          short: 'McLaren',       abbr: 'MCL', wcc: 10, active: '1966–',    color: '#FF8700', status: 'current', slug: 'mclaren',       logo: W + 'McLaren_Racing_logo.svg' },
   { name: 'Mercedes-AMG Petronas',   short: 'Mercedes',      abbr: 'MER', wcc: 8,  active: '2010–',    color: '#00D2BE', status: 'current', slug: 'mercedes',      logo: W + 'Mercedes_AMG_Petronas_F1_Logo.svg' },
   { name: 'Williams Racing',         short: 'Williams',      abbr: 'WIL', wcc: 9,  active: '1977–',    color: '#005AFF', status: 'current', slug: 'williams',      logo: W + 'Williams_Racing_logo.svg' },
   { name: 'Red Bull Racing',         short: 'Red Bull',      abbr: 'RBR', wcc: 6,  active: '2005–',    color: '#1E3A8A', status: 'current', slug: 'red-bull',      logo: W + 'Red_Bull_Racing_logo.svg' },
@@ -231,7 +231,7 @@ const SERIES_CONFIG = {
     label: 'f(2)', name: 'Formula 2', color: '#00E5FF',
     tier: 'TIER 2 · THE PROVING GROUND',
     description: 'Where the next generation earns the call-up. Every F1 champion must pass through.',
-    drivers: [{ slug: 'bearman', name: 'Oliver Bearman', tagline: 'FDA · 2024 F2 P4 · Haas 2025', color: '#DC0000' }],
+    drivers: [{ slug: 'bearman', name: 'Oliver Bearman', tagline: 'Haas F1 · 2025 P13 WDC · 41 pts', color: '#B6BABD' }],
     teams:   [{ slug: 'prema', name: 'Prema Racing', tagline: 'Serial F2 champions · graduate machine', color: '#E8001C' }],
     venues:  [] as { slug: string; name: string; tagline: string; color: string }[],
   },
@@ -353,9 +353,9 @@ function F1LandingPage({ config }: { config: typeof SERIES_CONFIG['1'] }) {
           {/* Right: key stats */}
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1px', background: '#1a1a1a', border: '0.5px solid #1a1a1a', borderRadius: 8, overflow: 'hidden' }}>
             {[
-              { value: '75', label: 'SEASONS' },
-              { value: '34', label: 'CHAMPIONS' },
-              { value: '1,100+', label: 'GRANDS PRIX' },
+              { value: '77', label: 'SEASONS' },
+              { value: '35', label: 'CHAMPIONS' },
+              { value: '1,171', label: 'GRANDS PRIX' },
               { value: '1950', label: 'INAUGURAL' },
             ].map(s => (
               <div key={s.label} style={{ background: '#060606', padding: '24px 28px' }}>
@@ -378,7 +378,7 @@ function F1LandingPage({ config }: { config: typeof SERIES_CONFIG['1'] }) {
       <section style={{ borderTop: '0.5px solid #1a1a1a', borderBottom: '0.5px solid #1a1a1a' }}>
         <div style={{ padding: '14px 1.75rem 8px', display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
           <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: 2, color: '#555', margin: 0 }}>
-            CHAMPIONSHIP DNA · 1950–2024
+            CHAMPIONSHIP DNA · 1950–2025
           </p>
           <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, color: '#333', margin: 0 }}>
             EACH BAR = ONE SEASON · COLOR = CHAMPION'S CONSTRUCTOR
