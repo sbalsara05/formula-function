@@ -175,6 +175,26 @@ const DRIVER_SLUG_TO_JOLPICA: Record<string, string> = {
   button2: 'button',
 }
 
+/* ─── Driver portrait / action image map ─────────────────────────────────── */
+// Filenames verified against Wikipedia infobox images (Special:FilePath redirect)
+
+const W = 'https://en.wikipedia.org/wiki/Special:FilePath/'
+
+const DRIVER_IMAGE_MAP: Record<string, string> = {
+  max_verstappen:     W + '2024-08-25_Motorsport,_Formel_1,_Gro%C3%9Fer_Preis_der_Niederlande_2024_STP_3973_by_Stepro_(medium_crop).jpg',
+  hamilton:           W + 'Prime_Minister_Keir_Starmer_meets_Sir_Lewis_Hamilton_(54566928382)_(cropped).jpg',
+  leclerc:            W + '2024-08-25_Motorsport,_Formel_1,_Gro%C3%9Fer_Preis_der_Niederlande_2024_STP_3978_by_Stepro_(cropped2).jpg',
+  norris:             W + '2024-08-25_Motorsport,_Formel_1,_Gro%C3%9Fer_Preis_der_Niederlande_2024_STP_3968_by_Stepro_(cropped2).jpg',
+  piastri:            W + '2026_Chinese_GP_-_Oscar_Piastri_(cropped)_(cropped).jpg',
+  alonso:             W + 'Alonso-68_(24710447098).jpg',
+  russell:            W + 'KingsLeonSilverstne040724_(28_of_112)_(53838006028)_(cropped).jpg',
+  senna:              W + 'Ayrton_Senna_9_(cropped).jpg',
+  raikkonen:          W + 'F12019_Schloss_Gabelhofen_(22)_(cropped).jpg',
+  rosberg:            W + 'Nico_Rosberg_2016.jpg',
+  button:             W + 'Jenson_Button_2024_WEC_Fuji.jpg',
+  prost:              W + 'Festival_automobile_international_2015_-_Photocall_-_065_(cropped3).jpg',
+}
+
 /* ─── Team color lookup ───────────────────────────────────────────────────── */
 
 const TEAM_COLORS: Record<string, string> = {
@@ -397,32 +417,35 @@ function buildSignatureFromStats(driverId: string, stats: GenericDriverStats): D
 function buildReelSlidesFromHistory(
   initials: string, stats: GenericDriverStats,
   careerHistory: DriverCareerSeason[], teamColor: string,
+  portraitUrl?: string,
 ): ReelSlide[] {
   const sorted = [...careerHistory].sort((a, b) => a.season - b.season)
   const y2 = (y: number) => String(y).slice(2)
   const slides: ReelSlide[] = []
   const used = new Set<number>()
 
+  const img = (idx: number) => idx === 0 ? portraitUrl : undefined
+
   for (const s of sorted.filter(s => s.position === 1)) {
     if (slides.length >= 5) break
     used.add(s.season)
-    slides.push({ slotLabel: `${initials} · ${y2(s.season)}`, badge: 'WORLD CHAMPION', glowColor: TEAM_COLORS[s.constructorId] ?? teamColor, kicker: `${s.season} · ${s.constructorName.toUpperCase()} · WDC`, headline: s.constructorName.toUpperCase(), meta: `${s.wins}W · ${s.points}PTS · P1`, svgPath: REEL_PATHS[slides.length % REEL_PATHS.length] })
+    slides.push({ slotLabel: `${initials} · ${y2(s.season)}`, badge: 'WORLD CHAMPION', glowColor: TEAM_COLORS[s.constructorId] ?? teamColor, kicker: `${s.season} · ${s.constructorName.toUpperCase()} · WDC`, headline: s.constructorName.toUpperCase(), meta: `${s.wins}W · ${s.points}PTS · P1`, svgPath: REEL_PATHS[slides.length % REEL_PATHS.length], imageUrl: img(slides.length) })
   }
   for (const s of [...sorted].sort((a, b) => b.wins - a.wins)) {
     if (slides.length >= 5) break
     if (used.has(s.season) || s.wins === 0) continue
     used.add(s.season)
-    slides.push({ slotLabel: `${initials} · ${y2(s.season)}`, badge: `${s.wins} WIN${s.wins > 1 ? 'S' : ''}`, glowColor: TEAM_COLORS[s.constructorId] ?? teamColor, kicker: `${s.season} · ${s.constructorName.toUpperCase()}`, headline: s.constructorName.toUpperCase(), meta: `${s.wins}W · ${s.points}PTS · P${s.position}`, svgPath: REEL_PATHS[slides.length % REEL_PATHS.length] })
+    slides.push({ slotLabel: `${initials} · ${y2(s.season)}`, badge: `${s.wins} WIN${s.wins > 1 ? 'S' : ''}`, glowColor: TEAM_COLORS[s.constructorId] ?? teamColor, kicker: `${s.season} · ${s.constructorName.toUpperCase()}`, headline: s.constructorName.toUpperCase(), meta: `${s.wins}W · ${s.points}PTS · P${s.position}`, svgPath: REEL_PATHS[slides.length % REEL_PATHS.length], imageUrl: img(slides.length) })
   }
   for (const s of [...sorted].reverse()) {
     if (slides.length >= 5) break
     if (used.has(s.season)) continue
     used.add(s.season)
-    slides.push({ slotLabel: `${initials} · ${y2(s.season)}`, badge: `P${s.position} ${s.season}`, glowColor: TEAM_COLORS[s.constructorId] ?? teamColor, kicker: `${s.season} · ${s.constructorName.toUpperCase()}`, headline: s.constructorName.toUpperCase(), meta: `P${s.position} · ${s.points}PTS${s.wins > 0 ? ` · ${s.wins}W` : ''}`, svgPath: REEL_PATHS[slides.length % REEL_PATHS.length] })
+    slides.push({ slotLabel: `${initials} · ${y2(s.season)}`, badge: `P${s.position} ${s.season}`, glowColor: TEAM_COLORS[s.constructorId] ?? teamColor, kicker: `${s.season} · ${s.constructorName.toUpperCase()}`, headline: s.constructorName.toUpperCase(), meta: `P${s.position} · ${s.points}PTS${s.wins > 0 ? ` · ${s.wins}W` : ''}`, svgPath: REEL_PATHS[slides.length % REEL_PATHS.length], imageUrl: img(slides.length) })
   }
 
   if (!slides.length) {
-    slides.push({ slotLabel: `${initials}`, badge: 'F1', glowColor: teamColor, kicker: 'FORMULA 1', headline: 'CAREER', meta: `${stats.races}R · ${stats.wins}W · ${stats.poles}P`, svgPath: REEL_PATHS[0] })
+    slides.push({ slotLabel: `${initials}`, badge: 'F1', glowColor: teamColor, kicker: 'FORMULA 1', headline: 'CAREER', meta: `${stats.races}R · ${stats.wins}W · ${stats.poles}P`, svgPath: REEL_PATHS[0], imageUrl: portraitUrl })
   }
   return slides.slice(0, 5)
 }
@@ -471,6 +494,7 @@ function buildDriverBundle(
   currentStanding: { position: number; points: string; wins: string; season: string; constructorId: string; constructorName: string } | null,
   careerHistory: DriverCareerSeason[],
   teamColor: string,
+  portraitUrl?: string,
 ): { driver: Driver; stats: DriverStats; eras: DriverEra[]; signature: DrivingSignature; reelSlides: ReelSlide[]; scoutingReport: ScoutingReport } {
   const firstName = info.givenName
   const lastName  = info.familyName
@@ -502,7 +526,7 @@ function buildDriverBundle(
     driver, stats: driverStats,
     eras:          buildErasFromHistory(jolpicaId, careerHistory),
     signature:     buildSignatureFromStats(jolpicaId, stats),
-    reelSlides:    buildReelSlidesFromHistory(initials, stats, careerHistory, teamColor),
+    reelSlides:    buildReelSlidesFromHistory(initials, stats, careerHistory, teamColor, portraitUrl),
     scoutingReport: buildScoutingReportFromStats(firstName, lastName, stats, careerHistory, currentStanding),
   }
 }
@@ -551,7 +575,8 @@ export default async function DriverRoute({
       ...(liveStats ?? { races: 0, wins: 0, poles: 0, podiums: 0, championships: 0, seasons: 0 }),
       championships: championsFromHistory,
     }
-    const bundle = buildDriverBundle(jolpicaId, info, effectiveStats, currentStanding, careerHistory, teamColor)
+    const portraitUrl = DRIVER_IMAGE_MAP[jolpicaId] ?? DRIVER_IMAGE_MAP[lcSlug]
+    const bundle = buildDriverBundle(jolpicaId, info, effectiveStats, currentStanding, careerHistory, teamColor, portraitUrl)
 
     return <DriverPage {...bundle} series={series} />
   }

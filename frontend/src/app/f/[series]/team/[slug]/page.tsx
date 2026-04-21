@@ -514,7 +514,35 @@ function buildAcademy(drivers: GenericTeamDriver[]): TeamAcademyDriver[] {
   }))
 }
 
-function buildIconicCars(history: TeamSeasonResult[]): TeamIconicCar[] {
+/* ─── Season car photo map (Wikimedia Commons) ───────────────────────────── */
+// Keys: `${constructorId}:${year}` → imageUrl
+
+const W = 'https://en.wikipedia.org/wiki/Special:FilePath/'
+
+const TEAM_CAR_PHOTO_MAP: Record<string, string> = {
+  // Ferrari championship cars
+  'ferrari:2000': W + 'Ferrari_F2002_Michael_Schumacher_2002_British_GP.jpg',
+  'ferrari:2002': W + 'Ferrari_F2002_Michael_Schumacher_2002_British_GP.jpg',
+  'ferrari:2004': W + 'Ferrari_F2004_Michael_Schumacher_2004_Bahrain_GP.jpg',
+  'ferrari:2007': W + 'Kimi_R%C3%A4ikk%C3%B6nen_2007_Australia_(3).jpg',
+  // Red Bull championship cars
+  'red_bull:2010': W + 'Sebastian_Vettel_2010_Bahrain_Grand_Prix.jpg',
+  'red_bull:2011': W + 'Red_Bull_RB7_Vettel_2011_Silverstone.jpg',
+  'red_bull:2023': W + 'Max_Verstappen_(52620570717)_(cropped).jpg',
+  // McLaren championship cars
+  'mclaren:1988': W + 'Ayrton_Senna_1991_Canadian_GP.jpg',
+  'mclaren:1998': W + 'Mika_H%C3%A4kkinen_1998_Canadian_GP.jpg',
+  'mclaren:2024': W + '2024_Chinese_GP_-_Oscar_Piastri_(cropped).jpg',
+  // Mercedes championship cars
+  'mercedes:2014': W + 'Lewis_Hamilton_2014_Malaysia_(cropped).jpg',
+  'mercedes:2019': W + 'Lewis_Hamilton_2019_German_GP_(cropped).jpg',
+  'mercedes:2020': W + 'Lewis_Hamilton_2020_Bahrain_GP.jpg',
+  // Williams championship cars
+  'williams:1992': W + 'Nigel_Mansell_1992_Britain_(cropped).jpg',
+  'williams:1996': W + 'Damon_Hill_1996_Canadian_GP.jpg',
+}
+
+function buildIconicCars(constructorId: string, history: TeamSeasonResult[]): TeamIconicCar[] {
   const champs = [...history].filter(s => s.position === 1).sort((a, b) => b.wins - a.wins).slice(0, 3)
   const recent = [...history].sort((a, b) => b.season - a.season)
     .filter(s => !champs.some(c => c.season === s.season)).slice(0, 3)
@@ -527,6 +555,7 @@ function buildIconicCars(history: TeamSeasonResult[]): TeamIconicCar[] {
       subtitle: `${s.wins} victories`,
       meta: `WORLD CONSTRUCTORS' CHAMPION`,
       peak: champs[0]?.season === s.season,
+      imageUrl: TEAM_CAR_PHOTO_MAP[`${constructorId}:${s.season}`],
     })),
     ...recent.map(s => ({
       name: `${s.season}`,
@@ -534,6 +563,7 @@ function buildIconicCars(history: TeamSeasonResult[]): TeamIconicCar[] {
       subtitle: `P${s.position} · ${s.wins} wins`,
       meta: `${s.points} POINTS`,
       peak: false,
+      imageUrl: TEAM_CAR_PHOTO_MAP[`${constructorId}:${s.season}`],
     })),
   ].filter(n => {
     if (seen.has(n.year)) return false
@@ -666,7 +696,7 @@ export default async function TeamRoute({
     const eras         = buildEras(seasonHistory, jolpicaId)
     const sigBars      = buildSignatureBars(fullStats)
     const academy      = buildAcademy(currentDrivers)
-    const iconicCars   = buildIconicCars(seasonHistory)
+    const iconicCars   = buildIconicCars(jolpicaId, seasonHistory)
 
     const sigDescription = wccTitles > 0
       ? `${meta.name} has claimed ${wccTitles} Constructors' title${wccTitles > 1 ? 's' : ''} with a ${((raceStats.wins / Math.max(raceStats.races, 1)) * 100).toFixed(1)}% win rate and ${((raceStats.poles / Math.max(raceStats.races, 1)) * 100).toFixed(1)}% pole rate across ${seasons} seasons.`

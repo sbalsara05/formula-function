@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import type {
   Venue,
   VenueStats,
@@ -66,9 +67,11 @@ export default function VenuePage({
           position: 'sticky', top: 0, zIndex: 50,
         }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 20 }}>
-            <span style={{ fontFamily: 'var(--font-mono)', fontSize: 18, fontWeight: 500, letterSpacing: -0.5 }}>f(x)</span>
+            <Link href="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+              <span style={{ fontFamily: 'var(--font-mono)', fontSize: 18, fontWeight: 500, letterSpacing: -0.5 }}>f(x)</span>
+            </Link>
             <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: 1.5, color: '#555' }}>
-              <span style={{ color: '#666' }}>{SERIES_LABELS[series]}</span>
+              <Link href={`/f/${series.replace('f', '')}`} style={{ textDecoration: 'none', color: '#666' }}>{SERIES_LABELS[series]}</Link>
               <span style={{ color: '#333' }}>/</span>
               <span>VENUES</span>
               <span style={{ color: '#333' }}>/</span>
@@ -195,7 +198,7 @@ export default function VenuePage({
                 WHAT MATTERS HERE
               </p>
               <p style={{ fontSize: 15, color: '#ccc', margin: 0, fontWeight: 400 }}>
-                Engine power, aero efficiency, and bravery through Eau Rouge. Rewards cars that carry speed.
+                {fingerprint.description ?? `${fingerprint.bars.slice(0, 2).map(b => b.label).join(', ')} — the defining demands of ${venue.name}.`}
               </p>
             </div>
 
@@ -224,11 +227,11 @@ export default function VenuePage({
         {/* ── Weather ────────────────────────────────────────────────────────── */}
         <section style={{ padding: '0 1.75rem 2rem' }}>
           <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', marginBottom: 6 }}>
-            <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: 2, color: entityHex, margin: 0 }}>WEATHER · THE ARDENNES EFFECT</p>
-            <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, letterSpacing: 1, color: '#555' }}>1985–PRESENT</p>
+            <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: 2, color: entityHex, margin: 0 }}>WEATHER · {venue.name.toUpperCase()}</p>
+            <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, letterSpacing: 1, color: '#555' }}>{venue.f1Since}–PRESENT</p>
           </div>
           <p style={{ fontSize: 13, color: '#888', margin: '0 0 24px', maxWidth: 520, lineHeight: 1.6 }}>
-            Spa's weather is famously local. Rain can fall at Stavelot while the start-finish straight stays dry — producing the most unpredictable races on the calendar.
+            {weather.description ?? `Historical weather breakdown across all ${venue.name} Grands Prix since ${venue.f1Since}.`}
           </p>
 
           <div style={{ background: '#080808', border: '1px solid #1a1a1a', borderRadius: 10, padding: 32, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 32 }}>
@@ -263,30 +266,17 @@ export default function VenuePage({
             </div>
 
             <div>
-              <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, letterSpacing: 1.5, color: '#555', margin: '0 0 16px' }}>THE CROSS-TRACK EFFECT</p>
-              {/* Uses the same GPS-derived track path as the main map. Condition circles
-                  are placed at calibrated SVG coords: DRY=main straight, DAMP=Les Combes
-                  area, RAIN=Stavelot. ViewBox 0 0 500 500 matches the track path. */}
-              <svg viewBox="0 0 500 500" style={{ width: '100%', height: 'auto', marginBottom: 12 }} role="img" aria-label="Spa weather microclimate diagram">
+              <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, letterSpacing: 1.5, color: '#555', margin: '0 0 16px' }}>CIRCUIT OVERVIEW</p>
+              <svg viewBox="0 0 500 500" style={{ width: '100%', height: 'auto', marginBottom: 12 }} role="img" aria-label={`${venue.name} track outline`}>
                 {venue.trackPath && (
-                  <path d={venue.trackPath} fill="none" stroke={entityHex} strokeWidth={10} strokeLinejoin="round" opacity={0.35} />
+                  <path d={venue.trackPath} fill="none" stroke={entityHex} strokeWidth={10} strokeLinejoin="round" opacity={0.55} />
                 )}
-                {/* DRY — La Source / main straight */}
-                <circle cx={200} cy={40} r={38} fill="#FFD700" opacity={0.18} />
-                <text x={200} y={44} textAnchor="middle" fontFamily="monospace" fontSize={14} fill="#FFD700">DRY</text>
-                {/* DAMP — Les Combes / mid-circuit */}
-                <circle cx={360} cy={230} r={42} fill={entityHex} opacity={0.22} />
-                <text x={360} y={234} textAnchor="middle" fontFamily="monospace" fontSize={14} fill={entityHex}>DAMP</text>
-                {/* RAIN — Stavelot / far end */}
-                <circle cx={325} cy={483} r={46} fill="#378ADD" opacity={0.25} />
-                <text x={325} y={487} textAnchor="middle" fontFamily="monospace" fontSize={14} fill="#378ADD">RAIN</text>
-                {/* Corner labels */}
-                <text x={200} y={85} fontFamily="monospace" fontSize={11} fill="#555" textAnchor="middle">LA SOURCE</text>
-                <text x={356} y={220} textAnchor="middle" fontFamily="monospace" fontSize={11} fill="#555">LES COMBES</text>
-                <text x={325} y={472} textAnchor="middle" fontFamily="monospace" fontSize={11} fill="#555">STAVELOT</text>
+                {!venue.trackPath && (
+                  <text x={250} y={250} textAnchor="middle" fontFamily="monospace" fontSize={14} fill="#555">NO TRACK PATH</text>
+                )}
               </svg>
               <p style={{ fontSize: 12, color: '#aaa', lineHeight: 1.6, margin: 0 }}>
-                The 7 km length means weather can vary across sectors. Drivers emerge from a dry Eau Rouge into rain at Les Combes — or the reverse.
+                {weather.circuitNote ?? `${venue.name} — ${venue.corners} corners, ${venue.lengthKm} km. ${weather.dryPct}% dry / ${weather.mixedPct}% mixed / ${weather.wetPct}% wet across ${weather.totalRaces} Grands Prix.`}
               </p>
             </div>
           </div>
@@ -345,7 +335,7 @@ export default function VenuePage({
             <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, letterSpacing: 1, color: '#555' }}>THE ARCHIVE</p>
           </div>
           <p style={{ fontSize: 13, color: '#888', margin: '0 0 24px', maxWidth: 520, lineHeight: 1.6 }}>
-            Races and laps that define Spa. Wet masterclasses, debuts, and the races people still talk about.
+            Races and laps that define {venue.name}. Moments that shaped the circuit&apos;s legend.
           </p>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 10 }}>

@@ -223,9 +223,35 @@ const SERIES_CONFIG = {
     label: 'f(1)', name: 'Formula 1', color: '#FF1E56',
     tier: 'TIER 1 · THE PINNACLE',
     description: 'The pinnacle of motorsport. Championships, constructors, and the drivers who shaped the modern era.',
-    drivers: [{ slug: 'vettel', name: 'Sebastian Vettel', tagline: '4× WDC · Red Bull dynasty · 2010–2013', color: '#1E3A8A' }],
-    teams:   [{ slug: 'ferrari', name: 'Scuderia Ferrari', tagline: '16× WCC · most storied constructor', color: '#DC0000' }],
-    venues:  [{ slug: 'spa', name: 'Spa-Francorchamps', tagline: '7.004 km · Ardennes, Belgium', color: '#5FB87C' }],
+    drivers: [
+      { slug: 'verstappen',  name: 'Max Verstappen',    tagline: '4× WDC · Red Bull · 2021–2024',        color: '#1E3A8A' },
+      { slug: 'hamilton',    name: 'Lewis Hamilton',    tagline: '7× WDC · Mercedes dynasty · Ferrari',   color: '#00D2BE' },
+      { slug: 'leclerc',     name: 'Charles Leclerc',   tagline: 'Ferrari · Monaco native · 2019–',        color: '#DC0000' },
+      { slug: 'norris',      name: 'Lando Norris',      tagline: 'McLaren · 2025 WDC · 1× Monaco win',    color: '#FF8000' },
+      { slug: 'piastri',     name: 'Oscar Piastri',     tagline: 'McLaren · 2024 WDC runner-up',           color: '#FF8000' },
+      { slug: 'alonso',      name: 'Fernando Alonso',   tagline: '2× WDC · Renault · Ferrari · 2001–',     color: '#006F62' },
+      { slug: 'vettel',      name: 'Sebastian Vettel',  tagline: '4× WDC · Red Bull dynasty · 2010–2013', color: '#1E3A8A' },
+      { slug: 'senna',       name: 'Ayrton Senna',      tagline: '3× WDC · Monaco legend · 1984–1994',    color: '#E10600' },
+      { slug: 'schumacher',  name: 'Michael Schumacher',tagline: '7× WDC · Ferrari · Benetton · 1991–2012',color: '#DC0000' },
+    ],
+    teams: [
+      { slug: 'ferrari',       name: 'Scuderia Ferrari',    tagline: '16× WCC · most storied constructor',    color: '#DC0000' },
+      { slug: 'red-bull',      name: 'Red Bull Racing',     tagline: '6× WCC · 8× WDC · Verstappen dynasty',  color: '#1E3A8A' },
+      { slug: 'mclaren',       name: 'McLaren',             tagline: '8× WCC · 2024 Constructors\' Champions', color: '#FF8000' },
+      { slug: 'mercedes',      name: 'Mercedes',            tagline: '8× WCC · Hamilton dynasty · 2014–2021', color: '#00D2BE' },
+      { slug: 'williams',      name: 'Williams Racing',     tagline: '9× WCC · constructors legend',           color: '#005AFF' },
+      { slug: 'aston-martin',  name: 'Aston Martin',        tagline: 'Alonso · British racing green',          color: '#006F62' },
+    ],
+    venues: [
+      { slug: 'spa',        name: 'Spa-Francorchamps',  tagline: '7.004 km · Ardennes, Belgium',     color: '#5FB87C' },
+      { slug: 'monaco',     name: 'Circuit de Monaco',  tagline: '3.337 km · Monte Carlo',           color: '#B5A642' },
+      { slug: 'monza',      name: 'Monza',              tagline: '5.793 km · Temple of Speed, Italy', color: '#C12E2E' },
+      { slug: 'silverstone',name: 'Silverstone',        tagline: '5.891 km · Northamptonshire, GB',  color: '#005AFF' },
+      { slug: 'suzuka',     name: 'Suzuka',             tagline: '5.807 km · Mie Prefecture, Japan', color: '#FF6B35' },
+      { slug: 'interlagos', name: 'Interlagos',         tagline: '4.309 km · São Paulo, Brazil',     color: '#00A651' },
+      { slug: 'bahrain',    name: 'Bahrain',            tagline: '5.412 km · Sakhir, Bahrain',       color: '#E0891A' },
+      { slug: 'abu-dhabi',  name: 'Abu Dhabi',          tagline: '5.281 km · Yas Marina, UAE',       color: '#9B59B6' },
+    ],
   },
   '2': {
     label: 'f(2)', name: 'Formula 2', color: '#00E5FF',
@@ -277,9 +303,100 @@ function EntityCard({ href, type, name, tagline, entityColor, seriesColor }: {
   )
 }
 
+/* ─── Live standings helpers ─────────────────────────────────────────────────── */
+
+interface DriverStandingRow {
+  position: number
+  driverId: string
+  firstName: string
+  lastName: string
+  nationality: string
+  permanentNumber?: string
+  constructorId: string
+  constructorName: string
+  points: string
+  wins: string
+}
+
+interface ConstructorStandingRow {
+  position: number
+  constructorId: string
+  name: string
+  nationality: string
+  points: string
+  wins: string
+}
+
+interface LiveStandings {
+  season: string
+  round: string
+  driverStandings: DriverStandingRow[]
+  constructorStandings: ConstructorStandingRow[]
+}
+
+async function fetchLiveStandings(): Promise<LiveStandings | null> {
+  try {
+    const [dRes, cRes] = await Promise.all([
+      fetch('https://api.jolpi.ca/ergast/f1/current/driverstandings.json', { next: { revalidate: 300 } }),
+      fetch('https://api.jolpi.ca/ergast/f1/current/constructorstandings.json', { next: { revalidate: 300 } }),
+    ])
+    if (!dRes.ok || !cRes.ok) return null
+    const [dData, cData] = await Promise.all([dRes.json(), cRes.json()])
+
+    const dList = dData?.MRData?.StandingsTable?.StandingsLists?.[0]
+    const cList = cData?.MRData?.StandingsTable?.StandingsLists?.[0]
+    if (!dList || !cList) return null
+
+    const season = dList.season as string
+    const round = dList.round as string
+
+    const driverStandings: DriverStandingRow[] = (dList.DriverStandings ?? []).map((s: Record<string, unknown>) => {
+      const d = s.Driver as Record<string, string>
+      const c = (s.Constructors as Array<Record<string, string>>)?.[0]
+      return {
+        position: parseInt(s.position as string),
+        driverId: d?.driverId ?? '',
+        firstName: d?.givenName ?? '',
+        lastName: d?.familyName ?? '',
+        nationality: d?.nationality ?? '',
+        permanentNumber: d?.permanentNumber,
+        constructorId: c?.constructorId ?? '',
+        constructorName: c?.name ?? '',
+        points: s.points as string,
+        wins: s.wins as string,
+      }
+    })
+
+    const constructorStandings: ConstructorStandingRow[] = (cList.ConstructorStandings ?? []).map((s: Record<string, unknown>) => {
+      const c = s.Constructor as Record<string, string>
+      return {
+        position: parseInt(s.position as string),
+        constructorId: c?.constructorId ?? '',
+        name: c?.name ?? '',
+        nationality: c?.nationality ?? '',
+        points: s.points as string,
+        wins: s.wins as string,
+      }
+    })
+
+    return { season, round, driverStandings, constructorStandings }
+  } catch {
+    return null
+  }
+}
+
+const CONSTRUCTOR_COLORS: Record<string, string> = {
+  ferrari: '#DC0000', mclaren: '#FF8000', mercedes: '#00D2BE', red_bull: '#1E3A8A',
+  williams: '#005AFF', aston_martin: '#006F62', alpine: '#0090FF', haas: '#B6BABD',
+  sauber: '#52E252', rb: '#6692FF', cadillac: '#C8A96E',
+}
+
 /* ─── F1 heritage page ───────────────────────────────────────────────────────── */
 
-function F1LandingPage({ config }: { config: typeof SERIES_CONFIG['1'] }) {
+function F1LandingPage({ config, standings }: {
+  config: typeof SERIES_CONFIG['1']
+  standings: LiveStandings | null
+}) {
   const decadeMarkers = [1950, 1960, 1970, 1980, 1990, 2000, 2010, 2020]
 
   return (
@@ -628,10 +745,98 @@ function F1LandingPage({ config }: { config: typeof SERIES_CONFIG['1'] }) {
         })}
       </section>
 
+      {/* ── Live Standings ── */}
+      {standings && (standings.driverStandings.length > 0 || standings.constructorStandings.length > 0) && (
+        <section style={{ padding: '0 1.75rem 3rem', borderTop: '0.5px solid #1a1a1a' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', margin: '2rem 0 20px' }}>
+            <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: 2, color: config.color, margin: 0 }}>
+              LIVE STANDINGS
+            </p>
+            <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, color: '#333', margin: 0 }}>
+              {standings.season} · ROUND {standings.round}
+            </p>
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
+            {/* Driver standings */}
+            <div style={{ background: '#060606', border: '0.5px solid #1a1a1a', borderRadius: 8, overflow: 'hidden' }}>
+              <div style={{ padding: '14px 18px 10px', borderBottom: '0.5px solid #1a1a1a', display: 'flex', justifyContent: 'space-between' }}>
+                <span style={{ fontFamily: 'var(--font-mono)', fontSize: 9, letterSpacing: 2, color: '#555' }}>DRIVERS</span>
+                <span style={{ fontFamily: 'var(--font-mono)', fontSize: 9, color: '#333' }}>PTS</span>
+              </div>
+              {standings.driverStandings.slice(0, 10).map((d, i) => {
+                const teamColor = CONSTRUCTOR_COLORS[d.constructorId] ?? '#555'
+                return (
+                  <Link
+                    key={d.driverId}
+                    href={`/f/1/driver/${d.driverId.replace(/_/g, '-')}`}
+                    style={{
+                      display: 'flex', alignItems: 'center', gap: 12, padding: '10px 18px',
+                      borderBottom: i < 9 ? '0.5px solid #111' : 'none',
+                      textDecoration: 'none', color: 'inherit',
+                      background: i === 0 ? teamColor + '0a' : 'transparent',
+                    }}
+                  >
+                    <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: i < 3 ? teamColor : '#444', minWidth: 20 }}>
+                      P{d.position}
+                    </span>
+                    <div style={{ flex: 1 }}>
+                      <span style={{ fontSize: 12, fontWeight: 500, color: i === 0 ? '#fff' : '#ccc' }}>
+                        {d.lastName}
+                      </span>
+                      <span style={{ fontFamily: 'var(--font-mono)', fontSize: 8, color: '#444', marginLeft: 8, letterSpacing: 0.5 }}>
+                        {d.constructorName.toUpperCase()}
+                      </span>
+                    </div>
+                    <span style={{ fontFamily: 'var(--font-mono)', fontSize: 12, color: i === 0 ? teamColor : '#666', fontWeight: i === 0 ? 500 : 400 }}>
+                      {d.points}
+                    </span>
+                  </Link>
+                )
+              })}
+            </div>
+            {/* Constructor standings */}
+            <div style={{ background: '#060606', border: '0.5px solid #1a1a1a', borderRadius: 8, overflow: 'hidden' }}>
+              <div style={{ padding: '14px 18px 10px', borderBottom: '0.5px solid #1a1a1a', display: 'flex', justifyContent: 'space-between' }}>
+                <span style={{ fontFamily: 'var(--font-mono)', fontSize: 9, letterSpacing: 2, color: '#555' }}>CONSTRUCTORS</span>
+                <span style={{ fontFamily: 'var(--font-mono)', fontSize: 9, color: '#333' }}>PTS</span>
+              </div>
+              {standings.constructorStandings.map((c, i) => {
+                const teamColor = CONSTRUCTOR_COLORS[c.constructorId] ?? '#555'
+                return (
+                  <Link
+                    key={c.constructorId}
+                    href={`/f/1/team/${c.constructorId.replace(/_/g, '-')}`}
+                    style={{
+                      display: 'flex', alignItems: 'center', gap: 12, padding: '10px 18px',
+                      borderBottom: i < standings.constructorStandings.length - 1 ? '0.5px solid #111' : 'none',
+                      textDecoration: 'none', color: 'inherit',
+                      background: i === 0 ? teamColor + '0a' : 'transparent',
+                    }}
+                  >
+                    <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: i < 3 ? teamColor : '#444', minWidth: 20 }}>
+                      P{c.position}
+                    </span>
+                    <div style={{ flex: 1 }}>
+                      <div style={{ width: 3, height: 12, background: teamColor, display: 'inline-block', borderRadius: 1, marginRight: 8, verticalAlign: 'middle' }} />
+                      <span style={{ fontSize: 12, fontWeight: 500, color: i === 0 ? '#fff' : '#ccc' }}>
+                        {c.name}
+                      </span>
+                    </div>
+                    <span style={{ fontFamily: 'var(--font-mono)', fontSize: 12, color: i === 0 ? teamColor : '#666', fontWeight: i === 0 ? 500 : 400 }}>
+                      {c.points}
+                    </span>
+                  </Link>
+                )
+              })}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* ── Browse ── */}
       <section style={{ padding: '0 1.75rem 4rem', borderTop: '0.5px solid #1a1a1a' }}>
         <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: 2, color: config.color, margin: '2rem 0 16px' }}>
-          BROWSE · BLUEPRINT PAGES
+          BROWSE
         </p>
         {[
           { label: 'DRIVERS', items: config.drivers, type: 'DRIVER', seg: 'driver' },
@@ -677,7 +882,7 @@ function F1LandingPage({ config }: { config: typeof SERIES_CONFIG['1'] }) {
         fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: 1.5, color: '#333',
       }}>
         <span>f(x) · FORMULA 1</span>
-        <span>PHASE 1 · BLUEPRINT</span>
+        <span>PHASE 3 · DYNAMIC</span>
       </footer>
     </div>
   )
@@ -775,7 +980,7 @@ function GenericSeriesPage({ series, config }: {
         fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: 1.5, color: '#333',
       }}>
         <span>f(x) · {config.name.toUpperCase()}</span>
-        <span>PHASE 1 · BLUEPRINT</span>
+        <span>PHASE 3 · DYNAMIC</span>
       </footer>
     </div>
   )
@@ -789,7 +994,8 @@ export default async function SeriesLandingPage({ params }: { params: Promise<{ 
   if (!config) notFound()
 
   if (series === '1') {
-    return <F1LandingPage config={config as typeof SERIES_CONFIG['1']} />
+    const standings = await fetchLiveStandings()
+    return <F1LandingPage config={config as typeof SERIES_CONFIG['1']} standings={standings} />
   }
   return <GenericSeriesPage series={series} config={config as typeof SERIES_CONFIG['2']} />
 }
