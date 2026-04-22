@@ -344,20 +344,26 @@ export default function VenuePage({
                 key={m.id}
                 style={{
                   aspectRatio: '16/10',
-                  background: 'linear-gradient(135deg, #0a1a10, #000)',
+                  background: m.imageUrl
+                    ? `url(${m.imageUrl}) center/cover no-repeat`
+                    : 'linear-gradient(135deg, #0a1a10, #000)',
                   border: `0.5px solid ${entityHex}22`,
                   borderRadius: 6, overflow: 'hidden',
                   position: 'relative', cursor: 'pointer',
                 }}
               >
+                {!m.imageUrl && (
+                  <div style={{
+                    position: 'absolute', inset: 0,
+                    background: `radial-gradient(ellipse at 45% 50%, ${m.glowColor} 0%, transparent 60%)`,
+                    opacity: 0.45,
+                  }} />
+                )}
                 <div style={{
                   position: 'absolute', inset: 0,
-                  background: `radial-gradient(ellipse at 45% 50%, ${m.glowColor} 0%, transparent 60%)`,
-                  opacity: 0.45,
-                }} />
-                <div style={{
-                  position: 'absolute', inset: 0,
-                  background: 'radial-gradient(circle at 50% 50%, transparent 35%, #000 92%)',
+                  background: m.imageUrl
+                    ? 'linear-gradient(to top, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.4) 55%, rgba(0,0,0,0.25) 100%)'
+                    : 'radial-gradient(circle at 50% 50%, transparent 35%, #000 92%)',
                 }} />
                 <div style={{ position: 'absolute', top: 10, left: 12, fontFamily: 'var(--font-mono)', fontSize: 9, color: entityHex, letterSpacing: 1 }}>
                   {m.year}

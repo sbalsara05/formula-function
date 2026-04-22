@@ -2,6 +2,7 @@ import Link from 'next/link'
 import CyclingReel from './CyclingReel'
 import RadarChart from './RadarChart'
 import TrajectoryModule from './TrajectoryModule'
+import FallbackImg from '@/components/ui/FallbackImg'
 import type {
   Driver,
   DriverStats,
@@ -187,7 +188,7 @@ function DriverHero({
         </g>
       </svg>
 
-      {/* Portrait placeholder — center zone */}
+      {/* Portrait panel — center zone */}
       <div style={{
         position: 'absolute', top: 40, bottom: 120,
         left: '36%', width: '18%',
@@ -195,21 +196,40 @@ function DriverHero({
         border: '0.5px solid #1a2847',
         background: 'linear-gradient(180deg, #0a1428 0%, #000 100%)',
       }}>
-        <div style={{ position: 'absolute', inset: 0, background: `radial-gradient(ellipse at 50% 25%, ${entityHex} 0%, ${entityHex} 18%, transparent 50%)`, opacity: 0.75 }} />
-        <div style={{ position: 'absolute', inset: '10% 20% 0 20%', background: `radial-gradient(ellipse at 50% 35%, ${entityHex} 0%, ${entityHex} 35%, transparent 70%)`, opacity: 0.55 }} />
+        {driver.portraitUrl ? (
+          <FallbackImg
+            src={driver.portraitUrl}
+            alt={driver.name}
+            style={{
+              position: 'absolute', inset: 0,
+              width: '100%', height: '100%',
+              objectFit: 'cover', objectPosition: 'center 20%',
+              opacity: 0.7,
+            }}
+          />
+        ) : (
+          <>
+            <div style={{ position: 'absolute', inset: 0, background: `radial-gradient(ellipse at 50% 25%, ${entityHex} 0%, ${entityHex} 18%, transparent 50%)`, opacity: 0.75 }} />
+            <div style={{ position: 'absolute', inset: '10% 20% 0 20%', background: `radial-gradient(ellipse at 50% 35%, ${entityHex} 0%, ${entityHex} 35%, transparent 70%)`, opacity: 0.55 }} />
+          </>
+        )}
         <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(circle at 50% 50%, transparent 30%, #000 95%)' }} />
         <div style={{ position: 'absolute', top: 14, left: 14, fontFamily: 'var(--font-mono)', fontSize: 9, color: '#FFD700', letterSpacing: 1.5 }}>
           {driver.initials} · 01
         </div>
-        <div style={{ position: 'absolute', top: 14, right: 14, fontFamily: 'var(--font-mono)', fontSize: 8, color: '#555', letterSpacing: 1 }}>
-          LIVERY REF
+        <div style={{ position: 'absolute', top: 14, right: 14, fontFamily: 'var(--font-mono)', fontSize: 8, color: driver.portraitUrl ? '#FFD700' : '#555', letterSpacing: 1 }}>
+          {driver.portraitUrl ? 'PEAK ERA' : 'LIVERY REF'}
         </div>
-        <div style={{ position: 'absolute', bottom: 40, left: 0, right: 0, textAlign: 'center', fontFamily: 'var(--font-mono)', fontSize: 8, color: '#888', letterSpacing: 2 }}>
-          FULL BODY
-        </div>
-        <div style={{ position: 'absolute', bottom: 18, left: 0, right: 0, textAlign: 'center', fontFamily: 'var(--font-mono)', fontSize: 7, color: '#666', letterSpacing: 1.5 }}>
-          PEAK ERA
-        </div>
+        {!driver.portraitUrl && (
+          <>
+            <div style={{ position: 'absolute', bottom: 40, left: 0, right: 0, textAlign: 'center', fontFamily: 'var(--font-mono)', fontSize: 8, color: '#888', letterSpacing: 2 }}>
+              FULL BODY
+            </div>
+            <div style={{ position: 'absolute', bottom: 18, left: 0, right: 0, textAlign: 'center', fontFamily: 'var(--font-mono)', fontSize: 7, color: '#666', letterSpacing: 1.5 }}>
+              PEAK ERA
+            </div>
+          </>
+        )}
       </div>
 
       {/* Cycling reel — right zone (client component) */}
@@ -295,7 +315,12 @@ function ErasStrip({ eras }: { eras: DriverEra[] }) {
                 borderRadius: 6, overflow: 'hidden', position: 'relative',
               }}
             >
-              <div style={{ position: 'absolute', inset: 0, background: `radial-gradient(ellipse at 50% 45%, ${era.teamLiveryHex} 0%, ${era.teamLiveryHex} 28%, transparent 60%)`, opacity: 0.65 }} />
+              {era.imageUrl ? (
+                // eslint-disable-next-line @next/next/no-img-element
+                <FallbackImg src={era.imageUrl} alt="" ariaHidden style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center center', opacity: 0.45 }} />
+              ) : (
+                <div style={{ position: 'absolute', inset: 0, background: `radial-gradient(ellipse at 50% 45%, ${era.teamLiveryHex} 0%, ${era.teamLiveryHex} 28%, transparent 60%)`, opacity: 0.65 }} />
+              )}
               <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(circle at 50% 50%, transparent 35%, #000 92%)' }} />
               <div style={{ position: 'absolute', top: 8, left: 10, fontFamily: 'var(--font-mono)', fontSize: 8, color: era.teamAccentHex ?? era.teamLiveryHex, letterSpacing: 1 }}>
                 {era.teamName.toUpperCase()}

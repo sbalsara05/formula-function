@@ -9,10 +9,42 @@ import {
   vettelReelSlides, vettelScoutingReport,
   bearman, bearmanStats, bearmanEras, bearmanSignature,
   bearmanReelSlides, bearmanScoutingReport, bearmanTrajectory,
+  bearmanF1Stats, bearmanF1Signature, bearmanF1ReelSlides, bearmanF1ScoutingReport,
   hamilton, hamiltonStats, hamiltonEras, hamiltonSignature,
   hamiltonReelSlides, hamiltonScoutingReport,
   verstappen, verstappenStats, verstappenEras, verstappenSignature,
   verstappenReelSlides, verstappenScoutingReport,
+  leclerc, leclerStats, leclerEras, leclerSignature,
+  leclerReelSlides, leclerScoutingReport,
+  leclercF2, leclercF2Stats, leclercF2Eras, leclercF2Signature,
+  leclercF2ReelSlides, leclercF2ScoutingReport,
+  russellF2, russellF2Stats, russellF2Eras, russellF2Signature,
+  russellF2ReelSlides, russellF2ScoutingReport,
+  russellF1, russellF1Stats, russellF1Eras, russellF1Signature,
+  russellF1ReelSlides, russellF1ScoutingReport,
+  piastriF2, piastriF2Stats, piastriF2Eras, piastriF2Signature,
+  piastriF2ReelSlides, piastriF2ScoutingReport,
+  piastriF1, piastriF1Stats, piastriF1Eras, piastriF1Signature,
+  piastriF1ReelSlides, piastriF1ScoutingReport,
+  bortoleto, bortoletoStats, bortoletoEras, bortoletoSignature,
+  bortoletoReelSlides, bortoletoScoutingReport,
+  bortoletoF1Stats, bortoletoF1Signature, bortoletoF1ReelSlides, bortoletoF1ScoutingReport,
+  norris, norrisStats, norrisEras, norrisSignature, norrisReelSlides, norrisScoutingReport,
+  antonelli, antonelliStats, antonelliEras, antonelliSignature, antonelliReelSlides, antonelliScoutingReport,
+  alonso, alonsoStats, alonsoEras, alonsoSignature, alonsoReelSlides, alonsoScoutingReport,
+  stroll, strollStats, strollEras, strollSignature, strollReelSlides, strollScoutingReport,
+  gasly, gaslyStats, gaslyEras, gaslySignature, gaslyReelSlides, gaslyScoutingReport,
+  colapinto, colapintoStats, colapintoEras, colapintoSignature, colapintoReelSlides, colapintoScoutingReport,
+  albon, albonStats, albonEras, albonSignature, albonReelSlides, albonScoutingReport,
+  sainz, sainzStats, sainzEras, sainzSignature, sainzReelSlides, sainzScoutingReport,
+  ocon, oconStats, oconEras, oconSignature, oconReelSlides, oconScoutingReport,
+  hulkenberg, hulkenbergStats, hulkenbergEras, hulkenbergSignature, hulkenbergReelSlides, hulkenbergScoutingReport,
+  tsunoda, tsunodaStats, tsunodaEras, tsunodaSignature, tsunodaReelSlides, tsunodaScoutingReport,
+  hadjar, hadjarStats, hadjarEras, hadjarSignature, hadjarReelSlides, hadjarScoutingReport,
+  lawson, lawsonStats, lawsonEras, lawsonSignature, lawsonReelSlides, lawsonScoutingReport,
+  perez, perezStats, perezEras, perezSignature, perezReelSlides, perezScoutingReport,
+  bottas, bottasStats, bottasEras, bottasSignature, bottasReelSlides, bottasScoutingReport,
+  prost, prostStats, prostEras, prostSignature, prostReelSlides, prostScoutingReport,
 } from '@/data/mock/drivers'
 import type {
   Series, Driver, DriverStats, DriverEra, DrivingSignature,
@@ -38,30 +70,30 @@ interface DriverBundle {
 
 const DRIVER_REGISTRY: Partial<Record<Series, Record<string, DriverBundle>>> = {
   f1: {
-    vettel: {
-      driver: vettel,
-      stats: vettelStats,
-      eras: vettelEras,
-      signature: vettelSignature,
-      reelSlides: vettelReelSlides,
-      scoutingReport: vettelScoutingReport,
-    },
-    hamilton: {
-      driver: hamilton,
-      stats: hamiltonStats,
-      eras: hamiltonEras,
-      signature: hamiltonSignature,
-      reelSlides: hamiltonReelSlides,
-      scoutingReport: hamiltonScoutingReport,
-    },
-    verstappen: {
-      driver: verstappen,
-      stats: verstappenStats,
-      eras: verstappenEras,
-      signature: verstappenSignature,
-      reelSlides: verstappenReelSlides,
-      scoutingReport: verstappenScoutingReport,
-    },
+    vettel:      { driver: vettel,      stats: vettelStats,      eras: vettelEras,      signature: vettelSignature,      reelSlides: vettelReelSlides,      scoutingReport: vettelScoutingReport },
+    hamilton:    { driver: hamilton,    stats: hamiltonStats,    eras: hamiltonEras,    signature: hamiltonSignature,    reelSlides: hamiltonReelSlides,    scoutingReport: hamiltonScoutingReport },
+    verstappen:  { driver: verstappen,  stats: verstappenStats,  eras: verstappenEras,  signature: verstappenSignature,  reelSlides: verstappenReelSlides,  scoutingReport: verstappenScoutingReport },
+    leclerc:     { driver: leclerc,     stats: leclerStats,      eras: leclerEras,      signature: leclerSignature,      reelSlides: leclerReelSlides,      scoutingReport: leclerScoutingReport },
+    norris:      { driver: norris,      stats: norrisStats,      eras: norrisEras,      signature: norrisSignature,      reelSlides: norrisReelSlides,      scoutingReport: norrisScoutingReport },
+    piastri:     { driver: piastriF1,   stats: piastriF1Stats,   eras: piastriF1Eras,   signature: piastriF1Signature,   reelSlides: piastriF1ReelSlides,   scoutingReport: piastriF1ScoutingReport },
+    russell:     { driver: russellF1,   stats: russellF1Stats,   eras: russellF1Eras,   signature: russellF1Signature,   reelSlides: russellF1ReelSlides,   scoutingReport: russellF1ScoutingReport },
+    antonelli:   { driver: antonelli,   stats: antonelliStats,   eras: antonelliEras,   signature: antonelliSignature,   reelSlides: antonelliReelSlides,   scoutingReport: antonelliScoutingReport },
+    alonso:      { driver: alonso,      stats: alonsoStats,      eras: alonsoEras,      signature: alonsoSignature,      reelSlides: alonsoReelSlides,      scoutingReport: alonsoScoutingReport },
+    stroll:      { driver: stroll,      stats: strollStats,      eras: strollEras,      signature: strollSignature,      reelSlides: strollReelSlides,      scoutingReport: strollScoutingReport },
+    gasly:       { driver: gasly,       stats: gaslyStats,       eras: gaslyEras,       signature: gaslySignature,       reelSlides: gaslyReelSlides,       scoutingReport: gaslyScoutingReport },
+    colapinto:   { driver: colapinto,   stats: colapintoStats,   eras: colapintoEras,   signature: colapintoSignature,   reelSlides: colapintoReelSlides,   scoutingReport: colapintoScoutingReport },
+    albon:       { driver: albon,       stats: albonStats,       eras: albonEras,       signature: albonSignature,       reelSlides: albonReelSlides,       scoutingReport: albonScoutingReport },
+    sainz:       { driver: sainz,       stats: sainzStats,       eras: sainzEras,       signature: sainzSignature,       reelSlides: sainzReelSlides,       scoutingReport: sainzScoutingReport },
+    bearman:     { driver: bearman,     stats: bearmanF1Stats,   eras: bearmanEras,     signature: bearmanF1Signature,   reelSlides: bearmanF1ReelSlides,   scoutingReport: bearmanF1ScoutingReport },
+    ocon:        { driver: ocon,        stats: oconStats,        eras: oconEras,        signature: oconSignature,        reelSlides: oconReelSlides,        scoutingReport: oconScoutingReport },
+    hulkenberg:  { driver: hulkenberg,  stats: hulkenbergStats,  eras: hulkenbergEras,  signature: hulkenbergSignature,  reelSlides: hulkenbergReelSlides,  scoutingReport: hulkenbergScoutingReport },
+    bortoleto:   { driver: bortoleto,   stats: bortoletoF1Stats, eras: bortoletoEras,   signature: bortoletoF1Signature, reelSlides: bortoletoF1ReelSlides, scoutingReport: bortoletoF1ScoutingReport },
+    tsunoda:     { driver: tsunoda,     stats: tsunodaStats,     eras: tsunodaEras,     signature: tsunodaSignature,     reelSlides: tsunodaReelSlides,     scoutingReport: tsunodaScoutingReport },
+    hadjar:      { driver: hadjar,      stats: hadjarStats,      eras: hadjarEras,      signature: hadjarSignature,      reelSlides: hadjarReelSlides,      scoutingReport: hadjarScoutingReport },
+    lawson:      { driver: lawson,      stats: lawsonStats,      eras: lawsonEras,      signature: lawsonSignature,      reelSlides: lawsonReelSlides,      scoutingReport: lawsonScoutingReport },
+    perez:       { driver: perez,       stats: perezStats,       eras: perezEras,       signature: perezSignature,       reelSlides: perezReelSlides,       scoutingReport: perezScoutingReport },
+    bottas:      { driver: bottas,      stats: bottasStats,      eras: bottasEras,      signature: bottasSignature,      reelSlides: bottasReelSlides,      scoutingReport: bottasScoutingReport },
+    prost:       { driver: prost,       stats: prostStats,       eras: prostEras,       signature: prostSignature,       reelSlides: prostReelSlides,       scoutingReport: prostScoutingReport },
   },
   f2: {
     bearman: {
@@ -78,6 +110,66 @@ const DRIVER_REGISTRY: Partial<Record<Series, Record<string, DriverBundle>>> = {
         { label: 'F1 STARTS', value: '27', sub: '3 SUB + 24 HAAS' },
         { label: 'BEST RESULT', value: 'P4', sub: 'MEXICO 2025' },
         { label: '2026', value: 'HAAS', sub: 'F1 ONGOING' },
+      ],
+    },
+    'leclerc-f2': {
+      driver: leclercF2,
+      stats: leclercF2Stats,
+      eras: leclercF2Eras,
+      signature: leclercF2Signature,
+      reelSlides: leclercF2ReelSlides,
+      scoutingReport: leclercF2ScoutingReport,
+      heroStatRows: [
+        { label: 'F2 TITLE', value: '2017', sub: 'PREMA', accent: true },
+        { label: 'F2 WINS', value: '7', sub: '1 SEASON' },
+        { label: 'F2 POLES', value: '5' },
+        { label: 'DEST', value: 'Ferrari', sub: 'F1 2019–' },
+        { label: 'F1 STATUS', value: 'ACTIVE', sub: 'FERRARI' },
+      ],
+    },
+    'russell-f2': {
+      driver: russellF2,
+      stats: russellF2Stats,
+      eras: russellF2Eras,
+      signature: russellF2Signature,
+      reelSlides: russellF2ReelSlides,
+      scoutingReport: russellF2ScoutingReport,
+      heroStatRows: [
+        { label: 'F2 TITLE', value: '2018', sub: 'ART', accent: true },
+        { label: 'F2 WINS', value: '4', sub: 'WIRE-TO-WIRE' },
+        { label: 'F2 PODIUMS', value: '12' },
+        { label: 'DEST', value: 'Mercedes', sub: 'F1 2022–' },
+        { label: 'F1 STATUS', value: 'ACTIVE', sub: 'MERCEDES' },
+      ],
+    },
+    'piastri-f2': {
+      driver: piastriF2,
+      stats: piastriF2Stats,
+      eras: piastriF2Eras,
+      signature: piastriF2Signature,
+      reelSlides: piastriF2ReelSlides,
+      scoutingReport: piastriF2ScoutingReport,
+      heroStatRows: [
+        { label: 'F2 TITLE', value: '2021', sub: 'PREMA', accent: true },
+        { label: 'F2 WINS', value: '5', sub: 'ROOKIE SEASON' },
+        { label: 'F2 PODIUMS', value: '14' },
+        { label: 'F3 TITLE', value: '2020', sub: 'PREMA' },
+        { label: 'DEST', value: 'McLaren', sub: 'F1 2023–' },
+      ],
+    },
+    bortoleto: {
+      driver: bortoleto,
+      stats: bortoletoStats,
+      eras: bortoletoEras,
+      signature: bortoletoSignature,
+      reelSlides: bortoletoReelSlides,
+      scoutingReport: bortoletoScoutingReport,
+      heroStatRows: [
+        { label: 'F2 TITLE', value: '2024', sub: 'INVICTA', accent: true },
+        { label: 'F3 TITLE', value: '2023', sub: 'TRIDENT' },
+        { label: 'F2 WINS', value: '5' },
+        { label: 'DEST', value: 'Sauber', sub: 'F1 2025–' },
+        { label: 'F1 STATUS', value: 'ACTIVE', sub: 'SAUBER/AUDI' },
       ],
     },
   },
@@ -108,6 +200,7 @@ const DRIVER_SLUG_TO_JOLPICA: Record<string, string> = {
   hadjar: 'hadjar',
   bortoleto: 'bortoleto',
   colapinto: 'colapinto',
+  lindblad: 'arvid_lindblad',
   // Recent retired
   vettel: 'vettel',
   ricciardo: 'ricciardo',
@@ -181,6 +274,7 @@ const DRIVER_SLUG_TO_JOLPICA: Record<string, string> = {
 const W = 'https://en.wikipedia.org/wiki/Special:FilePath/'
 
 const DRIVER_IMAGE_MAP: Record<string, string> = {
+  // Current grid
   max_verstappen:     W + '2024-08-25_Motorsport,_Formel_1,_Gro%C3%9Fer_Preis_der_Niederlande_2024_STP_3973_by_Stepro_(medium_crop).jpg',
   hamilton:           W + 'Prime_Minister_Keir_Starmer_meets_Sir_Lewis_Hamilton_(54566928382)_(cropped).jpg',
   leclerc:            W + '2024-08-25_Motorsport,_Formel_1,_Gro%C3%9Fer_Preis_der_Niederlande_2024_STP_3978_by_Stepro_(cropped2).jpg',
@@ -188,11 +282,45 @@ const DRIVER_IMAGE_MAP: Record<string, string> = {
   piastri:            W + '2026_Chinese_GP_-_Oscar_Piastri_(cropped)_(cropped).jpg',
   alonso:             W + 'Alonso-68_(24710447098).jpg',
   russell:            W + 'KingsLeonSilverstne040724_(28_of_112)_(53838006028)_(cropped).jpg',
+  sainz:              W + 'Formula1Gabelhofen2022_(04)_(cropped2).jpg',
+  bottas:             W + 'Valtteri_Bottas_at_the_2026_Adelaide_Motorsport_Festival_(028A7567).jpg',
+  ricciardo:          W + 'Daniel_Ricciardo_January_2024.jpg',
+  bearman:            W + 'Oliver_Bearman_2025_(cropped).jpg',
+  tsunoda:            W + 'Yuki_Tsunoda_2024_Abu_Dhabi_(cropped).jpg',
+  hulkenberg:         W + 'Nico_H%C3%BClkenberg_2024_Abu_Dhabi_(cropped).jpg',
+  albon:              W + 'Alex_Albon_2024_Abu_Dhabi_(cropped).jpg',
+  gasly:              W + 'Pierre_Gasly_2024_Abu_Dhabi_(cropped).jpg',
+  stroll:             W + 'Lance_Stroll_2024_Abu_Dhabi_(cropped).jpg',
+  ocon:               W + 'Esteban_Ocon_2024_Abu_Dhabi_(cropped).jpg',
+  // Legends / retired
+  michael_schumacher: W + 'A%C3%A9cio_Neves%2C_Michael_Schumacher_e_Didi_(Cropped).jpg',
+  vettel:             W + 'Sebastian_Vettel_-_2022236172324_2022-08-24_Champions_for_Charity_-_Sven_-_1D_X_MK_II_-_0418_-_B70I2428_(cropped).jpg',
   senna:              W + 'Ayrton_Senna_9_(cropped).jpg',
+  prost:              W + 'Festival_automobile_international_2015_-_Photocall_-_065_(cropped3).jpg',
   raikkonen:          W + 'F12019_Schloss_Gabelhofen_(22)_(cropped).jpg',
   rosberg:            W + 'Nico_Rosberg_2016.jpg',
   button:             W + 'Jenson_Button_2024_WEC_Fuji.jpg',
-  prost:              W + 'Festival_automobile_international_2015_-_Photocall_-_065_(cropped3).jpg',
+  hakkinen:           W + 'Mika_H%C3%A4kkinen_Champions_for_Charity_2016-07-27.jpg',
+  mansell:            W + 'Nigel_Mansell_-_Mexican_Grand_Prix_01_(cropped).jpeg',
+  lauda:              W + 'Niki_Lauda_2013_%28cropped%29.jpg',
+  barrichello:        W + 'Rubens_Barrichello_2011_British_GP_%28cropped%29.jpg',
+  webber:             W + 'Mark_Webber_2013_Malaysia_%28cropped%29.jpg',
+  massa:              W + 'Felipe_Massa_2017_%28cropped%29.jpg',
+  coulthard:          W + 'David_Coulthard_Goodwood_2012_%28cropped%29.jpg',
+  damon_hill:         W + 'Damon_Hill_at_the_Atlassian_Williams_Racing_Fan_Zone_of_2026_(028A8247).jpg',
+  keke_rosberg:       W + 'Anefo_932-2378_Keke_Rosberg%2C_Zandvoort%2C_03-07-1982_-_Restoration.jpg',
+  mick_schumacher:    W + 'Mick_Schumacher_2024_WEC_Fuji.jpg',
+  hunt:               W + 'James_Hunt_1976_British_GP_%28cropped%29.jpg',
+  stewart:            W + 'Jackie_Stewart_Goodwood_2012_%28cropped%29.jpg',
+  fangio:             W + 'Juan_Manuel_Fangio_1952_%28cropped%29.jpg',
+  clark:              W + 'Jim_Clark_1965_%28cropped%29.jpg',
+  antonelli:          W + 'Kimi_Antonelli_at_the_2025_US_Grand_Prix_in_Austin%2C_TX_(cropped).jpg',
+  hadjar:             W + 'Isack_Hadjar_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_(028A8753)_(cropped).jpg',
+  colapinto:          W + 'Franco_Colapinto_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_(028A8704)_(cropped).jpg',
+  lawson:             W + 'Liam_Lawson_at_the_Red_Bull_Fan_Zone_%E2%80%93_Crown_Riverwalk%2C_Melbourne_(028A7793).jpg',
+  bortoleto:          W + 'Gabriel_Bortoleto_(cropped).jpg',
+  perez:              W + '2021_US_GP_driver_parade_(cropped2).jpg',
+  arvid_lindblad:     W + 'Arvid_Lindblad_at_the_Red_Bull_Fan_Zone_%E2%80%93_Crown_Riverwalk%2C_Melbourne_(028A7869)_(cropped).jpg',
 }
 
 /* ─── Team color lookup ───────────────────────────────────────────────────── */
@@ -201,6 +329,7 @@ const TEAM_COLORS: Record<string, string> = {
   ferrari: '#DC0000', mclaren: '#FF8000', mercedes: '#00D2BE',
   red_bull: '#1E3A8A', williams: '#005AFF', aston_martin: '#006F62',
   alpine: '#0090FF', haas: '#B6BABD', sauber: '#52E252', rb: '#6692FF',
+  audi: '#BB1C2A', cadillac: '#C8A951',
   lotus: '#FFD700', renault: '#FFD700', benetton: '#009944', brawn: '#BFFF00',
   tyrrell: '#1565C0', brabham: '#4A90D9', cooper: '#2E7D32', brm: '#1B5E20',
   jordan: '#FFD700', force_india: '#FF80C7', racing_point: '#FF80C7',
@@ -429,23 +558,23 @@ function buildReelSlidesFromHistory(
   for (const s of sorted.filter(s => s.position === 1)) {
     if (slides.length >= 5) break
     used.add(s.season)
-    slides.push({ slotLabel: `${initials} · ${y2(s.season)}`, badge: 'WORLD CHAMPION', glowColor: TEAM_COLORS[s.constructorId] ?? teamColor, kicker: `${s.season} · ${s.constructorName.toUpperCase()} · WDC`, headline: s.constructorName.toUpperCase(), meta: `${s.wins}W · ${s.points}PTS · P1`, svgPath: REEL_PATHS[slides.length % REEL_PATHS.length], imageUrl: img(slides.length) })
+    slides.push({ slotLabel: `${initials} · ${y2(s.season)}`, label: 'WORLD CHAMPION', glowColor: TEAM_COLORS[s.constructorId] ?? teamColor, tags: `${s.season} · ${s.constructorName.toUpperCase()} · WDC`, title: s.constructorName.toUpperCase(), subtitle: `${s.wins}W · ${s.points}PTS · P1`, svgPath: REEL_PATHS[slides.length % REEL_PATHS.length], imageUrl: img(slides.length) })
   }
   for (const s of [...sorted].sort((a, b) => b.wins - a.wins)) {
     if (slides.length >= 5) break
     if (used.has(s.season) || s.wins === 0) continue
     used.add(s.season)
-    slides.push({ slotLabel: `${initials} · ${y2(s.season)}`, badge: `${s.wins} WIN${s.wins > 1 ? 'S' : ''}`, glowColor: TEAM_COLORS[s.constructorId] ?? teamColor, kicker: `${s.season} · ${s.constructorName.toUpperCase()}`, headline: s.constructorName.toUpperCase(), meta: `${s.wins}W · ${s.points}PTS · P${s.position}`, svgPath: REEL_PATHS[slides.length % REEL_PATHS.length], imageUrl: img(slides.length) })
+    slides.push({ slotLabel: `${initials} · ${y2(s.season)}`, label: `${s.wins} WIN${s.wins > 1 ? 'S' : ''}`, glowColor: TEAM_COLORS[s.constructorId] ?? teamColor, tags: `${s.season} · ${s.constructorName.toUpperCase()}`, title: s.constructorName.toUpperCase(), subtitle: `${s.wins}W · ${s.points}PTS · P${s.position}`, svgPath: REEL_PATHS[slides.length % REEL_PATHS.length], imageUrl: img(slides.length) })
   }
   for (const s of [...sorted].reverse()) {
     if (slides.length >= 5) break
     if (used.has(s.season)) continue
     used.add(s.season)
-    slides.push({ slotLabel: `${initials} · ${y2(s.season)}`, badge: `P${s.position} ${s.season}`, glowColor: TEAM_COLORS[s.constructorId] ?? teamColor, kicker: `${s.season} · ${s.constructorName.toUpperCase()}`, headline: s.constructorName.toUpperCase(), meta: `P${s.position} · ${s.points}PTS${s.wins > 0 ? ` · ${s.wins}W` : ''}`, svgPath: REEL_PATHS[slides.length % REEL_PATHS.length], imageUrl: img(slides.length) })
+    slides.push({ slotLabel: `${initials} · ${y2(s.season)}`, label: `P${s.position} ${s.season}`, glowColor: TEAM_COLORS[s.constructorId] ?? teamColor, tags: `${s.season} · ${s.constructorName.toUpperCase()}`, title: s.constructorName.toUpperCase(), subtitle: `P${s.position} · ${s.points}PTS${s.wins > 0 ? ` · ${s.wins}W` : ''}`, svgPath: REEL_PATHS[slides.length % REEL_PATHS.length], imageUrl: img(slides.length) })
   }
 
   if (!slides.length) {
-    slides.push({ slotLabel: `${initials}`, badge: 'F1', glowColor: teamColor, kicker: 'FORMULA 1', headline: 'CAREER', meta: `${stats.races}R · ${stats.wins}W · ${stats.poles}P`, svgPath: REEL_PATHS[0], imageUrl: portraitUrl })
+    slides.push({ slotLabel: `${initials}`, label: 'F1', glowColor: teamColor, tags: 'FORMULA 1', title: 'CAREER', subtitle: `${stats.races}R · ${stats.wins}W · ${stats.poles}P`, svgPath: REEL_PATHS[0], imageUrl: portraitUrl })
   }
   return slides.slice(0, 5)
 }

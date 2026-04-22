@@ -495,6 +495,1705 @@ export const redbullKeyMoments: TeamKeyMoment[] = [
   },
 ];
 
+/* ─── ART Grand Prix (F2 / F3) ────────────────────────────────────────────── */
+
+export const artF2: Team = {
+  id: "art",
+  name: "ART Grand Prix",
+  shortName: "ART",
+  country: "France",
+  series: ["f2", "f3"],
+  founded: 1996,
+  current: true,
+  entityColor: "art",
+  liveryHex: "#888888",
+  bio: "Founded in 1996 as ASM and rebranded ART in 2005, ART Grand Prix quickly established themselves as the benchmark F2/GP2 operation. Lewis Hamilton won their maiden GP2 title in 2006. In the F2 era (2017–present) they have three driver championships — Russell (2018), de Vries (2019), Pourchaire (2023) — making them the second most successful team behind Prema. In F3, Victor Martins took the 2022 title.",
+  quote: "Hamilton. Rosberg. Vandoorne. Russell. De Vries. Pourchaire. The names speak for themselves.",
+  quoteContext: "ART Grand Prix driver heritage",
+};
+
+export const artF2Stats: TeamStats = {
+  teamId: "art",
+  constructorsTitles: 6,
+  driversTitles: 6,
+  wins: 84,
+  podiums: 210,
+  seasons: 20,
+  firstSeason: 2005,
+};
+
+export const artF2Eras: TeamEngineeringEra[] = [
+  {
+    teamId: "art",
+    label: "GP2 Dominance",
+    seasons: "2005–2016",
+    description:
+      "ART entered the brand-new GP2 Series in 2005 and became its most successful team. Hamilton won the inaugural title in 2006, Rosberg in 2008, and Vandoorne in 2015. Over 12 seasons they collected three GP2 driver championships, establishing the blueprint for factory-backed junior talent development.",
+    championships: 3,
+    driverNames: "HAMILTON · ROSBERG · VANDOORNE",
+    champLabel: "3× GP2",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/6/6b/Art-grosjean-spain-2008-lrg.jpg",
+  },
+  {
+    teamId: "art",
+    label: "F2 Era I — Back-to-Back",
+    seasons: "2018–2019",
+    description:
+      "The F2 era opened with ART delivering consecutive driver titles. George Russell ran a tactically immaculate 2018 campaign for Mercedes junior — wire-to-wire. Nyck de Vries followed in 2019 with one of the most consistent seasons the series had seen, amassing 12 podiums across the rounds.",
+    championships: 2,
+    driverNames: "RUSSELL · DE VRIES",
+    champLabel: "2× F2",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/e/e1/George_Russell%2C_ART_Grand_Prix_F2_Team_%2842837176685%29.jpg",
+  },
+  {
+    teamId: "art",
+    label: "F2 Era II — Resurgence",
+    seasons: "2020–2024",
+    description:
+      "After a run of Prema dominance from 2020–2022, ART returned to the top with Théo Pourchaire in 2023. The Sauber-backed Frenchman clinched the title at Yas Marina with Victor Martins as a strong team-mate. ART also took the 2022 FIA F3 title with Martins, underlining their dual-series capability.",
+    championships: 2,
+    driverNames: "POURCHAIRE · MARTINS",
+    champLabel: "F2 + F3",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/d/d6/FIA_F2_Austria_2024_Nr._1_Martins.jpg",
+  },
+];
+
+export const artF2SignatureBars: TeamSignatureBar[] = [
+  { label: "Qualifying performance",      rating: "STRONG",      value: 84, caption: "3 F2 CHAMPIONS BUILT ON Q PACE",      sentiment: "strength" },
+  { label: "Race setup conversion",       rating: "HIGH",        value: 80, caption: "GRID → PODIUM CONVERSION RATE +0.6",   sentiment: "strength" },
+  { label: "Driver academy partnerships", rating: "EXCEPTIONAL", value: 90, caption: "MERCEDES · ALPINE · RED BULL JUNIORS", sentiment: "strength" },
+  { label: "Strategy adaptability",       rating: "STRONG",      value: 74, caption: "RESPONSIVE TO SAFETY CAR WINDOWS",     sentiment: "neutral"  },
+  { label: "Tyre management culture",     rating: "HIGH",        value: 77, caption: "LONG-RUN PACE CONSISTENT",             sentiment: "neutral"  },
+  { label: "F1 graduation rate",          rating: "EXCEPTIONAL", value: 88, caption: "RUSSELL · DE VRIES · POURCHAIRE → F1", sentiment: "strength" },
+];
+
+export const artF2ReelSlides: ReelSlide[] = [
+  {
+    slotLabel: "2018 TITLE",
+    badge: "F2 CHAMPION",
+    glowColor: "#00D2BE",
+    kicker: "ART · GEORGE RUSSELL · WIRE-TO-WIRE",
+    headline: "Russell wins F2 2018",
+    meta: "ABU DHABI · MERCEDES JR · 4 WINS · 12 PODIUMS",
+    svgPath: "",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/e/e1/George_Russell%2C_ART_Grand_Prix_F2_Team_%2842837176685%29.jpg",
+  },
+  {
+    slotLabel: "2019 TITLE",
+    badge: "F2 CHAMPION",
+    glowColor: "#005AFF",
+    kicker: "ART · NYCK DE VRIES · CONSISTENCY",
+    headline: "De Vries wins F2 2019",
+    meta: "ART · 12 PODIUMS · RECORD CONSISTENCY AT THE TIME",
+    svgPath: "",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/c/c9/FIA_F2_Austria_2019_Nr._4_de_Vries_2.jpg",
+  },
+  {
+    slotLabel: "2023 TITLE",
+    badge: "F2 CHAMPION",
+    glowColor: "#52E252",
+    kicker: "ART · THÉO POURCHAIRE · SAUBER JR",
+    headline: "Pourchaire wins F2 2023",
+    meta: "YAS MARINA · SAUBER JUNIOR · THIRD ART F2 TITLE",
+    svgPath: "",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/9/91/FIA_F2_Austria_2023_Nr._5_Pourchaire_%281%29.jpg",
+  },
+  {
+    slotLabel: "2024 SEASON",
+    badge: "RACE WIN",
+    glowColor: "#888888",
+    kicker: "ART · VICTOR MARTINS · AUSTRIA 2024",
+    headline: "Martins Austria",
+    meta: "SPRINT WIN · ALPINE ACADEMY · 2024 CAMPAIGN",
+    svgPath: "",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/d/d6/FIA_F2_Austria_2024_Nr._1_Martins.jpg",
+  },
+];
+
+export const artF2Academy: TeamAcademyDriver[] = [
+  { name: "Lewis Hamilton",     tier: "alumni", note: "GP2 2006 champion → McLaren → Mercedes F1 · 7× WDC" },
+  { name: "Nico Rosberg",       tier: "alumni", note: "GP2 2008 champion → Williams → Mercedes F1 · 2016 WDC" },
+  { name: "Stoffel Vandoorne",  tier: "alumni", note: "GP2 2015 champion → McLaren F1 · Formula E champion" },
+  { name: "George Russell",     tier: "alumni", note: "F2 2018 champion → Williams → Mercedes F1" },
+  { name: "Nyck de Vries",      tier: "alumni", note: "F2 2019 champion → AlphaTauri F1 2023" },
+  { name: "Théo Pourchaire",    tier: "alumni", note: "F2 2023 champion → Sauber reserve driver" },
+  { name: "Victor Martins",     tier: "alumni", note: "F3 2022 champion · ART · Alpine academy" },
+  { name: "Lando Norris",       tier: "alumni", note: "GP2/F2 2018 runner-up · → McLaren F1 · 2025 WDC" },
+];
+
+export const artF2IconicCars: TeamIconicCar[] = [
+  {
+    name: "ART Dallara GP2/05",
+    year: 2006,
+    subtitle: "Hamilton's championship car",
+    meta: "GP2 CHAMPION 2006 · LEWIS HAMILTON · INAUGURAL ERA",
+    peak: true,
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/6/6b/Art-grosjean-spain-2008-lrg.jpg",
+  },
+  {
+    name: "ART Dallara F2 2018",
+    year: 2018,
+    subtitle: "Russell's title car",
+    meta: "F2 CHAMPION 2018 · GEORGE RUSSELL · WIRE-TO-WIRE",
+    peak: true,
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/e/e1/George_Russell%2C_ART_Grand_Prix_F2_Team_%2842837176685%29.jpg",
+  },
+  {
+    name: "ART Dallara F2 2024",
+    year: 2024,
+    subtitle: "Victor Martins' car",
+    meta: "2024 · VICTOR MARTINS · ALPINE ACADEMY",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/d/d6/FIA_F2_Austria_2024_Nr._1_Martins.jpg",
+  },
+];
+
+/* ─── DAMS Lucas Oil (F2) ─────────────────────────────────────────────────── */
+
+export const damsF2: Team = {
+  id: "dams",
+  name: "DAMS Lucas Oil",
+  shortName: "DAMS",
+  country: "France",
+  series: ["f2"],
+  founded: 1988,
+  current: true,
+  entityColor: "dams",
+  liveryHex: "#CC2200",
+  bio: "Founded in 1988 near Le Mans by Jean-Paul Driot and Hugues de Chaunac, DAMS (Driot-Arnoux Motorsport) is one of the most storied names in European junior motorsport. Two GP2 driver titles — Davide Valsecchi (2012) and Jolyon Palmer (2014) — anchor their legacy. In the F2 era they have developed Alex Albon, Jack Doohan, and a string of Red Bull and Williams-backed juniors without yet adding to their title count.",
+  quote: "The most experienced French operation in junior open-wheel racing. Reliable, professional, battle-hardened.",
+  quoteContext: "DAMS racing identity",
+};
+
+export const damsF2Stats: TeamStats = {
+  teamId: "dams",
+  constructorsTitles: 2,
+  driversTitles: 2,
+  wins: 48,
+  podiums: 140,
+  seasons: 20,
+  firstSeason: 2005,
+};
+
+export const damsF2Eras: TeamEngineeringEra[] = [
+  {
+    teamId: "dams",
+    label: "GP2 Champion Seasons",
+    seasons: "2012 & 2014",
+    description:
+      "DAMS produced GP2's two most clinical champions in their title-winning years. Davide Valsecchi in 2012 went wire-to-wire with a dominant run; Jolyon Palmer in 2014 was relentless over a full season, culminating in the Yas Marina title. Both became the template DAMS car: disciplined, consistent, hard to beat across a full campaign.",
+    championships: 2,
+    driverNames: "VALSECCHI · PALMER",
+    champLabel: "2× GP2",
+    golden: true,
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/0/0c/Prove_GP2_-_83%C2%B0_Gran_Premio_d%27Italia_2012_-_Monza_-07-09-2012_%287960926896%29.jpg",
+  },
+  {
+    teamId: "dams",
+    label: "F2 Modern Era",
+    seasons: "2017–present",
+    description:
+      "The F2 rebrand has seen DAMS attract talent from Red Bull, Williams, and Renault/Alpine academies. Alex Albon's 2018–19 stint was a high point — race wins and consistent scoring before his Red Bull call-up. More recently Jack Doohan (2023–24) and Jak Crawford represent DAMS's role as a trusted launchpad rather than a championship operation.",
+    championships: 0,
+    driverNames: "ALBON · DOOHAN · CRAWFORD",
+    champLabel: "F2 ERA",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/d/de/2021_British_Grand_Prix_%2851349281236%29.jpg",
+  },
+];
+
+export const damsF2SignatureBars: TeamSignatureBar[] = [
+  { label: "Engineering depth",         rating: "STRONG",       value: 80, caption: "35+ YEARS JUNIOR MOTORSPORT EXPERIENCE", sentiment: "strength" },
+  { label: "Qualifying setup",          rating: "HIGH",         value: 73, caption: "TOP-6 AVERAGE GRID POSITION F2 ERA",      sentiment: "neutral"  },
+  { label: "Race strategy",             rating: "CONSERVATIVE", value: 66, caption: "MEASURED, LOW-VARIANCE PIT CALLS",         sentiment: "neutral"  },
+  { label: "Driver development",        rating: "STRONG",       value: 82, caption: "ALBON · DOOHAN · CRAWFORD DEVELOPED",      sentiment: "strength" },
+  { label: "Wet-weather execution",     rating: "MODERATE",     value: 70, caption: "SOLID IN VARIABLE CONDITIONS",             sentiment: "neutral"  },
+  { label: "Academy partnerships",      rating: "EXCEPTIONAL",  value: 85, caption: "RED BULL · WILLIAMS · RENAULT JUNIORS",    sentiment: "strength" },
+];
+
+export const damsF2ReelSlides: ReelSlide[] = [
+  {
+    slotLabel: "GP2 2012",
+    badge: "GP2 CHAMPION",
+    glowColor: "#CC2200",
+    kicker: "DAMS · VALSECCHI · GP2 2012 TITLE",
+    headline: "Valsecchi wins GP2",
+    meta: "2012 · DAVIDE VALSECCHI · WIRE-TO-WIRE GP2 CHAMPION",
+    svgPath: "",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/0/0c/Prove_GP2_-_83%C2%B0_Gran_Premio_d%27Italia_2012_-_Monza_-07-09-2012_%287960926896%29.jpg",
+  },
+  {
+    slotLabel: "GP2 2014",
+    badge: "GP2 CHAMPION",
+    glowColor: "#CC2200",
+    kicker: "DAMS · JOLYON PALMER · GP2 2014",
+    headline: "Palmer wins GP2",
+    meta: "2014 · JOLYON PALMER · DAMS BACK-TO-BACK GP2 HERITAGE",
+    svgPath: "",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/5/5a/Jolyon_Palmer_GP2_2014_Silverstone_001.jpg",
+  },
+  {
+    slotLabel: "F2 2018",
+    badge: "F2 WIN",
+    glowColor: "#3B48E0",
+    kicker: "DAMS · ALEX ALBON · F2 RACE WIN",
+    headline: "Albon breakthrough",
+    meta: "2018–19 · ALEX ALBON · PRE–RED BULL F1 CALL-UP",
+    svgPath: "",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/d/de/2021_British_Grand_Prix_%2851349281236%29.jpg",
+  },
+];
+
+export const damsF2Academy: TeamAcademyDriver[] = [
+  { name: "Davide Valsecchi",    tier: "alumni", note: "GP2 champion 2012 · DAMS · Italian driver, later pundit" },
+  { name: "Jolyon Palmer",       tier: "alumni", note: "GP2 champion 2014 · DAMS · → Renault F1 2016–17" },
+  { name: "Romain Grosjean",     tier: "alumni", note: "GP2 2011 runner-up · DAMS · → Lotus/Haas F1" },
+  { name: "Alex Albon",          tier: "alumni", note: "F2 race wins 2018–19 · DAMS · → Red Bull F1 · Williams F1" },
+  { name: "Jack Doohan",         tier: "alumni", note: "DAMS F2 2023–24 · → Alpine F1 2025" },
+  { name: "Jak Crawford",        tier: "junior", note: "Red Bull junior · DAMS F2 2025 · race winner" },
+];
+
+export const damsF2IconicCars: TeamIconicCar[] = [
+  {
+    name: "DAMS Dallara GP2/11",
+    year: 2012,
+    subtitle: "Valsecchi's GP2 champion car",
+    meta: "GP2 CHAMPION 2012 · DAVIDE VALSECCHI · WIRE-TO-WIRE",
+    peak: true,
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/0/0c/Prove_GP2_-_83%C2%B0_Gran_Premio_d%27Italia_2012_-_Monza_-07-09-2012_%287960926896%29.jpg",
+  },
+  {
+    name: "DAMS Dallara F2 2018",
+    year: 2018,
+    subtitle: "Albon's breakthrough car",
+    meta: "F2 2018–19 · ALEX ALBON · PRE–RED BULL LAUNCHPAD",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/d/de/2021_British_Grand_Prix_%2851349281236%29.jpg",
+  },
+];
+
+/* ─── Trident (F2 / F3) ──────────────────────────────────────────────────── */
+
+export const trident: Team = {
+  id: "trident",
+  name: "Trident",
+  shortName: "Trident",
+  country: "Italy",
+  series: ["f2", "f3"],
+  founded: 2006,
+  current: true,
+  entityColor: "trident",
+  liveryHex: "#990000",
+  bio: "Founded in 2006 in San Pietro Mosezzo, Piedmont, Trident is the privateer powerhouse of the FIA F3 era. Three consecutive F3 driver championships — Gabriel Bortoleto (2023), Leonardo Fornaroli (2024), Rafael Câmara (2025) — are the most dominant run in the series' history. Bortoleto's immediate follow-up F2 title with Invicta in 2024 further validates Trident's driver development culture. They run in F2 as well, though their F3 identity defines them.",
+  quote: "Three straight F3 champions. Independent Italian. The anti-Prema.",
+  quoteContext: "Trident F3 dynasty 2023–2025",
+};
+
+export const tridentStats: TeamStats = {
+  teamId: "trident",
+  constructorsTitles: 3,
+  driversTitles: 3,
+  wins: 18,
+  podiums: 55,
+  seasons: 7,
+  firstSeason: 2019,
+};
+
+export const tridentEras: TeamEngineeringEra[] = [
+  {
+    teamId: "trident",
+    label: "F3 Building Phase",
+    seasons: "2019–2022",
+    description:
+      "Trident entered the rebranded FIA F3 in 2019 and spent four seasons building engineering competency in the spec-chassis era. Clément Novalak was a consistent scorer; they regularly placed drivers in the top ten. The foundations were laid for what was to come.",
+    championships: 0,
+    driverNames: "NOVALAK · PERONI · HAUGER",
+    champLabel: "FOUNDATIONS",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/5/55/FIA_F3_Austria_2021_Nr._5_Novalak.jpg",
+  },
+  {
+    teamId: "trident",
+    label: "F3 Dynasty",
+    seasons: "2023–2025",
+    description:
+      "Three consecutive FIA F3 driver championships cemented Trident as the series' dominant force. Gabriel Bortoleto (2023) was the first South American F3 champion; Leonardo Fornaroli (2024) became the first champion never to have won an F3 race in the conventional sense; Rafael Câmara (2025) continued the streak as a Ferrari junior. An unprecedented achievement for an Italian independent.",
+    championships: 3,
+    driverNames: "BORTOLETO · FORNAROLI · CÂMARA",
+    champLabel: "3× F3",
+    golden: true,
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/0/09/70th_MACAU_GRAND_PRIX_%28181%29.jpg",
+  },
+];
+
+export const tridentSignatureBars: TeamSignatureBar[] = [
+  { label: "Spec chassis mastery",      rating: "EXCEPTIONAL",  value: 90, caption: "EXTRACTED MAXIMUM ACROSS 3 SEASONS", sentiment: "strength" },
+  { label: "Qualifying pace",           rating: "STRONG",       value: 82, caption: "TOP-4 GRID AVERAGE IN TITLE YEARS",   sentiment: "strength" },
+  { label: "Race execution",            rating: "HIGH",         value: 80, caption: "LOW INCIDENT RATE · CLEAN WEEKENDS",  sentiment: "neutral"  },
+  { label: "Driver talent identification",rating: "BEST-IN-CLASS",value: 94, caption: "3 CONSECUTIVE F3 TITLE DRIVERS",   sentiment: "strength" },
+  { label: "Wet-weather strategy",      rating: "STRONG",       value: 75, caption: "FLEXIBLE SETUP IN MIXED CONDITIONS",  sentiment: "neutral"  },
+  { label: "Independent identity",      rating: "EXCEPTIONAL",  value: 92, caption: "NO FACTORY BACKING · BEAT THEM ALL",  sentiment: "strength" },
+];
+
+export const tridentReelSlides: ReelSlide[] = [
+  {
+    slotLabel: "2023 F3",
+    badge: "F3 CHAMPION",
+    glowColor: "#990000",
+    kicker: "TRIDENT · BORTOLETO · F3 2023",
+    headline: "Bortoleto champion",
+    meta: "FIRST SOUTH AMERICAN FIA F3 CHAMPION · TRIDENT",
+    svgPath: "",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/0/09/70th_MACAU_GRAND_PRIX_%28181%29.jpg",
+  },
+  {
+    slotLabel: "2024 F3",
+    badge: "F3 CHAMPION",
+    glowColor: "#990000",
+    kicker: "TRIDENT · FORNAROLI · F3 2024",
+    headline: "Fornaroli champion",
+    meta: "BACK-TO-BACK · ITALIAN PRODIGY · TRIDENT DYNASTY",
+    svgPath: "",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/0/0e/FIA_F3_Austria_2024_Nr._4_Fornaroli.jpg",
+  },
+  {
+    slotLabel: "2025 F3",
+    badge: "F3 CHAMPION",
+    glowColor: "#DC0000",
+    kicker: "TRIDENT · CÂMARA · F3 2025",
+    headline: "Câmara champion",
+    meta: "THREE CONSECUTIVE F3 TITLES · FERRARI JUNIOR · UNPRECEDENTED",
+    svgPath: "",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/2/26/FIA_F3_Austria_2025_Nr._5_C%C3%A2mara.jpg",
+  },
+];
+
+export const tridentAcademy: TeamAcademyDriver[] = [
+  { name: "Gabriel Bortoleto",  tier: "alumni", note: "F3 2023 champion → F2 2024 champion (Invicta) → Sauber F1 2025" },
+  { name: "Leonardo Fornaroli", tier: "alumni", note: "F3 2024 champion · Italian · → F2 2025 with Invicta" },
+  { name: "Rafael Câmara",      tier: "junior", note: "F3 2025 champion · Ferrari junior · youngest in 2023 F4 Italia" },
+  { name: "Clément Novalak",    tier: "alumni", note: "Multiple F3 seasons · Trident stalwart · F2 with ART" },
+  { name: "Roman Staněk",       tier: "alumni", note: "F3 with Trident · Macau GP 2023 · Czech Republic" },
+];
+
+export const tridentIconicCars: TeamIconicCar[] = [
+  {
+    name: "Trident Dallara F3 2023",
+    year: 2023,
+    subtitle: "Bortoleto's championship car",
+    meta: "FIA F3 CHAMPION 2023 · GABRIEL BORTOLETO · FIRST SOUTH AMERICAN TITLE",
+    peak: true,
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/0/09/70th_MACAU_GRAND_PRIX_%28181%29.jpg",
+  },
+  {
+    name: "Trident Dallara F3 2024",
+    year: 2024,
+    subtitle: "Fornaroli's championship car",
+    meta: "FIA F3 CHAMPION 2024 · LEONARDO FORNAROLI · BACK-TO-BACK",
+    peak: true,
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/0/0e/FIA_F3_Austria_2024_Nr._4_Fornaroli.jpg",
+  },
+  {
+    name: "Trident Dallara F3 2025",
+    year: 2025,
+    subtitle: "Câmara's championship car",
+    meta: "FIA F3 CHAMPION 2025 · RAFAEL CÂMARA · THREE IN A ROW",
+    peak: true,
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/2/26/FIA_F3_Austria_2025_Nr._5_C%C3%A2mara.jpg",
+  },
+];
+
+/* ─── MP Motorsport (F2 / F3) ────────────────────────────────────────────── */
+
+export const mpMotorsport: Team = {
+  id: "mp",
+  name: "MP Motorsport",
+  shortName: "MP",
+  country: "Netherlands",
+  series: ["f2", "f3"],
+  founded: 1995,
+  current: true,
+  entityColor: "mp",
+  liveryHex: "#FF6600",
+  bio: "Founded in 1995 as MultiPromo in the Netherlands, MP Motorsport arrived in the GP2 Series and steadily built toward their breakthrough. Their defining moment came in 2022 when Felipe Drugovich delivered the FIA F2 driver and teams championships — the first Brazilian F2 champion since the modern era. Based in Westmaas, they run both F2 and F3 programmes and are recognised as a competitive mid-field team with genuine championship potential.",
+  quote: "Drugovich 2022. The Dutch-Brazilian connection. Quietly building something real.",
+  quoteContext: "MP Motorsport identity",
+};
+
+export const mpMotorsportStats: TeamStats = {
+  teamId: "mp",
+  constructorsTitles: 1,
+  driversTitles: 1,
+  wins: 22,
+  podiums: 64,
+  seasons: 8,
+  firstSeason: 2017,
+};
+
+export const mpMotorsportEras: TeamEngineeringEra[] = [
+  {
+    teamId: "mp",
+    label: "F2 Entry & Growth",
+    seasons: "2017–2021",
+    description:
+      "MP entered the rebranded F2 in 2017 as a competitive but non-championship outfit. Consistent points scoring and occasional podiums built team infrastructure and recruited a string of junior-academy-backed drivers from across Europe and South America.",
+    championships: 0,
+    driverNames: "DELETRAZ · BOSCHUNG · VERSCHOOR",
+    champLabel: "GROWING",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/d/de/2021_British_Grand_Prix_%2851349281236%29.jpg",
+  },
+  {
+    teamId: "mp",
+    label: "Championship Year",
+    seasons: "2022",
+    description:
+      "Felipe Drugovich delivered the defining season. The Brazilian dominated large parts of the 2022 campaign, winning 5 races and accumulating 265 championship points to win both the driver and teams titles. It was the first time a Dutchbased team had won an F2 or GP2 championship, and the first Brazilian title since the early GP2 era.",
+    championships: 1,
+    driverNames: "DRUGOVICH",
+    champLabel: "F2 CHAMPION",
+    golden: true,
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/7/74/FIA_F2_Austria_2022_Nr._11_Drugovich.jpg",
+  },
+  {
+    teamId: "mp",
+    label: "Post-Championship Build",
+    seasons: "2023–present",
+    description:
+      "Following their title year, MP continued to attract competitive drivers. Richard Verschoor — a multi-year MP stalwart — has become a consistent race winner. Their F3 programme has produced strong junior results as the team builds toward a second championship challenge.",
+    championships: 0,
+    driverNames: "VERSCHOOR · GOETHE",
+    champLabel: "COMPETITIVE",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/4/40/FIA_F2_Austria_2023_Nr._22_Verschoor_%282%29.jpg",
+  },
+];
+
+export const mpMotorsportSignatureBars: TeamSignatureBar[] = [
+  { label: "Race pace consistency",   rating: "STRONG",      value: 78, caption: "COMPETITIVE THROUGHOUT 2022 TITLE RUN",  sentiment: "strength" },
+  { label: "Qualifying setup",        rating: "HIGH",        value: 72, caption: "TOP-6 AVERAGE IN CHAMPIONSHIP SEASON",    sentiment: "neutral"  },
+  { label: "Strategy execution",      rating: "STRONG",      value: 74, caption: "DRUGOVICH CLEAN STRATEGIC CALLS",         sentiment: "strength" },
+  { label: "Driver development",      rating: "STRONG",      value: 76, caption: "VERSCHOOR MULTI-YEAR RACE WINNER",        sentiment: "strength" },
+  { label: "Wet-weather adaptability",rating: "MODERATE",    value: 68, caption: "SETUP RANGE COVERS MIXED CONDITIONS",     sentiment: "neutral"  },
+  { label: "Championship pedigree",   rating: "HIGH",        value: 80, caption: "2022 DOUBLE CHAMPION — DRIVER + TEAMS",   sentiment: "strength" },
+];
+
+export const mpMotorsportReelSlides: ReelSlide[] = [
+  {
+    slotLabel: "2022 CHAMPION",
+    badge: "F2 CHAMPION",
+    glowColor: "#FF6600",
+    kicker: "MP MOTORSPORT · DRUGOVICH · DOMINANT",
+    headline: "Drugovich 2022",
+    meta: "5 WINS · 265 POINTS · FIRST DUTCH-TEAM F2 TITLE",
+    svgPath: "",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/7/74/FIA_F2_Austria_2022_Nr._11_Drugovich.jpg",
+  },
+  {
+    slotLabel: "VERSCHOOR",
+    badge: "RACE WIN",
+    glowColor: "#FF6600",
+    kicker: "MP · RICHARD VERSCHOOR · MULTIPLE WINS",
+    headline: "Verschoor wins",
+    meta: "2024–25 · DUTCH DRIVER · CONSISTENT RACE WINNER",
+    svgPath: "",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/4/40/FIA_F2_Austria_2023_Nr._22_Verschoor_%282%29.jpg",
+  },
+];
+
+export const mpMotorsportAcademy: TeamAcademyDriver[] = [
+  { name: "Felipe Drugovich",    tier: "alumni", note: "F2 2022 champion → Aston Martin F1 reserve/development 2023–24" },
+  { name: "Richard Verschoor",   tier: "junior", note: "Multi-year MP driver · Netherlands · consistent F2 race winner" },
+  { name: "Jordan King",         tier: "alumni", note: "F2 with MP 2019 · Manor F1 2016–17 · British driver" },
+  { name: "Oliver Goethe",       tier: "junior", note: "German junior · F2 2025 with MP" },
+];
+
+export const mpMotorsportIconicCars: TeamIconicCar[] = [
+  {
+    name: "MP Dallara F2 2022",
+    year: 2022,
+    subtitle: "Drugovich's championship car",
+    meta: "FIA F2 CHAMPION 2022 · FELIPE DRUGOVICH · 5 WINS · 265 PTS",
+    peak: true,
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/7/74/FIA_F2_Austria_2022_Nr._11_Drugovich.jpg",
+  },
+  {
+    name: "MP Dallara F2 2019",
+    year: 2019,
+    subtitle: "King/Albon era",
+    meta: "MP MOTORSPORT · F2 2019 · ORANGE DUTCH LIVERY",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/d/de/2021_British_Grand_Prix_%2851349281236%29.jpg",
+  },
+];
+
+/* ─── Invicta Racing (F2) ─────────────────────────────────────────────────── */
+
+export const invicta: Team = {
+  id: "invicta",
+  name: "Invicta Racing",
+  shortName: "Invicta",
+  country: "United Kingdom",
+  series: ["f2"],
+  founded: 2017,
+  current: true,
+  entityColor: "invicta",
+  liveryHex: "#1199CC",
+  bio: "Formerly Virtuosi Racing, the team was rebranded as Invicta Racing in 2024 following acquisition by the Invicta Watch Group. Their F2 history stretches back to 2017 when they entered as Virtuosi. Zhou Guanyu, Callum Ilott, and Felipe Drugovich all scored wins with the team before Bortoleto delivered their first and only driver championship in 2024. Leonardo Fornaroli followed with the 2025 title, making Invicta back-to-back F2 champions.",
+  quote: "Bortoleto 2024. Fornaroli 2025. The rebrand brought back-to-back titles.",
+  quoteContext: "Invicta Racing F2 identity",
+};
+
+export const invictaStats: TeamStats = {
+  teamId: "invicta",
+  constructorsTitles: 2,
+  driversTitles: 2,
+  wins: 36,
+  podiums: 92,
+  seasons: 8,
+  firstSeason: 2017,
+};
+
+export const invictaEras: TeamEngineeringEra[] = [
+  {
+    teamId: "invicta",
+    label: "Virtuosi Era",
+    seasons: "2017–2023",
+    description:
+      "As Virtuosi Racing, the team was a consistent front-runner without landing a title. Callum Ilott (2020 runner-up), Zhou Guanyu (2021 runner-up), and Felipe Drugovich (briefly with the team) all showed the car was capable. Race wins came regularly — but the championship repeatedly eluded them under the Virtuosi name.",
+    championships: 0,
+    driverNames: "ILOTT · ZHOU · DRUGOVICH",
+    champLabel: "RUNNER-UP ERA",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/1/15/FIA_F2_Austria_2019_Nr._7_Zhou.jpg",
+  },
+  {
+    teamId: "invicta",
+    label: "Invicta — Back-to-Back",
+    seasons: "2024–2025",
+    description:
+      "Gabriel Bortoleto's arrival at the freshly rebranded Invicta team proved transformative. The Brazilian, fresh from his 2023 FIA F3 title with Trident, dominated the 2024 F2 season to win the driver and constructors championships. Leonardo Fornaroli — 2024 F3 champion — then stepped up and took the 2025 F2 title, completing an unprecedented back-to-back at the same team.",
+    championships: 2,
+    driverNames: "BORTOLETO · FORNAROLI",
+    champLabel: "2× F2",
+    golden: true,
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/8/82/FIA_F2_Austria_2024_Nr._10_Bortoleto.jpg",
+  },
+];
+
+export const invictaSignatureBars: TeamSignatureBar[] = [
+  { label: "Car preparation",       rating: "EXCEPTIONAL",  value: 88, caption: "BACK-TO-BACK CHAMPIONSHIPS 2024–25",  sentiment: "strength" },
+  { label: "Qualifying setup",      rating: "HIGH",         value: 82, caption: "FRONT-ROW REGULARS IN TITLE YEARS",    sentiment: "strength" },
+  { label: "Race execution",        rating: "HIGH",         value: 84, caption: "LOW-ATTRITION CLEAN RACE WEEKENDS",    sentiment: "strength" },
+  { label: "Driver progression",    rating: "EXCEPTIONAL",  value: 90, caption: "F3 CHAMPION → F2 CHAMPION PIPELINE",   sentiment: "strength" },
+  { label: "Strategy calls",        rating: "STRONG",       value: 76, caption: "AGGRESSIVE WHEN OPPORTUNITY ARISES",   sentiment: "neutral"  },
+  { label: "Team identity clarity", rating: "STRONG",       value: 74, caption: "REBRAND 2024 → IMMEDIATE TITLES",      sentiment: "strength" },
+];
+
+export const invictaReelSlides: ReelSlide[] = [
+  {
+    slotLabel: "2024 TITLE",
+    badge: "F2 CHAMPION",
+    glowColor: "#1199CC",
+    kicker: "INVICTA · GABRIEL BORTOLETO · F2 2024",
+    headline: "Bortoleto 2024",
+    meta: "FIRST INVICTA F2 TITLE · BACK-TO-BACK JUNIOR CHAMPION",
+    svgPath: "",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/8/82/FIA_F2_Austria_2024_Nr._10_Bortoleto.jpg",
+  },
+  {
+    slotLabel: "2025 TITLE",
+    badge: "F2 CHAMPION",
+    glowColor: "#1199CC",
+    kicker: "INVICTA · FORNAROLI · F2 2025",
+    headline: "Fornaroli 2025",
+    meta: "BACK-TO-BACK F2 TITLES · TRIDENT → INVICTA PIPELINE",
+    svgPath: "",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/b/bc/FIA_F2_Austria_2025_Nr._1_Fornaroli.jpg",
+  },
+];
+
+export const invictaAcademy: TeamAcademyDriver[] = [
+  { name: "Gabriel Bortoleto",   tier: "alumni", note: "F2 2024 champion → Sauber/Audi F1 2025" },
+  { name: "Leonardo Fornaroli",  tier: "alumni", note: "F2 2025 champion · Italian · Trident F3 2024 champion" },
+  { name: "Callum Ilott",        tier: "alumni", note: "F2 2020 runner-up · Virtuosi · → Ferrari reserve · IndyCar" },
+  { name: "Zhou Guanyu",         tier: "alumni", note: "F2 2021 runner-up · Virtuosi · → Sauber F1 2022–24" },
+  { name: "Roman Staněk",        tier: "junior", note: "Czech driver · Invicta 2025 · Trident F3 alumni" },
+];
+
+export const invictaIconicCars: TeamIconicCar[] = [
+  {
+    name: "Invicta Dallara F2 2024",
+    year: 2024,
+    subtitle: "Bortoleto's championship car",
+    meta: "FIA F2 CHAMPION 2024 · GABRIEL BORTOLETO · BACK-TO-BACK JUNIOR",
+    peak: true,
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/8/82/FIA_F2_Austria_2024_Nr._10_Bortoleto.jpg",
+  },
+  {
+    name: "Invicta Dallara F2 2025",
+    year: 2025,
+    subtitle: "Fornaroli's championship car",
+    meta: "FIA F2 CHAMPION 2025 · LEONARDO FORNAROLI · INVICTA DYNASTY",
+    peak: true,
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/b/bc/FIA_F2_Austria_2025_Nr._1_Fornaroli.jpg",
+  },
+];
+
+/* ─── Hitech Grand Prix (F2 / F3) ────────────────────────────────────────── */
+
+export const hitechGP: Team = {
+  id: "hitech",
+  name: "Hitech TGR",
+  shortName: "Hitech",
+  country: "United Kingdom",
+  series: ["f2", "f3"],
+  founded: 2002,
+  current: true,
+  entityColor: "hitech",
+  liveryHex: "#CC0022",
+  bio: "Silverstone-based Hitech Grand Prix entered F3 and F2 from 2018 onwards, becoming a regular fixture on both grids. Their partnership with Toyota Gazoo Racing (TGR) — reflected in the TGR suffix — provides manufacturer resources for driver development. The team has operated as a reliable midfield-to-front-running operation, attracting Red Bull and TOYOTA junior drivers, without yet landing an F2 or F3 driver championship.",
+  quote: "Silverstone roots. Toyota partnership. Always in the mix, never quite over the line.",
+  quoteContext: "Hitech TGR identity",
+};
+
+export const hitechGPStats: TeamStats = {
+  teamId: "hitech",
+  constructorsTitles: 0,
+  driversTitles: 0,
+  wins: 10,
+  podiums: 38,
+  seasons: 7,
+  firstSeason: 2018,
+};
+
+export const hitechGPEras: TeamEngineeringEra[] = [
+  {
+    teamId: "hitech",
+    label: "Early Years",
+    seasons: "2018–2020",
+    description:
+      "Hitech entered F2 and F3 in 2018 and quickly established front-running pace. Nikita Mazepin (2020, P5 in F2) and other Red Bull juniors showed the team could compete at the front. Results were promising but inconsistent.",
+    championships: 0,
+    driverNames: "MAZEPIN · VIPS · ARMSTRONG",
+    champLabel: "ESTABLISHING",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/e/ef/FIA_F3_Austria_2019_Nr._20_Pulcini.jpg",
+  },
+  {
+    teamId: "hitech",
+    label: "TGR Partnership",
+    seasons: "2021–present",
+    description:
+      "The Toyota Gazoo Racing partnership brought additional resources and a pipeline of TOYOTA-backed drivers from Asia and Europe. Ritomo Miyata (2025) leads the current programme. The team operates across both F2 and F3 grids, making them one of the more active organisations in the junior ladder.",
+    championships: 0,
+    driverNames: "MIYATA · HERTA · VIPS",
+    champLabel: "TGR ERA",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/2/2b/70th_MACAU_GRAND_PRIX_%28101%29.jpg",
+  },
+];
+
+export const hitechGPSignatureBars: TeamSignatureBar[] = [
+  { label: "Front-end setup quality", rating: "STRONG",    value: 74, caption: "COMPETITIVE IN DRY QUALIFYING",      sentiment: "neutral"  },
+  { label: "Race setup",              rating: "MODERATE",  value: 68, caption: "VARIABLE ACROSS CIRCUIT TYPES",     sentiment: "neutral"  },
+  { label: "Manufacturer support",    rating: "STRONG",    value: 80, caption: "TOYOTA GAZOO RACING PARTNERSHIP",   sentiment: "strength" },
+  { label: "Driver pipeline",         rating: "HIGH",      value: 76, caption: "RED BULL + TOYOTA JUNIOR DRIVERS",  sentiment: "strength" },
+  { label: "Consistency",             rating: "MODERATE",  value: 66, caption: "RACE-BY-RACE VARIABILITY",          sentiment: "neutral"  },
+  { label: "Championship threat",     rating: "MODERATE",  value: 62, caption: "FRONT-ROW PACE WITHOUT F2 TITLE",   sentiment: "neutral"  },
+];
+
+export const hitechGPReelSlides: ReelSlide[] = [
+  {
+    slotLabel: "F3 MACAU 2023",
+    badge: "F3 ACTION",
+    glowColor: "#CC0022",
+    kicker: "HITECH · MACAU GRAND PRIX 2023",
+    headline: "Macau 2023",
+    meta: "70TH MACAU GRAND PRIX · HITECH · F3 COMPETITION",
+    svgPath: "",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/2/2b/70th_MACAU_GRAND_PRIX_%28101%29.jpg",
+  },
+  {
+    slotLabel: "MIYATA",
+    badge: "F2 RACE",
+    glowColor: "#CC0022",
+    kicker: "HITECH TGR · RITOMO MIYATA · 2025",
+    headline: "Miyata 2025",
+    meta: "TOYOTA JUNIOR · F2 2025 · JAPANESE PRODIGY",
+    svgPath: "",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/8/8e/2024_FIA_Formula_2_Silverstone_%2854042745964%29.jpg",
+  },
+];
+
+export const hitechGPAcademy: TeamAcademyDriver[] = [
+  { name: "Nikita Mazepin",     tier: "alumni", note: "F2 2020 P5 · Hitech · → Haas F1 2021 (contract terminated 2022)" },
+  { name: "Jüri Vips",          tier: "alumni", note: "Red Bull junior · Hitech F2 multiple seasons" },
+  { name: "Marcus Armstrong",   tier: "alumni", note: "Red Bull junior · Hitech F2 2021 · → IndyCar" },
+  { name: "Ritomo Miyata",      tier: "junior", note: "Toyota junior · F2 2025 · Japanese champion" },
+  { name: "Colton Herta",       tier: "junior", note: "IndyCar star on F2 programme · Hitech 2025" },
+];
+
+export const hitechGPIconicCars: TeamIconicCar[] = [
+  {
+    name: "Hitech Dallara F3 2023",
+    year: 2023,
+    subtitle: "Macau Grand Prix car",
+    meta: "70TH MACAU GRAND PRIX 2023 · HITECH · RED LIVERY",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/2/2b/70th_MACAU_GRAND_PRIX_%28101%29.jpg",
+  },
+  {
+    name: "Hitech Dallara F2 2025",
+    year: 2025,
+    subtitle: "Miyata & Herta",
+    meta: "HITECH TGR · F2 2025 · TOYOTA JUNIOR PROGRAMME",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/8/8e/2024_FIA_Formula_2_Silverstone_%2854042745964%29.jpg",
+  },
+];
+
+/* ─── Campos Racing (F2 / F3) ────────────────────────────────────────────── */
+
+export const camposRacing: Team = {
+  id: "campos",
+  name: "Campos Racing",
+  shortName: "Campos",
+  country: "Spain",
+  series: ["f2", "f3"],
+  founded: 1997,
+  current: true,
+  entityColor: "campos",
+  liveryHex: "#002266",
+  bio: "Founded in 1997 in Alzira, Valencia by former F1 driver Adrián Campos, Campos Racing is one of the most established Spanish motorsport organisations. Their GP2 Teams Championship in 2008 (with Timo Glock winning the driver title) remains their headline result. After Adrián Campos Sr. passed away in January 2021, his son Adrián Campos Jr. took the helm. Today, Campos competes in both F2 and F3, regularly producing Spanish academy talent and international juniors.",
+  quote: "Spanish motorsport's cornerstone. Alonso passed through. Glock gave us the GP2 title.",
+  quoteContext: "Campos Racing heritage",
+};
+
+export const camposRacingStats: TeamStats = {
+  teamId: "campos",
+  constructorsTitles: 1,
+  driversTitles: 1,
+  wins: 16,
+  podiums: 52,
+  seasons: 19,
+  firstSeason: 2005,
+};
+
+export const camposRacingEras: TeamEngineeringEra[] = [
+  {
+    teamId: "campos",
+    label: "GP2 Championship",
+    seasons: "2008",
+    description:
+      "Timo Glock won the GP2 Series with Campos Racing in 2008 — one of the most decorated seasons in the team's history. The German went on to race in Formula 1 for Toyota and Marussia/Virgin. The constructors' title cemented Campos as a legitimate GP2 power.",
+    championships: 1,
+    driverNames: "GLOCK",
+    champLabel: "GP2 CHAMP",
+    golden: true,
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/5/5b/Lucas_Di_Grassi_2008_GP2_Valencia.jpg",
+  },
+  {
+    teamId: "campos",
+    label: "F2 & F3 Era",
+    seasons: "2017–present",
+    description:
+      "Campos competes regularly in F2 and F3 under Adrián Campos Jr. Their blue-and-white Spanish livery is a paddock fixture. In 2025 they took the F3 Teams Championship. Known for developing Spanish and South American talent, they play a key feeder role for national motorsport programmes.",
+    championships: 0,
+    driverNames: "MARTÍ · TSOLOV · LINDBLAD",
+    champLabel: "F3 TEAMS 2025",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/6/65/70th_MACAU_GRAND_PRIX_%28192%29.jpg",
+  },
+];
+
+export const camposRacingSignatureBars: TeamSignatureBar[] = [
+  { label: "Spanish talent pipeline",  rating: "EXCEPTIONAL", value: 88, caption: "ALONSO EARLY CAREER · CURRENT NATIONAL TALENT", sentiment: "strength" },
+  { label: "Race setup",               rating: "MODERATE",    value: 66, caption: "CONSISTENT MIDFIELD THROUGHOUT F2 ERA",          sentiment: "neutral"  },
+  { label: "Qualifying",               rating: "MODERATE",    value: 64, caption: "Q3 APPEARANCE RATE ~35% IN F2",                  sentiment: "neutral"  },
+  { label: "Team longevity",           rating: "EXCEPTIONAL", value: 92, caption: "28 YEARS OF JUNIOR MOTORSPORT EXPERIENCE",       sentiment: "strength" },
+  { label: "Development culture",      rating: "STRONG",      value: 76, caption: "NATIONAL TALENT INCUBATOR · SPAIN & LATAM",      sentiment: "strength" },
+  { label: "Championship pedigree",    rating: "HIGH",        value: 74, caption: "GP2 2008 CHAMPION · F3 2025 TEAMS TITLE",        sentiment: "strength" },
+];
+
+export const camposRacingReelSlides: ReelSlide[] = [
+  {
+    slotLabel: "GP2 2008",
+    badge: "GP2 CHAMPION",
+    glowColor: "#002266",
+    kicker: "CAMPOS RACING · TIMO GLOCK · GP2 2008",
+    headline: "Glock wins GP2",
+    meta: "2008 · TIMO GLOCK · GP2 DRIVER + TEAMS CHAMPION",
+    svgPath: "",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/5/5b/Lucas_Di_Grassi_2008_GP2_Valencia.jpg",
+  },
+  {
+    slotLabel: "MACAU 2023",
+    badge: "F3 ACTION",
+    glowColor: "#002266",
+    kicker: "CAMPOS · MACAU GRAND PRIX 2023",
+    headline: "Macau 2023",
+    meta: "70TH MACAU GP · CAMPOS · F3 COMPETITION",
+    svgPath: "",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/6/65/70th_MACAU_GRAND_PRIX_%28192%29.jpg",
+  },
+];
+
+export const camposRacingAcademy: TeamAcademyDriver[] = [
+  { name: "Timo Glock",          tier: "alumni", note: "GP2 2008 champion · Campos · → Toyota/Virgin/Marussia F1" },
+  { name: "Fernando Alonso",     tier: "alumni", note: "Euro Open champion with Campos forerunner · → F1 2× WDC" },
+  { name: "Pepe Martí",          tier: "junior", note: "Spanish junior · F2 2025 with Campos · Red Bull interest" },
+  { name: "Nikola Tsolov",       tier: "junior", note: "Bulgarian junior · F2 & F3 Campos 2025" },
+  { name: "Arvid Lindblad",      tier: "junior", note: "UK junior · F2 2025 Campos · Red Bull academy" },
+];
+
+export const camposRacingIconicCars: TeamIconicCar[] = [
+  {
+    name: "Campos GP2 Dallara GP2/05",
+    year: 2008,
+    subtitle: "Glock's championship car",
+    meta: "GP2 CHAMPION 2008 · TIMO GLOCK · CAMPOS RACING",
+    peak: true,
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/5/5b/Lucas_Di_Grassi_2008_GP2_Valencia.jpg",
+  },
+  {
+    name: "Campos Dallara F3 2023",
+    year: 2023,
+    subtitle: "Macau Grand Prix",
+    meta: "70TH MACAU GRAND PRIX 2023 · CAMPOS RACING",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/6/65/70th_MACAU_GRAND_PRIX_%28192%29.jpg",
+  },
+];
+
+/* ─── Rodin Motorsport (F2 / F3) ─────────────────────────────────────────── */
+
+export const rodinMotorsport: Team = {
+  id: "rodin",
+  name: "Rodin Motorsport",
+  shortName: "Rodin",
+  country: "United Kingdom",
+  series: ["f2", "f3"],
+  founded: 1996,
+  current: true,
+  entityColor: "rodin",
+  liveryHex: "#CC3300",
+  bio: "The team was founded in 1996 as Carlin Motorsport by Trevor Carlin and Martin Stone, building a formidable reputation across British junior formulae over nearly three decades. In January 2023, New Zealand entrepreneur David Dicker's Rodin Cars company acquired an 80% stake; the team rebranded fully as Rodin Motorsport in January 2024. They brought the entire Carlin F2 and F3 operation — infrastructure, engineers, paddock facilities — under the Rodin banner, entering both championships from 2024.",
+  quote: "Carlin built the foundation over 28 years. Rodin is building the future.",
+  quoteContext: "Rodin Motorsport origin",
+};
+
+export const rodinMotorsportStats: TeamStats = {
+  teamId: "rodin",
+  constructorsTitles: 0,
+  driversTitles: 0,
+  wins: 8,
+  podiums: 24,
+  seasons: 2,
+  firstSeason: 2024,
+};
+
+export const rodinMotorsportEras: TeamEngineeringEra[] = [
+  {
+    teamId: "rodin",
+    label: "Carlin Heritage",
+    seasons: "1996–2023",
+    description:
+      "As Carlin, the team produced British Formula 3 champions, Formula Renault champions, and hundreds of junior graduates. Dan Ticktum, Logan Sargeant, and Liam Lawson all spent time in Carlin machinery. In F2 (from the series' inception) they were a reliable top-six outfit.",
+    championships: 0,
+    driverNames: "SARGEANT · LAWSON · TICKTUM",
+    champLabel: "CARLIN ERA",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/b/b3/FIA_F2_Austria_2022_Nr._5_Lawson.jpg",
+  },
+  {
+    teamId: "rodin",
+    label: "Rodin Era",
+    seasons: "2024–present",
+    description:
+      "Under the Rodin banner since 2024, the operation fields cars in both F2 and F3. New Zealand backing from David Dicker's Rodin Cars enterprise provides fresh investment. Alex Dunne (Ireland) and Amaury Cordeel lead the F2 effort; Louis Sharp (GB3 champion 2024) heads the F3 programme, signalling a focus on fresh talent development.",
+    championships: 0,
+    driverNames: "DUNNE · CORDEEL · SHARP",
+    champLabel: "BUILDING",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/4/44/2024_FIA_Formula_2_Silverstone_%2854041553487%29.jpg",
+  },
+];
+
+export const rodinMotorsportSignatureBars: TeamSignatureBar[] = [
+  { label: "Engineering heritage",   rating: "STRONG",    value: 78, caption: "28-YEAR CARLIN MOTORSPORT FOUNDATION",   sentiment: "strength" },
+  { label: "Race setup",             rating: "MODERATE",  value: 66, caption: "STILL ESTABLISHING RODIN-ERA IDENTITY",   sentiment: "neutral"  },
+  { label: "Talent identification",  rating: "HIGH",      value: 76, caption: "SHARP FROM GB3 · DUNNE FROM FRECA",       sentiment: "strength" },
+  { label: "NZ backing resources",   rating: "STRONG",    value: 74, caption: "RODIN CARS INVESTMENT POST-2023",          sentiment: "neutral"  },
+  { label: "Championship threat",    rating: "MODERATE",  value: 60, caption: "EARLY RODIN ERA · BUILDING MOMENTUM",     sentiment: "neutral"  },
+  { label: "Junior development",     rating: "HIGH",      value: 78, caption: "LAWSON · SARGEANT · SHARP PIPELINE",      sentiment: "strength" },
+];
+
+export const rodinMotorsportReelSlides: ReelSlide[] = [
+  {
+    slotLabel: "CARLIN LEGACY",
+    badge: "HERITAGE",
+    glowColor: "#CC3300",
+    kicker: "CARLIN → RODIN · 28 YEARS",
+    headline: "Carlin heritage",
+    meta: "FOUNDED 1996 · LAWSON · SARGEANT · TICKTUM ALUMNI",
+    svgPath: "",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/5/52/Lando_Norris_%26_Sergio_Sette_Camara%2C_Carlin_F2_Team_%2843693722652%29.jpg",
+  },
+  {
+    slotLabel: "RODIN 2024",
+    badge: "NEW ERA",
+    glowColor: "#CC3300",
+    kicker: "RODIN MOTORSPORT · F2 & F3 2024",
+    headline: "Rodin debut",
+    meta: "2024 · ALEX DUNNE · AMAURY CORDEEL · F2 PROGRAMME",
+    svgPath: "",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/0/0d/FIA_F2_Austria_2025_Nr._17_Dunne.jpg",
+  },
+];
+
+export const rodinMotorsportAcademy: TeamAcademyDriver[] = [
+  { name: "Liam Lawson",      tier: "alumni", note: "Red Bull junior · Carlin F2 · → AlphaTauri/RB F1 2023–25" },
+  { name: "Logan Sargeant",   tier: "alumni", note: "Carlin F2 2022 · → Williams F1 2023–24" },
+  { name: "Dan Ticktum",      tier: "alumni", note: "Carlin F2/GP3 2018–20 · Red Bull junior" },
+  { name: "Alex Dunne",       tier: "junior", note: "Irish junior · Rodin F2 2025" },
+  { name: "Louis Sharp",      tier: "junior", note: "GB3 champion 2024 · Rodin F3 2025" },
+];
+
+export const rodinMotorsportIconicCars: TeamIconicCar[] = [
+  {
+    name: "Carlin Dallara F2 2022",
+    year: 2022,
+    subtitle: "Sargeant/Lawson era",
+    meta: "CARLIN F2 2022 · SARGEANT & LAWSON · PRE-F1 LAUNCHPAD",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/b/b3/FIA_F2_Austria_2022_Nr._5_Lawson.jpg",
+  },
+  {
+    name: "Rodin Dallara F2 2024",
+    year: 2024,
+    subtitle: "Rebrand debut",
+    meta: "RODIN MOTORSPORT F2 DEBUT 2024 · DUNNE & CORDEEL",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/0/0d/FIA_F2_Austria_2025_Nr._17_Dunne.jpg",
+  },
+];
+
+/* ─── Van Amersfoort Racing (F2 / F3) ────────────────────────────────────── */
+
+export const vanAmersfoort: Team = {
+  id: "vaf",
+  name: "Van Amersfoort Racing",
+  shortName: "VAF",
+  country: "Netherlands",
+  series: ["f2", "f3"],
+  founded: 1975,
+  current: true,
+  entityColor: "vaf",
+  liveryHex: "#FF9900",
+  bio: "Van Amersfoort Racing, based in Zeewolde, Netherlands, is one of the oldest motorsport outfits still competing in global single-seater racing — founded in 1975 by Frits van Amersfoort. Their most famous alumni are Max Verstappen and Charles Leclerc, both of whom raced for VAF in European Formula 3 on their way to Formula 1. Four German F3 driver championships and ten F1 graduates define their historical legacy. They entered the FIA F2 and F3 Championships in 2022.",
+  quote: "Verstappen started here. Leclerc passed through. Fifty years of making champions.",
+  quoteContext: "Van Amersfoort Racing heritage",
+};
+
+export const vanAmersfoortStats: TeamStats = {
+  teamId: "vaf",
+  constructorsTitles: 0,
+  driversTitles: 4,
+  wins: 12,
+  podiums: 36,
+  seasons: 4,
+  firstSeason: 2022,
+};
+
+export const vanAmersfoortEras: TeamEngineeringEra[] = [
+  {
+    teamId: "vaf",
+    label: "German F3 Dynasty",
+    seasons: "1998–2015",
+    description:
+      "Four German Formula Three championships across the team's history, including landmark seasons that launched Max Verstappen (2014) and Charles Leclerc (2015 post-F3 European) through their junior careers. VAF was the blueprint for the modern Dutch driver development machine.",
+    championships: 4,
+    driverNames: "VERSTAPPEN · LECLERC · MAWSON",
+    champLabel: "4× GER F3",
+    golden: true,
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/4/4f/Charles_Leclerc%2C_Formel_3_2015.JPG",
+  },
+  {
+    teamId: "vaf",
+    label: "FIA F2 & F3 Era",
+    seasons: "2022–present",
+    description:
+      "VAF joined the FIA F2 and F3 grids in 2022, replacing HWA Racelab. The step up brought the team's development culture to the highest level of the junior single-seater pyramid. Without a title yet in F2 or F3, they are an established presence that regularly develops internationally-backed talent.",
+    championships: 0,
+    driverNames: "NEWEY · VILLAGOMEZ · NAËL",
+    champLabel: "BUILDING",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/f/fd/2024_FIA_Formula_2_Silverstone_%2854042867645%29.jpg",
+  },
+];
+
+export const vanAmersfoortSignatureBars: TeamSignatureBar[] = [
+  { label: "Development heritage",   rating: "EXCEPTIONAL", value: 90, caption: "VERSTAPPEN & LECLERC ALUMNI",          sentiment: "strength" },
+  { label: "F2/F3 competitive pace", rating: "MODERATE",    value: 64, caption: "BUILDING F2/F3 ERA IDENTITY SINCE 2022", sentiment: "neutral"  },
+  { label: "Dutch driver pipeline",  rating: "STRONG",      value: 80, caption: "VILLAGOMEZ · NAËL · NATIONAL TALENT",   sentiment: "strength" },
+  { label: "Longevity & stability",  rating: "EXCEPTIONAL", value: 92, caption: "50 YEARS IN RACING · FRITS VAN AMERSFOORT", sentiment: "strength" },
+  { label: "F1 graduation rate",     rating: "EXCEPTIONAL", value: 88, caption: "10 F1 GRADUATES INCLUDING MV1 + CL16",  sentiment: "strength" },
+  { label: "Championship threat",    rating: "MODERATE",    value: 58, caption: "STILL ASCENDING THE F2/F3 LADDER",      sentiment: "neutral"  },
+];
+
+export const vanAmersfoortReelSlides: ReelSlide[] = [
+  {
+    slotLabel: "VERSTAPPEN 2014",
+    badge: "F3 LEGEND",
+    glowColor: "#FF9900",
+    kicker: "VAF · MAX VERSTAPPEN · GERMAN F3 2014",
+    headline: "Verstappen at VAF",
+    meta: "2014 · GERMAN FORMULA 3 · HOCKENHEIM · VAF LIVERY",
+    svgPath: "",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/e/ec/2014_F3_HockenheimringII_Max_Verstappen_by_2eight_DSC7625.jpg",
+  },
+  {
+    slotLabel: "F2 2022",
+    badge: "F2 DEBUT",
+    glowColor: "#FF9900",
+    kicker: "VAN AMERSFOORT · F2 DEBUT SEASON",
+    headline: "VAF enters F2",
+    meta: "2022 · FIRST FIA F2 SEASON · DUTCH OUTFIT AT THE TOP",
+    svgPath: "",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/8/8d/EU5A1098_%2852616407928%29.jpg",
+  },
+];
+
+export const vanAmersfoortAcademy: TeamAcademyDriver[] = [
+  { name: "Max Verstappen",     tier: "alumni", note: "German F3 2014 with VAF → Toro Rosso/Red Bull F1 · 4× WDC" },
+  { name: "Charles Leclerc",    tier: "alumni", note: "F3 European 2016 with VAF → Sauber/Ferrari F1" },
+  { name: "Mick Schumacher",    tier: "alumni", note: "F3 European 2016–18 with VAF · → Haas F1" },
+  { name: "Liam Lawson",        tier: "alumni", note: "F3 2020 P2 with VAF → Red Bull F1 2023–25" },
+  { name: "Oliver Bearman",     tier: "alumni", note: "F4 with VAF programme · → Prema → Haas F1" },
+  { name: "Rafael Villagómez",  tier: "junior", note: "Mexican junior · VAF F2 2025" },
+];
+
+export const vanAmersfoortIconicCars: TeamIconicCar[] = [
+  {
+    name: "VAF Dallara F312 — 2014",
+    year: 2014,
+    subtitle: "Max Verstappen's German F3 car",
+    meta: "MAX VERSTAPPEN · GERMAN FORMULA 3 2014 · HOCKENHEIM",
+    peak: true,
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/e/ec/2014_F3_HockenheimringII_Max_Verstappen_by_2eight_DSC7625.jpg",
+  },
+  {
+    name: "VAF Dallara F2 2024",
+    year: 2024,
+    subtitle: "F2 era",
+    meta: "VAN AMERSFOORT RACING · FIA F2 2024 · DUTCH OUTFIT",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/f/fd/2024_FIA_Formula_2_Silverstone_%2854042867645%29.jpg",
+  },
+];
+
+/* ─── F3-specific team data ──────────────────────────────────────────────── */
+
+/* ART Grand Prix — F3 */
+
+export const artF3: Team = {
+  id: "art-f3",
+  name: "ART Grand Prix",
+  shortName: "ART",
+  country: "France",
+  series: ["f3"],
+  founded: 1996,
+  current: true,
+  entityColor: "art",
+  liveryHex: "#888888",
+  bio: "ART Grand Prix are the benchmark of FIA F3. Victor Martins delivered their first FIA F3 drivers' title in 2022 — a wire-to-wire dominant campaign. Before that, ART were the dominant force in the predecessor GP3 Series, winning titles with Pierre Gasly (2016) and Anthoine Hubert (2018). Their ability to convert factory-backed talent into champions across multiple junior single-seater series is unmatched.",
+  quote: "The GP3 dynasty. The F3 benchmark.",
+  quoteContext: "ART F3 · 2022 champion",
+};
+export const artF3Stats: TeamStats = {
+  teamId: "art-f3",
+  constructorsTitles: 1,
+  driversTitles: 1,
+  wins: 28,
+  podiums: 78,
+  seasons: 6,
+  firstSeason: 2019,
+};
+export const artF3Eras: TeamEngineeringEra[] = [
+  {
+    teamId: "art-f3",
+    label: "GP3 Legacy",
+    seasons: "2010–2018",
+    description: "ART Grand Prix dominated the GP3 Series across nine seasons, winning driver titles with Valtteri Bottas (2011), George Russell (2015), Pierre Gasly (2016), and Anthoine Hubert (2018). Their car preparation and driver development culture in the spec-chassis era became the blueprint for every competitor.",
+    championships: 5,
+    driverNames: "GASLY · HUBERT · RUSSELL",
+    champLabel: "5× GP3",
+    golden: true,
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/6/6b/Art-grosjean-spain-2008-lrg.jpg",
+  },
+  {
+    teamId: "art-f3",
+    label: "FIA F3 Era",
+    seasons: "2019–present",
+    description: "ART transitioned into the rebranded FIA F3 Championship in 2019 and immediately competed at the front. Victor Martins took the 2022 title in dominant fashion, continuing the ART tradition of converting championship-level talent into title winners. Théo Pourchaire, Dino Beganovic, and Barnaby Zug all progressed through the ART F3 pipeline.",
+    championships: 1,
+    driverNames: "MARTINS · POURCHAIRE · BEGANOVIC",
+    champLabel: "1× F3",
+    current: true,
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/5/5a/FIA_F3_Austria_2022_Nr._7_Martins.jpg",
+  },
+];
+export const artF3SignatureBars: TeamSignatureBar[] = [
+  { label: "Qualifying performance",      rating: "EXCEPTIONAL", value: 90, caption: "MOST FRONT-ROW POSITIONS IN FIA F3",     sentiment: "strength" },
+  { label: "Race setup conversion",       rating: "STRONG",      value: 83, caption: "CONSISTENT PODIUM DELIVERY 2019–2024",   sentiment: "strength" },
+  { label: "Driver academy links",        rating: "EXCEPTIONAL", value: 92, caption: "FERRARI · MERCEDES · ALPINE JUNIORS",    sentiment: "strength" },
+  { label: "Championship execution",      rating: "HIGH",        value: 80, caption: "MARTINS 2022 WIRE-TO-WIRE",              sentiment: "strength" },
+  { label: "Tyre management",            rating: "HIGH",        value: 76, caption: "SPEC CHASSIS DIFFERENTIAL EDGE",         sentiment: "neutral"  },
+  { label: "F1 graduation rate",         rating: "EXCEPTIONAL", value: 88, caption: "GASLY · HUBERT · RUSSELL · MARTINS F2",  sentiment: "strength" },
+];
+export const artF3ReelSlides: ReelSlide[] = [
+  {
+    slotLabel: "2022 F3",
+    badge: "F3 CHAMPION",
+    glowColor: "#888888",
+    kicker: "ART · VICTOR MARTINS · 2022",
+    headline: "Martins wins F3",
+    meta: "FIA F3 2022 CHAMPION · ALPINE ACADEMY · DOMINANT CAMPAIGN",
+    svgPath: "",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/5/5a/FIA_F3_Austria_2022_Nr._7_Martins.jpg",
+  },
+  {
+    slotLabel: "GP3 LEGACY",
+    badge: "GP3",
+    glowColor: "#888888",
+    kicker: "ART · GP3 DYNASTY · 2010–2018",
+    headline: "GP3 dynasty",
+    meta: "GASLY · HUBERT · RUSSELL · BOTTAS · 5 GP3 TITLES",
+    svgPath: "",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/7/7c/FIA_F3_Austria_2022_Nr._8_Saucy.jpg",
+  },
+];
+export const artF3Academy: TeamAcademyDriver[] = [
+  { name: "Pierre Gasly",         tier: "alumni", note: "GP3 2016 champion · ART · → Red Bull/AlphaTauri/Alpine F1" },
+  { name: "George Russell",       tier: "alumni", note: "GP3 2015 champion · ART · → Williams → Mercedes F1" },
+  { name: "Anthoine Hubert",      tier: "alumni", note: "GP3 2018 champion · ART · tragically lost Spa 2019", deceased: true },
+  { name: "Victor Martins",       tier: "alumni", note: "FIA F3 2022 champion · ART · → F2 Alpine academy" },
+  { name: "Théo Pourchaire",      tier: "alumni", note: "F3 2019 with ART · → ART F2 2021–23 champion · Sauber reserve" },
+  { name: "Dino Beganovic",       tier: "junior", note: "Ferrari junior · ART F3 2022 · → Ferrari reserve" },
+];
+export const artF3IconicCars: TeamIconicCar[] = [
+  {
+    name: "ART Dallara F3 2022",
+    year: 2022,
+    subtitle: "Martins' championship car",
+    meta: "FIA F3 CHAMPION 2022 · VICTOR MARTINS · ALPINE ACADEMY",
+    peak: true,
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/5/5a/FIA_F3_Austria_2022_Nr._7_Martins.jpg",
+  },
+  {
+    name: "ART Dallara F3 2024",
+    year: 2024,
+    subtitle: "Beganovic & Zug era",
+    meta: "ART F3 2024 · FERRARI JUNIOR · DUAL-SERIES PROGRAMME",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/7/7c/FIA_F3_Austria_2022_Nr._8_Saucy.jpg",
+  },
+];
+
+/* Hitech Grand Prix — F3 */
+
+export const hitechF3: Team = {
+  id: "hitech-f3",
+  name: "Hitech TGR",
+  shortName: "Hitech",
+  country: "United Kingdom",
+  series: ["f3"],
+  founded: 2018,
+  current: true,
+  entityColor: "hitech",
+  liveryHex: "#CC0022",
+  bio: "Hitech TGR fields a competitive FIA F3 programme backed by Toyota Gazoo Racing, running in parallel with their F2 operation. Jak Crawford, Marcus Armstrong, and Ayumu Iwasa all progressed through their F3 machinery. Their Silverstone engineering base and TGR backing gives them access to Asian and European junior talent, making them a consistent points-scorer across the FIA F3 field.",
+  quote: "Silverstone base. Toyota backing. Global junior pipeline.",
+  quoteContext: "Hitech F3 programme",
+};
+export const hitechF3Stats: TeamStats = {
+  teamId: "hitech-f3",
+  constructorsTitles: 0,
+  driversTitles: 0,
+  wins: 8,
+  podiums: 26,
+  seasons: 6,
+  firstSeason: 2019,
+};
+export const hitechF3Eras: TeamEngineeringEra[] = [
+  {
+    teamId: "hitech-f3",
+    label: "Red Bull Era",
+    seasons: "2019–2021",
+    description: "Hitech attracted Red Bull junior talent early in their F3 programme. Marcus Armstrong (2020–21), Jak Crawford (2021), and Ayumu Iwasa all developed through the Hitech machinery. Leonardo Pulcini was an early highlight. Consistent top-ten finishes and occasional race wins marked this productive period.",
+    championships: 0,
+    driverNames: "ARMSTRONG · CRAWFORD · IWASA",
+    champLabel: "RED BULL ERA",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/e/ef/FIA_F3_Austria_2019_Nr._20_Pulcini.jpg",
+  },
+  {
+    teamId: "hitech-f3",
+    label: "TGR Partnership",
+    seasons: "2022–present",
+    description: "The Toyota Gazoo Racing partnership injected fresh resource and a pipeline of TOYOTA-backed Asian talent. Ritomo Miyata and Colton Herta headline the current effort. The dual F2/F3 programme under the Hitech TGR banner gives drivers a clear internal ladder to progress.",
+    championships: 0,
+    driverNames: "MIYATA · HERTA · CRAWFORD",
+    champLabel: "TGR ERA",
+    current: true,
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/3/37/FIA_F3_Austria_2021_Nr._10_Crawford.jpg",
+  },
+];
+export const hitechF3SignatureBars: TeamSignatureBar[] = [
+  { label: "Engineering setup",      rating: "HIGH",      value: 76, caption: "CONSISTENT TOP-TEN IN SPEC CHASSIS",   sentiment: "neutral"  },
+  { label: "Qualifying pace",        rating: "MODERATE",  value: 68, caption: "OCCASIONAL FRONT-ROW STARTS",         sentiment: "neutral"  },
+  { label: "TGR driver pipeline",    rating: "STRONG",    value: 80, caption: "TOYOTA BACKED ASIAN TALENT",          sentiment: "strength" },
+  { label: "Red Bull alumni",        rating: "STRONG",    value: 78, caption: "ARMSTRONG · CRAWFORD · IWASA → F2",   sentiment: "strength" },
+  { label: "Race execution",         rating: "MODERATE",  value: 65, caption: "PODIUM PACE WITHOUT CONSISTENT WINS", sentiment: "neutral"  },
+  { label: "F1 graduation rate",     rating: "HIGH",      value: 74, caption: "CRAWFORD RB F1 2024 · IWASA TESTING", sentiment: "strength" },
+];
+export const hitechF3ReelSlides: ReelSlide[] = [
+  {
+    slotLabel: "CRAWFORD 2021",
+    badge: "F3 WIN",
+    glowColor: "#CC0022",
+    kicker: "HITECH · JAK CRAWFORD · RED BULL JUNIOR",
+    headline: "Crawford in F3",
+    meta: "2021 · JAK CRAWFORD · RED BULL JUNIOR → RB F1 2024",
+    svgPath: "",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/3/37/FIA_F3_Austria_2021_Nr._10_Crawford.jpg",
+  },
+  {
+    slotLabel: "IWASA 2021",
+    badge: "F3 WIN",
+    glowColor: "#CC0022",
+    kicker: "HITECH · AYUMU IWASA · TOYOTA JUNIOR",
+    headline: "Iwasa in F3",
+    meta: "2021 · AYUMU IWASA · TOYOTA GR · JAPANESE PRODIGY",
+    svgPath: "",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/6/6b/FIA_F3_Austria_2021_Nr._11_Iwasa.jpg",
+  },
+];
+export const hitechF3Academy: TeamAcademyDriver[] = [
+  { name: "Marcus Armstrong",  tier: "alumni", note: "New Zealand · Hitech F3 2020–21 · Red Bull junior · → IndyCar" },
+  { name: "Jak Crawford",      tier: "alumni", note: "Red Bull junior · Hitech F3 2021 · → RB/DAMS F2 · F1 testing" },
+  { name: "Ayumu Iwasa",       tier: "alumni", note: "Toyota junior · Hitech F3 2021 · → DAMS/Hitech F2 2022" },
+  { name: "Ritomo Miyata",     tier: "junior", note: "Toyota junior · F3 2023–24 · F2 2025 · Japanese champion" },
+  { name: "Colton Herta",      tier: "junior", note: "IndyCar race winner · F3/F2 programme 2025 with Hitech" },
+];
+export const hitechF3IconicCars: TeamIconicCar[] = [
+  {
+    name: "Hitech Dallara F3 2021",
+    year: 2021,
+    subtitle: "Crawford & Iwasa era",
+    meta: "FIA F3 2021 · JAK CRAWFORD · AYUMU IWASA · RED BULL PIPELINE",
+    peak: true,
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/3/37/FIA_F3_Austria_2021_Nr._10_Crawford.jpg",
+  },
+  {
+    name: "Hitech Dallara F3 2019",
+    year: 2019,
+    subtitle: "Inaugural FIA F3 season",
+    meta: "FIA F3 DEBUT 2019 · PULCINI · HITECH FOUNDATION",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/e/ef/FIA_F3_Austria_2019_Nr._20_Pulcini.jpg",
+  },
+];
+
+/* MP Motorsport — F3 */
+
+export const mpF3: Team = {
+  id: "mp-f3",
+  name: "MP Motorsport",
+  shortName: "MP",
+  country: "Netherlands",
+  series: ["f3"],
+  founded: 1995,
+  current: true,
+  entityColor: "mp",
+  liveryHex: "#FF6600",
+  bio: "MP Motorsport run a parallel FIA F3 programme alongside their F2 operation. Their Dutch identity and race engineering depth have developed drivers including Alexander Smolyar and Caio Collet through the FIA F3 ranks. Without a title yet in the series, MP are a consistent points-scoring outfit whose F3 programme feeds directly into their F2 operation, providing continuity for rising talent.",
+  quote: "Orange, Dutch, developmental.",
+  quoteContext: "MP Motorsport F3 identity",
+};
+export const mpF3Stats: TeamStats = {
+  teamId: "mp-f3",
+  constructorsTitles: 0,
+  driversTitles: 0,
+  wins: 5,
+  podiums: 18,
+  seasons: 5,
+  firstSeason: 2020,
+};
+export const mpF3Eras: TeamEngineeringEra[] = [
+  {
+    teamId: "mp-f3",
+    label: "F3 Entry",
+    seasons: "2020–2022",
+    description: "MP entered FIA F3 with their proven race engineering culture from F2. Alexander Smolyar was a consistent scorer in 2020. Caio Collet brought Brazilian talent to the programme in 2022. The team's orange livery became a recognisable presence across the junior grid.",
+    championships: 0,
+    driverNames: "SMOLYAR · COLLET · VERSCHOOR",
+    champLabel: "BUILDING",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/b/b6/Alexander_Smolyar_%28MP_Motorsport%29.jpg",
+  },
+  {
+    teamId: "mp-f3",
+    label: "F3 Development",
+    seasons: "2023–present",
+    description: "MP's F3 programme continued to attract talent with aspirations of progressing internally to their F2 team. Their dual-ladder system gives drivers a clear development pathway, and the team's setup knowledge from F2 feeds back into F3 chassis development.",
+    championships: 0,
+    driverNames: "COLLET · JUNIOR PIPELINE",
+    champLabel: "COMPETITIVE",
+    current: true,
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/6/65/FIA_F3_Austria_2022_Nr._10_Collet.jpg",
+  },
+];
+export const mpF3SignatureBars: TeamSignatureBar[] = [
+  { label: "Engineering depth",     rating: "STRONG",   value: 76, caption: "F2 KNOWLEDGE TRANSFER TO F3 SETUP",    sentiment: "strength" },
+  { label: "Dutch talent pipeline", rating: "STRONG",   value: 72, caption: "NATIONAL TALENT DEVELOPMENT FOCUS",    sentiment: "strength" },
+  { label: "Race execution",        rating: "MODERATE", value: 64, caption: "POINTS FINISHES CONSISTENTLY DELIVERED",sentiment: "neutral"  },
+  { label: "F3 to F2 ladder",      rating: "HIGH",     value: 78, caption: "INTERNAL PROMOTION SYSTEM OPERATIONAL", sentiment: "strength" },
+  { label: "Championship threat",   rating: "LOW",      value: 50, caption: "YET TO CHALLENGE FOR F3 TITLE",        sentiment: "neutral"  },
+  { label: "Driver development",    rating: "MODERATE", value: 68, caption: "SMOLYAR · COLLET DEVELOPED EFFECTIVELY",sentiment: "strength" },
+];
+export const mpF3ReelSlides: ReelSlide[] = [
+  {
+    slotLabel: "SMOLYAR 2020",
+    badge: "F3 DEBUT",
+    glowColor: "#FF6600",
+    kicker: "MP MOTORSPORT · ALEXANDER SMOLYAR · F3 2020",
+    headline: "Smolyar at MP",
+    meta: "2020 · RUSSIAN JUNIOR · MP F3 DEBUT SEASON · ORANGE LIVERY",
+    svgPath: "",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/b/b6/Alexander_Smolyar_%28MP_Motorsport%29.jpg",
+  },
+  {
+    slotLabel: "COLLET 2022",
+    badge: "F3 WIN",
+    glowColor: "#FF6600",
+    kicker: "MP · CAIO COLLET · AUSTRIA 2022",
+    headline: "Collet in F3",
+    meta: "2022 · CAIO COLLET · RENAULT/ALPINE JUNIOR · BRAZIL",
+    svgPath: "",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/6/65/FIA_F3_Austria_2022_Nr._10_Collet.jpg",
+  },
+];
+export const mpF3Academy: TeamAcademyDriver[] = [
+  { name: "Alexander Smolyar", tier: "alumni", note: "MP F3 2020 · Russian junior · consistent scorer" },
+  { name: "Caio Collet",       tier: "alumni", note: "MP F3 2022 · Renault/Alpine junior · Brazilian" },
+  { name: "Richard Verschoor", tier: "alumni", note: "MP F3 before moving to MP F2 · Dutch race winner" },
+  { name: "Jack Doohan",       tier: "alumni", note: "F3 2020–21 · → DAMS F2 · → Alpine F1 2025" },
+];
+export const mpF3IconicCars: TeamIconicCar[] = [
+  {
+    name: "MP Dallara F3 2020",
+    year: 2020,
+    subtitle: "F3 debut season",
+    meta: "MP MOTORSPORT FIA F3 · 2020 · SMOLYAR · ORANGE LIVERY",
+    peak: true,
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/b/b6/Alexander_Smolyar_%28MP_Motorsport%29.jpg",
+  },
+  {
+    name: "MP Dallara F3 2022",
+    year: 2022,
+    subtitle: "Collet era",
+    meta: "MP MOTORSPORT F3 2022 · CAIO COLLET · ALPINE JUNIOR",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/6/65/FIA_F3_Austria_2022_Nr._10_Collet.jpg",
+  },
+];
+
+/* Campos Racing — F3 */
+
+export const camposF3: Team = {
+  id: "campos-f3",
+  name: "Campos Racing",
+  shortName: "Campos",
+  country: "Spain",
+  series: ["f3"],
+  founded: 1997,
+  current: true,
+  entityColor: "campos",
+  liveryHex: "#002266",
+  bio: "Campos Racing claimed the 2025 FIA F3 Teams Championship — their first F3 title and a significant milestone for the Spanish outfit. Known for developing Spanish and South American talent, they run a consistent F3 programme alongside their F2 entry. Arvid Lindblad, Nikola Tsolov, and Pepe Martí have all raced in their F3 machinery. Their Alzira base and national motorsport identity make them a cornerstone of the FIA junior pyramid.",
+  quote: "Spain's cornerstone team. 2025 F3 Teams champions.",
+  quoteContext: "Campos Racing F3 · 2025",
+};
+export const camposF3Stats: TeamStats = {
+  teamId: "campos-f3",
+  constructorsTitles: 1,
+  driversTitles: 0,
+  wins: 8,
+  podiums: 24,
+  seasons: 5,
+  firstSeason: 2020,
+};
+export const camposF3Eras: TeamEngineeringEra[] = [
+  {
+    teamId: "campos-f3",
+    label: "F3 Entry",
+    seasons: "2020–2023",
+    description: "Campos entered FIA F3 bringing their GP2/F2 operational experience. David Vidales gave the team strong F3 results in 2022. Spanish and international talent passed through the blue-and-white livery, building the operational foundation that would eventually deliver a teams title.",
+    championships: 0,
+    driverNames: "VIDALES · TSOLOV · JUNIOR GRID",
+    champLabel: "BUILDING",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/0/03/FIA_F3_Austria_2022_Nr._20_Vidales.jpg",
+  },
+  {
+    teamId: "campos-f3",
+    label: "Teams Champions",
+    seasons: "2024–present",
+    description: "The 2025 FIA F3 Teams Championship validated years of patient development. Arvid Lindblad (Red Bull junior), Nikola Tsolov, and Pepe Martí delivered the consistency across a full season that secured the constructors crown. The title came without a drivers' champion — a true team effort.",
+    championships: 1,
+    driverNames: "LINDBLAD · TSOLOV · MARTÍ",
+    champLabel: "F3 TEAMS 2025",
+    golden: true,
+    current: true,
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/6/65/70th_MACAU_GRAND_PRIX_%28192%29.jpg",
+  },
+];
+export const camposF3SignatureBars: TeamSignatureBar[] = [
+  { label: "Spanish talent pipeline",  rating: "EXCEPTIONAL", value: 88, caption: "NACIONAL TALENT · MARTÍ · TSOLOV · LINDBLAD",sentiment: "strength" },
+  { label: "Team consistency",         rating: "HIGH",        value: 80, caption: "2025 TEAMS TITLE ACROSS FULL SEASON",        sentiment: "strength" },
+  { label: "Race setup",               rating: "MODERATE",    value: 68, caption: "COMPETITIVE MIDFIELD THROUGHOUT F3 ERA",     sentiment: "neutral"  },
+  { label: "Team longevity",           rating: "EXCEPTIONAL", value: 90, caption: "DECADES OF JUNIOR MOTORSPORT EXPERIENCE",    sentiment: "strength" },
+  { label: "Driver pipeline",          rating: "STRONG",      value: 76, caption: "RED BULL · INDEPENDENT JUNIORS DEVELOPED",   sentiment: "strength" },
+  { label: "Championship execution",   rating: "HIGH",        value: 78, caption: "TEAMS TITLE 2025 · BUILDING DRIVERS TITLE",  sentiment: "strength" },
+];
+export const camposF3ReelSlides: ReelSlide[] = [
+  {
+    slotLabel: "VIDALES 2022",
+    badge: "F3 WIN",
+    glowColor: "#002266",
+    kicker: "CAMPOS · DAVID VIDALES · F3 2022",
+    headline: "Vidales in F3",
+    meta: "2022 · DAVID VIDALES · SPANISH JUNIOR · CAMPOS F3",
+    svgPath: "",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/0/03/FIA_F3_Austria_2022_Nr._20_Vidales.jpg",
+  },
+  {
+    slotLabel: "TEAMS 2025",
+    badge: "F3 CHAMPIONS",
+    glowColor: "#002266",
+    kicker: "CAMPOS · 2025 F3 TEAMS CHAMPIONSHIP",
+    headline: "Teams title 2025",
+    meta: "LINDBLAD · TSOLOV · MARTÍ · FIELDS' BEST TEAM EFFORT",
+    svgPath: "",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/6/65/70th_MACAU_GRAND_PRIX_%28192%29.jpg",
+  },
+];
+export const camposF3Academy: TeamAcademyDriver[] = [
+  { name: "David Vidales",     tier: "alumni", note: "Campos F3 2022 · Spanish junior · top finisher" },
+  { name: "Arvid Lindblad",    tier: "junior", note: "Red Bull junior · F3 2025 Campos · F2 2025 Campos" },
+  { name: "Nikola Tsolov",     tier: "junior", note: "Bulgarian junior · Campos F3 & F2 2025" },
+  { name: "Pepe Martí",        tier: "junior", note: "Spanish junior · Campos F3 & F2 2025 · Red Bull interest" },
+];
+export const camposF3IconicCars: TeamIconicCar[] = [
+  {
+    name: "Campos Dallara F3 2022",
+    year: 2022,
+    subtitle: "Vidales era",
+    meta: "CAMPOS F3 2022 · DAVID VIDALES · SPANISH DEVELOPMENT",
+    peak: true,
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/0/03/FIA_F3_Austria_2022_Nr._20_Vidales.jpg",
+  },
+  {
+    name: "Campos Dallara F3 2025",
+    year: 2025,
+    subtitle: "Teams championship car",
+    meta: "F3 TEAMS CHAMPION 2025 · LINDBLAD · TSOLOV · MARTÍ",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/6/65/70th_MACAU_GRAND_PRIX_%28192%29.jpg",
+  },
+];
+
+/* Van Amersfoort Racing — F3 */
+
+export const vafF3: Team = {
+  id: "vaf-f3",
+  name: "Van Amersfoort Racing",
+  shortName: "VAF",
+  country: "Netherlands",
+  series: ["f3"],
+  founded: 1975,
+  current: true,
+  entityColor: "vaf",
+  liveryHex: "#FF9900",
+  bio: "Van Amersfoort Racing entered the FIA F3 Championship in 2022 with fifty years of motorsport heritage behind them. Their alumni from the German F3 era — Max Verstappen (2014) and Charles Leclerc (2015–16) — represent the gold standard of what junior F3 can produce. In the FIA F3 era, VAF fields young talent from across Europe and South America, with Franco Colapinto — who went on to race in F1 — among their most notable FIA F3 graduates.",
+  quote: "Verstappen started here. Fifty years of making champions.",
+  quoteContext: "Van Amersfoort Racing F3 heritage",
+};
+export const vafF3Stats: TeamStats = {
+  teamId: "vaf-f3",
+  constructorsTitles: 0,
+  driversTitles: 4,
+  wins: 12,
+  podiums: 35,
+  seasons: 3,
+  firstSeason: 2022,
+};
+export const vafF3Eras: TeamEngineeringEra[] = [
+  {
+    teamId: "vaf-f3",
+    label: "German F3 Legend",
+    seasons: "1998–2018",
+    description: "Four German Formula Three championships anchored the VAF identity. Max Verstappen (2014) and Charles Leclerc (2015–16) chose VAF on their journey to Formula 1. The team's Dutch engineering culture and commitment to driver development produced ten F1 graduates from their F3 programme alone.",
+    championships: 4,
+    driverNames: "VERSTAPPEN · LECLERC · MAWSON",
+    champLabel: "4× GER F3",
+    golden: true,
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/e/ec/2014_F3_HockenheimringII_Max_Verstappen_by_2eight_DSC7625.jpg",
+  },
+  {
+    teamId: "vaf-f3",
+    label: "FIA F3 Era",
+    seasons: "2022–present",
+    description: "VAF entered the FIA F3 and F2 Championships in 2022, bringing their development culture to the highest level of the junior ladder. Franco Colapinto drove their F3 car before his remarkable rise to Formula 1 with Williams in 2024. Rafael Villagómez, Oliver Gray, and Luke Browning have continued the tradition.",
+    championships: 0,
+    driverNames: "COLAPINTO · VILLAGÓMEZ · BROWNING",
+    champLabel: "BUILDING",
+    current: true,
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/b/b9/FIA_F3_Austria_2022_Nr._29_Colapinto.jpg",
+  },
+];
+export const vafF3SignatureBars: TeamSignatureBar[] = [
+  { label: "Development heritage",    rating: "EXCEPTIONAL", value: 92, caption: "VERSTAPPEN & LECLERC · FIFTY YEAR LEGACY",   sentiment: "strength" },
+  { label: "FIA F3 competitive pace", rating: "MODERATE",   value: 62, caption: "BUILDING F3 IDENTITY SINCE 2022",            sentiment: "neutral"  },
+  { label: "Dutch driver pipeline",   rating: "STRONG",     value: 80, caption: "NATIONAL TALENT DEVELOPMENT FOCUS",          sentiment: "strength" },
+  { label: "F1 graduate production",  rating: "EXCEPTIONAL",value: 90, caption: "10 F1 DRIVERS INCLUDING MV1 & CL16",        sentiment: "strength" },
+  { label: "Longevity",              rating: "EXCEPTIONAL", value: 94, caption: "FOUNDED 1975 · 50 YEARS IN MOTORSPORT",     sentiment: "strength" },
+  { label: "Championship threat",    rating: "LOW",         value: 52, caption: "ASCENDING THE FIA F3 LADDER SINCE 2022",    sentiment: "neutral"  },
+];
+export const vafF3ReelSlides: ReelSlide[] = [
+  {
+    slotLabel: "COLAPINTO 2022",
+    badge: "F3 DEBUT",
+    glowColor: "#FF9900",
+    kicker: "VAF · FRANCO COLAPINTO · F3 2022",
+    headline: "Colapinto at VAF",
+    meta: "2022 · FRANCO COLAPINTO · → WILLIAMS F1 2024 · ARGENTINA",
+    svgPath: "",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/b/b9/FIA_F3_Austria_2022_Nr._29_Colapinto.jpg",
+  },
+  {
+    slotLabel: "VERSTAPPEN 2014",
+    badge: "F3 LEGEND",
+    glowColor: "#FF9900",
+    kicker: "VAF · MAX VERSTAPPEN · GERMAN F3 2014",
+    headline: "Verstappen at VAF",
+    meta: "2014 · GERMAN FORMULA 3 · HOCKENHEIM · 4× WDC ORIGIN STORY",
+    svgPath: "",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/e/ec/2014_F3_HockenheimringII_Max_Verstappen_by_2eight_DSC7625.jpg",
+  },
+];
+export const vafF3Academy: TeamAcademyDriver[] = [
+  { name: "Max Verstappen",     tier: "alumni", note: "German F3 2014 · VAF · → Toro Rosso/Red Bull F1 · 4× WDC" },
+  { name: "Charles Leclerc",    tier: "alumni", note: "F3 European 2015–16 · VAF · → Sauber/Ferrari F1" },
+  { name: "Franco Colapinto",   tier: "alumni", note: "FIA F3 2022 · VAF · → Williams F1 2024 · Argentine hero" },
+  { name: "Rafael Villagómez",  tier: "junior", note: "Mexican junior · FIA F3 2022–23 with VAF" },
+  { name: "Mick Schumacher",    tier: "alumni", note: "F3 European with VAF · → Haas F1 2021–22" },
+];
+export const vafF3IconicCars: TeamIconicCar[] = [
+  {
+    name: "VAF Dallara F312",
+    year: 2014,
+    subtitle: "Verstappen's German F3 car",
+    meta: "MAX VERSTAPPEN · GERMAN FORMULA 3 2014 · VAF · HOCKENHEIM",
+    peak: true,
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/e/ec/2014_F3_HockenheimringII_Max_Verstappen_by_2eight_DSC7625.jpg",
+  },
+  {
+    name: "VAF Dallara F3 2022",
+    year: 2022,
+    subtitle: "Colapinto's FIA F3 car",
+    meta: "FIA F3 2022 · FRANCO COLAPINTO · VAF DEBUT SEASON",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/b/b9/FIA_F3_Austria_2022_Nr._29_Colapinto.jpg",
+  },
+];
+
+/* Rodin Motorsport — F3 */
+
+export const rodinF3: Team = {
+  id: "rodin-f3",
+  name: "Rodin Motorsport",
+  shortName: "Rodin",
+  country: "United Kingdom",
+  series: ["f3"],
+  founded: 1996,
+  current: true,
+  entityColor: "rodin",
+  liveryHex: "#CC3300",
+  bio: "Rodin Motorsport (formerly Carlin) brings twenty-eight years of junior single-seater engineering to the FIA F3 grid. As Carlin, they fielded Logan Sargeant (2019) and Zak O'Sullivan (2022) in F3 with strong results. Under the Rodin banner since 2024, Louis Sharp — GB3 champion 2024 — leads their current F3 programme as New Zealand investment powers a fresh chapter. The institutional knowledge from Carlin's decades of F3 and GP3 work underpins everything.",
+  quote: "Carlin built the foundation over 28 years. Rodin is building the future.",
+  quoteContext: "Rodin Motorsport origin",
+};
+export const rodinF3Stats: TeamStats = {
+  teamId: "rodin-f3",
+  constructorsTitles: 0,
+  driversTitles: 0,
+  wins: 6,
+  podiums: 20,
+  seasons: 6,
+  firstSeason: 2019,
+};
+export const rodinF3Eras: TeamEngineeringEra[] = [
+  {
+    teamId: "rodin-f3",
+    label: "Carlin F3 Era",
+    seasons: "2019–2023",
+    description: "As Carlin, the team brought elite-level engineering to the FIA F3 grid from the opening season. Logan Sargeant (2019) and Zak O'Sullivan (2022) — who went on to Mercedes and Williams F1 testing — were highlights. Dan Ticktum, Christian Mansell, and others benefited from the decades of Carlin technical knowledge.",
+    championships: 0,
+    driverNames: "SARGEANT · O'SULLIVAN · TICKTUM",
+    champLabel: "CARLIN F3 ERA",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/a/a5/FIA_F3_Austria_2019_Nr._31_Sargeant_1.jpg",
+  },
+  {
+    teamId: "rodin-f3",
+    label: "Rodin Rebrand",
+    seasons: "2024–present",
+    description: "The Rodin rebrand brought New Zealand investment via David Dicker's Rodin Cars enterprise. Louis Sharp — GB3 champion in 2024 — joins the F3 programme as the most high-profile Rodin F3 signing. The full Carlin engineering infrastructure transfers seamlessly under the new name.",
+    championships: 0,
+    driverNames: "SHARP · MANSELL",
+    champLabel: "NEW ERA",
+    current: true,
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/7/7e/FIA_F3_Austria_2022_Nr._26_O%27Sullivan.jpg",
+  },
+];
+export const rodinF3SignatureBars: TeamSignatureBar[] = [
+  { label: "Engineering heritage",   rating: "EXCEPTIONAL", value: 88, caption: "28-YEAR CARLIN MOTORSPORT FOUNDATION",   sentiment: "strength" },
+  { label: "F3 race setup",          rating: "HIGH",        value: 76, caption: "CARLIN TECHNICAL LIBRARY IN F3",         sentiment: "strength" },
+  { label: "Talent identification",  rating: "HIGH",        value: 78, caption: "SARGEANT · O'SULLIVAN · SHARP PIPELINE", sentiment: "strength" },
+  { label: "NZ backing resources",   rating: "STRONG",      value: 74, caption: "RODIN CARS INVESTMENT POST-2023",        sentiment: "neutral"  },
+  { label: "Championship threat",    rating: "MODERATE",    value: 62, caption: "BUILDING RODIN IDENTITY IN FIA F3",      sentiment: "neutral"  },
+  { label: "F1 graduation rate",     rating: "HIGH",        value: 78, caption: "SARGEANT WILLIAMS F1 · O'SULLIVAN MERC",sentiment: "strength" },
+];
+export const rodinF3ReelSlides: ReelSlide[] = [
+  {
+    slotLabel: "SARGEANT 2019",
+    badge: "F3 WIN",
+    glowColor: "#CC3300",
+    kicker: "CARLIN · LOGAN SARGEANT · FIA F3 2019",
+    headline: "Sargeant in F3",
+    meta: "2019 · LOGAN SARGEANT · CARLIN · → WILLIAMS F1 2023–24",
+    svgPath: "",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/a/a5/FIA_F3_Austria_2019_Nr._31_Sargeant_1.jpg",
+  },
+  {
+    slotLabel: "O'SULLIVAN 2022",
+    badge: "F3 WIN",
+    glowColor: "#CC3300",
+    kicker: "CARLIN · ZAK O'SULLIVAN · F3 2022",
+    headline: "O'Sullivan in F3",
+    meta: "2022 · ZAK O'SULLIVAN · MERCEDES JUNIOR · CARLIN",
+    svgPath: "",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/7/7e/FIA_F3_Austria_2022_Nr._26_O%27Sullivan.jpg",
+  },
+];
+export const rodinF3Academy: TeamAcademyDriver[] = [
+  { name: "Logan Sargeant",    tier: "alumni", note: "Carlin F3 2019 · → Carlin F2 2022 · Williams F1 2023–24" },
+  { name: "Zak O'Sullivan",    tier: "alumni", note: "Carlin F3 2022 · Mercedes junior · → F2 · Williams testing" },
+  { name: "Dan Ticktum",       tier: "alumni", note: "Carlin F3/F2 · Red Bull junior · British driver" },
+  { name: "Louis Sharp",       tier: "junior", note: "GB3 champion 2024 · → Rodin F3 2025 · British junior" },
+];
+export const rodinF3IconicCars: TeamIconicCar[] = [
+  {
+    name: "Carlin Dallara F3 2019",
+    year: 2019,
+    subtitle: "Sargeant's debut",
+    meta: "FIA F3 2019 · LOGAN SARGEANT · CARLIN MOTORSPORT DEBUT",
+    peak: true,
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/a/a5/FIA_F3_Austria_2019_Nr._31_Sargeant_1.jpg",
+  },
+  {
+    name: "Carlin Dallara F3 2022",
+    year: 2022,
+    subtitle: "O'Sullivan era",
+    meta: "FIA F3 2022 · ZAK O'SULLIVAN · MERCEDES JUNIOR · CARLIN",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/7/7e/FIA_F3_Austria_2022_Nr._26_O%27Sullivan.jpg",
+  },
+];
+
 /* ─── Prema ────────────────────────────────────────────────────────────────── */
 
 export const prema: Team = {
@@ -910,7 +2609,7 @@ export const mercedesEras: TeamEngineeringEra[] = [
     label: "George Russell Era",
     seasons: "2022–",
     description:
-      "The zero-pod W13 concept failed spectacularly. Zero wins in 2022. Russell stepped up as team leader while Hamilton's relationship with the team frayed. Kimi Antonelli — 18 years old — replaced Hamilton in 2025. The rebuild is underway.",
+      "The zero-pod W13 concept failed spectacularly — just one win in 2022, Russell's breakthrough at Brazil. Hamilton's relationship with the team frayed. Kimi Antonelli — 18 years old — replaced Hamilton in 2025. The rebuild is underway.",
     championships: 0,
     driverNames: "RUSSELL · HAMILTON · ANTONELLI",
     champLabel: "NO TITLES · REBUILDING",
@@ -1065,6 +2764,124 @@ export const mercedesIconicCars: TeamIconicCar[] = [
     imageUrl: "https://formula1.wordpress.com/wp-content/uploads/2024/07/season2024_race14_sunday_8.jpg",
   },
 ];
+
+/* ─── Haas F1 Team ──────────────────────────────────────────────────────────── */
+
+const W_HAAS = 'https://en.wikipedia.org/wiki/Special:FilePath/'
+
+export const haas: Team = {
+  id: "haas",
+  name: "Haas F1 Team",
+  shortName: "Haas",
+  country: "United States",
+  series: ["f1"],
+  founded: 2016,
+  current: true,
+  entityColor: "haas",
+  liveryHex: "#E8002D",
+  bio: "The first American-owned Formula 1 team since Haas Lola in 1986. Founded by Gene Haas, co-owner of Stewart-Haas Racing NASCAR team. Entered F1 in 2016 with an innovative customer model — running Ferrari-spec power unit and gearbox. Their debut season was a shock: P8 constructors with Romain Grosjean scoring points in their very first race in Australia.",
+  quote: "We're an American team with a very European way of working.",
+  quoteContext: "Gene Haas, 2016",
+}
+
+export const haasStats: TeamStats = {
+  teamId: "haas",
+  constructorsTitles: 0,
+  driversTitles: 0,
+  wins: 0,
+  podiums: 2,
+  seasons: 10,
+  firstSeason: 2016,
+}
+
+export const haasEras: TeamEngineeringEra[] = [
+  {
+    teamId: "haas", label: "Steiner Era", seasons: "2016–2023",
+    description: "Gene Haas and Günther Steiner built the team from zero. The VF-16 debut was a shock — points on race day 1. The VF-18 in 2018 reached P5 constructors, the team's high-water mark. Steiner's visible personality made Haas a media fixture. Dismissed after 2023 as results declined.",
+    championships: 0, driverNames: "Grosjean · Magnussen · Schumacher · Hülkenberg",
+    imageUrl: W_HAAS + 'Romain_Grosjean_2016_Bahrain_Grand_Prix.jpg',
+  },
+  {
+    teamId: "haas", label: "Post-Steiner Rebuild", seasons: "2024–present",
+    description: "New team principal Ayao Komatsu took over in 2024. Bearman debuted as a substitute in Saudi Arabia 2024, scoring points. The 2025 pairing of Bearman and Ocon brought fresh energy. A team with the infrastructure of a top-five outfit — if the car matches.",
+    championships: 0, driverNames: "Magnussen · Hülkenberg · Bearman · Ocon",
+    imageUrl: W_HAAS + 'Kevin_Magnussen_2024_Saudi_Arabian_GP.jpg',
+  },
+]
+
+export const haasSignatureBars: TeamSignatureBar[] = [
+  { label: "Qualifying pace",  rating: "MODERATE", value: 52, caption: "MIDFIELD CEILING", sentiment: "neutral" },
+  { label: "Race pace",        rating: "MODERATE", value: 56, caption: "CONSISTENTLY ABOVE MIDFIELD", sentiment: "neutral" },
+  { label: "Strategy",         rating: "HIGH",     value: 62, caption: "CREATIVE UNDERDOG CALLS", sentiment: "strength" },
+  { label: "Reliability",      rating: "HIGH",     value: 61, caption: "DECENT CHASSIS LONGEVITY", sentiment: "strength" },
+  { label: "Driver quality",   rating: "HIGH",     value: 65, caption: "BEARMAN + OCON — STRONG PAIRING", sentiment: "strength" },
+]
+
+export const haasReelSlides: ReelSlide[] = [
+  {
+    label: "DEBUT WIN",
+    tags: "2016 · AUSTRALIA · POINTS ON RACE ONE",
+    title: "Australian GP",
+    subtitle: "2016 · HAAS VF-16 · GROSJEAN P6",
+    glowColor: "#E8002D",
+    svgPath: "M 30 160 L 80 160 Q 100 145 115 110 L 165 110 Q 185 128 200 160 L 250 160 Q 270 172 285 200 L 330 200 Q 350 178 370 148",
+    imageUrl: W_HAAS + 'Romain_Grosjean_2016_Australian_Grand_Prix.jpg',
+  },
+  {
+    label: "P5 WCC",
+    tags: "2018 · HAAS VF-18 · TEAM BEST CONSTRUCTORS RESULT",
+    title: "Best Season",
+    subtitle: "2018 · HAAS VF-18 · 93 POINTS",
+    glowColor: "#E8002D",
+    svgPath: "M 30 120 Q 60 108 84 78 L 144 78 Q 172 94 192 120 L 252 120 Q 282 104 306 74 L 366 74",
+    imageUrl: W_HAAS + 'Kevin_Magnussen_2018_Bahrain_Grand_Prix.jpg',
+  },
+  {
+    label: "NEW ERA",
+    tags: "2025 · BEARMAN + OCON · POST-STEINER CHAPTER",
+    title: "2025 Rebuild",
+    subtitle: "2025 · VF-25 · KOMATSU ERA",
+    glowColor: "#E8002D",
+    svgPath: "M 30 150 L 80 150 Q 110 138 130 100 L 175 100 Q 195 115 210 150 L 260 150 Q 290 170 315 200 L 370 200",
+    imageUrl: W_HAAS + 'Oliver_Bearman_2025_Saudi_Arabian_GP.jpg',
+  },
+]
+
+export const haasAcademy: TeamAcademyDriver[] = [
+  { name: "Oliver Bearman",   tier: "f1",   note: "Ferrari junior → Haas F1 2025 · Sub debut Saudi 2024" },
+  { name: "Esteban Ocon",     tier: "f1",   note: "Joined Haas 2025 after Alpine departure" },
+  { name: "Romain Grosjean",  tier: "alumni", note: "Debut driver 2016–2020 · P6 on day one" },
+  { name: "Kevin Magnussen",  tier: "alumni", note: "2017–2022 · 2 career podiums · team stalwart" },
+  { name: "Nico Hülkenberg",  tier: "alumni", note: "2023–2024 · P6 WDC 2023 — career best with Haas" },
+  { name: "Mick Schumacher",  tier: "alumni", note: "2021–2022 · first F1 career via Ferrari academy" },
+]
+
+export const haasIconicCars: TeamIconicCar[] = [
+  {
+    name: "VF-16",
+    year: 2016,
+    subtitle: "The debut shock",
+    meta: "P8 WCC · GROSJEAN P6 AUSTRALIA",
+    peak: false,
+    imageUrl: W_HAAS + 'Haas_VF-16_Grosjean_2016_Australian_GP.jpg',
+  },
+  {
+    name: "VF-18",
+    year: 2018,
+    subtitle: "The peak",
+    meta: "P5 WCC · 93 POINTS · TEAM BEST",
+    peak: true,
+    imageUrl: W_HAAS + 'Kevin_Magnussen_Haas_VF-18_2018_Bahrain.jpg',
+  },
+  {
+    name: "VF-23 / VF-24",
+    year: 2024,
+    subtitle: "Komatsu era begins",
+    meta: "BEARMAN DEBUT · REBUILD UNDER WAY",
+    peak: false,
+    imageUrl: W_HAAS + 'Kevin_Magnussen_2024_Bahrain_Grand_Prix.jpg',
+  },
+]
 
 /* ─── Export index ────────────────────────────────────────────────────────── */
 

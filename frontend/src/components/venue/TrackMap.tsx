@@ -98,27 +98,25 @@ export default function TrackMap({ trackPath, entityColor, hotspots, overlays, t
           viewBox="0 0 500 500"
           style={{ position: 'absolute', inset: 0, width: '100%', height: '100%' }}
           role="img"
-          aria-label="Spa-Francorchamps circuit map with interactive hotspots"
+          aria-label={trackLocation ? `${trackLocation} circuit map with interactive hotspots` : 'Circuit map with interactive hotspots'}
         >
           {/* Accurate GPS-derived track path */}
           <path
             d={trackPath}
             fill="none"
             stroke={entityColor}
-            strokeWidth={16}
+            strokeWidth={7}
             strokeLinejoin="round"
             strokeLinecap="round"
             opacity={0.65}
           />
 
-          {/* Start/finish marker */}
-          <circle cx={167.75} cy={20.86} r={3.5} fill="#FFD700" />
-          <text x={172} y={35} fontFamily="monospace" fontSize={9} fill="#FFD700" letterSpacing={0.5}>START</text>
-
           {/* Hotspots */}
           {hotspots.map(h => {
             const cx = (h.x / 100) * 500
             const cy = (h.y / 100) * 500
+            const label = h.cornerLabel.toUpperCase()
+            const labelW = Math.max(label.length * 5.2, 44)
             if (h.type === 'legendary') {
               return (
                 <g key={h.id}>
@@ -132,11 +130,11 @@ export default function TrackMap({ trackPath, entityColor, hotspots, overlays, t
                     fill="#FF1E56"
                     letterSpacing={0.5}
                   >
-                    EAU ROUGE
+                    {label}
                   </text>
                   <rect
                     x={cx - 22} y={cy + 2}
-                    width={44} height={9}
+                    width={labelW} height={9}
                     rx={2}
                     fill="rgba(255,30,86,0.12)"
                     stroke="#FF1E56" strokeWidth={0.5}

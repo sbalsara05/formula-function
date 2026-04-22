@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import CyclingReel from '@/components/driver/CyclingReel'
+import FallbackImg from '@/components/ui/FallbackImg'
 import type {
   Team,
   TeamStats,
@@ -85,9 +86,10 @@ function TeamHeader({ team, series }: { team: Team; series: Series }) {
 
 /* ─── Hero ────────────────────────────────────────────────────────────────── */
 
-function TeamHero({ team, stats, reelSlides, entityHex, isLive }: {
-  team: Team; stats: TeamStats; reelSlides: ReelSlide[]; entityHex: string; isLive?: boolean
+function TeamHero({ team, stats, reelSlides, entityHex, isLive, series }: {
+  team: Team; stats: TeamStats; reelSlides: ReelSlide[]; entityHex: string; isLive?: boolean; series: Series
 }) {
+  const seriesNum = series.replace('f', '')
   return (
     <div style={{ position: 'relative', width: '100%', height: 620, overflow: 'hidden' }}>
       <div style={{ position: 'absolute', inset: 0, background: `linear-gradient(180deg, #000 0%, ${entityHex}18 25%, ${entityHex}28 50%, ${entityHex}18 78%, #000 100%)` }} />
@@ -108,7 +110,7 @@ function TeamHero({ team, stats, reelSlides, entityHex, isLive }: {
         <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 14 }}>
           <span style={{ width: 6, height: 6, borderRadius: '50%', background: entityHex, display: 'inline-block' }} />
           <span style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: 2, color: '#aaa' }}>
-            FORMULA 1 · ACTIVE SINCE {stats.firstSeason}
+            FORMULA {seriesNum} · ACTIVE SINCE {stats.firstSeason}
           </span>
         </div>
         <p style={{ fontSize: 14, color: '#888', margin: '0 0 4px', letterSpacing: 0.5 }}>
@@ -287,9 +289,8 @@ function ErasSection({ eras, entityHex }: { eras: TeamEngineeringEra[]; entityHe
               borderRadius: 8, overflow: 'hidden', position: 'relative', padding: 14,
             }}>
               {era.imageUrl && (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img src={era.imageUrl} alt="" aria-hidden="true"
-                  style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.55 }}
+                <FallbackImg src={era.imageUrl} alt="" ariaHidden
+                  style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 30%', opacity: 0.55 }}
                 />
               )}
               {!era.imageUrl && era.golden && (
@@ -451,14 +452,14 @@ function IconicCarsSection({ cars, entityHex }: { cars: TeamIconicCar[]; entityH
             borderRadius: 6, overflow: 'hidden', position: 'relative', cursor: 'pointer',
           }}>
             {car.imageUrl && (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img
+              <FallbackImg
                 src={car.imageUrl}
                 alt={car.name}
                 style={{
                   position: 'absolute', inset: 0,
                   width: '100%', height: '100%',
                   objectFit: 'cover',
+                  objectPosition: 'center 30%',
                   opacity: 0.65,
                 }}
               />
@@ -574,7 +575,7 @@ export default function TeamPage({
   return (
     <div style={{ background: '#000', color: '#fff', minHeight: '100vh', ['--color-entity' as string]: entityHex } as React.CSSProperties}>
       <TeamHeader team={team} series={series} />
-      <TeamHero team={team} stats={mergedStats} reelSlides={reelSlides} entityHex={entityHex} isLive={!!liveStats} />
+      <TeamHero team={team} stats={mergedStats} reelSlides={reelSlides} entityHex={entityHex} isLive={!!liveStats} series={series} />
       <CurrentSeasonSection
         standings={currentStandings}
         meta={standingsMeta}

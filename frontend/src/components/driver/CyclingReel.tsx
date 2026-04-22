@@ -99,11 +99,13 @@ export default function CyclingReel({ slides, traceColor, left = '56%', borderCo
                 src={slide.imageUrl}
                 alt=""
                 aria-hidden="true"
+                onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
                 style={{
                   position: 'absolute', inset: 0,
                   width: '100%', height: '100%',
                   objectFit: 'cover',
-                  opacity: 0.5,
+                  objectPosition: 'center top',
+                  opacity: 0.55,
                 }}
               />
             )}
@@ -143,16 +145,7 @@ export default function CyclingReel({ slides, traceColor, left = '56%', borderCo
               background: 'radial-gradient(circle at 50% 50%, transparent 35%, #000 94%)',
             }} />
 
-            {/* Top-left slot label */}
-            <div style={{
-              position: 'absolute', top: 14, left: 16,
-              fontFamily: 'var(--font-mono)', fontSize: 9,
-              color: '#FFD700', letterSpacing: 1.5,
-            }}>
-              {slide.slotLabel}
-            </div>
-
-            {/* Top-right badge */}
+            {/* Top-right label badge */}
             <div style={{
               position: 'absolute', top: 14, right: 16,
               fontFamily: 'var(--font-mono)', fontSize: 10,
@@ -161,7 +154,7 @@ export default function CyclingReel({ slides, traceColor, left = '56%', borderCo
               padding: '3px 9px', borderRadius: 3,
               border: '0.5px solid #333',
             }}>
-              {slide.badge}
+              {slide.label ?? slide.badge}
             </div>
 
             {/* Bottom content */}
@@ -170,16 +163,16 @@ export default function CyclingReel({ slides, traceColor, left = '56%', borderCo
                 fontFamily: 'var(--font-mono)', fontSize: 9,
                 color: '#FFD700', letterSpacing: 1.5, margin: '0 0 4px',
               }}>
-                {slide.kicker}
+                {slide.tags ?? slide.kicker}
               </p>
               <p style={{ fontSize: 24, fontWeight: 400, margin: 0, color: '#fff', letterSpacing: -0.5 }}>
-                {slide.headline}
+                {slide.title ?? slide.headline}
               </p>
               <p style={{
                 fontFamily: 'var(--font-mono)', fontSize: 10,
                 color: '#aaa', margin: '4px 0 0', letterSpacing: 1,
               }}>
-                {slide.meta}
+                {slide.subtitle ?? slide.meta}
               </p>
             </div>
           </div>
