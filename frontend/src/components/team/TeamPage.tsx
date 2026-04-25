@@ -56,8 +56,9 @@ function normalizeReelSlides(slides: ReelSlide[]): ReelSlide[] {
   }))
 }
 
-function isWikimediaImageUrl(url: string): boolean {
+function isAllowedImageUrl(url: string): boolean {
   return (
+    url.startsWith('/') ||
     url.includes('upload.wikimedia.org/') ||
     url.includes('commons.wikimedia.org/wiki/Special:FilePath/') ||
     url.includes('en.wikipedia.org/wiki/Special:FilePath/')
@@ -307,7 +308,7 @@ function ErasSection({ eras, entityHex }: { eras: TeamEngineeringEra[]; entityHe
               border: `0.5px solid ${era.golden ? '#FFD70044' : '#1a1a1a'}`,
               borderRadius: 8, overflow: 'hidden', position: 'relative', padding: 14,
             }}>
-              {era.imageUrl && isWikimediaImageUrl(era.imageUrl) && (
+              {era.imageUrl && isAllowedImageUrl(era.imageUrl) && (
                 <FallbackImg src={era.imageUrl} alt="" ariaHidden
                   style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 30%', opacity: 0.55 }}
                 />
@@ -470,7 +471,7 @@ function IconicCarsSection({ cars, entityHex }: { cars: TeamIconicCar[]; entityH
             border: `0.5px solid ${car.peak ? '#FFD70044' : '#1a1a1a'}`,
             borderRadius: 6, overflow: 'hidden', position: 'relative', cursor: 'pointer',
           }}>
-            {car.imageUrl && isWikimediaImageUrl(car.imageUrl) && (
+            {car.imageUrl && isAllowedImageUrl(car.imageUrl) && (
               <FallbackImg
                 src={car.imageUrl}
                 alt={car.name}

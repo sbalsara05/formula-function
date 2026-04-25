@@ -3,8 +3,9 @@
 import { useMemo, useState } from 'react'
 import type { DriverEra } from '@/lib/types'
 
-function isWikimediaImageUrl(url: string): boolean {
+function isAllowedImageUrl(url: string): boolean {
   return (
+    url.startsWith('/') ||
     url.includes('upload.wikimedia.org/') ||
     url.includes('commons.wikimedia.org/wiki/Special:FilePath/') ||
     url.includes('en.wikipedia.org/wiki/Special:FilePath/')
@@ -12,7 +13,7 @@ function isWikimediaImageUrl(url: string): boolean {
 }
 
 function buildEraImageCandidates(era: DriverEra): string[] {
-  if (!era.imageUrl || !isWikimediaImageUrl(era.imageUrl)) return []
+  if (!era.imageUrl || !isAllowedImageUrl(era.imageUrl)) return []
   return [era.imageUrl]
 }
 
