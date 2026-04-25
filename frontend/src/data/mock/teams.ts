@@ -256,12 +256,12 @@ export const ferrariAcademy: TeamAcademyDriver[] = [
 /* ─── Ferrari iconic cars ────────────────────────────────────────────────── */
 
 export const ferrariIconicCars: TeamIconicCar[] = [
-  { name: "500 F2", year: 1952, subtitle: "Ascari's dominance", meta: "2 TITLES · 14 WINS" },
+  { name: "500 F2", year: 1952, subtitle: "Ascari's dominance", meta: "2 TITLES · 14 WINS", imageUrl: "/cars/ferrari-500-f2-1952.png" },
   { name: "312T", year: 1975, subtitle: "Lauda's revival", meta: "TRANSVERSE GEARBOX", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/4/47/Lauda_and_Depailler_at_1975_Dutch_Grand_Prix.jpg" },
   { name: "F310B", year: 1997, subtitle: "Schumacher's first WDC fight", meta: "JEREZ '97", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/b/b2/Michael_Schumacher_1997_Italy.jpg" },
   { name: "F2002", year: 2002, subtitle: "Peak dominance begins", meta: "15 WINS FROM 17", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/c/c2/Mschumacher_2002.jpg" },
   { name: "F2004", year: 2004, subtitle: "Arguably the greatest", meta: "DOUBLE TITLE · 15/18 WINS", peak: true, imageUrl: "https://upload.wikimedia.org/wikipedia/commons/4/47/Michael_Schumacher_win_2004.jpg" },
-  { name: "SF-25", year: 2025, subtitle: "Hamilton era begins", meta: "LECLERC / HAMILTON · 2025" },
+  { name: "SF-25", year: 2025, subtitle: "Hamilton era begins", meta: "LECLERC / HAMILTON · 2025", imageUrl: "/cars/ferrari-sf25-2025.png" },
 ];
 
 /* ─── Red Bull ─────────────────────────────────────────────────────────────── */
@@ -457,6 +457,7 @@ export const redbullIconicCars: TeamIconicCar[] = [
     year: 2021,
     subtitle: "Verstappen's coronation",
     meta: "11W · ABU DHABI FINAL LAP · 1ST WDC",
+    imageUrl: "/cars/redbull-rb16b-2021.png",
   },
   {
     name: "RB19",
@@ -2758,6 +2759,7 @@ export const mercedesIconicCars: TeamIconicCar[] = [
     year: 2024,
     subtitle: "Russell era opens",
     meta: "RUSSELL 3 WINS · REBUILD IN MOTION",
+    imageUrl: "/cars/mercedes-w15-2024.png",
   },
 ];
 
