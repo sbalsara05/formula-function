@@ -30,11 +30,14 @@
 
 ## 5. Image Rules
 - Every image URL must be verified to load before committing (paste in browser)
-- Acceptable sources: upload.wikimedia.org/wikipedia/commons/ only
+- Acceptable sources (in order of preference):
+  1. upload.wikimedia.org/wikipedia/commons/ — preferred
+  2. /public/ folder (Next.js static) — user-provided images only, placed in frontend/public/, referenced as "/filename.ext"
 - Image must match caption: correct driver, correct team livery, correct year
 - Portrait slot: driver face visible, object-position: center 15%
 - Car/race slot: object-fit: cover, object-position: center 30%
 - onerror="this.style.display='none'" on every img tag
+- If no valid image is available from either source, use "" (renders as livery-glow gradient)
 
 ## 6. Slide Data Structure (non-negotiable)
 Every carousel slide must be ONE self-contained object:

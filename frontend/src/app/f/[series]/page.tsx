@@ -145,15 +145,15 @@ const W = 'https://en.wikipedia.org/wiki/Special:FilePath/'
 
 const F1_CONSTRUCTORS = [
   // ── CURRENT GRID (2025) ──────────────────────────────────────────────────────
-  { name: 'Scuderia Ferrari',        short: 'Ferrari',       abbr: 'FER', wcc: 16, active: '1950–',    color: '#DC0000', status: 'current', slug: 'ferrari',       logo: W + 'Scuderia_Ferrari_Logo.svg' },
+  { name: 'Scuderia Ferrari',        short: 'Ferrari',       abbr: 'FER', wcc: 16, active: '1950–',    color: '#DC0000', status: 'current', slug: 'ferrari' },
   { name: 'McLaren Racing',          short: 'McLaren',       abbr: 'MCL', wcc: 10, active: '1966–',    color: '#FF8700', status: 'current', slug: 'mclaren',       logo: W + 'McLaren_Racing_logo.svg' },
   { name: 'Mercedes-AMG Petronas',   short: 'Mercedes',      abbr: 'MER', wcc: 8,  active: '2010–',    color: '#00D2BE', status: 'current', slug: 'mercedes',      logo: W + 'Mercedes_AMG_Petronas_F1_Logo.svg' },
-  { name: 'Williams Racing',         short: 'Williams',      abbr: 'WIL', wcc: 9,  active: '1977–',    color: '#005AFF', status: 'current', slug: 'williams',      logo: W + 'Williams_Racing_logo.svg' },
-  { name: 'Red Bull Racing',         short: 'Red Bull',      abbr: 'RBR', wcc: 6,  active: '2005–',    color: '#1E3A8A', status: 'current', slug: 'red-bull',      logo: W + 'Red_Bull_Racing_logo.svg' },
-  { name: 'Aston Martin Aramco',     short: 'Aston Martin',  abbr: 'AMF', wcc: 0,  active: '2021–',    color: '#006F62', status: 'current', slug: 'aston-martin',  logo: W + 'Aston_Martin_F1_Team_logo.svg' },
-  { name: 'BWT Alpine F1',           short: 'Alpine',        abbr: 'ALP', wcc: 2,  active: '2021–',    color: '#FF87BC', status: 'current', slug: 'alpine',        logo: W + 'Alpine_F1_Team_logo.svg' },
-  { name: 'MoneyGram Haas F1',       short: 'Haas',          abbr: 'HAA', wcc: 0,  active: '2016–',    color: '#B6BABD', status: 'current', slug: 'haas',          logo: W + 'Haas_F1_Team_logo.svg' },
-  { name: 'Stake F1 / Sauber',       short: 'Sauber',        abbr: 'SAU', wcc: 0,  active: '1993–',    color: '#52E252', status: 'current', slug: 'sauber',        logo: W + 'Sauber_Motorsport_logo.svg' },
+  { name: 'Williams Racing',         short: 'Williams',      abbr: 'WIL', wcc: 9,  active: '1977–',    color: '#005AFF', status: 'current', slug: 'williams' },
+  { name: 'Red Bull Racing',         short: 'Red Bull',      abbr: 'RBR', wcc: 6,  active: '2005–',    color: '#1E3A8A', status: 'current', slug: 'red-bull' },
+  { name: 'Aston Martin Aramco',     short: 'Aston Martin',  abbr: 'AMF', wcc: 0,  active: '2021–',    color: '#006F62', status: 'current', slug: 'aston-martin' },
+  { name: 'BWT Alpine F1',           short: 'Alpine',        abbr: 'ALP', wcc: 2,  active: '2021–',    color: '#FF87BC', status: 'current', slug: 'alpine' },
+  { name: 'MoneyGram Haas F1',       short: 'Haas',          abbr: 'HAA', wcc: 0,  active: '2016–',    color: '#B6BABD', status: 'current', slug: 'haas' },
+  { name: 'Stake F1 / Sauber',       short: 'Sauber',        abbr: 'SAU', wcc: 0,  active: '1993–',    color: '#52E252', status: 'current', slug: 'sauber' },
   { name: 'Visa Cash App RB',        short: 'RB',            abbr: 'RB',  wcc: 0,  active: '2024–',    color: '#6692FF', status: 'current', slug: 'rb' },
   // ── RECENT DEFUNCT (2000–2023) ───────────────────────────────────────────────
   { name: 'Brawn GP',                short: 'Brawn GP',      abbr: 'BGP', wcc: 1,  active: '2009',     color: '#BFFF00', status: 'recent',  slug: 'brawn',         logo: W + 'Brawn_GP_logo.svg' },
@@ -173,13 +173,13 @@ const F1_CONSTRUCTORS = [
   { name: 'Stewart Grand Prix',      short: 'Stewart',       abbr: 'STW', wcc: 0,  active: '1997–99',  color: '#C0C0C0', status: 'recent',  slug: 'stewart' },
   { name: 'Prost Grand Prix',        short: 'Prost GP',      abbr: 'PRO', wcc: 0,  active: '1997–01',  color: '#1565C0', status: 'recent',  slug: 'prost' },
   // ── HISTORIC (1970–2000) ─────────────────────────────────────────────────────
-  { name: 'Team Lotus',              short: 'Lotus',         abbr: 'LOT', wcc: 7,  active: '1958–94',  color: '#FFD700', status: 'historic', slug: 'lotus',         logo: W + 'Team_Lotus_logo.svg' },
+  { name: 'Team Lotus',              short: 'Lotus',         abbr: 'LOT', wcc: 7,  active: '1958–94',  color: '#FFD700', status: 'historic', slug: 'lotus' },
   { name: 'Williams F1',             short: 'Williams',      abbr: 'WIL', wcc: 9,  active: '1977–',    color: '#005AFF', status: 'historic', slug: 'williams' },
   { name: 'Brabham Racing',          short: 'Brabham',       abbr: 'BRA', wcc: 2,  active: '1962–92',  color: '#4A90D9', status: 'historic', slug: 'brabham' },
   { name: 'Tyrrell Racing',          short: 'Tyrrell',       abbr: 'TYR', wcc: 1,  active: '1970–98',  color: '#1565C0', status: 'historic', slug: 'tyrrell' },
-  { name: 'Benetton Formula',        short: 'Benetton',      abbr: 'BEN', wcc: 1,  active: '1986–02',  color: '#009F6B', status: 'historic', slug: 'benetton',      logo: W + 'Benetton_Formula_logo.svg' },
+  { name: 'Benetton Formula',        short: 'Benetton',      abbr: 'BEN', wcc: 1,  active: '1986–02',  color: '#009F6B', status: 'historic', slug: 'benetton' },
   { name: 'Renault F1',              short: 'Renault',       abbr: 'REN', wcc: 2,  active: '1977–11',  color: '#FFF500', status: 'historic', slug: 'renault' },
-  { name: 'Jordan Grand Prix',       short: 'Jordan',        abbr: 'JOR', wcc: 0,  active: '1991–05',  color: '#F5C400', status: 'historic', slug: 'jordan',        logo: W + 'Jordan_Grand_Prix_logo.svg' },
+  { name: 'Jordan Grand Prix',       short: 'Jordan',        abbr: 'JOR', wcc: 0,  active: '1991–05',  color: '#F5C400', status: 'historic', slug: 'jordan' },
   { name: 'Ligier',                  short: 'Ligier',        abbr: 'LIG', wcc: 0,  active: '1976–96',  color: '#005AFF', status: 'historic', slug: 'ligier' },
   { name: 'Arrows / Footwork',       short: 'Arrows',        abbr: 'ARR', wcc: 0,  active: '1978–02',  color: '#FF6600', status: 'historic', slug: 'arrows' },
   { name: 'Toleman Motorsport',      short: 'Toleman',       abbr: 'TOL', wcc: 0,  active: '1981–85',  color: '#AA6600', status: 'historic', slug: 'toleman' },
@@ -832,36 +832,38 @@ function F1LandingPage({ config, standings }: {
                 <span style={{ fontFamily: 'var(--font-mono)', fontSize: 9, letterSpacing: 2, color: '#555' }}>DRIVERS</span>
                 <span style={{ fontFamily: 'var(--font-mono)', fontSize: 9, color: '#333' }}>PTS</span>
               </div>
-              {standings.driverStandings.slice(0, 10).map((d, i) => {
-                const teamColor = CONSTRUCTOR_COLORS[d.constructorId] ?? '#555'
-                return (
-                  <Link
-                    key={d.driverId}
-                    href={`/f/1/driver/${d.driverId.replace(/_/g, '-')}`}
-                    style={{
-                      display: 'flex', alignItems: 'center', gap: 12, padding: '10px 18px',
-                      borderBottom: i < 9 ? '0.5px solid #111' : 'none',
-                      textDecoration: 'none', color: 'inherit',
-                      background: i === 0 ? teamColor + '0a' : 'transparent',
-                    }}
-                  >
-                    <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: i < 3 ? teamColor : '#444', minWidth: 20 }}>
-                      P{d.position}
-                    </span>
-                    <div style={{ flex: 1 }}>
-                      <span style={{ fontSize: 12, fontWeight: 500, color: i === 0 ? '#fff' : '#ccc' }}>
-                        {d.lastName}
+              <div style={{ maxHeight: 460, overflowY: 'auto' }}>
+                {standings.driverStandings.map((d, i) => {
+                  const teamColor = CONSTRUCTOR_COLORS[d.constructorId] ?? '#555'
+                  return (
+                    <Link
+                      key={d.driverId}
+                      href={`/f/1/driver/${d.driverId.replace(/_/g, '-')}`}
+                      style={{
+                        display: 'flex', alignItems: 'center', gap: 12, padding: '10px 18px',
+                        borderBottom: i < standings.driverStandings.length - 1 ? '0.5px solid #111' : 'none',
+                        textDecoration: 'none', color: 'inherit',
+                        background: i === 0 ? teamColor + '0a' : 'transparent',
+                      }}
+                    >
+                      <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: i < 3 ? teamColor : '#444', minWidth: 20 }}>
+                        P{d.position}
                       </span>
-                      <span style={{ fontFamily: 'var(--font-mono)', fontSize: 8, color: '#444', marginLeft: 8, letterSpacing: 0.5 }}>
-                        {d.constructorName.toUpperCase()}
+                      <div style={{ flex: 1 }}>
+                        <span style={{ fontSize: 12, fontWeight: 500, color: i === 0 ? '#fff' : '#ccc' }}>
+                          {d.lastName}
+                        </span>
+                        <span style={{ fontFamily: 'var(--font-mono)', fontSize: 8, color: '#444', marginLeft: 8, letterSpacing: 0.5 }}>
+                          {d.constructorName.toUpperCase()}
+                        </span>
+                      </div>
+                      <span style={{ fontFamily: 'var(--font-mono)', fontSize: 12, color: i === 0 ? teamColor : '#666', fontWeight: i === 0 ? 500 : 400 }}>
+                        {d.points}
                       </span>
-                    </div>
-                    <span style={{ fontFamily: 'var(--font-mono)', fontSize: 12, color: i === 0 ? teamColor : '#666', fontWeight: i === 0 ? 500 : 400 }}>
-                      {d.points}
-                    </span>
-                  </Link>
-                )
-              })}
+                    </Link>
+                  )
+                })}
+              </div>
             </div>
             {/* Constructor standings */}
             <div style={{ background: '#060606', border: '0.5px solid #1a1a1a', borderRadius: 8, overflow: 'hidden' }}>

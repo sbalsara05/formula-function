@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import CyclingReel from './CyclingReel'
+import EraImage from './EraImage'
 import RadarChart from './RadarChart'
 import TrajectoryModule from './TrajectoryModule'
 import FallbackImg from '@/components/ui/FallbackImg'
@@ -89,6 +90,17 @@ function renderWithHighlights(text: string, highlights: string[], color: string)
     parts.splice(0, parts.length, ...processed)
   })
   return <>{parts}</>
+}
+
+function normalizeReelSlides(slides: ReelSlide[]): ReelSlide[] {
+  return slides.map((slide) => ({
+    ...slide,
+    image: slide.image ?? slide.imageUrl,
+    badge: slide.badge ?? slide.label,
+    headline: slide.headline ?? slide.title,
+    meta: slide.meta ?? slide.subtitle,
+    tags: slide.tags ?? slide.kicker,
+  }))
 }
 
 /* ─── Sub-sections ───────────────────────────────────────────────────────────── */
@@ -203,7 +215,7 @@ function DriverHero({
             style={{
               position: 'absolute', inset: 0,
               width: '100%', height: '100%',
-              objectFit: 'cover', objectPosition: 'center 20%',
+              objectFit: 'cover', objectPosition: 'center 15%',
               opacity: 0.7,
             }}
           />
@@ -315,12 +327,7 @@ function ErasStrip({ eras }: { eras: DriverEra[] }) {
                 borderRadius: 6, overflow: 'hidden', position: 'relative',
               }}
             >
-              {era.imageUrl ? (
-                // eslint-disable-next-line @next/next/no-img-element
-                <FallbackImg src={era.imageUrl} alt="" ariaHidden style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center center', opacity: 0.45 }} />
-              ) : (
-                <div style={{ position: 'absolute', inset: 0, background: `radial-gradient(ellipse at 50% 45%, ${era.teamLiveryHex} 0%, ${era.teamLiveryHex} 28%, transparent 60%)`, opacity: 0.65 }} />
-              )}
+              <EraImage era={era} />
               <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(circle at 50% 50%, transparent 35%, #000 92%)' }} />
               <div style={{ position: 'absolute', top: 8, left: 10, fontFamily: 'var(--font-mono)', fontSize: 8, color: era.teamAccentHex ?? era.teamLiveryHex, letterSpacing: 1 }}>
                 {era.teamName.toUpperCase()}
@@ -539,6 +546,7 @@ export default function DriverPage({
 }: DriverPageProps) {
   const entityHex = ENTITY_COLOR_HEX[driver.entityColor] ?? '#ffffff'
   const seriesHex = SERIES_COLOR_HEX[series]
+  const normalizedReelSlides = normalizeReelSlides(reelSlides)
 
   return (
     <div
@@ -554,7 +562,7 @@ export default function DriverPage({
       <DriverHero
         driver={driver}
         stats={stats}
-        reelSlides={reelSlides}
+        reelSlides={normalizedReelSlides}
         series={series}
         entityHex={entityHex}
         seriesHex={seriesHex}

@@ -25,8 +25,8 @@ export const ferrari: Team = {
   entityColor: "ferrari",
   liveryHex: "#DC0000",
   bio: "The oldest and most storied constructor in Formula 1. The Scuderia has won more constructor championships than any other team and remains the emotional heart of the sport.",
-  quote: "What's behind you doesn't matter.",
-  quoteContext: "Enzo Ferrari",
+  quote: "",
+  quoteContext: "",
 };
 
 export const ferrariStats: TeamStats = {
@@ -49,6 +49,7 @@ export const ferrariEras: TeamEngineeringEra[] = [
     championships: 3,
     driverNames: "ENZO · ASCARI · FANGIO",
     champLabel: "3× WDC",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/5/55/1952_Ferrari_500_F2.jpg",
   },
   {
     teamId: "ferrari",
@@ -234,7 +235,6 @@ export const ferrariReelSlides: ReelSlide[] = [
       { cx: 115, cy: 185, r: 14, fill: "rgba(220,0,0,0.35)" },
       { cx: 290, cy: 185, r: 14, fill: "rgba(220,0,0,0.35)" },
     ],
-    imageUrl: "https://formula1.wordpress.com/wp-content/uploads/2025/03/season2025_race2_saturday_3.webp",
   },
 ];
 
@@ -256,12 +256,12 @@ export const ferrariAcademy: TeamAcademyDriver[] = [
 /* ─── Ferrari iconic cars ────────────────────────────────────────────────── */
 
 export const ferrariIconicCars: TeamIconicCar[] = [
-  { name: "500 F2", year: 1952, subtitle: "Ascari's dominance", meta: "2 TITLES · 14 WINS", imageUrl: "https://live.staticflickr.com/4610/25113928057_a933b97165.jpg" },
+  { name: "500 F2", year: 1952, subtitle: "Ascari's dominance", meta: "2 TITLES · 14 WINS" },
   { name: "312T", year: 1975, subtitle: "Lauda's revival", meta: "TRANSVERSE GEARBOX", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/4/47/Lauda_and_Depailler_at_1975_Dutch_Grand_Prix.jpg" },
   { name: "F310B", year: 1997, subtitle: "Schumacher's first WDC fight", meta: "JEREZ '97", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/b/b2/Michael_Schumacher_1997_Italy.jpg" },
   { name: "F2002", year: 2002, subtitle: "Peak dominance begins", meta: "15 WINS FROM 17", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/c/c2/Mschumacher_2002.jpg" },
   { name: "F2004", year: 2004, subtitle: "Arguably the greatest", meta: "DOUBLE TITLE · 15/18 WINS", peak: true, imageUrl: "https://upload.wikimedia.org/wikipedia/commons/4/47/Michael_Schumacher_win_2004.jpg" },
-  { name: "SF-25", year: 2025, subtitle: "Hamilton era begins", meta: "LECLERC / HAMILTON · 2025", imageUrl: "https://formula1.wordpress.com/wp-content/uploads/2025/03/season2025_race1_friday_3.webp" },
+  { name: "SF-25", year: 2025, subtitle: "Hamilton era begins", meta: "LECLERC / HAMILTON · 2025" },
 ];
 
 /* ─── Red Bull ─────────────────────────────────────────────────────────────── */
@@ -319,7 +319,7 @@ export const redbullEras: TeamEngineeringEra[] = [
     championships: 0,
     driverNames: "RICCIARDO · KVYAT · VERSTAPPEN · GASLY · ALBON",
     champLabel: "NO TITLES · 23W",
-    imageUrl: "https://formula1.wordpress.com/wp-content/uploads/2016/05/season2016_race5_wallpapers_11.jpg",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/1/1f/Daniel_Ricciardo_2014_Singapore_FP2.jpg",
   },
   {
     teamId: "redbull",
@@ -327,10 +327,10 @@ export const redbullEras: TeamEngineeringEra[] = [
     seasons: "2021–",
     description: "Honda power, Newey's focused attention, and Verstappen at his ceiling. The 2021 finale at Abu Dhabi. The RB18's 17 wins. The RB19's record 21 victories from 22 races. Four consecutive World Championships for Max — equal to Vettel's own record set at this very team.",
     championships: 4,
-    driverNames: "VERSTAPPEN · PÉREZ",
+    driverNames: "VERSTAPPEN · HADJAR",
     champLabel: "4× WDC · 2× WCC",
     current: true,
-    imageUrl: "https://formula1.wordpress.com/wp-content/uploads/2022/11/season2022_race22_sunday_9.jpg",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/7/79/FIA_F1_Austria_2023_Nr._1_%281%29.jpg",
   },
 ];
 
@@ -372,7 +372,6 @@ export const redbullReelSlides: ReelSlide[] = [
       { cx: 113, cy: 183, r: 14, fill: "rgba(30,65,190,0.35)" },
       { cx: 280, cy: 183, r: 14, fill: "rgba(30,65,190,0.35)" },
     ],
-    imageUrl: "https://formula1.wordpress.com/wp-content/uploads/2021/12/season2021_race22_sunday_10.jpg",
   },
   {
     slotLabel: "SV · 01",
@@ -400,7 +399,6 @@ export const redbullReelSlides: ReelSlide[] = [
       { cx: 110, cy: 183, r: 14, fill: "rgba(30,58,138,0.35)" },
       { cx: 285, cy: 183, r: 14, fill: "rgba(30,58,138,0.35)" },
     ],
-    imageUrl: "https://formula1.wordpress.com/wp-content/uploads/2013/10/season2013_race16_wallpapers_12.jpg",
   },
   {
     slotLabel: "SV · MW",
@@ -459,7 +457,6 @@ export const redbullIconicCars: TeamIconicCar[] = [
     year: 2021,
     subtitle: "Verstappen's coronation",
     meta: "11W · ABU DHABI FINAL LAP · 1ST WDC",
-    imageUrl: "https://formula1.wordpress.com/wp-content/uploads/2021/12/season2021_race22_sunday_12.jpg",
   },
   {
     name: "RB19",
@@ -508,8 +505,8 @@ export const artF2: Team = {
   entityColor: "art",
   liveryHex: "#888888",
   bio: "Founded in 1996 as ASM and rebranded ART in 2005, ART Grand Prix quickly established themselves as the benchmark F2/GP2 operation. Lewis Hamilton won their maiden GP2 title in 2006. In the F2 era (2017–present) they have three driver championships — Russell (2018), de Vries (2019), Pourchaire (2023) — making them the second most successful team behind Prema. In F3, Victor Martins took the 2022 title.",
-  quote: "Hamilton. Rosberg. Vandoorne. Russell. De Vries. Pourchaire. The names speak for themselves.",
-  quoteContext: "ART Grand Prix driver heritage",
+  quote: "",
+  quoteContext: "",
 };
 
 export const artF2Stats: TeamStats = {
@@ -660,8 +657,8 @@ export const damsF2: Team = {
   entityColor: "dams",
   liveryHex: "#CC2200",
   bio: "Founded in 1988 near Le Mans by Jean-Paul Driot and Hugues de Chaunac, DAMS (Driot-Arnoux Motorsport) is one of the most storied names in European junior motorsport. Two GP2 driver titles — Davide Valsecchi (2012) and Jolyon Palmer (2014) — anchor their legacy. In the F2 era they have developed Alex Albon, Jack Doohan, and a string of Red Bull and Williams-backed juniors without yet adding to their title count.",
-  quote: "The most experienced French operation in junior open-wheel racing. Reliable, professional, battle-hardened.",
-  quoteContext: "DAMS racing identity",
+  quote: "",
+  quoteContext: "",
 };
 
 export const damsF2Stats: TeamStats = {
@@ -782,8 +779,8 @@ export const trident: Team = {
   entityColor: "trident",
   liveryHex: "#990000",
   bio: "Founded in 2006 in San Pietro Mosezzo, Piedmont, Trident is the privateer powerhouse of the FIA F3 era. Three consecutive F3 driver championships — Gabriel Bortoleto (2023), Leonardo Fornaroli (2024), Rafael Câmara (2025) — are the most dominant run in the series' history. Bortoleto's immediate follow-up F2 title with Invicta in 2024 further validates Trident's driver development culture. They run in F2 as well, though their F3 identity defines them.",
-  quote: "Three straight F3 champions. Independent Italian. The anti-Prema.",
-  quoteContext: "Trident F3 dynasty 2023–2025",
+  quote: "",
+  quoteContext: "",
 };
 
 export const tridentStats: TeamStats = {
@@ -912,8 +909,8 @@ export const mpMotorsport: Team = {
   entityColor: "mp",
   liveryHex: "#FF6600",
   bio: "Founded in 1995 as MultiPromo in the Netherlands, MP Motorsport arrived in the GP2 Series and steadily built toward their breakthrough. Their defining moment came in 2022 when Felipe Drugovich delivered the FIA F2 driver and teams championships — the first Brazilian F2 champion since the modern era. Based in Westmaas, they run both F2 and F3 programmes and are recognised as a competitive mid-field team with genuine championship potential.",
-  quote: "Drugovich 2022. The Dutch-Brazilian connection. Quietly building something real.",
-  quoteContext: "MP Motorsport identity",
+  quote: "",
+  quoteContext: "",
 };
 
 export const mpMotorsportStats: TeamStats = {
@@ -1033,8 +1030,8 @@ export const invicta: Team = {
   entityColor: "invicta",
   liveryHex: "#1199CC",
   bio: "Formerly Virtuosi Racing, the team was rebranded as Invicta Racing in 2024 following acquisition by the Invicta Watch Group. Their F2 history stretches back to 2017 when they entered as Virtuosi. Zhou Guanyu, Callum Ilott, and Felipe Drugovich all scored wins with the team before Bortoleto delivered their first and only driver championship in 2024. Leonardo Fornaroli followed with the 2025 title, making Invicta back-to-back F2 champions.",
-  quote: "Bortoleto 2024. Fornaroli 2025. The rebrand brought back-to-back titles.",
-  quoteContext: "Invicta Racing F2 identity",
+  quote: "",
+  quoteContext: "",
 };
 
 export const invictaStats: TeamStats = {
@@ -1145,8 +1142,8 @@ export const hitechGP: Team = {
   entityColor: "hitech",
   liveryHex: "#CC0022",
   bio: "Silverstone-based Hitech Grand Prix entered F3 and F2 from 2018 onwards, becoming a regular fixture on both grids. Their partnership with Toyota Gazoo Racing (TGR) — reflected in the TGR suffix — provides manufacturer resources for driver development. The team has operated as a reliable midfield-to-front-running operation, attracting Red Bull and TOYOTA junior drivers, without yet landing an F2 or F3 driver championship.",
-  quote: "Silverstone roots. Toyota partnership. Always in the mix, never quite over the line.",
-  quoteContext: "Hitech TGR identity",
+  quote: "",
+  quoteContext: "",
 };
 
 export const hitechGPStats: TeamStats = {
@@ -1254,8 +1251,8 @@ export const camposRacing: Team = {
   entityColor: "campos",
   liveryHex: "#002266",
   bio: "Founded in 1997 in Alzira, Valencia by former F1 driver Adrián Campos, Campos Racing is one of the most established Spanish motorsport organisations. Their GP2 Teams Championship in 2008 (with Timo Glock winning the driver title) remains their headline result. After Adrián Campos Sr. passed away in January 2021, his son Adrián Campos Jr. took the helm. Today, Campos competes in both F2 and F3, regularly producing Spanish academy talent and international juniors.",
-  quote: "Spanish motorsport's cornerstone. Alonso passed through. Glock gave us the GP2 title.",
-  quoteContext: "Campos Racing heritage",
+  quote: "",
+  quoteContext: "",
 };
 
 export const camposRacingStats: TeamStats = {
@@ -1365,8 +1362,8 @@ export const rodinMotorsport: Team = {
   entityColor: "rodin",
   liveryHex: "#CC3300",
   bio: "The team was founded in 1996 as Carlin Motorsport by Trevor Carlin and Martin Stone, building a formidable reputation across British junior formulae over nearly three decades. In January 2023, New Zealand entrepreneur David Dicker's Rodin Cars company acquired an 80% stake; the team rebranded fully as Rodin Motorsport in January 2024. They brought the entire Carlin F2 and F3 operation — infrastructure, engineers, paddock facilities — under the Rodin banner, entering both championships from 2024.",
-  quote: "Carlin built the foundation over 28 years. Rodin is building the future.",
-  quoteContext: "Rodin Motorsport origin",
+  quote: "",
+  quoteContext: "",
 };
 
 export const rodinMotorsportStats: TeamStats = {
@@ -1437,7 +1434,7 @@ export const rodinMotorsportReelSlides: ReelSlide[] = [
 ];
 
 export const rodinMotorsportAcademy: TeamAcademyDriver[] = [
-  { name: "Liam Lawson",      tier: "alumni", note: "Red Bull junior · Carlin F2 · → AlphaTauri/RB F1 2023–25" },
+  { name: "Liam Lawson",      tier: "alumni", note: "Red Bull junior · Carlin F2 · → AlphaTauri/Racing Bulls F1 2023–present" },
   { name: "Logan Sargeant",   tier: "alumni", note: "Carlin F2 2022 · → Williams F1 2023–24" },
   { name: "Dan Ticktum",      tier: "alumni", note: "Carlin F2/GP3 2018–20 · Red Bull junior" },
   { name: "Alex Dunne",       tier: "junior", note: "Irish junior · Rodin F2 2025" },
@@ -1474,8 +1471,8 @@ export const vanAmersfoort: Team = {
   entityColor: "vaf",
   liveryHex: "#FF9900",
   bio: "Van Amersfoort Racing, based in Zeewolde, Netherlands, is one of the oldest motorsport outfits still competing in global single-seater racing — founded in 1975 by Frits van Amersfoort. Their most famous alumni are Max Verstappen and Charles Leclerc, both of whom raced for VAF in European Formula 3 on their way to Formula 1. Four German F3 driver championships and ten F1 graduates define their historical legacy. They entered the FIA F2 and F3 Championships in 2022.",
-  quote: "Verstappen started here. Leclerc passed through. Fifty years of making champions.",
-  quoteContext: "Van Amersfoort Racing heritage",
+  quote: "",
+  quoteContext: "",
 };
 
 export const vanAmersfoortStats: TeamStats = {
@@ -1550,7 +1547,7 @@ export const vanAmersfoortAcademy: TeamAcademyDriver[] = [
   { name: "Max Verstappen",     tier: "alumni", note: "German F3 2014 with VAF → Toro Rosso/Red Bull F1 · 4× WDC" },
   { name: "Charles Leclerc",    tier: "alumni", note: "F3 European 2016 with VAF → Sauber/Ferrari F1" },
   { name: "Mick Schumacher",    tier: "alumni", note: "F3 European 2016–18 with VAF · → Haas F1" },
-  { name: "Liam Lawson",        tier: "alumni", note: "F3 2020 P2 with VAF → Red Bull F1 2023–25" },
+  { name: "Liam Lawson",        tier: "alumni", note: "F3 2020 P2 with VAF → Racing Bulls F1 2023–present" },
   { name: "Oliver Bearman",     tier: "alumni", note: "F4 with VAF programme · → Prema → Haas F1" },
   { name: "Rafael Villagómez",  tier: "junior", note: "Mexican junior · VAF F2 2025" },
 ];
@@ -1588,8 +1585,8 @@ export const artF3: Team = {
   entityColor: "art",
   liveryHex: "#888888",
   bio: "ART Grand Prix are the benchmark of FIA F3. Victor Martins delivered their first FIA F3 drivers' title in 2022 — a wire-to-wire dominant campaign. Before that, ART were the dominant force in the predecessor GP3 Series, winning titles with Pierre Gasly (2016) and Anthoine Hubert (2018). Their ability to convert factory-backed talent into champions across multiple junior single-seater series is unmatched.",
-  quote: "The GP3 dynasty. The F3 benchmark.",
-  quoteContext: "ART F3 · 2022 champion",
+  quote: "",
+  quoteContext: "",
 };
 export const artF3Stats: TeamStats = {
   teamId: "art-f3",
@@ -1693,8 +1690,8 @@ export const hitechF3: Team = {
   entityColor: "hitech",
   liveryHex: "#CC0022",
   bio: "Hitech TGR fields a competitive FIA F3 programme backed by Toyota Gazoo Racing, running in parallel with their F2 operation. Jak Crawford, Marcus Armstrong, and Ayumu Iwasa all progressed through their F3 machinery. Their Silverstone engineering base and TGR backing gives them access to Asian and European junior talent, making them a consistent points-scorer across the FIA F3 field.",
-  quote: "Silverstone base. Toyota backing. Global junior pipeline.",
-  quoteContext: "Hitech F3 programme",
+  quote: "",
+  quoteContext: "",
 };
 export const hitechF3Stats: TeamStats = {
   teamId: "hitech-f3",
@@ -1796,8 +1793,8 @@ export const mpF3: Team = {
   entityColor: "mp",
   liveryHex: "#FF6600",
   bio: "MP Motorsport run a parallel FIA F3 programme alongside their F2 operation. Their Dutch identity and race engineering depth have developed drivers including Alexander Smolyar and Caio Collet through the FIA F3 ranks. Without a title yet in the series, MP are a consistent points-scoring outfit whose F3 programme feeds directly into their F2 operation, providing continuity for rising talent.",
-  quote: "Orange, Dutch, developmental.",
-  quoteContext: "MP Motorsport F3 identity",
+  quote: "",
+  quoteContext: "",
 };
 export const mpF3Stats: TeamStats = {
   teamId: "mp-f3",
@@ -1898,8 +1895,8 @@ export const camposF3: Team = {
   entityColor: "campos",
   liveryHex: "#002266",
   bio: "Campos Racing claimed the 2025 FIA F3 Teams Championship — their first F3 title and a significant milestone for the Spanish outfit. Known for developing Spanish and South American talent, they run a consistent F3 programme alongside their F2 entry. Arvid Lindblad, Nikola Tsolov, and Pepe Martí have all raced in their F3 machinery. Their Alzira base and national motorsport identity make them a cornerstone of the FIA junior pyramid.",
-  quote: "Spain's cornerstone team. 2025 F3 Teams champions.",
-  quoteContext: "Campos Racing F3 · 2025",
+  quote: "",
+  quoteContext: "",
 };
 export const camposF3Stats: TeamStats = {
   teamId: "campos-f3",
@@ -2001,8 +1998,8 @@ export const vafF3: Team = {
   entityColor: "vaf",
   liveryHex: "#FF9900",
   bio: "Van Amersfoort Racing entered the FIA F3 Championship in 2022 with fifty years of motorsport heritage behind them. Their alumni from the German F3 era — Max Verstappen (2014) and Charles Leclerc (2015–16) — represent the gold standard of what junior F3 can produce. In the FIA F3 era, VAF fields young talent from across Europe and South America, with Franco Colapinto — who went on to race in F1 — among their most notable FIA F3 graduates.",
-  quote: "Verstappen started here. Fifty years of making champions.",
-  quoteContext: "Van Amersfoort Racing F3 heritage",
+  quote: "",
+  quoteContext: "",
 };
 export const vafF3Stats: TeamStats = {
   teamId: "vaf-f3",
@@ -2105,8 +2102,8 @@ export const rodinF3: Team = {
   entityColor: "rodin",
   liveryHex: "#CC3300",
   bio: "Rodin Motorsport (formerly Carlin) brings twenty-eight years of junior single-seater engineering to the FIA F3 grid. As Carlin, they fielded Logan Sargeant (2019) and Zak O'Sullivan (2022) in F3 with strong results. Under the Rodin banner since 2024, Louis Sharp — GB3 champion 2024 — leads their current F3 programme as New Zealand investment powers a fresh chapter. The institutional knowledge from Carlin's decades of F3 and GP3 work underpins everything.",
-  quote: "Carlin built the foundation over 28 years. Rodin is building the future.",
-  quoteContext: "Rodin Motorsport origin",
+  quote: "",
+  quoteContext: "",
 };
 export const rodinF3Stats: TeamStats = {
   teamId: "rodin-f3",
@@ -2323,8 +2320,8 @@ export const mclaren: Team = {
   entityColor: "mclaren",
   liveryHex: "#FF8700",
   bio: "Founded by Bruce McLaren and sustained by an obsession with excellence, McLaren has won eight Constructors' Championships and twelve Drivers' titles across six decades. The Senna–Prost era defined team dominance; the 2024 Constructors' title — their first in 26 years — confirmed the Woking renaissance.",
-  quote: "Life is measured in achievement, not in years alone.",
-  quoteContext: "Bruce McLaren, 1937–1970",
+  quote: "",
+  quoteContext: "",
 };
 
 export const mclarenStats: TeamStats = {
@@ -2359,6 +2356,7 @@ export const mclarenEras: TeamEngineeringEra[] = [
     driverNames: "LAUDA · PROST · SENNA",
     champLabel: "7× WDC",
     golden: true,
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/c/c5/McLaren_MP4-4_front-right_Honda_Collection_Hall.jpg",
   },
   {
     teamId: "mclaren",
@@ -2369,6 +2367,7 @@ export const mclarenEras: TeamEngineeringEra[] = [
     championships: 2,
     driverNames: "HÄKKINEN · COULTHARD",
     champLabel: "2× WDC",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/3/34/McLaren-Mercedes_MP4-13_1998_F1_Mika_H%C3%A4kkinen_LSide_MBMuse_9June2013_%2814796968698%29.jpg",
   },
   {
     teamId: "mclaren",
@@ -2391,7 +2390,7 @@ export const mclarenEras: TeamEngineeringEra[] = [
     driverNames: "NORRIS · PIASTRI",
     champLabel: "1× WCC",
     current: true,
-    imageUrl: "https://formula1.wordpress.com/wp-content/uploads/2024/12/season2024_race24_thursday_6.jpg",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/a/ae/Lando_Norris%2CChinese_GP_2024.jpg",
   },
 ];
 
@@ -2487,7 +2486,6 @@ export const mclarenReelSlides: ReelSlide[] = [
       { cx: 108, cy: 185, r: 14, fill: "rgba(255,135,0,0.35)" },
       { cx: 287, cy: 185, r: 14, fill: "rgba(255,135,0,0.35)" },
     ],
-    imageUrl: "https://formula1.wordpress.com/wp-content/uploads/2024/05/season2024_race6_sunday_8.jpg",
   },
 ];
 
@@ -2525,6 +2523,7 @@ export const mclarenIconicCars: TeamIconicCar[] = [
     year: 1998,
     subtitle: "Häkkinen's first title",
     meta: "WDC + WCC · BACK-TO-BACK FOLLOWED",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/3/3b/Mika_Hakkinen_in_the_1998_Spanish_Grand_Prix.jpg",
   },
   {
     name: "MP4/23",
@@ -2538,7 +2537,7 @@ export const mclarenIconicCars: TeamIconicCar[] = [
     year: 2024,
     subtitle: "WCC resurgence",
     meta: "NORRIS / PIASTRI · 2024 CONSTRUCTORS",
-    imageUrl: "https://formula1.wordpress.com/wp-content/uploads/2024/07/season2024_race14_friday_5.jpg",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/9/9c/MCL38_during_the_Japanese_Grand_Prix.jpg",
   },
 ];
 
@@ -2555,8 +2554,8 @@ export const mercedes: Team = {
   entityColor: "mercedes",
   liveryHex: "#00D2BE",
   bio: "Eight consecutive Constructors' Championships from 2014 to 2021 — a record that may never be equalled. Built from the ashes of Brawn GP through a revolutionary hybrid power unit concept, Mercedes redefined team dominance in the turbo-hybrid era with Lewis Hamilton and Nico Rosberg.",
-  quote: "In this team, there are no excuses. Only solutions.",
-  quoteContext: "Toto Wolff",
+  quote: "",
+  quoteContext: "",
 };
 
 export const mercedesStats: TeamStats = {
@@ -2696,7 +2695,6 @@ export const mercedesReelSlides: ReelSlide[] = [
       { cx: 110, cy: 185, r: 14, fill: "rgba(0,122,114,0.35)" },
       { cx: 281, cy: 185, r: 14, fill: "rgba(0,122,114,0.35)" },
     ],
-    imageUrl: "https://formula1.wordpress.com/wp-content/uploads/2022/03/season2022_race1_thursday_4.jpg",
   },
   {
     slotLabel: "CHASSIS 14 · CURRENT",
@@ -2710,7 +2708,6 @@ export const mercedesReelSlides: ReelSlide[] = [
       { cx: 108, cy: 185, r: 14, fill: "rgba(0,210,190,0.35)" },
       { cx: 287, cy: 185, r: 14, fill: "rgba(0,210,190,0.35)" },
     ],
-    imageUrl: "https://formula1.wordpress.com/wp-content/uploads/2024/07/season2024_race14_sunday_9.jpg",
   },
 ];
 
@@ -2761,7 +2758,6 @@ export const mercedesIconicCars: TeamIconicCar[] = [
     year: 2024,
     subtitle: "Russell era opens",
     meta: "RUSSELL 3 WINS · REBUILD IN MOTION",
-    imageUrl: "https://formula1.wordpress.com/wp-content/uploads/2024/07/season2024_race14_sunday_8.jpg",
   },
 ];
 
@@ -2780,8 +2776,8 @@ export const haas: Team = {
   entityColor: "haas",
   liveryHex: "#E8002D",
   bio: "The first American-owned Formula 1 team since Haas Lola in 1986. Founded by Gene Haas, co-owner of Stewart-Haas Racing NASCAR team. Entered F1 in 2016 with an innovative customer model — running Ferrari-spec power unit and gearbox. Their debut season was a shock: P8 constructors with Romain Grosjean scoring points in their very first race in Australia.",
-  quote: "We're an American team with a very European way of working.",
-  quoteContext: "Gene Haas, 2016",
+  quote: "",
+  quoteContext: "",
 }
 
 export const haasStats: TeamStats = {

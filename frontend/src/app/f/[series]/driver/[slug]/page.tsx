@@ -45,6 +45,15 @@ import {
   perez, perezStats, perezEras, perezSignature, perezReelSlides, perezScoutingReport,
   bottas, bottasStats, bottasEras, bottasSignature, bottasReelSlides, bottasScoutingReport,
   prost, prostStats, prostEras, prostSignature, prostReelSlides, prostScoutingReport,
+  schumacher, schumacherStats, schumacherEras, schumacherSignature, schumacherReelSlides, schumacherScoutingReport,
+  senna, sennaStats, sennaEras, sennaSignature, sennaReelSlides, sennaScoutingReport,
+  raikkonen, raikkonenStats, raikkonenEras, raikkonenSignature, raikkonenReelSlides, raikkonenScoutingReport,
+  button, buttonStats, buttonEras, buttonSignature, buttonReelSlides, buttonScoutingReport,
+  hakkinen, hakkinenStats, hakkinenEras, hakkinenSignature, hakkinenReelSlides, hakkinenScoutingReport,
+  damonHill, damonHillStats, damonHillEras, damonHillSignature, damonHillReelSlides, damonHillScoutingReport,
+  mansell, mansellStats, mansellEras, mansellSignature, mansellReelSlides, mansellScoutingReport,
+  nicoRosberg, nicoRosbergStats, nicoRosbergEras, nicoRosbergSignature, nicoRosbergReelSlides, nicoRosbergScoutingReport,
+  ricciardo, ricciardoStats, ricciardoEras, ricciardoSignature, ricciardoReelSlides, ricciardoScoutingReport,
 } from '@/data/mock/drivers'
 import type {
   Series, Driver, DriverStats, DriverEra, DrivingSignature,
@@ -94,6 +103,15 @@ const DRIVER_REGISTRY: Partial<Record<Series, Record<string, DriverBundle>>> = {
     perez:       { driver: perez,       stats: perezStats,       eras: perezEras,       signature: perezSignature,       reelSlides: perezReelSlides,       scoutingReport: perezScoutingReport },
     bottas:      { driver: bottas,      stats: bottasStats,      eras: bottasEras,      signature: bottasSignature,      reelSlides: bottasReelSlides,      scoutingReport: bottasScoutingReport },
     prost:       { driver: prost,       stats: prostStats,       eras: prostEras,       signature: prostSignature,       reelSlides: prostReelSlides,       scoutingReport: prostScoutingReport },
+    schumacher:  { driver: schumacher,  stats: schumacherStats,  eras: schumacherEras,  signature: schumacherSignature,  reelSlides: schumacherReelSlides,  scoutingReport: schumacherScoutingReport },
+    senna:       { driver: senna,       stats: sennaStats,       eras: sennaEras,       signature: sennaSignature,       reelSlides: sennaReelSlides,       scoutingReport: sennaScoutingReport },
+    raikkonen:   { driver: raikkonen,   stats: raikkonenStats,   eras: raikkonenEras,   signature: raikkonenSignature,   reelSlides: raikkonenReelSlides,   scoutingReport: raikkonenScoutingReport },
+    button:      { driver: button,      stats: buttonStats,      eras: buttonEras,      signature: buttonSignature,      reelSlides: buttonReelSlides,      scoutingReport: buttonScoutingReport },
+    hakkinen:    { driver: hakkinen,    stats: hakkinenStats,    eras: hakkinenEras,    signature: hakkinenSignature,    reelSlides: hakkinenReelSlides,    scoutingReport: hakkinenScoutingReport },
+    hill:        { driver: damonHill,   stats: damonHillStats,   eras: damonHillEras,   signature: damonHillSignature,   reelSlides: damonHillReelSlides,   scoutingReport: damonHillScoutingReport },
+    mansell:     { driver: mansell,     stats: mansellStats,     eras: mansellEras,     signature: mansellSignature,     reelSlides: mansellReelSlides,     scoutingReport: mansellScoutingReport },
+    rosberg:     { driver: nicoRosberg, stats: nicoRosbergStats, eras: nicoRosbergEras, signature: nicoRosbergSignature, reelSlides: nicoRosbergReelSlides, scoutingReport: nicoRosbergScoutingReport },
+    ricciardo:   { driver: ricciardo,   stats: ricciardoStats,   eras: ricciardoEras,   signature: ricciardoSignature,   reelSlides: ricciardoReelSlides,   scoutingReport: ricciardoScoutingReport },
   },
   f2: {
     bearman: {
@@ -289,11 +307,11 @@ const DRIVER_IMAGE_MAP: Record<string, string> = {
   tsunoda:            W + 'Yuki_Tsunoda_2024_Abu_Dhabi_(cropped).jpg',
   hulkenberg:         W + 'Nico_H%C3%BClkenberg_2024_Abu_Dhabi_(cropped).jpg',
   albon:              W + 'Alex_Albon_2024_Abu_Dhabi_(cropped).jpg',
-  gasly:              W + 'Pierre_Gasly_2024_Abu_Dhabi_(cropped).jpg',
-  stroll:             W + 'Lance_Stroll_2024_Abu_Dhabi_(cropped).jpg',
+  gasly:              W + '2022_French_Grand_Prix_(52279065728)_(cropped).png',
+  stroll:             W + 'FIA_F1_Austria_2024_Nr._18_Stroll.jpg',
   ocon:               W + 'Esteban_Ocon_2024_Abu_Dhabi_(cropped).jpg',
   // Legends / retired
-  michael_schumacher: W + 'A%C3%A9cio_Neves%2C_Michael_Schumacher_e_Didi_(Cropped).jpg',
+  michael_schumacher: W + 'Michael_Schumacher_2012_Malaysia_3.jpg',
   vettel:             W + 'Sebastian_Vettel_-_2022236172324_2022-08-24_Champions_for_Charity_-_Sven_-_1D_X_MK_II_-_0418_-_B70I2428_(cropped).jpg',
   senna:              W + 'Ayrton_Senna_9_(cropped).jpg',
   prost:              W + 'Festival_automobile_international_2015_-_Photocall_-_065_(cropped3).jpg',
@@ -674,7 +692,7 @@ export default async function DriverRoute({
 
   const lcSlug = slug.toLowerCase()
 
-  // Blueprint pages (Vettel, Bearman)
+  // Use curated blueprints when available (including F1), then fall back to generic pages.
   const bundle = DRIVER_REGISTRY[series]?.[lcSlug]
   if (bundle) {
     return <DriverPage {...bundle} series={series} />

@@ -13,6 +13,15 @@ interface Props {
   borderColor?: string // default '#1a2847'
 }
 
+function isAllowedSlideImage(url: string): boolean {
+  return (
+    url.startsWith('/') ||
+    url.includes('upload.wikimedia.org/') ||
+    url.includes('commons.wikimedia.org/wiki/Special:FilePath/') ||
+    url.includes('en.wikipedia.org/wiki/Special:FilePath/')
+  )
+}
+
 export default function CyclingReel({ slides, traceColor, left = '56%', borderColor = '#1a2847' }: Props) {
   const [current, setCurrent] = useState(0)
   const [paused, setPaused] = useState(false)
@@ -69,6 +78,8 @@ export default function CyclingReel({ slides, traceColor, left = '56%', borderCo
     >
       {slides.map((slide, i) => {
         const isActive = i === current
+        const rawImage = slide.image ?? slide.imageUrl
+        const slideImage = rawImage && isAllowedSlideImage(rawImage) ? rawImage : undefined
         return (
           <div
             key={i}
@@ -93,10 +104,10 @@ export default function CyclingReel({ slides, traceColor, left = '56%', borderCo
                 }}
               />
             )}
-            {slide.imageUrl && !slide.videoId && (
+            {slideImage && !slide.videoId && (
               // eslint-disable-next-line @next/next/no-img-element
               <img
-                src={slide.imageUrl}
+                src={slideImage}
                 alt=""
                 aria-hidden="true"
                 onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
@@ -110,7 +121,7 @@ export default function CyclingReel({ slides, traceColor, left = '56%', borderCo
               />
             )}
             {/* Glow + trace only on pure-dark slides (no media) */}
-            {!slide.imageUrl && !slide.videoId && (<>
+            {!slideImage && !slide.videoId && (<>
               <div style={{
                 position: 'absolute', inset: 0,
                 background: `radial-gradient(ellipse at 50% 40%, ${slide.glowColor} 0%, ${slide.glowColor} 30%, transparent 68%)`,
@@ -154,7 +165,7 @@ export default function CyclingReel({ slides, traceColor, left = '56%', borderCo
               padding: '3px 9px', borderRadius: 3,
               border: '0.5px solid #333',
             }}>
-              {slide.label ?? slide.badge}
+              {slide.badge}
             </div>
 
             {/* Bottom content */}
@@ -163,16 +174,16 @@ export default function CyclingReel({ slides, traceColor, left = '56%', borderCo
                 fontFamily: 'var(--font-mono)', fontSize: 9,
                 color: '#FFD700', letterSpacing: 1.5, margin: '0 0 4px',
               }}>
-                {slide.tags ?? slide.kicker}
+                {slide.tags}
               </p>
               <p style={{ fontSize: 24, fontWeight: 400, margin: 0, color: '#fff', letterSpacing: -0.5 }}>
-                {slide.title ?? slide.headline}
+                {slide.headline}
               </p>
               <p style={{
                 fontFamily: 'var(--font-mono)', fontSize: 10,
                 color: '#aaa', margin: '4px 0 0', letterSpacing: 1,
               }}>
-                {slide.subtitle ?? slide.meta}
+                {slide.meta}
               </p>
             </div>
           </div>

@@ -45,6 +45,25 @@ const RATING_COLOR: Record<string, string> = {
   LOW: '#555',
 }
 
+function normalizeReelSlides(slides: ReelSlide[]): ReelSlide[] {
+  return slides.map((slide) => ({
+    ...slide,
+    image: slide.image ?? slide.imageUrl,
+    badge: slide.badge ?? slide.label,
+    headline: slide.headline ?? slide.title,
+    meta: slide.meta ?? slide.subtitle,
+    tags: slide.tags ?? slide.kicker,
+  }))
+}
+
+function isWikimediaImageUrl(url: string): boolean {
+  return (
+    url.includes('upload.wikimedia.org/') ||
+    url.includes('commons.wikimedia.org/wiki/Special:FilePath/') ||
+    url.includes('en.wikipedia.org/wiki/Special:FilePath/')
+  )
+}
+
 /* ─── Header ──────────────────────────────────────────────────────────────── */
 
 function TeamHeader({ team, series }: { team: Team; series: Series }) {
@@ -288,7 +307,7 @@ function ErasSection({ eras, entityHex }: { eras: TeamEngineeringEra[]; entityHe
               border: `0.5px solid ${era.golden ? '#FFD70044' : '#1a1a1a'}`,
               borderRadius: 8, overflow: 'hidden', position: 'relative', padding: 14,
             }}>
-              {era.imageUrl && (
+              {era.imageUrl && isWikimediaImageUrl(era.imageUrl) && (
                 <FallbackImg src={era.imageUrl} alt="" ariaHidden
                   style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 30%', opacity: 0.55 }}
                 />
@@ -451,7 +470,7 @@ function IconicCarsSection({ cars, entityHex }: { cars: TeamIconicCar[]; entityH
             border: `0.5px solid ${car.peak ? '#FFD70044' : '#1a1a1a'}`,
             borderRadius: 6, overflow: 'hidden', position: 'relative', cursor: 'pointer',
           }}>
-            {car.imageUrl && (
+            {car.imageUrl && isWikimediaImageUrl(car.imageUrl) && (
               <FallbackImg
                 src={car.imageUrl}
                 alt={car.name}
@@ -562,6 +581,7 @@ export default function TeamPage({
   signatureDescription, academyTitle, academySubtitle, academyDescription,
 }: TeamPageProps) {
   const entityHex = team.liveryHex
+  const normalizedReelSlides = normalizeReelSlides(reelSlides)
 
   // Merge live API stats over static mock — live wins the moment it arrives
   const mergedStats: TeamStats = {
@@ -575,7 +595,7 @@ export default function TeamPage({
   return (
     <div style={{ background: '#000', color: '#fff', minHeight: '100vh', ['--color-entity' as string]: entityHex } as React.CSSProperties}>
       <TeamHeader team={team} series={series} />
-      <TeamHero team={team} stats={mergedStats} reelSlides={reelSlides} entityHex={entityHex} isLive={!!liveStats} series={series} />
+      <TeamHero team={team} stats={mergedStats} reelSlides={normalizedReelSlides} entityHex={entityHex} isLive={!!liveStats} series={series} />
       <CurrentSeasonSection
         standings={currentStandings}
         meta={standingsMeta}
