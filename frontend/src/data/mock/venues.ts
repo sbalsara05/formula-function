@@ -141,7 +141,7 @@ export const spaStats: VenueStats = {
 
 export const spaFingerprint: VenueFingerprint = {
   venueId: "spa",
-  bars: [
+  bars: [ // [EDITORIAL · ratings based on circuit characteristics, historical team data, and expert consensus — not official F1 data]
     {
       label: "Engine Power",
       rating: "CRITICAL",
@@ -369,7 +369,7 @@ export const monacoStats: VenueStats = {
 
 export const monacoFingerprint: VenueFingerprint = {
   venueId: "monaco",
-  bars: [
+  bars: [ // [EDITORIAL · ratings based on circuit characteristics, historical team data, and expert consensus — not official F1 data]
     { label: "Engine Power",      rating: "LOW",     value: 35, caption: "Street circuit · tight turns" },
     { label: "Aero Efficiency",   rating: "LOW",     value: 30, caption: "Maximum downforce required" },
     { label: "Mechanical Grip",   rating: "EXTREME", value: 99, caption: "Walls define the limit" },
@@ -448,7 +448,7 @@ export const monzaStats: VenueStats = {
 
 export const monzaFingerprint: VenueFingerprint = {
   venueId: "monza",
-  bars: [
+  bars: [ // [EDITORIAL · ratings based on circuit characteristics, historical team data, and expert consensus — not official F1 data]
     { label: "Engine Power",      rating: "EXTREME",  value: 99, caption: "Temple of speed · 340+ km/h" },
     { label: "Aero Efficiency",   rating: "CRITICAL", value: 95, caption: "Minimum wing · straight-line supremacy" },
     { label: "Mechanical Grip",   rating: "LOW",      value: 30, caption: "Limited cornering demand" },
@@ -527,7 +527,7 @@ export const silverstoneStats: VenueStats = {
 
 export const silverstoneFingerprint: VenueFingerprint = {
   venueId: "silverstone",
-  bars: [
+  bars: [ // [EDITORIAL · ratings based on circuit characteristics, historical team data, and expert consensus — not official F1 data]
     { label: "Engine Power",      rating: "MODERATE",  value: 65, caption: "Balanced power requirement" },
     { label: "Aero Efficiency",   rating: "CRITICAL",  value: 92, caption: "Maggotts / Becketts at 300+ km/h" },
     { label: "Mechanical Grip",   rating: "EXTREME",   value: 97, caption: "Maggotts · Becketts · Chapel · Copse" },
@@ -606,7 +606,7 @@ export const suzukaStats: VenueStats = {
 
 export const suzukaFingerprint: VenueFingerprint = {
   venueId: "suzuka",
-  bars: [
+  bars: [ // [EDITORIAL · ratings based on circuit characteristics, historical team data, and expert consensus — not official F1 data]
     { label: "Engine Power",      rating: "HIGH",     value: 72, caption: "Back straight · 130R at speed" },
     { label: "Aero Efficiency",   rating: "HIGH",     value: 80, caption: "130R taken flat in qualifying" },
     { label: "Mechanical Grip",   rating: "EXTREME",  value: 97, caption: "S-curves · figure-eight layout" },
@@ -685,7 +685,7 @@ export const interlagosStats: VenueStats = {
 
 export const interlagosFingerprint: VenueFingerprint = {
   venueId: "interlagos",
-  bars: [
+  bars: [ // [EDITORIAL · ratings based on circuit characteristics, historical team data, and expert consensus — not official F1 data]
     { label: "Engine Power",      rating: "HIGH",     value: 72, caption: "Back straight · Junção exit speed" },
     { label: "Aero Efficiency",   rating: "MODERATE", value: 60, caption: "Medium downforce · balanced circuit" },
     { label: "Mechanical Grip",   rating: "HIGH",     value: 82, caption: "Anti-clockwise · sustained lateral load" },
@@ -764,7 +764,7 @@ export const bahrainStats: VenueStats = {
 
 export const bahrainFingerprint: VenueFingerprint = {
   venueId: "bahrain",
-  bars: [
+  bars: [ // [EDITORIAL · ratings based on circuit characteristics, historical team data, and expert consensus — not official F1 data]
     { label: "Engine Power",      rating: "MODERATE", value: 65, caption: "Medium-length straights" },
     { label: "Aero Efficiency",   rating: "MODERATE", value: 58, caption: "Medium downforce configuration" },
     { label: "Mechanical Grip",   rating: "HIGH",     value: 76, caption: "Traction out of hairpin complex" },
@@ -843,7 +843,7 @@ export const abadhabiStats: VenueStats = {
 
 export const abuDhabiFingerprint: VenueFingerprint = {
   venueId: "abu-dhabi",
-  bars: [
+  bars: [ // [EDITORIAL · ratings based on circuit characteristics, historical team data, and expert consensus — not official F1 data]
     { label: "Engine Power",      rating: "HIGH",     value: 78, caption: "DRS zone S1 · long back straight" },
     { label: "Aero Efficiency",   rating: "MODERATE", value: 65, caption: "Medium-low downforce setting" },
     { label: "Mechanical Grip",   rating: "HIGH",     value: 75, caption: "Sector 3 slow hairpin sequence" },
@@ -913,15 +913,15 @@ export const jeddahStats: VenueStats = {
   lengthKm: 6.174,
   corners: 27,
   lapRecord: "1:30.734",
-  lapRecordDriver: "Verstappen",
-  lapRecordYear: 2023,
+  lapRecordDriver: "Hamilton", // corrected from Verstappen; Hamilton set 1:30.734 at the inaugural Jeddah race · source: formula1.com/en/results/2021/races/1106/saudi-arabia/fastest-laps
+  lapRecordYear: 2021, // corrected from 2023
   elevationDeltaM: 12,
   f1Since: 2021,
 };
 
 export const jeddahFingerprint: VenueFingerprint = {
   venueId: "jeddah",
-  bars: [
+  bars: [ // [EDITORIAL · ratings based on circuit characteristics, historical team data, and expert consensus — not official F1 data]
     { label: "Engine Power",      rating: "EXTREME",  value: 98, caption: "Long straights · 320+ km/h average" },
     { label: "Aero Efficiency",   rating: "CRITICAL", value: 92, caption: "Low downforce — straight-line priority" },
     { label: "Mechanical Grip",   rating: "MODERATE", value: 55, caption: "Street surface · concrete walls" },
@@ -984,14 +984,14 @@ export const melbourneStats: VenueStats = {
   corners: 16,
   lapRecord: "1:19.813",
   lapRecordDriver: "Leclerc",
-  lapRecordYear: 2022,
+  lapRecordYear: 2024, // corrected from 2022; Leclerc set 1:19.813 at the 2024 Australian GP · source: motorsporttickets.com/blog/lap-records-in-formula-1
   elevationDeltaM: 10,
   f1Since: 1996,
 };
 
 export const melbourneFingerprint: VenueFingerprint = {
   venueId: "melbourne",
-  bars: [
+  bars: [ // [EDITORIAL · ratings based on circuit characteristics, historical team data, and expert consensus — not official F1 data]
     { label: "Engine Power",      rating: "HIGH",     value: 78, caption: "Back straight and pit straight" },
     { label: "Aero Efficiency",   rating: "MODERATE", value: 62, caption: "Medium downforce setting" },
     { label: "Mechanical Grip",   rating: "HIGH",     value: 80, caption: "Sweeping mid-speed corners" },
@@ -1055,15 +1055,15 @@ export const shanghaiStats: VenueStats = {
   lengthKm: 5.451,
   corners: 16,
   lapRecord: "1:32.238",
-  lapRecordDriver: "Verstappen",
-  lapRecordYear: 2024,
+  lapRecordDriver: "Schumacher", // corrected from Verstappen; Schumacher set 1:32.238 at the inaugural 2004 Chinese GP — now the longest-standing lap record in F1 · source: motorsporttickets.com/blog/lap-records-in-formula-1
+  lapRecordYear: 2004, // corrected from 2024
   elevationDeltaM: 8,
   f1Since: 2004,
 };
 
 export const shanghaiFingerprint: VenueFingerprint = {
   venueId: "shanghai",
-  bars: [
+  bars: [ // [EDITORIAL · ratings based on circuit characteristics, historical team data, and expert consensus — not official F1 data]
     { label: "Engine Power",      rating: "HIGH",     value: 74, caption: "Back straight DRS zone" },
     { label: "Aero Efficiency",   rating: "HIGH",     value: 78, caption: "Long sweeping T1 — downforce critical" },
     { label: "Mechanical Grip",   rating: "HIGH",     value: 76, caption: "T1 sustained load · hairpin traction" },
@@ -1135,7 +1135,7 @@ export const miamiStats: VenueStats = {
 
 export const miamiFingerprint: VenueFingerprint = {
   venueId: "miami",
-  bars: [
+  bars: [ // [EDITORIAL · ratings based on circuit characteristics, historical team data, and expert consensus — not official F1 data]
     { label: "Engine Power",      rating: "HIGH",     value: 75, caption: "Long pit straight · Turn 17 run" },
     { label: "Aero Efficiency",   rating: "MODERATE", value: 68, caption: "Medium downforce setting" },
     { label: "Mechanical Grip",   rating: "HIGH",     value: 78, caption: "Tight infield sections" },
@@ -1195,15 +1195,15 @@ export const imolaStats: VenueStats = {
   lengthKm: 4.909,
   corners: 19,
   lapRecord: "1:15.484",
-  lapRecordDriver: "Verstappen",
-  lapRecordYear: 2022,
+  lapRecordDriver: "Hamilton", // corrected from Verstappen; Hamilton set 1:15.484 at the 2020 Emilia Romagna GP · source: motorsporttickets.com/blog/lap-records-in-formula-1
+  lapRecordYear: 2020, // corrected from 2022
   elevationDeltaM: 30,
   f1Since: 1980,
 };
 
 export const imolaFingerprint: VenueFingerprint = {
   venueId: "imola",
-  bars: [
+  bars: [ // [EDITORIAL · ratings based on circuit characteristics, historical team data, and expert consensus — not official F1 data]
     { label: "Engine Power",      rating: "HIGH",     value: 72, caption: "Pit straight · back straight" },
     { label: "Aero Efficiency",   rating: "HIGH",     value: 78, caption: "High-speed Piratella complex" },
     { label: "Mechanical Grip",   rating: "HIGH",     value: 80, caption: "Acque Minerali · Rivazza" },
@@ -1276,7 +1276,7 @@ export const montrealStats: VenueStats = {
 
 export const montrealFingerprint: VenueFingerprint = {
   venueId: "montreal",
-  bars: [
+  bars: [ // [EDITORIAL · ratings based on circuit characteristics, historical team data, and expert consensus — not official F1 data]
     { label: "Engine Power",      rating: "CRITICAL", value: 90, caption: "Long pit straight · DRS zone" },
     { label: "Aero Efficiency",   rating: "HIGH",     value: 80, caption: "Low drag setup competitive" },
     { label: "Mechanical Grip",   rating: "MODERATE", value: 58, caption: "Slow chicane sequence" },
@@ -1342,16 +1342,16 @@ export const barcelonaStats: VenueStats = {
   venueId: "barcelona",
   lengthKm: 4.657,
   corners: 16,
-  lapRecord: "1:18.149",
-  lapRecordDriver: "Verstappen",
-  lapRecordYear: 2021,
+  lapRecord: "1:16.330", // corrected from 1:18.149; Piastri set 1:16.330 at 2025 Spanish GP · source: motorsporttickets.com/blog/lap-records-in-formula-1
+  lapRecordDriver: "Piastri", // corrected from Verstappen
+  lapRecordYear: 2025, // corrected from 2021
   elevationDeltaM: 28,
   f1Since: 1991,
 };
 
 export const barcelonaFingerprint: VenueFingerprint = {
   venueId: "barcelona",
-  bars: [
+  bars: [ // [EDITORIAL · ratings based on circuit characteristics, historical team data, and expert consensus — not official F1 data]
     { label: "Engine Power",      rating: "HIGH",     value: 74, caption: "Main straight DRS zone" },
     { label: "Aero Efficiency",   rating: "CRITICAL", value: 92, caption: "High downforce mandatory" },
     { label: "Mechanical Grip",   rating: "EXTREME",  value: 96, caption: "T3 · T5 · T9 high-speed sectors" },
@@ -1425,7 +1425,7 @@ export const hungaroringStats: VenueStats = {
 
 export const hungaroringFingerprint: VenueFingerprint = {
   venueId: "hungaroring",
-  bars: [
+  bars: [ // [EDITORIAL · ratings based on circuit characteristics, historical team data, and expert consensus — not official F1 data]
     { label: "Engine Power",      rating: "LOW",      value: 35, caption: "Short straights · slow circuit" },
     { label: "Aero Efficiency",   rating: "LOW",      value: 30, caption: "Maximum downforce required" },
     { label: "Mechanical Grip",   rating: "EXTREME",  value: 97, caption: "High-downforce twisty layout" },
@@ -1491,7 +1491,7 @@ export const zandvoortStats: VenueStats = {
   lengthKm: 4.259,
   corners: 14,
   lapRecord: "1:11.097",
-  lapRecordDriver: "Verstappen",
+  lapRecordDriver: "Hamilton", // corrected from Verstappen; Hamilton set 1:11.097 on lap 72 of the 2021 Dutch GP (which Verstappen won) · source: formula1.com/en/results/2021/races/1075/netherlands/fastest-laps
   lapRecordYear: 2021,
   elevationDeltaM: 15,
   f1Since: 1952,
@@ -1499,7 +1499,7 @@ export const zandvoortStats: VenueStats = {
 
 export const zandvoortFingerprint: VenueFingerprint = {
   venueId: "zandvoort",
-  bars: [
+  bars: [ // [EDITORIAL · ratings based on circuit characteristics, historical team data, and expert consensus — not official F1 data]
     { label: "Engine Power",      rating: "MODERATE", value: 62, caption: "Short circuit — limited straights" },
     { label: "Aero Efficiency",   rating: "CRITICAL", value: 90, caption: "Banked corners demand high downforce" },
     { label: "Mechanical Grip",   rating: "HIGH",     value: 82, caption: "Banked T3 and T14 extreme lateral G" },
@@ -1569,7 +1569,7 @@ export const bakuStats: VenueStats = {
 
 export const bakuFingerprint: VenueFingerprint = {
   venueId: "baku",
-  bars: [
+  bars: [ // [EDITORIAL · ratings based on circuit characteristics, historical team data, and expert consensus — not official F1 data]
     { label: "Engine Power",      rating: "EXTREME",  value: 99, caption: "2km straight — 360 km/h possible" },
     { label: "Aero Efficiency",   rating: "CRITICAL", value: 94, caption: "Minimum wing — straight-line priority" },
     { label: "Mechanical Grip",   rating: "MODERATE", value: 60, caption: "Low-speed castle section" },
@@ -1633,16 +1633,16 @@ export const singaporeStats: VenueStats = {
   venueId: "singapore",
   lengthKm: 4.94,
   corners: 19,
-  lapRecord: "1:35.867",
+  lapRecord: "1:33.808", // updated from 1:35.867; Hamilton set new record 1:33.808 at 2025 Singapore GP · source: motorsporttickets.com/blog/lap-records-in-formula-1
   lapRecordDriver: "Hamilton",
-  lapRecordYear: 2023,
+  lapRecordYear: 2025, // updated from 2023
   elevationDeltaM: 8,
   f1Since: 2008,
 };
 
 export const singaporeFingerprint: VenueFingerprint = {
   venueId: "singapore",
-  bars: [
+  bars: [ // [EDITORIAL · ratings based on circuit characteristics, historical team data, and expert consensus — not official F1 data]
     { label: "Engine Power",      rating: "LOW",      value: 40, caption: "Street circuit — low speed average" },
     { label: "Aero Efficiency",   rating: "LOW",      value: 35, caption: "Maximum downforce circuit" },
     { label: "Mechanical Grip",   rating: "HIGH",     value: 85, caption: "Bumpy surface · complex T18-T23" },
@@ -1715,7 +1715,7 @@ export const cotaStats: VenueStats = {
 
 export const cotaFingerprint: VenueFingerprint = {
   venueId: "cota",
-  bars: [
+  bars: [ // [EDITORIAL · ratings based on circuit characteristics, historical team data, and expert consensus — not official F1 data]
     { label: "Engine Power",      rating: "HIGH",     value: 76, caption: "Back straight DRS zone" },
     { label: "Aero Efficiency",   rating: "CRITICAL", value: 88, caption: "Esses S2 require high downforce" },
     { label: "Mechanical Grip",   rating: "EXTREME",  value: 96, caption: "T1 blind apex · T3–T12 esses" },
@@ -1787,7 +1787,7 @@ export const mexicoStats: VenueStats = {
 
 export const mexicoFingerprint: VenueFingerprint = {
   venueId: "mexico",
-  bars: [
+  bars: [ // [EDITORIAL · ratings based on circuit characteristics, historical team data, and expert consensus — not official F1 data]
     { label: "Engine Power",      rating: "CRITICAL", value: 90, caption: "Long pit straight — alt effects" },
     { label: "Aero Efficiency",   rating: "LOW",      value: 28, caption: "Near-maximum wing — less aero grip" },
     { label: "Mechanical Grip",   rating: "HIGH",     value: 80, caption: "T1-T3 esses · Peraltada sweep" },
@@ -1850,16 +1850,16 @@ export const lasVegasStats: VenueStats = {
   venueId: "las-vegas",
   lengthKm: 6.201,
   corners: 17,
-  lapRecord: "1:35.490",
-  lapRecordDriver: "Leclerc",
-  lapRecordYear: 2023,
+  lapRecord: "1:33.365", // updated from 1:35.490; Verstappen set 1:33.365 at 2025 Las Vegas GP · source: motorsporttickets.com/blog/lap-records-in-formula-1
+  lapRecordDriver: "Verstappen", // updated from Leclerc
+  lapRecordYear: 2025, // updated from 2023
   elevationDeltaM: 5,
   f1Since: 2023,
 };
 
 export const lasVegasFingerprint: VenueFingerprint = {
   venueId: "las-vegas",
-  bars: [
+  bars: [ // [EDITORIAL · ratings based on circuit characteristics, historical team data, and expert consensus — not official F1 data]
     { label: "Engine Power",      rating: "EXTREME",  value: 98, caption: "Three DRS zones — max speed" },
     { label: "Aero Efficiency",   rating: "CRITICAL", value: 92, caption: "Low-drag setup priority" },
     { label: "Mechanical Grip",   rating: "MODERATE", value: 58, caption: "Cold tarmac — night temperatures" },
@@ -1920,16 +1920,16 @@ export const qatarStats: VenueStats = {
   venueId: "qatar",
   lengthKm: 5.419,
   corners: 16,
-  lapRecord: "1:24.319",
-  lapRecordDriver: "Verstappen",
-  lapRecordYear: 2023,
+  lapRecord: "1:22.384", // updated from 1:24.319; Norris set 1:22.384 at 2024 Qatar GP · source: motorsporttickets.com/blog/lap-records-in-formula-1
+  lapRecordDriver: "Norris", // updated from Verstappen
+  lapRecordYear: 2024, // updated from 2023
   elevationDeltaM: 6,
   f1Since: 2021,
 };
 
 export const qatarFingerprint: VenueFingerprint = {
   venueId: "qatar",
-  bars: [
+  bars: [ // [EDITORIAL · ratings based on circuit characteristics, historical team data, and expert consensus — not official F1 data]
     { label: "Engine Power",      rating: "HIGH",     value: 76, caption: "Long straights · front straight" },
     { label: "Aero Efficiency",   rating: "CRITICAL", value: 90, caption: "Fast flowing corners — downforce key" },
     { label: "Mechanical Grip",   rating: "EXTREME",  value: 96, caption: "High-speed sweeping corners" },

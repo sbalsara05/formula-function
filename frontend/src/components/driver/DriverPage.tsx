@@ -180,9 +180,16 @@ function DriverHero({
   const nameParts = driver.name.split(' ')
   const firstName = nameParts.slice(0, -1).join(' ')
   const lastName = nameParts[nameParts.length - 1]
-  const statusLabel = driver.status === 'active'
-    ? `${SERIES_LABELS[series]} · ACTIVE`
-    : `${SERIES_LABELS[series]} · RETIRED ${driver.dob.slice(0, 4) ? '2022' : ''}`
+  const careerEnd =
+    stats.careerSpan.includes("present") || stats.careerSpan.includes("Present")
+      ? null
+      : stats.careerSpan.split(/[–-]/).pop()?.trim() ?? null
+  const statusLabel =
+    driver.status === "active"
+      ? `${SERIES_LABELS[series]} · ACTIVE`
+      : careerEnd
+        ? `${SERIES_LABELS[series]} · RETIRED ${careerEnd}`
+        : `${SERIES_LABELS[series]} · RETIRED`
 
   return (
     <div style={{ position: 'relative', width: '100%', height: 620, overflow: 'hidden' }}>
