@@ -433,7 +433,7 @@ export const bearmanEras: DriverEra[] = [
     teamLiveryHex: "#DC0000",
     teamAccentHex: "#FFD700",
     statLabel: "F1",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/a/ac/2025_Japan_GP_-_Haas_-_Oliver_Bearman_-_FP2.jpg",
+    imageUrl: "/images/drivers/bearman-haas-2025.jpg",
   },
 ];
 
@@ -1222,7 +1222,7 @@ export const verstappenEras: DriverEra[] = [
     wins: 0,
     teamLiveryHex: "#C00000",
     statLabel: "1W",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/c/ca/Max_Verstappen_2015_Malaysia_FP1.jpg",
+    imageUrl: "/images/drivers/verstappen-tororosso-2015.jpg",
   },
   {
     driverId: "max_verstappen",
@@ -1240,7 +1240,7 @@ export const verstappenEras: DriverEra[] = [
     teamLiveryHex: "#1E3A8A",
     teamAccentHex: "#FFD700",
     statLabel: "4× WDC",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/4/42/FIA_F1_Austria_2024_Nr._1_Verstappen.jpg",
+    imageUrl: "/images/drivers/verstappen-redbull-rb19-2023.jpg",
   },
 ];
 
@@ -1269,7 +1269,7 @@ export const verstappenReelSlides: ReelSlide[] = [
     title: "Barcelona",
     subtitle: "RED BULL · 18 YEARS, 228 DAYS · DEBUT WIN",
     svgPath: "M 30 160 L 80 160 Q 100 145, 115 110 L 165 110 Q 185 128, 200 160 L 250 160 Q 270 172, 285 200 L 330 200 Q 350 178, 370 148",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/2/2d/Verstappen_Spain_2016.jpg",
+    imageUrl: "/images/drivers/verstappen-spain-2016.jpg",
   },
   {
     slotLabel: "MV · 33",
@@ -1280,7 +1280,7 @@ export const verstappenReelSlides: ReelSlide[] = [
     subtitle: "RED BULL · FINAL LAP OVERTAKE ON HAMILTON",
     svgPath: "M 30 120 Q 60 108, 84 78 L 144 78 Q 172 94, 192 120 L 252 120 Q 282 104, 306 74 L 366 74",
     circles: [{ cx: 252, cy: 120, r: 5, fill: "#FFD700" }],
-    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/a/a9/2021_United_States_Grand_Prix_23_%28cropped%29.jpg',
+    imageUrl: "/images/drivers/verstappen-abu-dhabi-2021.jpg",
   },
   {
     slotLabel: "MV · 1",
@@ -1290,7 +1290,7 @@ export const verstappenReelSlides: ReelSlide[] = [
     title: "Red Bull Era",
     subtitle: "454 POINTS · 15 WINS · WCC + WDC",
     svgPath: "M 30 150 L 80 150 Q 108 136, 128 98 L 178 98 Q 200 116, 216 150 L 268 150 Q 296 168, 320 202 L 374 202",
-    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/8/87/2022_British_Grand_Prix_%2852381404527%29_%28cropped%29.jpg',
+    imageUrl: "/images/drivers/verstappen-silverstone-2022.jpg",
   },
   {
     slotLabel: "MV · 1",
@@ -1841,13 +1841,13 @@ export const bortoletoScoutingReport: ScoutingReport = {
 
 export const leclerEras: DriverEra[] = [
   { driverId:"leclerc", teamId:"sauber", teamName:"Sauber", seasons:"2018", highlights:["F1 debut season","P6 Bahrain — shock points haul"], titles:0, wins:0, teamLiveryHex:"#900000", statLabel:"P13", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/c/c6/2018_Chinese_Grand_Prix_FP3_Charles_Leclerc_%2839897914770%29.jpg" },
-  { driverId:"leclerc", teamId:"ferrari", teamName:"Ferrari", seasons:"2019–present", highlights:["2 wins in rookie Ferrari season (Spa, Monza)","2022 WDC runner-up — 3 wins, 9 poles","Most F1 poles without a title in modern era"], titles:0, wins:10, teamLiveryHex:"#DC0000", teamAccentHex:"#FFD700", statLabel:"10W · 25P", imageUrl:"/drivers/leclerc-monaco-2024.jpg" },
+  { driverId:"leclerc", teamId:"ferrari", teamName:"Ferrari", seasons:"2019–present", highlights:["2 wins in rookie Ferrari season (Spa, Monza)","2022 WDC runner-up — 3 wins, 9 poles","Most F1 poles without a title in modern era"], titles:0, wins:10, teamLiveryHex:"#DC0000", teamAccentHex:"#FFD700", statLabel:"10W · 25P", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/3/38/Charles_Leclerc_%2853837544592%29.jpg" },
 ]
 
 export const leclerReelSlides: ReelSlide[] = [
   { slotLabel:"CL · 16", label:"FIRST WIN", glowColor:"#DC0000", tags:"MAIDEN VICTORY · SPA-FRANCORCHAMPS · POLE TO WIN", title:"Belgian GP", subtitle:"2019 · FERRARI · FIRST OF MANY", svgPath:"M 30 120 L 80 120 Q 112 108 130 70 L 180 70 Q 210 88 230 120 L 290 120 Q 310 104 325 72 L 370 72", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/9/93/Charles_Leclerc_2019_Italian_Grand_Prix.jpg" },
   { slotLabel:"CL · 16", label:"WDC HUNT", glowColor:"#DC0000", tags:"2022 TITLE CONTENDER · BAHRAIN POLE & WIN", title:"2022 season", subtitle:"2022 · FERRARI · 3W · 9P · P2 WDC", svgPath:"M 30 150 L 85 150 Q 108 132 130 92 L 180 88 Q 208 106 230 150 L 288 150 Q 312 133 338 92 L 375 90", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/8/83/FIA_F1_Austria_2022_Podium_Race_Winner_Leclerc.jpg" },
-  { slotLabel:"CL · 16", label:"MONACO WIN", glowColor:"#DC0000", tags:"MONACO GP WINNER · HOME VICTORY FINALLY SECURED", title:"Monaco GP", subtitle:"2024 · FERRARI · EMOTIONAL HOME WIN", svgPath:"M 30 160 L 90 160 Q 112 148 130 105 L 190 105 Q 215 122 235 160 L 290 160 Q 315 138 335 104 L 370 104", imageUrl: "/drivers/leclerc-monaco-2024.jpg" },
+  { slotLabel:"CL · 16", label:"MONACO WIN", glowColor:"#DC0000", tags:"MONACO GP WINNER · HOME VICTORY FINALLY SECURED", title:"Monaco GP", subtitle:"2024 · FERRARI · EMOTIONAL HOME WIN", svgPath:"M 30 160 L 90 160 Q 112 148 130 105 L 190 105 Q 215 122 235 160 L 290 160 Q 315 138 335 104 L 370 104", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/3/38/Charles_Leclerc_%2853837544592%29.jpg" },
 ]
 
 export const leclerScoutingReport: ScoutingReport = {
@@ -2033,7 +2033,7 @@ export const antonelli: Driver = {
 export const antonelliStats: DriverStats = { driverId:"antonelli", series:"f1", titles:0, wins:0, poles:1, podiums:3, careerSpan:"2025–present", racesEntered:25, fastestLaps:1, pointsScored:62 }
 
 export const antonelliEras: DriverEra[] = [
-  { driverId:"antonelli", teamId:"mercedes", teamName:"Mercedes", seasons:"2025–present", highlights:["Youngest driver on 2025 grid","First pole at Imola 2025","Race podium debut"], titles:0, wins:0, teamLiveryHex:"#00D2BE", statLabel:"ROOKIE", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/d/d9/2025_Japan_GP_-_Mercedes_-_Kimi_Antonelli_-_FP2.jpg" },
+  { driverId:"antonelli", teamId:"mercedes", teamName:"Mercedes", seasons:"2025–present", highlights:["Youngest driver on 2025 grid","First pole at Imola 2025","Race podium debut"], titles:0, wins:0, teamLiveryHex:"#00D2BE", statLabel:"ROOKIE", imageUrl:"/images/drivers/antonelli-mercedes-2025.jpg" },
 ]
 
 export const antonelliSignature: DrivingSignature = {
@@ -2084,13 +2084,13 @@ export const alonso: Driver = {
 export const alonsoStats: DriverStats = { driverId:"alonso", series:"f1", titles:2, wins:32, poles:22, podiums:106, careerSpan:"2001–present", racesEntered:403, fastestLaps:23, pointsScored:2267 }
 
 export const alonsoEras: DriverEra[] = [
-  { driverId:"alonso", teamId:"renault", teamName:"Renault", seasons:"2003–2006", highlights:["2× world champion (2005, 2006)","Youngest champion in history at the time","51 starts, 17 wins with Renault"], titles:2, wins:17, teamLiveryHex:"#FFD700", teamAccentHex:"#FFD700", statLabel:"2× WDC", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/4/4d/Fernando_Alonso_2005_Canada.jpg" },
-  { driverId:"alonso", teamId:"mclaren", teamName:"McLaren", seasons:"2007", highlights:["P3 championship on McLaren debut","Controversial Hamilton-Alonso rivalry"], titles:0, wins:4, teamLiveryHex:"#FF8000", statLabel:"4W", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/c/c9/Fernando_Alonso_Monza_2007.jpg" },
-  { driverId:"alonso", teamId:"renault-2", teamName:"Renault (2nd spell)", seasons:"2008–2009", highlights:["2 wins back at Renault"], titles:0, wins:2, teamLiveryHex:"#FFD700", statLabel:"2W", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/6/6d/Fernando_Alonso_won_2008_Japanese_GP.jpg" },
-  { driverId:"alonso", teamId:"ferrari", teamName:"Ferrari", seasons:"2010–2014", highlights:["2 WDC near-misses (2010, 2012)","11 wins with Ferrari","Extracted maximum from non-dominant machinery"], titles:0, wins:11, teamLiveryHex:"#DC0000", statLabel:"11W · 2× P2", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/5/58/2012_Canadian_Grand_Prix_Fernando_Alonso_Ferrari_F2012-02.jpg" },
-  { driverId:"alonso", teamId:"mclaren-2", teamName:"McLaren-Honda", seasons:"2015–2018", highlights:["Engine collaboration that failed","Indy 500 attempts","Performed above machinery consistently"], titles:0, wins:0, teamLiveryHex:"#FF8000", statLabel:"0W — fought for scraps", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/d/da/McLaren_Honda_No.14_Fernando_Alonso_%2822108466065%29.jpg" },
-  { driverId:"alonso", teamId:"alpine", teamName:"Alpine", seasons:"2021–2022", highlights:["1 win — Hungary 2021","Consistent top-5 presence with Alpine"], titles:0, wins:1, teamLiveryHex:"#0090FF", statLabel:"1W", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/8/8f/FIA_F1_Austria_2021_Nr._14_Alonso.jpg" },
-  { driverId:"alonso", teamId:"aston_martin", teamName:"Aston Martin", seasons:"2023–present", highlights:["8 podiums in debut Aston Martin season 2023","P4 championship in 2023"], titles:0, wins:0, teamLiveryHex:"#006F62", statLabel:"8 PODS · P4", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/3/39/FIA_F1_Austria_2023_Nr._14_%281%29.jpg" },
+  { driverId:"alonso", teamId:"renault", teamName:"Renault", seasons:"2003–2006", highlights:["2× world champion (2005, 2006)","Youngest champion in history at the time","51 starts, 17 wins with Renault"], titles:2, wins:17, teamLiveryHex:"#FFD700", teamAccentHex:"#FFD700", statLabel:"2× WDC", imageUrl:"/images/drivers/alonso-renault-2005.jpg" },
+  { driverId:"alonso", teamId:"mclaren", teamName:"McLaren", seasons:"2007", highlights:["P3 championship on McLaren debut","Controversial Hamilton-Alonso rivalry"], titles:0, wins:4, teamLiveryHex:"#FF8000", statLabel:"4W", imageUrl:"/images/drivers/alonso-mclaren-2007.jpg" },
+  { driverId:"alonso", teamId:"renault-2", teamName:"Renault (2nd spell)", seasons:"2008–2009", highlights:["2 wins back at Renault"], titles:0, wins:2, teamLiveryHex:"#FFD700", statLabel:"2W", imageUrl:"/images/drivers/alonso-renault-2008.jpg" },
+  { driverId:"alonso", teamId:"ferrari", teamName:"Ferrari", seasons:"2010–2014", highlights:["2 WDC near-misses (2010, 2012)","11 wins with Ferrari","Extracted maximum from non-dominant machinery"], titles:0, wins:11, teamLiveryHex:"#DC0000", statLabel:"11W · 2× P2", imageUrl:"/images/drivers/alonso-ferrari-2012.jpg" },
+  { driverId:"alonso", teamId:"mclaren-2", teamName:"McLaren-Honda", seasons:"2015–2018", highlights:["Engine collaboration that failed","Indy 500 attempts","Performed above machinery consistently"], titles:0, wins:0, teamLiveryHex:"#FF8000", statLabel:"0W — fought for scraps", imageUrl:"/images/drivers/alonso-mclaren-honda-2016.jpg" },
+  { driverId:"alonso", teamId:"alpine", teamName:"Alpine", seasons:"2021–2022", highlights:["1 win — Hungary 2021","Consistent top-5 presence with Alpine"], titles:0, wins:1, teamLiveryHex:"#0090FF", statLabel:"1W", imageUrl:"/images/drivers/alonso-alpine-2021.jpg" },
+  { driverId:"alonso", teamId:"aston_martin", teamName:"Aston Martin", seasons:"2023–present", highlights:["8 podiums in debut Aston Martin season 2023","P4 championship in 2023"], titles:0, wins:0, teamLiveryHex:"#006F62", statLabel:"8 PODS · P4", imageUrl:"/images/drivers/alonso-aston-martin-2023.jpg" },
 ]
 
 export const alonsoSignature: DrivingSignature = {
@@ -2300,8 +2300,8 @@ export const albon: Driver = {
 export const albonStats: DriverStats = { driverId:"albon", series:"f1", titles:0, wins:0, poles:0, podiums:2, careerSpan:"2019–present", racesEntered:112, fastestLaps:1, pointsScored:258 }
 
 export const albonEras: DriverEra[] = [
-  { driverId:"albon", teamId:"toro_rosso", teamName:"Toro Rosso / Red Bull", seasons:"2019–2020", highlights:["Promoted to Red Bull mid-2019","2 podiums (Bahrain P3, Abu Dhabi P3)","Released after 2020 season"], titles:0, wins:0, teamLiveryHex:"#1E3A8A", statLabel:"2 PODS", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/1/1d/Alexander_Albon-Red_Bull_RB16_%283%29.jpg" },
-  { driverId:"albon", teamId:"williams", teamName:"Williams", seasons:"2022–present", highlights:["Points in non-points Williams","Driver of the Year candidates multiple times","Team leader and car developer"], titles:0, wins:0, teamLiveryHex:"#005AFF", teamAccentHex:"#FFFFFF", statLabel:"TEAM LEADER", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/3/36/Alex_Albon_2022.jpg" },
+  { driverId:"albon", teamId:"toro_rosso", teamName:"Toro Rosso / Red Bull", seasons:"2019–2020", highlights:["Promoted to Red Bull mid-2019","2 podiums (Bahrain P3, Abu Dhabi P3)","Released after 2020 season"], titles:0, wins:0, teamLiveryHex:"#1E3A8A", statLabel:"2 PODS", imageUrl:"/images/drivers/albon-redbull-2020.jpg" },
+  { driverId:"albon", teamId:"williams", teamName:"Williams", seasons:"2022–present", highlights:["Points in non-points Williams","Driver of the Year candidates multiple times","Team leader and car developer"], titles:0, wins:0, teamLiveryHex:"#005AFF", teamAccentHex:"#FFFFFF", statLabel:"TEAM LEADER", imageUrl:"/images/drivers/albon-williams-2022.jpg" },
 ]
 
 export const albonSignature: DrivingSignature = {
@@ -3014,7 +3014,7 @@ export const schumacherEras: DriverEra[] = [
     wins: 0,
     teamLiveryHex: "#FFD700",
     statLabel: "1 RACE",
-    imageUrl: "/drivers/schumacher-jordan-1991.jpg",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/4/46/Jordan_191_Michael_Schumacher_%2814464876702%29.jpg",
   },
   {
     driverId: "schumacher",
@@ -3081,7 +3081,7 @@ export const schumacherReelSlides: ReelSlide[] = [
     title: "Belgian GP",
     subtitle: "1992 · BENETTON · MAIDEN FORMULA 1 VICTORY",
     svgPath: "M 30 160 L 85 160 Q 110 145 130 105 L 185 105 Q 210 122 232 160 L 290 160 Q 315 140 340 100 L 375 100",
-    imageUrl: "/drivers/schumacher-spa-1992.png",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/5/55/Benetton_B192-05_1992_noBG.jpg",
   },
   {
     slotLabel: "MS · 01",
@@ -3222,7 +3222,7 @@ export const sennaEras: DriverEra[] = [
     wins: 0,
     teamLiveryHex: "#005AFF",
     statLabel: "3 RACES",
-    imageUrl: "/drivers/senna-williams-1994.jpg",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/4/44/Ayrton_Senna_Williams_FW16_Petersen_Automotive_Museum.jpg",
   },
 ]
 
@@ -3537,7 +3537,7 @@ export const buttonEras: DriverEra[] = [
     wins: 0,
     teamLiveryHex: "#005AFF",
     statLabel: "DEBUT",
-    imageUrl: "/drivers/button-williams-2000.jpg",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/a/a8/2000_Williams_FW22_SCD24.jpg",
   },
   {
     driverId: "button",
@@ -3762,7 +3762,7 @@ export const hakkinenReelSlides: ReelSlide[] = [
     title: "Belgian GP",
     subtitle: "2000 · McLAREN · ICONIC OVERTAKE VIA ZONTA",
     svgPath: "M 30 160 L 82 160 Q 108 148 128 108 L 182 108 Q 208 126 228 160 L 284 160 Q 312 176 338 210 L 375 210",
-    imageUrl: "/drivers/hakkinen-spa-2000.jpg",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/4/47/2000_Belgian_Grand_Prix.jpg",
   },
   {
     slotLabel: "MH · 03",
@@ -3772,7 +3772,7 @@ export const hakkinenReelSlides: ReelSlide[] = [
     title: "Japanese GP",
     subtitle: "2000 · McLAREN · COMMANDING SUZUKA VICTORY",
     svgPath: "M 30 150 Q 68 138 98 100 L 155 100 Q 182 118 205 150 L 258 150 Q 282 165 305 198 L 372 198",
-    imageUrl: "/drivers/hakkinen-suzuka-2000.png",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/6/62/Mika_H%C3%A4kkinen_2000_United_States_Grand_Prix.jpg",
   },
 ]
 
@@ -3905,7 +3905,7 @@ export const damonHillReelSlides: ReelSlide[] = [
     title: "Hungarian GP",
     subtitle: "1993 · WILLIAMS · FIRST CAREER VICTORY",
     svgPath: "M 30 150 L 82 150 Q 108 138 128 100 L 182 100 Q 208 118 228 150 L 284 150 Q 308 164 330 194 L 374 194",
-    imageUrl: "/drivers/hill-williams-fw15c-1993.jpg",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/b/b0/Damon_Hill_-_Williams_FW15C_at_the_1993_British_Grand_Prix_%2833557427941%29.jpg",
   },
   {
     slotLabel: "DH · 00",
