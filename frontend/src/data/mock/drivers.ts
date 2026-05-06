@@ -1981,8 +1981,8 @@ export const russellF1: Driver = {
 export const russellF1Stats: DriverStats = { driverId:"russell", series:"f1", titles:0, wins:6, poles:8, podiums:26, careerSpan:"2019–present", racesEntered:155, fastestLaps:11, pointsScored:1096 }
 
 export const russellF1Eras: DriverEra[] = [
-  { driverId:"russell", teamId:"williams", teamName:"Williams", seasons:"2019–2021", highlights:["Quali record vs teammates: 36-0","P9 in soaking Nürburgring 2020","Sub debut Sakhir 2020 — led race"], titles:0, wins:0, teamLiveryHex:"#005AFF", statLabel:"36-0 QUALI", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/9/98/2020_Formula_One_tests_Barcelona%2C_Williams_FW43%2C_Russell.jpg" },
-  { driverId:"russell", teamId:"mercedes", teamName:"Mercedes", seasons:"2022–present", highlights:["First win Brazil 2022","4 wins through 2025","2 poles in debut season"], titles:0, wins:4, teamLiveryHex:"#00D2BE", teamAccentHex:"#FFD700", statLabel:"4W · 8P", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/7/7f/George_Russell_2022.jpg" },
+  { driverId:"russell", teamId:"williams", teamName:"Williams", seasons:"2019–2021", highlights:["Quali record vs teammates: 36-0","P9 in soaking Nürburgring 2020","Sub debut Sakhir 2020 — led race"], titles:0, wins:0, teamLiveryHex:"#005AFF", statLabel:"36-0 QUALI", imageUrl:"/images/drivers/russell-williams-barcelona-2020.jpg" },
+  { driverId:"russell", teamId:"mercedes", teamName:"Mercedes", seasons:"2022–present", highlights:["First win Brazil 2022","4 wins through 2025","2 poles in debut season"], titles:0, wins:4, teamLiveryHex:"#00D2BE", teamAccentHex:"#FFD700", statLabel:"4W · 8P", imageUrl:"/images/drivers/russell-mercedes-2022.jpg" },
 ]
 
 export const russellF1Signature: DrivingSignature = {
@@ -3379,7 +3379,7 @@ export const raikkonenEras: DriverEra[] = [
     teamLiveryHex: "#DC0000",
     teamAccentHex: "#FFD700",
     statLabel: "1× WDC",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/0/0a/Kimi_Raikkonen_2007_Britain_2.jpg",
+    imageUrl: "/images/drivers/raikkonen-ferrari-2007.jpg",
   },
   {
     driverId: "raikkonen",
@@ -3391,7 +3391,7 @@ export const raikkonenEras: DriverEra[] = [
     wins: 3,
     teamLiveryHex: "#FFD700",
     statLabel: "3W · RENAISSANCE",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/d/d5/2012_Canadian_GP_-_Kimi_Raikkonen_Lotus_E20_02.jpg",
+    imageUrl: "/images/drivers/raikkonen-lotus-2012.jpg",
   },
   {
     driverId: "raikkonen",
@@ -3403,7 +3403,7 @@ export const raikkonenEras: DriverEra[] = [
     wins: 2,
     teamLiveryHex: "#DC0000",
     statLabel: "2W",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/0/0e/Kimi_Raikkonen_-_Scuderia_Ferrari_SF16-H_-_2016_Singapore_Grand_Prix_FP2_%2829498055360%29.jpg",
+    imageUrl: "/images/drivers/raikkonen-ferrari-2016.jpg",
   },
   {
     driverId: "raikkonen",
@@ -3415,7 +3415,7 @@ export const raikkonenEras: DriverEra[] = [
     wins: 0,
     teamLiveryHex: "#900000",
     statLabel: "FINALE",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/5/56/Kimi_Raikkonen%2C_Alfa_Romeo-Ferrari_C38%2C_2019_Italian_Grand_Prix%2C_Monza%2C_6th_September_%2848782017171%29.jpg",
+    imageUrl: "/images/drivers/raikkonen-alfa-romeo-2019.jpg",
   },
 ]
 
@@ -4188,7 +4188,7 @@ export const nicoRosbergEras: DriverEra[] = [
     wins: 0,
     teamLiveryHex: "#005AFF",
     statLabel: "DEVELOPMENT",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/d/db/Nico_Rosberg_2009_Italy.jpg",
+    imageUrl: "/images/drivers/rosberg-williams-2009.jpg",
   },
   {
     driverId: "rosberg",
@@ -4206,7 +4206,7 @@ export const nicoRosbergEras: DriverEra[] = [
     teamLiveryHex: "#00D2BE",
     teamAccentHex: "#FFD700",
     statLabel: "1× WDC",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/f/f3/Nico_Rosberg_2016_Malaysia_1.jpg",
+    imageUrl: "/images/drivers/rosberg-mercedes-2016.jpg",
   },
 ]
 
@@ -4318,7 +4318,7 @@ export const ricciardoEras: DriverEra[] = [
     wins: 0,
     teamLiveryHex: "#555555",
     statLabel: "DEBUT",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/6/6e/HRT_F_111_Daniel_Ricciardo_%2817456427903%29.jpg",
+    imageUrl: "/images/drivers/ricciardo-hrt-2011.jpg",
   },
   {
     driverId: "ricciardo",
@@ -4330,7 +4330,7 @@ export const ricciardoEras: DriverEra[] = [
     wins: 0,
     teamLiveryHex: "#C00000",
     statLabel: "JUNIOR",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/3/30/2012_Canadian_Grand_Prix_Daniel_Ricciardo_Toro_Rosso_STR7.jpg",
+    imageUrl: "/images/drivers/ricciardo-toro-rosso-2012.jpg",
   },
   {
     driverId: "ricciardo",
@@ -4348,7 +4348,7 @@ export const ricciardoEras: DriverEra[] = [
     teamLiveryHex: "#1E3A8A",
     teamAccentHex: "#FFD700",
     statLabel: "7W",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/1/1f/Daniel_Ricciardo_2014_Singapore_FP2.jpg",
+    imageUrl: "/images/drivers/ricciardo-redbull-2014.jpg",
   },
   {
     driverId: "ricciardo",
@@ -4360,7 +4360,7 @@ export const ricciardoEras: DriverEra[] = [
     wins: 0,
     teamLiveryHex: "#FFD700",
     statLabel: "MIDFIELD",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/8/81/Daniel_Ricciardo_during_Hungarian_Formula_1_GP.jpg",
+    imageUrl: "/images/drivers/ricciardo-renault-2019.jpg",
   },
   {
     driverId: "ricciardo",
@@ -4372,7 +4372,7 @@ export const ricciardoEras: DriverEra[] = [
     wins: 1,
     teamLiveryHex: "#FF8000",
     statLabel: "MONZA WIN",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/0/0a/Daniel_Ricciardo%2C_Mclaren_F1_Team%2C_British_GP%2C_Silverstone_2021_%2851350323865%29.jpg",
+    imageUrl: "/images/drivers/ricciardo-mclaren-2021.jpg",
   },
   {
     driverId: "ricciardo",
@@ -4384,7 +4384,7 @@ export const ricciardoEras: DriverEra[] = [
     wins: 0,
     teamLiveryHex: "#6692FF",
     statLabel: "FINALE",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Daniel_Ricciardo_2024_Chinese_GP.jpg/1280px-Daniel_Ricciardo_2024_Chinese_GP.jpg",
+    imageUrl: "/images/drivers/ricciardo-rb-2024.jpg",
   },
 ]
 
