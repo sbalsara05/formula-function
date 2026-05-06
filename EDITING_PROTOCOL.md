@@ -30,59 +30,85 @@
 
 ## 5. Image Rules
 
+### Philosophy
+A gradient placeholder is a build failure, not an acceptable outcome.
+Work down the tier chain until an image is found.
+Only use the gradient if every tier has been exhausted and documented.
+
 ### Source Priority Chain
-Try sources in this order. Move to the next only if the previous yields nothing usable.
 
-**Tier 1 — Wikimedia Commons (preferred for historic/era shots)**
-URL pattern: `upload.wikimedia.org/wikipedia/commons/`
-Best for: pre-2015 cars, classic era drivers, venue shots, historic moments
+**Tier 1 — Wikimedia Commons**
+`upload.wikimedia.org/wikipedia/commons/`
+Best for: pre-2018 cars, historic moments, venue shots
 Search: `site:commons.wikimedia.org "[driver] [team] [year]"`
-Verify: paste direct image URL in browser tab before using
 
-**Tier 2 — Official team/series press assets (preferred for current grid)**
-These URLs are stable and freely embeddable:
-- `media.formula1.com/image/upload/` — F1 official press
-- `www.mercedes-amg-f1.com/content/` — Mercedes press
-- `www.mclaren.com/racing/` — McLaren press
-- `www.redbull.com/img/` — Red Bull content
-- `www.ferrari.com/` press section
-Search: "[team name] press kit [year]" or "[driver] official photo [year]"
+**Tier 2 — Download and self-host in /public/images/**
+For any image that can't be hotlinked, download it directly into the repo.
+- Save to `frontend/public/images/[entity]/[descriptive-name].jpg`
+  e.g. `frontend/public/images/drivers/russell-mercedes-sakhir-2020.jpg`
+- Reference in code as `/images/drivers/russell-mercedes-sakhir-2020.jpg`
+- Naming convention: `[driver/team]-[car/context]-[year].jpg`
+- Max file size: 400KB per image — compress with sharp or imagemin if needed
+- This is the preferred solution for any image where hotlinking is unreliable
+Download: `curl -L -A "Mozilla/5.0" -o frontend/public/images/drivers/[name].jpg "[url]"`
+Verify type: `file frontend/public/images/drivers/[name].jpg` — must be JPEG/PNG
 
-**Tier 3 — Unsplash (atmosphere/venue shots only)**
-URL: `images.unsplash.com/`
-Free to hotlink, no attribution required
+**Tier 3 — Official F1/team press CDNs**
+These are stable and freely embeddable:
+- `media.formula1.com/image/upload/` — search formula1.com article pages,
+  right-click the image → copy image address
+- `www.mercedesamgf1.com` press releases — right-click → copy image URL
+- `www.redbull.com/int-en/` articles — same method
+- `www.mclaren.com/racing/` press — same method
+- `resources.formula1.com/` — official F1 CDN assets
+
+**Tier 4 — Flickr Creative Commons**
+`live.staticflickr.com/` URLs are hotlink-friendly
+Search: `site:flickr.com "[driver] [race] [year]" creative commons`
+Filter to CC-licensed photos only (license=1,2,3,4,5,6)
+Direct URL pattern: `https://live.staticflickr.com/[server]/[id]_[secret]_b.jpg`
+
+**Tier 5 — Unsplash**
+`images.unsplash.com/`
 Good for: circuit atmosphere, crowd shots, generic race action
-NOT suitable for: specific driver moments, specific car liveries
-Search: `unsplash.com/s/photos/formula-1`
+Not suitable for specific driver/livery moments
 
-**Tier 4 — Wikimedia fallback**
-If Tiers 1–3 yield nothing for a specific moment, use the best available
-Wikimedia image even if not perfect, with a comment noting it's approximate
+**Tier 6 — Reddit r/formula1 or Twitter/X via direct image CDN**
+Reddit image CDN: `i.redd.it/` URLs are stable and hotlink-friendly
+Search: `site:reddit.com/r/formula1 "[driver] [race] [year]"`
+Twitter/X: `pbs.twimg.com/media/` URLs are hotlink-friendly
+Search: `[driver] [race] [year] site:twitter.com`
 
-**Tier 5 — Livery-glow gradient**
-If no verified image can be found: `imageUrl: ""` — never a broken or
-mismatched image. The gradient is intentional and looks correct.
+**Tier 7 — Team/driver official social media**
+Mercedes F1, Ferrari, Red Bull, McLaren all post race photos on
+Instagram and Twitter. Their CDN URLs (pbs.twimg.com, cdninstagram.com)
+are hotlink-friendly.
+
+**Tier 8 — Gradient placeholder (last resort only)**
+Only acceptable if ALL of Tiers 1–7 have been tried and documented.
+When using gradient, add a comment in the code:
+`// imageUrl: "" — exhausted T1-T7: [date] [what was searched]`
+This makes the gap visible and searchable for future fixing.
 
 ### What to NEVER use
 - Any URL containing `wp-content` or `.wordpress.com`
-- motorsport-images.com, Getty, LAT, Sutton — all block hotlinking
-- autosport.com, the-race.com image CDNs — block hotlinking
-- Any URL that redirects rather than serving a direct image
-- cdn.motorsport.com — blocks hotlinking (use Wikimedia equivalent instead)
+- motorsport-images.com, Getty, LAT, Sutton — block hotlinking
+- cdn.motorsport.com — blocks hotlinking
+- autosport.com or the-race.com image CDNs — block hotlinking
+- Any URL that redirects to a homepage rather than serving an image
 
 ### Validation rule (non-negotiable)
 Before hardcoding ANY image URL:
-1. Paste it in a browser tab in an incognito window
+1. Open it in an incognito browser tab
 2. Confirm it loads the correct image (right driver, right livery, right year)
-3. Confirm it does NOT redirect to a homepage or show a watermark
-Only then add it to the codebase.
+3. Confirm no redirect, no watermark, no login wall
+For self-hosted images: run `file [path]` to confirm JPEG/PNG before committing.
 
 ### Display rules
 - `object-fit: cover` on all image elements
-- `object-position: center 15%` for portrait/driver shots (keeps face in frame)
+- `object-position: center 15%` for portrait/driver shots
 - `object-position: center 30%` for car/action shots
 - `onerror="this.style.display='none'"` on every `<img>` tag
-- Fallback: livery-glow radial gradient always underneath
 
 ## 6. Slide Data Structure (non-negotiable)
 Every carousel slide must be ONE self-contained object:
