@@ -1045,7 +1045,7 @@ export const hamiltonEras: DriverEra[] = [
     wins: 21,
     teamLiveryHex: "#FF8000",
     statLabel: "1× WDC",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/b/b6/McLaren_Hamilton_2008_Spanish_GP.jpg",
+    imageUrl: "/images/drivers/hamilton-mclaren-2008.jpg",
   },
   {
     driverId: "hamilton",
@@ -1062,7 +1062,7 @@ export const hamiltonEras: DriverEra[] = [
     teamLiveryHex: "#00D2BE",
     teamAccentHex: "#FFD700",
     statLabel: "6× WDC",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/2/24/Lewis_Hamilton-Mercedes_W11_%285%29.jpg",
+    imageUrl: "/images/drivers/hamilton-mercedes-2020.jpg",
   },
   {
     driverId: "hamilton",
@@ -1074,7 +1074,7 @@ export const hamiltonEras: DriverEra[] = [
     wins: 0,
     teamLiveryHex: "#DC0000",
     statLabel: "ONGOING",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/b/b8/2025_Japan_GP_-_Ferrari_-_Lewis_Hamilton_-_FP1.jpg",
+    imageUrl: "/images/drivers/hamilton-ferrari-2025.jpg",
   },
 ];
 
@@ -2500,11 +2500,11 @@ export const hulkenberg: Driver = {
 export const hulkenbergStats: DriverStats = { driverId:"hulkenberg", series:"f1", titles:0, wins:0, poles:1, podiums:0, careerSpan:"2010–present", racesEntered:228, fastestLaps:2, pointsScored:545 }
 
 export const hulkenbergEras: DriverEra[] = [
-  { driverId:"hulkenberg", teamId:"williams", teamName:"Williams", seasons:"2010", highlights:["Pole position Brazil 2010 in his 3rd race","Promising debut season"], titles:0, wins:0, teamLiveryHex:"#005AFF", statLabel:"POLE P1", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/b/b5/Hulkenberg_Canada_2010.jpg" },
-  { driverId:"hulkenberg", teamId:"force_india", teamName:"Force India", seasons:"2012–2016", highlights:["Le Mans 24H winner 2015 on first attempt","Consistent midfield points scorer"], titles:0, wins:0, teamLiveryHex:"#FF80C7", statLabel:"LM WIN", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/8/8a/2012_Canadian_Grand_Prix_Nico_Hulkenberg_Force_India_Mercedes_VJM05.jpg" },
-  { driverId:"hulkenberg", teamId:"renault", teamName:"Renault / Racing Point / Aston Martin", seasons:"2017–2022", highlights:["Multi-team journeyman","COVID substitute drives","Continued points extraction"], titles:0, wins:0, teamLiveryHex:"#FFD700", statLabel:"JOURNEYMAN", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/6/66/FIA_F1_Austria_2018_Nr._27_H%C3%BClkenberg.jpg" },
-  { driverId:"hulkenberg", teamId:"haas", teamName:"Haas", seasons:"2023–2025", highlights:["P6 WDC 2023 — career best","Inspired Haas resurgence","Full seasons of consistent points"], titles:0, wins:0, teamLiveryHex:"#B6BABD", teamAccentHex:"#FFFFFF", statLabel:"P6 WDC", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/0/02/FIA_F1_Austria_2023_Nr._27_%281%29.jpg" },
-  { driverId:"hulkenberg", teamId:"audi", teamName:"Audi", seasons:"2026–present", highlights:["Audi project lead driver","New chapter with German marque"], titles:0, wins:0, teamLiveryHex:"#BB1C2A", statLabel:"AUDI ERA", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/f/f3/Audi_R26_of_Nico_H%C3%BClkenberg_%28028A8505%29.jpg" },
+  { driverId:"hulkenberg", teamId:"williams", teamName:"Williams", seasons:"2010", highlights:["Pole position Brazil 2010 in his 3rd race","Promising debut season"], titles:0, wins:0, teamLiveryHex:"#005AFF", statLabel:"POLE P1", imageUrl:"/images/drivers/hulkenberg-williams-2010.jpg" },
+  { driverId:"hulkenberg", teamId:"force_india", teamName:"Force India", seasons:"2012–2016", highlights:["Le Mans 24H winner 2015 on first attempt","Consistent midfield points scorer"], titles:0, wins:0, teamLiveryHex:"#FF80C7", statLabel:"LM WIN", imageUrl:"/images/drivers/hulkenberg-force-india-2012.jpg" },
+  { driverId:"hulkenberg", teamId:"renault", teamName:"Renault / Racing Point / Aston Martin", seasons:"2017–2022", highlights:["Multi-team journeyman","COVID substitute drives","Continued points extraction"], titles:0, wins:0, teamLiveryHex:"#FFD700", statLabel:"JOURNEYMAN", imageUrl:"/images/drivers/hulkenberg-renault-2018.jpg" },
+  { driverId:"hulkenberg", teamId:"haas", teamName:"Haas", seasons:"2023–2025", highlights:["P6 WDC 2023 — career best","Inspired Haas resurgence","Full seasons of consistent points"], titles:0, wins:0, teamLiveryHex:"#B6BABD", teamAccentHex:"#FFFFFF", statLabel:"P6 WDC", imageUrl:"/images/drivers/hulkenberg-haas-2023.jpg" },
+  { driverId:"hulkenberg", teamId:"audi", teamName:"Audi", seasons:"2026–present", highlights:["Audi project lead driver","New chapter with German marque"], titles:0, wins:0, teamLiveryHex:"#BB1C2A", statLabel:"AUDI ERA", imageUrl:"/images/drivers/hulkenberg-audi-2026.jpg" },
 ]
 
 export const hulkenbergSignature: DrivingSignature = {
@@ -3696,7 +3696,7 @@ export const hakkinenEras: DriverEra[] = [
     wins: 0,
     teamLiveryHex: "#FFD700",
     statLabel: "DEBUT",
-    imageUrl: W + 'Mika_Hakkinen_1991_USA.jpg',
+    imageUrl: "/images/drivers/hakkinen-lotus-1991.jpg",
   },
   {
     driverId: "hakkinen",
@@ -3713,7 +3713,7 @@ export const hakkinenEras: DriverEra[] = [
     teamLiveryHex: "#E8002D",
     teamAccentHex: "#FFD700",
     statLabel: "2× WDC",
-    imageUrl: W + 'Mika_Hakkinen_1995_Britain_2.jpg',
+    imageUrl: "/images/drivers/hakkinen-mclaren-1995.jpg",
   },
 ]
 
@@ -3835,7 +3835,7 @@ export const damonHillEras: DriverEra[] = [
     wins: 0,
     teamLiveryHex: "#4A90D9",
     statLabel: "DEBUT",
-    imageUrl: W + '-1992-07-12_Damon_Hill,_Brabham_Judd_BT60B,_Woodcote,_1992_British_Grand_Prix,_Silverstone,_England.JPG',
+    imageUrl: "/images/drivers/hill-brabham-1992.jpg",
   },
   {
     driverId: "hill",
@@ -3852,7 +3852,7 @@ export const damonHillEras: DriverEra[] = [
     teamLiveryHex: "#005AFF",
     teamAccentHex: "#FFD700",
     statLabel: "1× WDC",
-    imageUrl: W + 'Damon_Hill_-_Imola_1996_(1).jpg',
+    imageUrl: "/images/drivers/hill-williams-1996.jpg",
   },
   {
     driverId: "hill",
@@ -3864,7 +3864,7 @@ export const damonHillEras: DriverEra[] = [
     wins: 0,
     teamLiveryHex: "#FF6600",
     statLabel: "HUNGARY LEAD",
-    imageUrl: W + 'Damon_Hill_1997_Arrows_Yamaha_Hungary.jpg',
+    imageUrl: "/images/drivers/hill-arrows-1997.jpg",
   },
   {
     driverId: "hill",
@@ -3876,7 +3876,7 @@ export const damonHillEras: DriverEra[] = [
     wins: 1,
     teamLiveryHex: "#FFD700",
     statLabel: "JORDAN WIN",
-    imageUrl: W + 'Damon_Hill_Jordan_198-Mugen_(12173660644).jpg',
+    imageUrl: "/images/drivers/hill-jordan-1998.jpg",
   },
 ]
 
