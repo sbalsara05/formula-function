@@ -3014,7 +3014,7 @@ export const schumacherEras: DriverEra[] = [
     wins: 0,
     teamLiveryHex: "#FFD700",
     statLabel: "1 RACE",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/4/46/Jordan_191_Michael_Schumacher_%2814464876702%29.jpg",
+    imageUrl: "/images/drivers/schumacher-jordan-1991.jpg",
   },
   {
     driverId: "schumacher",
@@ -3027,7 +3027,7 @@ export const schumacherEras: DriverEra[] = [
     teamLiveryHex: "#009944",
     teamAccentHex: "#FFD700",
     statLabel: "2× WDC",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/5/50/Michael_Schumacher_-_Benetton_194_at_the_1994_British_Grand_Prix_%2832541379235%29.jpg",
+    imageUrl: "/images/drivers/schumacher-benetton-1994.jpg",
   },
   {
     driverId: "schumacher",
@@ -3040,7 +3040,7 @@ export const schumacherEras: DriverEra[] = [
     teamLiveryHex: "#DC0000",
     teamAccentHex: "#FFD700",
     statLabel: "5× WDC",
-    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/f/f0/Michael_Schumacher_2006_Indianapolis.jpg',
+    imageUrl: '/images/drivers/schumacher-indianapolis-2006.jpg',
   },
   {
     driverId: "schumacher",
@@ -3052,7 +3052,7 @@ export const schumacherEras: DriverEra[] = [
     wins: 0,
     teamLiveryHex: "#00D2BE",
     statLabel: "COMEBACK",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/a/a0/2012_Australian_Grand_Prix_10.jpg",
+    imageUrl: "/images/drivers/schumacher-mercedes-2012.jpg",
   },
 ]
 
@@ -3184,7 +3184,7 @@ export const sennaEras: DriverEra[] = [
     wins: 0,
     teamLiveryHex: "#E8002D",
     statLabel: "BREAKTHROUGH",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/4/4c/Ayrton_Senna_Toleman_TG184_1984_British_GP_Brands_Hatch_001.jpg",
+    imageUrl: "/images/drivers/senna-toleman-1984.jpg",
   },
   {
     driverId: "senna",
@@ -3210,7 +3210,7 @@ export const sennaEras: DriverEra[] = [
     teamLiveryHex: "#E8002D",
     teamAccentHex: "#FFD700",
     statLabel: "3× WDC",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/8/84/Ayrton_Senna_1988_Canada.jpg",
+    imageUrl: "/images/drivers/senna-mclaren-1988.jpg",
   },
   {
     driverId: "senna",
@@ -3222,7 +3222,7 @@ export const sennaEras: DriverEra[] = [
     wins: 0,
     teamLiveryHex: "#005AFF",
     statLabel: "3 RACES",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/4/44/Ayrton_Senna_Williams_FW16_Petersen_Automotive_Museum.jpg",
+    imageUrl: "/images/drivers/senna-williams-1994.jpg",
   },
 ]
 
