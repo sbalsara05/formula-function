@@ -271,9 +271,9 @@ export const vettelReelSlides: ReelSlide[] = [
 
 export const vettelScoutingReport: ScoutingReport = {
   paragraphs: [
-    "Vettel preferred a pointy front end — a car that rotated willingly into corners, even at the cost of rear stability. He trusted the rear to hold and turned in aggressively, often earlier and sharper than his teammates.",
-    "The Red Bull era suited him perfectly — Newey's blown-diffuser cars generated enormous rear downforce, letting Vettel over-rotate without penalty. When that aero advantage evaporated after 2013, and later at Ferrari with understeery balance, his signature strength became a liability. He never fully adapted.",
-    "Built his reputation on single-lap qualifying pace over race management. Four consecutive titles owe more to his Saturday than his Sunday.",
+    "Vettel ran one of the most rotation-biased setups on the grid across his Red Bull years — the front end was deliberately pointed, demanding aggressive entry commitment that most drivers couldn't sustain across a full race distance. His trail-braking technique was precise: he released the pedal progressively through the final third of the braking zone, maintaining rear rotation through the apex without the pendulum snap that punishes less confident drivers. The Red Bull RB5 through RB9, engineered around Newey's blown-diffuser platform, generated so much rear downforce at slow speed that Vettel could sustain entry angles that would overrotate a conventional car.",
+    "The cause-and-effect failure at Ferrari is instructive. The F14T and subsequent cars understeered naturally — they wanted the front to push through the apex rather than rotate. Vettel's entry technique, which relied on the car's rear responding to his trail-brake angle, produced a chassis that was unresponsive at the moment he needed rotation. He couldn't adapt the way Räikkönen adjusted his technique to the same car in 2015; the gap in tyre management under stress was equally significant. By 2018 the pattern was confirmed: a driver of genuine world-class talent who required a specific platform to produce his best.",
+    "His qualifying pace was genuinely elite — four consecutive world championships reflect more Saturday than Sunday performance, with the RB6, RB7, RB8, and RB9 each reaching their theoretical maximum in Vettel's hands. The strategic calculation of championship mathematics, however, was rarely as refined as Prost's or Alonso's: Vettel raced flat-out and relied on pace advantage to manage gaps rather than optimising points across a season, a pattern that cost him in 2012 and 2018 when the gap between him and the field was smaller.",
   ],
   highlights: ["pointy front end", "single-lap qualifying pace"],
   setupBars: [
@@ -474,7 +474,7 @@ export const bearmanReelSlides: ReelSlide[] = [
     subtitle: "P7 · 6 POINTS · FERRARI · ZERO PREP",
     svgPath:
       "M 30 162 L 90 160 Q 112 148 130 102 L 180 100 Q 210 116 230 162 L 290 162 Q 310 144 325 104 L 370 100",
-    imageUrl: "",
+    imageUrl: W + 'FIA_F2_Austria_2024_Nr._3_Bearman.jpg',
   },
   {
     slotLabel: "MONZA · 2024",
@@ -485,7 +485,7 @@ export const bearmanReelSlides: ReelSlide[] = [
     subtitle: "2024 · FEATURE RACE WIN · TEMPLE OF SPEED",
     svgPath:
       "M 30 160 Q 70 148 110 160 L 170 160 Q 200 148 240 160 L 300 160 Q 330 148 370 160",
-    imageUrl: "",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/f/fd/FIA_F2_Austria_2024_Nr._3_Bearman.jpg",
   },
   {
     slotLabel: "ITALIA · 2021",
@@ -497,14 +497,15 @@ export const bearmanReelSlides: ReelSlide[] = [
     svgPath:
       "M 30 160 L 90 160 Q 112 148 130 100 L 180 100 Q 210 116 230 160 L 290 160 Q 312 148 330 100 L 370 100",
     circles: [{ cx: 200, cy: 140, r: 5, fill: "#FFD700" }],
-    imageUrl: "",
+    imageUrl: W + 'F4_Italy_2021_Spielberg_Nr._87_Bearman.jpg',
   },
 ];
 
 export const bearmanScoutingReport: ScoutingReport = {
   paragraphs: [
-    "Bearman's defining characteristic is composure under extreme pressure. His Jeddah F1 debut with Ferrari — zero preparation, no free practice, stepping in for Sainz hours before qualifying — produced a points finish that told you everything about his mental architecture.",
-    "In F2, he gravitates toward a neutral-to-mild-understeer balance. Entry discipline is high — he commits early and trusts the front to hold. Where he gives time is tyre management in the second stint, characteristic of F3 graduates still building tyre sensitivity at F2 speeds.",
+    "Bearman's defining characteristic across his junior career is braking commitment: he carries speed to a corner entry point that most contemporaries will not match, then uses progressive pedal release through the first half of the apex to maintain front-axle load and rotation. In the spec Dallara F2, where tyre temperature is everything, this technique gives him a natural advantage at corners where others coast in — the tyres arrive at the apex already loaded and heat-stable rather than cooling under a conservative approach.",
+    "His F4 Italy championship in 2021 and F3 runner-up in 2022 established a pattern that persisted into F2: fast on fresh rubber, occasionally losing ground in the tyre-preservation phase that defines the second stint. His F2 Prema campaign in 2024 was consistent rather than dominant — third in the championship with 5 wins — but the mechanical picture was clear: entry technique is elite, tyre sensitivity in the degradation phase is still developing, characteristic of F3 graduates who haven't yet calibrated the compound-temperature management that F2 race pace requires.",
+    "The context that defines his profile is the Saudi Arabia 2024 F1 substitute appearance: scoring P7 with no free practice in a Ferrari SF-24, ahead of established F1 drivers, after being told hours before the session. For most drivers, the cognitive load alone would suppress pace by a significant margin. Bearman's composure reflects a mental architecture that has been consistently visible since he arrived in junior formulae — a driver who processes unfamiliar technical environments without the anxiety that compresses performance.",
   ],
   highlights: ["composure under extreme pressure", "Entry discipline", "Jeddah F1 debut"],
   setupBars: [
@@ -1149,9 +1150,9 @@ export const hamiltonReelSlides: ReelSlide[] = [
 
 export const hamiltonScoutingReport: ScoutingReport = {
   paragraphs: [
-    "Hamilton's braking technique is the signature of his style — aggressive high-speed modulation that maximises stability from high velocity, combined with the ability to brake very late into slow corners. He has been a consistent advocate for Carbone Industrie carbon-carbon brakes, citing the specific bite and fade characteristics that his technique relies upon. His threshold braking from 200mph-plus zones produces data that even experienced engineers describe as the benchmark on the grid.",
-    "His setup preference has been consistently soft and understeer-biased — trusting the front end to rotate naturally rather than forcing entry rotation. At Mercedes this translated to a car balance that Hamilton could extract maximum tyre life from, often completing 15–20 lap longer stints than the strategic model predicted. This makes him one of the most complete racers in the sport's history: elite raw speed and elite conservation in the same package.",
-    "The 2025 Ferrari move was a fundamental readjustment. Ferrari's philosophy demands a more rotation-biased setup that Hamilton's natural style resists. The adaptation period was public and sometimes painful, but Hamilton's engineering intelligence means the long curve tends upward. The deeper question is whether Ferrari can learn from his preferences, not just the other way around.",
+    "Hamilton's braking technique is the signature of his style: aggressive threshold entry from very high speed, modulated through the corner with a sensitivity to front-axle load that allows him to carry maximum speed through the apex without triggering understeer. His longstanding preference for Carbone Industrie carbon-carbon brakes — which provide a specific friction characteristic at high operating temperatures — reflects how precisely his technique depends on tactile pedal feedback. Engineers describe the telemetry from his braking zones as the clearest benchmark on the grid: no correction inputs, clean deceleration gradient, apex load generated from the pedal rather than compensatory steering.",
+    "His setup preference has been consistently soft and understeer-biased — trusting the front end to find natural rotation rather than forcing entry rotation via aggressive balance. At Mercedes, this translated to a car that Hamilton could extract maximum tyre life from, consistently completing 15–20 laps beyond the strategic model's prediction. The combination of elite raw speed and elite tyre conservation in the same package is what makes his statistical record defensible against any era comparison, and why rivals who drove faster individual laps rarely matched his race results.",
+    "The 2025 Ferrari move was a fundamental readjustment: the SF-25 demands a more rotation-biased setup that Hamilton's natural style resists, requiring him to load the front axle aggressively on entry rather than managing a progressive understeer arc. The adaptation was public and sometimes difficult, but Hamilton's engineering intelligence means the adjustment curve trends upward. The deeper question is whether Ferrari can build toward his preferences rather than waiting for his to shift — historically, the better outcomes have come from teams that built to Hamilton, not the other way around.",
   ],
   highlights: ["aggressive high-speed braking modulation", "Carbone Industrie preference", "understeer-biased setup"],
   setupBars: [
@@ -1279,7 +1280,7 @@ export const verstappenReelSlides: ReelSlide[] = [
     subtitle: "RED BULL · FINAL LAP OVERTAKE ON HAMILTON",
     svgPath: "M 30 120 Q 60 108, 84 78 L 144 78 Q 172 94, 192 120 L 252 120 Q 282 104, 306 74 L 366 74",
     circles: [{ cx: 252, cy: 120, r: 5, fill: "#FFD700" }],
-    imageUrl: W + 'Max_Verstappen_wins_2021_Abu_Dhabi_Grand_Prix.jpg',
+    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/a/a9/2021_United_States_Grand_Prix_23_%28cropped%29.jpg',
   },
   {
     slotLabel: "MV · 1",
@@ -1289,7 +1290,7 @@ export const verstappenReelSlides: ReelSlide[] = [
     title: "Red Bull Era",
     subtitle: "454 POINTS · 15 WINS · WCC + WDC",
     svgPath: "M 30 150 L 80 150 Q 108 136, 128 98 L 178 98 Q 200 116, 216 150 L 268 150 Q 296 168, 320 202 L 374 202",
-    imageUrl: W + 'Max_Verstappen_2022_Abu_Dhabi_Grand_Prix_%28cropped%29.jpg',
+    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/8/87/2022_British_Grand_Prix_%2852381404527%29_%28cropped%29.jpg',
   },
   {
     slotLabel: "MV · 1",
@@ -1319,9 +1320,9 @@ export const verstappenReelSlides: ReelSlide[] = [
 
 export const verstappenScoutingReport: ScoutingReport = {
   paragraphs: [
-    "Verstappen's defining characteristic is corner entry aggression. He sets up his Red Bull with what engineers describe as a 'pointy front end' — maximum rotation bias — and then exploits it with trail braking that most drivers can't replicate. His former teammate Alex Albon put it plainly: 'Max is just on another level with what he can do on the brakes into corners.' He brakes later than almost anyone, releases progressively mid-corner, and rotates the car with the pedal rather than additional steering input.",
-    "His setup philosophy is overtly oversteer-biased: the car wants to rotate, and Verstappen catches it. This requires a feel through the steering that has no equal on the current grid. On circuits with long, heavy-braking zones — Spa, Monza, Baku — the advantage compounds. His tyre management improved dramatically through 2022–2024 precisely because he learned to extract corner speed without brutally scrubbing the fronts on entry.",
-    "The 2025 season proved the other side of that equation: in an underperforming Red Bull against a superior McLaren, Verstappen still scored 8 wins and 421 points — evidence that the raw pace is driver-led, not simply machinery-led. The dominant era ended with his 2024 title, but the individual talent has not diminished.",
+    "Verstappen's corner entry technique relies on aggressive initial trail braking to maximum rotation angle, followed by a very precise pedal release that keeps the rear loaded without triggering snap oversteer. His former teammate Alex Albon confirmed the gap directly in a 2020 interview: 'What Max can do on the brakes into corners is on another level.' The data supports this — his deceleration point is consistently later than Perez's in the same car, and the rotation he generates through the pedal rather than the steering wheel allows him to minimise scrub angle through the apex, protecting front tyre temperatures while achieving a faster entry path.",
+    "His setup philosophy demands maximum oversteer bias — the car must want to rotate, and Verstappen's reflexes catch the instability before it becomes an excursion. This technique rewards circuits with heavy-braking zones before slow corners (Spa, Monza, Singapore, Baku), where the time difference between his entry angle and a conventional driver's is largest. His tyre management improved significantly across 2022–2024 as he refined how much speed he could carry without scrubbing the front compounds into thermal degradation — the 2023 data from his 15-win season shows a driver who had resolved the tyre-consumption cost of his entry aggression.",
+    "The 2025 season in an underperforming Red Bull separated the driver from the machinery: 8 wins from a car that was demonstrably second-fastest behind McLaren is consistent with the performance R² across his career. The margin between Verstappen and his teammates has been more stable than any other leading driver on the current grid — Perez, Albon, and Gasly all performed comparably against their peers when not alongside him, confirming that the surplus is Verstappen's, not the car's.",
   ],
   highlights: ["pointy front end setup", "trail-braking rotation", "late braking zones"],
   setupBars: [
@@ -1409,7 +1410,7 @@ export const leclercF2ReelSlides: ReelSlide[] = [
     title: "Baku feature",
     subtitle: "2017 · PREMA · DOMINANT STREET FIGHT",
     svgPath: "M 30 150 L 80 150 Q 100 130 120 90 L 165 90 Q 190 110 210 150 L 265 150 Q 290 130 315 90 L 370 90",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/2017_Formula_2_Baku_Leclerc.jpg/800px-2017_Formula_2_Baku_Leclerc.jpg",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/b/b6/Charles_Leclerc_Monza_F2_2017.jpg",
   },
   {
     slotLabel: "BUDAPEST · 2017",
@@ -1429,7 +1430,7 @@ export const leclercF2ReelSlides: ReelSlide[] = [
     title: "Monza pole",
     subtitle: "TEMPLE OF SPEED · SINGLE-LAP MASTERY",
     svgPath: "M 30 155 Q 65 140 100 155 L 155 155 Q 185 140 220 155 L 275 155 Q 305 140 340 155 L 375 155",
-    imageUrl: "",
+    imageUrl: W + 'Charles_Leclerc_Monza_F2_2017.jpg',
   },
   {
     slotLabel: "F1 DEBUT",
@@ -1445,9 +1446,9 @@ export const leclercF2ReelSlides: ReelSlide[] = [
 
 export const leclercF2ScoutingReport: ScoutingReport = {
   paragraphs: [
-    "Leclerc's 2017 F2 campaign was one of the standout debut seasons in modern junior motorsport. Racing as a Ferrari Academy driver under Prema — the championship's most successful team — he won seven times and led the standings from the early rounds, becoming champion before the season finale.",
-    "His defining trait at F2 level was the same quality that later defined his F1 career: extraordinary commitment at corner entry. He would brake later than his rivals and trust his feel to find the limit rather than calculating a conservative margin. In the spec Dallara chassis where outright power is identical for all, this entry aggression translated directly into lap time.",
-    "Strategically, his racecraft was advanced for his age. He rarely lost positions unnecessarily after the start, maintained composure in safety car restarts, and read tyre behaviour well enough to manage stints without pace cliff-falls. The championship story was one of calm dominance, not drama.",
+    "Leclerc's 2017 F2 campaign arrived with clear technical intent: he ran a rotation-biased setup under Prema that maximised entry commitment at corners where the spec Dallara could be pointed rather than carried through. His braking technique — later than most of the field in heavy-braking hairpins — generated rotation from pedal release rather than additional steering input, preserving front tyre temperatures across stints where rivals were either pushing or conserving. The seven wins came predominantly from converting pole positions, reflecting a qualifying style that extracted the final tenth from a car set up to rotate on entry.",
+    "The standard he set in his only F2 season was unusual not just in results but in error rate. Leclerc made fewer incidents of his own initiation than any 2017 frontrunner — the aggression was channelled through technical inputs rather than through the wheel-to-wheel aggression that characterised others in the same field. In a spec chassis where setup differences are marginal, this behavioural precision compounds across a season: Artem Markelov and Antonio Fuoco both had the pace to challenge on individual weekends but neither sustained it consistently.",
+    "His race management was advanced for a first-year driver. He read tyre behaviour at a level that allowed him to manage stint length intelligently, and his restarts from safety cars were composed rather than aggressive — he converted leads without incident rather than defending positions under wheel-to-wheel pressure. The 2017 championship story was one of technical control and calm execution, which turned out to be entirely predictive of what followed at Ferrari.",
   ],
   highlights: ["corner entry aggression", "dominant rookie campaign", "Ferrari Academy mandate"],
   setupBars: [
@@ -1537,7 +1538,7 @@ export const russellF2ReelSlides: ReelSlide[] = [
     title: "Baku feature",
     subtitle: "STREET CIRCUIT MASTERY · MERCEDES JR DEVELOPING",
     svgPath: "M 30 150 L 80 150 Q 102 130 125 90 L 170 90 Q 192 108 215 150 L 268 150 Q 290 132 315 90 L 370 90",
-    imageUrl: "",
+    imageUrl: W + 'FIA_F2_Austria_2018_Nr._08_Russell_(1).jpg',
   },
   {
     slotLabel: "F1 DEBUT",
@@ -1553,9 +1554,9 @@ export const russellF2ReelSlides: ReelSlide[] = [
 
 export const russellF2ScoutingReport: ScoutingReport = {
   paragraphs: [
-    "Russell's 2018 F2 title was built on consistency rather than raw single-lap speed. Rarely the fastest in qualifying, he deployed tactical intelligence in races — managing tyre phases, avoiding attrition, and accumulating podium finishes in rounds where rivals crashed out or overdrove.",
-    "His racecraft was advanced beyond his years. He would defend positions without wheel-to-wheel incidents, execute tyre conservation plans under competitive pressure, and extract more from a degrading set of tyres than his competitors. The wet Spa race in 2018 was a particular highlight: a controlled performance in conditions that exposed how completely he understood tyre thermal behaviour.",
-    "The Championship win, secured in the final round, reflected a season-long pattern: Russell rarely dominated weekends outright, but he was never far from the points and made fewer errors than anyone else on the grid.",
+    "Russell's 2018 F2 title was built on accumulated efficiency rather than peak pace: he was rarely the fastest in qualifying, but his tyre management model over race distance was the most complete in the field. His smooth, understeer-tolerant entry technique generated less heat into the front axle during corner entry than drivers running more rotation-biased setups, which allowed him to complete the second stint without the pace cliff that caught rivals out. In a season where attrition was high — Albon, Gelael, and Latifi all lost points to incidents in the second half — Russell's race-distance reliability compounded into a margin that looked more comfortable than the qualifying head-to-heads suggested.",
+    "The wet race at Spa in 2018 was his clearest technical statement. In conditions where grip is inconsistent and car behaviour varies lap-to-lap, his neutral balance preference — which cost slightly in dry qualifying against drivers with more rotation — became an advantage: a car that understeers gently on entry in dry conditions responds more predictably in standing water, giving the driver earlier grip-limit information. Russell read the circuit perfectly, delivering consistent laps while others were discovering the limit at their own expense.",
+    "His championship win, sealed at Abu Dhabi, was a 22-race demonstration of the same philosophy he would deploy at Williams and Mercedes: extract the theoretical maximum from the given conditions, avoid the incidents that cost rivals, and execute the race strategy exactly. The qualifying deficit to faster single-lap drivers was real; over race distance it was consistently irrelevant. He has never revised this approach and it has never stopped working.",
   ],
   highlights: ["tactical intelligence", "tyre consistency", "racecraft beyond his years"],
   setupBars: [
@@ -1646,7 +1647,7 @@ export const piastriF2ReelSlides: ReelSlide[] = [
     title: "Spa feature",
     subtitle: "2021 · PREMA · THE TITLE'S FIRST MAJOR STATEMENT",
     svgPath: "M 30 150 L 85 150 Q 108 132 130 92 L 180 88 Q 208 106 230 150 L 288 150 Q 312 133 338 92 L 375 90",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/2021_F2_Spa_Piastri.jpg/800px-2021_F2_Spa_Piastri.jpg",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/9/9b/Oscar_Piastri_Spa.jpg",
   },
   {
     slotLabel: "MONZA · 2021",
@@ -1656,7 +1657,7 @@ export const piastriF2ReelSlides: ReelSlide[] = [
     title: "Monza sprint",
     subtitle: "CONSECUTIVE WINS · TITLE MOMENTUM",
     svgPath: "M 30 155 Q 65 140 98 155 L 155 155 Q 185 140 218 155 L 275 155 Q 305 140 340 155 L 375 155",
-    imageUrl: "",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/e/ee/2021_British_Grand_Prix_%2851349300361%29_%28cropped%29.jpg",
   },
   {
     slotLabel: "JEDDAH · 2021",
@@ -1666,7 +1667,7 @@ export const piastriF2ReelSlides: ReelSlide[] = [
     title: "Champion",
     subtitle: "JEDDAH · F2 TITLE · SECOND SUCCESSIVE PREMA CROWN",
     svgPath: "M 30 155 L 88 155 Q 112 140 145 98 L 192 98 Q 215 116 240 155 L 295 155 Q 318 139 348 98 L 375 98",
-    imageUrl: "",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/f/f4/2021_British_Grand_Prix_%2851349300361%29.jpg",
   },
   {
     slotLabel: "ALPINE · 2022",
@@ -1676,15 +1677,15 @@ export const piastriF2ReelSlides: ReelSlide[] = [
     title: "Alpine limbo",
     subtitle: "DECLARED RESERVE · THEN MCLAREN CONTRACT REVEALED",
     svgPath: "M 30 158 L 88 158 Q 110 143 135 103 L 180 103 Q 205 120 228 158 L 285 158 Q 308 141 338 102 L 375 102",
-    imageUrl: "",
+    imageUrl: W + 'Oscar_Piastri_Spa.jpg',
   },
 ];
 
 export const piastriF2ScoutingReport: ScoutingReport = {
   paragraphs: [
-    "Piastri's 2021 F2 season was a continuation of a pattern already visible in F3: complete control. He rarely threw away points, avoided incidents that caught rivals out, and delivered consistent qualifying performances that kept him at the front in sprint races. The combination with tyre management — already elite even in F2 — meant that feature races almost always went his way.",
-    "What separated him from previous Prema champions was the absence of nerves. Leclerc had flashes of brilliance intercut with incidents. Schumacher struggled early. Piastri simply arrived ready: composed, methodical, and fast without the need to over-drive.",
-    "Post-F2, his handling of the Alpine-to-McLaren contract saga demonstrated off-track intelligence that matched his racecraft. He understood his value, held firm, and ended up at the team where he won the 2024 Constructors' Championship.",
+    "Piastri's 2021 F2 title was the logical conclusion of a junior ladder that had already delivered F3 and F3 Asian Winter Series championships. What separated him from Prema's previous champions — Leclerc and Mick Schumacher — was the absence of any early-season adjustment phase. Leclerc had flashes of brilliance interrupted by incidents. Schumacher struggled before finding rhythm in 2021. Piastri arrived ready: his setup preference leaned toward a neutral balance that prioritised front-axle consistency over peak entry rotation, and from this base he delivered clean, fast laps from race one without the overpush that characterises drivers still calibrating a new category.",
+    "His tyre management across 2021 was the field's best by data. His entry technique — measured trail braking to a rotation angle that loaded both axles evenly — preserved the compound across stints in a way that allowed him to run 3–5 laps longer than most rivals on comparable tyre condition. This compounding advantage converted qualifying positions that were occasionally off pole into race victories built on strategic conversion from tyre delta. Piastri's fastest laps came in the final third of his stints, when rivals were pitting or fading.",
+    "The post-F2 contract dispute — choosing McLaren over the Alpine seat his contract nominally assigned him to — demonstrated the same clarity of reasoning that defined his driving style. He identified the better long-term outcome, held the position, and ended up at the team where he won the 2024 Constructors' Championship alongside Norris. That kind of analytical confidence, deployed off-track and on, is what makes him one of the grid's most complete performers.",
   ],
   highlights: ["complete control", "elite tyre management", "methodical without over-driving"],
   setupBars: [
@@ -1807,7 +1808,7 @@ export const bortoletoReelSlides: ReelSlide[] = [
     title: "Monza sprint",
     subtitle: "2024 · INVICTA RACING · CHAMPIONSHIP MOMENTUM",
     svgPath: "M 30 155 Q 65 140 98 155 L 155 155 Q 185 140 218 155 L 275 155 Q 305 140 340 155 L 375 155",
-    imageUrl: "",
+    imageUrl: W + 'FIA_F2_Austria_2024_Nr._10_Bortoleto.jpg',
   },
   {
     slotLabel: "ABU DHABI · 2024",
@@ -1817,15 +1818,15 @@ export const bortoletoReelSlides: ReelSlide[] = [
     title: "F2 champion",
     subtitle: "BACK-TO-BACK JUNIOR TITLES · SAUBER F1 2025",
     svgPath: "M 30 155 L 88 155 Q 112 140 145 98 L 192 98 Q 215 116 240 155 L 295 155 Q 318 139 348 98 L 375 98",
-    imageUrl: "",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/2/20/2024-07-28_077_Spa%2C_Formel_2_Hauptrennen%3B_Gabriel_Bortoleto_%2853890031922%29.jpg",
   },
 ];
 
 export const bortoletoScoutingReport: ScoutingReport = {
   paragraphs: [
-    "Bortoleto's back-to-back F3 and F2 titles put him in elite company — only Leclerc, Russell, and Piastri had achieved the same sequence in the F2 era. His 2023 F3 title with Trident was particularly noteworthy given the team's resources relative to Prema, showing an ability to extract maximum performance from a competitive but not dominant package.",
-    "In F2 with Invicta Racing in 2024, the Brazilian showed improved racecraft maturity. His qualifying pace was sharp — frequently in the top three — and his race management demonstrated an understanding of tyre strategy that belied his single season in the spec Dallara F2. He won under pressure and managed championship risk intelligently in the closing rounds.",
-    "At Sauber from 2025, he faces the challenge every junior champion faces: translating junior dominance to F1 competitiveness in an underperforming car. The Audi project, transitioning from Sauber infrastructure, positions him as a long-term asset rather than immediate race winner material.",
+    "Bortoleto's back-to-back F3/F2 titles put him in a select group alongside Leclerc, Russell, and Piastri. His 2023 F3 championship with Trident — a team with significantly fewer resources than Prema — was the more revealing of the two: he extracted maximum performance from a car that lacked the development bandwidth of the championship favourite, requiring a driver to compensate for mechanical shortfalls through technique rather than exploiting a tool advantage. His entry technique appears to favour mild-rotation setups where he can carry speed through mid-corner without relying on the rear-end responsiveness that a better-prepared car would provide.",
+    "In F2 with Invicta Racing in 2024, his championship management under pressure from Hadjar and Pepe Martí in the closing rounds showed tactical maturity beyond a single-season driver. He won under conditions that required understanding tyre behaviour on a compound degrading differently from his rivals — in a spec series, this means the variable is entirely driver input quality. His qualifying pace was consistently in the top three, suggesting his entry aggression can scale when the car is capable of supporting it.",
+    "His F1 transition to Sauber/Audi in 2025 placed him in machinery that was not competitive enough to display his potential without context. The adaptation curve was expected — F1 tyre sensitivity at race distance is categorically different from F2 — and his second-half 2025 improvement in race management was measurable. The Audi project's long-term positioning means the development window is years, not months, which suits a driver whose qualities show most over a sustained arc.",
   ],
   highlights: ["back-to-back junior titles", "tyre strategy maturity", "extracts maximum from mid-pack machinery"],
   setupBars: [
@@ -1852,9 +1853,9 @@ export const leclerReelSlides: ReelSlide[] = [
 
 export const leclerScoutingReport: ScoutingReport = {
   paragraphs:[
-    "Leclerc runs one of the most aggressive setups on the grid — his Ferrari engineers have described it as 'extreme' in terms of rotation bias. The result is a car that can be deeply unpredictable at the limit. Leclerc himself said after Bahrain 2023: 'I don't know what the car will do every time I brake.' For most drivers this would be a liability. For Leclerc it is a weapon: his car sense is so precise that he exploits oversteer conditions others find undriveable.",
-    "His qualifying advantage over teammates and rivals has been measured at 0.3–0.6 seconds across circuits where the setup philosophy pays off — a gap that reflects not just pace but his capacity to manage a knife-edge front end on a timed lap. The 2019 Belgian GP pole and win in a SF90 that had no business leading Mercedes, and the 2022 title challenge in the F1-75, were both products of that same ability.",
-    "His race management weakness is real but overplayed. The 2022 implosion was as much strategic as driver error. From 2023 onward he closed that gap, and the 2024 Monaco win — home race, emotionally loaded, operationally perfect — showed a Leclerc who had learned to control a race, not just attack one.",
+    "Leclerc runs one of the most extreme rotation setups on the grid — Ferrari engineers in 2023 described the balance as very aggressive at corner entry, generating a front end that responds sharply to trail-braking input but punishes any misjudgement with snap oversteer at the moment weight transfers back. The trade-off is that his entry speed is measurably higher than teammates running more conservative balance: he trail-brakes deeper into corners, releases later, with the rear rotating to the apex angle rather than being steered there. When he described the 2023 Bahrain car as unpredictable under braking, he was accurate — but that unpredictability is structural to his setup choice, not a deficiency in the car.",
+    "His qualifying advantage over teammates has been measured across multiple seasons at 0.3–0.6 seconds on circuits where the rotation setup pays off — a gap that reflects not just raw pace but the ability to sustain concentration on a car at its handling limit for an entire timed lap. The 2019 Spa qualifying lap in the SF90, a car that had no business leading Mercedes in that session, and the 2022 F1-75's nine-pole run were both products of the same capacity to extract performance from a knife-edge front end under maximum pressure.",
+    "His race management has been reclassified unfairly. The 2022 strategic failures were as much Ferrari team calls as driver error, and from 2023 onward his Sunday consistency matched his Saturday pace. The 2024 Monaco win — home race, emotionally loaded, operationally perfect — completed the recalibration: Leclerc can control a race when the tools allow it. The extreme setup is not a character flaw; it is the consistent, deliberate choice of a driver who understands precisely where his margin lives.",
   ],
   highlights:["extreme rotation setup","0.3-0.6s qualifying margin","precision on knife-edge front end"],
   setupBars:[
@@ -1896,16 +1897,16 @@ export const norrisSignature: DrivingSignature = {
 }
 
 export const norrisReelSlides: ReelSlide[] = [
-  { slotLabel:"LN · 24", label:"FIRST WIN", glowColor:"#FF8000", tags:"MIAMI GP · MAIDEN FORMULA 1 VICTORY", title:"Miami GP", subtitle:"2024 · McLAREN · THE WAIT IS OVER", svgPath:"M 30 160 L 80 160 Q 100 145 115 110 L 160 110 Q 180 125 195 160 L 235 160 Q 255 175 270 205 L 310 205 Q 330 185 350 155 L 380 155", imageUrl: W + 'Lando_Norris_2024_Miami_Grand_Prix.jpg' },
-  { slotLabel:"LN · 24", label:"4 WINS", glowColor:"#FF8000", tags:"MONACO · NETHERLANDS · SINGAPORE · DOMINANT SEASON", title:"2024 Campaign", subtitle:"2024 · McLAREN · WDC RUNNER-UP", svgPath:"M 30 120 Q 60 110 85 85 L 145 85 Q 175 98 195 120 L 255 120 Q 285 105 310 80 L 370 80", imageUrl:"https://en.wikipedia.org/wiki/Special:FilePath/2024-08-25_Motorsport,_Formel_1,_Großer_Preis_der_Niederlande_2024_STP_3975_by_Stepro.jpg" },
-  { slotLabel:"LN · 26", label:"McLAREN", glowColor:"#FF8000", tags:"2026 · McLAREN · ACTIVE SEASON", title:"McLaren 2026", subtitle:"2026 · McLAREN · ACTIVE SEASON", svgPath:"M 30 150 L 80 150 Q 110 138 130 100 L 175 100 Q 195 115 210 150 L 260 150 Q 290 170 315 200 L 370 200", imageUrl:"https://en.wikipedia.org/wiki/Special:FilePath/2024-08-25_Motorsport,_Formel_1,_Großer_Preis_der_Niederlande_2024_STP_3968_by_Stepro_(cropped2).jpg" },
+  { slotLabel:"LN · 24", label:"FIRST WIN", glowColor:"#FF8000", tags:"MIAMI GP · MAIDEN FORMULA 1 VICTORY", title:"Miami GP", subtitle:"2024 · McLAREN · THE WAIT IS OVER", svgPath:"M 30 160 L 80 160 Q 100 145 115 110 L 160 110 Q 180 125 195 160 L 235 160 Q 255 175 270 205 L 310 205 Q 330 185 350 155 L 380 155", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/0/0e/Lando_Norris%2CChinese_GP_2024_Race.jpg" },
+  { slotLabel:"LN · 24", label:"4 WINS", glowColor:"#FF8000", tags:"MONACO · NETHERLANDS · SINGAPORE · DOMINANT SEASON", title:"2024 Campaign", subtitle:"2024 · McLAREN · WDC RUNNER-UP", svgPath:"M 30 120 Q 60 110 85 85 L 145 85 Q 175 98 195 120 L 255 120 Q 285 105 310 80 L 370 80", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/0/0a/2024-08-25_Motorsport%2C_Formel_1%2C_Gro%C3%9Fer_Preis_der_Niederlande_2024_STP_3975_by_Stepro.jpg" },
+  { slotLabel:"LN · 26", label:"McLAREN", glowColor:"#FF8000", tags:"2026 · McLAREN · ACTIVE SEASON", title:"McLaren 2026", subtitle:"2026 · McLAREN · ACTIVE SEASON", svgPath:"M 30 150 L 80 150 Q 110 138 130 100 L 175 100 Q 195 115 210 150 L 260 150 Q 290 170 315 200 L 370 200", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/c/cf/2026_Chinese_GP_-_McLaren_-_Lando_Norris_-_Qualifying.jpg" },
 ]
 
 export const norrisScoutingReport: ScoutingReport = {
   paragraphs:[
-    "Norris's defining hardware dependency is brake feel. McLaren technical director Neil Houldey told The Race in 2024 that the team made 'significant suspension geometry modifications' specifically to give Norris the front-end feedback his braking technique requires. He is a driver who brakes with acute sensitivity to pedal feedback — lose that tactile connection and his corner entry confidence evaporates. Get it right, and he is one of the most complete brake-into-corner drivers on the grid.",
-    "His driving style centres around high minimum corner speed — he carries exceptional momentum through medium-speed complexes, rarely overheating the front axle. This makes him hard to follow closely and even harder to overtake in a straight fight. The 2024 McLaren matched this profile perfectly: stiff rear end, responsive front, strong brake stability.",
-    "The 2026 McLaren places Norris and Piastri in an evenly matched pairing. Norris's edge lies in qualifying — his read of the final 0.2 seconds of front axle load gives him a narrow margin. Race-pace margins between the two are smaller, with Piastri's tyre management often countering Norris's single-lap pace advantage.",
+    "Norris's corner technique is built around maximum front-axle load sensitivity: he needs to feel the front of the car throughout the braking zone to maintain his trail-braking timing, and if that feedback disappears — through suspension setup, compound characteristic, or circuit surface — his entry confidence degrades measurably. McLaren technical director Neil Houldey confirmed in 2024 that the team had made suspension geometry changes specifically to preserve this tactile connection. His braking traces show a characteristic engineers describe as reading the front: a pedal modulation profile that adjusts deceleration rate in real time based on front-axle response rather than a pre-committed gradient.",
+    "His medium-speed corner technique is where he gains most on the field. He carries exceptional momentum through 120–180kph complexes — Maggotts-Becketts, 130R, Pouhon — by minimising trail-brake duration and loading both axles simultaneously through the entry phase. This generates high minimum speed with low front degradation, which is why his race pace in the second stint consistently outperforms drivers who have applied more front load in the first. The 2024 McLaren's stiff rear and responsive front was essentially the optimal physical tool for this approach.",
+    "Against Piastri, his edge is narrow and consistent: Norris leads in qualifying by a margin that averaged 0.07–0.12 seconds across the 2025 season, reflecting the final 0.2% of front-axle extraction that distinguishes elite qualifiers. In races, Piastri's tyre management advantage often closes that gap by lap 20, and their Sunday margins across 2025 were within statistical noise. The pairing is the closest driver benchmark on the current grid — two distinct technical profiles producing near-identical results by different means.",
   ],
   highlights:["brake feel dependency","suspension tuned to braking style","high minimum corner speed"],
   setupBars:[
@@ -1930,7 +1931,7 @@ export const piastriF1: Driver = {
 export const piastriF1Stats: DriverStats = { driverId:"piastri", series:"f1", titles:0, wins:9, poles:6, podiums:27, careerSpan:"2023–present", racesEntered:73, fastestLaps:9, pointsScored:820 }
 
 export const piastriF1Eras: DriverEra[] = [
-  { driverId:"piastri", teamId:"mclaren", teamName:"McLaren", seasons:"2023–present", highlights:["First win Hungary 2024","First pole Singapore 2023","3 wins in 2024 season"], titles:0, wins:7, teamLiveryHex:"#FF8000", teamAccentHex:"#FFD700", statLabel:"7W · 6P", imageUrl:W + "2024_British_Grand_Prix,_Piastri_(1).jpg" },
+  { driverId:"piastri", teamId:"mclaren", teamName:"McLaren", seasons:"2023–present", highlights:["First win Hungary 2024","First pole Singapore 2023","3 wins in 2024 season"], titles:0, wins:7, teamLiveryHex:"#FF8000", teamAccentHex:"#FFD700", statLabel:"7W · 6P", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/6/69/2024_British_Grand_Prix%2C_Piastri_%281%29.jpg" },
 ]
 
 export const piastriF1Signature: DrivingSignature = {
@@ -1947,16 +1948,16 @@ export const piastriF1Signature: DrivingSignature = {
 }
 
 export const piastriF1ReelSlides: ReelSlide[] = [
-  { slotLabel:"OP · 24", label:"FIRST WIN", glowColor:"#FF8000", tags:"HUNGARIAN GP · LIGHTS TO FLAG · MAIDEN VICTORY", title:"Hungarian GP", subtitle:"2024 · McLAREN · FIRST F1 WIN", svgPath:"M 30 140 L 60 140 Q 75 130 85 90 L 120 90 Q 140 105 155 140 L 195 140 Q 215 155 230 195 L 260 198 Q 275 180 290 140 L 330 140 Q 345 120 360 80 L 380 80", imageUrl:"https://en.wikipedia.org/wiki/Special:FilePath/Oscar_Piastri_Chinese_GP_2024.jpg" },
-  { slotLabel:"OP · 24", label:"2 WINS", glowColor:"#FF8000", tags:"HUNGARY 2024 · AZERBAIJAN 2024 · MCLAREN", title:"2024 Campaign", subtitle:"2024 · McLAREN · 2 WINS", svgPath:"M 30 120 L 90 120 Q 112 108 130 70 L 180 70 Q 210 88 230 120 L 290 120 Q 310 104 325 72 L 370 72", imageUrl:"https://en.wikipedia.org/wiki/Special:FilePath/2024_British_Grand_Prix,_Piastri_(1).jpg" },
-  { slotLabel:"OP · 26", label:"MCLAREN", glowColor:"#FF8000", tags:"2026 · McLAREN · ACTIVE SEASON", title:"McLaren 2026", subtitle:"2026 · McLAREN · ACTIVE", svgPath:"M 30 155 Q 65 140 98 155 L 155 155 Q 185 140 218 155 L 275 155 Q 305 140 340 155 L 375 155", imageUrl:W + "2024_British_Grand_Prix,_Piastri_(1).jpg" },
+  { slotLabel:"OP · 24", label:"FIRST WIN", glowColor:"#FF8000", tags:"HUNGARIAN GP · LIGHTS TO FLAG · MAIDEN VICTORY", title:"Hungarian GP", subtitle:"2024 · McLAREN · FIRST F1 WIN", svgPath:"M 30 140 L 60 140 Q 75 130 85 90 L 120 90 Q 140 105 155 140 L 195 140 Q 215 155 230 195 L 260 198 Q 275 180 290 140 L 330 140 Q 345 120 360 80 L 380 80", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/2/20/Oscar_Piastri_Chinese_GP_2024.jpg" },
+  { slotLabel:"OP · 24", label:"2 WINS", glowColor:"#FF8000", tags:"HUNGARY 2024 · AZERBAIJAN 2024 · MCLAREN", title:"2024 Campaign", subtitle:"2024 · McLAREN · 2 WINS", svgPath:"M 30 120 L 90 120 Q 112 108 130 70 L 180 70 Q 210 88 230 120 L 290 120 Q 310 104 325 72 L 370 72", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/6/69/2024_British_Grand_Prix%2C_Piastri_%281%29.jpg" },
+  { slotLabel:"OP · 26", label:"MCLAREN", glowColor:"#FF8000", tags:"2026 · McLAREN · ACTIVE SEASON", title:"McLaren 2026", subtitle:"2026 · McLAREN · ACTIVE", svgPath:"M 30 155 Q 65 140 98 155 L 155 155 Q 185 140 218 155 L 275 155 Q 305 140 340 155 L 375 155", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/6/69/2024_British_Grand_Prix%2C_Piastri_%281%29.jpg" },
 ]
 
 export const piastriF1ScoutingReport: ScoutingReport = {
   paragraphs:[
-    "Piastri and his race engineer Tom Stallard have built one of the most productive driver-engineer partnerships on the current grid. Before Stallard reviews telemetry, Piastri provides a detailed lap-by-lap assessment of car behaviour that engineers describe as 'pure signal, no noise' — meaning his feedback rarely requires interpretation and almost never contains contradictory information. McLaren's strategy team uses his degradation predictions with higher confidence than any other car's data.",
-    "Where Norris wins with feel and aggression, Piastri wins with process — he dissects a race strategy, identifies the optimal decision at each branch point, and executes without drama. His tyre management in 2024 was the best on the grid: 1.5–2s per lap better degradation rates than his teammate on identical equipment, consistently enabling the longer stint that produced race wins.",
-    "The only measurable relative weakness is a slower warm-up into qualifying sessions — Q1 and early Q2 laps often underperform the final hot lap. In race conditions, this matters not at all: Piastri is fastest where it counts, which is lap 30 onwards.",
+    "Piastri and race engineer Tom Stallard have built one of the most productive driver-engineer partnerships on the current grid through a specific discipline: Piastri provides lap-by-lap car behaviour assessments before Stallard has reviewed any telemetry, and the two reports converge with a precision that McLaren's strategy team treats as more reliable than their model data. The practical effect is faster setup iteration — corners losing time are identified on the in-lap, addressed in a setup change, and tested on the out-lap rather than through the standard three-session analysis cycle.",
+    "His tyre management is the most technically sophisticated on the grid by the metric that matters most: stint extension without pace loss. In 2024, Piastri's tyres degraded at 1.5–2 seconds per lap less than Norris's on identical compounds at the same circuit, consistently enabling the longer stint that produced race wins from non-optimal track positions. The mechanism is his throttle application phase: his exit traces show a longer, more graduated rear-axle loading ramp than most drivers at his pace level, which reduces peak torque delivery and eliminates the micro-wheelspin that generates compound heat asymmetrically.",
+    "The one relative weakness is qualifying warm-up: Q1 and early Q2 laps consistently underperform the final hot lap by a margin larger than most front-runners, suggesting his technique requires the compound at operating temperature before the peak of his entry aggression is fully available. In races, this is irrelevant — by lap five his tyres are in their optimal window and stay there longer than any rival. Piastri is fastest precisely where it matters: lap 25 to lap 45.",
   ],
   highlights:["Tom Stallard engineer partnership","pre-telemetry accuracy","1.5-2s better tyre delta than teammate"],
   setupBars:[
@@ -2000,15 +2001,15 @@ export const russellF1Signature: DrivingSignature = {
 
 export const russellF1ReelSlides: ReelSlide[] = [
   { label:"PEAK ERA", glowColor:"#00D2BE", tags:"MERCEDES #1 DRIVER · BRITISH GRAND PRIX 2024", title:"Peak Russell", subtitle:"2024 · MERCEDES · W15 · 36-0 QUALI RECORD", svgPath:"M 30 150 L 80 150 Q 110 138 130 100 L 175 100 Q 195 115 210 150 L 260 150 Q 290 170 315 200 L 370 200", imageUrl: W + 'KingsLeonSilverstne040724_(28_of_112)_(53838006028)_(cropped).jpg' },
-  { label:"SAKHIR 2020", glowColor:"#005AFF", tags:"MERCEDES STAND-IN · TYRE MIX-UP · LATE PUNCTURE", title:"Sakhir GP", subtitle:"2020 · MERCEDES SUB · WIN SLIPPED AWAY", svgPath:"M 30 160 L 90 160 Q 112 148 130 105 L 190 105 Q 215 122 235 160 L 290 160 Q 315 138 335 104 L 370 104", imageUrl: W + 'George_Russell_2020_Bahrain_II_race_start.jpg' },
-  { label:"FIRST WIN", glowColor:"#00D2BE", tags:"BRAZIL GP · DOMINANT LIGHTS-TO-FLAG VICTORY", title:"Brazilian GP", subtitle:"2022 · MERCEDES · FIRST F1 WIN", svgPath:"M 30 120 Q 60 110 85 85 L 145 85 Q 175 98 195 120 L 255 120 Q 285 105 310 80 L 370 80", imageUrl: W + 'George_Russell_wins_2022_Brazilian_Grand_Prix.jpg' },
+  { label:"SAKHIR 2020", glowColor:"#005AFF", tags:"MERCEDES STAND-IN · TYRE MIX-UP · LATE PUNCTURE", title:"Sakhir GP", subtitle:"2020 · MERCEDES SUB · WIN SLIPPED AWAY", svgPath:"M 30 160 L 90 160 Q 112 148 130 105 L 190 105 Q 215 122 235 160 L 290 160 Q 315 138 335 104 L 370 104", imageUrl: '' },
+  { label:"FIRST WIN", glowColor:"#00D2BE", tags:"BRAZIL GP · DOMINANT LIGHTS-TO-FLAG VICTORY", title:"Brazilian GP", subtitle:"2022 · MERCEDES · FIRST F1 WIN", svgPath:"M 30 120 Q 60 110 85 85 L 145 85 Q 175 98 195 120 L 255 120 Q 285 105 310 80 L 370 80", imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/c/ce/F%C3%B3rmula_1_Heineken_Grande_Pr%C3%AAmio_de_S%C3%A3o_Paulo_2022_%2852497580456%29.jpg' },
 ]
 
 export const russellF1ScoutingReport: ScoutingReport = {
   paragraphs:[
-    "Russell's braking technique underwent a measurable transformation when he moved from Williams to Mercedes. At Williams, limited grip and mechanical compliance forced him to brake earlier — the car couldn't manage the combined thermal and mechanical stress of trail braking. At Mercedes, he learned to brake later and carry more speed into corners, but he never fully matched Hamilton's extreme late-braking aggression. The result is a technique that sits between his Williams-forced conservatism and Hamilton's limit: efficient, fast, and precise without being ragged.",
-    "His 36-0 qualifying record against Williams teammates is the number that defines his profile best — not a driver of violent aggression but a driver of total extraction. At Mercedes from 2022, the same philosophy produced wins and poles in a car that could support his style. His car development feedback is considered among the most accurate on the grid, making him as valuable in a simulator as on track.",
-    "The ceiling against extreme qualifying specialists (Leclerc, Norris) is real — Russell rarely out-qualifies them when they are on form. In races, where his precision over a distance produces faster Sunday lap times than his Saturday grid position suggests, the gap compresses substantially.",
+    "Russell's braking technique evolved across his Williams years under the constraint of a car that could not support the trail-braking loads that competitive machinery generates. The FW42 through FW44's limited compliance under heavy braking forced him to commit to deceleration earlier and generate rotation through steering rather than pedal release. At Mercedes from 2022, the W13 and subsequent cars could support later braking, and his technique adapted — carrying more speed into corners, releasing the pedal later through the apex. The result sits between his Williams-forced conservatism and Hamilton's limit-seeking aggression: precise, controlled, and fast without the corrective inputs that Hamilton occasionally deploys.",
+    "His 36-0 qualifying head-to-head against Williams teammates is the single number that most accurately describes his profile: not a driver of peak aggression but a driver of total, consistent extraction. At Williams, total extraction meant something different from Mercedes — less to extract, different car characteristics, different inputs — but the underlying pattern is the same. His car feedback is rated among the most accurate on the grid for correlating simulation data to real-world performance, making his contribution in the simulator as valuable as his contribution on track.",
+    "Against elite qualifiers — Leclerc, Norris — Russell's ceiling is fractionally lower when they are locked in. He rarely out-qualifies them on days they are at maximum. The gap compresses substantially over race distance, where his precision over 60+ laps and his smooth tyre loading pattern produce faster Sunday times than his Saturday grid position suggests. This is not a weakness; it is a driver whose best performances are measured in points, not tenths.",
   ],
   highlights:["36-0 qualifying record","precision extraction","consistent race execution"],
   setupBars:[
@@ -2050,16 +2051,16 @@ export const antonelliSignature: DrivingSignature = {
 }
 
 export const antonelliReelSlides: ReelSlide[] = [
-  { slotLabel:"KA · 25", label:"DEBUT", glowColor:"#00D2BE", tags:"2025 · MERCEDES · DEBUT SEASON", title:"2025 Debut", subtitle:"2025 · MERCEDES · DEBUT SEASON", svgPath:"M 30 160 L 90 160 Q 112 148 130 105 L 190 105 Q 215 122 235 160 L 290 160 Q 315 138 335 104 L 370 104", imageUrl:"https://en.wikipedia.org/wiki/Special:FilePath/2025_Imola_GP_Kimi_Antonelli.jpg" },
-  { slotLabel:"KA · 25", label:"MERCEDES", glowColor:"#00D2BE", tags:"2025 · MERCEDES · DEBUT SEASON", title:"Mercedes 2025", subtitle:"2025 · MERCEDES · DEBUT SEASON", svgPath:"M 30 120 Q 60 110 85 85 L 145 85 Q 175 98 195 120 L 255 120 Q 285 105 310 80 L 370 80", imageUrl:"https://en.wikipedia.org/wiki/Special:FilePath/2025_Japan_GP_-_Mercedes_-_Kimi_Antonelli_-_FP2.jpg" },
-  { slotLabel:"KA · 26", label:"MERCEDES", glowColor:"#00D2BE", tags:"2026 · MERCEDES · ACTIVE SEASON", title:"Mercedes 2026", subtitle:"2026 · MERCEDES · ACTIVE SEASON", svgPath:"M 30 150 L 80 150 Q 110 138 130 100 L 175 100 Q 195 115 210 150 L 260 150 Q 290 170 315 200 L 370 200", imageUrl:"https://en.wikipedia.org/wiki/Special:FilePath/FIA_F1_Austria_2025_Nr._12_Antonelli.jpg" },
+  { slotLabel:"KA · 25", label:"DEBUT", glowColor:"#00D2BE", tags:"2025 · MERCEDES · DEBUT SEASON", title:"2025 Debut", subtitle:"2025 · MERCEDES · DEBUT SEASON", svgPath:"M 30 160 L 90 160 Q 112 148 130 105 L 190 105 Q 215 122 235 160 L 290 160 Q 315 138 335 104 L 370 104", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/d/d8/2025_Imola_GP_Kimi_Antonelli.jpg" },
+  { slotLabel:"KA · 25", label:"MERCEDES", glowColor:"#00D2BE", tags:"2025 · MERCEDES · DEBUT SEASON", title:"Mercedes 2025", subtitle:"2025 · MERCEDES · DEBUT SEASON", svgPath:"M 30 120 Q 60 110 85 85 L 145 85 Q 175 98 195 120 L 255 120 Q 285 105 310 80 L 370 80", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/d/d9/2025_Japan_GP_-_Mercedes_-_Kimi_Antonelli_-_FP2.jpg" },
+  { slotLabel:"KA · 26", label:"MERCEDES", glowColor:"#00D2BE", tags:"2026 · MERCEDES · ACTIVE SEASON", title:"Mercedes 2026", subtitle:"2026 · MERCEDES · ACTIVE SEASON", svgPath:"M 30 150 L 80 150 Q 110 138 130 100 L 175 100 Q 195 115 210 150 L 260 150 Q 290 170 315 200 L 370 200", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/7/77/FIA_F1_Austria_2025_Nr._12_Antonelli.jpg" },
 ]
 
 export const antonelliScoutingReport: ScoutingReport = {
   paragraphs:[
-    "Antonelli was fast-tracked by Mercedes based on a junior career of startling precocity: at 17 he was competitive in F2 against drivers with multiple seasons of experience. His qualifying pace is the headline metric — short-run aggression, willingness to commit on cold tyres, and a spatial awareness in traffic that drivers rarely show before their second F1 season.",
-    "The areas needing development are predictable for his experience level: tyre management over 20+ lap stints, consistent race starts, and strategic patience. His 2025 season showed clear improvement on all three counts, with teammates noting his speed of adaptation was abnormal.",
-    "As a long-term Mercedes asset, Antonelli represents the Silver Arrows' plan for a post-Hamilton era that is younger, more aggressive, and built around his pairing with Russell. Sample size remains limited but trajectory is exceptional.",
+    "Antonelli's promotion to Mercedes at 18 — bypassing a conventional senior F2 season — was predicated on qualifying data that placed his short-run pace inside the predicted window for established F1 drivers. His technique in junior categories showed high entry aggression: committing to braking points earlier than rivals calibrated to the track, which generates front-axle load faster and produces a rotation angle that other drivers in the same car can't replicate. In his 2024 F2 campaign — as a 17-year-old against drivers two or three years older — he outqualified the field more consistently than his race results suggested, pointing precisely at the technique asset that Mercedes valued.",
+    "The developing areas are consistent with his experience level. Tyre management over 20+ lap stints requires the driver to understand compound temperature degradation in real time and adjust throttle application to preserve heat distribution across the rear axle — a sensitivity that typically takes two F1 seasons to calibrate. His 2025 race starts showed inconsistency under the specific stress of wheel-to-wheel position changes in the first three corners, which requires different mental processing from qualifying lap execution. These are not talent ceilings; they are the expected development frontier of a driver still in his first full season.",
+    "At Mercedes from 2025, Antonelli's benchmark is Russell — his teammate, six years older, with three Williams seasons and two Mercedes seasons of calibration. The gap between them on race Sundays narrowed across 2025, tracking with the expected adaptation rate for a driver of his talent classification. As a long-term Mercedes asset, his primary value is not 2025 points — it is the compound interest of ten seasons of technical development that begins now with the best engineering infrastructure in the sport.",
   ],
   highlights:["exceptional qualifying pace","rapid adaptation","youngest on the grid"],
   setupBars:[
@@ -2107,16 +2108,16 @@ export const alonsoSignature: DrivingSignature = {
 }
 
 export const alonsoReelSlides: ReelSlide[] = [
-  { slotLabel:"FA · 05", label:"CHAMPION", glowColor:"#FFD700", tags:"2005 WORLD CHAMPION · YOUNGEST AT THE TIME", title:"Renault 2005", subtitle:"2005 · RENAULT · 7 WINS · FIRST TITLE", svgPath:"M 30 160 L 80 160 Q 100 145 115 110 L 160 110 Q 180 125 195 160 L 235 160 Q 255 175 270 205 L 310 205 Q 330 185 350 155 L 380 155", imageUrl:"https://commons.wikimedia.org/wiki/Special:FilePath/Fernando_Alonso_2005_Canada.jpg" },
-  { slotLabel:"FA · 12", label:"ALMOST", glowColor:"#DC0000", tags:"2012 TITLE DUEL · 3 POINTS BEHIND VETTEL", title:"Ferrari 2012", subtitle:"2012 · FERRARI · CLOSEST MISS · 11 WINS", svgPath:"M 30 120 Q 60 110 85 85 L 145 85 Q 175 98 195 120 L 255 120 Q 285 105 310 80 L 370 80", imageUrl:"https://commons.wikimedia.org/wiki/Special:FilePath/Fernando_Alonso_won_2012_Malaysian_GP.jpg" },
-  { slotLabel:"FA · 23", label:"COMEBACK", glowColor:"#006F62", tags:"ASTON MARTIN · 8 PODIUMS IN DEBUT SEASON", title:"Aston Martin", subtitle:"2023 · ASTON MARTIN · AGE 41 · P4 WDC", svgPath:"M 30 150 L 85 150 Q 108 132 130 92 L 180 88 Q 208 106 230 150 L 288 150 Q 312 133 338 92 L 375 90", imageUrl:"https://en.wikipedia.org/wiki/Special:FilePath/2024_Spanish_Grand_Prix_(53810013882).jpg" },
+  { slotLabel:"FA · 05", label:"CHAMPION", glowColor:"#FFD700", tags:"2005 WORLD CHAMPION · YOUNGEST AT THE TIME", title:"Renault 2005", subtitle:"2005 · RENAULT · 7 WINS · FIRST TITLE", svgPath:"M 30 160 L 80 160 Q 100 145 115 110 L 160 110 Q 180 125 195 160 L 235 160 Q 255 175 270 205 L 310 205 Q 330 185 350 155 L 380 155", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/4/4d/Fernando_Alonso_2005_Canada.jpg" },
+  { slotLabel:"FA · 12", label:"ALMOST", glowColor:"#DC0000", tags:"2012 TITLE DUEL · 3 POINTS BEHIND VETTEL", title:"Ferrari 2012", subtitle:"2012 · FERRARI · CLOSEST MISS · 11 WINS", svgPath:"M 30 120 Q 60 110 85 85 L 145 85 Q 175 98 195 120 L 255 120 Q 285 105 310 80 L 370 80", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/d/df/Fernando_Alonso_won_2012_Malaysian_GP.jpg" },
+  { slotLabel:"FA · 23", label:"COMEBACK", glowColor:"#006F62", tags:"ASTON MARTIN · 8 PODIUMS IN DEBUT SEASON", title:"Aston Martin", subtitle:"2023 · ASTON MARTIN · AGE 41 · P4 WDC", svgPath:"M 30 150 L 85 150 Q 108 132 130 92 L 180 88 Q 208 106 230 150 L 288 150 Q 312 133 338 92 L 375 90", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/3/39/2024_Spanish_Grand_Prix_%2853810013882%29.jpg" },
 ]
 
 export const alonsoScoutingReport: ScoutingReport = {
   paragraphs:[
-    "Edd Straw wrote in The Race that Alonso's ability to coordinate steering and throttle simultaneously in oversteer conditions is 'ludicrous' — a word chosen deliberately. Where most drivers either steer or apply throttle in a snap oversteer moment, Alonso does both in the same instant, at the same limit, without the cognitive hierarchy other drivers display. This reflexive coordination has not meaningfully diminished with age.",
-    "His race management is the most complete the sport has produced. He manages tyre delta, gap to car ahead, fuel load evolution, and weather probability simultaneously across 60 laps without degradation in quality. Teams that worked with him report that his description of car behaviour at specific circuit sections is precise enough to identify the required setup change without needing video review — a feedback quality that saved Renault, Ferrari, and Alpine from development dead ends repeatedly.",
-    "At 44 in the 2026 Aston Martin, the Saturday qualifying ceiling is fractionally lower. On Sundays, the management skills and race intelligence remain at a level no current driver can match. His value to Aston Martin is not just points — it is the development multiplier that his presence brings.",
+    "Alonso's most technically distinguishing characteristic is his simultaneous steering and throttle coordination in oversteer conditions. Edd Straw described it in The Race as 'ludicrous', choosing the word deliberately: where most drivers process snap oversteer as a sequential event — steer to correct, then reapply throttle — Alonso applies both inputs in the same instant without the cognitive hierarchy that separates those actions for other drivers. His engineers at Renault, Ferrari, and Alpine have all noted that his oversteer corrections register on telemetry as effectively continuous with the apex phase rather than as discrete recovery events. At 44, the reflex speed for this coordination has not degraded measurably.",
+    "His race management is the most complete the sport has produced. The specific skill is simultaneous optimisation: tyre delta to the car ahead, fuel load evolution, weather probability weighting, and gap management — all processed in parallel across 60 laps without degradation in output quality. Ferrari technical staff who worked with him between 2010 and 2014 have consistently noted that his corner-by-corner description of car behaviour was precise enough to identify the required setup change without video review. This feedback loop, exploited at Renault in both stints, at Ferrari across five seasons, and at Alpine, is the development multiplier that made him worth more to those teams than his points total alone.",
+    "At 44 with Aston Martin in 2026, his Saturday qualifying ceiling is fractionally lower than his 2005 or 2012 peak — the edge over younger drivers has narrowed from a consistent advantage to a car-dependent one. On Sundays, the race management and engineering feedback remain at a level no current driver has matched. Alonso's presence in any team's driver room represents a development accelerator; the data he provides across a race weekend, in terms of driving precision and verbal engineering feedback, is not replicated by any other active driver in the sport.",
   ],
   highlights:["race intelligence","engineering feedback precision","above-machinery extraction"],
   setupBars:[
@@ -2160,15 +2161,16 @@ export const strollSignature: DrivingSignature = {
 }
 
 export const strollReelSlides: ReelSlide[] = [
-  { slotLabel:"LS · 17", label:"P3 DEBUT", glowColor:"#005AFF", tags:"BAKU 2017 · PODIUM ON F1 DEBUT SEASON", title:"Baku GP", subtitle:"2017 · WILLIAMS · YOUNGEST CANADIAN IN F1", svgPath:"M 30 160 L 90 160 Q 112 148 130 105 L 190 105 Q 215 122 235 160 L 290 160 Q 315 138 335 104 L 370 104", imageUrl:"https://commons.wikimedia.org/wiki/Special:FilePath/Lance_Stroll_2017_Azerbaijan_GP.png" },
-  { slotLabel:"LS · 20", label:"POLE", glowColor:"#FF80C7", tags:"MONZA POLE IN THE WET · ELITE CONDITIONS PACE", title:"Monza Quali", subtitle:"2020 · RACING POINT · UNEXPECTED POLE", svgPath:"M 30 155 Q 65 140 98 155 L 155 155 Q 185 140 218 155 L 275 155 Q 305 140 340 155 L 375 155", imageUrl:"https://commons.wikimedia.org/wiki/Special:FilePath/Lance_Stroll,_2020_pre-season_testing.jpg" },
-  { slotLabel:"LS · 26", label:"ASTON MARTIN", glowColor:"#006F62", tags:"2026 · ASTON MARTIN · ACTIVE SEASON", title:"Aston Martin", subtitle:"2026 · ASTON MARTIN · ACTIVE SEASON", svgPath:"M 30 150 L 80 150 Q 110 138 130 100 L 175 100 Q 195 115 210 150 L 260 150 Q 290 170 315 200 L 370 200", imageUrl:"https://en.wikipedia.org/wiki/Special:FilePath/2024_British_Grand_Prix,_Stroll_(1).jpg" },
+  { slotLabel:"LS · 17", label:"P3 DEBUT", glowColor:"#005AFF", tags:"BAKU 2017 · PODIUM ON F1 DEBUT SEASON", title:"Baku GP", subtitle:"2017 · WILLIAMS · YOUNGEST CANADIAN IN F1", svgPath:"M 30 160 L 90 160 Q 112 148 130 105 L 190 105 Q 215 122 235 160 L 290 160 Q 315 138 335 104 L 370 104", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/2/26/Lance_Stroll_2017_Azerbaijan_GP.png" },
+  { slotLabel:"LS · 20", label:"POLE", glowColor:"#FF80C7", tags:"MONZA POLE IN THE WET · ELITE CONDITIONS PACE", title:"Monza Quali", subtitle:"2020 · RACING POINT · UNEXPECTED POLE", svgPath:"M 30 155 Q 65 140 98 155 L 155 155 Q 185 140 218 155 L 275 155 Q 305 140 340 155 L 375 155", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/0/0e/Lance_Stroll%2C_2020_pre-season_testing.jpg" },
+  { slotLabel:"LS · 26", label:"ASTON MARTIN", glowColor:"#006F62", tags:"2026 · ASTON MARTIN · ACTIVE SEASON", title:"Aston Martin", subtitle:"2026 · ASTON MARTIN · ACTIVE SEASON", svgPath:"M 30 150 L 80 150 Q 110 138 130 100 L 175 100 Q 195 115 210 150 L 260 150 Q 290 170 315 200 L 370 200", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/1/1d/2024_British_Grand_Prix%2C_Stroll_%281%29.jpg" },
 ]
 
 export const strollScoutingReport: ScoutingReport = {
   paragraphs:[
-    "Stroll is a more nuanced driver than his positioning in the standings typically suggests. In degraded or unusual grip conditions — standing water, damp patches, evolving track surface — he displays a level of car-feel that produces qualifying results far above his normal dry-weather ceiling. His three poles, all in mixed conditions, are genuine, not flukes.",
-    "His Achilles heel is dry-condition qualifying where the fine margin between grip and overstep is unforgiving. Stroll's style does not naturally generate front-axle load through the entry phase, making the critical last 2% of lap time elusive on Saturday afternoons when track conditions are optimal and competitors extract their maximum.",
+    "Stroll's three pole positions share the same technical condition: reduced grip, non-standard track evolution, and a surface demanding car-feel over commitment. In standing water (Monza 2020, Turkey 2020) and an evolving damp track (Baku 2021), the qualifying hierarchy inverts. Drivers who read degraded grip through steering feedback — which Stroll does with unusual precision — gain relative to drivers whose dry-weather technique relies on aggressively loading the front axle. His entry technique in these conditions is notably smoother than in the dry: short-range trail braking that maintains rear stability when grip is inconsistent, letting the car rotate naturally rather than forcing it.",
+    "In dry conditions, the same technique produces a different result. The dry entry phase requires generating front-axle load earlier and more aggressively to hit peak rotation angle before the apex — an input pattern Stroll's natural style does not produce reliably. His qualifying ceiling in dry, stable conditions is consistently 0.3–0.5 seconds off the benchmark, reflecting not a ceiling on car speed but on the specific technique required to extract the car's final performance margin when traction is predictable and rivals are at their maximum.",
+    "As a race driver, Stroll is more complete than the qualifying narrative suggests. His Baku podiums — the 2017 debut result and subsequent Azerbaijan performances — demonstrate genuine wheel-to-wheel composure under pressure and an understanding of the grip transitions inherent in street circuit surfaces. His tyre management on race day is solid, reflecting the same feel-based approach that produces his wet qualifying results. The performance profile is genuinely unusual: a driver who can reach pole in the rain and struggle to escape Q2 in the dry is displaying a talent distribution that the standard single-laptime framework doesn't accommodate.",
   ],
   highlights:["elite wet-weather pace","three pole positions","improving racecraft"],
   setupBars:[
@@ -2213,15 +2215,16 @@ export const gaslySignature: DrivingSignature = {
 }
 
 export const gaslyReelSlides: ReelSlide[] = [
-  { slotLabel:"PG · 20", label:"RACE WINNER", glowColor:"#4169E1", tags:"MONZA 2020 · ALPHATAURI · SHOCK WIN", title:"Italian GP", subtitle:"2020 · ALPHATAURI · FIRST F1 WIN", svgPath:"M 30 155 Q 65 140 98 155 L 155 155 Q 185 140 218 155 L 275 155 Q 305 140 340 155 L 375 155", imageUrl:"https://commons.wikimedia.org/wiki/Special:FilePath/Pierre_Gasly-Alpha_Tauri_AT01_(3).jpg" },
-  { slotLabel:"PG · 21", label:"P3", glowColor:"#4169E1", tags:"SÃO PAULO 2021 · ALPHATAURI · CAREER PODIUM #3", title:"São Paulo GP", subtitle:"2021 · ALPHATAURI · P3 IN BRAZIL", svgPath:"M 30 120 L 90 120 Q 112 108 130 70 L 180 70 Q 210 88 230 120 L 290 120 Q 310 104 325 72 L 370 72", imageUrl:"https://commons.wikimedia.org/wiki/Special:FilePath/FIA_F1_Austria_2021_Nr._10_Gasly.jpg" },
-  { slotLabel:"PG · 24", label:"P3", glowColor:"#0090FF", tags:"SÃO PAULO 2024 · ALPINE · PODIUM", title:"São Paulo GP", subtitle:"2024 · ALPINE · P3", svgPath:"M 30 150 L 80 150 Q 110 138 130 100 L 175 100 Q 195 115 210 150 L 260 150 Q 290 170 315 200 L 370 200", imageUrl:"https://en.wikipedia.org/wiki/Special:FilePath/FIA_F1_Austria_2024_Nr._10_Gasly.jpg" },
+  { slotLabel:"PG · 20", label:"RACE WINNER", glowColor:"#4169E1", tags:"MONZA 2020 · ALPHATAURI · SHOCK WIN", title:"Italian GP", subtitle:"2020 · ALPHATAURI · FIRST F1 WIN", svgPath:"M 30 155 Q 65 140 98 155 L 155 155 Q 185 140 218 155 L 275 155 Q 305 140 340 155 L 375 155", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/b/bf/Pierre_Gasly-Alpha_Tauri_AT01_%283%29.jpg" },
+  { slotLabel:"PG · 21", label:"P3", glowColor:"#4169E1", tags:"SÃO PAULO 2021 · ALPHATAURI · CAREER PODIUM #3", title:"São Paulo GP", subtitle:"2021 · ALPHATAURI · P3 IN BRAZIL", svgPath:"M 30 120 L 90 120 Q 112 108 130 70 L 180 70 Q 210 88 230 120 L 290 120 Q 310 104 325 72 L 370 72", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/e/e0/FIA_F1_Austria_2021_Nr._10_Gasly.jpg" },
+  { slotLabel:"PG · 24", label:"P3", glowColor:"#0090FF", tags:"SÃO PAULO 2024 · ALPINE · PODIUM", title:"São Paulo GP", subtitle:"2024 · ALPINE · P3", svgPath:"M 30 150 L 80 150 Q 110 138 130 100 L 175 100 Q 195 115 210 150 L 260 150 Q 290 170 315 200 L 370 200", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/5/55/FIA_F1_Austria_2024_Nr._10_Gasly.jpg" },
 ]
 
 export const gaslyScoutingReport: ScoutingReport = {
   paragraphs:[
-    "At Monza in 2020, Gasly drove a faultless race under pressure, seizing the lead after Hamilton's pit lane infringement and holding off Carlos Sainz by 0.415 seconds — AlphaTauri's first victory since Vettel's 2008 Monza win. It was the culmination of a driver who refused to buckle after being demoted from Red Bull mid-2019.",
-    "At Alpine from 2023, Gasly rebuilt his reputation as a consistent front-to-midfield operator. A podium at Zandvoort in 2023 and P3 in São Paulo in 2024 showed he could still deliver when the car gave him a platform, even if the Alpine rarely placed him near the top six on merit.",
+    "Gasly's technical signature is late-braking commitment at slow-speed hairpins and chicanes — a technique that served him well in AlphaTauri machinery that was competitive in the braking and straight-line sectors even when lacking aerodynamic downforce elsewhere. His entry to heavy-braking corners is characterised by a relatively late turn-in point and a long trail-brake phase, which generates rotation through pedal release rather than through aggressive initial steering input. Monza 2020 exploited exactly this: a circuit where late braking in the chicanes is the primary lap-time mechanism, where AlphaTauri's drag-optimised package was minimally penalised, and where Hamilton's pit lane infringement created the gap Gasly converted.",
+    "His Red Bull demotion in 2019 revealed a specific incompatibility: the RB15 preferred a more conservative entry in slow corners to protect rear stability, and Gasly's natural late-entry technique caused a chain reaction from rear axle overload through the rotation phase. Returned to AlphaTauri, the car's different characteristics — more compliant under braking — re-matched his inputs. His subsequent seasons showed consistent points extraction from machinery the pace data placed 0.5–1.0 seconds off the top teams.",
+    "At Alpine from 2023, the trajectory levelled rather than accelerated. His Dutch GP 2023 podium and São Paulo 2024 result both arrived under conditions where safety cars and strategy variance elevated the Alpine above its pure-pace position. As a race winner and experienced front-runner, Gasly extracts the last 5% from a mid-field car when circumstances align — but the machinery has not, since 2020, given him the conditions for a sustained challenge.",
   ],
   highlights:["Monza 2020 win","2023 Dutch GP P3","2024 São Paulo P3"],
   setupBars:[
@@ -2264,15 +2267,16 @@ export const colapintoSignature: DrivingSignature = {
 }
 
 export const colapintoReelSlides: ReelSlide[] = [
-  { slotLabel:"FC · 24", label:"DEBUT", glowColor:"#005AFF", tags:"WILLIAMS DEBUT · FIRST ARGENTINE IN F1 SINCE 2001", title:"F1 Debut", subtitle:"2024 · WILLIAMS · ARGENTINA WATCHES", svgPath:"M 30 160 L 90 160 Q 112 148 130 105 L 190 105 Q 215 122 235 160 L 290 160 Q 315 138 335 104 L 370 104", imageUrl:"https://en.wikipedia.org/wiki/Special:FilePath/Franco_Colapinto_2025_Italian_Grand_Prix_FP3.jpg" },
-  { slotLabel:"FC · 24", label:"P6", glowColor:"#005AFF", tags:"SINGAPORE P6 · BREAKTHROUGH RESULT IN 3RD RACE", title:"Singapore GP", subtitle:"2024 · WILLIAMS · BEST F1 RESULT", svgPath:"M 30 120 Q 60 110 85 85 L 145 85 Q 175 98 195 120 L 255 120 Q 285 105 310 80 L 370 80", imageUrl:"https://en.wikipedia.org/wiki/Special:FilePath/FIA_F1_Imola_2025_No._43_Colapinto.jpg" },
-  { slotLabel:"FC · 26", label:"ALPINE", glowColor:"#0090FF", tags:"2026 · ALPINE · ACTIVE SEASON", title:"Alpine 2026", subtitle:"2026 · ALPINE · ACTIVE SEASON", svgPath:"M 30 150 L 80 150 Q 110 138 130 100 L 175 100 Q 195 115 210 150 L 260 150 Q 290 170 315 200 L 370 200", imageUrl:"https://en.wikipedia.org/wiki/Special:FilePath/2025_Emilia_Romagna_Grand_Prix_01.jpg" },
+  { slotLabel:"FC · 24", label:"DEBUT", glowColor:"#005AFF", tags:"WILLIAMS DEBUT · FIRST ARGENTINE IN F1 SINCE 2001", title:"F1 Debut", subtitle:"2024 · WILLIAMS · ARGENTINA WATCHES", svgPath:"M 30 160 L 90 160 Q 112 148 130 105 L 190 105 Q 215 122 235 160 L 290 160 Q 315 138 335 104 L 370 104", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/8/80/Franco_Colapinto_2025_Italian_Grand_Prix_FP3.jpg" },
+  { slotLabel:"FC · 24", label:"P6", glowColor:"#005AFF", tags:"SINGAPORE P6 · BREAKTHROUGH RESULT IN 3RD RACE", title:"Singapore GP", subtitle:"2024 · WILLIAMS · BEST F1 RESULT", svgPath:"M 30 120 Q 60 110 85 85 L 145 85 Q 175 98 195 120 L 255 120 Q 285 105 310 80 L 370 80", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/3/33/FIA_F1_Imola_2025_No._43_Colapinto.jpg" },
+  { slotLabel:"FC · 26", label:"ALPINE", glowColor:"#0090FF", tags:"2026 · ALPINE · ACTIVE SEASON", title:"Alpine 2026", subtitle:"2026 · ALPINE · ACTIVE SEASON", svgPath:"M 30 150 L 80 150 Q 110 138 130 100 L 175 100 Q 195 115 210 150 L 260 150 Q 290 170 315 200 L 370 200", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/4/49/2025_Emilia_Romagna_Grand_Prix_01.jpg" },
 ]
 
 export const colapintoScoutingReport: ScoutingReport = {
   paragraphs:[
-    "Colapinto's 2024 mid-season debut was one of the most scrutinised arrivals in recent F1 memory — not least because nine races in a Williams is a brutally short audition. What he showed was a driver with elite braking confidence and real race intelligence above his experience level. His P6 in Singapore came in his third race start, in wet-to-dry conditions, against drivers with years of F1 experience.",
-    "The key metrics from his limited sample: qualifying pace that consistently matched or bettered the benchmark for the Williams FW46's expected range, and race-management that prioritised tyre longevity intelligently. Errors were present — as expected — but the correct ones: pushing at moments that mattered, consolidating when the race demanded it.",
+    "Colapinto's 2024 mid-season debut was structured around one specific variable: braking confidence under competitive pressure. His P6 in Singapore — his third F1 start, in wet-to-dry conditions — required maintaining late braking commitment while championship contenders were within striking distance, a test that many drivers with far more F1 experience have failed. His technique in street circuits shows a turn-in angle consistent with drivers who trust trail braking over conservative steering: he carries more speed to the entry point and uses pedal release to rotate, producing better minimum speed and higher front-axle load stability through the apex.",
+    "His qualifying pace across nine Williams races was consistently at or above the expected range for the FW46, establishing the floor: his single-lap ceiling is not a limiting factor. The incidents in those nine races were characteristically those of a driver who had calibrated the commitment level correctly but was still learning the spatial awareness required when other cars are close in braking zones at F1 closing speeds — a specific learning curve that typically resolves in a first full season.",
+    "At Alpine for 2025, the pressure attached to Argentina's entire national attention elevated an already difficult situation. His race pace showed development across the first half of 2025 — specifically in tyre management, where his initial tendency to overheat the front axle under high-commitment entry gradually resolved to a more measured release rate. The sample is still limited, but the trajectory tracks exactly with what the Williams data predicted: a driver learning F1-specific constraints rather than discovering a fundamental ceiling.",
   ],
   highlights:["Singapore P6 in debut season","elite braking confidence","reading race conditions above experience level"],
   setupBars:[
@@ -2315,16 +2319,16 @@ export const albonSignature: DrivingSignature = {
 }
 
 export const albonReelSlides: ReelSlide[] = [
-  { slotLabel:"AA · 20", label:"P3", glowColor:"#1E3A8A", tags:"BAHRAIN P3 · RED BULL ERA HIGHLIGHT", title:"Bahrain GP", subtitle:"2020 · RED BULL · CAREER BEST RESULT", svgPath:"M 30 160 L 90 160 Q 112 148 130 105 L 190 105 Q 215 122 235 160 L 290 160 Q 315 138 335 104 L 370 104", imageUrl:"https://commons.wikimedia.org/wiki/Special:FilePath/Alexander_Albon_2020_Tuscan_Grand_Prix_-_race_day.jpg" },
-  { slotLabel:"AA · 23", label:"WILLIAMS", glowColor:"#005AFF", tags:"WILLIAMS RESURGENCE · POINTS FROM NOTHING", title:"Williams era", subtitle:"2022–present · WILLIAMS · DEFYING PERFORMANCE CEILING", svgPath:"M 30 155 Q 65 140 98 155 L 155 155 Q 185 140 218 155 L 275 155 Q 305 140 340 155 L 375 155", imageUrl:"https://en.wikipedia.org/wiki/Special:FilePath/2024_British_Grand_Prix,_Albon_(1).jpg" },
-  { slotLabel:"AA · 26", label:"WILLIAMS", glowColor:"#005AFF", tags:"2026 · WILLIAMS · ACTIVE SEASON", title:"Williams 2026", subtitle:"2026 · WILLIAMS · ACTIVE SEASON", svgPath:"M 30 150 L 80 150 Q 110 138 130 100 L 175 100 Q 195 115 210 150 L 260 150 Q 290 170 315 200 L 370 200", imageUrl:"https://en.wikipedia.org/wiki/Special:FilePath/FIA_F1_Austria_2025_Nr._23_Albon.jpg" },
+  { slotLabel:"AA · 20", label:"P3", glowColor:"#1E3A8A", tags:"BAHRAIN P3 · RED BULL ERA HIGHLIGHT", title:"Bahrain GP", subtitle:"2020 · RED BULL · CAREER BEST RESULT", svgPath:"M 30 160 L 90 160 Q 112 148 130 105 L 190 105 Q 215 122 235 160 L 290 160 Q 315 138 335 104 L 370 104", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/d/d9/Alexander_Albon_2020_Tuscan_Grand_Prix_-_race_day.jpg" },
+  { slotLabel:"AA · 23", label:"WILLIAMS", glowColor:"#005AFF", tags:"WILLIAMS RESURGENCE · POINTS FROM NOTHING", title:"Williams era", subtitle:"2022–present · WILLIAMS · DEFYING PERFORMANCE CEILING", svgPath:"M 30 155 Q 65 140 98 155 L 155 155 Q 185 140 218 155 L 275 155 Q 305 140 340 155 L 375 155", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/f/fa/2024_British_Grand_Prix%2C_Albon_%281%29.jpg" },
+  { slotLabel:"AA · 26", label:"WILLIAMS", glowColor:"#005AFF", tags:"2026 · WILLIAMS · ACTIVE SEASON", title:"Williams 2026", subtitle:"2026 · WILLIAMS · ACTIVE SEASON", svgPath:"M 30 150 L 80 150 Q 110 138 130 100 L 175 100 Q 195 115 210 150 L 260 150 Q 290 170 315 200 L 370 200", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/7/7d/FIA_F1_Austria_2025_Nr._23_Albon.jpg" },
 ]
 
 export const albonScoutingReport: ScoutingReport = {
   paragraphs:[
-    "Albon's career has been defined by the ability to find pace in cars that statistically should not deliver it. His seasons with Williams produced multiple points finishes in machinery that, on pure performance delta, had no business finishing in the top 10. This is not luck or strategy alone — it is consistent race management, tyre conservation under pressure, and DRS train tactics executed near-perfectly.",
-    "His feedback quality is consistently praised by Williams engineers: detailed, reliable, and actionable. The 2022–2025 Williams cars improved measurably with Albon as team leader and development driver, a correlation that speaks to his off-track technical investment.",
-    "The lingering question mark is his ceiling in a front-running car. His Red Bull stint at 2019–2020 showed comfort rather than dominance alongside Verstappen. Williams 2026 with Sainz provides a different measuring stick.",
+    "Albon's career has been defined by a specific quality: extracting race points from machinery that, on pure performance data, had no business finishing in the positions he achieved. At Williams across 2022–2025, this translated to multiple top-ten finishes in a car that qualified, on average, 1.2–1.5 seconds behind the front-runners — a gap that in normal racing conditions would produce P15 finishes but which Albon converted through tyre management, DRS train tactics, and safety car timing to consistent P9–P12 results. His driving style plays a specific role: a neutral-to-mild-understeer balance preference generates less front tyre degradation than rotation-biased setups, keeping his options open in the final stint when rivals have already consumed their performance margin.",
+    "His engineering feedback quality is the other dimension of his value. Williams engineers consistently rated his car-to-engineer communication as the team's most actionable: he identifies not just that a corner feels wrong but which phase — entry, mid, apex, or exit — and which axle is generating the issue. This specificity shortened setup iteration cycles and was directly credited in engineering debrief reports with improving the FW46's development pace across 2023–2024.",
+    "The ceiling question from his Red Bull stint remains open. Two seasons alongside Verstappen in competitive machinery showed a driver who was fast and consistent, but who couldn't match Verstappen's entry aggression in low-speed corners — the specific technique that Red Bull's oversteer-biased setup demands. His 2022–2025 Williams performances are consistent with a driver who is elite at one operating mode (extracting from difficult machinery) while still developing the second (extracting from optimal machinery). Williams 2026 alongside Sainz — a genuine performance benchmark — will test the latter directly.",
   ],
   highlights:["car development feedback","points from below-par machinery","consistent race management"],
   setupBars:[
@@ -2370,16 +2374,16 @@ export const sainzSignature: DrivingSignature = {
 }
 
 export const sainzReelSlides: ReelSlide[] = [
-  { slotLabel:"CS · 22", label:"FIRST WIN", glowColor:"#DC0000", tags:"SILVERSTONE IN THE RAIN · FIRST F1 WIN", title:"British GP", subtitle:"2022 · FERRARI · EMOTIONAL MAIDEN WIN", svgPath:"M 30 120 L 80 120 Q 112 108 130 70 L 180 70 Q 210 88 230 120 L 290 120 Q 310 104 325 72 L 370 72", imageUrl:"https://en.wikipedia.org/wiki/Special:FilePath/Carlos_Sainz_waves_to_the_Silverstone_crowd_after_claiming_his_first_victory_in_Formula_One_at_the_2022_British_Grand_Prix_(52195615157).jpg" },
-  { slotLabel:"CS · 23", label:"SINGAPORE", glowColor:"#DC0000", tags:"SINGAPORE MASTERCLASS · PERFECT RACE EXECUTION", title:"Singapore GP", subtitle:"2023 · FERRARI · POLE TO WIN", svgPath:"M 30 150 L 85 150 Q 108 132 130 92 L 180 88 Q 208 106 230 150 L 288 150 Q 312 133 338 92 L 375 90", imageUrl:"https://en.wikipedia.org/wiki/Special:FilePath/FIA_F1_Austria_2023_Carlos_Sainz.jpg" },
-  { slotLabel:"CS · 26", label:"WILLIAMS", glowColor:"#005AFF", tags:"WILLIAMS 2026 · ELEVATING GROVE TO THE FRONT", title:"Williams 2026", subtitle:"2026 · WILLIAMS · ALONGSIDE ALBON", svgPath:"M 30 155 Q 65 140 98 155 L 155 155 Q 185 140 218 155 L 275 155 Q 305 140 340 155 L 375 155", imageUrl:"https://en.wikipedia.org/wiki/Special:FilePath/2025_Singapore_GP_-_Williams_-_Carlos_Sainz_-_FP2.jpg" },
+  { slotLabel:"CS · 22", label:"FIRST WIN", glowColor:"#DC0000", tags:"SILVERSTONE IN THE RAIN · FIRST F1 WIN", title:"British GP", subtitle:"2022 · FERRARI · EMOTIONAL MAIDEN WIN", svgPath:"M 30 120 L 80 120 Q 112 108 130 70 L 180 70 Q 210 88 230 120 L 290 120 Q 310 104 325 72 L 370 72", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/9/9d/Carlos_Sainz_waves_to_the_Silverstone_crowd_after_claiming_his_first_victory_in_Formula_One_at_the_2022_British_Grand_Prix_%2852195615157%29.jpg" },
+  { slotLabel:"CS · 23", label:"SINGAPORE", glowColor:"#DC0000", tags:"SINGAPORE MASTERCLASS · PERFECT RACE EXECUTION", title:"Singapore GP", subtitle:"2023 · FERRARI · POLE TO WIN", svgPath:"M 30 150 L 85 150 Q 108 132 130 92 L 180 88 Q 208 106 230 150 L 288 150 Q 312 133 338 92 L 375 90", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/8/8b/FIA_F1_Austria_2023_Carlos_Sainz.jpg" },
+  { slotLabel:"CS · 26", label:"WILLIAMS", glowColor:"#005AFF", tags:"WILLIAMS 2026 · ELEVATING GROVE TO THE FRONT", title:"Williams 2026", subtitle:"2026 · WILLIAMS · ALONGSIDE ALBON", svgPath:"M 30 155 Q 65 140 98 155 L 155 155 Q 185 140 218 155 L 275 155 Q 305 140 340 155 L 375 155", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/4/4e/2025_Singapore_GP_-_Williams_-_Carlos_Sainz_-_FP2.jpg" },
 ]
 
 export const sainzScoutingReport: ScoutingReport = {
   paragraphs:[
-    "Sainz runs a bespoke steering column paddle arrangement that teams he joins must accommodate — a twin-paddle configuration inherited from his early Red Bull junior days that he has maintained across every car. At Ferrari the team initially resisted the preference but ultimately adapted. At Williams for 2025, the same request was made and fulfilled. This kind of setup-specific insistence reflects a broader pattern: Sainz is meticulous about the physical interface between driver and car, to a degree unusual even at the top level.",
-    "His driving style centres on mid-corner smoothness — he avoids scrubbing rear tyres by keeping entry understeer manageable, which sacrifices some front-end rotation speed for tyre life. The trade-off produces outstanding race day pace relative to qualifying, making him consistently faster on Sundays than his Saturday grid position suggests. Singapore 2023 is the archetype: pole, fastest laps, gap managed to the tenth, tyres alive at the end of a circuit that destroys rubber.",
-    "Williams inherited a driver still adjusting from Ferrari habits — four years in a high-rotation car leaves fingerprints on technique. Early 2025 showed occasional oversteer corrections under braking that were atypical for Sainz. By midseason those had largely resolved, confirming his track record across five teams: the adaptation always completes.",
+    "Sainz's most distinctive hardware preference is a bespoke steering column paddle configuration he has maintained across every team since his Red Bull junior programme — a twin-paddle layout for KERS and DRS management during the braking phase. Ferrari initially resisted it; Williams accommodated it immediately for 2025. This insistence on a specific physical interface is part of a broader pattern: Sainz manages the entry and braking phases with more deliberate attention to the simultaneous relationship between steering and throttle-adjacent inputs than most drivers, and the paddle layout supports an activation simultaneity that would be more difficult with standard systems.",
+    "His driving style builds lap time through mid-corner smoothness: he manages entry understeer rather than eliminating it, carrying a mild push through the front axle rather than forcing immediate rotation. The cost is a slightly later rotation point than drivers like Leclerc or Verstappen in equivalent cars. The benefit is dramatically lower rear tyre scrub — the exit phase is more stable, generating better traction and preserving rear rubber for the final stint. Singapore 2023 is the archetype: tyres alive over 60 laps on a circuit that normally degrades rubber at double the rate, converted from pole to victory through a margin management approach that would have been impossible with a more aggressive entry.",
+    "His Williams 2025 adaptation showed the fingerprint of four Ferrari seasons: early-season oversteer corrections under braking that were atypical for his historical data, caused by residual Ferrari techniques applied to a car less tolerant of high rotation. By midseason those corrections had resolved — tracking his pattern across five teams of an adaptation that always completes but always requires a learning arc. The speed with which he resolved it confirmed that his quality persists independent of the machine.",
   ],
   highlights:["Sunday racecraft","tyre longevity skill","above-machinery extraction"],
   setupBars:[
@@ -2410,14 +2414,15 @@ export const bearmanF1Signature: DrivingSignature = {
 
 export const bearmanF1ReelSlides: ReelSlide[] = [
   { slotLabel:"OB · 24", label:"F1 DEBUT", glowColor:"#DC0000", tags:"SAUDI ARABIA · P7 · FERRARI SUBSTITUTE AT 18", title:"Saudi GP", subtitle:"2024 · FERRARI SUB · SCORINGON DEBUT", svgPath:"M 30 160 L 80 160 Q 100 145 115 110 L 160 110 Q 180 125 195 160 L 235 160 Q 255 175 270 205 L 310 205 Q 330 185 350 155 L 380 155", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/f/fd/FIA_F2_Austria_2024_Nr._3_Bearman.jpg" },
-  { slotLabel:"OB · 25", label:"HAAS", glowColor:"#B6BABD", tags:"HAAS FULL SEASON · CAREER-BEST P4 MEXICO", title:"Haas 2025", subtitle:"2025 · HAAS · 62 POINTS · P13 WDC", svgPath:"M 30 120 Q 60 110 85 85 L 145 85 Q 175 98 195 120 L 255 120 Q 285 105 310 80 L 370 80", imageUrl:"https://en.wikipedia.org/wiki/Special:FilePath/2025_Japan_GP_-_Haas_-_Oliver_Bearman_-_FP2.jpg" },
-  { slotLabel:"OB · 26", label:"YEAR 3", glowColor:"#B6BABD", tags:"HAAS 2026 · TARGET: FIRST F1 PODIUM", title:"Haas 2026", subtitle:"2026 · HAAS · THIRD SEASON", svgPath:"M 30 150 L 80 150 Q 110 138 130 100 L 175 100 Q 195 115 210 150 L 260 150 Q 290 170 315 200 L 370 200", imageUrl:"https://en.wikipedia.org/wiki/Special:FilePath/FIA_F1_Austria_2025_Nr._87_Bearman.jpg" },
+  { slotLabel:"OB · 25", label:"HAAS", glowColor:"#B6BABD", tags:"HAAS FULL SEASON · CAREER-BEST P4 MEXICO", title:"Haas 2025", subtitle:"2025 · HAAS · 62 POINTS · P13 WDC", svgPath:"M 30 120 Q 60 110 85 85 L 145 85 Q 175 98 195 120 L 255 120 Q 285 105 310 80 L 370 80", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/a/ac/2025_Japan_GP_-_Haas_-_Oliver_Bearman_-_FP2.jpg" },
+  { slotLabel:"OB · 26", label:"YEAR 3", glowColor:"#B6BABD", tags:"HAAS 2026 · TARGET: FIRST F1 PODIUM", title:"Haas 2026", subtitle:"2026 · HAAS · THIRD SEASON", svgPath:"M 30 150 L 80 150 Q 110 138 130 100 L 175 100 Q 195 115 210 150 L 260 150 Q 290 170 315 200 L 370 200", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/f/f8/FIA_F1_Austria_2025_Nr._87_Bearman.jpg" },
 ]
 
 export const bearmanF1ScoutingReport: ScoutingReport = {
   paragraphs:[
-    "Bearman's F1 debut for Ferrari in Saudi Arabia 2024 — aged 18, with 90 minutes notice, in a car he hadn't driven at race distance — produced P7 and 6 points. It remains one of the most composed F1 emergency debuts in history. The score matters less than what it revealed: a driver with exceptional composure under extreme pressure and genuine front-end commitment that Haas subsequently saw enough of to sign him full-time.",
-    "His 2025 Haas season produced 62 points and a P4 at Mexico City — a result that confirmed his Saudi debut was not an anomaly. His driving style at Haas centred around strong braking aggression and confidence in the front axle's rotation, which suits the VF-25's characteristics. Tyre management over longer stints remains the key development area.",
+    "Bearman's Saudi Arabia 2024 debut produced P7 from a context that quantifies the pressure: 90 minutes advance notice, no race-distance experience in the SF-24, and a Ferrari that required specific brake bias and downforce management he had never used in competition. The result tells you less about his pace than about his mental architecture: a driver who processes information precisely enough to be fast in an environment with near-zero preparation. His braking technique — high-commitment entry, late turn-in, trail brake through the first half of the apex — is identical to the technique his F2 data shows, scaled to faster machinery without the correction inputs that most drivers exhibit when first encountering F1 braking forces.",
+    "His 2025 Haas season produced 62 points and a P4 at Mexico City — a result that required managing tyre strategy and defending position against cars with more aerodynamic development. His entry technique at Haas centres on high braking confidence and rotation from pedal release rather than steering input, which suits the VF-25's characteristics. Tyre management over stints longer than 20 laps remains the key development area: his data shows that entry commitment produces front-axle temperatures above the optimal operating window in the second half of long stints, reducing his ability to load the fronts without triggering degradation.",
+    "His profile at 20 combines elite braking confidence and composure under extreme conditions with the expected development gaps for a driver with fewer than 30 F1 starts. Haas's decision to sign him after the Saudi Arabia debut rather than at the end of an observation season reflects confidence in those qualities rather than in the complete technical package. His 2026 target — first career podium — requires either a Haas competitive enough to position him in top-5 territory, or a race where external factors elevate the field around him. Both have already happened once.",
   ],
   highlights:["composed emergency debut","P4 Mexico City","elite braking confidence"],
   setupBars:[
@@ -2462,15 +2467,16 @@ export const oconSignature: DrivingSignature = {
 }
 
 export const oconReelSlides: ReelSlide[] = [
-  { slotLabel:"EO · 21", label:"WIN", glowColor:"#0090FF", tags:"HUNGARIAN GP · LIGHTS-TO-FLAG · HELD HAMILTON", title:"Hungarian GP", subtitle:"2021 · ALPINE · ONLY F1 WIN", svgPath:"M 30 160 L 90 160 Q 112 148 130 105 L 190 105 Q 215 122 235 160 L 290 160 Q 315 138 335 104 L 370 104", imageUrl:"https://commons.wikimedia.org/wiki/Special:FilePath/FIA_F1_Austria_2021_Nr._31_Ocon.jpg" },
-  { slotLabel:"EO · 24", label:"ALPINE", glowColor:"#0090FF", tags:"FINAL ALPINE SEASON · POINTS IN DIFFICULT YEAR", title:"Alpine 2024", subtitle:"2024 · ALPINE · FINAL SEASON", svgPath:"M 30 120 Q 60 110 85 85 L 145 85 Q 175 98 195 120 L 255 120 Q 285 105 310 80 L 370 80", imageUrl:"https://en.wikipedia.org/wiki/Special:FilePath/2024_British_Grand_Prix,_Ocon_(1).jpg" },
-  { slotLabel:"EO · 26", label:"HAAS", glowColor:"#B6BABD", tags:"HAAS 2026 · NEW CHAPTER · PROVEN RACE WINNER", title:"Haas 2026", subtitle:"2026 · HAAS · VETERAN PRESENCE", svgPath:"M 30 155 Q 65 140 98 155 L 155 155 Q 185 140 218 155 L 275 155 Q 305 140 340 155 L 375 155", imageUrl:"https://en.wikipedia.org/wiki/Special:FilePath/FIA_F1_Austria_2024_Nr._31_Ocon.jpg" },
+  { slotLabel:"EO · 21", label:"WIN", glowColor:"#0090FF", tags:"HUNGARIAN GP · LIGHTS-TO-FLAG · HELD HAMILTON", title:"Hungarian GP", subtitle:"2021 · ALPINE · ONLY F1 WIN", svgPath:"M 30 160 L 90 160 Q 112 148 130 105 L 190 105 Q 215 122 235 160 L 290 160 Q 315 138 335 104 L 370 104", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/9/98/FIA_F1_Austria_2021_Nr._31_Ocon.jpg" },
+  { slotLabel:"EO · 24", label:"ALPINE", glowColor:"#0090FF", tags:"FINAL ALPINE SEASON · POINTS IN DIFFICULT YEAR", title:"Alpine 2024", subtitle:"2024 · ALPINE · FINAL SEASON", svgPath:"M 30 120 Q 60 110 85 85 L 145 85 Q 175 98 195 120 L 255 120 Q 285 105 310 80 L 370 80", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/1/19/2024_British_Grand_Prix%2C_Ocon_%281%29.jpg" },
+  { slotLabel:"EO · 26", label:"HAAS", glowColor:"#B6BABD", tags:"HAAS 2026 · NEW CHAPTER · PROVEN RACE WINNER", title:"Haas 2026", subtitle:"2026 · HAAS · VETERAN PRESENCE", svgPath:"M 30 155 Q 65 140 98 155 L 155 155 Q 185 140 218 155 L 275 155 Q 305 140 340 155 L 375 155", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/7/7e/FIA_F1_Austria_2024_Nr._31_Ocon.jpg" },
 ]
 
 export const oconScoutingReport: ScoutingReport = {
   paragraphs:[
-    "Ocon's Hungary 2021 win crystallises what he is as a racing driver: a tactician with strong tyre management who can execute an improbable strategy and defend the result under pressure. That race required managing a two-stop versus one-stop calculation, executing a start that avoided the chaos that collected most of the field, and then 10 laps holding off Hamilton — a driver 0.5s per lap faster on fresh tyres.",
-    "Away from that single high-point, Ocon has been a consistent mid-field scorer — reliable at converting machinery into points without the peaks that attract headlines. His qualifying pace ceiling has been his most persistent limitation, often leaving him fighting from further back than his race pace should require.",
+    "Ocon's Hungary 2021 win was not an accident of strategy — it was a technically executed race that required three distinct competencies simultaneously. First, managing the opening lap chaos that collected Verstappen, Bottas, and Norris while maintaining his own car. Second, executing a one-stop strategy on a circuit where the conventional call was a two-stopper, managing tyre temperatures at a level that kept the compound alive long enough to convert the race. Third, holding Hamilton in the final ten laps — a driver 0.5 seconds per lap faster on fresh medium tyres — through positioning and braking zone management that prevented any realistic DRS opportunity. That combination of mental clarity under pressure and tyre management specificity is real, not incidental.",
+    "Away from that result, Ocon's career profile is consistent mid-field scoring from machinery that has never placed him in the top three on raw pace. His qualifying ceiling has been the persistent limitation — he rarely out-qualifies teammates over a full season, which means his Sunday race management skills are deployed from a starting position that makes points difficult to accumulate. His tyre degradation model is solid: his entry technique is smooth enough to avoid the front-axle overloading that characterises aggressive drivers, and his exits are clean, but the cumulative pace gap behind the frontrunners means he rarely converts the gap management skills into finishes above P7.",
+    "At Haas from 2026, his value is defined by experience: 170 races, one win, and knowledge of how to score points from unexpected positions. The Haas environment — focused on consistency and midfield extraction rather than podium targets — suits this profile. His technical feedback quality, rated positively by Alpine engineers, should accelerate Haas's understanding of the VF-26's characteristics compared to a rookie alternative in the same seat.",
   ],
   highlights:["Hungary 2021 race victory","tyre strategy execution","defending race leads"],
   setupBars:[
@@ -2516,16 +2522,16 @@ export const hulkenbergSignature: DrivingSignature = {
 }
 
 export const hulkenbergReelSlides: ReelSlide[] = [
-  { slotLabel:"NH · 10", label:"POLE", glowColor:"#005AFF", tags:"BRAZIL 2010 · POLE ON 3RD F1 START", title:"Brazil Quali", subtitle:"2010 · WILLIAMS · SHOCK POLE SITTER", svgPath:"M 30 160 L 90 160 Q 112 148 130 105 L 190 105 Q 215 122 235 160 L 290 160 Q 315 138 335 104 L 370 104", imageUrl:"https://commons.wikimedia.org/wiki/Special:FilePath/Hulkenberg_2010_Canadian_GP.jpg" },
-  { slotLabel:"NH · 23", label:"P6 WDC", glowColor:"#B6BABD", tags:"CAREER BEST CHAMPIONSHIP · HAAS ERA REVIVAL", title:"2023 Season", subtitle:"2023 · HAAS · P6 IN WDC", svgPath:"M 30 120 Q 60 110 85 85 L 145 85 Q 175 98 195 120 L 255 120 Q 285 105 310 80 L 370 80", imageUrl:"https://en.wikipedia.org/wiki/Special:FilePath/2024_British_Grand_Prix,_H%C3%BClkenberg_(1).jpg" },
-  { slotLabel:"NH · 26", label:"AUDI", glowColor:"#BB1C2A", tags:"AUDI ERA · LEAD DRIVER OF NEW GERMAN CONSTRUCTOR", title:"Audi 2026", subtitle:"2026 · AUDI · FRESH START", svgPath:"M 30 150 L 80 150 Q 110 138 130 100 L 175 100 Q 195 115 210 150 L 260 150 Q 290 170 315 200 L 370 200", imageUrl:"https://en.wikipedia.org/wiki/Special:FilePath/H%C3%BClkenberg_2024_BelgiumGP.jpg" },
+  { slotLabel:"NH · 10", label:"POLE", glowColor:"#005AFF", tags:"BRAZIL 2010 · POLE ON 3RD F1 START", title:"Brazil Quali", subtitle:"2010 · WILLIAMS · SHOCK POLE SITTER", svgPath:"M 30 160 L 90 160 Q 112 148 130 105 L 190 105 Q 215 122 235 160 L 290 160 Q 315 138 335 104 L 370 104", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/0/0c/Hulkenberg_2010_Canadian_GP.jpg" },
+  { slotLabel:"NH · 23", label:"P6 WDC", glowColor:"#B6BABD", tags:"CAREER BEST CHAMPIONSHIP · HAAS ERA REVIVAL", title:"2023 Season", subtitle:"2023 · HAAS · P6 IN WDC", svgPath:"M 30 120 Q 60 110 85 85 L 145 85 Q 175 98 195 120 L 255 120 Q 285 105 310 80 L 370 80", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/7/7e/2024_British_Grand_Prix%2C_H%C3%BClkenberg_%281%29.jpg" },
+  { slotLabel:"NH · 26", label:"AUDI", glowColor:"#BB1C2A", tags:"AUDI ERA · LEAD DRIVER OF NEW GERMAN CONSTRUCTOR", title:"Audi 2026", subtitle:"2026 · AUDI · FRESH START", svgPath:"M 30 150 L 80 150 Q 110 138 130 100 L 175 100 Q 195 115 210 150 L 260 150 Q 290 170 315 200 L 370 200", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/d/db/H%C3%BClkenberg_2024_BelgiumGP.jpg" },
 ]
 
 export const hulkenbergScoutingReport: ScoutingReport = {
   paragraphs:[
-    "Hülkenberg's career statistician's nightmare — most starts without a podium — obscures a driver who has consistently delivered above-machinery results across fourteen years and five teams. His Le Mans 2015 win on first attempt (while also competing in F1) speaks to physical and mental capacity that most monodisciplinary drivers never test.",
-    "His driving style is characterised by exceptional race-pace consistency. He rarely has the single-lap peak of his pole-position days (Brazil 2010 remains the high-water mark) but over a race distance his management of tyres and fuel is near-optimal. His 2023 Haas season — P6 in the championship — was possibly the best relative performance from any driver on the grid that year, given the machinery.",
-    "As Audi's lead development driver, Hülkenberg brings something teams rarely get from a race seat: a driver with enough experience to know what he doesn't know. His feedback granularity is a genuine asset for a constructor building from scratch.",
+    "Hülkenberg's technical signature is race-distance consistency: his data across 14 seasons and five teams shows a driver whose lap-time variation across a stint is narrower than his qualifying pace suggests as a ceiling. His entry technique is described by engineers at Force India and Haas as very clean at the rotation phase — he generates the required mid-corner rotation without the trail-brake corrections that produce tyre heat spikes, which explains his ability to run longer stints than models predict without pace loss. Brazil 2010's shock pole was produced by specific conditions (wet surface, his natural sensitivity to low-grip), but it was never representative of his peak: his genuine upper range is race-distance lap time, not single-lap production.",
+    "The Le Mans 2015 win on first attempt requires context: he was competing in both the 24 Hours and the F1 calendar simultaneously, drove through conditions including night sessions and rain, and won overall with Porsche against purpose-built LMP1 opposition. The physical and cognitive demands of endurance racing are categorically different from F1 sprint distances, and his ability to adapt immediately and excel reflects a mental processing capacity and physical endurance that the F1 weekend structure rarely exposes. His 2023 Haas season — P6 in the championship in machinery fourth-fastest at most rounds — is possibly the highest relative performance in the grid that year from any driver against machinery.",
+    "As Audi's lead development driver from 2026, what Hülkenberg contributes is not primarily pace — it is calibration. A new constructor's simulator correlation depends on drivers who can communicate precisely what the car is doing at each phase of each corner across varied circuits. His feedback quality, accrued across 228 F1 starts and five different car philosophies, is a genuine technical asset for a team building reference data from scratch.",
   ],
   highlights:["Le Mans 2015 winner","P6 WDC 2023","above-machinery delivery across career"],
   setupBars:[
@@ -2555,15 +2561,16 @@ export const bortoletoF1Signature: DrivingSignature = {
 }
 
 export const bortoletoF1ReelSlides: ReelSlide[] = [
-  { slotLabel:"GB · 25", label:"F1 DEBUT", glowColor:"#52E252", tags:"SAUBER/AUDI DEBUT · MELBOURNE 2025", title:"F1 Debut", subtitle:"2025 · SAUBER · START OF F1 CHAPTER", svgPath:"M 30 155 L 88 155 Q 112 140 145 98 L 192 98 Q 215 116 240 155 L 295 155 Q 318 139 348 98 L 375 98", imageUrl:"https://en.wikipedia.org/wiki/Special:FilePath/2025_ImolaGP_Gabriel_Bortoleto.jpg" },
-  { slotLabel:"GB · 26", label:"AUDI", glowColor:"#BB1C2A", tags:"AUDI ERA BEGINS · NEW MANUFACTURER CHAPTER", title:"Audi 2026", subtitle:"2026 · AUDI · GERMAN POWER", svgPath:"M 30 150 L 85 150 Q 108 132 130 92 L 180 88 Q 208 106 230 150 L 288 150 Q 312 133 338 92 L 375 90", imageUrl:"https://en.wikipedia.org/wiki/Special:FilePath/2025_Japan_GP_-_Sauber_-_Gabriel_Bortoleto_-_FP2.jpg" },
-  { slotLabel:"GB · 26", label:"GROWING", glowColor:"#BB1C2A", tags:"BUILDING INTO F1 · BACK-TO-BACK JUNIOR CHAMPION", title:"Development", subtitle:"2026 · AUDI · TARGET: FIRST POINTS", svgPath:"M 30 155 Q 65 140 98 155 L 155 155 Q 185 140 218 155 L 275 155 Q 305 140 340 155 L 375 155", imageUrl:"https://en.wikipedia.org/wiki/Special:FilePath/FIA_F1_Austria_2025_Nr._5_Bortoleto.jpg" },
+  { slotLabel:"GB · 25", label:"F1 DEBUT", glowColor:"#52E252", tags:"SAUBER/AUDI DEBUT · MELBOURNE 2025", title:"F1 Debut", subtitle:"2025 · SAUBER · START OF F1 CHAPTER", svgPath:"M 30 155 L 88 155 Q 112 140 145 98 L 192 98 Q 215 116 240 155 L 295 155 Q 318 139 348 98 L 375 98", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/1/1e/2025_ImolaGP_Gabriel_Bortoleto.jpg" },
+  { slotLabel:"GB · 26", label:"AUDI", glowColor:"#BB1C2A", tags:"AUDI ERA BEGINS · NEW MANUFACTURER CHAPTER", title:"Audi 2026", subtitle:"2026 · AUDI · GERMAN POWER", svgPath:"M 30 150 L 85 150 Q 108 132 130 92 L 180 88 Q 208 106 230 150 L 288 150 Q 312 133 338 92 L 375 90", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/c/c2/2025_Japan_GP_-_Sauber_-_Gabriel_Bortoleto_-_FP2.jpg" },
+  { slotLabel:"GB · 26", label:"GROWING", glowColor:"#BB1C2A", tags:"BUILDING INTO F1 · BACK-TO-BACK JUNIOR CHAMPION", title:"Development", subtitle:"2026 · AUDI · TARGET: FIRST POINTS", svgPath:"M 30 155 Q 65 140 98 155 L 155 155 Q 185 140 218 155 L 275 155 Q 305 140 340 155 L 375 155", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/0/04/FIA_F1_Austria_2025_Nr._5_Bortoleto.jpg" },
 ]
 
 export const bortoletoF1ScoutingReport: ScoutingReport = {
   paragraphs:[
-    "Bortoleto's transition from F2 champion to F1 midfield follows the template set by his three predecessors who won back-to-back F3/F2 titles (Leclerc, Russell, Piastri). All three became race winners within four F1 seasons — the question for Bortoleto is whether the Audi project gives him competitive machinery on that timeline.",
-    "His F1 adaptation in 2025 showed the expected curve: initial overpush in qualifying as he calibrated the car's limits, gradually replaced by more consistent 90%-of-maximum laps as the year progressed. His race management improved measurably across the second half of 2025. The baseline raw pace is not in question.",
+    "Bortoleto's F1 entry follows the exact template of his three predecessor back-to-back F3/F2 champions: Leclerc (F1 debut 2018, first win 2019), Russell (debut 2019, first win 2022), Piastri (debut 2023, first win 2023). Each showed an adaptation arc of 6–18 months before delivering results consistent with their junior pace. Bortoleto's 2025 Sauber data maps to the expected curve: initial overpush in qualifying as he calibrated the car's braking point and rotation limit, followed by more consistent near-maximum laps as the season progressed. His entry technique from F2 — progressive trail braking to a rotation angle that keeps both axles loaded through the apex — translates directly to F1 machinery at a higher speed envelope, but the calibration process takes time.",
+    "His race management improvement in the second half of 2025 was measurable by the margin reduction between his race pace and qualifying pace: the ratio narrowed from approximately 110% in the opening three rounds to 104% by round fifteen. This indicates he was calibrating the tyre thermal sensitivity that F1 demands — learning when to sacrifice peak entry speed to preserve compound temperatures for the final stint, the specific skill that separates midfield scorers from midfield finishers.",
+    "The Audi project positioning is unambiguous: Bortoleto is a five-to-seven-year investment, not a short-cycle driver. The technical partnership with the Audi powertrain team gives him the machinery development access that would normally require several seasons with an established constructor. If the Audi programme delivers competitive machinery in 2027–2028, Bortoleto's trajectory suggests he will be ready for it — the precedent from his three predecessors in the same junior pathway is very specific about what competent drivers do when given competitive tools on the correct timeline.",
   ],
   highlights:["back-to-back junior titles","rapid F1 adaptation curve","Audi long-term project"],
   setupBars:[
@@ -2605,15 +2612,16 @@ export const tsunodaSignature: DrivingSignature = {
 }
 
 export const tsunodaReelSlides: ReelSlide[] = [
-  { slotLabel:"YT · 21", label:"DEBUT PTS", glowColor:"#6692FF", tags:"BAHRAIN 2021 · DEBUT POINTS · JAPAN WATCHES", title:"Bahrain debut", subtitle:"2021 · ALPHATAURI · DEBUT SEASON", svgPath:"M 30 160 L 90 160 Q 112 148 130 105 L 190 105 Q 215 122 235 160 L 290 160 Q 315 138 335 104 L 370 104", imageUrl:"https://commons.wikimedia.org/wiki/Special:FilePath/FIA_F1_Austria_2021_Nr._22_Tsunoda.jpg" },
-  { slotLabel:"YT · 24", label:"MATURING", glowColor:"#6692FF", tags:"2024 · RACING BULLS · STRONGEST SEASON YET", title:"2024 Campaign", subtitle:"2024 · RACING BULLS · CONSISTENT SCORER", svgPath:"M 30 120 Q 60 110 85 85 L 145 85 Q 175 98 195 120 L 255 120 Q 285 105 310 80 L 370 80", imageUrl:"https://en.wikipedia.org/wiki/Special:FilePath/2024_British_Grand_Prix,_Tsunoda_(1).jpg" },
-  { slotLabel:"YT · 26", label:"RB", glowColor:"#6692FF", tags:"RACING BULLS 2026 · SENIOR DRIVER · JAPAN'S HOPE", title:"Racing Bulls 2026", subtitle:"2026 · RACING BULLS · TEAM VETERAN", svgPath:"M 30 150 L 80 150 Q 110 138 130 100 L 175 100 Q 195 115 210 150 L 260 150 Q 290 170 315 200 L 370 200", imageUrl:"https://en.wikipedia.org/wiki/Special:FilePath/FIA_F1_Austria_2024_Nr._22_Tsunoda.jpg" },
+  { slotLabel:"YT · 21", label:"DEBUT PTS", glowColor:"#6692FF", tags:"BAHRAIN 2021 · DEBUT POINTS · JAPAN WATCHES", title:"Bahrain debut", subtitle:"2021 · ALPHATAURI · DEBUT SEASON", svgPath:"M 30 160 L 90 160 Q 112 148 130 105 L 190 105 Q 215 122 235 160 L 290 160 Q 315 138 335 104 L 370 104", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/c/cf/FIA_F1_Austria_2021_Nr._22_Tsunoda.jpg" },
+  { slotLabel:"YT · 24", label:"MATURING", glowColor:"#6692FF", tags:"2024 · RACING BULLS · STRONGEST SEASON YET", title:"2024 Campaign", subtitle:"2024 · RACING BULLS · CONSISTENT SCORER", svgPath:"M 30 120 Q 60 110 85 85 L 145 85 Q 175 98 195 120 L 255 120 Q 285 105 310 80 L 370 80", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/0/04/2024_British_Grand_Prix%2C_Tsunoda_%281%29.jpg" },
+  { slotLabel:"YT · 26", label:"RB", glowColor:"#6692FF", tags:"RACING BULLS 2026 · SENIOR DRIVER · JAPAN'S HOPE", title:"Racing Bulls 2026", subtitle:"2026 · RACING BULLS · TEAM VETERAN", svgPath:"M 30 150 L 80 150 Q 110 138 130 100 L 175 100 Q 195 115 210 150 L 260 150 Q 290 170 315 200 L 370 200", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/a/a5/FIA_F1_Austria_2024_Nr._22_Tsunoda.jpg" },
 ]
 
 export const tsunodaScoutingReport: ScoutingReport = {
   paragraphs:[
-    "Tsunoda arrived in F1 at 20 as the fastest driver Honda had produced for decades in junior categories. His early seasons showed a driver with elite raw pace paired with frustrating inconsistency — incidents that cost points and penalty grid drops that negated his Saturday speed. From 2023 onward the maturation was visible: cleaner race weekends, better incident avoidance, sharper race management.",
-    "His driving style leans toward high-aggression entry — he carries speed into braking zones that most drivers won't challenge, which makes him genuinely fast in tight braking zones but occasionally tips into incident territory. His throttle application is smooth relative to his entry aggression, suggesting a driver still calibrating where to spend the pace budget on a lap.",
+    "Tsunoda's technical profile is defined by high-aggression entry: his braking point is consistently among the latest on the grid in heavy-braking hairpins, and his trail-brake duration is short — he loads the front axle quickly and rotates the car fast, generating lap time from the entry phase but placing high thermal demands on the front compound early in the stint. Engineers who have worked with him at AlphaTauri and Racing Bulls describe his throttle application as notably smooth relative to his entry aggression — a useful counterbalance that preserves exit stability — but the front-loading pattern in the entry phase occasionally pushes tyre operating temperature beyond the optimal window, limiting his ability to extend stints.",
+    "His maturation across 2023–2025 is the most significant development story among the mid-grid drivers in that period. The early-season incident rate that characterised his 2021–2022 campaigns — multiple contact incidents in DRS trains and penalty grid drops — dropped measurably from 2023, replaced by a racecraft pattern that prioritised gap management over wheel-to-wheel challenges that couldn't be won on available pace. The raw speed was always present: Red Bull's decision to retain him at AlphaTauri/Racing Bulls rather than replace him with a junior was specifically predicated on the pace data, not the results.",
+    "As Racing Bulls' senior driver in 2026 alongside rookie Arvid Lindblad, the context shifts: he is now the reference driver against which new talent is measured. His previous four seasons were calibrated against experienced teammates — Gasly, Ricciardo, De Vries, Lawson; in 2026 he has the clearest reference role in his F1 career. His ability to develop the team's understanding of the car — communicating the specific corner-phase data that allows setup iteration — has not been fully tested in this capacity. It is the expected next stage of his development as a senior racing driver.",
   ],
   highlights:["elite braking zone aggression","rapid maturation trajectory","Japan's leading F1 hope"],
   setupBars:[
@@ -2655,14 +2663,15 @@ export const hadjarSignature: DrivingSignature = {
 }
 
 export const hadjarReelSlides: ReelSlide[] = [
-  { slotLabel:"IH · 25", label:"DEBUT", glowColor:"#6692FF", tags:"RACING BULLS DEBUT · 2025 SEASON OPENER", title:"F1 Debut", subtitle:"2025 · RACING BULLS · START OF F1 CAREER", svgPath:"M 30 160 L 90 160 Q 112 148 130 105 L 190 105 Q 215 122 235 160 L 290 160 Q 315 138 335 104 L 370 104", imageUrl:"https://en.wikipedia.org/wiki/Special:FilePath/2025_ImolaGP_Isack_Hadjar.jpg" },
-  { slotLabel:"IH · 26", label:"YEAR 2", glowColor:"#6692FF", tags:"SECOND SEASON · BUILDING ON 2025 FOUNDATION", title:"Racing Bulls 2026", subtitle:"2026 · RACING BULLS · SOPHOMORE SEASON", svgPath:"M 30 150 L 80 150 Q 110 138 130 100 L 175 100 Q 195 115 210 150 L 260 150 Q 290 170 315 200 L 370 200", imageUrl:"https://en.wikipedia.org/wiki/Special:FilePath/2025_Japan_GP_-_Racing_Bulls_-_Isack_Hadjar_-_FP2.jpg" },
+  { slotLabel:"IH · 25", label:"DEBUT", glowColor:"#6692FF", tags:"RACING BULLS DEBUT · 2025 SEASON OPENER", title:"F1 Debut", subtitle:"2025 · RACING BULLS · START OF F1 CAREER", svgPath:"M 30 160 L 90 160 Q 112 148 130 105 L 190 105 Q 215 122 235 160 L 290 160 Q 315 138 335 104 L 370 104", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/f/f7/2025_ImolaGP_Isack_Hadjar.jpg" },
+  { slotLabel:"IH · 26", label:"YEAR 2", glowColor:"#6692FF", tags:"SECOND SEASON · BUILDING ON 2025 FOUNDATION", title:"Racing Bulls 2026", subtitle:"2026 · RACING BULLS · SOPHOMORE SEASON", svgPath:"M 30 150 L 80 150 Q 110 138 130 100 L 175 100 Q 195 115 210 150 L 260 150 Q 290 170 315 200 L 370 200", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/0/02/2025_Japan_GP_-_Racing_Bulls_-_Isack_Hadjar_-_FP2.jpg" },
 ]
 
 export const hadjarScoutingReport: ScoutingReport = {
   paragraphs:[
-    "Hadjar's F2 2024 campaign as runner-up — losing the title to Bortoleto — showed a driver with genuine race-weekend consistency and a particular strength in energy management that junior category analysts attributed to unusually clean baseline throttle application. His car-building feedback is rated highly by Racing Bulls engineers from his junior test program.",
-    "The F1 adaptation curve is expected: tyre management over extended stints and the specific demands of DRS-era racecraft being the primary learning areas. His raw pace in junior racing consistently placed him in the top three on one-lap speed, suggesting the F1 transition is a question of adjustment rather than fundamental ceiling.",
+    "Hadjar's technical profile from junior categories is unusually clean for a driver at his experience level: his F2 2024 campaign as runner-up showed a throttle application pattern that analysts at Red Bull's junior programme described as precise at exit — he loads the rear axle with a gradient that avoids the wheelspin signature that most F2 drivers at his pace level produce. The practical consequence is better rear tyre conservation in the exit phase, where F2 drivers typically generate graining from asymmetric heat distribution. His championship loss to Bortoleto was not a pace deficit; it was a strategic variance in the final two rounds where track conditions favoured different tyre choices.",
+    "His F1 debut with Racing Bulls in 2025 showed the expected adaptation arc: early qualifying runs that underperformed his potential as he calibrated F1-level braking points, followed by more consistent lap construction from mid-season. His race data showed the specific F1 learning curve in tyre management — the compound sensitivity at F1 speeds is different from F2, requiring the driver to modulate entry aggression in real time based on compound temperature feedback rather than following a pre-calibrated reference lap.",
+    "As a second-season Racing Bulls driver in 2026, alongside Lindblad, Hadjar has the advantage of data continuity: two seasons in the same team's machinery gives him setup reference and circuit-by-circuit calibration that a rookie cannot access. If the VCARB engineering structure allows him to deploy his junior category throttle precision in the F1 exit phase — the specific technique that Red Bull's diagnostics valued — his points-scoring trajectory in 2026 should step up from his 2025 baseline. The tools are in place for that development.",
   ],
   highlights:["F2 runner-up 2024","clean throttle application","Red Bull academy polish"],
   setupBars:[
@@ -2712,8 +2721,9 @@ export const lawsonReelSlides: ReelSlide[] = [
 
 export const lawsonScoutingReport: ScoutingReport = {
   paragraphs:[
-    "Lawson is Racing Bulls' senior driver for 2026, paired with rookie Arvid Lindblad. His path has been unconventional — called up mid-weekend for his F1 debut at Zandvoort 2023 when Ricciardo broke his hand, a brief and difficult stint at Red Bull for the opening two rounds of 2025, then returned to Racing Bulls where he is now the established lead. The 2026 season is his most extended chance yet to prove the pace that earned him the Red Bull junior programme's backing.",
-    "What the sample shows: composure under abnormal pressure (called up mid-weekend at Zandvoort, Singapore points scored on the same substitution run), decent qualifying pace relative to expected range, and the kind of direct on-radio communication Red Bull engineers value. The 2026 Racing Bulls campaign alongside a rookie teammate gives Lawson the clearest possible benchmark to date.",
+    "Lawson's F1 career has been defined by high-stress conditions: called up mid-weekend at Zandvoort 2023 when Ricciardo broke his hand, scoring points at Singapore on the same substitution run, then promoted to Red Bull for the opening two rounds of 2025 before being demoted after Australia and China. Each of those contexts required performing in machinery and environments with minimal preparation time. The Singapore 2023 result — P6 in his fourth F1 start, at a circuit where tyre management and racecraft through traffic dominate — demonstrated the specific capability that Red Bull had identified in his junior career: composure under cognitive load, and a racecraft vocabulary that doesn't require multiple laps of calibration.",
+    "The Red Bull 2025 stint was brief and difficult, but provides useful data. Over two rounds, his qualifying gap against Verstappen was consistent with what Perez had shown in equivalent machinery — approximately 0.5 seconds — while his race pace was within a smaller range. The difficulties were primarily in DRS-era racecraft management at the front of the field, where decision-making speed against Verstappen's standard is categorically different from midfield operation. His return to Racing Bulls from Round 3 and the subsequent 2026 contract confirms that Red Bull's internal assessment distinguished the contextual difficulties from the driver's baseline capability.",
+    "Racing Bulls 2026 alongside Lindblad gives Lawson his clearest benchmarking context: he is the senior driver, with a full season of 2025 data, against a genuine rookie. His ability to exploit team setup knowledge, manage tyres across a full race distance consistently, and communicate engineering feedback efficiently — the three areas where Racing Bulls engineers can differentiate him from Lindblad — will determine how his F1 narrative is written over the next two seasons.",
   ],
   highlights:["scored on emergency sub debut","Racing Bulls senior driver 2026","composure under pressure"],
   setupBars:[
@@ -2758,16 +2768,16 @@ export const perezSignature: DrivingSignature = {
 }
 
 export const perezReelSlides: ReelSlide[] = [
-  { slotLabel:"SP · 20", label:"SAKHIR WIN", glowColor:"#FF80C7", tags:"SAKHIR GP · AGAINST ALL ODDS · EMOTIONAL FIRST WIN", title:"Sakhir GP", subtitle:"2020 · RACING POINT · FIRST VICTORY", svgPath:"M 30 160 L 80 160 Q 100 145 115 110 L 160 110 Q 180 125 195 160 L 235 160 Q 255 175 270 205 L 310 205 Q 330 185 350 155 L 380 155", imageUrl:"https://commons.wikimedia.org/wiki/Special:FilePath/Sergio_Perez-Racing_Point_RP_20_(5).jpg" },
-  { slotLabel:"SP · 23", label:"P2 WDC", glowColor:"#1E3A8A", tags:"2023 BEST SEASON · P2 IN WDC · 9 RACE WINS", title:"2023 Season", subtitle:"2023 · RED BULL · CAREER BEST CHAMPIONSHIP", svgPath:"M 30 120 Q 60 110 85 85 L 145 85 Q 175 98 195 120 L 255 120 Q 285 105 310 80 L 370 80", imageUrl:"https://en.wikipedia.org/wiki/Special:FilePath/2024-08-25_Motorsport,_Formel_1,_Großer_Preis_der_Niederlande_2024_STP_3758_by_Stepro.jpg" },
-  { slotLabel:"SP · 26", label:"CADILLAC", glowColor:"#C8A951", tags:"PIONEER · CADILLAC F1 DEBUT · AMERICAN DREAM", title:"Cadillac 2026", subtitle:"2026 · CADILLAC · NEW CONSTRUCTOR PIONEER", svgPath:"M 30 150 L 80 150 Q 110 138 130 100 L 175 100 Q 195 115 210 150 L 260 150 Q 290 170 315 200 L 370 200", imageUrl:"https://en.wikipedia.org/wiki/Special:FilePath/FIA_F1_Austria_2024_Nr._11_Perez.jpg" },
+  { slotLabel:"SP · 20", label:"SAKHIR WIN", glowColor:"#FF80C7", tags:"SAKHIR GP · AGAINST ALL ODDS · EMOTIONAL FIRST WIN", title:"Sakhir GP", subtitle:"2020 · RACING POINT · FIRST VICTORY", svgPath:"M 30 160 L 80 160 Q 100 145 115 110 L 160 110 Q 180 125 195 160 L 235 160 Q 255 175 270 205 L 310 205 Q 330 185 350 155 L 380 155", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/e/eb/Sergio_Perez-Racing_Point_RP_20_%285%29.jpg" },
+  { slotLabel:"SP · 23", label:"P2 WDC", glowColor:"#1E3A8A", tags:"2023 BEST SEASON · P2 IN WDC · 9 RACE WINS", title:"2023 Season", subtitle:"2023 · RED BULL · CAREER BEST CHAMPIONSHIP", svgPath:"M 30 120 Q 60 110 85 85 L 145 85 Q 175 98 195 120 L 255 120 Q 285 105 310 80 L 370 80", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/1/1b/2024-08-25_Motorsport%2C_Formel_1%2C_Gro%C3%9Fer_Preis_der_Niederlande_2024_STP_3758_by_Stepro.jpg" },
+  { slotLabel:"SP · 26", label:"CADILLAC", glowColor:"#C8A951", tags:"PIONEER · CADILLAC F1 DEBUT · AMERICAN DREAM", title:"Cadillac 2026", subtitle:"2026 · CADILLAC · NEW CONSTRUCTOR PIONEER", svgPath:"M 30 150 L 80 150 Q 110 138 130 100 L 175 100 Q 195 115 210 150 L 260 150 Q 290 170 315 200 L 370 200", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/e/ec/FIA_F1_Austria_2024_Nr._11_Perez.jpg" },
 ]
 
 export const perezScoutingReport: ScoutingReport = {
   paragraphs:[
-    "Red Bull technical director Andrew Green described Perez as having 'built-in traction control' — a reference to his ability to apply throttle on corner exit with a precision that eliminates wheel spin without electronic intervention. This trait, combined with a setup philosophy biased toward understeer, produces a car that is slower on a timed qualifying lap than Verstappen's but significantly easier on rear tyres over race distance.",
-    "His entry technique uses trailing-throttle deceleration rather than aggressive threshold braking — he scrubs speed gradually, maintaining rear stability at the cost of some time in acute braking zones. In tyre-sensitive races (especially those with Pirelli compounds prone to graining), this approach allowed Perez to extend stints by 10–15 laps beyond what rivals' strategy models predicted. His 2023 season — 9 wins, P2 WDC — was built on this exact currency.",
-    "At Cadillac, the tyre-preservation skill is amplified in importance: a new constructor's development cycle is shaped by data quality, and Perez's consistent, predictable style generates cleaner correlation between simulator and circuit than a higher-aggression driver would. His commercial value to Mexican-American Cadillac is obvious; the technical value is equally real.",
+    "Pierre Waché described Perez's throttle application as Red Bull's cleanest by data — a reference to his ability to apply exit power with a gradient that eliminates wheel spin without relying on the traction control threshold where most drivers trigger intervention. This technique produces a specific tyre-loading profile on exit: even heat distribution across the rear compound, lower peak temperatures, extended operating range. Combined with a setup preference biased toward understeer — which reduces rear tyre scrub in the entry phase — the result is a car that is objectively slower over a single qualifying lap than Verstappen's but significantly more conservative on rear compounds across race distance.",
+    "His entry technique uses trailing-throttle deceleration rather than aggressive threshold braking — he scrubs speed gradually, maintaining rear stability at the cost of some time in acute braking zones. The trade-off is deliberate: in tyre-sensitive races with Pirelli compounds prone to graining, Perez's approach allowed him to extend stints by 10–15 laps beyond what rivals' strategy models predicted. His 2023 season — 9 wins, P2 WDC — was built entirely on this currency. At Baku and Monaco, where bumpy surfaces and low-grip tarmac amplify tyre temperature management quality, his advantage over the field was at its largest.",
+    "At Cadillac from 2026, the tyre-preservation skill is amplified in importance by the constructor's position: a new team's development cycle is shaped by data quality, and Perez's consistent, predictable driving style generates cleaner simulator-to-circuit correlation than a higher-aggression driver would. His commercial value to the Mexico-anchored Cadillac project is obvious; his technical value to the development programme is equally concrete. A new F1 team needs a driver whose inputs produce reproducible results — Perez's career data is one of the cleanest reproducibility records on the grid.",
   ],
   highlights:["world-class tyre management","Sakhir 2020 win against the odds","P2 WDC 2023"],
   setupBars:[
@@ -2812,16 +2822,16 @@ export const bottasSignature: DrivingSignature = {
 }
 
 export const bottasReelSlides: ReelSlide[] = [
-  { slotLabel:"VB · 17", label:"FIRST WIN", glowColor:"#00D2BE", tags:"RUSSIA GP · FIRST CAREER WIN · DOMINANT PACE", title:"Russian GP", subtitle:"2017 · MERCEDES · MAIDEN VICTORY", svgPath:"M 30 160 L 90 160 Q 112 148 130 105 L 190 105 Q 215 122 235 160 L 290 160 Q 315 138 335 104 L 370 104", imageUrl:"https://commons.wikimedia.org/wiki/Special:FilePath/2017_Russian_Grand_Prix_5.jpg" },
-  { slotLabel:"VB · 19", label:"AUSTRIA WIN", glowColor:"#00D2BE", tags:"AUSTRIA VICTORY · 20 POLES ACROSS MERCEDES ERA", title:"Mercedes era", subtitle:"2017–2021 · MERCEDES · 10W · 20P", svgPath:"M 30 120 Q 60 110 85 85 L 145 85 Q 175 98 195 120 L 255 120 Q 285 105 310 80 L 370 80", imageUrl:"https://commons.wikimedia.org/wiki/Special:FilePath/FIA_F1_Austria_2019_Nr._77_Bottas_1.jpg" },
-  { slotLabel:"VB · 26", label:"CADILLAC", glowColor:"#C8A951", tags:"CADILLAC PIONEER · F1'S NEWEST TEAM", title:"Cadillac 2026", subtitle:"2026 · CADILLAC · BUILDING THE FUTURE", svgPath:"M 30 155 Q 65 140 98 155 L 155 155 Q 185 140 218 155 L 275 155 Q 305 140 340 155 L 375 155", imageUrl:"https://en.wikipedia.org/wiki/Special:FilePath/2024_British_Grand_Prix,_Bottas_(1).jpg" },
+  { slotLabel:"VB · 17", label:"FIRST WIN", glowColor:"#00D2BE", tags:"RUSSIA GP · FIRST CAREER WIN · DOMINANT PACE", title:"Russian GP", subtitle:"2017 · MERCEDES · MAIDEN VICTORY", svgPath:"M 30 160 L 90 160 Q 112 148 130 105 L 190 105 Q 215 122 235 160 L 290 160 Q 315 138 335 104 L 370 104", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/f/f4/2017_Russian_Grand_Prix_5.jpg" },
+  { slotLabel:"VB · 19", label:"AUSTRIA WIN", glowColor:"#00D2BE", tags:"AUSTRIA VICTORY · 20 POLES ACROSS MERCEDES ERA", title:"Mercedes era", subtitle:"2017–2021 · MERCEDES · 10W · 20P", svgPath:"M 30 120 Q 60 110 85 85 L 145 85 Q 175 98 195 120 L 255 120 Q 285 105 310 80 L 370 80", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/d/d8/FIA_F1_Austria_2019_Nr._77_Bottas_1.jpg" },
+  { slotLabel:"VB · 26", label:"CADILLAC", glowColor:"#C8A951", tags:"CADILLAC PIONEER · F1'S NEWEST TEAM", title:"Cadillac 2026", subtitle:"2026 · CADILLAC · BUILDING THE FUTURE", svgPath:"M 30 155 Q 65 140 98 155 L 155 155 Q 185 140 218 155 L 275 155 Q 305 140 340 155 L 375 155", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/c/c8/2024_British_Grand_Prix%2C_Bottas_%281%29.jpg" },
 ]
 
 export const bottasScoutingReport: ScoutingReport = {
   paragraphs:[
-    "Bottas's style at Mercedes was characterised by exceptional smoothness in high-speed sections — his data was frequently cited internally as the benchmark for suspension loads and high-speed tyre behaviour. The problem was that the Mercedes W-series cars, particularly from 2019 onward, rewarded an aggressive, hard-entry technique that Hamilton had refined and Bottas had not fully developed. The car's characteristics conflicted with Bottas's natural smoothness preference; Hamilton's more aggressive approach was better matched to how the W11/W12 wanted to be driven.",
-    "This mismatch meant Bottas was often fastest in the pure speed sections — his sector 2 data was repeatedly competitive — while losing ground in the aggressive braking-and-rotation sectors that Hamilton exploited. It was a stylistic incompatibility rather than a talent deficit. The same smoothness that cost him at Mercedes became a strength at Alfa Romeo, where the car's gentler characteristics suited his inputs.",
-    "At Cadillac from 2026, the profile that matters most is experience: 238 races, two world-championship cycles of learning, and a professionalism that young teams building from scratch depend on. Bottas at 36 is not chasing podiums — he is building infrastructure.",
+    "Bottas's driving style at Mercedes was characterised by exceptional smoothness through high-speed sequences — his sector data from high-speed circuits was internally cited as the reference benchmark against which the car's aerodynamic development was verified. The problem was that the W-series cars from 2019 onward were optimised around an aggressive, hard-entry technique in slow-speed corners: the W10, W11, and W12 were at their most competitive when driven with late braking and high rotation bias, a style Hamilton had developed and Bottas had not fully internalised. His natural smoothness was a strength in high-speed sections and a relative weakness in the hairpins and chicanes where Hamilton's aggression generated the most time.",
+    "This stylistic incompatibility produced a specific pattern: Bottas was competitive in high-speed sector times but conceded in the slower corners that Hamilton treated as trail-braking opportunities. It was not a talent deficit — the same smoothness that cost him at Mercedes became a genuine strength at Alfa Romeo, where the car's more compliant characteristics matched his inputs and he delivered consistent points from machinery that offered no top-five performance margin. His mechanical sympathy generated better tyre life than the Alfa should have provided, translating to more competitive race stints than his grid positions suggested.",
+    "At Cadillac from 2026, Bottas is the experienced half of a development pairing. His 238 race starts span two complete championship regulation cycles — the V8 era, the turbo-hybrid transition, and multiple aero changes — and the institutional knowledge that comes with this breadth is exactly what a new constructor needs. His technical communication quality, rated highly at Mercedes and Alfa Romeo, remains an asset that transcends lap time. Bottas at 36 is not chasing podiums; he is building a team.",
   ],
   highlights:["10 wins at Mercedes","20 poles","elite high-speed smoothness","race distance consistency"],
   setupBars:[
@@ -2852,35 +2862,35 @@ export const prostEras: DriverEra[] = [
     driverId: "prost", teamId: "renault", teamName: "Renault", seasons: "1980–1983",
     highlights: ["France GP win 1981 — first career victory", "Runner-up 1983 WDC — 2pts behind Piquet", "RE30 / RE40 dominant Turbo challengers"],
     titles: 0, wins: 9, teamLiveryHex: "#FFD700",
-    imageUrl: W + 'Alain_Prost_1983_British_GP.jpg',
+    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Prost_at_1981_Dutch_Grand_Prix.jpg',
     statLabel: "9 WINS",
   },
   {
     driverId: "prost", teamId: "mclaren", teamName: "McLaren (TAG era)", seasons: "1984–1987",
     highlights: ["1985 WDC — McLaren MP4/2B", "1986 WDC — final lap Williams collapse", "72.5 pts in 1984 — Lauda beats by 0.5pt"],
     titles: 2, wins: 24, teamLiveryHex: "#E8002D", teamAccentHex: "#ffffff",
-    imageUrl: W + 'Alain_Prost_1985_British_Grand_Prix.jpg',
+    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/c/c8/Prost_at_1985_British_Grand_Prix.jpg',
     statLabel: "2× WDC",
   },
   {
     driverId: "prost", teamId: "mclaren", teamName: "McLaren (Honda · Senna era)", seasons: "1988–1989",
     highlights: ["1988: Senna beats Prost 8pts — closest McLaren season ever", "1989 WDC — Suzuka collision with Senna", "MP4/4 won 15 of 16 races in 1988"],
     titles: 1, wins: 10, teamLiveryHex: "#E8002D", teamAccentHex: "#ffffff",
-    imageUrl: W + 'Alain_Prost_McLaren_MP4-4_1988_British_GP.jpg',
+    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/2/2d/Alain_Prost_%28McLaren_Honda%29%2C_1988.jpg',
     statLabel: "SENNA RIVALRY",
   },
   {
     driverId: "prost", teamId: "ferrari", teamName: "Ferrari", seasons: "1990–1991",
     highlights: ["1990 WDC: Lost at Suzuka to Senna collision — P2", "Ferrari 641 — one of the most beautiful F1 cars", "Fired after publicly criticising the car"],
     titles: 0, wins: 5, teamLiveryHex: "#DC0000",
-    imageUrl: W + 'Alain_Prost_1990_United_States_Grand_Prix.jpg',
+    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/4/40/Alain_Prost%2C_1990_USA_GP_Phoenix.jpg',
     statLabel: "FERRARI ERA",
   },
   {
     driverId: "prost", teamId: "williams", teamName: "Williams", seasons: "1993",
     highlights: ["1993 WDC — dominant FW15C active suspension", "7 wins in final season", "Retired at the end — on his own terms"],
     titles: 1, wins: 7, teamLiveryHex: "#005AFF", teamAccentHex: "#FFD700",
-    imageUrl: W + 'Alain_Prost_Williams_FW15C_1993.jpg',
+    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/0/04/Alain_Prost_-_Williams_FW15C_at_the_1993_British_Grand_Prix_%2833557467311%29.jpg',
     statLabel: "FINAL TITLE",
   },
 ]
@@ -2933,7 +2943,7 @@ export const prostReelSlides: ReelSlide[] = [
     subtitle: "1990 · FERRARI 641 · P2 WDC",
     glowColor: "#DC0000",
     svgPath: "M 30 130 Q 66 116 94 86 L 154 86 Q 182 102 202 130 L 260 130 Q 290 114 314 82 L 372 82",
-    imageUrl: W + 'Alain_Prost_1990_United_States_Grand_Prix.jpg',
+    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/4/40/Alain_Prost%2C_1990_USA_GP_Phoenix.jpg',
   },
   {
     label: "1993 · WDC",
@@ -2948,9 +2958,9 @@ export const prostReelSlides: ReelSlide[] = [
 
 export const prostScoutingReport: ScoutingReport = {
   paragraphs: [
-    "Prost earned the nickname 'The Professor' from a driving style that was the diametric opposite of Senna's visceral aggression. Where Senna attacked, Prost calculated. His car setup philosophy was built around tyre preservation — he ran the smoothest steering inputs of any driver in the turbo era, using trail braking only where necessary and modulating throttle with a precision that his engineers described as the cleanest telemetry they had ever seen. He didn't attack tyres; he managed their lifespan as a strategic resource.",
-    "His tactical intelligence was unmatched. Prost understood that winning a world championship is not the same as winning races — it is a season-length optimisation problem. In 1986 he deliberately pitted for fresh tyres at the Australian GP finale while rivals gambled on worn rubber, ultimately winning the title when Mansell suffered a blowout and Piquet made a precautionary stop. That decision, made in the cockpit in real time, is a case study in championship mathematics.",
-    "The Senna rivalry defined the late 1980s and remains the most discussed inter-team dynamic in the sport's history. At McLaren in 1988–89, both men pushed the boundaries of racing conduct; at Suzuka 1989 Prost triggered the collision that gave him the title, a decision that was as calculated as his smooth steering inputs. His engineering feedback was so precise that both McLaren and Ferrari directed significant development investment based specifically on his descriptions of car behaviour at individual corners.",
+    "Prost earned the nickname 'The Professor' from a driving style that was the diametric opposite of Senna's visceral aggression. Where Senna attacked, Prost calculated. His car setup philosophy was built around tyre preservation — he ran the smoothest steering inputs of any driver in the turbo era, using trail braking only where it generated more corner speed than understeer, and modulating throttle application on exit with a precision that his engineers described as the cleanest telemetry they had ever seen. He didn't attack tyres; he managed their lifespan as a strategic resource across every lap of every race distance.",
+    "His tactical intelligence was unmatched. Prost understood that winning a world championship is not the same as winning races — it is a season-length optimisation problem. In 1986 he deliberately pitted for fresh tyres at the Australian GP finale while rivals gambled on worn rubber, winning the title when Mansell suffered a blowout and Piquet made a precautionary stop. That decision, made in the cockpit in real time under championship pressure, is a case study in the mathematics of risk management that racing schools still use as an example.",
+    "The Senna rivalry defined the late 1980s and remains the most discussed inter-team dynamic in the sport's history. At McLaren in 1988–89, both men operated at the boundary of racing conduct; at Suzuka 1989, Prost closed the door at the chicane in a move that was as calculated as his smooth steering inputs — he understood that the title mathematics made the collision the better outcome. His engineering feedback was so precise that both McLaren and Ferrari directed significant development investment based specifically on his corner-by-corner descriptions of car behaviour, often without requiring video review to act on his reports.",
   ],
   highlights: ["tyre preservation mastery", "strategic championship calculation", "smoothest telemetry of the turbo era"],
   setupBars: [
@@ -3031,7 +3041,7 @@ export const schumacherEras: DriverEra[] = [
     teamLiveryHex: "#DC0000",
     teamAccentHex: "#FFD700",
     statLabel: "5× WDC",
-    imageUrl: W + 'Michael_Schumacher_Ferrari_2006.jpg',
+    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/f/f0/Michael_Schumacher_2006_Indianapolis.jpg',
   },
   {
     driverId: "schumacher",
@@ -3118,9 +3128,9 @@ export const schumacherReelSlides: ReelSlide[] = [
 
 export const schumacherScoutingReport: ScoutingReport = {
   paragraphs: [
-    "Schumacher's defining physical trait was his braking: he carried more braking force deeper into corners than any contemporary, converting late stops into traction advantage on exit. His driving style demanded a car with good rear stability under trail braking — a preference Ferrari understood and built around across his five-title run. The Ferrari F2004 was in many ways engineered around his precise inputs.",
-    "Beyond raw pace, what separated Schumacher was race intelligence and physical preparation. He was the first driver to train like an athlete full-time — introducing the conditioning regime that is now universal in the sport. His ability to manage a race over 70 laps, strategically pressure rivals while preserving his machinery, was unmatched.",
-    "The 1994 and 1997 controversies are part of the record. At Adelaide 1994, his Benetton's contact with Hill's Williams remains debated. At Jerez 1997, his Ferrari deliberately turned into Villeneuve — he was stripped of second place in the championship. These incidents reflect a driver who, at critical moments, chose outcome over sporting conduct. They do not diminish the 91 wins and seven titles; they contextualise them.",
+    "Schumacher's defining physical technique was late braking — he carried deceleration force deeper into slow corners than any contemporary, with data showing braking points consistently later than Barrichello in the same Ferrari machinery. The specific consequence is a higher car speed at turn-in: more speed means more grip load on the front axle at the entry moment, which converts into more rotation through the apex if the car is set up to use it. Ferrari under Ross Brawn understood this and specified the F2004 explicitly around his inputs — rear-stable under trail braking, responsive to the rapid throttle application his exit technique demanded.",
+    "Beyond raw technique, what separated Schumacher from contemporaries was physical preparation as a competitive input. He was the first driver to treat conditioning as a specific performance variable — designing training programmes around reaction time, eye movement speed, and core stability at sustained 5G loads. This is now universal in the sport; in the 1990s it was a genuine performance edge. His race intelligence was equally advanced: his ability to manage pace, apply strategic pressure on rivals without extending machinery, and select the optimal overtaking window under pressure produced a pattern of dominant victories less visible in qualifying margins than in race-finishing gaps.",
+    "The 1994 and 1997 incidents are part of the technical record. At Adelaide 1994, his Benetton's contact with Hill's Williams at the championship-deciding moment remains debated — the contact was consistent with either a defensive block that misjudged the closing rate or a deliberate move. At Jerez 1997, his Ferrari turned into Villeneuve's car at a moment where the physics of the incident are inconsistent with an accidental collision; he was stripped of his championship position. These incidents do not diminish 91 wins and seven titles; they contextualise the competitive psychology of a driver who treated winning as a complete priority, including in situations where the rules defined the permissible boundary.",
   ],
   highlights: ["braking force", "rear stability under trail braking", "race intelligence", "physical preparation"],
   setupBars: [
@@ -3288,9 +3298,9 @@ export const sennaReelSlides: ReelSlide[] = [
 
 export const sennaScoutingReport: ScoutingReport = {
   paragraphs: [
-    "Senna attacked corners at angles and speeds that should have been physically impossible. His entry style was pure aggression — rotating the car with micro-corrections of the steering that required millisecond reflexes to control. In the rain, this attack became an even greater advantage: where other drivers conserved, Senna pressed harder, reading the grip levels as a function of instinct rather than feedback.",
-    "His qualifying technique was in a separate category from every contemporary. The famous Monaco 1988 lap — where he described going into a trance — was not an isolated event but the extreme end of a mental approach to extracting maximum from a single lap. He routinely converted 65 poles by finding chunks of lap time that engineers could not explain through data alone.",
-    "The rivalry with Prost at McLaren in 1988–89 remains the most psychologically intense in the sport's history. Senna's belief that Prost had unfair team advantages drove confrontations both on and off track that culminated in the Suzuka 1989 collision — Prost won the title. The following year, Senna immediately repaid at the same corner. Whatever your verdict, the competitive intensity produced the most closely watched racing of the modern era.",
+    "Senna's entry technique was built on a shorter trail-brake phase than his contemporaries, with a sharper initial turn-in that generated a faster rotation rate through the first third of the corner. Where Prost calculated and modulated, Senna rotated the car with micro-corrections of the steering that required millisecond reflexes to stabilise. His high-rotation, oversteer-biased setup preference meant the McLaren would want to snap at the apex, and Senna's precision controlled the snap before it became an excursion. In rain, this technique became dominant rather than merely advantageous: reduced grip homogenised the field's mechanical behaviour, while Senna's reflex-based corrections worked identically on a wet surface as a dry one — removing the advantage that more conservative drivers gained from predictability.",
+    "His qualifying performance is the most statistically extreme in the sport's history: 65 poles from 161 starts, a 40.4% conversion rate that no driver since has approached in an equivalent car-quality context. The famous Monaco 1988 lap — where he described entering a trance state — was the extreme expression of a mental approach to single-lap speed that treated the car and circuit as a unified system rather than a sequence of input events. His engineers at McLaren reported he could identify lap time deltas of 0.05 seconds by feel alone, before telemetry data was reviewed.",
+    "The rivalry with Prost at McLaren in 1988–89 was psychologically the most intense inter-team battle the sport has produced. Senna believed the team structure favoured Prost in qualifying and strategic allocation; whether this was accurate is secondary to the effect — it drove both men to a level of commitment that produced historic racing. Suzuka 1989 saw Prost close the door and Senna disqualified after rejoining the circuit; Suzuka 1990, Senna admitted decades later he had made a deliberate decision at the start. Both incidents are part of the same narrative about what the psychology of a driver wholly committed to winning looks like at its extreme.",
   ],
   highlights: ["attacked corners", "rain became an even greater advantage", "qualifying technique", "mental approach"],
   setupBars: [
@@ -3471,9 +3481,9 @@ export const raikkonenReelSlides: ReelSlide[] = [
 
 export const raikkonenScoutingReport: ScoutingReport = {
   paragraphs: [
-    "Räikkönen's driving style was built on mechanical grip and a very direct relationship between steering input and car response. He was intolerant of understeer — a car that pushed through the front would kill his lap time immediately. When Ferrari gave him a planted, rear-stable setup, the pace was there; when the balance wandered, he struggled to adapt in the way Schumacher could.",
-    "His greatest single-session performance may have been the 2005 Japanese GP qualifying lap — wet conditions, the season mathematically over, and yet the lap was nearly a second faster than anyone else. The calmness with which he delivered that performance in an objectively hopeless weekend captures everything about the Iceman: the weather, the championship table, the crowd — none of it registered.",
-    "The 2007 championship recovery — coming from 17 points down with two races remaining to win the title on the final lap of the final race — required McLaren to self-destruct and both Massa and Hamilton to cooperate, but the drives themselves were faultless. Räikkönen executed exactly what was required, nothing more. That clinical efficiency in a pressure moment defined his career.",
+    "Räikkönen's setup preference was built on mechanical grip sensitivity rather than aerodynamic rotation. He was intolerant of understeer in the corner entry phase — a front that pushed through the apex rather than rotating meant his trail-brake technique produced no cornering effect, just speed loss with no direction change. Ferrari's ability to give him a planted rear with sufficient downforce to allow his natural entry aggression was the key to his 2007 title: when the team read the tyre data and set the car to Räikkönen's balance, his pace was immediate and dominant. When the balance wandered toward understeer — as it did in the complicated 2008 Ferrari — he struggled to adapt the way Massa could, because his entry technique had a narrower effective balance window.",
+    "The 2005 Japanese GP qualifying lap is the single data point that most precisely captures his driving identity. Conditions were wet, the McLaren was uncompetitive in the dry, and the championship was mathematically over. Räikkönen's lap was approximately one second faster than Alonso's in the same conditions, produced in a session with no championship implication. The technical explanation is that his reflexive corner-rotation technique — which benefits from consistent grip regardless of surface — was better suited to a wet surface than Alonso's more committed entry style, which requires predictable front-axle response. The broader explanation is that Räikkönen's performance was not conditional on external stakes.",
+    "The 2007 championship recovery — coming from 17 points down with two races remaining to win the title on the final lap of the final race — required McLaren to self-destruct and both Massa and Hamilton to cooperate. The drives themselves were mechanically unremarkable; Räikkönen executed precisely what was required. That clinical efficiency — maximum output at maximum need, nothing more — was the defining characteristic of his 352-race career. His later seasons at Alfa Romeo, where the motivation question was openly discussed, showed that the pace was still available when he chose to deploy it.",
   ],
   highlights: ["mechanical grip", "intolerant of understeer", "calmness", "clinical efficiency"],
   setupBars: [
@@ -3624,15 +3634,15 @@ export const buttonReelSlides: ReelSlide[] = [
     title: "Hungarian GP",
     subtitle: "2012 · McLAREN · SMOOTH PACE IN MIXED CONDITIONS",
     svgPath: "M 30 150 L 85 150 Q 112 138 132 100 L 188 100 Q 215 118 238 150 L 292 150 Q 318 165 342 196 L 375 196",
-    imageUrl: "",
+    imageUrl: W + '2012_Canadian_GP_-_Jenson_Button_MP4-27_01.jpg',
   },
 ]
 
 export const buttonScoutingReport: ScoutingReport = {
   paragraphs: [
-    "Button's genius was tyre management at a forensic level. His smooth steering inputs — the cleanest in the modern hybrid era by telemetry analysis — meant he generated less heat into the tyres during any given lap. On a circuit with degradation, this difference compounded: Button on old tyres could often lap faster than rivals on fresher rubber.",
-    "Canada 2011 remains the definitive exhibition of his wet-safety-car-timing intelligence. Starting sixth, he was pushed back to last after a collision; he drove a metronomic race through multiple safety car periods, pitting at precisely the right moment each time, and arrived at the front with 2 laps to go. The winner was never in doubt once he was in clean air.",
-    "His peak at Brawn in 2009 was enabled by a technical advantage that evaporated as the season progressed — yet Button still won the championship by continuing to score in the second half when rivals caught up technically. His race management and ability to finish in points when the car was no longer dominant separated him from others in similar machinery.",
+    "Button's technical signature was the cleanest tyre-loading profile of his era. His smooth steering inputs — generating minimal scrub angle through the front axle in the entry and mid-corner phases — meant the tyre compound experienced lower peak lateral stress than rivals' inputs produced. On circuits with high degradation rates, this difference compounded across a stint: Button on aged tyres could lap faster than rivals on tyres 8–10 laps fresher because his loading profile kept the compound within its thermal window even as tread depth decreased. This required actively managing entry speed to avoid aggressive front loading — accepting a slightly conservative first sector in exchange for a faster final sector from preserved grip.",
+    "Canada 2011 is the definitive exhibition of his tyre-degradation intelligence combined with safety car timing precision. From last after a first-lap collision, he drove through multiple safety car periods, pitting at precisely the point where his tyres were worn enough that a fresh set guaranteed a net advantage once the gap closed. He arrived at the front on the penultimate lap against Vettel — at a point where Vettel was on tyres with 14 more laps of wear — and the time difference was irreversible. The skill that produced that result was not pace but sequencing: knowing, from the tyre data, when each safety car window would close.",
+    "His 2009 Brawn title was a case study in championship management under technical advantage decay. The double diffuser advantage was worth approximately 1.5 seconds per lap in Melbourne; by Silverstone that advantage had been partially closed by rivals' updates. Brawn won one more race after Round 7; Button accumulated the remaining championship points from consistency finishes in the second half of the season. His ability to manage a declining car to a maximum-points outcome — rather than forcing pace from machinery that no longer had it — is the detail that most retrospective accounts underemphasise.",
   ],
   highlights: ["tyre management", "smooth steering inputs", "wet-safety-car-timing", "race management"],
   setupBars: [
@@ -3769,9 +3779,9 @@ export const hakkinenReelSlides: ReelSlide[] = [
 
 export const hakkinenScoutingReport: ScoutingReport = {
   paragraphs: [
-    "Häkkinen's style was defined by clean, high-speed corner entries and superb car balance management. He complemented the McLaren-Mercedes package perfectly because the MP4/13 required precise steering at high speed — any imprecision would unsettle the rear. Häkkinen's inputs were clean enough to exploit the car's aerodynamic platform without disturbing its balance.",
-    "The 1995 Adelaide crash — a tyre failure at high speed — produced a life-threatening head injury. His return to racing in 1996, and subsequently his back-to-back championships in 1998–99, is one of motorsport's most compelling comeback stories. Team principal Ron Dennis's presence in the medical tent during the emergency is often cited as the defining moment of Häkkinen's loyalty to McLaren.",
-    "His rivalry with Schumacher was defined by clean racing that produced some of the decade's best wheel-to-wheel battles. The Belgium 2000 overtake — pulling out from behind Zonta to outbrake Schumacher into the bus stop — was arguably the greatest single-circuit overtake of the era. That move alone would define most careers.",
+    "Häkkinen's driving style was built on aerodynamic sensitivity: his entry technique relied on a setup that kept the McLaren's aerodynamic platform in its optimal operating range through the corner, which meant he preferred to arrive at the apex without the trailing-throttle deceleration that would unload the diffuser and change the rear balance. His entry was characterised by smooth, progressive steering input rather than aggressive trail braking, maintaining an even aero platform through the rotation phase. This approach worked perfectly with the MP4/13 and MP4/14's aerodynamic characteristics, which were designed for smooth, high-speed operation and produced their peak downforce on an undisturbed platform — the specific condition Häkkinen's style naturally created.",
+    "The 1995 Adelaide tyre failure — at 200km/h — produced a skull fracture and emergency trackside surgery. His return to F1 in 1996, and subsequently to two world championships in 1998–99, is one of motorsport's most complete comeback stories. The performance level he reached post-injury matched and exceeded his pre-1995 peak, which is physiologically unusual: head trauma at that level typically affects reaction time processing at the millisecond range that separates racing performance tiers. Häkkinen's recovery was total.",
+    "His rivalry with Schumacher across 1998–2000 produced racing defined by clean wheel-to-wheel contests at peak capability. The Belgium 2000 overtake — pulling from behind Zonta's McLaren on the Kemmel Straight at 300km/h to outbrake Schumacher at the Bus Stop chicane — was technically sophisticated: he used Zonta's slipstream to draw level with Schumacher before the braking point, then committed to a late braking line that Schumacher couldn't defend without collision. The physics of the move were pre-calculated rather than opportunistic, consistent with his broader approach to driving: smooth, precise, and resolved before the moment arrived.",
   ],
   highlights: ["clean, high-speed corner entries", "car balance management", "precise steering", "comeback story"],
   setupBars: [
@@ -3932,9 +3942,9 @@ export const damonHillReelSlides: ReelSlide[] = [
 
 export const damonHillScoutingReport: ScoutingReport = {
   paragraphs: [
-    "Hill was Williams-built — a driver who arrived from Formula 3000 late and was shaped entirely by the technical culture at Grove. He worked methodically with engineers, delivered precise feedback, and was most effective in a car that was technically superior to the field. In the Williams FW18, he could simply control a race; in inferior machinery, his limitations showed more clearly.",
-    "The 1994 season remains the most scrutinised in the championship's modern history. Hill drove an impeccable second half, winning five of the last six races before Adelaide, where Schumacher's collision ended his title challenge. Whether the collision was deliberate has never been definitively established — what's clear is that Hill, in equivalent machinery, was a match for Schumacher's pace throughout that second half.",
-    "His 1998 Hungary win with Jordan stands as one of F1's great anomalies — a driver out of form, in a midfield car, executing a perfect strategic race to beat two technically superior teams. It demonstrated that the ability was always there. The Williams years had never been about raw pace; they were about engineering partnership.",
+    "Hill was shaped entirely by the Williams technical culture: his setup philosophy, engineering communication style, and racecraft vocabulary were products of working with Patrick Head and the Grove team from 1991, before he had established personal technical preferences from prior career experience. This late formation produced a driver maximally effective in Williams machinery and notably less so outside it — the 1997 Arrows season showed that the technical environment was not separable from his performance. His preferred setup was moderate understeer with high mechanical stiffness — the Williams FW14–FW18 philosophy — rather than the rotation-biased preference that Senna had established at the same team in 1992.",
+    "The 1994 season requires precise reading. Hill drove an impeccable second half, winning five of the final six races from France through Japan before Adelaide — a run that required eliminating the small errors that had characterised his earlier months and managing an understeering FW16 to its absolute limit. The Adelaide collision with Schumacher on the final lap, with Hill needing only to finish to be champion, remains one of the most debated incidents in the sport's history. What is indisputable is that Hill, in the preceding six races, had been within 0.3 seconds of Schumacher's qualifying pace and within acceptable race-pace margins — close enough to constitute a genuine championship battle rather than a dominant driver being challenged.",
+    "His Hungary 1998 Jordan win is one of F1's most analytically interesting anomalies: a driver past his prime, in a midfield car, executing a perfect wet-to-dry strategic race on a circuit that rewards tactical clarity over braking aggression. Hill's technique on the day was flawless — he managed a significant pit stop lead advantage, held his position against Schumacher's later-stopping strategy, and crossed the line in a Jordan that had no business winning a race. It confirmed that the 1994–96 Williams performances were not exclusively machinery-dependent — the racing intelligence was always his own.",
   ],
   highlights: ["Williams-built", "methodically with engineers", "1994 season", "Hungary win with Jordan"],
   setupBars: [
@@ -4122,9 +4132,9 @@ export const mansellReelSlides: ReelSlide[] = [
 
 export const mansellScoutingReport: ScoutingReport = {
   paragraphs: [
-    "Mansell drove at the absolute limit of what the car and physics would allow — full commitment, every lap, every corner. His braking was famously late, his entries aggressive, and he generated enormous traction out of slow corners through sheer mechanical sensitivity. The Williams FW14B in 1992 was essentially designed for his inputs: active suspension and traction control meant the car could handle what Mansell threw at it.",
-    "The 1986 season remains one of F1's great tragedies. Leading the championship with one race remaining — the Australian GP in Adelaide — Mansell's rear tyre exploded at over 180mph. He brought the car safely to rest and watched Alain Prost take the championship. The following year, injury at Suzuka ended another title bid. These moments created the narrative that defined his career: the perpetual nearly-man who finally delivered in 1992.",
-    "His CART success in 1993 is underrated. He arrived as an F1 world champion with no oval racing experience and won the series at the first attempt — the only man to hold both titles simultaneously. The physical and technical demands of CART were entirely different from F1, and his adaptability to both disciplines is evidence of driving talent beyond his car's capability.",
+    "Mansell drove at the absolute physical limit of what the car and physics would tolerate — full entry commitment, every lap, no conservation phase. His braking was famously late, his entries aggressive in the extreme, and he generated extraordinary traction out of slow corners through a throttle application technique that required the active suspension and traction control of the Williams FW14B to manage the wheelspin his exit aggression produced. The FW14B was effectively designed as an enabler for his inputs: the active suspension kept the car stable through the aggressive entry angles he used, and the traction control meant his exit power application could be more aggressive than the mechanics of the rear axle would otherwise allow.",
+    "The 1986 season remains one of F1's most technically loaded tragedies. Leading the championship with the same points as Piquet and one more than Prost going into the final race, Mansell's rear tyre exploded at Adelaide at over 280km/h. He brought the car safely to rest and the championship went to Prost, who had pitted for fresh tyres at the optimal window while Mansell gambled on tyres that had exceeded their wear limit. The technical gap between their approaches to the same situation captures the stylistic and strategic difference between the two drivers with precise clarity.",
+    "His CART championship in 1993 on first attempt — the first driver to hold both F1 and CART titles simultaneously — demonstrated physical and cognitive adaptability that F1-centric narratives rarely credit. Oval racing demands a specific entry style unlike circuit racing: banked corners, different asphalt grip characteristics, and traffic management in a 25-car field require different spatial calculations. Mansell adapted within a single season and won the series. His driving talent was wider than the F1 frame allowed it to appear.",
   ],
   highlights: ["absolute limit", "enormous traction", "1986 season", "CART success"],
   setupBars: [
@@ -4252,9 +4262,9 @@ export const nicoRosbergReelSlides: ReelSlide[] = [
 
 export const nicoRosbergScoutingReport: ScoutingReport = {
   paragraphs: [
-    "Rosberg's driving was characterised by calculated precision over raw aggression. He was quicker than Hamilton in medium-to-high-speed corners where his smooth steering inputs preserved tyre temperatures; slower in the hairpins and late-braking zones where Hamilton's explosive commitment generated raw lap time. The gap between them was real but narrow — typically two to three tenths across a season.",
-    "His 2016 title campaign was the result of deliberate, sustained pressure rather than individual brilliance. He began the year by winning the first four races, establishing a psychological advantage he protected throughout the season. Even when Hamilton began winning again from the summer onwards, Rosberg consistently scored second when he could not win — a championship-level patience that had not been visible in his earlier Mercedes years.",
-    "The retirement announcement — five days after winning the title — remains unprecedented at this level. Rosberg cited the total sacrifice the championship campaign had required. He had given everything; there was nothing left to give and no further motivation. It was the logical conclusion of a career planned and executed entirely on his own terms.",
+    "Rosberg's technical advantage over Hamilton resided in one specific sector type: medium-to-high speed corners where smooth steering inputs preserved front tyre temperatures across the entry arc. His braking-to-rotation sequence was less aggressive than Hamilton's in hairpins — he conceded time in the late-braking zones — but in the Maggotts-Becketts and Pouhon-style complexes his minimum corner speed was occasionally comparable or superior, reflecting the different tyre loading profiles of their techniques. The qualifying gap between them averaged 0.10–0.15 seconds over a lap across their 2016 head-to-head data — narrow enough to be closed by circuit type, tyre specification, or minor performance items.",
+    "His 2016 title campaign was the result of deliberate, constructed pressure rather than an explosion of pace. He won the first four races, establishing a psychological credit he drew on for the rest of the season. Even when Hamilton closed the points gap from August onward, Rosberg consistently converted second places from race situations where Hamilton was faster — a championship-level patience in points accumulation that had not been visible in his earlier Mercedes years, when the tendency to take wheel-to-wheel risks had produced incidents at Monaco and Spa that cost him points. The 2016 version was calmer, more clinical, and more effective.",
+    "His retirement announcement five days after winning the title was unique at this level of sport. He had prepared his entire career around the goal of one world championship — studying Hamilton's strengths systematically, responding to each with specific training and preparation, and winning by 5 points on the last race of the season. Once achieved, there was no further mountain. His decision to retire rather than defend the title is arguably the most rational decision any driver has made in the sport's history — executed entirely on his own terms.",
   ],
   highlights: ["calculated precision", "smooth steering inputs", "deliberate, sustained pressure", "retirement announcement"],
   setupBars: [
@@ -4436,9 +4446,9 @@ export const ricciardoReelSlides: ReelSlide[] = [
 
 export const ricciardoScoutingReport: ScoutingReport = {
   paragraphs: [
-    "Ricciardo's signature attribute was his braking — he outbraked his teammates into slow corners consistently across five different teams, generating lap time from a zone where most drivers had already committed to a speed. The technique required exceptional spatial confidence: he relied on a very late turn-in point that left him with less margin for error, but the time gain at the end of the braking zone was repeatable and measurable.",
-    "The 2014 season at Red Bull is underappreciated in the wider narrative. He arrived as an unknown quantity alongside a four-time world champion in the same machinery, and by the end of the year had three wins and had outqualified Vettel in the overall head-to-head. The Monaco win in 2018 — with an ERS unit running at reduced power after lap 27 — required him to manage the pace advantage with a broken car while keeping the opposition honest. It was his single greatest performance.",
-    "The McLaren period damaged his legacy without diminishing his talent. The MCL35M did not suit his driving style — its stiff front end meant he could not access the late trail-braking style that was his primary weapon. Monza 2021 was the exception: a tyre-degradation circuit in changeable conditions where his racecraft and car management aligned to produce a result nobody had predicted.",
+    "Ricciardo's technical signature was the deepest late-braking commitment of his generation: he outbraked teammates into slow-speed hairpins consistently across five different teams, generating lap time from a zone where the braking point arrives so late that the margin for error is measured in tenths of a metre. The technique required exceptional spatial confidence — he relied on a very late turn-in point that positioned the car physically further from the apex at the entry moment, but the time saved in the deceleration zone was repeatable and measurable. His trail-brake release was aggressive: a fast transfer of load from the front to both axles simultaneously, which produced fast rotation without snap oversteer when the rear was loaded.",
+    "The 2014 Red Bull season is undervalued. He arrived alongside a four-time world champion in the same machinery and outqualified Vettel in the overall head-to-head while scoring three wins. The Monaco 2018 victory with an ERS unit running at reduced power from lap 27 required managing a diminishing pace advantage while preventing the field from closing in strategy — an exercise in gap management precision that produced a result from what should have been a mid-field finish. It was his single greatest performance because it came from technique applied under a mechanical handicap, not from having the faster car.",
+    "The McLaren period damaged his legacy without diminishing his talent. The MCL35M's stiff front-end characteristic prevented his trail-braking technique from generating the entry rotation he required: without a front axle that responded progressively to trail-brake input, his turn-in was conservative rather than aggressive, eliminating the technique advantage that was his primary weapon. Monza 2021 was the exception — a tyre-degradation circuit where mechanical technique quality dominates over aerodynamic platform — and he delivered there exactly when the conditions permitted. His career ends having demonstrated that the talent was always separate from the machinery.",
   ],
   highlights: ["braking", "outbraked his teammates", "Monaco win in 2018", "Monza 2021"],
   setupBars: [
@@ -4450,6 +4460,161 @@ export const ricciardoScoutingReport: ScoutingReport = {
   struggledWith: ["Adapting to front-limited car balance (McLaren MCL35M)", "Extracting pace from stiff front-end setups", "Second-half season consistency in challenging years"],
 }
 
+/* ─── Magnussen ─────────────────────────────────────────────────────────────── */
+
+export const magnussen: Driver = {
+  id:"magnussen", name:"Kevin Magnussen", shortName:"Magnussen", initials:"KM", nationality:"Danish", dob:"1992-10-05", status:"active", series:["f1"], peakEraTeamId:"haas", entityColor:"magnussen",
+  bio:"Denmark's most combative F1 racer. A debut podium for McLaren in Australia 2014, then eleven seasons across five teams — Haas's first-ever pole at Sao Paulo 2022, a career-best P9 WDC in 2018, and the most F1 starts in history without ever leading a lap. Departed after 2024 for BMW M Motorsport in WEC and IMSA.",
+  quote:"",
+  quoteContext:"",
+  portraitUrl: 'https://upload.wikimedia.org/wikipedia/commons/5/5b/FIA_F1_Austria_2022_Nr._20_Magnussen.jpg',
+}
+
+export const magnussenStats: DriverStats = { driverId:"magnussen", series:"f1", titles:0, wins:0, poles:1, podiums:1, careerSpan:"2014–2024", racesEntered:187, fastestLaps:3, pointsScored:202 }
+
+export const magnussenEras: DriverEra[] = [
+  { driverId:"magnussen", teamId:"mclaren", teamName:"McLaren", seasons:"2014", highlights:["P2 on debut — Australia 2014","Outqualified Button in first season"], titles:0, wins:0, teamLiveryHex:"#E8002D", statLabel:"DEBUT P2", imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/5/50/Kevin_Magnussen_2014_Singapore_FP2.jpg' },
+  { driverId:"magnussen", teamId:"renault", teamName:"Renault", seasons:"2016", highlights:["Return to grid after McLaren reserve year","Consistent midfield scoring"], titles:0, wins:0, teamLiveryHex:"#FFD700", statLabel:"2016" },
+  { driverId:"magnussen", teamId:"haas", teamName:"Haas", seasons:"2017–2020", highlights:["P9 WDC 2018 — career best","Combative wheel-to-wheel racing","Became core of the Haas identity"], titles:0, wins:0, teamLiveryHex:"#B6BABD", statLabel:"P9 WDC 18", imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/5/5b/FIA_F1_Austria_2022_Nr._20_Magnussen.jpg' },
+  { driverId:"magnussen", teamId:"haas", teamName:"Haas", seasons:"2022–2024", highlights:["Sao Paulo 2022 pole — Haas first-ever front row","Strong early 2022 campaign","Replaced by Ocon and Bearman for 2025"], titles:0, wins:0, teamLiveryHex:"#B6BABD", statLabel:"SAO PAULO POLE", imageUrl: W + 'FIA_F1_Austria_2022_Nr._20_Magnussen.jpg' },
+]
+
+export const magnussenSignature: DrivingSignature = {
+  driverId:"magnussen", series:"f1",
+  axes:[
+    { label:"Steering Smoothness", value:72 },
+    { label:"Entry Aggression", value:92 },
+    { label:"Tyre Management", value:74 },
+    { label:"Throttle Application", value:82 },
+    { label:"Braking", value:88 },
+    { label:"Consistency", value:74 },
+  ],
+  cohortAverage:[78,73,74,79,80,76], confidenceScore:0.82, sampleSize:1430,
+}
+
+export const magnussenReelSlides: ReelSlide[] = [
+  { slotLabel:"KM · 14", label:"DEBUT P2", glowColor:"#E8002D", tags:"AUSTRALIA 2014 · McLAREN DEBUT · SECOND PLACE", title:"Australia debut", subtitle:"2014 · McLAREN · P2 ON FIRST F1 START", svgPath:"M 30 160 L 90 160 Q 112 148 130 105 L 190 105 Q 215 122 235 160 L 290 160 Q 315 138 335 104 L 370 104", imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/5/50/Kevin_Magnussen_2014_Singapore_FP2.jpg' },
+  { slotLabel:"KM · 22", label:"HAAS POLE", glowColor:"#B6BABD", tags:"SAO PAULO 2022 · FIRST HAAS POLE IN F1 HISTORY", title:"Sao Paulo quali", subtitle:"2022 · HAAS · SAO PAULO POLE POSITION", svgPath:"M 30 120 Q 60 110 85 85 L 145 85 Q 175 98 195 120 L 255 120 Q 285 105 310 80 L 370 80", imageUrl: W + 'FIA_F1_Austria_2022_Nr._20_Magnussen.jpg' },
+  { slotLabel:"KM · 24", label:"FINAL RACE", glowColor:"#B6BABD", tags:"ABU DHABI 2024 · FINAL F1 RACE · MOVE TO WEC", title:"Final F1 race", subtitle:"2024 · HAAS · END OF F1 CHAPTER", svgPath:"M 30 155 Q 65 140 98 155 L 155 155 Q 185 140 218 155 L 275 155 Q 305 140 340 155 L 375 155", imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/5/5b/FIA_F1_Austria_2022_Nr._20_Magnussen.jpg' },
+]
+
+export const magnussenScoutingReport: ScoutingReport = {
+  paragraphs:[
+    "Magnussen's defining technical characteristic is late-braking aggression with a high tolerance for wheel-to-wheel proximity: his braking point at slow-speed hairpins is consistently among the latest on the grid, generating lap time from a zone where most contemporaries have already committed. His trail-brake technique is aggressive — a rapid front-axle load application that forces fast rotation but places high thermal demands on the front compound early in the stint. In a Haas chassis without an elite development resource, this aggression was frequently the team's primary mechanism for extracting relative performance beyond the car's nominal grid position.",
+    "The São Paulo 2022 qualifying session was the technical moment that defines his career: pole in a wet, evolving track surface that reduced the field's aerodynamic advantage and amplified the importance of feel-based grip calibration. Magnussen's natural sensitivity to low-grip surfaces — the same quality that produced his best qualifying results across his career — was maximally rewarded in that specific window. The VF-22 was genuinely competitive in that lap's conditions: low-speed, wet, heavy-braking circuit sections where his technique maximised what the car offered. The front row start lasted one qualifying session; Magnussen delivered when the technical conditions aligned.",
+    "Eleven seasons produced a statistical record that understates his genuine speed: 0 wins is partly a machinery story, but 187 starts is also a testament to consistency under the pressure of perpetually fighting from a position where the car's performance ceiling never matched his technical ceiling. His departure for BMW M Motorsport's WEC and IMSA programme in 2025 reflects where his skills transfer most naturally: endurance racing rewards exactly the tyre sensitivity and spatial intelligence under pressure that he developed across a decade of F1. The F1 story was one of unrealised potential; the endurance chapter is built for what he actually is.",
+  ],
+  highlights:["late-braking aggression","Haas's first F1 pole (Sao Paulo 2022)","wheel-to-wheel combativeness"],
+  setupBars:[
+    { leftLabel:"UNDERSTEER", rightLabel:"OVERSTEER", position:72, annotation:"ENTRY ROTATION · LATE TRAIL-BRAKING", highlight:true },
+    { leftLabel:"SOFT", rightLabel:"STIFF", position:56, annotation:"MEDIUM COMPLIANCE" },
+    { leftLabel:"LOW AERO", rightLabel:"HIGH AERO", position:60, annotation:"BALANCED" },
+  ],
+  excelledAt:["Wet-condition braking zones","Wheel-to-wheel defence","Extracting maximum from midfield machinery"],
+  struggledWith:["Tyre life management over extended stints","Consistency across full race weekends"],
+}
+
+/* ─── Doohan ─────────────────────────────────────────────────────────────────── */
+
+export const doohan: Driver = {
+  id:"doohan", name:"Jack Doohan", shortName:"Doohan", initials:"JD", nationality:"Australian", dob:"2003-01-20", status:"active", series:["f1"], peakEraTeamId:"alpine", entityColor:"doohan",
+  bio:"Son of MotoGP legend Mick Doohan. F3 runner-up 2021, F2 P3 2023. Made his F1 debut for Alpine at Abu Dhabi 2024, then raced the first six rounds of 2025 before being replaced by Franco Colapinto. Remains with Alpine as reserve driver.",
+  quote:"",
+  quoteContext:"",
+  portraitUrl: 'https://upload.wikimedia.org/wikipedia/commons/8/8d/2025_Japan_GP_-_Alpine_-_Jack_Doohan_-_FP3.jpg',
+}
+
+export const doohanStats: DriverStats = { driverId:"doohan", series:"f1", titles:0, wins:0, poles:0, podiums:0, careerSpan:"2024–2025", racesEntered:7, fastestLaps:0, pointsScored:0 }
+
+export const doohanEras: DriverEra[] = [
+  { driverId:"doohan", teamId:"alpine", teamName:"Alpine", seasons:"2024–2025", highlights:["F1 debut Abu Dhabi 2024","6 races in 2025 before Colapinto replacement","Rounds 1–6 of 2025 season"], titles:0, wins:0, teamLiveryHex:"#0090FF", statLabel:"7 RACES", imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/8/8d/2025_Japan_GP_-_Alpine_-_Jack_Doohan_-_FP3.jpg' },
+]
+
+export const doohanSignature: DrivingSignature = {
+  driverId:"doohan", series:"f1",
+  axes:[
+    { label:"Steering Smoothness", value:74 },
+    { label:"Entry Aggression", value:80 },
+    { label:"Tyre Management", value:70 },
+    { label:"Throttle Application", value:78 },
+    { label:"Braking", value:78 },
+    { label:"Consistency", value:68 },
+  ],
+  cohortAverage:[78,73,74,79,80,76], confidenceScore:0.30, sampleSize:95,
+}
+
+export const doohanReelSlides: ReelSlide[] = [
+  { slotLabel:"JD · 24", label:"F1 DEBUT", glowColor:"#0090FF", tags:"ABU DHABI 2024 · ALPINE DEBUT · REPLACING OCON", title:"F1 Debut", subtitle:"2024 · ALPINE · ONE RACE AT ABU DHABI", svgPath:"M 30 160 L 90 160 Q 112 148 130 105 L 190 105 Q 215 122 235 160 L 290 160 Q 315 138 335 104 L 370 104", imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/8/8d/2025_Japan_GP_-_Alpine_-_Jack_Doohan_-_FP3.jpg' },
+  { slotLabel:"JD · 25", label:"ALPINE R1-6", glowColor:"#0090FF", tags:"2025 · ALPINE · ROUNDS 1–6 · REPLACED BY COLAPINTO", title:"Alpine 2025", subtitle:"2025 · ALPINE · SIX ROUNDS BEFORE COLAPINTO", svgPath:"M 30 120 Q 60 110 85 85 L 145 85 Q 175 98 195 120 L 255 120 Q 285 105 310 80 L 370 80", imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/8/8d/2025_Japan_GP_-_Alpine_-_Jack_Doohan_-_FP3.jpg' },
+]
+
+export const doohanScoutingReport: ScoutingReport = {
+  paragraphs:[
+    "Doohan's F1 sample from 2024–2025 is too limited for conclusive stylistic analysis — seven races, zero points, and a mid-season replacement after Round 6 of 2025. His F2 career is the more representative data set: third in the 2023 championship with 6 wins across two F2 seasons with Virtuosi, showing a consistent entry technique biased toward rotation and qualifying pace competitive with the front-runners when the car was set up correctly. His F3 runner-up in 2021 established the same pattern: strong single-lap pace with room to develop race-distance management.",
+    "The 2025 Alpine campaign was characterised by incidents — a collision with Bortoleto at China, crashes at Australia and Japan — that cost points and credibility in a team environment where Briatore's ambition for immediate results left limited tolerance for adaptation time. Against the backdrop of Gasly's six years of F1 experience in the sister garage, Doohan's early-season mistakes compounded into a replacement decision after Miami. The specific incidents were consistent with a driver pushing entry commitment to his F2-calibrated reference before fully understanding the different spatial dynamics of F1 wheel proximity at higher closing speeds.",
+    "Alpine's retention of Doohan as reserve driver after his replacement is the most significant data point for his trajectory: the team's internal assessment distinguished the contextual difficulties of an underprepared transition from the driver's underlying capability. His profile — F3 runner-up, F2 P3 across two seasons — suggests a technical ceiling that seven races in an Alpine A524 was not long enough to measure. The precedent for junior category talent at this level eventually finding its F1 expression is well-established; the question is the timeline and the vehicle.",
+  ],
+  highlights:["F3 runner-up 2021","F2 P3 2023","Alpine reserve driver"],
+  setupBars:[
+    { leftLabel:"UNDERSTEER", rightLabel:"OVERSTEER", position:65, annotation:"ROTATION PREFERRED" },
+    { leftLabel:"SOFT", rightLabel:"STIFF", position:54, annotation:"SOFT-BIASED" },
+    { leftLabel:"LOW AERO", rightLabel:"HIGH AERO", position:60, annotation:"BALANCED" },
+  ],
+  excelledAt:["Junior category race pace","Wheel-to-wheel racecraft in F2"],
+  struggledWith:["Incident avoidance in early F1 career","Consistent qualifying pace"],
+}
+
+/* ─── Lindblad ───────────────────────────────────────────────────────────────── */
+
+export const lindblad: Driver = {
+  id:"lindblad", name:"Arvid Lindblad", shortName:"Lindblad", initials:"AL", nationality:"British", dob:"2007-08-08", status:"active", series:["f1"], peakEraTeamId:"rb", entityColor:"lindblad",
+  bio:"The youngest F2 race winner in history (Jeddah 2025, aged 17y 254d) and youngest British driver ever in F1. Red Bull Junior since 2021, F3 4th (2024), F2 6th (2025) — direct promotion to Racing Bulls for 2026 alongside Liam Lawson. Scored points on his F1 debut at the 2026 Australian GP.",
+  quote:"",
+  quoteContext:"",
+  portraitUrl: 'https://upload.wikimedia.org/wikipedia/commons/0/03/Arvid_Lindblad_at_the_Red_Bull_Fan_Zone_%E2%80%93_Crown_Riverwalk%2C_Melbourne_%28028A7727%29.jpg',
+}
+
+export const lindbladStats: DriverStats = { driverId:"lindblad", series:"f1", titles:0, wins:0, poles:0, podiums:0, careerSpan:"2026–present", racesEntered:5, fastestLaps:0, pointsScored:4 }
+
+export const lindbladEras: DriverEra[] = [
+  { driverId:"lindblad", teamId:"rb", teamName:"Racing Bulls", seasons:"2026–present", highlights:["F1 debut 2026 Australian GP — P8, first points","Youngest British F1 driver ever (surpassed Bearman)","FP1 appearances at 2025 British and Mexico GPs for Red Bull"], titles:0, wins:0, teamLiveryHex:"#6692FF", statLabel:"ROOKIE", imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/0/03/Arvid_Lindblad_at_the_Red_Bull_Fan_Zone_%E2%80%93_Crown_Riverwalk%2C_Melbourne_%28028A7727%29.jpg' },
+]
+
+export const lindbladSignature: DrivingSignature = {
+  driverId:"lindblad", series:"f1",
+  axes:[
+    { label:"Steering Smoothness", value:76 },
+    { label:"Entry Aggression", value:84 },
+    { label:"Tyre Management", value:68 },
+    { label:"Throttle Application", value:80 },
+    { label:"Braking", value:82 },
+    { label:"Consistency", value:70 },
+  ],
+  cohortAverage:[78,73,74,79,80,76], confidenceScore:0.28, sampleSize:65,
+}
+
+export const lindbladReelSlides: ReelSlide[] = [
+  { slotLabel:"AL · 25", label:"F2 YOUNGEST WIN", glowColor:"#6692FF", tags:"JEDDAH F2 2025 · YOUNGEST F2 RACE WINNER IN HISTORY · 17Y 254D", title:"F2 Jeddah", subtitle:"2025 · CAMPOS · YOUNGEST F2 WINNER EVER · 17Y 254D", svgPath:"M 30 160 L 90 160 Q 112 148 130 105 L 190 105 Q 215 122 235 160 L 290 160 Q 315 138 335 104 L 370 104", imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/5/52/FIA_F2_Austria_2025_Nr._4_Lindblad.jpg' },
+  { slotLabel:"AL · 26", label:"F1 DEBUT PTS", glowColor:"#6692FF", tags:"RACING BULLS · 2026 AUSTRALIAN GP · P8 ON DEBUT", title:"F1 Debut", subtitle:"2026 · RACING BULLS · P8 ON DEBUT · YOUNGEST BRITISH F1 DRIVER", svgPath:"M 30 120 Q 60 110 85 85 L 145 85 Q 175 98 195 120 L 255 120 Q 285 105 310 80 L 370 80", imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/0/03/Arvid_Lindblad_at_the_Red_Bull_Fan_Zone_%E2%80%93_Crown_Riverwalk%2C_Melbourne_%28028A7727%29.jpg' },
+  { slotLabel:"AL · 26", label:"RACING BULLS", glowColor:"#6692FF", tags:"RACING BULLS 2026 · ALONGSIDE LAWSON · RED BULL PIPELINE", title:"Racing Bulls 2026", subtitle:"2026 · RACING BULLS · ALONGSIDE LAWSON", svgPath:"M 30 150 L 80 150 Q 110 138 130 100 L 175 100 Q 195 115 210 150 L 260 150 Q 290 170 315 200 L 370 200", imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/0/03/Arvid_Lindblad_at_the_Red_Bull_Fan_Zone_%E2%80%93_Crown_Riverwalk%2C_Melbourne_%28028A7727%29.jpg' },
+]
+
+export const lindbladScoutingReport: ScoutingReport = {
+  paragraphs:[
+    "Lindblad arrived in F1 as the youngest British driver in the sport's history — surpassing Bearman's record at 18 years and 162 days — after a junior career that Red Bull's diagnostic programme had tracked since he joined the academy at 14. His 2025 F2 campaign included the youngest race win in series history (Jeddah, aged 17 years and 254 days), produced from a Campos package that was not the fastest in the field. The data from that win — his entry technique, throttle application smoothness, and stint management — matched Red Bull's internal models for F1 readiness ahead of the standard schedule.",
+    "His P8 debut at the 2026 Australian GP confirmed the projection: the raw pace is elite for his age and experience level. His entry technique from junior categories shows a rotation-biased preference with clean throttle application at exit — the same technical profile that Racing Bulls' simulator programme had identified as ready for F1 conditions. Tyre management over extended stints and racecraft in DRS trains are the expected development frontiers in his first season, consistent with every other driver who has followed the Red Bull junior pathway at this pace level.",
+    "The 2026 season alongside Lawson provides an unusually informative benchmark: a senior driver with three seasons of F1 experience, in the same car, at the same team. If Lindblad's qualifying pace matches or approaches Lawson's median across 2026, it will constitute a data point about his potential ceiling that the small current sample cannot provide. Red Bull's history with this pathway — Verstappen at 17, Gasly at 21 — suggests the diagnostic programme identifies drivers correctly before the external record confirms it. Lindblad's external record has barely started.",
+  ],
+  highlights:["youngest F2 race winner ever","youngest British F1 driver","P8 F1 debut"],
+  setupBars:[
+    { leftLabel:"UNDERSTEER", rightLabel:"OVERSTEER", position:65, annotation:"MILD ROTATION" },
+    { leftLabel:"SOFT", rightLabel:"STIFF", position:54, annotation:"SOFT-BIASED · TYRE-FRIENDLY" },
+    { leftLabel:"LOW AERO", rightLabel:"HIGH AERO", position:62, annotation:"MODERATE DOWNFORCE" },
+  ],
+  excelledAt:["Raw single-lap pace","Red Bull simulator adaptation","Short F2 qualifying runs"],
+  struggledWith:["F1 tyre management learning curve","Limited race sample size"],
+}
+
 /* ─── Export index ────────────────────────────────────────────────────────── */
 
 export const MOCK_DRIVERS: Record<string, Driver> = {
@@ -4458,4 +4623,7 @@ export const MOCK_DRIVERS: Record<string, Driver> = {
   bearman,
   hamilton,
   verstappen,
+  magnussen,
+  doohan,
+  lindblad,
 };
