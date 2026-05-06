@@ -29,15 +29,60 @@
 - Never infer or invent. If unsure, placeholder.
 
 ## 5. Image Rules
-- Every image URL must be verified to load before committing (paste in browser)
-- Acceptable sources (in order of preference):
-  1. upload.wikimedia.org/wikipedia/commons/ — preferred
-  2. /public/ folder (Next.js static) — user-provided images only, placed in frontend/public/, referenced as "/filename.ext"
-- Image must match caption: correct driver, correct team livery, correct year
-- Portrait slot: driver face visible, object-position: center 15%
-- Car/race slot: object-fit: cover, object-position: center 30%
-- onerror="this.style.display='none'" on every img tag
-- If no valid image is available from either source, use "" (renders as livery-glow gradient)
+
+### Source Priority Chain
+Try sources in this order. Move to the next only if the previous yields nothing usable.
+
+**Tier 1 — Wikimedia Commons (preferred for historic/era shots)**
+URL pattern: `upload.wikimedia.org/wikipedia/commons/`
+Best for: pre-2015 cars, classic era drivers, venue shots, historic moments
+Search: `site:commons.wikimedia.org "[driver] [team] [year]"`
+Verify: paste direct image URL in browser tab before using
+
+**Tier 2 — Official team/series press assets (preferred for current grid)**
+These URLs are stable and freely embeddable:
+- `media.formula1.com/image/upload/` — F1 official press
+- `www.mercedes-amg-f1.com/content/` — Mercedes press
+- `www.mclaren.com/racing/` — McLaren press
+- `www.redbull.com/img/` — Red Bull content
+- `www.ferrari.com/` press section
+Search: "[team name] press kit [year]" or "[driver] official photo [year]"
+
+**Tier 3 — Unsplash (atmosphere/venue shots only)**
+URL: `images.unsplash.com/`
+Free to hotlink, no attribution required
+Good for: circuit atmosphere, crowd shots, generic race action
+NOT suitable for: specific driver moments, specific car liveries
+Search: `unsplash.com/s/photos/formula-1`
+
+**Tier 4 — Wikimedia fallback**
+If Tiers 1–3 yield nothing for a specific moment, use the best available
+Wikimedia image even if not perfect, with a comment noting it's approximate
+
+**Tier 5 — Livery-glow gradient**
+If no verified image can be found: `imageUrl: ""` — never a broken or
+mismatched image. The gradient is intentional and looks correct.
+
+### What to NEVER use
+- Any URL containing `wp-content` or `.wordpress.com`
+- motorsport-images.com, Getty, LAT, Sutton — all block hotlinking
+- autosport.com, the-race.com image CDNs — block hotlinking
+- Any URL that redirects rather than serving a direct image
+- cdn.motorsport.com — blocks hotlinking (use Wikimedia equivalent instead)
+
+### Validation rule (non-negotiable)
+Before hardcoding ANY image URL:
+1. Paste it in a browser tab in an incognito window
+2. Confirm it loads the correct image (right driver, right livery, right year)
+3. Confirm it does NOT redirect to a homepage or show a watermark
+Only then add it to the codebase.
+
+### Display rules
+- `object-fit: cover` on all image elements
+- `object-position: center 15%` for portrait/driver shots (keeps face in frame)
+- `object-position: center 30%` for car/action shots
+- `onerror="this.style.display='none'"` on every `<img>` tag
+- Fallback: livery-glow radial gradient always underneath
 
 ## 6. Slide Data Structure (non-negotiable)
 Every carousel slide must be ONE self-contained object:
