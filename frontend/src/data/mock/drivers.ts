@@ -1879,7 +1879,7 @@ export const norris: Driver = {
 export const norrisStats: DriverStats = { driverId:"norris", series:"f1", titles:0, wins:8, poles:20, podiums:44, careerSpan:"2019–present", racesEntered:130, fastestLaps:7, pointsScored:1085 }
 
 export const norrisEras: DriverEra[] = [
-  { driverId:"norris", teamId:"mclaren", teamName:"McLaren", seasons:"2019–present", highlights:["First win Miami 2024","4 wins in 2024 season","2024 WDC runner-up behind Verstappen"], titles:0, wins:8, teamLiveryHex:"#FF8000", teamAccentHex:"#FFD700", statLabel:"8W · 20P", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/a/ae/Lando_Norris%2CChinese_GP_2024.jpg" },
+  { driverId:"norris", teamId:"mclaren", teamName:"McLaren", seasons:"2019–present", highlights:["First win Miami 2024","4 wins in 2024 season","2024 WDC runner-up behind Verstappen"], titles:0, wins:8, teamLiveryHex:"#FF8000", teamAccentHex:"#FFD700", statLabel:"8W · 20P", imageUrl:"/images/drivers/norris-mclaren-2024.jpg" },
 ]
 
 export const norrisSignature: DrivingSignature = {
@@ -1930,7 +1930,7 @@ export const piastriF1: Driver = {
 export const piastriF1Stats: DriverStats = { driverId:"piastri", series:"f1", titles:0, wins:9, poles:6, podiums:27, careerSpan:"2023–present", racesEntered:73, fastestLaps:9, pointsScored:820 }
 
 export const piastriF1Eras: DriverEra[] = [
-  { driverId:"piastri", teamId:"mclaren", teamName:"McLaren", seasons:"2023–present", highlights:["First win Hungary 2024","First pole Singapore 2023","3 wins in 2024 season"], titles:0, wins:7, teamLiveryHex:"#FF8000", teamAccentHex:"#FFD700", statLabel:"7W · 6P", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/6/69/2024_British_Grand_Prix%2C_Piastri_%281%29.jpg" },
+  { driverId:"piastri", teamId:"mclaren", teamName:"McLaren", seasons:"2023–present", highlights:["First win Hungary 2024","First pole Singapore 2023","3 wins in 2024 season"], titles:0, wins:7, teamLiveryHex:"#FF8000", teamAccentHex:"#FFD700", statLabel:"7W · 6P", imageUrl:"/images/drivers/piastri-mclaren-2024.jpg" },
 ]
 
 export const piastriF1Signature: DrivingSignature = {
@@ -2448,8 +2448,8 @@ export const oconStats: DriverStats = { driverId:"ocon", series:"f1", titles:0, 
 export const oconEras: DriverEra[] = [
   { driverId:"ocon", teamId:"force_india", teamName:"Force India / Racing Point", seasons:"2017–2018", highlights:["Consistent points finishes","Clash with Perez at Force India"], titles:0, wins:0, teamLiveryHex:"#FF80C7", statLabel:"P8 WDC", imageUrl:"/images/drivers/ocon-malaysia-2017.jpg" },
   { driverId:"ocon", teamId:"renault", teamName:"Renault", seasons:"2020", highlights:["Return to grid after Mercedes reserve year","Podium Bahrain 2020 second chance GP"], titles:0, wins:0, teamLiveryHex:"#FFD700", statLabel:"RETURN", imageUrl:"/images/drivers/ocon-testing-2020.jpg" },
-  { driverId:"ocon", teamId:"alpine", teamName:"Alpine", seasons:"2021–2024", highlights:["HUNGARY 2021 WIN","Held off Hamilton in final laps","4 career podiums total"], titles:0, wins:1, teamLiveryHex:"#0090FF", teamAccentHex:"#FFD700", statLabel:"1W", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/9/98/FIA_F1_Austria_2021_Nr._31_Ocon.jpg" },
-  { driverId:"ocon", teamId:"haas", teamName:"Haas", seasons:"2026–present", highlights:["New team 2026","Alongside Bearman at Haas"], titles:0, wins:0, teamLiveryHex:"#B6BABD", statLabel:"HAAS 26", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/1/10/2025_Japan_GP_-_Haas_-_Esteban_Ocon_-_FP2.jpg" },
+  { driverId:"ocon", teamId:"alpine", teamName:"Alpine", seasons:"2021–2024", highlights:["HUNGARY 2021 WIN","Held off Hamilton in final laps","4 career podiums total"], titles:0, wins:1, teamLiveryHex:"#0090FF", teamAccentHex:"#FFD700", statLabel:"1W", imageUrl:"/images/drivers/ocon-alpine-2021.jpg" },
+  { driverId:"ocon", teamId:"haas", teamName:"Haas", seasons:"2026–present", highlights:["New team 2026","Alongside Bearman at Haas"], titles:0, wins:0, teamLiveryHex:"#B6BABD", statLabel:"HAAS 26", imageUrl:"/images/drivers/ocon-haas-2025.jpg" },
 ]
 
 export const oconSignature: DrivingSignature = {
@@ -2747,10 +2747,10 @@ export const perez: Driver = {
 export const perezStats: DriverStats = { driverId:"perez", series:"f1", titles:0, wins:27, poles:3, podiums:66, careerSpan:"2011–present", racesEntered:280, fastestLaps:12, pointsScored:1614 }
 
 export const perezEras: DriverEra[] = [
-  { driverId:"perez", teamId:"sauber", teamName:"Sauber", seasons:"2011", highlights:["F1 debut with Sauber","Solid debut points scorer"], titles:0, wins:0, teamLiveryHex:"#900000", statLabel:"DEBUT", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/e/e7/Sauber_C30_Sergio_Perez_%2818076962515%29.jpg" },
-  { driverId:"perez", teamId:"force_india", teamName:"Force India / Racing Point", seasons:"2014–2020", highlights:["Sakhir GP WIN 2020","Multiple podiums with Racing Point","Bahrain 2020 second chance race win"], titles:0, wins:1, teamLiveryHex:"#FF80C7", teamAccentHex:"#FFD700", statLabel:"SAKHIR WIN", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/5/5e/Sergio_P%C3%A9rez_%2836099986012%29.jpg" },
+  { driverId:"perez", teamId:"sauber", teamName:"Sauber", seasons:"2011", highlights:["F1 debut with Sauber","Solid debut points scorer"], titles:0, wins:0, teamLiveryHex:"#900000", statLabel:"DEBUT", imageUrl:"/images/drivers/perez-sauber-2011.jpg" },
+  { driverId:"perez", teamId:"force_india", teamName:"Force India / Racing Point", seasons:"2014–2020", highlights:["Sakhir GP WIN 2020","Multiple podiums with Racing Point","Bahrain 2020 second chance race win"], titles:0, wins:1, teamLiveryHex:"#FF80C7", teamAccentHex:"#FFD700", statLabel:"SAKHIR WIN", imageUrl:"/images/drivers/perez-force-india-2017.jpg" },
   { driverId:"perez", teamId:"red_bull", teamName:"Red Bull", seasons:"2021–2024", highlights:["Azerbaijan GP wins (×2)","Monaco GP winner","2023 WDC P2 — best career result","Multiple Red Bull partnership wins"], titles:0, wins:26, teamLiveryHex:"#1E3A8A", teamAccentHex:"#FFD700", statLabel:"26W · P2 WDC", imageUrl:"/images/drivers/perez-austria-2021.jpg" },
-  { driverId:"perez", teamId:"cadillac", teamName:"Cadillac", seasons:"2026–present", highlights:["Pioneer driver for new F1 constructor","Mexico's hero joins American team"], titles:0, wins:0, teamLiveryHex:"#C8A951", statLabel:"CADILLAC ERA", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/1/15/Cadillac_MAC-26_of_Sergio_P%C3%A9rez_%28028A8062%29.jpg" },
+  { driverId:"perez", teamId:"cadillac", teamName:"Cadillac", seasons:"2026–present", highlights:["Pioneer driver for new F1 constructor","Mexico's hero joins American team"], titles:0, wins:0, teamLiveryHex:"#C8A951", statLabel:"CADILLAC ERA", imageUrl:"/images/drivers/perez-cadillac-2026.jpg" },
 ]
 
 export const perezSignature: DrivingSignature = {
@@ -2861,35 +2861,35 @@ export const prostEras: DriverEra[] = [
     driverId: "prost", teamId: "renault", teamName: "Renault", seasons: "1980–1983",
     highlights: ["France GP win 1981 — first career victory", "Runner-up 1983 WDC — 2pts behind Piquet", "RE30 / RE40 dominant Turbo challengers"],
     titles: 0, wins: 9, teamLiveryHex: "#FFD700",
-    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Prost_at_1981_Dutch_Grand_Prix.jpg',
+    imageUrl: '/images/drivers/prost-renault-1981.jpg',
     statLabel: "9 WINS",
   },
   {
     driverId: "prost", teamId: "mclaren", teamName: "McLaren (TAG era)", seasons: "1984–1987",
     highlights: ["1985 WDC — McLaren MP4/2B", "1986 WDC — final lap Williams collapse", "72.5 pts in 1984 — Lauda beats by 0.5pt"],
     titles: 2, wins: 24, teamLiveryHex: "#E8002D", teamAccentHex: "#ffffff",
-    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/c/c8/Prost_at_1985_British_Grand_Prix.jpg',
+    imageUrl: '/images/drivers/prost-mclaren-1985.jpg',
     statLabel: "2× WDC",
   },
   {
     driverId: "prost", teamId: "mclaren", teamName: "McLaren (Honda · Senna era)", seasons: "1988–1989",
     highlights: ["1988: Senna beats Prost 8pts — closest McLaren season ever", "1989 WDC — Suzuka collision with Senna", "MP4/4 won 15 of 16 races in 1988"],
     titles: 1, wins: 10, teamLiveryHex: "#E8002D", teamAccentHex: "#ffffff",
-    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/2/2d/Alain_Prost_%28McLaren_Honda%29%2C_1988.jpg',
+    imageUrl: '/images/drivers/prost-mclaren-1988.jpg',
     statLabel: "SENNA RIVALRY",
   },
   {
     driverId: "prost", teamId: "ferrari", teamName: "Ferrari", seasons: "1990–1991",
     highlights: ["1990 WDC: Lost at Suzuka to Senna collision — P2", "Ferrari 641 — one of the most beautiful F1 cars", "Fired after publicly criticising the car"],
     titles: 0, wins: 5, teamLiveryHex: "#DC0000",
-    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/4/40/Alain_Prost%2C_1990_USA_GP_Phoenix.jpg',
+    imageUrl: '/images/drivers/prost-ferrari-1990.jpg',
     statLabel: "FERRARI ERA",
   },
   {
     driverId: "prost", teamId: "williams", teamName: "Williams", seasons: "1993",
     highlights: ["1993 WDC — dominant FW15C active suspension", "7 wins in final season", "Retired at the end — on his own terms"],
     titles: 1, wins: 7, teamLiveryHex: "#005AFF", teamAccentHex: "#FFD700",
-    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/0/04/Alain_Prost_-_Williams_FW15C_at_the_1993_British_Grand_Prix_%2833557467311%29.jpg',
+    imageUrl: '/images/drivers/prost-williams-1993.jpg',
     statLabel: "FINAL TITLE",
   },
 ]
