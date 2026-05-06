@@ -1192,7 +1192,7 @@ export const verstappen: Driver = {
   bio: "Four-time world champion. The defining driver of the late hybrid era — ferociously quick in all conditions with an aggressive entry style that redefined what was considered possible in modern F1.",
   quote: "",
   quoteContext: "",
-  portraitUrl: W + '2024-08-25_Motorsport%2C_Formel_1%2C_Gro%C3%9Fer_Preis_der_Niederlande_2024_STP_3973_by_Stepro_(medium_crop).jpg',
+  portraitUrl: '/images/drivers/verstappen-redbull-portrait-2024.jpg',
 };
 
 export const verstappenStats: DriverStats = {
@@ -1240,7 +1240,7 @@ export const verstappenEras: DriverEra[] = [
     teamLiveryHex: "#1E3A8A",
     teamAccentHex: "#FFD700",
     statLabel: "4× WDC",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/7/79/FIA_F1_Austria_2023_Nr._1_%281%29.jpg",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/4/42/FIA_F1_Austria_2024_Nr._1_Verstappen.jpg",
   },
 ];
 
@@ -1314,17 +1314,16 @@ export const verstappenReelSlides: ReelSlide[] = [
     title: "Las Vegas",
     subtitle: "RED BULL · 9 WINS · P1 WDC",
     svgPath: "M 30 160 Q 68 148, 98 112 L 158 112 Q 188 130, 210 160 L 268 160 Q 298 144, 322 110 L 374 110",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/7/79/FIA_F1_Austria_2023_Nr._1_%281%29.jpg",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/4/42/FIA_F1_Austria_2024_Nr._1_Verstappen.jpg",
   },
 ];
 
 export const verstappenScoutingReport: ScoutingReport = {
   paragraphs: [
-    "Verstappen's corner entry technique relies on aggressive initial trail braking to maximum rotation angle, followed by a very precise pedal release that keeps the rear loaded without triggering snap oversteer. His former teammate Alex Albon confirmed the gap directly in a 2020 interview: 'What Max can do on the brakes into corners is on another level.' The data supports this — his deceleration point is consistently later than Perez's in the same car, and the rotation he generates through the pedal rather than the steering wheel allows him to minimise scrub angle through the apex, protecting front tyre temperatures while achieving a faster entry path.",
-    "His setup philosophy demands maximum oversteer bias — the car must want to rotate, and Verstappen's reflexes catch the instability before it becomes an excursion. This technique rewards circuits with heavy-braking zones before slow corners (Spa, Monza, Singapore, Baku), where the time difference between his entry angle and a conventional driver's is largest. His tyre management improved significantly across 2022–2024 as he refined how much speed he could carry without scrubbing the front compounds into thermal degradation — the 2023 data from his 15-win season shows a driver who had resolved the tyre-consumption cost of his entry aggression.",
-    "The 2025 season in an underperforming Red Bull separated the driver from the machinery: 8 wins from a car that was demonstrably second-fastest behind McLaren is consistent with the performance R² across his career. The margin between Verstappen and his teammates has been more stable than any other leading driver on the current grid — Perez, Albon, and Gasly all performed comparably against their peers when not alongside him, confirming that the surplus is Verstappen's, not the car's.",
+    "Verstappen brakes later than any current peer and uses a sharp, committed release — not progressive trail-braking — to rotate the car through the braking zone, loading the rear axle through pedal work rather than steering angle; the gap to his teammates is consistently largest at late-braking, slow-speed hairpins, which is where this technique generates the most time relative to a conventional entry. His setup runs less rear wing than Pérez at equivalent circuits, trading downforce for mechanical grip confidence that enables earlier, more aggressive throttle on corner exit — he accepts the resulting rear slip rather than waiting for the car to settle, and his reflexes catch the oversteer at a timing no other current driver has been observed replicating at pace. Wet conditions amplify his advantage because his commitment level and braking references do not reduce proportionally with grip loss — the same high-confidence inputs that define his dry technique are sustained in rain, which explains his wet-weather dominance at circuits with heavy-braking slow corners.",
+    "The 2025 season separated driver from machinery with unusual precision: Red Bull demonstrably second-fastest behind McLaren across the season, yet Verstappen finished only 2 points behind Norris in the final standings (421 to 423) — a gap directly explained by avoidable on-track contact at Austria and Mexico with Norris, a collision with Piastri at Abu Dhabi, and a deliberate post-team-order acceleration into Russell in Spain that drew a 3-penalty-point infringement. The teammate comparison across Pérez, Albon, and Gasly confirms that the surplus is Verstappen's and not the car's: all three performed comparably against their own peers in other machinery, while Verstappen's qualifying and race gap to each was stable across circuit types and conditions.",
   ],
-  highlights: ["pointy front end setup", "trail-braking rotation", "late braking zones"],
+  highlights: ["late sharp brake-and-release", "less rear wing than teammates", "early throttle accepts oversteer", "wet-weather commitment unchanged"],
   setupBars: [
     { leftLabel: "UNDERSTEER", rightLabel: "OVERSTEER",    position: 68, annotation: "ROTATES ON ENTRY",                 highlight: true },
     { leftLabel: "SOFT",       rightLabel: "STIFF",        position: 70, annotation: "STIFF — MAXIMUM MECHANICAL GRIP",  highlight: false },
