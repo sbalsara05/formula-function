@@ -2194,10 +2194,10 @@ export const gasly: Driver = {
 export const gaslyStats: DriverStats = { driverId:"gasly", series:"f1", titles:0, wins:1, poles:0, podiums:5, careerSpan:"2017–present", racesEntered:179, fastestLaps:3, pointsScored:459 }
 
 export const gaslyEras: DriverEra[] = [
-  { driverId:"gasly", teamId:"toro_rosso", teamName:"Toro Rosso", seasons:"2017–2018", highlights:["F1 debut Bahrain 2017","Points score in F1 rookie season"], titles:0, wins:0, teamLiveryHex:"#C00000", statLabel:"F1 DEBUT", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/4/43/Pierre_Gasly_2017_Malaysia_%28cropped%29.jpg" },
-  { driverId:"gasly", teamId:"red_bull", teamName:"Red Bull", seasons:"2019", highlights:["Promoted to Red Bull 2019","Demoted mid-season after struggles"], titles:0, wins:0, teamLiveryHex:"#1E3A8A", statLabel:"DEMOTION", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/a/a8/Pierre_Gasly_during_Hungarian_Formula_1_GP.jpg" },
-  { driverId:"gasly", teamId:"alphatauri", teamName:"AlphaTauri", seasons:"2019–2022", highlights:["Monza 2020: first F1 win","Brazil 2019: first F1 podium (P2)","São Paulo 2021: podium (P3)"], titles:0, wins:1, teamLiveryHex:"#4169E1", teamAccentHex:"#FFD700", statLabel:"1W · 3 PODS", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/b/bf/Pierre_Gasly-Alpha_Tauri_AT01_%283%29.jpg" },
-  { driverId:"gasly", teamId:"alpine", teamName:"Alpine", seasons:"2023–present", highlights:["Dutch GP 2023: podium (P3)","São Paulo 2024: podium (P3)"], titles:0, wins:0, teamLiveryHex:"#0090FF", statLabel:"2 PODS", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/c/cf/Pierre_Gasly_2024_Chinese_GP.jpg" },
+  { driverId:"gasly", teamId:"toro_rosso", teamName:"Toro Rosso", seasons:"2017–2018", highlights:["F1 debut Bahrain 2017","Points score in F1 rookie season"], titles:0, wins:0, teamLiveryHex:"#C00000", statLabel:"F1 DEBUT", imageUrl:"/images/drivers/gasly-toro-rosso-2017.jpg" },
+  { driverId:"gasly", teamId:"red_bull", teamName:"Red Bull", seasons:"2019", highlights:["Promoted to Red Bull 2019","Demoted mid-season after struggles"], titles:0, wins:0, teamLiveryHex:"#1E3A8A", statLabel:"DEMOTION", imageUrl:"/images/drivers/gasly-red-bull-2019.jpg" },
+  { driverId:"gasly", teamId:"alphatauri", teamName:"AlphaTauri", seasons:"2019–2022", highlights:["Monza 2020: first F1 win","Brazil 2019: first F1 podium (P2)","São Paulo 2021: podium (P3)"], titles:0, wins:1, teamLiveryHex:"#4169E1", teamAccentHex:"#FFD700", statLabel:"1W · 3 PODS", imageUrl:"/images/drivers/gasly-alphatauri-2020.jpg" },
+  { driverId:"gasly", teamId:"alpine", teamName:"Alpine", seasons:"2023–present", highlights:["Dutch GP 2023: podium (P3)","São Paulo 2024: podium (P3)"], titles:0, wins:0, teamLiveryHex:"#0090FF", statLabel:"2 PODS", imageUrl:"/images/drivers/gasly-alpine-2024.jpg" },
 ]
 
 export const gaslySignature: DrivingSignature = {
@@ -2801,10 +2801,10 @@ export const bottas: Driver = {
 export const bottasStats: DriverStats = { driverId:"bottas", series:"f1", titles:0, wins:10, poles:20, podiums:67, careerSpan:"2013–present", racesEntered:238, fastestLaps:19, pointsScored:1878 }
 
 export const bottasEras: DriverEra[] = [
-  { driverId:"bottas", teamId:"williams", teamName:"Williams", seasons:"2013–2016", highlights:["Consistent points scorer at Williams","Pole Silverstone 2017 (with Merc already signed)"], titles:0, wins:0, teamLiveryHex:"#005AFF", statLabel:"WILLIAMS YEARS", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/b/b6/Bottas_Baku_2016.jpg" },
-  { driverId:"bottas", teamId:"mercedes", teamName:"Mercedes", seasons:"2017–2021", highlights:["10 wins","20 poles","4× constructors champion","Fastest lap record holder (2019–2020)"], titles:0, wins:10, teamLiveryHex:"#00D2BE", teamAccentHex:"#FFD700", statLabel:"10W · 20P", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/d/de/FIA_F1_Austria_2021_Nr._77_Bottas.jpg" },
-  { driverId:"bottas", teamId:"alfa_romeo", teamName:"Alfa Romeo / Sauber", seasons:"2022–2025", highlights:["Team leader at Alfa Romeo","Mentored Bortoleto in 2024","Consistent midfield presence"], titles:0, wins:0, teamLiveryHex:"#900000", statLabel:"TEAM LEADER", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/7/76/Valtteri_Bottas_2022_Emilia_Romagna_Grand_Prix.jpg" },
-  { driverId:"bottas", teamId:"cadillac", teamName:"Cadillac", seasons:"2026–present", highlights:["Pioneer Cadillac driver alongside Perez","New chapter at 36"], titles:0, wins:0, teamLiveryHex:"#C8A951", statLabel:"CADILLAC 26", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/b/b5/2026_Chinese_GP_-_Cadillac_-_Valtteri_Bottas_-_Qualifying.jpg" },
+  { driverId:"bottas", teamId:"williams", teamName:"Williams", seasons:"2013–2016", highlights:["Consistent points scorer at Williams","Pole Silverstone 2017 (with Merc already signed)"], titles:0, wins:0, teamLiveryHex:"#005AFF", statLabel:"WILLIAMS YEARS", imageUrl:"/images/drivers/bottas-williams-2016.jpg" },
+  { driverId:"bottas", teamId:"mercedes", teamName:"Mercedes", seasons:"2017–2021", highlights:["10 wins","20 poles","4× constructors champion","Fastest lap record holder (2019–2020)"], titles:0, wins:10, teamLiveryHex:"#00D2BE", teamAccentHex:"#FFD700", statLabel:"10W · 20P", imageUrl:"/images/drivers/bottas-mercedes-2021.jpg" },
+  { driverId:"bottas", teamId:"alfa_romeo", teamName:"Alfa Romeo / Sauber", seasons:"2022–2025", highlights:["Team leader at Alfa Romeo","Mentored Bortoleto in 2024","Consistent midfield presence"], titles:0, wins:0, teamLiveryHex:"#900000", statLabel:"TEAM LEADER", imageUrl:"/images/drivers/bottas-alfa-romeo-2022.jpg" },
+  { driverId:"bottas", teamId:"cadillac", teamName:"Cadillac", seasons:"2026–present", highlights:["Pioneer Cadillac driver alongside Perez","New chapter at 36"], titles:0, wins:0, teamLiveryHex:"#C8A951", statLabel:"CADILLAC 26", imageUrl:"/images/drivers/bottas-cadillac-2026.jpg" },
 ]
 
 export const bottasSignature: DrivingSignature = {
@@ -3537,7 +3537,7 @@ export const buttonEras: DriverEra[] = [
     wins: 0,
     teamLiveryHex: "#005AFF",
     statLabel: "DEBUT",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/a/a8/2000_Williams_FW22_SCD24.jpg",
+    imageUrl: "/images/drivers/button-williams-2000.jpg",
   },
   {
     driverId: "button",
@@ -3549,7 +3549,7 @@ export const buttonEras: DriverEra[] = [
     wins: 1,
     teamLiveryHex: "#888888",
     statLabel: "1W",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/0/0a/Buttonwin.jpg",
+    imageUrl: "/images/drivers/button-bar-honda-2006.jpg",
   },
   {
     driverId: "button",
@@ -3562,7 +3562,7 @@ export const buttonEras: DriverEra[] = [
     teamLiveryHex: "#BFFF00",
     teamAccentHex: "#FFD700",
     statLabel: "1× WDC",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/4/4a/Button_British_Grand_Prix_2009.jpg",
+    imageUrl: "/images/drivers/button-brawn-2009.jpg",
   },
   {
     driverId: "button",
@@ -3574,7 +3574,7 @@ export const buttonEras: DriverEra[] = [
     wins: 8,
     teamLiveryHex: "#E8002D",
     statLabel: "8W",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/d/d6/McLaren_mp4-26_Button_2011_Canadian_GP.jpg",
+    imageUrl: "/images/drivers/button-mclaren-2011.jpg",
   },
 ]
 
@@ -4526,7 +4526,7 @@ export const doohan: Driver = {
 export const doohanStats: DriverStats = { driverId:"doohan", series:"f1", titles:0, wins:0, poles:0, podiums:0, careerSpan:"2024–2025", racesEntered:7, fastestLaps:0, pointsScored:0 }
 
 export const doohanEras: DriverEra[] = [
-  { driverId:"doohan", teamId:"alpine", teamName:"Alpine", seasons:"2024–2025", highlights:["F1 debut Abu Dhabi 2024","6 races in 2025 before Colapinto replacement","Rounds 1–6 of 2025 season"], titles:0, wins:0, teamLiveryHex:"#0090FF", statLabel:"7 RACES", imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/8/8d/2025_Japan_GP_-_Alpine_-_Jack_Doohan_-_FP3.jpg' },
+  { driverId:"doohan", teamId:"alpine", teamName:"Alpine", seasons:"2024–2025", highlights:["F1 debut Abu Dhabi 2024","6 races in 2025 before Colapinto replacement","Rounds 1–6 of 2025 season"], titles:0, wins:0, teamLiveryHex:"#0090FF", statLabel:"7 RACES", imageUrl:"/images/drivers/doohan-alpine-2025.jpg" },
 ]
 
 export const doohanSignature: DrivingSignature = {
