@@ -1950,7 +1950,7 @@ export const piastriF1Signature: DrivingSignature = {
 export const piastriF1ReelSlides: ReelSlide[] = [
   { slotLabel:"OP · 24", label:"FIRST WIN", glowColor:"#FF8000", tags:"HUNGARIAN GP · LIGHTS TO FLAG · MAIDEN VICTORY", title:"Hungarian GP", subtitle:"2024 · McLAREN · FIRST F1 WIN", svgPath:"M 30 140 L 60 140 Q 75 130 85 90 L 120 90 Q 140 105 155 140 L 195 140 Q 215 155 230 195 L 260 198 Q 275 180 290 140 L 330 140 Q 345 120 360 80 L 380 80", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/2/20/Oscar_Piastri_Chinese_GP_2024.jpg" },
   { slotLabel:"OP · 24", label:"2 WINS", glowColor:"#FF8000", tags:"HUNGARY 2024 · AZERBAIJAN 2024 · MCLAREN", title:"2024 Campaign", subtitle:"2024 · McLAREN · 2 WINS", svgPath:"M 30 120 L 90 120 Q 112 108 130 70 L 180 70 Q 210 88 230 120 L 290 120 Q 310 104 325 72 L 370 72", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/6/69/2024_British_Grand_Prix%2C_Piastri_%281%29.jpg" },
-  { slotLabel:"OP · 26", label:"MCLAREN", glowColor:"#FF8000", tags:"2026 · McLAREN · ACTIVE SEASON", title:"McLaren 2026", subtitle:"2026 · McLAREN · ACTIVE", svgPath:"M 30 155 Q 65 140 98 155 L 155 155 Q 185 140 218 155 L 275 155 Q 305 140 340 155 L 375 155", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/6/69/2024_British_Grand_Prix%2C_Piastri_%281%29.jpg" },
+  { slotLabel:"OP · 26", label:"MCLAREN", glowColor:"#FF8000", tags:"2026 · McLAREN · ACTIVE SEASON", title:"McLaren 2026", subtitle:"2026 · McLAREN · ACTIVE", svgPath:"M 30 155 Q 65 140 98 155 L 155 155 Q 185 140 218 155 L 275 155 Q 305 140 340 155 L 375 155", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/f/fb/2026_Chinese_GP_-_McLaren_-_Oscar_Piastri_-_Qualifying.jpg" },
 ]
 
 export const piastriF1ScoutingReport: ScoutingReport = {
