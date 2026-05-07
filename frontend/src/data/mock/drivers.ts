@@ -1646,7 +1646,7 @@ export const piastriF2ReelSlides: ReelSlide[] = [
     title: "Spa feature",
     subtitle: "2021 · PREMA · THE TITLE'S FIRST MAJOR STATEMENT",
     svgPath: "M 30 150 L 85 150 Q 108 132 130 92 L 180 88 Q 208 106 230 150 L 288 150 Q 312 133 338 92 L 375 90",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/9/9b/Oscar_Piastri_Spa.jpg",
+    imageUrl: "/images/drivers/piastri-spa.jpg",
   },
   {
     slotLabel: "MONZA · 2021",
@@ -1656,7 +1656,7 @@ export const piastriF2ReelSlides: ReelSlide[] = [
     title: "Monza sprint",
     subtitle: "CONSECUTIVE WINS · TITLE MOMENTUM",
     svgPath: "M 30 155 Q 65 140 98 155 L 155 155 Q 185 140 218 155 L 275 155 Q 305 140 340 155 L 375 155",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/e/ee/2021_British_Grand_Prix_%2851349300361%29_%28cropped%29.jpg",
+    imageUrl: "/images/drivers/piastri-silverstone-2021-crop.jpg",
   },
   {
     slotLabel: "JEDDAH · 2021",
@@ -1666,7 +1666,7 @@ export const piastriF2ReelSlides: ReelSlide[] = [
     title: "Champion",
     subtitle: "JEDDAH · F2 TITLE · SECOND SUCCESSIVE PREMA CROWN",
     svgPath: "M 30 155 L 88 155 Q 112 140 145 98 L 192 98 Q 215 116 240 155 L 295 155 Q 318 139 348 98 L 375 98",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/f/f4/2021_British_Grand_Prix_%2851349300361%29.jpg",
+    imageUrl: "/images/drivers/piastri-silverstone-2021.jpg",
   },
   {
     slotLabel: "ALPINE · 2022",
@@ -1787,7 +1787,7 @@ export const bortoletoReelSlides: ReelSlide[] = [
     title: "F3 Spa",
     subtitle: "2023 · TRIDENT · F3 TITLE RUN BUILDING",
     svgPath: "M 30 150 L 85 150 Q 108 132 130 92 L 180 88 Q 208 106 230 150 L 288 150 Q 312 133 338 92 L 375 90",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/FIA_F3_Spa_2023_Nr._23_Bortoleto.jpg/800px-FIA_F3_Spa_2023_Nr._23_Bortoleto.jpg",
+    imageUrl: "/images/drivers/bortoleto-spa-f2-2024.jpg",
   },
   {
     slotLabel: "MONZA · 2023",
@@ -1817,7 +1817,7 @@ export const bortoletoReelSlides: ReelSlide[] = [
     title: "F2 champion",
     subtitle: "BACK-TO-BACK JUNIOR TITLES · SAUBER F1 2025",
     svgPath: "M 30 155 L 88 155 Q 112 140 145 98 L 192 98 Q 215 116 240 155 L 295 155 Q 318 139 348 98 L 375 98",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/2/20/2024-07-28_077_Spa%2C_Formel_2_Hauptrennen%3B_Gabriel_Bortoleto_%2853890031922%29.jpg",
+    imageUrl: "/images/drivers/bortoleto-spa-f2-2024.jpg",
   },
 ];
 
@@ -1845,9 +1845,9 @@ export const leclerEras: DriverEra[] = [
 ]
 
 export const leclerReelSlides: ReelSlide[] = [
-  { slotLabel:"CL · 16", label:"FIRST WIN", glowColor:"#DC0000", tags:"MAIDEN VICTORY · SPA-FRANCORCHAMPS · POLE TO WIN", title:"Belgian GP", subtitle:"2019 · FERRARI · FIRST OF MANY", svgPath:"M 30 120 L 80 120 Q 112 108 130 70 L 180 70 Q 210 88 230 120 L 290 120 Q 310 104 325 72 L 370 72", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/9/93/Charles_Leclerc_2019_Italian_Grand_Prix.jpg" },
-  { slotLabel:"CL · 16", label:"WDC HUNT", glowColor:"#DC0000", tags:"2022 TITLE CONTENDER · BAHRAIN POLE & WIN", title:"2022 season", subtitle:"2022 · FERRARI · 3W · 9P · P2 WDC", svgPath:"M 30 150 L 85 150 Q 108 132 130 92 L 180 88 Q 208 106 230 150 L 288 150 Q 312 133 338 92 L 375 90", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/8/83/FIA_F1_Austria_2022_Podium_Race_Winner_Leclerc.jpg" },
-  { slotLabel:"CL · 16", label:"MONACO WIN", glowColor:"#DC0000", tags:"MONACO GP WINNER · HOME VICTORY FINALLY SECURED", title:"Monaco GP", subtitle:"2024 · FERRARI · EMOTIONAL HOME WIN", svgPath:"M 30 160 L 90 160 Q 112 148 130 105 L 190 105 Q 215 122 235 160 L 290 160 Q 315 138 335 104 L 370 104", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/3/38/Charles_Leclerc_%2853837544592%29.jpg" },
+  { slotLabel:"CL · 16", label:"FIRST WIN", glowColor:"#DC0000", tags:"MAIDEN VICTORY · SPA-FRANCORCHAMPS · POLE TO WIN", title:"Belgian GP", subtitle:"2019 · FERRARI · FIRST OF MANY", svgPath:"M 30 120 L 80 120 Q 112 108 130 70 L 180 70 Q 210 88 230 120 L 290 120 Q 310 104 325 72 L 370 72", imageUrl: "/images/drivers/leclerc-italy-2019.jpg" },
+  { slotLabel:"CL · 16", label:"WDC HUNT", glowColor:"#DC0000", tags:"2022 TITLE CONTENDER · BAHRAIN POLE & WIN", title:"2022 season", subtitle:"2022 · FERRARI · 3W · 9P · P2 WDC", svgPath:"M 30 150 L 85 150 Q 108 132 130 92 L 180 88 Q 208 106 230 150 L 288 150 Q 312 133 338 92 L 375 90", imageUrl: "/images/drivers/leclerc-austria-2022.jpg" },
+  { slotLabel:"CL · 16", label:"MONACO WIN", glowColor:"#DC0000", tags:"MONACO GP WINNER · HOME VICTORY FINALLY SECURED", title:"Monaco GP", subtitle:"2024 · FERRARI · EMOTIONAL HOME WIN", svgPath:"M 30 160 L 90 160 Q 112 148 130 105 L 190 105 Q 215 122 235 160 L 290 160 Q 315 138 335 104 L 370 104", imageUrl: "/images/drivers/leclerc-british-2024.jpg" },
 ]
 
 export const leclerScoutingReport: ScoutingReport = {
@@ -1896,9 +1896,9 @@ export const norrisSignature: DrivingSignature = {
 }
 
 export const norrisReelSlides: ReelSlide[] = [
-  { slotLabel:"LN · 24", label:"FIRST WIN", glowColor:"#FF8000", tags:"MIAMI GP · MAIDEN FORMULA 1 VICTORY", title:"Miami GP", subtitle:"2024 · McLAREN · THE WAIT IS OVER", svgPath:"M 30 160 L 80 160 Q 100 145 115 110 L 160 110 Q 180 125 195 160 L 235 160 Q 255 175 270 205 L 310 205 Q 330 185 350 155 L 380 155", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/0/0e/Lando_Norris%2CChinese_GP_2024_Race.jpg" },
-  { slotLabel:"LN · 24", label:"4 WINS", glowColor:"#FF8000", tags:"MONACO · NETHERLANDS · SINGAPORE · DOMINANT SEASON", title:"2024 Campaign", subtitle:"2024 · McLAREN · WDC RUNNER-UP", svgPath:"M 30 120 Q 60 110 85 85 L 145 85 Q 175 98 195 120 L 255 120 Q 285 105 310 80 L 370 80", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/0/0a/2024-08-25_Motorsport%2C_Formel_1%2C_Gro%C3%9Fer_Preis_der_Niederlande_2024_STP_3975_by_Stepro.jpg" },
-  { slotLabel:"LN · 26", label:"McLAREN", glowColor:"#FF8000", tags:"2026 · McLAREN · ACTIVE SEASON", title:"McLaren 2026", subtitle:"2026 · McLAREN · ACTIVE SEASON", svgPath:"M 30 150 L 80 150 Q 110 138 130 100 L 175 100 Q 195 115 210 150 L 260 150 Q 290 170 315 200 L 370 200", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/c/cf/2026_Chinese_GP_-_McLaren_-_Lando_Norris_-_Qualifying.jpg" },
+  { slotLabel:"LN · 24", label:"FIRST WIN", glowColor:"#FF8000", tags:"MIAMI GP · MAIDEN FORMULA 1 VICTORY", title:"Miami GP", subtitle:"2024 · McLAREN · THE WAIT IS OVER", svgPath:"M 30 160 L 80 160 Q 100 145 115 110 L 160 110 Q 180 125 195 160 L 235 160 Q 255 175 270 205 L 310 205 Q 330 185 350 155 L 380 155", imageUrl:"/images/drivers/norris-china-2024-race.jpg" },
+  { slotLabel:"LN · 24", label:"4 WINS", glowColor:"#FF8000", tags:"MONACO · NETHERLANDS · SINGAPORE · DOMINANT SEASON", title:"2024 Campaign", subtitle:"2024 · McLAREN · WDC RUNNER-UP", svgPath:"M 30 120 Q 60 110 85 85 L 145 85 Q 175 98 195 120 L 255 120 Q 285 105 310 80 L 370 80", imageUrl:"/images/drivers/norris-netherlands-2024.jpg" },
+  { slotLabel:"LN · 26", label:"McLAREN", glowColor:"#FF8000", tags:"2026 · McLAREN · ACTIVE SEASON", title:"McLaren 2026", subtitle:"2026 · McLAREN · ACTIVE SEASON", svgPath:"M 30 150 L 80 150 Q 110 138 130 100 L 175 100 Q 195 115 210 150 L 260 150 Q 290 170 315 200 L 370 200", imageUrl:"/images/drivers/norris-china-2026.jpg" },
 ]
 
 export const norrisScoutingReport: ScoutingReport = {
@@ -1947,9 +1947,9 @@ export const piastriF1Signature: DrivingSignature = {
 }
 
 export const piastriF1ReelSlides: ReelSlide[] = [
-  { slotLabel:"OP · 24", label:"FIRST WIN", glowColor:"#FF8000", tags:"HUNGARIAN GP · LIGHTS TO FLAG · MAIDEN VICTORY", title:"Hungarian GP", subtitle:"2024 · McLAREN · FIRST F1 WIN", svgPath:"M 30 140 L 60 140 Q 75 130 85 90 L 120 90 Q 140 105 155 140 L 195 140 Q 215 155 230 195 L 260 198 Q 275 180 290 140 L 330 140 Q 345 120 360 80 L 380 80", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/2/20/Oscar_Piastri_Chinese_GP_2024.jpg" },
-  { slotLabel:"OP · 24", label:"2 WINS", glowColor:"#FF8000", tags:"HUNGARY 2024 · AZERBAIJAN 2024 · MCLAREN", title:"2024 Campaign", subtitle:"2024 · McLAREN · 2 WINS", svgPath:"M 30 120 L 90 120 Q 112 108 130 70 L 180 70 Q 210 88 230 120 L 290 120 Q 310 104 325 72 L 370 72", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/6/69/2024_British_Grand_Prix%2C_Piastri_%281%29.jpg" },
-  { slotLabel:"OP · 26", label:"MCLAREN", glowColor:"#FF8000", tags:"2026 · McLAREN · ACTIVE SEASON", title:"McLaren 2026", subtitle:"2026 · McLAREN · ACTIVE", svgPath:"M 30 155 Q 65 140 98 155 L 155 155 Q 185 140 218 155 L 275 155 Q 305 140 340 155 L 375 155", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/f/fb/2026_Chinese_GP_-_McLaren_-_Oscar_Piastri_-_Qualifying.jpg" },
+  { slotLabel:"OP · 24", label:"FIRST WIN", glowColor:"#FF8000", tags:"HUNGARIAN GP · LIGHTS TO FLAG · MAIDEN VICTORY", title:"Hungarian GP", subtitle:"2024 · McLAREN · FIRST F1 WIN", svgPath:"M 30 140 L 60 140 Q 75 130 85 90 L 120 90 Q 140 105 155 140 L 195 140 Q 215 155 230 195 L 260 198 Q 275 180 290 140 L 330 140 Q 345 120 360 80 L 380 80", imageUrl:"/images/drivers/piastri-china-2024.jpg" },
+  { slotLabel:"OP · 24", label:"2 WINS", glowColor:"#FF8000", tags:"HUNGARY 2024 · AZERBAIJAN 2024 · MCLAREN", title:"2024 Campaign", subtitle:"2024 · McLAREN · 2 WINS", svgPath:"M 30 120 L 90 120 Q 112 108 130 70 L 180 70 Q 210 88 230 120 L 290 120 Q 310 104 325 72 L 370 72", imageUrl:"/images/drivers/piastri-silverstone-2024.jpg" },
+  { slotLabel:"OP · 26", label:"MCLAREN", glowColor:"#FF8000", tags:"2026 · McLAREN · ACTIVE SEASON", title:"McLaren 2026", subtitle:"2026 · McLAREN · ACTIVE", svgPath:"M 30 155 Q 65 140 98 155 L 155 155 Q 185 140 218 155 L 275 155 Q 305 140 340 155 L 375 155", imageUrl:"/images/drivers/piastri-china-2026.jpg" },
 ]
 
 export const piastriF1ScoutingReport: ScoutingReport = {
@@ -2440,7 +2440,7 @@ export const ocon: Driver = {
   bio:"Hungary 2021 defines his career: a perfect race from start to finish — surviving a first-lap incident, managing tyres on a strategy that no one else attempted, holding off Hamilton for the final ten laps. One win, delivered with precision when it mattered most.",
   quote:"",
   quoteContext:"",
-  portraitUrl: 'https://upload.wikimedia.org/wikipedia/commons/7/7e/FIA_F1_Austria_2024_Nr._31_Ocon.jpg',
+  portraitUrl: '/images/drivers/ocon-austria-2024.jpg',
 }
 
 export const oconStats: DriverStats = { driverId:"ocon", series:"f1", titles:0, wins:1, poles:0, podiums:4, careerSpan:"2016–present", racesEntered:170, fastestLaps:2, pointsScored:406 }
@@ -2466,9 +2466,9 @@ export const oconSignature: DrivingSignature = {
 }
 
 export const oconReelSlides: ReelSlide[] = [
-  { slotLabel:"EO · 21", label:"WIN", glowColor:"#0090FF", tags:"HUNGARIAN GP · LIGHTS-TO-FLAG · HELD HAMILTON", title:"Hungarian GP", subtitle:"2021 · ALPINE · ONLY F1 WIN", svgPath:"M 30 160 L 90 160 Q 112 148 130 105 L 190 105 Q 215 122 235 160 L 290 160 Q 315 138 335 104 L 370 104", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/9/98/FIA_F1_Austria_2021_Nr._31_Ocon.jpg" },
-  { slotLabel:"EO · 24", label:"ALPINE", glowColor:"#0090FF", tags:"FINAL ALPINE SEASON · POINTS IN DIFFICULT YEAR", title:"Alpine 2024", subtitle:"2024 · ALPINE · FINAL SEASON", svgPath:"M 30 120 Q 60 110 85 85 L 145 85 Q 175 98 195 120 L 255 120 Q 285 105 310 80 L 370 80", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/1/19/2024_British_Grand_Prix%2C_Ocon_%281%29.jpg" },
-  { slotLabel:"EO · 26", label:"HAAS", glowColor:"#B6BABD", tags:"HAAS 2026 · NEW CHAPTER · PROVEN RACE WINNER", title:"Haas 2026", subtitle:"2026 · HAAS · VETERAN PRESENCE", svgPath:"M 30 155 Q 65 140 98 155 L 155 155 Q 185 140 218 155 L 275 155 Q 305 140 340 155 L 375 155", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/7/7e/FIA_F1_Austria_2024_Nr._31_Ocon.jpg" },
+  { slotLabel:"EO · 21", label:"WIN", glowColor:"#0090FF", tags:"HUNGARIAN GP · LIGHTS-TO-FLAG · HELD HAMILTON", title:"Hungarian GP", subtitle:"2021 · ALPINE · ONLY F1 WIN", svgPath:"M 30 160 L 90 160 Q 112 148 130 105 L 190 105 Q 215 122 235 160 L 290 160 Q 315 138 335 104 L 370 104", imageUrl:"/images/drivers/ocon-austria-2021.jpg" },
+  { slotLabel:"EO · 24", label:"ALPINE", glowColor:"#0090FF", tags:"FINAL ALPINE SEASON · POINTS IN DIFFICULT YEAR", title:"Alpine 2024", subtitle:"2024 · ALPINE · FINAL SEASON", svgPath:"M 30 120 Q 60 110 85 85 L 145 85 Q 175 98 195 120 L 255 120 Q 285 105 310 80 L 370 80", imageUrl:"/images/drivers/ocon-silverstone-2024.jpg" },
+  { slotLabel:"EO · 26", label:"HAAS", glowColor:"#B6BABD", tags:"HAAS 2026 · NEW CHAPTER · PROVEN RACE WINNER", title:"Haas 2026", subtitle:"2026 · HAAS · VETERAN PRESENCE", svgPath:"M 30 155 Q 65 140 98 155 L 155 155 Q 185 140 218 155 L 275 155 Q 305 140 340 155 L 375 155", imageUrl:"/images/drivers/ocon-austria-2024.jpg" },
 ]
 
 export const oconScoutingReport: ScoutingReport = {
@@ -2521,7 +2521,7 @@ export const hulkenbergSignature: DrivingSignature = {
 }
 
 export const hulkenbergReelSlides: ReelSlide[] = [
-  { slotLabel:"NH · 10", label:"POLE", glowColor:"#005AFF", tags:"BRAZIL 2010 · POLE ON 3RD F1 START", title:"Brazil Quali", subtitle:"2010 · WILLIAMS · SHOCK POLE SITTER", svgPath:"M 30 160 L 90 160 Q 112 148 130 105 L 190 105 Q 215 122 235 160 L 290 160 Q 315 138 335 104 L 370 104", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/0/0c/Hulkenberg_2010_Canadian_GP.jpg" },
+  { slotLabel:"NH · 10", label:"POLE", glowColor:"#005AFF", tags:"BRAZIL 2010 · POLE ON 3RD F1 START", title:"Brazil Quali", subtitle:"2010 · WILLIAMS · SHOCK POLE SITTER", svgPath:"M 30 160 L 90 160 Q 112 148 130 105 L 190 105 Q 215 122 235 160 L 290 160 Q 315 138 335 104 L 370 104", imageUrl:"/images/drivers/hulkenberg-canada-2010-b.jpg" },
   { slotLabel:"NH · 23", label:"P6 WDC", glowColor:"#B6BABD", tags:"CAREER BEST CHAMPIONSHIP · HAAS ERA REVIVAL", title:"2023 Season", subtitle:"2023 · HAAS · P6 IN WDC", svgPath:"M 30 120 Q 60 110 85 85 L 145 85 Q 175 98 195 120 L 255 120 Q 285 105 310 80 L 370 80", imageUrl:"/images/drivers/hulkenberg-silverstone-2024.jpg" },
   { slotLabel:"NH · 26", label:"AUDI", glowColor:"#BB1C2A", tags:"AUDI ERA · LEAD DRIVER OF NEW GERMAN CONSTRUCTOR", title:"Audi 2026", subtitle:"2026 · AUDI · FRESH START", svgPath:"M 30 150 L 80 150 Q 110 138 130 100 L 175 100 Q 195 115 210 150 L 260 150 Q 290 170 315 200 L 370 200", imageUrl:"/images/drivers/hulkenberg-belgium-2024.jpg" },
 ]
@@ -2560,9 +2560,9 @@ export const bortoletoF1Signature: DrivingSignature = {
 }
 
 export const bortoletoF1ReelSlides: ReelSlide[] = [
-  { slotLabel:"GB · 25", label:"F1 DEBUT", glowColor:"#52E252", tags:"SAUBER/AUDI DEBUT · MELBOURNE 2025", title:"F1 Debut", subtitle:"2025 · SAUBER · START OF F1 CHAPTER", svgPath:"M 30 155 L 88 155 Q 112 140 145 98 L 192 98 Q 215 116 240 155 L 295 155 Q 318 139 348 98 L 375 98", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/1/1e/2025_ImolaGP_Gabriel_Bortoleto.jpg" },
-  { slotLabel:"GB · 26", label:"AUDI", glowColor:"#BB1C2A", tags:"AUDI ERA BEGINS · NEW MANUFACTURER CHAPTER", title:"Audi 2026", subtitle:"2026 · AUDI · GERMAN POWER", svgPath:"M 30 150 L 85 150 Q 108 132 130 92 L 180 88 Q 208 106 230 150 L 288 150 Q 312 133 338 92 L 375 90", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/c/c2/2025_Japan_GP_-_Sauber_-_Gabriel_Bortoleto_-_FP2.jpg" },
-  { slotLabel:"GB · 26", label:"GROWING", glowColor:"#BB1C2A", tags:"BUILDING INTO F1 · BACK-TO-BACK JUNIOR CHAMPION", title:"Development", subtitle:"2026 · AUDI · TARGET: FIRST POINTS", svgPath:"M 30 155 Q 65 140 98 155 L 155 155 Q 185 140 218 155 L 275 155 Q 305 140 340 155 L 375 155", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/0/04/FIA_F1_Austria_2025_Nr._5_Bortoleto.jpg" },
+  { slotLabel:"GB · 25", label:"F1 DEBUT", glowColor:"#52E252", tags:"SAUBER/AUDI DEBUT · MELBOURNE 2025", title:"F1 Debut", subtitle:"2025 · SAUBER · START OF F1 CHAPTER", svgPath:"M 30 155 L 88 155 Q 112 140 145 98 L 192 98 Q 215 116 240 155 L 295 155 Q 318 139 348 98 L 375 98", imageUrl:"/images/drivers/bortoleto-imola-2025.jpg" },
+  { slotLabel:"GB · 26", label:"AUDI", glowColor:"#BB1C2A", tags:"AUDI ERA BEGINS · NEW MANUFACTURER CHAPTER", title:"Audi 2026", subtitle:"2026 · AUDI · GERMAN POWER", svgPath:"M 30 150 L 85 150 Q 108 132 130 92 L 180 88 Q 208 106 230 150 L 288 150 Q 312 133 338 92 L 375 90", imageUrl:"/images/drivers/bortoleto-japan-2025.jpg" },
+  { slotLabel:"GB · 26", label:"GROWING", glowColor:"#BB1C2A", tags:"BUILDING INTO F1 · BACK-TO-BACK JUNIOR CHAMPION", title:"Development", subtitle:"2026 · AUDI · TARGET: FIRST POINTS", svgPath:"M 30 155 Q 65 140 98 155 L 155 155 Q 185 140 218 155 L 275 155 Q 305 140 340 155 L 375 155", imageUrl:"/images/drivers/bortoleto-austria-2025.jpg" },
 ]
 
 export const bortoletoF1ScoutingReport: ScoutingReport = {
@@ -2715,7 +2715,7 @@ export const lawsonSignature: DrivingSignature = {
 
 export const lawsonReelSlides: ReelSlide[] = [
   { slotLabel:"LL · 40", label:"F1 DEBUT", glowColor:"#6692FF", tags:"ZANDVOORT SUB DEBUT · DUTCH GP 2023 · CALLED UP MID-WEEKEND", title:"Dutch GP debut", subtitle:"2023 · ALPHATAURI · RICCIARDO HAND INJURY · LAWSON CALLED UP", svgPath:"M 30 155 Q 65 140 98 155 L 155 155 Q 185 140 218 155 L 275 155 Q 305 140 340 155 L 375 155", imageUrl:"/lawson-dutch-gp-2023.png" },
-  { slotLabel:"LL · 26", label:"RACING BULLS", glowColor:"#6692FF", tags:"RACING BULLS · SENIOR SEAT · 2026 SEASON", title:"Racing Bulls 2026", subtitle:"2026 · RACING BULLS · ALONGSIDE LINDBLAD", svgPath:"M 30 120 Q 60 110 85 85 L 145 85 Q 175 98 195 120 L 255 120 Q 285 105 310 80 L 370 80", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/f/f9/RB_VCARB_03_of_Liam_Lawson_%28028A8054%29.jpg" },
+  { slotLabel:"LL · 26", label:"RACING BULLS", glowColor:"#6692FF", tags:"RACING BULLS · SENIOR SEAT · 2026 SEASON", title:"Racing Bulls 2026", subtitle:"2026 · RACING BULLS · ALONGSIDE LINDBLAD", svgPath:"M 30 120 Q 60 110 85 85 L 145 85 Q 175 98 195 120 L 255 120 Q 285 105 310 80 L 370 80", imageUrl:"/images/drivers/lawson-vcarb-2024.jpg" },
 ]
 
 export const lawsonScoutingReport: ScoutingReport = {
@@ -2768,7 +2768,7 @@ export const perezSignature: DrivingSignature = {
 
 export const perezReelSlides: ReelSlide[] = [
   { slotLabel:"SP · 20", label:"SAKHIR WIN", glowColor:"#FF80C7", tags:"SAKHIR GP · AGAINST ALL ODDS · EMOTIONAL FIRST WIN", title:"Sakhir GP", subtitle:"2020 · RACING POINT · FIRST VICTORY", svgPath:"M 30 160 L 80 160 Q 100 145 115 110 L 160 110 Q 180 125 195 160 L 235 160 Q 255 175 270 205 L 310 205 Q 330 185 350 155 L 380 155", imageUrl:"/images/drivers/perez-racing-point-2020.jpg" },
-  { slotLabel:"SP · 23", label:"P2 WDC", glowColor:"#1E3A8A", tags:"2023 BEST SEASON · P2 IN WDC · 9 RACE WINS", title:"2023 Season", subtitle:"2023 · RED BULL · CAREER BEST CHAMPIONSHIP", svgPath:"M 30 120 Q 60 110 85 85 L 145 85 Q 175 98 195 120 L 255 120 Q 285 105 310 80 L 370 80", imageUrl:"https://upload.wikimedia.org/wikipedia/commons/1/1b/2024-08-25_Motorsport%2C_Formel_1%2C_Gro%C3%9Fer_Preis_der_Niederlande_2024_STP_3758_by_Stepro.jpg" },
+  { slotLabel:"SP · 23", label:"P2 WDC", glowColor:"#1E3A8A", tags:"2023 BEST SEASON · P2 IN WDC · 9 RACE WINS", title:"2023 Season", subtitle:"2023 · RED BULL · CAREER BEST CHAMPIONSHIP", svgPath:"M 30 120 Q 60 110 85 85 L 145 85 Q 175 98 195 120 L 255 120 Q 285 105 310 80 L 370 80", imageUrl:"/images/drivers/perez-netherlands-2024.jpg" },
   { slotLabel:"SP · 26", label:"CADILLAC", glowColor:"#C8A951", tags:"PIONEER · CADILLAC F1 DEBUT · AMERICAN DREAM", title:"Cadillac 2026", subtitle:"2026 · CADILLAC · NEW CONSTRUCTOR PIONEER", svgPath:"M 30 150 L 80 150 Q 110 138 130 100 L 175 100 Q 195 115 210 150 L 260 150 Q 290 170 315 200 L 370 200", imageUrl:"/images/drivers/perez-austria-2024.jpg" },
 ]
 
@@ -2942,7 +2942,7 @@ export const prostReelSlides: ReelSlide[] = [
     subtitle: "1990 · FERRARI 641 · P2 WDC",
     glowColor: "#DC0000",
     svgPath: "M 30 130 Q 66 116 94 86 L 154 86 Q 182 102 202 130 L 260 130 Q 290 114 314 82 L 372 82",
-    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/4/40/Alain_Prost%2C_1990_USA_GP_Phoenix.jpg',
+    imageUrl: '/images/drivers/prost-phoenix-1990.jpg',
   },
   {
     label: "1993 · WDC",
@@ -2987,7 +2987,7 @@ export const schumacher: Driver = {
   bio: "Seven-time world champion and the standard against which all modern F1 greatness is measured. From his single-race debut at Jordan-Spa to five consecutive titles at Ferrari, Schumacher redefined total driver domination — his physical conditioning, engineering precision, and relentless will to win set a template the sport has chased ever since.",
   quote: "",
   quoteContext: "",
-  portraitUrl: 'https://upload.wikimedia.org/wikipedia/commons/f/f0/Michael_Schumacher_2006_Indianapolis.jpg',
+  portraitUrl: '/images/drivers/schumacher-indianapolis-2006.jpg',
 }
 
 export const schumacherStats: DriverStats = {
@@ -3081,7 +3081,7 @@ export const schumacherReelSlides: ReelSlide[] = [
     title: "Belgian GP",
     subtitle: "1992 · BENETTON · MAIDEN FORMULA 1 VICTORY",
     svgPath: "M 30 160 L 85 160 Q 110 145 130 105 L 185 105 Q 210 122 232 160 L 290 160 Q 315 140 340 100 L 375 100",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/5/55/Benetton_B192-05_1992_noBG.jpg",
+    imageUrl: "/images/drivers/schumacher-benetton-1992.jpg",
   },
   {
     slotLabel: "MS · 01",
@@ -3091,7 +3091,7 @@ export const schumacherReelSlides: ReelSlide[] = [
     title: "Adelaide",
     subtitle: "1994 · BENETTON B194 · FIRST WORLD CHAMPIONSHIP",
     svgPath: "M 30 140 Q 65 128 95 95 L 155 95 Q 182 112 200 140 L 255 140 Q 280 156 305 190 L 360 190 Q 380 168 390 140",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/5/50/Michael_Schumacher_-_Benetton_194_at_the_1994_British_Grand_Prix_%2832541379235%29.jpg",
+    imageUrl: "/images/drivers/schumacher-benetton-1994.jpg",
   },
   {
     slotLabel: "MS · 01",
@@ -3101,7 +3101,7 @@ export const schumacherReelSlides: ReelSlide[] = [
     title: "Japanese GP",
     subtitle: "2000 · FERRARI F1-2000 · 1ST FERRARI WDC SINCE SCHECKTER",
     svgPath: "M 30 160 Q 68 148 98 112 L 158 112 Q 188 130 210 160 L 268 160 Q 298 144 322 110 L 374 110",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/0/04/Ferrari_F1-2000_front-right2_2019_Michael_Schumacher_Private_Collection.jpg",
+    imageUrl: "/images/drivers/schumacher-ferrari-2000.jpg",
   },
   {
     slotLabel: "MS · 01",
@@ -3251,7 +3251,7 @@ export const sennaReelSlides: ReelSlide[] = [
     title: "Monaco",
     subtitle: "1984 · TOLEMAN · LED BEFORE FLAG — THE WORLD NOTICED",
     svgPath: "M 30 155 L 80 155 Q 108 143 128 103 L 178 103 Q 205 120 226 155 L 278 155 Q 306 172 330 205 L 372 205",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/4/4c/Ayrton_Senna_Toleman_TG184_1984_British_GP_Brands_Hatch_001.jpg",
+    imageUrl: "/images/drivers/senna-toleman-1984.jpg",
   },
   {
     slotLabel: "AS · 12",
@@ -3271,7 +3271,7 @@ export const sennaReelSlides: ReelSlide[] = [
     title: "1988 Season",
     subtitle: "1988 · McLAREN · DOMINANT CHAMPIONSHIP SEASON",
     svgPath: "M 30 120 L 88 120 Q 112 108 132 70 L 188 70 Q 212 88 234 120 L 290 120 Q 316 138 340 170 L 374 170",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/8/84/Ayrton_Senna_1988_Canada.jpg",
+    imageUrl: "/images/drivers/senna-canada-1988.jpg",
   },
   {
     slotLabel: "AS · 12",
@@ -3454,7 +3454,7 @@ export const raikkonenReelSlides: ReelSlide[] = [
     title: "Brazilian GP",
     subtitle: "2007 · FERRARI · WORLD CHAMPIONSHIP",
     svgPath: "M 30 120 L 88 120 Q 112 108 132 70 L 188 70 Q 212 88 232 120 L 290 120 Q 316 138 340 170 L 374 170",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/8/87/Kimi_Raikkonen_won_2007_Brazil_GP.jpg",
+    imageUrl: "/images/drivers/raikkonen-brazil-2007.jpg",
   },
   {
     slotLabel: "KR · 07",
@@ -3464,7 +3464,7 @@ export const raikkonenReelSlides: ReelSlide[] = [
     title: "Australian GP",
     subtitle: "2013 · LOTUS · EMOTIONAL RETURN TO VICTORY",
     svgPath: "M 30 160 Q 65 148 92 112 L 152 112 Q 178 130 202 160 L 258 160 Q 284 176 308 208 L 372 208",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/d/d3/Kimi_Raikkonen_2013_Malaysia_FP1.jpg",
+    imageUrl: "/images/drivers/raikkonen-malaysia-2013.jpg",
   },
   {
     slotLabel: "KR · 07",
@@ -3474,7 +3474,7 @@ export const raikkonenReelSlides: ReelSlide[] = [
     title: "US Grand Prix",
     subtitle: "2018 · FERRARI · 21ST AND FINAL F1 WIN",
     svgPath: "M 30 140 Q 62 128 88 95 L 148 95 Q 176 112 198 140 L 254 140 Q 282 158 308 190 L 372 190",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/c/c6/FIA_F1_Austria_2018_Nr._7_R%C3%A4ikk%C3%B6nen.jpg",
+    imageUrl: "/images/drivers/raikkonen-austria-2018.jpg",
   },
 ]
 
@@ -3603,7 +3603,7 @@ export const buttonReelSlides: ReelSlide[] = [
     title: "Bahrain GP",
     subtitle: "2009 · BRAWN · DOMINANT SEASON OPENER",
     svgPath: "M 30 140 L 80 140 Q 105 128 125 95 L 178 95 Q 204 112 226 140 L 282 140 Q 308 155 330 185 L 374 185",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/d/d6/Jenson_Button_2009_Bahrain.jpg",
+    imageUrl: "/images/drivers/button-bahrain-2009.jpg",
   },
   {
     slotLabel: "JB · 22",
@@ -3762,7 +3762,7 @@ export const hakkinenReelSlides: ReelSlide[] = [
     title: "Belgian GP",
     subtitle: "2000 · McLAREN · ICONIC OVERTAKE VIA ZONTA",
     svgPath: "M 30 160 L 82 160 Q 108 148 128 108 L 182 108 Q 208 126 228 160 L 284 160 Q 312 176 338 210 L 375 210",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/4/47/2000_Belgian_Grand_Prix.jpg",
+    imageUrl: "/images/drivers/hakkinen-belgium-2000.jpg",
   },
   {
     slotLabel: "MH · 03",
@@ -3772,7 +3772,7 @@ export const hakkinenReelSlides: ReelSlide[] = [
     title: "Japanese GP",
     subtitle: "2000 · McLAREN · COMMANDING SUZUKA VICTORY",
     svgPath: "M 30 150 Q 68 138 98 100 L 155 100 Q 182 118 205 150 L 258 150 Q 282 165 305 198 L 372 198",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/6/62/Mika_H%C3%A4kkinen_2000_United_States_Grand_Prix.jpg",
+    imageUrl: "/images/drivers/hakkinen-usa-2000.jpg",
   },
 ]
 
@@ -3905,7 +3905,7 @@ export const damonHillReelSlides: ReelSlide[] = [
     title: "Hungarian GP",
     subtitle: "1993 · WILLIAMS · FIRST CAREER VICTORY",
     svgPath: "M 30 150 L 82 150 Q 108 138 128 100 L 182 100 Q 208 118 228 150 L 284 150 Q 308 164 330 194 L 374 194",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/b/b0/Damon_Hill_-_Williams_FW15C_at_the_1993_British_Grand_Prix_%2833557427941%29.jpg",
+    imageUrl: "/images/drivers/hill-williams-1993.jpg",
   },
   {
     slotLabel: "DH · 00",
@@ -4235,7 +4235,7 @@ export const nicoRosbergReelSlides: ReelSlide[] = [
     title: "Chinese GP",
     subtitle: "2012 · MERCEDES · FIRST F1 WIN",
     svgPath: "M 30 150 L 82 150 Q 108 138 128 100 L 182 100 Q 208 118 228 150 L 284 150 Q 310 165 335 198 L 374 198",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/1/1b/NRosberg-ITA-2012.jpg",
+    imageUrl: "/images/drivers/rosberg-italy-2012.jpg",
   },
   {
     slotLabel: "NR · 06",
@@ -4245,7 +4245,7 @@ export const nicoRosbergReelSlides: ReelSlide[] = [
     title: "Monaco GP",
     subtitle: "2013 · MERCEDES · MONACO MASTER",
     svgPath: "M 30 140 Q 62 128 88 95 L 148 95 Q 176 112 198 140 L 254 140 Q 282 158 308 192 L 372 192",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/f/fb/2013_Monaco_Grand_Prix_-_Sunday_%2815272209777%29.jpg",
+    imageUrl: "/images/drivers/rosberg-monaco-2013.jpg",
   },
   {
     slotLabel: "NR · 06",
@@ -4255,7 +4255,7 @@ export const nicoRosbergReelSlides: ReelSlide[] = [
     title: "Abu Dhabi GP",
     subtitle: "2016 · MERCEDES W07 · WORLD CHAMPIONSHIP",
     svgPath: "M 30 120 L 88 120 Q 110 108 130 70 L 188 70 Q 212 88 232 120 L 290 120 Q 318 138 342 170 L 374 170",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/f/f3/Nico_Rosberg_2016_Malaysia_1.jpg",
+    imageUrl: "/images/drivers/rosberg-malaysia-2016.jpg",
   },
 ]
 
@@ -4412,7 +4412,7 @@ export const ricciardoReelSlides: ReelSlide[] = [
     headline: "Canadian GP",
     meta: "2014 · RED BULL · MAIDEN F1 VICTORY",
     svgPath: "M 30 155 L 82 155 Q 108 143 128 105 L 182 105 Q 208 122 228 155 L 284 155 Q 310 170 335 202 L 374 202",
-    image: "https://upload.wikimedia.org/wikipedia/commons/1/1f/Daniel_Ricciardo_2014_Singapore_FP2.jpg",
+    image: "/images/drivers/ricciardo-singapore-2014.jpg",
   },
   {
     badge: "FAMOUS OVERTAKE",
@@ -4421,7 +4421,7 @@ export const ricciardoReelSlides: ReelSlide[] = [
     headline: "Monaco GP",
     meta: "2016 · RED BULL · PIT STOP CONTROVERSY",
     svgPath: "M 30 140 Q 62 128 88 95 L 148 95 Q 178 112 200 140 L 256 140 Q 282 158 308 192 L 372 192",
-    image: "https://upload.wikimedia.org/wikipedia/commons/9/95/Ricciardo_Monaco_2016.jpg",
+    image: "/images/drivers/ricciardo-monaco-2016.jpg",
   },
   {
     badge: "MONACO WIN",
@@ -4430,7 +4430,7 @@ export const ricciardoReelSlides: ReelSlide[] = [
     headline: "Monaco GP",
     meta: "2018 · RED BULL · WON FROM POLE WITH BROKEN ERS",
     svgPath: "M 30 120 L 88 120 Q 112 108 132 70 L 188 70 Q 214 88 234 120 L 290 120 Q 318 138 342 170 L 374 170",
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Daniel_Ricciardo%2C_Red_Bull_Racing_F1_Team_%2842837221785%29.jpg/1280px-Daniel_Ricciardo%2C_Red_Bull_Racing_F1_Team_%2842837221785%29.jpg",
+    image: "/images/drivers/ricciardo-redbull-monaco-2018.jpg",
   },
   {
     badge: "MONZA 2021",
@@ -4439,7 +4439,7 @@ export const ricciardoReelSlides: ReelSlide[] = [
     headline: "Italian GP",
     meta: "2021 · McLAREN · THE SHOEY RETURNS TO F1",
     svgPath: "M 30 160 Q 65 148 92 110 L 152 110 Q 178 130 200 160 L 256 160 Q 284 175 308 205 L 372 205",
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Daniel_Ricciardo%2C_Mclaren_F1_Team%2C_British_GP%2C_Silverstone_2021_%2851350323865%29.jpg/1280px-Daniel_Ricciardo%2C_Mclaren_F1_Team%2C_British_GP%2C_Silverstone_2021_%2851350323865%29.jpg",
+    image: "/images/drivers/ricciardo-mclaren-2021.jpg",
   },
 ]
 
@@ -4466,7 +4466,7 @@ export const magnussen: Driver = {
   bio:"Denmark's most combative F1 racer. A debut podium for McLaren in Australia 2014, then eleven seasons across five teams — Haas's first-ever pole at Sao Paulo 2022, a career-best P9 WDC in 2018, and the most F1 starts in history without ever leading a lap. Departed after 2024 for BMW M Motorsport in WEC and IMSA.",
   quote:"",
   quoteContext:"",
-  portraitUrl: 'https://upload.wikimedia.org/wikipedia/commons/5/5b/FIA_F1_Austria_2022_Nr._20_Magnussen.jpg',
+  portraitUrl: '/images/drivers/magnussen-austria-2022.jpg',
 }
 
 export const magnussenStats: DriverStats = { driverId:"magnussen", series:"f1", titles:0, wins:0, poles:1, podiums:1, careerSpan:"2014–2024", racesEntered:187, fastestLaps:3, pointsScored:202 }
@@ -4492,9 +4492,9 @@ export const magnussenSignature: DrivingSignature = {
 }
 
 export const magnussenReelSlides: ReelSlide[] = [
-  { slotLabel:"KM · 14", label:"DEBUT P2", glowColor:"#E8002D", tags:"AUSTRALIA 2014 · McLAREN DEBUT · SECOND PLACE", title:"Australia debut", subtitle:"2014 · McLAREN · P2 ON FIRST F1 START", svgPath:"M 30 160 L 90 160 Q 112 148 130 105 L 190 105 Q 215 122 235 160 L 290 160 Q 315 138 335 104 L 370 104", imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/5/50/Kevin_Magnussen_2014_Singapore_FP2.jpg' },
+  { slotLabel:"KM · 14", label:"DEBUT P2", glowColor:"#E8002D", tags:"AUSTRALIA 2014 · McLAREN DEBUT · SECOND PLACE", title:"Australia debut", subtitle:"2014 · McLAREN · P2 ON FIRST F1 START", svgPath:"M 30 160 L 90 160 Q 112 148 130 105 L 190 105 Q 215 122 235 160 L 290 160 Q 315 138 335 104 L 370 104", imageUrl: '/images/drivers/magnussen-singapore-2014.jpg' },
   { slotLabel:"KM · 22", label:"HAAS POLE", glowColor:"#B6BABD", tags:"SAO PAULO 2022 · FIRST HAAS POLE IN F1 HISTORY", title:"Sao Paulo quali", subtitle:"2022 · HAAS · SAO PAULO POLE POSITION", svgPath:"M 30 120 Q 60 110 85 85 L 145 85 Q 175 98 195 120 L 255 120 Q 285 105 310 80 L 370 80", imageUrl: W + 'FIA_F1_Austria_2022_Nr._20_Magnussen.jpg' },
-  { slotLabel:"KM · 24", label:"FINAL RACE", glowColor:"#B6BABD", tags:"ABU DHABI 2024 · FINAL F1 RACE · MOVE TO WEC", title:"Final F1 race", subtitle:"2024 · HAAS · END OF F1 CHAPTER", svgPath:"M 30 155 Q 65 140 98 155 L 155 155 Q 185 140 218 155 L 275 155 Q 305 140 340 155 L 375 155", imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/5/5b/FIA_F1_Austria_2022_Nr._20_Magnussen.jpg' },
+  { slotLabel:"KM · 24", label:"FINAL RACE", glowColor:"#B6BABD", tags:"ABU DHABI 2024 · FINAL F1 RACE · MOVE TO WEC", title:"Final F1 race", subtitle:"2024 · HAAS · END OF F1 CHAPTER", svgPath:"M 30 155 Q 65 140 98 155 L 155 155 Q 185 140 218 155 L 275 155 Q 305 140 340 155 L 375 155", imageUrl: '/images/drivers/magnussen-austria-2022.jpg' },
 ]
 
 export const magnussenScoutingReport: ScoutingReport = {
@@ -4520,7 +4520,7 @@ export const doohan: Driver = {
   bio:"Son of MotoGP legend Mick Doohan. F3 runner-up 2021, F2 P3 2023. Made his F1 debut for Alpine at Abu Dhabi 2024, then raced the first six rounds of 2025 before being replaced by Franco Colapinto. Remains with Alpine as reserve driver.",
   quote:"",
   quoteContext:"",
-  portraitUrl: 'https://upload.wikimedia.org/wikipedia/commons/8/8d/2025_Japan_GP_-_Alpine_-_Jack_Doohan_-_FP3.jpg',
+  portraitUrl: '/images/drivers/doohan-japan-2025.jpg',
 }
 
 export const doohanStats: DriverStats = { driverId:"doohan", series:"f1", titles:0, wins:0, poles:0, podiums:0, careerSpan:"2024–2025", racesEntered:7, fastestLaps:0, pointsScored:0 }
@@ -4543,8 +4543,8 @@ export const doohanSignature: DrivingSignature = {
 }
 
 export const doohanReelSlides: ReelSlide[] = [
-  { slotLabel:"JD · 24", label:"F1 DEBUT", glowColor:"#0090FF", tags:"ABU DHABI 2024 · ALPINE DEBUT · REPLACING OCON", title:"F1 Debut", subtitle:"2024 · ALPINE · ONE RACE AT ABU DHABI", svgPath:"M 30 160 L 90 160 Q 112 148 130 105 L 190 105 Q 215 122 235 160 L 290 160 Q 315 138 335 104 L 370 104", imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/8/8d/2025_Japan_GP_-_Alpine_-_Jack_Doohan_-_FP3.jpg' },
-  { slotLabel:"JD · 25", label:"ALPINE R1-6", glowColor:"#0090FF", tags:"2025 · ALPINE · ROUNDS 1–6 · REPLACED BY COLAPINTO", title:"Alpine 2025", subtitle:"2025 · ALPINE · SIX ROUNDS BEFORE COLAPINTO", svgPath:"M 30 120 Q 60 110 85 85 L 145 85 Q 175 98 195 120 L 255 120 Q 285 105 310 80 L 370 80", imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/8/8d/2025_Japan_GP_-_Alpine_-_Jack_Doohan_-_FP3.jpg' },
+  { slotLabel:"JD · 24", label:"F1 DEBUT", glowColor:"#0090FF", tags:"ABU DHABI 2024 · ALPINE DEBUT · REPLACING OCON", title:"F1 Debut", subtitle:"2024 · ALPINE · ONE RACE AT ABU DHABI", svgPath:"M 30 160 L 90 160 Q 112 148 130 105 L 190 105 Q 215 122 235 160 L 290 160 Q 315 138 335 104 L 370 104", imageUrl: '/images/drivers/doohan-japan-2025.jpg' },
+  { slotLabel:"JD · 25", label:"ALPINE R1-6", glowColor:"#0090FF", tags:"2025 · ALPINE · ROUNDS 1–6 · REPLACED BY COLAPINTO", title:"Alpine 2025", subtitle:"2025 · ALPINE · SIX ROUNDS BEFORE COLAPINTO", svgPath:"M 30 120 Q 60 110 85 85 L 145 85 Q 175 98 195 120 L 255 120 Q 285 105 310 80 L 370 80", imageUrl: '/images/drivers/doohan-japan-2025.jpg' },
 ]
 
 export const doohanScoutingReport: ScoutingReport = {
@@ -4570,7 +4570,7 @@ export const lindblad: Driver = {
   bio:"The youngest F2 race winner in history (Jeddah 2025, aged 17y 254d) and youngest British driver ever in F1. Red Bull Junior since 2021, F3 4th (2024), F2 6th (2025) — direct promotion to Racing Bulls for 2026 alongside Liam Lawson. Scored points on his F1 debut at the 2026 Australian GP.",
   quote:"",
   quoteContext:"",
-  portraitUrl: 'https://upload.wikimedia.org/wikipedia/commons/0/03/Arvid_Lindblad_at_the_Red_Bull_Fan_Zone_%E2%80%93_Crown_Riverwalk%2C_Melbourne_%28028A7727%29.jpg',
+  portraitUrl: '/images/drivers/lindblad-redbull-2026.jpg',
 }
 
 export const lindbladStats: DriverStats = { driverId:"lindblad", series:"f1", titles:0, wins:0, poles:0, podiums:0, careerSpan:"2026–present", racesEntered:5, fastestLaps:0, pointsScored:4 }
@@ -4593,9 +4593,9 @@ export const lindbladSignature: DrivingSignature = {
 }
 
 export const lindbladReelSlides: ReelSlide[] = [
-  { slotLabel:"AL · 25", label:"F2 YOUNGEST WIN", glowColor:"#6692FF", tags:"JEDDAH F2 2025 · YOUNGEST F2 RACE WINNER IN HISTORY · 17Y 254D", title:"F2 Jeddah", subtitle:"2025 · CAMPOS · YOUNGEST F2 WINNER EVER · 17Y 254D", svgPath:"M 30 160 L 90 160 Q 112 148 130 105 L 190 105 Q 215 122 235 160 L 290 160 Q 315 138 335 104 L 370 104", imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/5/52/FIA_F2_Austria_2025_Nr._4_Lindblad.jpg' },
-  { slotLabel:"AL · 26", label:"F1 DEBUT PTS", glowColor:"#6692FF", tags:"RACING BULLS · 2026 AUSTRALIAN GP · P8 ON DEBUT", title:"F1 Debut", subtitle:"2026 · RACING BULLS · P8 ON DEBUT · YOUNGEST BRITISH F1 DRIVER", svgPath:"M 30 120 Q 60 110 85 85 L 145 85 Q 175 98 195 120 L 255 120 Q 285 105 310 80 L 370 80", imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/0/03/Arvid_Lindblad_at_the_Red_Bull_Fan_Zone_%E2%80%93_Crown_Riverwalk%2C_Melbourne_%28028A7727%29.jpg' },
-  { slotLabel:"AL · 26", label:"RACING BULLS", glowColor:"#6692FF", tags:"RACING BULLS 2026 · ALONGSIDE LAWSON · RED BULL PIPELINE", title:"Racing Bulls 2026", subtitle:"2026 · RACING BULLS · ALONGSIDE LAWSON", svgPath:"M 30 150 L 80 150 Q 110 138 130 100 L 175 100 Q 195 115 210 150 L 260 150 Q 290 170 315 200 L 370 200", imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/0/03/Arvid_Lindblad_at_the_Red_Bull_Fan_Zone_%E2%80%93_Crown_Riverwalk%2C_Melbourne_%28028A7727%29.jpg' },
+  { slotLabel:"AL · 25", label:"F2 YOUNGEST WIN", glowColor:"#6692FF", tags:"JEDDAH F2 2025 · YOUNGEST F2 RACE WINNER IN HISTORY · 17Y 254D", title:"F2 Jeddah", subtitle:"2025 · CAMPOS · YOUNGEST F2 WINNER EVER · 17Y 254D", svgPath:"M 30 160 L 90 160 Q 112 148 130 105 L 190 105 Q 215 122 235 160 L 290 160 Q 315 138 335 104 L 370 104", imageUrl: '/images/drivers/lindblad-austria-f2-2025.jpg' },
+  { slotLabel:"AL · 26", label:"F1 DEBUT PTS", glowColor:"#6692FF", tags:"RACING BULLS · 2026 AUSTRALIAN GP · P8 ON DEBUT", title:"F1 Debut", subtitle:"2026 · RACING BULLS · P8 ON DEBUT · YOUNGEST BRITISH F1 DRIVER", svgPath:"M 30 120 Q 60 110 85 85 L 145 85 Q 175 98 195 120 L 255 120 Q 285 105 310 80 L 370 80", imageUrl: '/images/drivers/lindblad-redbull-2026.jpg' },
+  { slotLabel:"AL · 26", label:"RACING BULLS", glowColor:"#6692FF", tags:"RACING BULLS 2026 · ALONGSIDE LAWSON · RED BULL PIPELINE", title:"Racing Bulls 2026", subtitle:"2026 · RACING BULLS · ALONGSIDE LAWSON", svgPath:"M 30 150 L 80 150 Q 110 138 130 100 L 175 100 Q 195 115 210 150 L 260 150 Q 290 170 315 200 L 370 200", imageUrl: '/images/drivers/lindblad-redbull-2026.jpg' },
 ]
 
 export const lindbladScoutingReport: ScoutingReport = {
