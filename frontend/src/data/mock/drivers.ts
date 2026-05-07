@@ -474,7 +474,7 @@ export const bearmanReelSlides: ReelSlide[] = [
     subtitle: "P7 · 6 POINTS · FERRARI · ZERO PREP",
     svgPath:
       "M 30 162 L 90 160 Q 112 148 130 102 L 180 100 Q 210 116 230 162 L 290 162 Q 310 144 325 104 L 370 100",
-    imageUrl: W + 'FIA_F2_Austria_2024_Nr._3_Bearman.jpg',
+    imageUrl: "/images/drivers/bearman-austria-f2-2024.jpg",
   },
   {
     slotLabel: "MONZA · 2024",
@@ -497,7 +497,7 @@ export const bearmanReelSlides: ReelSlide[] = [
     svgPath:
       "M 30 160 L 90 160 Q 112 148 130 100 L 180 100 Q 210 116 230 160 L 290 160 Q 312 148 330 100 L 370 100",
     circles: [{ cx: 200, cy: 140, r: 5, fill: "#FFD700" }],
-    imageUrl: W + 'F4_Italy_2021_Spielberg_Nr._87_Bearman.jpg',
+    imageUrl: "/images/drivers/bearman-f4-italy-2021.jpg",
   },
 ];
 
@@ -1429,7 +1429,7 @@ export const leclercF2ReelSlides: ReelSlide[] = [
     title: "Monza pole",
     subtitle: "TEMPLE OF SPEED · SINGLE-LAP MASTERY",
     svgPath: "M 30 155 Q 65 140 100 155 L 155 155 Q 185 140 220 155 L 275 155 Q 305 140 340 155 L 375 155",
-    imageUrl: W + 'Charles_Leclerc_Monza_F2_2017.jpg',
+    imageUrl: "/images/drivers/leclerc-monza-f2-2017.jpg",
   },
   {
     slotLabel: "F1 DEBUT",
@@ -1527,7 +1527,7 @@ export const russellF2ReelSlides: ReelSlide[] = [
     title: "Title won",
     subtitle: "ABU DHABI · 2018 F2 CHAMPION · WIRE-TO-WIRE",
     svgPath: "M 30 155 L 85 155 Q 110 140 140 98 L 185 98 Q 208 115 232 155 L 290 155 Q 315 138 345 98 L 375 98",
-    imageUrl: W + 'George_Russell,_FIA_F2_Austria_2018_podium.JPG',
+    imageUrl: "/images/drivers/russell-f2-podium-2018.jpg",
   },
   {
     slotLabel: "BAKU · 2018",
@@ -1537,7 +1537,7 @@ export const russellF2ReelSlides: ReelSlide[] = [
     title: "Baku feature",
     subtitle: "STREET CIRCUIT MASTERY · MERCEDES JR DEVELOPING",
     svgPath: "M 30 150 L 80 150 Q 102 130 125 90 L 170 90 Q 192 108 215 150 L 268 150 Q 290 132 315 90 L 370 90",
-    imageUrl: W + 'FIA_F2_Austria_2018_Nr._08_Russell_(1).jpg',
+    imageUrl: "/images/drivers/russell-f2-austria-2018.jpg",
   },
   {
     slotLabel: "F1 DEBUT",
@@ -1547,7 +1547,7 @@ export const russellF2ReelSlides: ReelSlide[] = [
     title: "F1 debut",
     subtitle: "P12 IN WILLIAMS FW42 · QUALI 19TH → POINTS IN 2020",
     svgPath: "M 30 160 L 90 158 Q 112 145 132 105 L 178 105 Q 202 122 228 160 L 288 160 Q 310 143 340 103 L 375 100",
-    imageUrl: W + 'FIA_F1_Austria_2019_Nr._63_Russell_1.jpg',
+    imageUrl: "/images/drivers/russell-williams-austria-2019.jpg",
   },
 ];
 
@@ -1676,7 +1676,7 @@ export const piastriF2ReelSlides: ReelSlide[] = [
     title: "Alpine limbo",
     subtitle: "DECLARED RESERVE · THEN MCLAREN CONTRACT REVEALED",
     svgPath: "M 30 158 L 88 158 Q 110 143 135 103 L 180 103 Q 205 120 228 158 L 285 158 Q 308 141 338 102 L 375 102",
-    imageUrl: W + 'Oscar_Piastri_Spa.jpg',
+    imageUrl: "/images/drivers/piastri-spa.jpg",
   },
 ];
 
@@ -1797,7 +1797,7 @@ export const bortoletoReelSlides: ReelSlide[] = [
     title: "F3 champion",
     subtitle: "FIRST SOUTH AMERICAN F3 CHAMPION · 164 POINTS",
     svgPath: "M 30 155 Q 65 140 98 155 L 155 155 Q 185 140 218 155 L 275 155 Q 305 140 340 155 L 375 155",
-    imageUrl: W + 'FIA_F3_Austria_2023_Nr._5_Bortoleto_(1).jpg',
+    imageUrl: "/images/drivers/bortoleto-f3-austria-2023.jpg",
   },
   {
     slotLabel: "MONZA · 2024",
@@ -1807,7 +1807,7 @@ export const bortoletoReelSlides: ReelSlide[] = [
     title: "Monza sprint",
     subtitle: "2024 · INVICTA RACING · CHAMPIONSHIP MOMENTUM",
     svgPath: "M 30 155 Q 65 140 98 155 L 155 155 Q 185 140 218 155 L 275 155 Q 305 140 340 155 L 375 155",
-    imageUrl: W + 'FIA_F2_Austria_2024_Nr._10_Bortoleto.jpg',
+    imageUrl: "/images/drivers/bortoleto-f2-austria-2024.jpg",
   },
   {
     slotLabel: "ABU DHABI · 2024",
@@ -2714,7 +2714,7 @@ export const lawsonSignature: DrivingSignature = {
 }
 
 export const lawsonReelSlides: ReelSlide[] = [
-  { slotLabel:"LL · 40", label:"F1 DEBUT", glowColor:"#6692FF", tags:"ZANDVOORT SUB DEBUT · DUTCH GP 2023 · CALLED UP MID-WEEKEND", title:"Dutch GP debut", subtitle:"2023 · ALPHATAURI · RICCIARDO HAND INJURY · LAWSON CALLED UP", svgPath:"M 30 155 Q 65 140 98 155 L 155 155 Q 185 140 218 155 L 275 155 Q 305 140 340 155 L 375 155", imageUrl:"/lawson-dutch-gp-2023.png" },
+  { slotLabel:"LL · 40", label:"F1 DEBUT", glowColor:"#6692FF", tags:"ZANDVOORT SUB DEBUT · DUTCH GP 2023 · CALLED UP MID-WEEKEND", title:"Dutch GP debut", subtitle:"2023 · ALPHATAURI · RICCIARDO HAND INJURY · LAWSON CALLED UP", svgPath:"M 30 155 Q 65 140 98 155 L 155 155 Q 185 140 218 155 L 275 155 Q 305 140 340 155 L 375 155", imageUrl:"/images/drivers/lawson-rb-vcarb-2024.jpg" },
   { slotLabel:"LL · 26", label:"RACING BULLS", glowColor:"#6692FF", tags:"RACING BULLS · SENIOR SEAT · 2026 SEASON", title:"Racing Bulls 2026", subtitle:"2026 · RACING BULLS · ALONGSIDE LINDBLAD", svgPath:"M 30 120 Q 60 110 85 85 L 145 85 Q 175 98 195 120 L 255 120 Q 285 105 310 80 L 370 80", imageUrl:"/images/drivers/lawson-vcarb-2024.jpg" },
 ]
 
@@ -2915,7 +2915,7 @@ export const prostReelSlides: ReelSlide[] = [
     subtitle: "1981 · RENAULT RE30 · FIRST WIN FRANCE GP",
     glowColor: "#FFD700",
     svgPath: "M 30 160 L 80 160 Q 100 145 115 110 L 165 110 Q 185 128 200 160 L 250 160 Q 270 172 285 200 L 330 200 Q 350 178 370 148",
-    imageUrl: W + 'Prost_at_1981_Dutch_Grand_Prix.jpg',
+    imageUrl: "/images/drivers/prost-netherlands-1981.jpg",
   },
   {
     label: "1986 · WDC",
@@ -2924,7 +2924,7 @@ export const prostReelSlides: ReelSlide[] = [
     subtitle: "1985–1986 · McLAREN MP4/2 · 2× WORLD CHAMPION",
     glowColor: "#E8002D",
     svgPath: "M 30 120 Q 60 108 84 78 L 144 78 Q 172 94 192 120 L 252 120 Q 282 104 306 74 L 366 74",
-    imageUrl: W + 'ProstAlain_McLarenMP4-2B_1985.jpg',
+    imageUrl: "/images/drivers/prost-mclaren-1985.jpg",
   },
   {
     label: "SENNA RIVALRY",
@@ -2933,7 +2933,7 @@ export const prostReelSlides: ReelSlide[] = [
     subtitle: "1988–1989 · McLAREN HONDA · 1989 WDC",
     glowColor: "#E8002D",
     svgPath: "M 30 150 L 80 150 Q 108 136 128 98 L 178 98 Q 200 116 216 150 L 268 150 Q 296 168 320 202 L 374 202",
-    imageUrl: W + 'Alain_Prost_(McLaren_Honda),_1988.jpg',
+    imageUrl: "/images/drivers/prost-mclaren-1988.jpg",
   },
   {
     label: "FERRARI ERA",
@@ -2951,7 +2951,7 @@ export const prostReelSlides: ReelSlide[] = [
     subtitle: "1993 · WILLIAMS FW15C · FINAL WORLD TITLE",
     glowColor: "#005AFF",
     svgPath: "M 30 160 Q 68 148 98 112 L 158 112 Q 188 130 210 160 L 268 160 Q 298 144 322 110 L 374 110",
-    imageUrl: W + 'Prost_at_1993_British_Grand_Prix_crop.jpg',
+    imageUrl: "/images/drivers/prost-williams-1993.jpg",
   },
 ]
 
@@ -3111,7 +3111,7 @@ export const schumacherReelSlides: ReelSlide[] = [
     title: "2004 Season",
     subtitle: "2004 · FERRARI F2004 · 13 WINS FROM 18 STARTS",
     svgPath: "M 30 120 L 90 120 Q 112 108 130 68 L 190 68 Q 215 85 235 120 L 292 120 Q 318 138 340 172 L 375 172",
-    imageUrl: W + 'Michael_Schumacher_2004_Monaco.jpg',
+    imageUrl: "/images/drivers/schumacher-ferrari-2004-monaco.jpg",
   },
   {
     slotLabel: "MS · 01",
@@ -3121,7 +3121,7 @@ export const schumacherReelSlides: ReelSlide[] = [
     title: "Bahrain GP",
     subtitle: "2010 · MERCEDES W01 · COMEBACK RACE",
     svgPath: "M 30 155 L 80 155 Q 105 143 125 108 L 175 108 Q 200 124 220 155 L 272 155 Q 298 170 322 200 L 372 200",
-    imageUrl: W + 'Michael_Schumacher_2010_Canada_free_practice.jpg',
+    imageUrl: "/images/drivers/schumacher-mercedes-2010.jpg",
   },
 ]
 
@@ -3281,7 +3281,7 @@ export const sennaReelSlides: ReelSlide[] = [
     title: "Brazilian GP",
     subtitle: "1991 · McLAREN · WON WITH STUCK GEARBOX",
     svgPath: "M 30 160 Q 65 148 92 110 L 152 110 Q 178 128 200 160 L 256 160 Q 284 144 308 112 L 368 112",
-    imageUrl: W + 'Ayrton_Senna_McLaren_MP4-6_1991_United_States.jpg',
+    imageUrl: "/images/drivers/senna-mclaren-1991.jpg",
   },
   {
     slotLabel: "AS · 12",
@@ -3291,7 +3291,7 @@ export const sennaReelSlides: ReelSlide[] = [
     title: "European GP",
     subtitle: "1993 · McLAREN · THE GREATEST OPENING LAP",
     svgPath: "M 30 150 L 85 150 Q 112 136 132 95 L 188 95 Q 215 115 240 150 L 295 150 Q 320 165 345 195 L 375 195",
-    imageUrl: W + "Senna's_McLaren_MP4-8.jpg",
+    imageUrl: "/images/drivers/senna-mclaren-1993.jpg",
   },
 ]
 
@@ -3613,7 +3613,7 @@ export const buttonReelSlides: ReelSlide[] = [
     title: "Brazilian GP",
     subtitle: "2009 · BRAWN · WORLD CHAMPIONSHIP CLINCHED",
     svgPath: "M 30 155 Q 65 143 95 108 L 155 108 Q 182 126 205 155 L 260 155 Q 287 170 312 202 L 374 202",
-    imageUrl: W + 'Jenson_Button_2009_F1_World_Champion_-_Brawn_GP001._British_Grand_Prix,_Silverstone_(50094347526).jpg',
+    imageUrl: "/images/drivers/button-brawn-2009.jpg",
   },
   {
     slotLabel: "JB · 22",
@@ -3623,7 +3623,7 @@ export const buttonReelSlides: ReelSlide[] = [
     title: "Canadian GP",
     subtitle: "2011 · McLAREN · GREATEST COMEBACK WIN",
     svgPath: "M 30 200 L 80 200 Q 105 185 125 148 L 178 148 Q 200 132 220 100 L 268 100 Q 292 88 315 72 L 370 72",
-    imageUrl: W + 'McLaren_mp4-26_Button_2011_Canadian_GP.jpg',
+    imageUrl: "/images/drivers/button-canada-2011.jpg",
   },
   {
     slotLabel: "JB · 22",
@@ -3633,7 +3633,7 @@ export const buttonReelSlides: ReelSlide[] = [
     title: "Hungarian GP",
     subtitle: "2012 · McLAREN · SMOOTH PACE IN MIXED CONDITIONS",
     svgPath: "M 30 150 L 85 150 Q 112 138 132 100 L 188 100 Q 215 118 238 150 L 292 150 Q 318 165 342 196 L 375 196",
-    imageUrl: W + '2012_Canadian_GP_-_Jenson_Button_MP4-27_01.jpg',
+    imageUrl: "/images/drivers/button-mclaren-2012.jpg",
   },
 ]
 
@@ -3742,7 +3742,7 @@ export const hakkinenReelSlides: ReelSlide[] = [
     title: "Japanese GP",
     subtitle: "1998 · McLAREN · CHAMPIONSHIP SEALED AT SUZUKA",
     svgPath: "M 30 140 Q 62 128 88 95 L 148 95 Q 176 112 198 140 L 254 140 Q 282 155 308 185 L 372 185",
-    imageUrl: W + 'Mika_Häkkinen_McLaren_MP4_13_2018_Japanese_Grand_Prix_(43814922580).jpg',
+    imageUrl: "/images/drivers/hakkinen-mclaren-museum-1998.jpg",
   },
   {
     slotLabel: "MH · 03",
@@ -3752,7 +3752,7 @@ export const hakkinenReelSlides: ReelSlide[] = [
     title: "1999 Season",
     subtitle: "1999 · McLAREN · CONSECUTIVE CHAMPIONSHIP",
     svgPath: "M 30 120 L 88 120 Q 110 108 130 70 L 188 70 Q 212 88 232 120 L 290 120 Q 318 138 342 170 L 374 170",
-    imageUrl: W + 'Mika_Hakkinen_1999_Canada.jpg',
+    imageUrl: "/images/drivers/hakkinen-mclaren-1999.jpg",
   },
   {
     slotLabel: "MH · 03",
@@ -3915,7 +3915,7 @@ export const damonHillReelSlides: ReelSlide[] = [
     title: "Adelaide",
     subtitle: "1994 · WILLIAMS FW16 · THE FINAL LAP",
     svgPath: "M 30 140 Q 65 128 92 95 L 152 95 Q 178 112 200 140 L 256 140 Q 284 158 310 192 L 374 192",
-    imageUrl: W + 'Williams_FW16_British_GP_1994.jpg',
+    imageUrl: "/images/drivers/hill-williams-fw16-1994.jpg",
   },
   {
     slotLabel: "DH · 00",
@@ -3925,7 +3925,7 @@ export const damonHillReelSlides: ReelSlide[] = [
     title: "Japanese GP",
     subtitle: "1996 · WILLIAMS FW18 · TITLE CLINCHED",
     svgPath: "M 30 120 L 88 120 Q 112 108 132 70 L 188 70 Q 212 88 232 120 L 290 120 Q 316 138 340 170 L 374 170",
-    imageUrl: W + 'Damon_Hill_-_Imola_1996_(1).jpg',
+    imageUrl: "/images/drivers/hill-williams-1996.jpg",
   },
   {
     slotLabel: "DH · 00",
@@ -3935,7 +3935,7 @@ export const damonHillReelSlides: ReelSlide[] = [
     title: "Hungarian GP",
     subtitle: "1998 · JORDAN · UNEXPECTED FINAL WIN",
     svgPath: "M 30 165 L 82 165 Q 108 152 128 115 L 182 115 Q 208 133 228 165 L 285 165 Q 310 180 335 215 L 374 215",
-    imageUrl: W + 'Damon_Hill_Jordan_198-Mugen_(12173660644).jpg',
+    imageUrl: "/images/drivers/hill-jordan-1998.jpg",
   },
 ]
 
@@ -4095,7 +4095,7 @@ export const mansellReelSlides: ReelSlide[] = [
     title: "British GP",
     subtitle: "1985 · WILLIAMS · FIRST F1 WIN ON HOME SOIL",
     svgPath: "M 30 155 L 82 155 Q 108 143 128 105 L 182 105 Q 208 122 228 155 L 284 155 Q 310 170 335 205 L 374 205",
-    imageUrl: W + '1985_European_GP_Nigel_Mansell01.jpg',
+    imageUrl: "/images/drivers/mansell-williams-1985.jpg",
   },
   {
     slotLabel: "NM · 05",
@@ -4105,7 +4105,7 @@ export const mansellReelSlides: ReelSlide[] = [
     title: "Ferrari Era",
     subtitle: "1989–90 · FERRARI · IL LEONE — 6 WINS",
     svgPath: "M 30 140 Q 62 128 88 95 L 148 95 Q 178 112 200 140 L 256 140 Q 282 155 305 188 L 372 188",
-    imageUrl: W + 'Mansell_in_his_Ferrari_641_-_1990_British_GP.jpg',
+    imageUrl: "/images/drivers/mansell-ferrari-1990.jpg",
   },
   {
     slotLabel: "NM · 05",
@@ -4115,7 +4115,7 @@ export const mansellReelSlides: ReelSlide[] = [
     title: "1992 Season",
     subtitle: "1992 · WILLIAMS FW14B · WORLD CHAMPION",
     svgPath: "M 30 120 L 88 120 Q 112 108 132 70 L 188 70 Q 212 88 232 120 L 290 120 Q 318 138 342 170 L 374 170",
-    imageUrl: W + '-1992-07-12_Nigel_Mansell,_Williams_FW14B,_Woodcote,_1992_British_Grand_Prix,_Silverstone,_England_(1).JPG',
+    imageUrl: "/images/drivers/mansell-williams-1992.jpg",
   },
   {
     slotLabel: "NM · 05",
@@ -4125,7 +4125,7 @@ export const mansellReelSlides: ReelSlide[] = [
     title: "CART 1993",
     subtitle: "1993 · NEWMAN-HAAS · INDYCAR TITLE AS ROOKIE",
     svgPath: "M 30 160 Q 65 148 92 110 L 152 110 Q 178 128 202 160 L 258 160 Q 286 175 310 205 L 374 205",
-    imageUrl: W + 'Mansell_cart.jpg',
+    imageUrl: "/images/drivers/mansell-cart-1993.jpg",
   },
 ]
 
@@ -4493,7 +4493,7 @@ export const magnussenSignature: DrivingSignature = {
 
 export const magnussenReelSlides: ReelSlide[] = [
   { slotLabel:"KM · 14", label:"DEBUT P2", glowColor:"#E8002D", tags:"AUSTRALIA 2014 · McLAREN DEBUT · SECOND PLACE", title:"Australia debut", subtitle:"2014 · McLAREN · P2 ON FIRST F1 START", svgPath:"M 30 160 L 90 160 Q 112 148 130 105 L 190 105 Q 215 122 235 160 L 290 160 Q 315 138 335 104 L 370 104", imageUrl: '/images/drivers/magnussen-singapore-2014.jpg' },
-  { slotLabel:"KM · 22", label:"HAAS POLE", glowColor:"#B6BABD", tags:"SAO PAULO 2022 · FIRST HAAS POLE IN F1 HISTORY", title:"Sao Paulo quali", subtitle:"2022 · HAAS · SAO PAULO POLE POSITION", svgPath:"M 30 120 Q 60 110 85 85 L 145 85 Q 175 98 195 120 L 255 120 Q 285 105 310 80 L 370 80", imageUrl: W + 'FIA_F1_Austria_2022_Nr._20_Magnussen.jpg' },
+  { slotLabel:"KM · 22", label:"HAAS POLE", glowColor:"#B6BABD", tags:"SAO PAULO 2022 · FIRST HAAS POLE IN F1 HISTORY", title:"Sao Paulo quali", subtitle:"2022 · HAAS · SAO PAULO POLE POSITION", svgPath:"M 30 120 Q 60 110 85 85 L 145 85 Q 175 98 195 120 L 255 120 Q 285 105 310 80 L 370 80", imageUrl: "/images/drivers/magnussen-austria-2022.jpg" },
   { slotLabel:"KM · 24", label:"FINAL RACE", glowColor:"#B6BABD", tags:"ABU DHABI 2024 · FINAL F1 RACE · MOVE TO WEC", title:"Final F1 race", subtitle:"2024 · HAAS · END OF F1 CHAPTER", svgPath:"M 30 155 Q 65 140 98 155 L 155 155 Q 185 140 218 155 L 275 155 Q 305 140 340 155 L 375 155", imageUrl: '/images/drivers/magnussen-austria-2022.jpg' },
 ]
 

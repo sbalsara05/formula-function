@@ -3582,13 +3582,13 @@ export const haasEras: TeamEngineeringEra[] = [
     teamId: "haas", label: "Steiner Era", seasons: "2016–2023",
     description: "Gene Haas and Günther Steiner built the team from zero. The VF-16 debut was a shock — points on race day 1. The VF-18 in 2018 reached P5 constructors, the team's high-water mark. Steiner's visible personality made Haas a media fixture. Dismissed after 2023 as results declined.",
     championships: 0, driverNames: "Grosjean · Magnussen · Schumacher · Hülkenberg",
-    imageUrl: W_HAAS + 'Romain_Grosjean_2016_Bahrain_Grand_Prix.jpg',
+    imageUrl: "/images/drivers/grosjean-haas-bahrain-2016.jpg",
   },
   {
     teamId: "haas", label: "Post-Steiner Rebuild", seasons: "2024–present",
     description: "New team principal Ayao Komatsu took over in 2024. Bearman debuted as a substitute in Saudi Arabia 2024, scoring points. The 2025 pairing of Bearman and Ocon brought fresh energy. A team with the infrastructure of a top-five outfit — if the car matches.",
     championships: 0, driverNames: "Magnussen · Hülkenberg · Bearman · Ocon",
-    imageUrl: W_HAAS + 'Kevin_Magnussen_2024_Saudi_Arabian_GP.jpg',
+    imageUrl: "/images/drivers/magnussen-haas-austria-2024.jpg",
   },
 ]
 
@@ -3608,7 +3608,7 @@ export const haasReelSlides: ReelSlide[] = [
     subtitle: "2016 · HAAS VF-16 · GROSJEAN P6",
     glowColor: "#E8002D",
     svgPath: "M 30 160 L 80 160 Q 100 145 115 110 L 165 110 Q 185 128 200 160 L 250 160 Q 270 172 285 200 L 330 200 Q 350 178 370 148",
-    imageUrl: W_HAAS + 'Romain_Grosjean_2016_Australian_Grand_Prix.jpg',
+    imageUrl: "/images/drivers/grosjean-haas-british-2016.jpg",
   },
   {
     label: "P5 WCC",
@@ -3617,7 +3617,7 @@ export const haasReelSlides: ReelSlide[] = [
     subtitle: "2018 · HAAS VF-18 · 93 POINTS",
     glowColor: "#E8002D",
     svgPath: "M 30 120 Q 60 108 84 78 L 144 78 Q 172 94 192 120 L 252 120 Q 282 104 306 74 L 366 74",
-    imageUrl: W_HAAS + 'Kevin_Magnussen_2018_Bahrain_Grand_Prix.jpg',
+    imageUrl: "/images/drivers/magnussen-haas-azerbaijan-2018.jpg",
   },
   {
     label: "NEW ERA",
@@ -3626,7 +3626,7 @@ export const haasReelSlides: ReelSlide[] = [
     subtitle: "2025 · VF-25 · KOMATSU ERA",
     glowColor: "#E8002D",
     svgPath: "M 30 150 L 80 150 Q 110 138 130 100 L 175 100 Q 195 115 210 150 L 260 150 Q 290 170 315 200 L 370 200",
-    imageUrl: W_HAAS + 'Oliver_Bearman_2025_Saudi_Arabian_GP.jpg',
+    imageUrl: "/images/drivers/bearman-austria-2025.jpg",
   },
 ]
 
@@ -3646,7 +3646,7 @@ export const haasIconicCars: TeamIconicCar[] = [
     subtitle: "The debut shock",
     meta: "P8 WCC · GROSJEAN P6 AUSTRALIA",
     peak: false,
-    imageUrl: W_HAAS + 'Haas_VF-16_Grosjean_2016_Australian_GP.jpg',
+    imageUrl: "/images/drivers/grosjean-haas-british-2016.jpg",
   },
   {
     name: "VF-18",
@@ -3654,7 +3654,7 @@ export const haasIconicCars: TeamIconicCar[] = [
     subtitle: "The peak",
     meta: "P5 WCC · 93 POINTS · TEAM BEST",
     peak: true,
-    imageUrl: W_HAAS + 'Kevin_Magnussen_Haas_VF-18_2018_Bahrain.jpg',
+    imageUrl: "/images/drivers/magnussen-haas-azerbaijan-2018.jpg",
   },
   {
     name: "VF-24",
