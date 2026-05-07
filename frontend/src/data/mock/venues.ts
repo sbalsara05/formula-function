@@ -267,7 +267,7 @@ export const spaIconicMoments: VenueIconicMoment[] = [
     conditionBadge: "WIN",
     conditionColor: "#009944",
     glowColor: "#FFD700",
-    imageUrl: "https://cdn-3.motorsport.com/images/mgl/YMxxLXl2/s700/f1-belgian-gp-1992-podium-race-winner-michael-schumacher-benetton.webp",
+    imageUrl: "/images/venues/spa-schumacher-benetton-1992.jpg",
   },
   {
     id: "schumacher-1991",
@@ -277,7 +277,7 @@ export const spaIconicMoments: VenueIconicMoment[] = [
     conditionBadge: "DEBUT",
     conditionColor: "#FFD700",
     glowColor: "#FFD700",
-    imageUrl: "https://cdn-8.motorsport.com/images/amp/2wBVbnp0/s300/michael-schumacher-jordan-191.webp",
+    imageUrl: "/images/venues/spa-schumacher-jordan-1991.jpg",
   },
   {
     id: "pile-up-1998",
@@ -287,7 +287,7 @@ export const spaIconicMoments: VenueIconicMoment[] = [
     conditionBadge: "RAIN",
     conditionColor: "#378ADD",
     glowColor: "#378ADD",
-    imageUrl: "https://cdn-4.motorsport.com/images/amp/2y3rlrv6/s1000/formula-1-belgian-gp-1998-star-2.webp",
+    imageUrl: "/images/venues/spa-1998.jpg",
   },
   {
     id: "hamilton-rosberg-2014",
@@ -297,7 +297,7 @@ export const spaIconicMoments: VenueIconicMoment[] = [
     conditionBadge: "CLASH",
     conditionColor: "#FF1E56",
     glowColor: "#00D2BE",
-    imageUrl: "https://motorsport.nextgen-auto.com/photos/2014/f1/gp-belgium-race/100.jpg",
+    imageUrl: "/images/venues/spa-2014.jpg",
   },
   {
     id: "verstappen-2016",
@@ -307,7 +307,7 @@ export const spaIconicMoments: VenueIconicMoment[] = [
     conditionBadge: "RAIN",
     conditionColor: "#378ADD",
     glowColor: "#0600EF",
-    imageUrl: "https://motorsport.nextgen-auto.com/photos/2016/f1/gp-belgium-race/100.jpg",
+    imageUrl: "/images/venues/spa-2016.jpg",
   },
   {
     id: "non-race-2021",
@@ -317,7 +317,7 @@ export const spaIconicMoments: VenueIconicMoment[] = [
     conditionBadge: "VOID",
     conditionColor: "#FF1E56",
     glowColor: "#378ADD",
-    imageUrl: "https://cdn-2.motorsport.com/images/amp/Yv8Z3qZ0/s1000/formula-1-belgian-gp-2021-max--2.webp",
+    imageUrl: "/images/venues/spa-verstappen-2021.jpg",
   },
 ];
 
@@ -393,12 +393,12 @@ export const monacoHotspots: Hotspot[] = [];
 export const monacoMomentOverlays: MomentOverlay[] = [];
 
 export const monacoIconicMoments: VenueIconicMoment[] = [
-  { id: "senna-monaco-1984",  year: 1984, title: "Senna leads in rain, red-flagged",    teamLabel: "TOLEMAN · LAP 31",         conditionBadge: "WET",    conditionColor: "#378ADD", glowColor: "#FFD700", imageUrl: "https://cdn-8.motorsport.com/images/amp/6xAdZ970/s2/f1-monaco-gp-1984-ayrton-senna.jpg" },
+  { id: "senna-monaco-1984",  year: 1984, title: "Senna leads in rain, red-flagged",    teamLabel: "TOLEMAN · LAP 31",         conditionBadge: "WET",    conditionColor: "#378ADD", glowColor: "#FFD700", imageUrl: "/images/venues/monaco-senna-1984.jpg" },
   { id: "senna-monaco-1992",  year: 1992, title: "Senna 0.215s over Mansell",           teamLabel: "McLAREN · LAST LAP PASS",  conditionBadge: "CLASSIC",conditionColor: "#FFD700", glowColor: "#FFD700", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/5/56/Senna_1992_Monaco.jpg" },
   { id: "panis-1996",         year: 1996, title: "Panis wins as field decimated",       teamLabel: "LIGIER · 3 FINISHERS",     conditionBadge: "CHAOS",  conditionColor: "#FF1E56", glowColor: "#0090FF", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/8/86/Grand_Prix_Monaco96_131954710.jpg" },
   { id: "senna-monaco-1993",  year: 1993, title: "Senna's 6th — all-time record",       teamLabel: "McLAREN · RECORD WIN",     conditionBadge: "LEGEND", conditionColor: "#FFD700", glowColor: "#FFD700", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/2/2f/Tullio_Abbate_and_Ayrton_Senna.jpg" },
-  { id: "verstappen-2023-mon",year: 2023, title: "Verstappen wins from pole",           teamLabel: "RED BULL · P1 STANDINGS",  conditionBadge: "WIN",    conditionColor: "#1E3A8A", glowColor: "#1E3A8A", imageUrl: "https://cdn-6.motorsport.com/images/amp/YXRkONj0/s2/formula-1-monaco-gp-2023-ferna-2.jpg" },
-  { id: "norris-2025-mon",    year: 2025, title: "Norris first Monaco victory",         teamLabel: "McLAREN · FROM POLE",      conditionBadge: "WIN",    conditionColor: "#FF8000", glowColor: "#FF8000", imageUrl: "https://motorsport.nextgen-auto.com/photos/2025/f1/gp-monaco-f1-race/050.jpg" },
+  { id: "verstappen-2023-mon",year: 2023, title: "Verstappen wins from pole",           teamLabel: "RED BULL · P1 STANDINGS",  conditionBadge: "WIN",    conditionColor: "#1E3A8A", glowColor: "#1E3A8A", imageUrl: "/images/venues/monaco-verstappen-2023.jpg" },
+  { id: "norris-2025-mon",    year: 2025, title: "Norris first Monaco victory",         teamLabel: "McLAREN · FROM POLE",      conditionBadge: "WIN",    conditionColor: "#FF8000", glowColor: "#FF8000", imageUrl: "/images/venues/monaco-norris-2025.jpg" },
 ];
 
 export const monacoWeather: VenueWeather = {
@@ -475,9 +475,9 @@ export const monzaIconicMoments: VenueIconicMoment[] = [
   { id: "peterson-1978",   year: 1978, title: "Peterson fatal crash at start",  teamLabel: "LOTUS · LAP 1",            conditionBadge: "TRAGEDY", conditionColor: "#FF1E56", glowColor: "#FFD700", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/2/2b/1978_Italian_Grand_Prix_accident.jpg" },
   { id: "vettel-2008",     year: 2008, title: "Vettel's debut win — Toro Rosso",teamLabel: "TORO ROSSO · SHOCK WIN",   conditionBadge: "DEBUT",   conditionColor: "#C00000", glowColor: "#C00000", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/7/7a/Vettel_Monza_2008.jpg" },
   { id: "leclerc-2019",    year: 2019, title: "Leclerc's maiden F1 victory",    teamLabel: "FERRARI · HOME WIN",       conditionBadge: "WIN",     conditionColor: "#DC0000", glowColor: "#DC0000", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/9/93/Charles_Leclerc_2019_Italian_Grand_Prix.jpg" },
-  { id: "monza-2020",      year: 2020, title: "Gasly shock win · Hamilton pitlane penalty", teamLabel: "ALPHATAURI vs MERCEDES", conditionBadge: "CHAOS", conditionColor: "#FF1E56", glowColor: "#6692FF", imageUrl: "https://cdn-9.motorsport.com/images/amp/YXRGwd70/s2/pierre-gasly-alphatauri-at01-s.jpg" },
-  { id: "hamilton-2017",   year: 2017, title: "Hamilton lights-to-flag victory", teamLabel: "MERCEDES · CHAMPIONSHIP", conditionBadge: "WIN",     conditionColor: "#00D2BE", glowColor: "#00D2BE", imageUrl: "https://cdn-2.motorsport.com/images/amp/6nKVAbl0/s2/f1-italian-gp-2017-race-winner-lewis-hamilton-mercedes-amg-f1-w08-5430968.jpg" },
-  { id: "schumacher-2000", year: 2000, title: "Schumacher wins Monza — tears on podium", teamLabel: "FERRARI · HOME TRIUMPH", conditionBadge: "WIN",     conditionColor: "#DC0000", glowColor: "#DC0000", imageUrl: "https://cdn-2.motorsport.com/images/mgl/68vNVdD2/s800/f1-italian-gp-2000-michael-schumacher-ferrari-f1-2000.webp" },
+  { id: "monza-2020",      year: 2020, title: "Gasly shock win · Hamilton pitlane penalty", teamLabel: "ALPHATAURI vs MERCEDES", conditionBadge: "CHAOS", conditionColor: "#FF1E56", glowColor: "#6692FF", imageUrl: "/images/venues/monza-gasly-2020.jpg" },
+  { id: "hamilton-2017",   year: 2017, title: "Hamilton lights-to-flag victory", teamLabel: "MERCEDES · CHAMPIONSHIP", conditionBadge: "WIN",     conditionColor: "#00D2BE", glowColor: "#00D2BE", imageUrl: "/images/venues/monza-hamilton-2017.jpg" },
+  { id: "schumacher-2000", year: 2000, title: "Schumacher wins Monza — tears on podium", teamLabel: "FERRARI · HOME TRIUMPH", conditionBadge: "WIN",     conditionColor: "#DC0000", glowColor: "#DC0000", imageUrl: "/images/venues/monza-schumacher-2000.jpg" },
 ];
 
 export const monzaWeather: VenueWeather = {
@@ -551,10 +551,10 @@ export const silverstoneHotspots: Hotspot[] = [];
 export const silverstoneMomentOverlays: MomentOverlay[] = [];
 
 export const silverstoneIconicMoments: VenueIconicMoment[] = [
-  { id: "mansell-1987",      year: 1987, title: "Mansell pits then overtakes Piquet — crowd storms track", teamLabel: "WILLIAMS · STOWE CORNER", conditionBadge: "EPIC",    conditionColor: "#005AFF", glowColor: "#005AFF", imageUrl: "https://cdn-1.motorsport.com/images/amp/YMxdQWL2/s1000/f1-british-gp-1987-nelson-piquet-williams-fw11b-leads-nigel-mansell-williams-fw11b-7799787.webp" },
-  { id: "mansell-1992-sil",  year: 1992, title: "Mansell clinches WDC at home — dominant 8th win", teamLabel: "WILLIAMS · CHAMPION",  conditionBadge: "TITLE",   conditionColor: "#005AFF", glowColor: "#005AFF", imageUrl: "https://cdn-6.motorsport.com/images/amp/68v7WpV2/s2/f1-british-gp-1992-nigel-manse.jpg" },
-  { id: "hamilton-2008",     year: 2008, title: "Hamilton charges through the field",  teamLabel: "McLAREN · 9 POSITIONS",     conditionBadge: "WET",     conditionColor: "#378ADD", glowColor: "#C0C0C0", imageUrl: "https://motorsport.nextgen-auto.com/IMG/jpg/WRI2_00002677-230.jpg" },
-  { id: "verstappen-2021-sil",year: 2021, title: "Hamilton vs Verstappen T1 crash",   teamLabel: "RED BULL vs MERCEDES",      conditionBadge: "CRASH",   conditionColor: "#FF1E56", glowColor: "#1E3A8A", imageUrl: "https://cdn-1.motorsport.com/images/amp/0mbGBRz2/s1000/formula-1-british-gp-2021-max--4.webp" },
+  { id: "mansell-1987",      year: 1987, title: "Mansell pits then overtakes Piquet — crowd storms track", teamLabel: "WILLIAMS · STOWE CORNER", conditionBadge: "EPIC",    conditionColor: "#005AFF", glowColor: "#005AFF", imageUrl: "/images/venues/silverstone-mansell-1987.jpg" },
+  { id: "mansell-1992-sil",  year: 1992, title: "Mansell clinches WDC at home — dominant 8th win", teamLabel: "WILLIAMS · CHAMPION",  conditionBadge: "TITLE",   conditionColor: "#005AFF", glowColor: "#005AFF", imageUrl: "/images/venues/silverstone-mansell-1992.jpg" },
+  { id: "hamilton-2008",     year: 2008, title: "Hamilton charges through the field",  teamLabel: "McLAREN · 9 POSITIONS",     conditionBadge: "WET",     conditionColor: "#378ADD", glowColor: "#C0C0C0", imageUrl: "/images/venues/silverstone-hamilton-2008.jpg" },
+  { id: "verstappen-2021-sil",year: 2021, title: "Hamilton vs Verstappen T1 crash",   teamLabel: "RED BULL vs MERCEDES",      conditionBadge: "CRASH",   conditionColor: "#FF1E56", glowColor: "#1E3A8A", imageUrl: "/images/venues/silverstone-2021-crash.jpg" },
   { id: "hamilton-2016",     year: 2016, title: "Hamilton's 4th Silverstone win",      teamLabel: "MERCEDES · DOMINANT",       conditionBadge: "WIN",     conditionColor: "#00D2BE", glowColor: "#00D2BE", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/e/e4/Lewis_Hamilton_2016_British_Grand_Prix_%282%29.jpg" },
   { id: "norris-2024",       year: 2024, title: "Norris first British GP victory",     teamLabel: "McLAREN · HOME WIN",        conditionBadge: "WIN",     conditionColor: "#FF8000", glowColor: "#FF8000", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/4/46/2024_British_Grand_Prix%2C_Norris_%281%29.jpg" },
 ];
@@ -630,12 +630,12 @@ export const suzukaHotspots: Hotspot[] = [];
 export const suzukaMomentOverlays: MomentOverlay[] = [];
 
 export const suzukaIconicMoments: VenueIconicMoment[] = [
-  { id: "senna-prost-1989",   year: 1989, title: "Senna–Prost chicane collision",   teamLabel: "McLAREN vs McLAREN",     conditionBadge: "CLASH",   conditionColor: "#FF1E56", glowColor: "#FFD700", imageUrl: "https://cdn-9.motorsport.com/images/amp/6l9JzEx0/s2/alain-prost-mclaren-ayrton-sen.jpg" },
-  { id: "senna-prost-1990",   year: 1990, title: "Senna takes Prost out at T1",     teamLabel: "McLAREN vs FERRARI",     conditionBadge: "TITLE",   conditionColor: "#FF1E56", glowColor: "#FFD700", imageUrl: "https://cdn-6.motorsport.com/static/img/mgl/4900000/4940000/4945000/4945100/4945186/s8/f1-japanese-gp-1990-alain-prost-ferrari-and-ayrton-senna-mclaren-collide-in-the-first-corn.jpg" },
-  { id: "schumacher-2000-suz",year: 2000, title: "Schumacher wins 3rd title",       teamLabel: "FERRARI · WDC TITLE",    conditionBadge: "TITLE",   conditionColor: "#DC0000", glowColor: "#DC0000", imageUrl: "https://cdn-2.motorsport.com/images/mgl/YpNOO5d0/s1000/michael-schumacher-celebrates--1.jpg" },
-  { id: "verstappen-2022-suz",year: 2022, title: "Verstappen wins WDC in rain",     teamLabel: "RED BULL · POINTS DRAMA",conditionBadge: "RAIN",    conditionColor: "#378ADD", glowColor: "#1E3A8A", imageUrl: "https://motorsport.nextgen-auto.com/photos/2022/f1/gp-japan-suzuka-race/060.jpg" },
-  { id: "hamilton-2015-suz",  year: 2015, title: "Hamilton wins dominant Suzuka race", teamLabel: "MERCEDES · DOMINANT", conditionBadge: "WIN",     conditionColor: "#00D2BE", glowColor: "#00D2BE", imageUrl: "https://motorsport.nextgen-auto.com/photos/2015/f1/gp-japan-race/050.jpg" },
-  { id: "antonelli-2025-suz", year: 2025, title: "Antonelli sets lap record on debut year", teamLabel: "MERCEDES · POLE RECORD", conditionBadge: "RECORD", conditionColor: "#00D2BE", glowColor: "#00D2BE", imageUrl: "https://motorsport.nextgen-auto.com/photos/2025/f1/gp-japon-suzuka-race/050.jpg" },
+  { id: "senna-prost-1989",   year: 1989, title: "Senna–Prost chicane collision",   teamLabel: "McLAREN vs McLAREN",     conditionBadge: "CLASH",   conditionColor: "#FF1E56", glowColor: "#FFD700", imageUrl: "/images/venues/suzuka-senna-prost-1989.jpg" },
+  { id: "senna-prost-1990",   year: 1990, title: "Senna takes Prost out at T1",     teamLabel: "McLAREN vs FERRARI",     conditionBadge: "TITLE",   conditionColor: "#FF1E56", glowColor: "#FFD700", imageUrl: "/images/venues/suzuka-senna-prost-1990.jpg" },
+  { id: "schumacher-2000-suz",year: 2000, title: "Schumacher wins 3rd title",       teamLabel: "FERRARI · WDC TITLE",    conditionBadge: "TITLE",   conditionColor: "#DC0000", glowColor: "#DC0000", imageUrl: "/images/venues/suzuka-schumacher-2000.jpg" },
+  { id: "verstappen-2022-suz",year: 2022, title: "Verstappen wins WDC in rain",     teamLabel: "RED BULL · POINTS DRAMA",conditionBadge: "RAIN",    conditionColor: "#378ADD", glowColor: "#1E3A8A", imageUrl: "/images/venues/suzuka-verstappen-2022.jpg" },
+  { id: "hamilton-2015-suz",  year: 2015, title: "Hamilton wins dominant Suzuka race", teamLabel: "MERCEDES · DOMINANT", conditionBadge: "WIN",     conditionColor: "#00D2BE", glowColor: "#00D2BE", imageUrl: "/images/venues/suzuka-hamilton-2015.jpg" },
+  { id: "antonelli-2025-suz", year: 2025, title: "Antonelli sets lap record on debut year", teamLabel: "MERCEDES · POLE RECORD", conditionBadge: "RECORD", conditionColor: "#00D2BE", glowColor: "#00D2BE", imageUrl: "/images/venues/suzuka-antonelli-2025.jpg" },
 ];
 
 export const suzukaWeather: VenueWeather = {
@@ -709,12 +709,12 @@ export const interlagosHotspots: Hotspot[] = [];
 export const interlagosMomentOverlays: MomentOverlay[] = [];
 
 export const interlagosIconicMoments: VenueIconicMoment[] = [
-  { id: "senna-1991-bra",    year: 1991, title: "Senna wins in Sao Paulo — stuck in 6th gear", teamLabel: "McLAREN · ONE GEAR", conditionBadge: "LEGEND", conditionColor: "#FFD700", glowColor: "#FFD700", imageUrl: "https://www.senna.com/wp-content/uploads/2019/03/91BR_049_com-credito.jpg" },
-  { id: "schumi-1994-bra",   year: 1994, title: "Schumacher wins season opener for Benetton", teamLabel: "BENETTON · START", conditionBadge: "WIN",    conditionColor: "#009944", glowColor: "#009944", imageUrl: "https://cdn-6.motorsport.com/images/mgl/63vMGdEY/s700/michael-schumacher-benetton-b1-1.webp" },
+  { id: "senna-1991-bra",    year: 1991, title: "Senna wins in Sao Paulo — stuck in 6th gear", teamLabel: "McLAREN · ONE GEAR", conditionBadge: "LEGEND", conditionColor: "#FFD700", glowColor: "#FFD700", imageUrl: "/images/venues/interlagos-senna-1991.jpg" },
+  { id: "schumi-1994-bra",   year: 1994, title: "Schumacher wins season opener for Benetton", teamLabel: "BENETTON · START", conditionBadge: "WIN",    conditionColor: "#009944", glowColor: "#009944", imageUrl: "/images/venues/interlagos-schumacher-1994.jpg" },
   { id: "glock-2008-bra",    year: 2008, title: "Glock overtaken — Hamilton wins title",teamLabel: "McLAREN · 1 POINT TITLE", conditionBadge: "TITLE",  conditionColor: "#FF1E56", glowColor: "#C0C0C0", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/8/8b/Hamilton_Brazil_2008_celebrations.jpg" },
-  { id: "vettel-2012-bra",   year: 2012, title: "Vettel hit lap 1 · fights back to P6 for title", teamLabel: "RED BULL · CHAMPION", conditionBadge: "TITLE", conditionColor: "#1E3A8A", glowColor: "#1E3A8A", imageUrl: "https://cdn-3.motorsport.com/images/mgl/6gpb33a0/s8/fernando-alonso-ferrari-f2012--1.jpg" },
-  { id: "verstappen-2022-bra",year: 2022, title: "Verstappen ignores team orders",     teamLabel: "RED BULL vs PEREZ",       conditionBadge: "DRAMA",  conditionColor: "#FF1E56", glowColor: "#1E3A8A", imageUrl: "https://cdn-8.motorsport.com/images/amp/0L1DOzm2/s2/max-verstappen-red-bull-racing.jpg" },
-  { id: "norris-2024-bra",   year: 2024, title: "Norris Sprint win · McLaren title fight", teamLabel: "McLAREN · SPRINT WIN", conditionBadge: "SPRINT", conditionColor: "#FF8000", glowColor: "#FF8000", imageUrl: "https://cdn-7.motorsport.com/images/mgl/0mb4O1G2/s1000/lando-norris-mclaren-mcl38-osc.jpg" },
+  { id: "vettel-2012-bra",   year: 2012, title: "Vettel hit lap 1 · fights back to P6 for title", teamLabel: "RED BULL · CHAMPION", conditionBadge: "TITLE", conditionColor: "#1E3A8A", glowColor: "#1E3A8A", imageUrl: "/images/venues/interlagos-vettel-2012.jpg" },
+  { id: "verstappen-2022-bra",year: 2022, title: "Verstappen ignores team orders",     teamLabel: "RED BULL vs PEREZ",       conditionBadge: "DRAMA",  conditionColor: "#FF1E56", glowColor: "#1E3A8A", imageUrl: "" },
+  { id: "norris-2024-bra",   year: 2024, title: "Norris Sprint win · McLaren title fight", teamLabel: "McLAREN · SPRINT WIN", conditionBadge: "SPRINT", conditionColor: "#FF8000", glowColor: "#FF8000", imageUrl: "/images/venues/interlagos-norris-2024.jpg" },
 ];
 
 export const interlagosWeather: VenueWeather = {
@@ -789,11 +789,11 @@ export const bahrainMomentOverlays: MomentOverlay[] = [];
 
 export const bahrainIconicMoments: VenueIconicMoment[] = [
   { id: "bahrain-2004",       year: 2004, title: "Inaugural Bahrain Grand Prix",     teamLabel: "FERRARI · FIRST RACE",      conditionBadge: "DEBUT",  conditionColor: "#E0891A", glowColor: "#DC0000", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/b/ba/Bahrain_GP_2004_winner%27s_trophy_2019_Michael_Schumacher_Private_Collection.jpg" },
-  { id: "grosjean-2020",      year: 2020, title: "Grosjean fireball — survives",     teamLabel: "HAAS · BARRIER FIRE",        conditionBadge: "FIRE",   conditionColor: "#FF1E56", glowColor: "#FF1E56", imageUrl: "https://cdn-1.motorsport.com/images/mgl/YpNWVaA0/s800/romain-grosjean-haas-f1-emerge-1.webp" },
-  { id: "hamilton-2014-bhr",  year: 2014, title: "Hamilton vs Rosberg last-lap duel",teamLabel: "MERCEDES TEAMMATES",         conditionBadge: "BATTLE", conditionColor: "#00D2BE", glowColor: "#00D2BE", imageUrl: "https://cdn-3.motorsport.com/images/amp/Q68R3QD2/s1000/f1-bahrain-gp-2014-nico-rosber.webp" },
-  { id: "verstappen-2021-bhr",year: 2021, title: "Verstappen vs Hamilton season opener",teamLabel: "RED BULL vs MERCEDES",    conditionBadge: "BATTLE", conditionColor: "#1E3A8A", glowColor: "#1E3A8A", imageUrl: "https://cdn-9.motorsport.com/images/amp/0JBonZy0/s2/formula-1-bahrain-gp-2021-lewi-3.jpg" },
-  { id: "verstappen-2024-bhr",year: 2024, title: "Verstappen dominant in season opener",teamLabel: "RED BULL · FASTEST",      conditionBadge: "WIN",    conditionColor: "#1E3A8A", glowColor: "#1E3A8A", imageUrl: "https://cdn-1.motorsport.com/images/mgl/0ZRQlRN0/s1000/max-verstappen-red-bull-racing.jpg" },
-  { id: "leclerc-2022-bhr",   year: 2022, title: "Leclerc wins season opener — Ferrari lead",teamLabel: "FERRARI · P1",       conditionBadge: "WIN",    conditionColor: "#DC0000", glowColor: "#DC0000", imageUrl: "https://motorsport.nextgen-auto.com/photos/2022/f1/gp-bahrain-sakhir-race/050.jpg" },
+  { id: "grosjean-2020",      year: 2020, title: "Grosjean fireball — survives",     teamLabel: "HAAS · BARRIER FIRE",        conditionBadge: "FIRE",   conditionColor: "#FF1E56", glowColor: "#FF1E56", imageUrl: "/images/venues/bahrain-grosjean-2020-crash.jpg" },
+  { id: "hamilton-2014-bhr",  year: 2014, title: "Hamilton vs Rosberg last-lap duel",teamLabel: "MERCEDES TEAMMATES",         conditionBadge: "BATTLE", conditionColor: "#00D2BE", glowColor: "#00D2BE", imageUrl: "/images/venues/bahrain-hamilton-2014.jpg" },
+  { id: "verstappen-2021-bhr",year: 2021, title: "Verstappen vs Hamilton season opener",teamLabel: "RED BULL vs MERCEDES",    conditionBadge: "BATTLE", conditionColor: "#1E3A8A", glowColor: "#1E3A8A", imageUrl: "/images/venues/bahrain-verstappen-2021.jpg" },
+  { id: "verstappen-2024-bhr",year: 2024, title: "Verstappen dominant in season opener",teamLabel: "RED BULL · FASTEST",      conditionBadge: "WIN",    conditionColor: "#1E3A8A", glowColor: "#1E3A8A", imageUrl: "/images/venues/bahrain-verstappen-2024.jpg" },
+  { id: "leclerc-2022-bhr",   year: 2022, title: "Leclerc wins season opener — Ferrari lead",teamLabel: "FERRARI · P1",       conditionBadge: "WIN",    conditionColor: "#DC0000", glowColor: "#DC0000", imageUrl: "/images/venues/bahrain-leclerc-2022.jpg" },
 ];
 
 export const bahrainWeather: VenueWeather = {
@@ -868,10 +868,10 @@ export const abuDhabiMomentOverlays: MomentOverlay[] = [];
 
 export const abuDhabiIconicMoments: VenueIconicMoment[] = [
   { id: "alonso-2010-petrov", year: 2010, title: "Alonso trapped behind Petrov",    teamLabel: "FERRARI vs RENAULT · TITLE", conditionBadge: "DRAMA",  conditionColor: "#FF1E56", glowColor: "#DC0000", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/9/97/WebberAlonsoGPAbuDabi2010.jpg" },
-  { id: "rosberg-2016-abu",   year: 2016, title: "Rosberg wins title then retires", teamLabel: "MERCEDES · FINAL ACT",       conditionBadge: "TITLE",  conditionColor: "#00D2BE", glowColor: "#00D2BE", imageUrl: "https://cdn-0.motorsport.com/static/img/archive/global/news/3221447/XPB_857093_1200px.jpg" },
-  { id: "masi-2021-abu",      year: 2021, title: "Final-lap restart — Verstappen",  teamLabel: "RED BULL vs MERCEDES",       conditionBadge: "TITLE",  conditionColor: "#FF1E56", glowColor: "#1E3A8A", imageUrl: "https://motorsport.nextgen-auto.com/photos/2021/f1/gp-abudhabi-yasmarina-race/060.jpg" },
-  { id: "norris-2024-abu",    year: 2024, title: "Norris wins finale — McLaren WCC title", teamLabel: "McLAREN · WCC TITLE", conditionBadge: "TITLE",  conditionColor: "#FF8000", glowColor: "#FF8000", imageUrl: "https://motorsport.nextgen-auto.com/photos/2024/f1/gp-abudhabi-yasmarina-race/070.jpg" },
-  { id: "hamilton-2014-abu",  year: 2014, title: "Hamilton wins — clinches 2014 WDC", teamLabel: "MERCEDES · DOUBLE POINTS", conditionBadge: "TITLE",  conditionColor: "#00D2BE", glowColor: "#00D2BE", imageUrl: "https://motorsport.nextgen-auto.com/photos/2014/f1/gp-abudhabi-race/050.jpg" },
+  { id: "rosberg-2016-abu",   year: 2016, title: "Rosberg wins title then retires", teamLabel: "MERCEDES · FINAL ACT",       conditionBadge: "TITLE",  conditionColor: "#00D2BE", glowColor: "#00D2BE", imageUrl: "/images/venues/abu-dhabi-rosberg-2016.jpg" },
+  { id: "masi-2021-abu",      year: 2021, title: "Final-lap restart — Verstappen",  teamLabel: "RED BULL vs MERCEDES",       conditionBadge: "TITLE",  conditionColor: "#FF1E56", glowColor: "#1E3A8A", imageUrl: "/images/venues/abu-dhabi-verstappen-2021.jpg" },
+  { id: "norris-2024-abu",    year: 2024, title: "Norris wins finale — McLaren WCC title", teamLabel: "McLAREN · WCC TITLE", conditionBadge: "TITLE",  conditionColor: "#FF8000", glowColor: "#FF8000", imageUrl: "/images/venues/abu-dhabi-norris-2024.jpg" },
+  { id: "hamilton-2014-abu",  year: 2014, title: "Hamilton wins — clinches 2014 WDC", teamLabel: "MERCEDES · DOUBLE POINTS", conditionBadge: "TITLE",  conditionColor: "#00D2BE", glowColor: "#00D2BE", imageUrl: "/images/venues/abu-dhabi-hamilton-2014.jpg" },
 ];
 
 export const abuDhabiWeather: VenueWeather = {
@@ -942,8 +942,8 @@ export const jeddahHotspots: Hotspot[] = [];
 
 export const jeddahMomentOverlays: MomentOverlay[] = [];
 export const jeddahIconicMoments: VenueIconicMoment[] = [
-  { id: "hamilton-verstappen-2021-jed", year: 2021, title: "Hamilton–Verstappen multi-incident duel", teamLabel: "RED BULL vs MERCEDES", conditionBadge: "BATTLE", conditionColor: "#FF1E56", glowColor: "#1E3A8A", imageUrl: "https://motorsport.nextgen-auto.com/photos/2021/f1/gp-saudi-arabia-jeddah-race/050.jpg" },
-  { id: "verstappen-2022-jed",         year: 2022, title: "Verstappen wins Jeddah from Leclerc",    teamLabel: "RED BULL vs FERRARI",  conditionBadge: "WIN",    conditionColor: "#1E3A8A", glowColor: "#1E3A8A", imageUrl: "https://motorsport.nextgen-auto.com/photos/2022/f1/gp-saudi-arabia-jeddah-race/060.jpg" },
+  { id: "hamilton-verstappen-2021-jed", year: 2021, title: "Hamilton–Verstappen multi-incident duel", teamLabel: "RED BULL vs MERCEDES", conditionBadge: "BATTLE", conditionColor: "#FF1E56", glowColor: "#1E3A8A", imageUrl: "/images/venues/jeddah-2021.jpg" },
+  { id: "verstappen-2022-jed",         year: 2022, title: "Verstappen wins Jeddah from Leclerc",    teamLabel: "RED BULL vs FERRARI",  conditionBadge: "WIN",    conditionColor: "#1E3A8A", glowColor: "#1E3A8A", imageUrl: "/images/venues/jeddah-verstappen-2022.jpg" },
 ];
 
 export const jeddahWeather: VenueWeather = {
@@ -1012,9 +1012,9 @@ export const melbourneHotspots: Hotspot[] = [];
 
 export const melbourneMomentOverlays: MomentOverlay[] = [];
 export const melbourneIconicMoments: VenueIconicMoment[] = [
-  { id: "ralf-2002",     year: 2002, title: "Ralf Schumacher T1 launch crash", teamLabel: "WILLIAMS · LAP 1",     conditionBadge: "CRASH",  conditionColor: "#FF1E56", glowColor: "#005AFF", imageUrl: "https://cdn.motorsport.com/images/mgl/2yZB3dgY/s1000/f1-australian-gp-2002-first-corner-accident-ralf-schumacher-williams-flying-over-rubens-ba.jpg" },
-  { id: "coulthard-2003",year: 2003, title: "Coulthard wins season opener",    teamLabel: "McLAREN · WIN",        conditionBadge: "WIN",    conditionColor: "#C0C0C0", glowColor: "#C0C0C0", imageUrl: "https://cdn-8.motorsport.com/static/img/mgl/0/70000/74000/74500/74540/s700/f1-australian-gp-2003-the-podium-champagne-for-race-winner-david-coulthard.webp" },
-  { id: "leclerc-2024-mel",year: 2024, title: "Leclerc sets Albert Park lap record",teamLabel: "FERRARI · LAP RECORD", conditionBadge: "RECORD", conditionColor: "#DC0000", glowColor: "#DC0000", imageUrl: "https://motorsport.nextgen-auto.com/photos/2024/f1/gp-australie-melbourne-race/060.jpg" },
+  { id: "ralf-2002",     year: 2002, title: "Ralf Schumacher T1 launch crash", teamLabel: "WILLIAMS · LAP 1",     conditionBadge: "CRASH",  conditionColor: "#FF1E56", glowColor: "#005AFF", imageUrl: "/images/venues/albert-park-ralf-2002.jpg" },
+  { id: "coulthard-2003",year: 2003, title: "Coulthard wins season opener",    teamLabel: "McLAREN · WIN",        conditionBadge: "WIN",    conditionColor: "#C0C0C0", glowColor: "#C0C0C0", imageUrl: "/images/venues/albert-park-coulthard-2003.jpg" },
+  { id: "leclerc-2024-mel",year: 2024, title: "Leclerc sets Albert Park lap record",teamLabel: "FERRARI · LAP RECORD", conditionBadge: "RECORD", conditionColor: "#DC0000", glowColor: "#DC0000", imageUrl: "/images/venues/albert-park-leclerc-2024.jpg" },
 ];
 
 export const melbourneWeather: VenueWeather = {
@@ -1085,8 +1085,8 @@ export const shanghaiHotspots: Hotspot[] = [];
 export const shanghaiMomentOverlays: MomentOverlay[] = [];
 export const shanghaiIconicMoments: VenueIconicMoment[] = [
   { id: "hamilton-2008-sha", year: 2008, title: "Hamilton wins in China — title momentum", teamLabel: "McLAREN · DOMINANT",    conditionBadge: "WIN",   conditionColor: "#C0C0C0", glowColor: "#C0C0C0", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/a/a2/Lewis_Hamilton_2008_China.jpg" },
-  { id: "hamilton-2011-sha", year: 2011, title: "Hamilton's 3-stop masterclass beats Vettel", teamLabel: "McLAREN · STRATEGY WIN", conditionBadge: "WIN",  conditionColor: "#C0C0C0", glowColor: "#C0C0C0", imageUrl: "https://motorsport.nextgen-auto.com/photos/2011/f1/gp-china-race/050.jpg" },
-  { id: "verstappen-2024-sha",year: 2024, title: "Verstappen wins sprint and race double", teamLabel: "RED BULL · DOUBLE WIN",  conditionBadge: "WIN",   conditionColor: "#1E3A8A", glowColor: "#1E3A8A", imageUrl: "https://cdn-5.motorsport.com/images/amp/6O1dP3G2/s2/max-verstappen-red-bull-racing.jpg" },
+  { id: "hamilton-2011-sha", year: 2011, title: "Hamilton's 3-stop masterclass beats Vettel", teamLabel: "McLAREN · STRATEGY WIN", conditionBadge: "WIN",  conditionColor: "#C0C0C0", glowColor: "#C0C0C0", imageUrl: "/images/venues/shanghai-hamilton-2011.jpg" },
+  { id: "verstappen-2024-sha",year: 2024, title: "Verstappen wins sprint and race double", teamLabel: "RED BULL · DOUBLE WIN",  conditionBadge: "WIN",   conditionColor: "#1E3A8A", glowColor: "#1E3A8A", imageUrl: "/images/venues/shanghai-verstappen-2024.jpg" },
 ];
 
 export const shanghaiWeather: VenueWeather = {
@@ -1156,8 +1156,8 @@ export const miamiHotspots: Hotspot[] = [];
 
 export const miamiMomentOverlays: MomentOverlay[] = [];
 export const miamiIconicMoments: VenueIconicMoment[] = [
-  { id: "verstappen-2022-mia", year: 2022, title: "Verstappen wins inaugural Miami GP",   teamLabel: "RED BULL · MAIDEN WIN",    conditionBadge: "WIN",    conditionColor: "#1E3A8A", glowColor: "#1E3A8A", imageUrl: "https://motorsport.nextgen-auto.com/photos/2022/f1/gp-miami-race/050.jpg" },
-  { id: "norris-2024-mia",     year: 2024, title: "Norris wins Miami — first F1 victory", teamLabel: "McLAREN · BREAKTHROUGH",   conditionBadge: "WIN",    conditionColor: "#FF8000", glowColor: "#FF8000", imageUrl: "https://motorsport.nextgen-auto.com/photos/2024/f1/gp-miami-race/050.jpg" },
+  { id: "verstappen-2022-mia", year: 2022, title: "Verstappen wins inaugural Miami GP",   teamLabel: "RED BULL · MAIDEN WIN",    conditionBadge: "WIN",    conditionColor: "#1E3A8A", glowColor: "#1E3A8A", imageUrl: "/images/venues/miami-verstappen-2022.jpg" },
+  { id: "norris-2024-mia",     year: 2024, title: "Norris wins Miami — first F1 victory", teamLabel: "McLAREN · BREAKTHROUGH",   conditionBadge: "WIN",    conditionColor: "#FF8000", glowColor: "#FF8000", imageUrl: "/images/venues/miami-norris-2024.jpg" },
 ];
 
 export const miamiWeather: VenueWeather = {
@@ -1225,9 +1225,9 @@ export const imolaHotspots: Hotspot[] = [];
 
 export const imolaMomentOverlays: MomentOverlay[] = [];
 export const imolaIconicMoments: VenueIconicMoment[] = [
-  { id: "senna-1994-imola",    year: 1994, title: "Senna fatal crash at Tamburello",     teamLabel: "WILLIAMS · LAP 7",         conditionBadge: "TRAGEDY", conditionColor: "#FF1E56", glowColor: "#FFD700", imageUrl: "https://www.ayrton-senna.net/wp-content/uploads/2016/05/Ayrton-Senna-Imola-1994.jpg" },
+  { id: "senna-1994-imola",    year: 1994, title: "Senna fatal crash at Tamburello",     teamLabel: "WILLIAMS · LAP 7",         conditionBadge: "TRAGEDY", conditionColor: "#FF1E56", glowColor: "#FFD700", imageUrl: "/images/venues/imola-senna-1994.jpg" },
   { id: "schumacher-2006-imola",year: 2006, title: "Schumacher's last Imola win",        teamLabel: "FERRARI · HOME RACE",      conditionBadge: "WIN",     conditionColor: "#DC0000", glowColor: "#DC0000", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/4/4e/San_Marino_GP_2006_winner%27s_trophy1_2019_Michael_Schumacher_Private_Collection.jpg" },
-  { id: "verstappen-2022-imola",year: 2022, title: "Verstappen dominates sprint weekend",teamLabel: "RED BULL · DOUBLE WIN",    conditionBadge: "SPRINT",  conditionColor: "#1E3A8A", glowColor: "#1E3A8A", imageUrl: "https://cdn-5.motorsport.com/images/mgl/0mbDxo52/s8/charles-leclerc-ferrari-f1-75--1.jpg" },
+  { id: "verstappen-2022-imola",year: 2022, title: "Verstappen dominates sprint weekend",teamLabel: "RED BULL · DOUBLE WIN",    conditionBadge: "SPRINT",  conditionColor: "#1E3A8A", glowColor: "#1E3A8A", imageUrl: "/images/venues/imola-verstappen-2022.jpg" },
 ];
 
 export const imolaWeather: VenueWeather = {
@@ -1298,9 +1298,9 @@ export const montrealHotspots: Hotspot[] = [];
 
 export const montrealMomentOverlays: MomentOverlay[] = [];
 export const montrealIconicMoments: VenueIconicMoment[] = [
-  { id: "villeneuve-1978-mon", year: 1978, title: "Gilles Villeneuve's maiden F1 win",    teamLabel: "FERRARI · HOME DEBUT",      conditionBadge: "WIN",    conditionColor: "#DC0000", glowColor: "#DC0000", imageUrl: "https://cdn-3.motorsport.com/images/amp/YW9Nbke0/s2/f1-canadian-gp-1978-gilles-villeneuve-ferrari-312t3.jpg" },
-  { id: "button-2011-mon",     year: 2011, title: "Button wins after 4 safety cars",      teamLabel: "McLAREN · EPIC RACE",        conditionBadge: "WET",    conditionColor: "#378ADD", glowColor: "#C0C0C0", imageUrl: "https://cdn-4.motorsport.com/images/amp/0RrW9OB0/s1000/jenson-button-mclaren-mp4-26-m.webp" },
-  { id: "vettel-2019-mon",     year: 2019, title: "Hamilton wins — Vettel 5s penalty",    teamLabel: "FERRARI vs MERCEDES",        conditionBadge: "PENALTY",conditionColor: "#FF1E56", glowColor: "#00D2BE", imageUrl: "https://cdn-6.motorsport.com/images/amp/0Rr3zXV0/s2/formula-1-canadian-gp-2019-rac-3.jpg" },
+  { id: "villeneuve-1978-mon", year: 1978, title: "Gilles Villeneuve's maiden F1 win",    teamLabel: "FERRARI · HOME DEBUT",      conditionBadge: "WIN",    conditionColor: "#DC0000", glowColor: "#DC0000", imageUrl: "/images/venues/canada-villeneuve-1978.jpg" },
+  { id: "button-2011-mon",     year: 2011, title: "Button wins after 4 safety cars",      teamLabel: "McLAREN · EPIC RACE",        conditionBadge: "WET",    conditionColor: "#378ADD", glowColor: "#C0C0C0", imageUrl: "/images/venues/canada-button-2011.jpg" },
+  { id: "vettel-2019-mon",     year: 2019, title: "Hamilton wins — Vettel 5s penalty",    teamLabel: "FERRARI vs MERCEDES",        conditionBadge: "PENALTY",conditionColor: "#FF1E56", glowColor: "#00D2BE", imageUrl: "/images/venues/canada-vettel-2019.jpg" },
   { id: "alonso-2005-mon",     year: 2005, title: "Alonso leads every lap — dominant",    teamLabel: "RENAULT · MASTERCLASS",      conditionBadge: "WIN",    conditionColor: "#FFD700", glowColor: "#FFD700", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/1/14/Lap4_Canada2005.jpg" },
 ];
 
@@ -1373,10 +1373,10 @@ export const barcelonaHotspots: Hotspot[] = [];
 
 export const barcelonaMomentOverlays: MomentOverlay[] = [];
 export const barcelonaIconicMoments: VenueIconicMoment[] = [
-  { id: "senna-mansell-1991-bar", year: 1991, title: "Senna pushes Mansell to the line", teamLabel: "McLAREN · LAST CORNER",    conditionBadge: "CLASSIC", conditionColor: "#FFD700", glowColor: "#FFD700", imageUrl: "https://cdn-5.motorsport.com/images/mgl/YW7WmP5Y/s1000/nigel-mansell-williams-ayrton--1.jpg" },
-  { id: "verstappen-2016-bar",    year: 2016, title: "Verstappen youngest F1 winner — Mercedes crash", teamLabel: "RED BULL · 18 YEARS OLD", conditionBadge: "DEBUT", conditionColor: "#1E3A8A", glowColor: "#1E3A8A", imageUrl: "https://motorsport.nextgen-auto.com/photos/2016/f1/gp-spain-race/060.jpg" },
-  { id: "hamilton-2017-bar",      year: 2017, title: "Hamilton dominant in Spain",       teamLabel: "MERCEDES · LIGHTS TO FLAG", conditionBadge: "WIN",     conditionColor: "#00D2BE", glowColor: "#00D2BE", imageUrl: "https://motorsport.nextgen-auto.com/photos/2017/f1/gp-spain-race/050.jpg" },
-  { id: "verstappen-2021-bar",    year: 2021, title: "Verstappen wins — Hamilton pits",  teamLabel: "RED BULL vs MERCEDES",      conditionBadge: "WIN",     conditionColor: "#1E3A8A", glowColor: "#1E3A8A", imageUrl: "https://motorsport.nextgen-auto.com/photos/2021/f1/gp-spain-barcelona-race/050.jpg" },
+  { id: "senna-mansell-1991-bar", year: 1991, title: "Senna pushes Mansell to the line", teamLabel: "McLAREN · LAST CORNER",    conditionBadge: "CLASSIC", conditionColor: "#FFD700", glowColor: "#FFD700", imageUrl: "/images/venues/barcelona-senna-mansell-1991.jpg" },
+  { id: "verstappen-2016-bar",    year: 2016, title: "Verstappen youngest F1 winner — Mercedes crash", teamLabel: "RED BULL · 18 YEARS OLD", conditionBadge: "DEBUT", conditionColor: "#1E3A8A", glowColor: "#1E3A8A", imageUrl: "/images/venues/barcelona-verstappen-2016.jpg" },
+  { id: "hamilton-2017-bar",      year: 2017, title: "Hamilton dominant in Spain",       teamLabel: "MERCEDES · LIGHTS TO FLAG", conditionBadge: "WIN",     conditionColor: "#00D2BE", glowColor: "#00D2BE", imageUrl: "/images/venues/barcelona-hamilton-2017.jpg" },
+  { id: "verstappen-2021-bar",    year: 2021, title: "Verstappen wins — Hamilton pits",  teamLabel: "RED BULL vs MERCEDES",      conditionBadge: "WIN",     conditionColor: "#1E3A8A", glowColor: "#1E3A8A", imageUrl: "/images/venues/barcelona-verstappen-2021.jpg" },
 ];
 
 export const barcelonaWeather: VenueWeather = {
@@ -1448,9 +1448,9 @@ export const hungaroringHotspots: Hotspot[] = [];
 export const hungaroringMomentOverlays: MomentOverlay[] = [];
 export const hungaroringIconicMoments: VenueIconicMoment[] = [
   { id: "alonso-2003-hun",    year: 2003, title: "Alonso youngest-ever race winner",     teamLabel: "RENAULT · 22 YEARS OLD",     conditionBadge: "RECORD", conditionColor: "#FFD700", glowColor: "#FFD700", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/1/1c/Renault_in_the_last_corner_at_the_2003_Hungarian_Grand_Prix.jpg" },
-  { id: "hamilton-2020-hun",  year: 2020, title: "Hamilton sets all-time lap record",    teamLabel: "MERCEDES · P1 SOLO",         conditionBadge: "RECORD", conditionColor: "#00D2BE", glowColor: "#00D2BE", imageUrl: "https://motorsport.nextgen-auto.com/photos/2020/f1/gp-hungary-hungaroring-race/050.jpg" },
-  { id: "ocon-2021-hun",      year: 2021, title: "Ocon shock win for Alpine",            teamLabel: "ALPINE · UNEXPECTED WIN",    conditionBadge: "SHOCK",  conditionColor: "#0090FF", glowColor: "#0090FF", imageUrl: "https://motorsport.nextgen-auto.com/photos/2021/f1/gp-hungary-hungaroring-race/050.jpg" },
-  { id: "vettel-2010-hun",    year: 2010, title: "Vettel wins from pole — title race",   teamLabel: "RED BULL · DOMINANT",        conditionBadge: "WIN",    conditionColor: "#1E3A8A", glowColor: "#1E3A8A", imageUrl: "https://motorsport.nextgen-auto.com/photos/2010/f1/gp-hungary-race/050.jpg" },
+  { id: "hamilton-2020-hun",  year: 2020, title: "Hamilton sets all-time lap record",    teamLabel: "MERCEDES · P1 SOLO",         conditionBadge: "RECORD", conditionColor: "#00D2BE", glowColor: "#00D2BE", imageUrl: "/images/venues/hungary-hamilton-2020.jpg" },
+  { id: "ocon-2021-hun",      year: 2021, title: "Ocon shock win for Alpine",            teamLabel: "ALPINE · UNEXPECTED WIN",    conditionBadge: "SHOCK",  conditionColor: "#0090FF", glowColor: "#0090FF", imageUrl: "/images/venues/hungary-ocon-2021.jpg" },
+  { id: "vettel-2010-hun",    year: 2010, title: "Vettel wins from pole — title race",   teamLabel: "RED BULL · DOMINANT",        conditionBadge: "WIN",    conditionColor: "#1E3A8A", glowColor: "#1E3A8A", imageUrl: "/images/venues/hungary-vettel-2010.jpg" },
 ];
 
 export const hungaroringWeather: VenueWeather = {
@@ -1519,9 +1519,9 @@ export const zandvoortHotspots: Hotspot[] = [];
 
 export const zandvoortMomentOverlays: MomentOverlay[] = [];
 export const zandvoortIconicMoments: VenueIconicMoment[] = [
-  { id: "verstappen-2021-zan", year: 2021, title: "Verstappen wins Dutch GP return",   teamLabel: "RED BULL · HOME WIN",    conditionBadge: "WIN",    conditionColor: "#FF6B00", glowColor: "#FF6B00", imageUrl: "https://motorsport.nextgen-auto.com/photos/2021/f1/gp-netherlands-zandvoort-race/070.jpg" },
-  { id: "verstappen-2022-zan", year: 2022, title: "Verstappen lights to flag at home", teamLabel: "RED BULL · DOMINANT",    conditionBadge: "WIN",    conditionColor: "#FF6B00", glowColor: "#FF6B00", imageUrl: "https://motorsport.nextgen-auto.com/photos/2022/f1/gp-netherlands-zandvoort-race/070.jpg" },
-  { id: "verstappen-2023-zan", year: 2023, title: "Verstappen hat-trick in orange sea",teamLabel: "RED BULL · HAT-TRICK",   conditionBadge: "RECORD", conditionColor: "#FF6B00", glowColor: "#FF6B00", imageUrl: "https://motorsport.nextgen-auto.com/photos/2023/f1/gp-netherlands-zandvoort-race/070.jpg" },
+  { id: "verstappen-2021-zan", year: 2021, title: "Verstappen wins Dutch GP return",   teamLabel: "RED BULL · HOME WIN",    conditionBadge: "WIN",    conditionColor: "#FF6B00", glowColor: "#FF6B00", imageUrl: "/images/venues/zandvoort-verstappen-2021.jpg" },
+  { id: "verstappen-2022-zan", year: 2022, title: "Verstappen lights to flag at home", teamLabel: "RED BULL · DOMINANT",    conditionBadge: "WIN",    conditionColor: "#FF6B00", glowColor: "#FF6B00", imageUrl: "/images/venues/zandvoort-verstappen-2022.jpg" },
+  { id: "verstappen-2023-zan", year: 2023, title: "Verstappen hat-trick in orange sea",teamLabel: "RED BULL · HAT-TRICK",   conditionBadge: "RECORD", conditionColor: "#FF6B00", glowColor: "#FF6B00", imageUrl: "/images/venues/zandvoort-verstappen-2023.jpg" },
 ];
 
 export const zandvoortWeather: VenueWeather = {
@@ -1590,10 +1590,10 @@ export const bakuHotspots: Hotspot[] = [];
 
 export const bakuMomentOverlays: MomentOverlay[] = [];
 export const bakuIconicMoments: VenueIconicMoment[] = [
-  { id: "verstappen-tyre-2021", year: 2021, title: "Verstappen tyre failure on straight",   teamLabel: "RED BULL · BLOWOUT",     conditionBadge: "BLOWOUT", conditionColor: "#FF1E56", glowColor: "#1E3A8A", imageUrl: "https://cdn-9.motorsport.com/images/amp/254Brnk0/s1000/max-verstappen-red-bull-racing.webp" },
-  { id: "hamilton-button-2021", year: 2021, title: "Hamilton magic button restart error",   teamLabel: "MERCEDES · SELF INFLICTED",conditionBadge: "ERROR",  conditionColor: "#FF1E56", glowColor: "#00D2BE", imageUrl: "https://motorsport.nextgen-auto.com/photos/2021/f1/gp-azerbaijan-baku-race/060.jpg" },
-  { id: "leclerc-2022-bak",     year: 2022, title: "Leclerc retirement from race lead",     teamLabel: "FERRARI · ENGINE FAILURE",conditionBadge: "DNF",    conditionColor: "#DC0000", glowColor: "#DC0000", imageUrl: "https://cdn-5.motorsport.com/images/amp/6l98j180/s1000/formula-1-azerbaijan-gp-2022-c-2.webp" },
-  { id: "perez-2021-bak",       year: 2021, title: "Pérez wins chaotic Baku GP",            teamLabel: "RED BULL · STRATEGY",    conditionBadge: "WIN",    conditionColor: "#1E3A8A", glowColor: "#1E3A8A", imageUrl: "https://cdn-6.motorsport.com/images/amp/YW7ylOVY/s2/formula-1-azerbaijan-gp-2021-s-5.jpg" },
+  { id: "verstappen-tyre-2021", year: 2021, title: "Verstappen tyre failure on straight",   teamLabel: "RED BULL · BLOWOUT",     conditionBadge: "BLOWOUT", conditionColor: "#FF1E56", glowColor: "#1E3A8A", imageUrl: "" },
+  { id: "hamilton-button-2021", year: 2021, title: "Hamilton magic button restart error",   teamLabel: "MERCEDES · SELF INFLICTED",conditionBadge: "ERROR",  conditionColor: "#FF1E56", glowColor: "#00D2BE", imageUrl: "/images/venues/baku-hamilton-2021.jpg" },
+  { id: "leclerc-2022-bak",     year: 2022, title: "Leclerc retirement from race lead",     teamLabel: "FERRARI · ENGINE FAILURE",conditionBadge: "DNF",    conditionColor: "#DC0000", glowColor: "#DC0000", imageUrl: "/images/venues/baku-leclerc-2022.jpg" },
+  { id: "perez-2021-bak",       year: 2021, title: "Pérez wins chaotic Baku GP",            teamLabel: "RED BULL · STRATEGY",    conditionBadge: "WIN",    conditionColor: "#1E3A8A", glowColor: "#1E3A8A", imageUrl: "/images/venues/baku-perez-2021.jpg" },
 ];
 
 export const bakuWeather: VenueWeather = {
@@ -1666,7 +1666,7 @@ export const singaporeMomentOverlays: MomentOverlay[] = [];
 export const singaporeIconicMoments: VenueIconicMoment[] = [
   { id: "crashgate-2008", year: 2008, title: "Piquet Jr. deliberate crash — crashgate", teamLabel: "RENAULT · CONSPIRACY",   conditionBadge: "SCANDAL", conditionColor: "#FF1E56", glowColor: "#FF1E56", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/f/f3/2008_Singapore_Grand_Prix_Renault_Nelson_Piquet_Jr_crash.jpg" },
   { id: "vettel-2012-sin",year: 2012, title: "Vettel wins — Hamilton DNF from lead",   teamLabel: "RED BULL · STRATEGY",    conditionBadge: "WIN",     conditionColor: "#1E3A8A", glowColor: "#1E3A8A", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/2/23/2012_Singapore_GP_-_Vettel.jpg" },
-  { id: "sainz-2023-sin", year: 2023, title: "Sainz breaks Red Bull streak at Marina Bay", teamLabel: "FERRARI · RED BULL STOPPER", conditionBadge: "WIN", conditionColor: "#DC0000", glowColor: "#DC0000", imageUrl: "https://motorsport.nextgen-auto.com/photos/2023/f1/gp-singapore-marina-bay-race/060.jpg" },
+  { id: "sainz-2023-sin", year: 2023, title: "Sainz breaks Red Bull streak at Marina Bay", teamLabel: "FERRARI · RED BULL STOPPER", conditionBadge: "WIN", conditionColor: "#DC0000", glowColor: "#DC0000", imageUrl: "/images/venues/singapore-sainz-2023.jpg" },
 ];
 
 export const singaporeWeather: VenueWeather = {
@@ -1738,7 +1738,7 @@ export const cotaMomentOverlays: MomentOverlay[] = [];
 export const cotaIconicMoments: VenueIconicMoment[] = [
   { id: "hamilton-2012-cota", year: 2012, title: "Inaugural US GP — Hamilton wins",    teamLabel: "McLAREN · FIRST RACE",    conditionBadge: "WIN",    conditionColor: "#C0C0C0", glowColor: "#C0C0C0", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/5/52/US_Grand_Prix_2012_%288227888953%29.jpg" },
   { id: "vettel-2013-cota",   year: 2013, title: "Vettel wins 4th title in Texas",    teamLabel: "RED BULL · WDC TITLE",    conditionBadge: "TITLE",  conditionColor: "#1E3A8A", glowColor: "#1E3A8A", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/6/61/Podium_%2811121874996%29.jpg" },
-  { id: "verstappen-2021-cota",year: 2021, title: "Verstappen holds off Hamilton to win thriller", teamLabel: "RED BULL · CHAMPIONSHIP LEAD", conditionBadge: "WIN", conditionColor: "#1E3A8A", glowColor: "#1E3A8A", imageUrl: "https://motorsport.nextgen-auto.com/photos/2021/f1/gp-usa-austin-race/060.jpg" },
+  { id: "verstappen-2021-cota",year: 2021, title: "Verstappen holds off Hamilton to win thriller", teamLabel: "RED BULL · CHAMPIONSHIP LEAD", conditionBadge: "WIN", conditionColor: "#1E3A8A", glowColor: "#1E3A8A", imageUrl: "/images/venues/cota-verstappen-2021.jpg" },
 ];
 
 export const cotaWeather: VenueWeather = {
@@ -1809,8 +1809,8 @@ export const mexicoHotspots: Hotspot[] = [];
 export const mexicoMomentOverlays: MomentOverlay[] = [];
 export const mexicoIconicMoments: VenueIconicMoment[] = [
   { id: "verstappen-title-2017", year: 2017, title: "Verstappen wins — Hamilton gets title", teamLabel: "RED BULL · WINS · MERCEDES WDC", conditionBadge: "TITLE", conditionColor: "#1E3A8A", glowColor: "#00D2BE", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/7/7a/F1_2017_-i---i-_%2826299298269%29.jpg" },
-  { id: "hamilton-2016-mex",    year: 2016, title: "Hamilton wins Mexico — title fight tightens", teamLabel: "MERCEDES · TITLE RACE",    conditionBadge: "WIN",   conditionColor: "#00D2BE", glowColor: "#00D2BE", imageUrl: "https://motorsport.nextgen-auto.com/photos/2016/f1/gp-mexico-race/050.jpg" },
-  { id: "verstappen-2022-mex",  year: 2022, title: "Verstappen dominant — record points",   teamLabel: "RED BULL · RECORD SEASON",       conditionBadge: "WIN",   conditionColor: "#1E3A8A", glowColor: "#1E3A8A", imageUrl: "https://motorsport.nextgen-auto.com/photos/2022/f1/gp-mexico-city-race/050.jpg" },
+  { id: "hamilton-2016-mex",    year: 2016, title: "Hamilton wins Mexico — title fight tightens", teamLabel: "MERCEDES · TITLE RACE",    conditionBadge: "WIN",   conditionColor: "#00D2BE", glowColor: "#00D2BE", imageUrl: "/images/venues/mexico-hamilton-2016.jpg" },
+  { id: "verstappen-2022-mex",  year: 2022, title: "Verstappen dominant — record points",   teamLabel: "RED BULL · RECORD SEASON",       conditionBadge: "WIN",   conditionColor: "#1E3A8A", glowColor: "#1E3A8A", imageUrl: "/images/venues/mexico-verstappen-2022.jpg" },
 ];
 
 export const mexicoWeather: VenueWeather = {
@@ -1879,9 +1879,9 @@ export const lasVegasHotspots: Hotspot[] = [];
 
 export const lasVegasMomentOverlays: MomentOverlay[] = [];
 export const lasVegasIconicMoments: VenueIconicMoment[] = [
-  { id: "lasvegas-cover-drain-2023", year: 2023, title: "Drain cover destroys Sainz's car in FP1", teamLabel: "FERRARI · RED FLAG",   conditionBadge: "CHAOS",  conditionColor: "#FF1E56", glowColor: "#DC0000", imageUrl: "https://motorsport.nextgen-auto.com/photos/2023/f1/gp-usa-lasvegas-17nov/015.jpg" },
-  { id: "verstappen-2023-lv",        year: 2023, title: "Verstappen wins inaugural Las Vegas GP",  teamLabel: "RED BULL · NIGHT WIN",  conditionBadge: "WIN",    conditionColor: "#1E3A8A", glowColor: "#1E3A8A", imageUrl: "https://motorsport.nextgen-auto.com/photos/2023/f1/gp-usa-lasvegas-race/080.jpg" },
-  { id: "verstappen-wdc4-2024-lv",   year: 2024, title: "Verstappen clinches record 4th consecutive title", teamLabel: "RED BULL · DYNASTY", conditionBadge: "TITLE",  conditionColor: "#1E3A8A", glowColor: "#1E3A8A", imageUrl: "https://motorsport.nextgen-auto.com/photos/2024/f1/gp-lasvegas-race/060.jpg" },
+  { id: "lasvegas-cover-drain-2023", year: 2023, title: "Drain cover destroys Sainz's car in FP1", teamLabel: "FERRARI · RED FLAG",   conditionBadge: "CHAOS",  conditionColor: "#FF1E56", glowColor: "#DC0000", imageUrl: "" },
+  { id: "verstappen-2023-lv",        year: 2023, title: "Verstappen wins inaugural Las Vegas GP",  teamLabel: "RED BULL · NIGHT WIN",  conditionBadge: "WIN",    conditionColor: "#1E3A8A", glowColor: "#1E3A8A", imageUrl: "" },
+  { id: "verstappen-wdc4-2024-lv",   year: 2024, title: "Verstappen clinches record 4th consecutive title", teamLabel: "RED BULL · DYNASTY", conditionBadge: "TITLE",  conditionColor: "#1E3A8A", glowColor: "#1E3A8A", imageUrl: "/images/venues/las-vegas-verstappen-2024.jpg" },
 ];
 
 export const lasVegasWeather: VenueWeather = {
@@ -1950,10 +1950,10 @@ export const qatarHotspots: Hotspot[] = [];
 
 export const qatarMomentOverlays: MomentOverlay[] = [];
 export const qatarIconicMoments: VenueIconicMoment[] = [
-  { id: "hamilton-2021-qat", year: 2021, title: "Hamilton wins from pole — title fight",  teamLabel: "MERCEDES · DOMINANT",    conditionBadge: "WIN",    conditionColor: "#00D2BE", glowColor: "#00D2BE", imageUrl: "https://cdn-2.motorsport.com/images/amp/YN1nV7b2/s2/formula-1-qatar-gp-2021-race-w-2.jpg" },
-  { id: "verstappen-wdc3-2023-qat", year: 2023, title: "Verstappen clinches 3rd title in sprint — first Saturday WDC since 1983", teamLabel: "RED BULL · SPRINT WDC", conditionBadge: "TITLE", conditionColor: "#1E3A8A", glowColor: "#1E3A8A", imageUrl: "https://motorsport.nextgen-auto.com/photos/2023/f1/gp-qatar-lusail-07oct/050.jpg" },
-  { id: "verstappen-2023-qat",year: 2023, title: "Verstappen wins — tyres degrade all",  teamLabel: "RED BULL · TYRE DRAMA",  conditionBadge: "WIN",    conditionColor: "#1E3A8A", glowColor: "#1E3A8A", imageUrl: "https://cdn-7.motorsport.com/images/mgl/2y3XdZm6/s1000/max-verstappen-red-bull-racing-1.jpg" },
-  { id: "alonso-2023-qat",    year: 2023, title: "Alonso fights Verstappen — wheel probe",teamLabel: "ASTON MARTIN · PENALTY",conditionBadge: "DRAMA",  conditionColor: "#006847", glowColor: "#006847", imageUrl: "https://motorsport.nextgen-auto.com/photos/2023/f1/gp-qatar-lusail-race/050.jpg" },
+  { id: "hamilton-2021-qat", year: 2021, title: "Hamilton wins from pole — title fight",  teamLabel: "MERCEDES · DOMINANT",    conditionBadge: "WIN",    conditionColor: "#00D2BE", glowColor: "#00D2BE", imageUrl: "/images/venues/qatar-hamilton-2021.jpg" },
+  { id: "verstappen-wdc3-2023-qat", year: 2023, title: "Verstappen clinches 3rd title in sprint — first Saturday WDC since 1983", teamLabel: "RED BULL · SPRINT WDC", conditionBadge: "TITLE", conditionColor: "#1E3A8A", glowColor: "#1E3A8A", imageUrl: "/images/venues/qatar-verstappen-wdc3-2023.jpg" },
+  { id: "verstappen-2023-qat",year: 2023, title: "Verstappen wins — tyres degrade all",  teamLabel: "RED BULL · TYRE DRAMA",  conditionBadge: "WIN",    conditionColor: "#1E3A8A", glowColor: "#1E3A8A", imageUrl: "/images/venues/qatar-verstappen-2023.jpg" },
+  { id: "alonso-2023-qat",    year: 2023, title: "Alonso fights Verstappen — wheel probe",teamLabel: "ASTON MARTIN · PENALTY",conditionBadge: "DRAMA",  conditionColor: "#006847", glowColor: "#006847", imageUrl: "/images/venues/qatar-alonso-2023.jpg" },
 ];
 
 export const qatarWeather: VenueWeather = {
