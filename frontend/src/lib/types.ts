@@ -193,11 +193,11 @@ export interface PremaStats extends LooseRecord {
   podiums?: number
   seasons?: number
   firstSeason?: number
-  f2Titles?: number
-  f3TitlesSince2019?: number
-  f1Graduates?: number
-  f2Wins?: number
-  graduationRatePct?: number
+  f2Titles: number
+  f3TitlesSince2019: number
+  f1Graduates: number
+  f2Wins: number
+  graduationRatePct: number
 }
 
 export interface PremaGraduate extends LooseRecord {
