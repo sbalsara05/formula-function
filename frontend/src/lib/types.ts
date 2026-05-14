@@ -104,6 +104,8 @@ export interface TrajectoryPrediction extends LooseRecord {
     feature: string
     humanReadableValue: string
     direction: 'positive' | 'negative' | 'neutral' | string
+    weight?: number
+    [key: string]: any
   }>
   confidenceTier: string
   sampleSize: number
@@ -182,30 +184,46 @@ export interface TeamKeyMoment extends LooseRecord {
   label: string
 }
 
-export type TeamLivery = LooseRecord
+export type TeamLivery = string
 
 export interface PremaStats extends LooseRecord {
-  teamId: string
-  titles: number
-  wins: number
-  podiums: number
-  seasons: number
-  firstSeason: number
+  teamId?: string
+  titles?: number
+  wins?: number
+  podiums?: number
+  seasons?: number
+  firstSeason?: number
+  f2Titles?: number
+  f3TitlesSince2019?: number
+  f1Graduates?: number
+  f2Wins?: number
+  graduationRatePct?: number
 }
 
 export interface PremaGraduate extends LooseRecord {
   name: string
-  destination: string
-  years: string
-  achievement: string
+  destination?: string
+  years?: string
+  achievement?: string
+  f3Result?: string
+  f2Result?: string
+  graduatedTo?: string
+  graduatedToColor?: string
+  current?: string
+  currentColor?: string
+  status?: string
+  statusColor?: string
 }
 
 export interface PremaCurrentSeason extends LooseRecord {
-  series: string
-  drivers: string[]
-  wins: number
-  podiums: number
-  position: string
+  series?: string
+  drivers?: string[]
+  wins?: number
+  podiums?: number
+  position?: string
+  f2: Array<{ name: string; academy: string }>
+  f3: Array<{ name: string; academy: string }>
+  f1Academy: Array<{ name: string; academy: string }>
 }
 
 export interface Venue extends LooseRecord {
@@ -285,7 +303,13 @@ export interface VenueIconicMoment extends LooseRecord {
 export interface VenueWeather extends LooseRecord {
   venueId: string
   description?: string
-  rows: Array<{ label: string; pct: number; color: string }>
+  dryPct: number
+  mixedPct: number
+  wetPct: number
+  totalRaces: number
+  chaoticRaces: Array<{ year: number; label: string; type: string }>
+  circuitNote?: string
+  rows?: Array<{ label: string; pct: number; color: string }>
 }
 
 export interface FeaturedLap extends LooseRecord {
