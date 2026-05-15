@@ -1,7 +1,7 @@
 export type Series = 'f1' | 'f2' | 'f3'
 
 export interface Driver {
-  [key: string]: unknown
+  [key: string]: any
   id: string
   name: string
   shortName: string
@@ -19,7 +19,7 @@ export interface Driver {
 }
 
 export interface DriverStats {
-  [key: string]: unknown
+  [key: string]: any
   driverId: string
   series: Series
   titles: number
@@ -33,7 +33,7 @@ export interface DriverStats {
 }
 
 export interface DriverEra {
-  [key: string]: unknown
+  [key: string]: any
   driverId: string
   teamId: string
   teamName: string
@@ -49,21 +49,21 @@ export interface DriverEra {
 }
 
 export interface TeammateRecord {
-  [key: string]: unknown
+  [key: string]: any
 }
 
 export interface TrackRecord {
-  [key: string]: unknown
+  [key: string]: any
 }
 
 export interface SignatureAxis {
-  [key: string]: unknown
+  [key: string]: any
   label: string
   value: number
 }
 
 export interface DrivingSignature {
-  [key: string]: unknown
+  [key: string]: any
   driverId: string
   series: Series
   axes: SignatureAxis[]
@@ -73,7 +73,7 @@ export interface DrivingSignature {
 }
 
 export interface ReelSlide {
-  [key: string]: unknown
+  [key: string]: any
   slotLabel?: string
   label?: string
   badge?: string
@@ -93,42 +93,17 @@ export interface ReelSlide {
 }
 
 export interface ScoutingReport {
-  [key: string]: unknown
+  [key: string]: any
   paragraphs: string[]
-  highlights?: string[]
-  setupBars?: Array<{
-    leftLabel: string
-    rightLabel: string
-    position: number
-    annotation: string
-    highlight?: boolean
-  }>
-  excelledAt?: string[]
-  struggledWith?: string[]
 }
 
 export interface TrajectoryPrediction {
-  [key: string]: unknown
+  [key: string]: any
   driverId: string
-  currentLevel: string
-  projection: string
-  probability: number
-  timeHorizon: string
-  keyFactors: string[]
-  analogs: Array<{
-    driverName: string
-    similarity: number
-    note: string
-  }>
-  futureWindows: Array<{
-    label: string
-    probability: number
-    description: string
-  }>
 }
 
 export interface FeaturedLap {
-  [key: string]: unknown
+  [key: string]: any
   id: string
   track: string
   year: number
@@ -142,7 +117,7 @@ export interface FeaturedLap {
 }
 
 export interface LapRecord {
-  [key: string]: unknown
+  [key: string]: any
   id: string
   track: string
   year: number
@@ -157,7 +132,7 @@ export interface LapRecord {
 }
 
 export interface LapMoment {
-  [key: string]: unknown
+  [key: string]: any
   jumpPct: number
   label: string
   title: string
@@ -166,7 +141,7 @@ export interface LapMoment {
 }
 
 export interface LapSector {
-  [key: string]: unknown
+  [key: string]: any
   label: string
   time: string
   status: string
@@ -175,14 +150,14 @@ export interface LapSector {
 }
 
 export interface TelemetryTrace {
-  [key: string]: unknown
+  [key: string]: any
   label: string
   path: string
   color: string
 }
 
 export interface LapAnalysis {
-  [key: string]: unknown
+  [key: string]: any
   lapId: string
   trackName: string
   year: number
@@ -199,22 +174,13 @@ export interface LapAnalysis {
 }
 
 export interface ComparisonLap {
-  [key: string]: unknown
-  lapId: string
-  driverName: string
-  driverShortName: string
-  driverId: string
-  entityHex: string
-  trackName: string
-  year: number
-  session: string
-  car: string
+  [key: string]: any
   lapTime: string
   lapTimeMs: number
 }
 
 export interface DeltaInsight {
-  [key: string]: unknown
+  [key: string]: any
   label: string
   value: string
   detail: string
@@ -222,7 +188,7 @@ export interface DeltaInsight {
 }
 
 export interface SectorComparison {
-  [key: string]: unknown
+  [key: string]: any
   sector: string
   lapA: string
   lapB: string
@@ -231,36 +197,28 @@ export interface SectorComparison {
 }
 
 export interface OverlayTrace {
-  [key: string]: unknown
+  [key: string]: any
   label: string
   path: string
   color: string
 }
 
 export interface LineAnnotation {
-  [key: string]: unknown
+  [key: string]: any
   pct: number
   label: string
   detail: string
 }
 
 export interface LapComparisonData {
-  [key: string]: unknown
+  [key: string]: any
+  id: string
   lapA: ComparisonLap
   lapB: ComparisonLap
-  deltaPath: string
-  deltaInsights: DeltaInsight[]
-  overlayTraces: OverlayTrace[]
-  annotations: LineAnnotation[]
-  sectors: SectorComparison[]
-  verdict: {
-    title: string
-    paragraphs: string[]
-  }
 }
 
 export interface Team {
-  [key: string]: unknown
+  [key: string]: any
   id: string
   name: string
   shortName: string
@@ -276,7 +234,7 @@ export interface Team {
 }
 
 export interface TeamStats {
-  [key: string]: unknown
+  [key: string]: any
   teamId: string
   constructorsTitles: number
   driversTitles: number
@@ -287,20 +245,20 @@ export interface TeamStats {
 }
 
 export interface TeamEngineeringEra {
-  [key: string]: unknown
+  [key: string]: any
   teamId: string
   label: string
   seasons: string
   description: string
   championships: number
-  driverNames: string
+  driverNames?: string
   champLabel: string
   imageUrl?: string
   golden?: boolean
 }
 
 export interface TeamSignatureBar {
-  [key: string]: unknown
+  [key: string]: any
   label: string
   rating: string
   value: number
@@ -309,14 +267,14 @@ export interface TeamSignatureBar {
 }
 
 export interface TeamAcademyDriver {
-  [key: string]: unknown
+  [key: string]: any
   name: string
   tier: string
   note: string
 }
 
 export interface TeamIconicCar {
-  [key: string]: unknown
+  [key: string]: any
   name: string
   year: number
   subtitle: string
@@ -326,21 +284,17 @@ export interface TeamIconicCar {
 }
 
 export interface TeamKeyMoment {
-  [key: string]: unknown
+  [key: string]: any
   year: number
   title: string
   detail: string
   tag: string
 }
 
-export interface TeamLivery {
-  [key: string]: unknown
-  hex: string
-  label: string
-}
+export type TeamLivery = string
 
 export interface PremaStats {
-  [key: string]: unknown
+  [key: string]: any
   teamId: string
   f2DriversTitles: number
   f3DriversTitles: number
@@ -351,7 +305,7 @@ export interface PremaStats {
 }
 
 export interface PremaGraduate {
-  [key: string]: unknown
+  [key: string]: any
   name: string
   f3Result: string
   f2Result: string
@@ -364,14 +318,14 @@ export interface PremaGraduate {
 }
 
 export interface PremaCurrentSeason {
-  [key: string]: unknown
+  [key: string]: any
   f2: Array<{ name: string; academy: string }>
   f3: Array<{ name: string; academy: string }>
   f1Academy: Array<{ name: string; academy: string }>
 }
 
 export interface Venue {
-  [key: string]: unknown
+  [key: string]: any
   id: string
   name: string
   location: string
@@ -386,7 +340,7 @@ export interface Venue {
 }
 
 export interface VenueStats {
-  [key: string]: unknown
+  [key: string]: any
   venueId: string
   lengthKm: number
   corners: number
@@ -397,7 +351,7 @@ export interface VenueStats {
 }
 
 export interface VenueFingerprintBar {
-  [key: string]: unknown
+  [key: string]: any
   label: string
   rating: string
   value: number
@@ -405,13 +359,13 @@ export interface VenueFingerprintBar {
 }
 
 export interface VenueFingerprint {
-  [key: string]: unknown
+  [key: string]: any
   venueId: string
   bars: VenueFingerprintBar[]
 }
 
 export interface DriverTrackFit {
-  [key: string]: unknown
+  [key: string]: any
   driverId: string
   driverName: string
   fitScore: number
@@ -420,7 +374,7 @@ export interface DriverTrackFit {
 }
 
 export interface Hotspot {
-  [key: string]: unknown
+  [key: string]: any
   id: string
   x: number
   y: number
@@ -430,7 +384,7 @@ export interface Hotspot {
 }
 
 export interface MomentOverlay {
-  [key: string]: unknown
+  [key: string]: any
   momentId: string
   title: string
   subtitle: string
@@ -441,7 +395,7 @@ export interface MomentOverlay {
 }
 
 export interface VenueIconicMoment {
-  [key: string]: unknown
+  [key: string]: any
   id: string
   year: number
   title: string
@@ -453,7 +407,7 @@ export interface VenueIconicMoment {
 }
 
 export interface VenueWeather {
-  [key: string]: unknown
+  [key: string]: any
   venueId: string
   dryProbability: number
   mixedProbability: number
