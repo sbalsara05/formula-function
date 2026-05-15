@@ -83,7 +83,6 @@ export interface ReelSlide extends LooseRecord {
 
 export interface ScoutingReport extends LooseRecord {
   paragraphs: string[]
-  highlights?: string[]
   setupBars: LooseList
   excelledAt: string[]
   struggledWith: string[]
@@ -147,7 +146,6 @@ export interface TelemetryTrace extends LooseRecord {
 
 export interface LapAnalysis extends LooseRecord {
   lapId: string
-  trackName: string
   lapTimeMs: number
   trackLengthM: number
   sectors: LapSector[]
@@ -289,7 +287,7 @@ export interface MomentOverlay extends LooseRecord {
   momentId: string
   title: string
   year: number
-  cornerLabel?: string
+  cornerLabel: string
 }
 
 export interface VenueIconicMoment extends LooseRecord {
