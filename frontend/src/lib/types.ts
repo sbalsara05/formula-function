@@ -391,7 +391,7 @@ export interface TeamKeyMoment extends ExtraFields {
 export type TeamLivery = string
 
 export interface PremaStats extends ExtraFields {
-  teamId: string
+  teamId?: string
   f2Titles: number
   f3TitlesSince2019: number
   f1Graduates: number
@@ -426,7 +426,7 @@ export interface Venue extends ExtraFields {
   id: string
   name: string
   country: string
-  series: Series[]
+  series?: Series[]
   f1Since: number
   entityColorHex: string
   lengthKm: number
