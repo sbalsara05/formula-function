@@ -27,8 +27,8 @@ export interface DriverStats extends ExtraFields {
   podiums: number
   careerSpan: string
   racesEntered: number
-  fastestLaps: number
-  pointsScored: number
+  fastestLaps?: number
+  pointsScored?: number
 }
 
 export interface DriverEra extends ExtraFields {
@@ -46,22 +46,30 @@ export interface DriverEra extends ExtraFields {
 }
 
 export interface TeammateRecord extends ExtraFields {
+  driverId?: string
   teammateId: string
   teammateName: string
   seasons: string
-  racesTogether: number
-  qualifyingRecord: string
-  raceRecord: string
-  pointsDelta: string
-  sentiment: string
+  racesTogether?: number
+  qualifyingRecord?: string
+  raceRecord?: string
+  pointsDelta?: string
+  sentiment?: string
+  qualiWinPct?: number
+  raceWinPct?: number
+  deltaMs?: number
 }
 
 export interface TrackRecord extends ExtraFields {
-  trackId: string
-  trackName: string
+  driverId?: string
+  trackId?: string
+  trackName?: string
+  venueId?: string
+  venueName?: string
   wins: number
   poles: number
   podiums: number
+  sentiment?: string
   note?: string
 }
 
@@ -326,11 +334,11 @@ export interface Team extends ExtraFields {
 
 export interface TeamStats extends ExtraFields {
   teamId: string
-  series: Series
+  series?: Series
   constructorsTitles: number
   driversTitles: number
   wins: number
-  poles: number
+  poles?: number
   podiums: number
   firstSeason: number
   seasons: number
@@ -380,13 +388,7 @@ export interface TeamKeyMoment extends ExtraFields {
   label: string
 }
 
-export interface TeamLivery extends ExtraFields {
-  teamId: string
-  season: number | string
-  primaryHex: string
-  secondaryHex?: string
-  accentHex?: string
-}
+export type TeamLivery = string
 
 export interface PremaStats extends ExtraFields {
   teamId: string
@@ -480,13 +482,20 @@ export interface Hotspot extends ExtraFields {
 }
 
 export interface MomentOverlay extends ExtraFields {
-  id: string
-  hotspotId: string
+  id?: string
+  momentId: string
+  hotspotId?: string
   title: string
-  subtitle: string
+  subtitle?: string
   year: number
-  body: string
-  accentColor: string
+  body?: string
+  accentColor?: string
+  cornerLabel: string
+  description: string
+  driver1Id?: string
+  driver2Id?: string
+  defenderTrace?: [number, number][]
+  overtakerTrace?: [number, number][]
 }
 
 export interface VenueIconicMoment extends ExtraFields {
