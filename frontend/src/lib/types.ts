@@ -1,6 +1,6 @@
 export type Series = 'f1' | 'f2' | 'f3'
 
-type Extensible = Record<string, unknown>
+type Extensible = Record<string, any>
 
 export interface Driver extends Extensible {
   id: string
@@ -101,9 +101,11 @@ export interface ScoutingReportBar extends Extensible {
 export interface ScoutingReport extends Extensible {
   driverId?: string
   summary?: string
-  paragraphs?: string[]
-  highlightedTerms?: string[]
-  bars?: ScoutingReportBar[]
+  paragraphs: string[]
+  highlights: string[]
+  setupBars: ScoutingReportBar[]
+  excelledAt: string[]
+  struggledWith: string[]
 }
 
 export interface TrajectoryOutcome extends Extensible {
@@ -277,6 +279,7 @@ export interface SectorComparison extends Extensible {
 }
 
 export interface LapComparisonData extends Extensible {
+  id: string
   title: string
   subtitle: string
   description: string
@@ -366,12 +369,10 @@ export interface TeamKeyMoment extends Extensible {
   description?: string
 }
 
-export interface TeamLivery extends Extensible {
-  teamId: string
-}
+export type TeamLivery = string
 
 export interface PremaStats extends Extensible {
-  teamId: string
+  teamId?: string
   f2Titles: number
   f3TitlesSince2019: number
   f1Graduates: number
@@ -381,7 +382,7 @@ export interface PremaStats extends Extensible {
 
 export interface PremaGraduate extends Extensible {
   name: string
-  academy: string
+  academy?: string
 }
 
 export interface PremaCurrentSeason extends Extensible {
@@ -392,7 +393,7 @@ export interface Venue extends Extensible {
   id: string
   name: string
   country: string
-  series: Series[]
+  series?: Series[]
   f1Since: number
   entityColorHex: string
   trackLocation?: string
@@ -429,8 +430,11 @@ export interface VenueFingerprint extends Extensible {
 }
 
 export interface DriverTrackFit extends Extensible {
-  driverId?: string
-  driverName?: string
+  driverId: string
+  driverName: string
+  fitScore: number
+  wins: number
+  poles: number
   rating?: string
 }
 
@@ -456,11 +460,15 @@ export interface MomentOverlay extends Extensible {
 export interface VenueIconicMoment extends Extensible {
   id: string
   year: number
-  label: string
+  label?: string
   title: string
-  description: string
+  description?: string
   stat?: string
   imageUrl?: string
+  teamLabel?: string
+  conditionBadge?: string
+  conditionColor?: string
+  glowColor?: string
 }
 
 export interface VenueWeatherRace extends Extensible {
@@ -477,5 +485,6 @@ export interface VenueWeather extends Extensible {
   totalRaces: number
   description?: string
   circuitNote?: string
-  notableRaces: VenueWeatherRace[]
+  chaoticRaces: VenueWeatherRace[]
+  notableRaces?: VenueWeatherRace[]
 }
