@@ -385,8 +385,16 @@ export interface PremaGraduate extends Extensible {
   academy?: string
 }
 
+export interface PremaSeasonDriver extends Extensible {
+  name: string
+  academy: string
+}
+
 export interface PremaCurrentSeason extends Extensible {
   title?: string
+  f2: PremaSeasonDriver[]
+  f3: PremaSeasonDriver[]
+  f1Academy: PremaSeasonDriver[]
 }
 
 export interface Venue extends Extensible {
