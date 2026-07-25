@@ -204,6 +204,7 @@ const TEAM_REGISTRY: Partial<Record<Series, Record<string, TeamBundle>>> = {
     },
     sauber: SAUBER_F1,
     'kick-sauber': SAUBER_F1,
+    audi: SAUBER_F1,
     cadillac: {
       team: cadillac,
       stats: cadillacStats,
@@ -410,7 +411,7 @@ const SLUG_TO_JOLPICA: Record<string, string> = {
   ferrari: 'ferrari', mclaren: 'mclaren', mercedes: 'mercedes',
   'red-bull': 'red_bull', williams: 'williams', 'aston-martin': 'aston_martin',
   alpine: 'alpine', haas: 'haas', sauber: 'sauber', rb: 'rb',
-  'kick-sauber': 'sauber', 'racing-bulls': 'rb', cadillac: 'cadillac',
+  'kick-sauber': 'sauber', audi: 'audi', 'racing-bulls': 'rb', cadillac: 'cadillac',
   // 2000s–2020s
   alphatauri: 'alphatauri', 'alpha-tauri': 'alphatauri',
   'bmw-sauber': 'bmw_sauber', bmwsauber: 'bmw_sauber',
@@ -463,6 +464,7 @@ const TEAM_META: Record<string, { name: string; short: string; color: string; na
   alpine:        { name: 'Alpine F1 Team',            short: 'Alpine',        color: '#0090FF', nat: 'French',    wcc:  0, wdc:  0, founded: 2021 },
   haas:          { name: 'Haas F1 Team',              short: 'Haas',          color: '#B6BABD', nat: 'American',  wcc:  0, wdc:  0, founded: 2016 },
   sauber:        { name: 'Kick Sauber · becoming Audi Revolut F1 Team (entry 2026)', short: 'Kick Sauber', color: '#52E252', nat: 'Swiss',     wcc:  0, wdc:  0, founded: 1993 },
+  audi:          { name: 'Audi F1 Team',              short: 'Audi',          color: '#BB1C2A', nat: 'German',    wcc:  0, wdc:  0, founded: 2026 },
   rb:            { name: 'Racing Bulls',              short: 'Racing Bulls',  color: '#6692FF', nat: 'Italian',   wcc:  0, wdc:  0, founded: 2006 },
   cadillac:      { name: 'Cadillac F1 Team',          short: 'Cadillac',      color: '#C8A96E', nat: 'American',  wcc:  0, wdc:  0, founded: 2026 },
   // ── 2000s–2020s ────────────────────────────────────────────────────────────
