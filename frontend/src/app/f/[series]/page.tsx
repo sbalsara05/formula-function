@@ -457,7 +457,7 @@ async function fetchLiveStandings(): Promise<LiveStandings | null> {
 const CONSTRUCTOR_COLORS: Record<string, string> = {
   ferrari: '#DC0000', mclaren: '#FF8000', mercedes: '#00D2BE', red_bull: '#1E3A8A',
   williams: '#005AFF', aston_martin: '#006F62', alpine: '#0090FF', haas: '#B6BABD',
-  sauber: '#52E252', rb: '#6692FF', cadillac: '#C8A96E',
+  sauber: '#52E252', audi: '#BB1C2A', rb: '#6692FF', cadillac: '#C8A96E',
 }
 
 /* ─── F1 heritage page ───────────────────────────────────────────────────────── */

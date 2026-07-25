@@ -39,17 +39,47 @@ async def fetch_with_retry(url: str, client: httpx.AsyncClient, retries: int = 5
             await asyncio.sleep(delay * (2 ** attempt))
     raise RuntimeError(f"Failed after {retries} retries: {url}")
 
+async def fetch_paginated_standings(
+    season: int,
+    client: httpx.AsyncClient,
+    endpoint: str,
+    list_key: str,
+) -> list[dict]:
+    """Fetch all standings pages — Jolpica defaults to limit=30 and truncates silently."""
+    limit = 100
+    offset = 0
+    rows: list[dict] = []
+    total: int | None = None
+
+    while True:
+        url = f"{JOLPICA_BASE}/{season}/{endpoint}.json?limit={limit}&offset={offset}"
+        data = await fetch_with_retry(url, client)
+        mr_data = data["MRData"]
+        total = int(mr_data["total"])
+        standings_lists = mr_data["StandingsTable"]["StandingsLists"]
+        page = standings_lists[0][list_key] if standings_lists else []
+        rows.extend(page)
+        if offset + len(page) >= total or not page:
+            break
+        offset += limit
+        await asyncio.sleep(0.5)
+
+    if total is not None and len(rows) != total:
+        raise RuntimeError(
+            f"{season} {endpoint}: fetched {len(rows)} of {total} — refusing truncated write"
+        )
+    print(f"    · {endpoint}: fetched {len(rows)}/{total}")
+    return rows
+
 async def fetch_constructor_standings(season: int, client: httpx.AsyncClient) -> list[dict]:
-    url = f"{JOLPICA_BASE}/{season}/constructorstandings.json"
-    data = await fetch_with_retry(url, client)
-    standings_lists = data["MRData"]["StandingsTable"]["StandingsLists"]
-    return standings_lists[0]["ConstructorStandings"] if standings_lists else []
+    return await fetch_paginated_standings(
+        season, client, "constructorstandings", "ConstructorStandings"
+    )
 
 async def fetch_driver_standings(season: int, client: httpx.AsyncClient) -> list[dict]:
-    url = f"{JOLPICA_BASE}/{season}/driverstandings.json"
-    data = await fetch_with_retry(url, client)
-    standings_lists = data["MRData"]["StandingsTable"]["StandingsLists"]
-    return standings_lists[0]["DriverStandings"] if standings_lists else []
+    return await fetch_paginated_standings(
+        season, client, "driverstandings", "DriverStandings"
+    )
 
 
 async def main():
