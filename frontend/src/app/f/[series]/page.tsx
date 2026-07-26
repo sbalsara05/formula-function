@@ -1,160 +1,39 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { TeamLogo } from '@/components/constructors/TeamLogo'
-
-/* ─── Championship history data ─────────────────────────────────────────────── */
-
-const F1_CHAMPIONS = [
-  { year: 1950, driver: 'Farina',      team: 'Alfa Romeo', color: '#9C0000' },
-  { year: 1951, driver: 'Fangio',      team: 'Alfa Romeo', color: '#9C0000' },
-  { year: 1952, driver: 'Ascari',      team: 'Ferrari',    color: '#DC0000' },
-  { year: 1953, driver: 'Ascari',      team: 'Ferrari',    color: '#DC0000' },
-  { year: 1954, driver: 'Fangio',      team: 'Mercedes',   color: '#C0C0C0' },
-  { year: 1955, driver: 'Fangio',      team: 'Mercedes',   color: '#C0C0C0' },
-  { year: 1956, driver: 'Fangio',      team: 'Ferrari',    color: '#DC0000' },
-  { year: 1957, driver: 'Fangio',      team: 'Maserati',   color: '#1A3A5C' },
-  { year: 1958, driver: 'Hawthorn',   team: 'Ferrari',    color: '#DC0000' },
-  { year: 1959, driver: 'Brabham',    team: 'Cooper',     color: '#2E7D32' },
-  { year: 1960, driver: 'Brabham',    team: 'Cooper',     color: '#2E7D32' },
-  { year: 1961, driver: 'P. Hill',    team: 'Ferrari',    color: '#DC0000' },
-  { year: 1962, driver: 'G. Hill',    team: 'BRM',        color: '#1B5E20' },
-  { year: 1963, driver: 'Clark',      team: 'Lotus',      color: '#FFD700' },
-  { year: 1964, driver: 'Surtees',    team: 'Ferrari',    color: '#DC0000' },
-  { year: 1965, driver: 'Clark',      team: 'Lotus',      color: '#FFD700' },
-  { year: 1966, driver: 'Brabham',    team: 'Brabham',    color: '#4A90D9' },
-  { year: 1967, driver: 'Hulme',      team: 'Brabham',    color: '#4A90D9' },
-  { year: 1968, driver: 'G. Hill',    team: 'Lotus',      color: '#FFD700' },
-  { year: 1969, driver: 'Stewart',    team: 'Matra',      color: '#1565C0' },
-  { year: 1970, driver: 'Rindt †',   team: 'Lotus',      color: '#FFD700' },
-  { year: 1971, driver: 'Stewart',    team: 'Tyrrell',    color: '#1565C0' },
-  { year: 1972, driver: 'Fittipaldi', team: 'Lotus',      color: '#FFD700' },
-  { year: 1973, driver: 'Stewart',    team: 'Tyrrell',    color: '#1565C0' },
-  { year: 1974, driver: 'Fittipaldi', team: 'McLaren',    color: '#FF8700' },
-  { year: 1975, driver: 'Lauda',      team: 'Ferrari',    color: '#DC0000' },
-  { year: 1976, driver: 'Hunt',       team: 'McLaren',    color: '#FF8700' },
-  { year: 1977, driver: 'Lauda',      team: 'Ferrari',    color: '#DC0000' },
-  { year: 1978, driver: 'Andretti',   team: 'Lotus',      color: '#FFD700' },
-  { year: 1979, driver: 'Scheckter',  team: 'Ferrari',    color: '#DC0000' },
-  { year: 1980, driver: 'Jones',      team: 'Williams',   color: '#005AFF' },
-  { year: 1981, driver: 'Piquet',     team: 'Brabham',    color: '#4A90D9' },
-  { year: 1982, driver: 'Rosberg',    team: 'Williams',   color: '#005AFF' },
-  { year: 1983, driver: 'Piquet',     team: 'Brabham',    color: '#4A90D9' },
-  { year: 1984, driver: 'Lauda',      team: 'McLaren',    color: '#FF8700' },
-  { year: 1985, driver: 'Prost',      team: 'McLaren',    color: '#FF8700' },
-  { year: 1986, driver: 'Prost',      team: 'McLaren',    color: '#FF8700' },
-  { year: 1987, driver: 'Piquet',     team: 'Williams',   color: '#005AFF' },
-  { year: 1988, driver: 'Senna',      team: 'McLaren',    color: '#E10600' },
-  { year: 1989, driver: 'Prost',      team: 'McLaren',    color: '#E10600' },
-  { year: 1990, driver: 'Senna',      team: 'McLaren',    color: '#E10600' },
-  { year: 1991, driver: 'Senna',      team: 'McLaren',    color: '#E10600' },
-  { year: 1992, driver: 'Mansell',    team: 'Williams',   color: '#005AFF' },
-  { year: 1993, driver: 'Prost',      team: 'Williams',   color: '#005AFF' },
-  { year: 1994, driver: 'Schumacher', team: 'Benetton',   color: '#FFD700' },
-  { year: 1995, driver: 'Schumacher', team: 'Benetton',   color: '#FFD700' },
-  { year: 1996, driver: 'D. Hill',    team: 'Williams',   color: '#005AFF' },
-  { year: 1997, driver: 'Villeneuve', team: 'Williams',   color: '#005AFF' },
-  { year: 1998, driver: 'Häkkinen',   team: 'McLaren',    color: '#A0A8C8' },
-  { year: 1999, driver: 'Häkkinen',   team: 'McLaren',    color: '#A0A8C8' },
-  { year: 2000, driver: 'Schumacher', team: 'Ferrari',    color: '#DC0000' },
-  { year: 2001, driver: 'Schumacher', team: 'Ferrari',    color: '#DC0000' },
-  { year: 2002, driver: 'Schumacher', team: 'Ferrari',    color: '#DC0000' },
-  { year: 2003, driver: 'Schumacher', team: 'Ferrari',    color: '#DC0000' },
-  { year: 2004, driver: 'Schumacher', team: 'Ferrari',    color: '#DC0000' },
-  { year: 2005, driver: 'Alonso',     team: 'Renault',    color: '#FFD700' },
-  { year: 2006, driver: 'Alonso',     team: 'Renault',    color: '#FFD700' },
-  { year: 2007, driver: 'Räikkönen',  team: 'Ferrari',    color: '#DC0000' },
-  { year: 2008, driver: 'Hamilton',   team: 'McLaren',    color: '#C0C0C0' },
-  { year: 2009, driver: 'Button',     team: 'Brawn GP',   color: '#BFFF00' },
-  { year: 2010, driver: 'Vettel',     team: 'Red Bull',   color: '#1E3A8A' },
-  { year: 2011, driver: 'Vettel',     team: 'Red Bull',   color: '#1E3A8A' },
-  { year: 2012, driver: 'Vettel',     team: 'Red Bull',   color: '#1E3A8A' },
-  { year: 2013, driver: 'Vettel',     team: 'Red Bull',   color: '#1E3A8A' },
-  { year: 2014, driver: 'Hamilton',   team: 'Mercedes',   color: '#00D2BE' },
-  { year: 2015, driver: 'Hamilton',   team: 'Mercedes',   color: '#00D2BE' },
-  { year: 2016, driver: 'Rosberg',    team: 'Mercedes',   color: '#00D2BE' },
-  { year: 2017, driver: 'Hamilton',   team: 'Mercedes',   color: '#00D2BE' },
-  { year: 2018, driver: 'Hamilton',   team: 'Mercedes',   color: '#00D2BE' },
-  { year: 2019, driver: 'Hamilton',   team: 'Mercedes',   color: '#00D2BE' },
-  { year: 2020, driver: 'Hamilton',   team: 'Mercedes',   color: '#00D2BE' },
-  { year: 2021, driver: 'Verstappen', team: 'Red Bull',   color: '#1E3A8A' },
-  { year: 2022, driver: 'Verstappen', team: 'Red Bull',   color: '#1E3A8A' },
-  { year: 2023, driver: 'Verstappen', team: 'Red Bull',   color: '#1E3A8A' },
-  { year: 2024, driver: 'Verstappen', team: 'Red Bull',   color: '#1E3A8A' },
-  { year: 2025, driver: 'Norris',     team: 'McLaren',    color: '#FF8000' },
-]
-
-const MULTI_CHAMPS = [
-  { driver: 'Michael Schumacher', short: 'Schumacher', titles: 7, years: '1994–2004', color: '#DC0000', teams: 'BEN · FER', nat: '🇩🇪' },
-  { driver: 'Lewis Hamilton',     short: 'Hamilton',   titles: 7, years: '2008–2020', color: '#00D2BE', teams: 'MCL · MER', nat: '🇬🇧' },
-  { driver: 'Juan M. Fangio',     short: 'Fangio',     titles: 5, years: '1951–1957', color: '#9C0000', teams: 'ALF · MAS', nat: '🇦🇷' },
-  { driver: 'Sebastian Vettel',   short: 'Vettel',     titles: 4, years: '2010–2013', color: '#1E3A8A', teams: 'RED',       nat: '🇩🇪' },
-  { driver: 'Max Verstappen',     short: 'Verstappen', titles: 4, years: '2021–2024', color: '#1E3A8A', teams: 'RED',       nat: '🇳🇱' },
-  { driver: 'Alain Prost',        short: 'Prost',      titles: 4, years: '1985–1993', color: '#FF8700', teams: 'MCL · WIL', nat: '🇫🇷' },
-  { driver: 'Ayrton Senna',       short: 'Senna',      titles: 3, years: '1988–1991', color: '#E10600', teams: 'MCL',       nat: '🇧🇷' },
-  { driver: 'Nelson Piquet',      short: 'Piquet',     titles: 3, years: '1981–1987', color: '#4A90D9', teams: 'BRA · WIL', nat: '🇧🇷' },
-  { driver: 'Niki Lauda',         short: 'Lauda',      titles: 3, years: '1975–1984', color: '#DC0000', teams: 'FER · MCL', nat: '🇦🇹' },
-  { driver: 'Jack Brabham',       short: 'Brabham',    titles: 3, years: '1959–1966', color: '#2E7D32', teams: 'COO · BRA', nat: '🇦🇺' },
-]
-
-const F1_ERAS = [
-  {
-    name: 'The Italian Supremacy',
-    years: '1950–1961',
-    color: '#DC0000',
-    accent: '#9C0000',
-    drivers: 'Fangio · Ascari · Hawthorn · Moss',
-    stat1: { label: 'FANGIO', value: '5×' },
-    stat2: { label: 'FERRARI TITLES', value: '4' },
-    flavor: 'Alfa Romeo, Ferrari, Maserati — the championship born in Italian blood.',
-  },
-  {
-    name: 'The Turbo War',
-    years: '1977–1988',
-    color: '#FF8700',
-    accent: '#CC5500',
-    drivers: 'Prost · Lauda · Piquet · Mansell',
-    stat1: { label: 'TURBO TEAMS', value: '8' },
-    stat2: { label: 'HP PEAK', value: '1,500+' },
-    flavor: 'Forced induction chaos. Qualifying engines producing 1,500 horsepower. Never replicated.',
-  },
-  {
-    name: 'The Schumacher Epoch',
-    years: '1994–2006',
-    color: '#DC0000',
-    accent: '#880000',
-    drivers: 'Schumacher',
-    stat1: { label: 'CONSECUTIVE TITLES', value: '5' },
-    stat2: { label: 'CAREER WINS', value: '91' },
-    flavor: 'Benetton. Then Ferrari. The most statistically dominant individual in motorsport history.',
-  },
-  {
-    name: 'The Hybrid Dynasty',
-    years: '2014–present',
-    color: '#00D2BE',
-    accent: '#007A73',
-    drivers: 'Hamilton · Verstappen · Norris',
-    stat1: { label: 'HAMILTON WINS', value: '105' },
-    stat2: { label: 'TITLES IN ERA', value: '12' },
-    flavor: 'Mercedes then Red Bull, then McLaren. Twelve titles across the hybrid era — three separate dynasties in one technical generation.',
-  },
-]
+import { F1NewsSection } from '@/components/home/F1NewsSection'
+import { F1EraCard } from '@/components/home/F1EraCard'
+import { F1SectionNav } from '@/components/home/F1SectionNav'
+import { CURRENT_F1_DRIVERS, CURRENT_F1_TEAMS, CURRENT_F1_VENUES } from '@/data/f1-current-grid'
+import {
+  F1_CHAMPIONS,
+  F1_CHAMPIONSHIP_LEGEND,
+  TIMELINE_START,
+  TIMELINE_END,
+  TIMELINE_SPAN,
+  TIMELINE_DECADE_MARKERS,
+  championBarColor,
+} from '@/data/f1-champions'
+import { F1_ERAS } from '@/data/f1-eras'
+import { fetchF1News, type F1NewsItem } from '@/lib/f1-news'
 
 /* ─── Constructor history ────────────────────────────────────────────────────── */
 
 const W = 'https://en.wikipedia.org/wiki/Special:FilePath/'
 
 const F1_CONSTRUCTORS = [
-  // ── CURRENT GRID (2025) ──────────────────────────────────────────────────────
+  // ── CURRENT GRID (2026) ──────────────────────────────────────────────────────
   { name: 'Scuderia Ferrari',        short: 'Ferrari',       abbr: 'FER', wcc: 16, active: '1950–',    color: '#DC0000', status: 'current', slug: 'ferrari' },
-  { name: 'McLaren Racing',          short: 'McLaren',       abbr: 'MCL', wcc: 10, active: '1966–',    color: '#FF8700', status: 'current', slug: 'mclaren',       logo: W + 'McLaren_Racing_logo.svg' },
-  { name: 'Mercedes-AMG Petronas',   short: 'Mercedes',      abbr: 'MER', wcc: 8,  active: '2010–',    color: '#00D2BE', status: 'current', slug: 'mercedes',      logo: W + 'Mercedes_AMG_Petronas_F1_Logo.svg' },
+  { name: 'McLaren Racing',          short: 'McLaren',       abbr: 'MCL', wcc: 10, active: '1966–',    color: '#FF8700', status: 'current', slug: 'mclaren' },
+  { name: 'Mercedes-AMG Petronas',   short: 'Mercedes',      abbr: 'MER', wcc: 8,  active: '2010–',    color: '#00D2BE', status: 'current', slug: 'mercedes' },
   { name: 'Williams Racing',         short: 'Williams',      abbr: 'WIL', wcc: 9,  active: '1977–',    color: '#005AFF', status: 'current', slug: 'williams' },
   { name: 'Red Bull Racing',         short: 'Red Bull',      abbr: 'RBR', wcc: 6,  active: '2005–',    color: '#1E3A8A', status: 'current', slug: 'red-bull' },
   { name: 'Aston Martin Aramco',     short: 'Aston Martin',  abbr: 'AMF', wcc: 0,  active: '2021–',    color: '#006F62', status: 'current', slug: 'aston-martin' },
   { name: 'BWT Alpine F1',           short: 'Alpine',        abbr: 'ALP', wcc: 2,  active: '2021–',    color: '#FF87BC', status: 'current', slug: 'alpine' },
   { name: 'MoneyGram Haas F1',       short: 'Haas',          abbr: 'HAA', wcc: 0,  active: '2016–',    color: '#B6BABD', status: 'current', slug: 'haas' },
-  { name: 'Stake F1 / Sauber',       short: 'Sauber',        abbr: 'SAU', wcc: 0,  active: '1993–',    color: '#52E252', status: 'current', slug: 'sauber' },
-  { name: 'Visa Cash App RB',        short: 'RB',            abbr: 'RB',  wcc: 0,  active: '2024–',    color: '#6692FF', status: 'current', slug: 'rb' },
+  { name: 'Audi F1 Team',            short: 'Audi',          abbr: 'AUD', wcc: 0,  active: '2026–',    color: '#BB1C2A', status: 'current', slug: 'audi' },
+  { name: 'Racing Bulls',            short: 'Racing Bulls', abbr: 'RB',  wcc: 0,  active: '2025–',    color: '#6692FF', status: 'current', slug: 'rb' },
+  { name: 'Cadillac F1 Team',        short: 'Cadillac',      abbr: 'CAD', wcc: 0,  active: '2026–',    color: '#C8A96E', status: 'current', slug: 'cadillac' },
   // ── RECENT DEFUNCT (2000–2023) ───────────────────────────────────────────────
   { name: 'Brawn GP',                short: 'Brawn GP',      abbr: 'BGP', wcc: 1,  active: '2009',     color: '#BFFF00', status: 'recent',  slug: 'brawn',         logo: W + 'Brawn_GP_logo.svg' },
   { name: 'AlphaTauri',              short: 'AlphaTauri',    abbr: 'AT',  wcc: 0,  active: '2020–23',  color: '#4E7C9B', status: 'recent',  slug: 'alphatauri' },
@@ -457,16 +336,17 @@ async function fetchLiveStandings(): Promise<LiveStandings | null> {
 const CONSTRUCTOR_COLORS: Record<string, string> = {
   ferrari: '#DC0000', mclaren: '#FF8000', mercedes: '#00D2BE', red_bull: '#1E3A8A',
   williams: '#005AFF', aston_martin: '#006F62', alpine: '#0090FF', haas: '#B6BABD',
-  sauber: '#52E252', rb: '#6692FF', cadillac: '#C8A96E',
+  sauber: '#52E252', audi: '#BB1C2A', rb: '#6692FF', cadillac: '#C8A96E',
 }
 
 /* ─── F1 heritage page ───────────────────────────────────────────────────────── */
 
-function F1LandingPage({ config, standings }: {
+function F1LandingPage({ config, standings, news }: {
   config: typeof SERIES_CONFIG['1']
   standings: LiveStandings | null
+  news: { items: F1NewsItem[]; fetchedAt: string }
 }) {
-  const decadeMarkers = [1950, 1960, 1970, 1980, 1990, 2000, 2010, 2020]
+  const currentConstructors = F1_CONSTRUCTORS.filter(t => t.status === 'current')
 
   return (
     <div style={{ background: '#000', color: '#fff', minHeight: '100vh', fontFamily: 'var(--font-sans)' }}>
@@ -475,11 +355,12 @@ function F1LandingPage({ config, standings }: {
       <header style={{
         padding: '1rem 1.75rem',
         display: 'flex', justifyContent: 'space-between', alignItems: 'center',
+        gap: 20,
         borderBottom: '0.5px solid #1a1a1a',
-        background: 'rgba(0,0,0,0.95)', backdropFilter: 'blur(8px)',
+        background: '#000',
         position: 'sticky', top: 0, zIndex: 50,
       }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 20 }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 20, flexShrink: 0 }}>
           <Link href="/" style={{ textDecoration: 'none', fontFamily: 'var(--font-mono)', fontSize: 18, fontWeight: 500, color: '#fff', letterSpacing: -0.5 }}>
             f(x)
           </Link>
@@ -488,21 +369,22 @@ function F1LandingPage({ config, standings }: {
             F(1) · FORMULA 1
           </span>
         </div>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
-          <Link href="/f/1/driver/vettel" style={{ fontFamily: 'var(--font-mono)', fontSize: 9, color: '#555', letterSpacing: 1, textDecoration: 'none' }}>
-            DRIVERS ↗
-          </Link>
-          <Link href="/f/1/team/ferrari" style={{ fontFamily: 'var(--font-mono)', fontSize: 9, color: '#555', letterSpacing: 1, textDecoration: 'none' }}>
-            TEAMS ↗
-          </Link>
-          <Link href="/" style={{ fontFamily: 'var(--font-mono)', fontSize: 9, color: '#444', letterSpacing: 1, textDecoration: 'none' }}>
-            ← ALL SERIES
-          </Link>
-        </div>
+        <F1SectionNav accentColor={config.color} />
       </header>
 
+      {/* ── DNA: hero + championship timeline ── */}
+      <section id="dna" style={{ scrollMarginTop: 64, background: '#000' }}>
       {/* ── Hero ── */}
-      <section style={{ position: 'relative', overflow: 'hidden', padding: '5rem 1.75rem 4rem', minHeight: '55vh', display: 'flex', alignItems: 'center' }}>
+      <div style={{
+        position: 'relative',
+        overflow: 'hidden',
+        isolation: 'isolate',
+        padding: '5rem 1.75rem 4rem',
+        minHeight: '55vh',
+        display: 'flex',
+        alignItems: 'center',
+        background: '#000',
+      }}>
         {/* Background glows */}
         <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse at 15% 50%, #FF1E5615 0%, transparent 55%)', pointerEvents: 'none' }} />
         <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse at 85% 30%, #FF1E5608 0%, transparent 50%)', pointerEvents: 'none' }} />
@@ -558,16 +440,24 @@ function F1LandingPage({ config, standings }: {
             ))}
           </div>
         </div>
-      </section>
+      </div>
 
       {/* ── Championship DNA strip ── */}
-      <section style={{ borderTop: '0.5px solid #1a1a1a', borderBottom: '0.5px solid #1a1a1a' }}>
+      <div
+        style={{
+          borderTop: '0.5px solid #1a1a1a',
+          borderBottom: '0.5px solid #1a1a1a',
+          background: '#000',
+          isolation: 'isolate',
+          paddingBottom: '3.5rem',
+        }}
+      >
         <div style={{ padding: '14px 1.75rem 8px', display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
-          <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: 2, color: '#555', margin: 0 }}>
-            CHAMPIONSHIP DNA · 1950–2025
+          <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: 2, color: config.color, margin: 0 }}>
+            CHAMPIONSHIP DNA · {TIMELINE_START}–{TIMELINE_END}
           </p>
           <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, color: '#333', margin: 0 }}>
-            EACH BAR = ONE SEASON · COLOR = CHAMPION'S CONSTRUCTOR
+            EACH BAR = ONE SEASON · COLOR = CONSTRUCTOR THAT WON THE DRIVERS&apos; TITLE THAT SEASON
           </p>
         </div>
         <div style={{ padding: '0 1.75rem 0', position: 'relative' }}>
@@ -578,7 +468,7 @@ function F1LandingPage({ config, standings }: {
                 key={c.year}
                 title={`${c.year} · ${c.driver} · ${c.team}`}
                 style={{
-                  flex: 1, background: c.color,
+                  flex: 1, background: championBarColor(c.team),
                   opacity: 0.85,
                   borderRadius: 1,
                   minWidth: 0,
@@ -588,9 +478,9 @@ function F1LandingPage({ config, standings }: {
           </div>
           {/* Decade markers */}
           <div style={{ display: 'flex', position: 'relative', height: 20, marginTop: 4 }}>
-            {decadeMarkers.map(yr => {
-              const idx = yr - 1950
-              const pct = (idx / 75) * 100
+            {TIMELINE_DECADE_MARKERS.map(yr => {
+              const idx = yr - TIMELINE_START
+              const pct = (idx / TIMELINE_SPAN) * 100
               return (
                 <span
                   key={yr}
@@ -609,214 +499,111 @@ function F1LandingPage({ config, standings }: {
           </div>
         </div>
         {/* Legend */}
-        <div style={{ padding: '12px 1.75rem 16px', display: 'flex', gap: 20, flexWrap: 'wrap' }}>
-          {[
-            { label: 'Ferrari', color: '#DC0000' },
-            { label: 'McLaren', color: '#FF8700' },
-            { label: 'Williams', color: '#005AFF' },
-            { label: 'Mercedes', color: '#00D2BE' },
-            { label: 'Red Bull', color: '#1E3A8A' },
-            { label: 'Lotus', color: '#FFD700' },
-            { label: 'Other', color: '#555' },
-          ].map(l => (
+        <div style={{ padding: '12px 1.75rem 0', display: 'flex', gap: 20, flexWrap: 'wrap' }}>
+          {F1_CHAMPIONSHIP_LEGEND.map(l => (
             <div key={l.label} style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
               <div style={{ width: 10, height: 10, borderRadius: 2, background: l.color }} />
               <span style={{ fontFamily: 'var(--font-mono)', fontSize: 8, color: '#444', letterSpacing: 1 }}>
-                {l.label.toUpperCase()}
+                {l.label.toUpperCase()} · {l.count}
               </span>
             </div>
           ))}
         </div>
+      </div>
       </section>
 
       {/* ── Eras ── */}
-      <section style={{ padding: '3rem 1.75rem' }}>
+      <section id="eras" style={{ padding: '3rem 1.75rem', scrollMarginTop: 64, background: '#000' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: 20 }}>
           <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: 2, color: config.color, margin: 0 }}>
-            THE ERAS
+            ERAS
           </p>
           <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, color: '#333', margin: 0 }}>
-            DEFINING CHAPTERS IN THE SPORT'S HISTORY
+            DEFINING CHAPTERS IN THE SPORT&apos;S HISTORY
           </p>
         </div>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 12 }}>
-          {F1_ERAS.map(era => (
-            <div key={era.name} style={{
-              background: '#080808', border: '0.5px solid #1a1a1a',
-              borderRadius: 10, padding: '28px 28px 24px', position: 'relative', overflow: 'hidden',
-            }}>
-              <div style={{
-                position: 'absolute', inset: 0,
-                background: `radial-gradient(ellipse at 0% 0%, ${era.color}18 0%, transparent 55%)`,
-                pointerEvents: 'none',
-              }} />
-              <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 2, background: era.color, opacity: 0.6 }} />
-              <div style={{ position: 'relative', zIndex: 1 }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 16 }}>
-                  <div>
-                    <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, color: era.color, letterSpacing: 2, margin: '0 0 8px' }}>
-                      {era.years}
-                    </p>
-                    <h3 style={{ fontSize: 20, fontWeight: 500, color: '#fff', margin: '0 0 8px', letterSpacing: -0.5 }}>
-                      {era.name}
-                    </h3>
-                    <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, color: '#555', margin: 0, letterSpacing: 0.5 }}>
-                      {era.drivers.toUpperCase()}
-                    </p>
-                  </div>
-                  <div style={{ display: 'flex', gap: 16, flexShrink: 0 }}>
-                    {[era.stat1, era.stat2].map(s => (
-                      <div key={s.label} style={{ textAlign: 'right' }}>
-                        <p style={{ fontFamily: 'var(--font-mono)', fontSize: 28, fontWeight: 400, color: era.color, margin: '0 0 2px', letterSpacing: -1, lineHeight: 1 }}>
-                          {s.value}
-                        </p>
-                        <p style={{ fontFamily: 'var(--font-mono)', fontSize: 8, color: '#444', letterSpacing: 1, margin: 0 }}>
-                          {s.label}
-                        </p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-                <p style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: 13, color: '#666', margin: 0, lineHeight: 1.6 }}>
-                  {era.flavor}
-                </p>
-              </div>
-            </div>
+          {F1_ERAS.map((era, i) => (
+            <F1EraCard
+              key={era.slug}
+              era={era}
+              wide={i === F1_ERAS.length - 1}
+              href={`/f/1/era/${era.slug}`}
+            />
           ))}
         </div>
       </section>
 
-      {/* ── Legends ── */}
-      <section style={{ padding: '0 1.75rem 3rem' }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: 20, borderTop: '0.5px solid #1a1a1a', paddingTop: '2rem' }}>
+      <F1NewsSection items={news.items} fetchedAt={news.fetchedAt} accentColor={config.color} />
+
+      {/* ── Teams / Constructors ── */}
+      <section id="teams" style={{ padding: '0 1.75rem 3rem', borderTop: '0.5px solid #1a1a1a', scrollMarginTop: 64 }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: 24, paddingTop: '2rem' }}>
           <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: 2, color: config.color, margin: 0 }}>
-            MULTIPLE WORLD CHAMPIONS
+            TEAMS
           </p>
           <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, color: '#333', margin: 0 }}>
-            {MULTI_CHAMPS.length} DRIVERS · 3+ TITLES
+            CURRENT GRID · 2026 · {currentConstructors.length} TEAMS
           </p>
         </div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: 8 }}>
-          {MULTI_CHAMPS.map((c, i) => (
-            <div key={c.driver} style={{
-              background: '#060606',
-              border: `0.5px solid ${i < 2 ? c.color + '40' : '#1a1a1a'}`,
-              borderRadius: 8, padding: '16px 14px', position: 'relative', overflow: 'hidden',
-            }}>
-              {i < 2 && (
-                <div style={{
-                  position: 'absolute', inset: 0,
-                  background: `radial-gradient(ellipse at 50% 100%, ${c.color}18 0%, transparent 70%)`,
-                  pointerEvents: 'none',
-                }} />
+
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 8 }}>
+          {currentConstructors.map(t => (
+            <Link
+              key={t.slug}
+              href={`/f/1/team/${t.slug}`}
+              style={{
+                textDecoration: 'none', color: 'inherit',
+                background: '#060606',
+                border: `0.5px solid ${t.wcc > 0 ? t.color + '38' : '#111'}`,
+                borderRadius: 8,
+                padding: '16px 14px',
+                position: 'relative', overflow: 'hidden',
+                display: 'block',
+              }}
+            >
+              <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 2, background: t.color, opacity: t.wcc > 0 ? 0.7 : 0.18 }} />
+              {t.wcc > 3 && (
+                <div style={{ position: 'absolute', inset: 0, background: `radial-gradient(ellipse at 0% 100%, ${t.color}10 0%, transparent 55%)`, pointerEvents: 'none' }} />
               )}
-              <div style={{ position: 'relative' }}>
-                <p style={{
-                  fontFamily: 'var(--font-mono)', fontSize: 40, fontWeight: 400,
-                  color: i < 2 ? c.color : i < 5 ? c.color + 'aa' : '#333',
-                  margin: '0 0 6px', letterSpacing: -2, lineHeight: 1,
-                }}>
-                  {c.titles}×
-                </p>
-                <p style={{ fontSize: 13, fontWeight: 500, color: i < 5 ? '#ddd' : '#666', margin: '0 0 3px', letterSpacing: -0.3 }}>
-                  {c.short}
-                </p>
-                <p style={{ fontFamily: 'var(--font-mono)', fontSize: 8, color: '#444', margin: '0 0 2px', letterSpacing: 0.5 }}>
-                  {c.years}
-                </p>
-                <p style={{ fontFamily: 'var(--font-mono)', fontSize: 8, color: '#333', margin: 0, letterSpacing: 0.5 }}>
-                  {c.teams}
-                </p>
+              <div style={{ position: 'relative', display: 'flex', flexDirection: 'column', gap: 8 }}>
+                <TeamLogo
+                  logo={(t as { logo?: string }).logo}
+                  abbr={t.abbr}
+                  color={t.color}
+                  size={36}
+                />
+                <div>
+                  <p style={{
+                    fontFamily: 'var(--font-mono)',
+                    fontSize: t.wcc > 0 ? 26 : 18,
+                    fontWeight: 400,
+                    color: t.wcc > 0 ? t.color : '#2a2a2a',
+                    margin: '0 0 3px', letterSpacing: -1, lineHeight: 1,
+                  }}>
+                    {t.wcc > 0 ? `${t.wcc}×` : '—'}
+                  </p>
+                  <p style={{
+                    fontSize: 11,
+                    fontWeight: 500,
+                    color: t.wcc > 4 ? '#ddd' : t.wcc > 0 ? '#aaa' : '#444',
+                    margin: '0 0 2px', letterSpacing: -0.2,
+                  }}>
+                    {t.short}
+                  </p>
+                  <p style={{ fontFamily: 'var(--font-mono)', fontSize: 7, color: '#2a2a2a', margin: 0, letterSpacing: 0.3 }}>
+                    {t.active}
+                  </p>
+                </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
-      </section>
-
-      {/* ── Constructors ── */}
-      <section style={{ padding: '0 1.75rem 3rem' }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: 24, borderTop: '0.5px solid #1a1a1a', paddingTop: '2rem' }}>
-          <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: 2, color: config.color, margin: 0 }}>
-            CONSTRUCTORS
-          </p>
-          <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, color: '#333', margin: 0 }}>
-            {F1_CONSTRUCTORS.length} TEAMS · ALL TIME
-          </p>
-        </div>
-
-        {([
-          { label: 'CURRENT GRID · 2025', key: 'current', cols: 5, cardPad: '16px 14px' },
-          { label: 'RECENT · DEFUNCT POST-2000', key: 'recent', cols: 5, cardPad: '13px 12px' },
-          { label: 'HISTORIC · 1970–2000', key: 'historic', cols: 6, cardPad: '11px 11px' },
-          { label: 'EARLY ERA · 1950–1970', key: 'early', cols: 6, cardPad: '11px 11px' },
-        ] as const).map(section => {
-          const teams = F1_CONSTRUCTORS.filter(t => t.status === section.key)
-          const isCurrent = section.key === 'current'
-          return (
-            <div key={section.key} style={{ marginBottom: 28 }}>
-              <p style={{ fontFamily: 'var(--font-mono)', fontSize: 8, letterSpacing: 2, color: '#3a3a3a', margin: '0 0 10px' }}>
-                {section.label}
-              </p>
-              <div style={{ display: 'grid', gridTemplateColumns: `repeat(${section.cols}, 1fr)`, gap: isCurrent ? 8 : 6 }}>
-                {teams.map(t => (
-                  <Link
-                    key={t.slug}
-                    href={`/f/1/team/${t.slug}`}
-                    style={{
-                      textDecoration: 'none', color: 'inherit',
-                      background: isCurrent ? '#060606' : '#030303',
-                      border: `0.5px solid ${t.wcc > 0 ? t.color + '38' : '#111'}`,
-                      borderRadius: isCurrent ? 8 : 6,
-                      padding: section.cardPad,
-                      position: 'relative', overflow: 'hidden',
-                      display: 'block',
-                    }}
-                  >
-                    <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: isCurrent ? 2 : 1.5, background: t.color, opacity: t.wcc > 0 ? 0.7 : 0.18 }} />
-                    {t.wcc > 3 && (
-                      <div style={{ position: 'absolute', inset: 0, background: `radial-gradient(ellipse at 0% 100%, ${t.color}10 0%, transparent 55%)`, pointerEvents: 'none' }} />
-                    )}
-                    <div style={{ position: 'relative', display: 'flex', flexDirection: 'column', gap: isCurrent ? 8 : 5 }}>
-                      <TeamLogo
-                        logo={(t as { logo?: string }).logo}
-                        abbr={t.abbr}
-                        color={t.color}
-                        size={isCurrent ? 36 : 28}
-                      />
-                      <div>
-                        <p style={{
-                          fontFamily: 'var(--font-mono)',
-                          fontSize: isCurrent ? (t.wcc > 0 ? 26 : 18) : (t.wcc > 0 ? 18 : 13),
-                          fontWeight: 400,
-                          color: t.wcc > 0 ? t.color : isCurrent ? '#2a2a2a' : '#1e1e1e',
-                          margin: '0 0 3px', letterSpacing: -1, lineHeight: 1,
-                        }}>
-                          {t.wcc > 0 ? `${t.wcc}×` : '—'}
-                        </p>
-                        <p style={{
-                          fontSize: isCurrent ? 11 : 9,
-                          fontWeight: 500,
-                          color: t.wcc > 4 ? '#ddd' : t.wcc > 0 ? '#aaa' : isCurrent ? '#444' : '#333',
-                          margin: '0 0 2px', letterSpacing: -0.2,
-                        }}>
-                          {t.short}
-                        </p>
-                        <p style={{ fontFamily: 'var(--font-mono)', fontSize: 7, color: '#2a2a2a', margin: 0, letterSpacing: 0.3 }}>
-                          {t.active}
-                        </p>
-                      </div>
-                    </div>
-                  </Link>
-                ))}
-              </div>
-            </div>
-          )
-        })}
       </section>
 
       {/* ── Live Standings ── */}
       {standings && (standings.driverStandings.length > 0 || standings.constructorStandings.length > 0) && (
-        <section style={{ padding: '0 1.75rem 3rem', borderTop: '0.5px solid #1a1a1a' }}>
+        <section id="standings" style={{ padding: '0 1.75rem 3rem', borderTop: '0.5px solid #1a1a1a', scrollMarginTop: 64 }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', margin: '2rem 0 20px' }}>
             <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: 2, color: config.color, margin: 0 }}>
               LIVE STANDINGS
@@ -910,11 +697,11 @@ function F1LandingPage({ config, standings }: {
           BROWSE
         </p>
         {[
-          { label: 'DRIVERS', items: config.drivers, type: 'DRIVER', seg: 'driver' },
-          { label: 'TEAMS',   items: config.teams,   type: 'TEAM',   seg: 'team' },
-          { label: 'VENUES',  items: config.venues,  type: 'VENUE',  seg: 'venue' },
+          { id: 'drivers', label: 'DRIVERS', items: CURRENT_F1_DRIVERS, type: 'DRIVER', seg: 'driver' },
+          { id: 'browse-teams', label: 'TEAMS', items: CURRENT_F1_TEAMS, type: 'TEAM', seg: 'team' },
+          { id: 'venues', label: 'VENUES', items: CURRENT_F1_VENUES, type: 'VENUE', seg: 'venue' },
         ].filter(s => s.items.length > 0).map(section => (
-          <div key={section.label} style={{ marginBottom: 28 }}>
+          <div key={section.label} id={section.id} style={{ marginBottom: 28, scrollMarginTop: 64 }}>
             <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, letterSpacing: 1.5, color: '#444', margin: '0 0 10px' }}>
               {section.label}
             </p>
@@ -1407,8 +1194,17 @@ export default async function SeriesLandingPage({ params }: { params: Promise<{ 
   if (!config) notFound()
 
   if (series === '1') {
-    const standings = await fetchLiveStandings()
-    return <F1LandingPage config={config as typeof SERIES_CONFIG['1']} standings={standings} />
+    const [standings, news] = await Promise.all([
+      fetchLiveStandings(),
+      fetchF1News(8),
+    ])
+    return (
+      <F1LandingPage
+        config={config as typeof SERIES_CONFIG['1']}
+        standings={standings}
+        news={news}
+      />
+    )
   }
   if (series === '2') {
     return <F2LandingPage config={config as typeof SERIES_CONFIG['2']} />

@@ -713,7 +713,7 @@ export const interlagosIconicMoments: VenueIconicMoment[] = [
   { id: "schumi-1994-bra",   year: 1994, title: "Schumacher wins season opener for Benetton", teamLabel: "BENETTON · START", conditionBadge: "WIN",    conditionColor: "#009944", glowColor: "#009944", imageUrl: "/images/venues/interlagos-schumacher-1994.jpg" },
   { id: "glock-2008-bra",    year: 2008, title: "Glock overtaken — Hamilton wins title",teamLabel: "McLAREN · 1 POINT TITLE", conditionBadge: "TITLE",  conditionColor: "#FF1E56", glowColor: "#C0C0C0", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/8/8b/Hamilton_Brazil_2008_celebrations.jpg" },
   { id: "vettel-2012-bra",   year: 2012, title: "Vettel hit lap 1 · fights back to P6 for title", teamLabel: "RED BULL · CHAMPION", conditionBadge: "TITLE", conditionColor: "#1E3A8A", glowColor: "#1E3A8A", imageUrl: "/images/venues/interlagos-vettel-2012.jpg" },
-  { id: "verstappen-2022-bra",year: 2022, title: "Verstappen ignores team orders",     teamLabel: "RED BULL vs PEREZ",       conditionBadge: "DRAMA",  conditionColor: "#FF1E56", glowColor: "#1E3A8A", imageUrl: "" },
+  { id: "verstappen-2022-bra",year: 2022, title: "Verstappen ignores team orders",     teamLabel: "RED BULL vs PEREZ",       conditionBadge: "DRAMA",  conditionColor: "#FF1E56", glowColor: "#1E3A8A", imageUrl: "/images/venues/interlagos-verstappen-2022.jpg" },
   { id: "norris-2024-bra",   year: 2024, title: "Norris Sprint win · McLaren title fight", teamLabel: "McLAREN · SPRINT WIN", conditionBadge: "SPRINT", conditionColor: "#FF8000", glowColor: "#FF8000", imageUrl: "/images/venues/interlagos-norris-2024.jpg" },
 ];
 
@@ -1590,7 +1590,7 @@ export const bakuHotspots: Hotspot[] = [];
 
 export const bakuMomentOverlays: MomentOverlay[] = [];
 export const bakuIconicMoments: VenueIconicMoment[] = [
-  { id: "verstappen-tyre-2021", year: 2021, title: "Verstappen tyre failure on straight",   teamLabel: "RED BULL · BLOWOUT",     conditionBadge: "BLOWOUT", conditionColor: "#FF1E56", glowColor: "#1E3A8A", imageUrl: "" },
+  { id: "verstappen-tyre-2021", year: 2021, title: "Verstappen tyre failure on straight",   teamLabel: "RED BULL · BLOWOUT",     conditionBadge: "BLOWOUT", conditionColor: "#FF1E56", glowColor: "#1E3A8A", imageUrl: "/images/venues/baku-verstappen-tyre-2021.jpg" },
   { id: "hamilton-button-2021", year: 2021, title: "Hamilton magic button restart error",   teamLabel: "MERCEDES · SELF INFLICTED",conditionBadge: "ERROR",  conditionColor: "#FF1E56", glowColor: "#00D2BE", imageUrl: "/images/venues/baku-hamilton-2021.jpg" },
   { id: "leclerc-2022-bak",     year: 2022, title: "Leclerc retirement from race lead",     teamLabel: "FERRARI · ENGINE FAILURE",conditionBadge: "DNF",    conditionColor: "#DC0000", glowColor: "#DC0000", imageUrl: "/images/venues/baku-leclerc-2022.jpg" },
   { id: "perez-2021-bak",       year: 2021, title: "Pérez wins chaotic Baku GP",            teamLabel: "RED BULL · STRATEGY",    conditionBadge: "WIN",    conditionColor: "#1E3A8A", glowColor: "#1E3A8A", imageUrl: "/images/venues/baku-perez-2021.jpg" },
@@ -1879,8 +1879,8 @@ export const lasVegasHotspots: Hotspot[] = [];
 
 export const lasVegasMomentOverlays: MomentOverlay[] = [];
 export const lasVegasIconicMoments: VenueIconicMoment[] = [
-  { id: "lasvegas-cover-drain-2023", year: 2023, title: "Drain cover destroys Sainz's car in FP1", teamLabel: "FERRARI · RED FLAG",   conditionBadge: "CHAOS",  conditionColor: "#FF1E56", glowColor: "#DC0000", imageUrl: "" },
-  { id: "verstappen-2023-lv",        year: 2023, title: "Verstappen wins inaugural Las Vegas GP",  teamLabel: "RED BULL · NIGHT WIN",  conditionBadge: "WIN",    conditionColor: "#1E3A8A", glowColor: "#1E3A8A", imageUrl: "" },
+  { id: "lasvegas-cover-drain-2023", year: 2023, title: "Drain cover destroys Sainz's car in FP1", teamLabel: "FERRARI · RED FLAG",   conditionBadge: "CHAOS",  conditionColor: "#FF1E56", glowColor: "#DC0000", imageUrl: "/images/venues/las-vegas-drain-2023.jpg" },
+  { id: "verstappen-2023-lv",        year: 2023, title: "Verstappen wins inaugural Las Vegas GP",  teamLabel: "RED BULL · NIGHT WIN",  conditionBadge: "WIN",    conditionColor: "#1E3A8A", glowColor: "#1E3A8A", imageUrl: "/images/venues/las-vegas-verstappen-2023.jpg" },
   { id: "verstappen-wdc4-2024-lv",   year: 2024, title: "Verstappen clinches record 4th consecutive title", teamLabel: "RED BULL · DYNASTY", conditionBadge: "TITLE",  conditionColor: "#1E3A8A", glowColor: "#1E3A8A", imageUrl: "/images/venues/las-vegas-verstappen-2024.jpg" },
 ];
 

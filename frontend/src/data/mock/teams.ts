@@ -24,7 +24,7 @@ export const ferrari: Team = {
   current: true,
   entityColor: "ferrari",
   liveryHex: "#DC0000",
-  bio: "The oldest and most storied constructor in Formula 1. The Scuderia has won more constructor championships than any other team and remains the emotional heart of the sport.",
+  bio: "The oldest and most storied constructor in Formula 1. Sixteen constructors' titles, fifteen drivers' championships, and the emotional heart of the sport. The 2024 near-miss — five wins and P2 in the constructors' standings — set the stage for Lewis Hamilton joining Charles Leclerc in 2025, the most anticipated Ferrari pairing in a generation.",
   quote: "It's more a matter for me of mentality — if you can have this kind of approach, how I can do the best on every single topic of the company. To have this kind of mentality is crucial.",
   quoteContext: "Fred Vasseur, Ferrari Team Principal — The Race",
 };
@@ -33,9 +33,9 @@ export const ferrariStats: TeamStats = {
   teamId: "ferrari",
   constructorsTitles: 16, // source: formula1.com — 1961, 1964, 1975–1977, 1979, 1982–1983, 1999–2004, 2007–2008
   driversTitles: 15, // source: Wikipedia — Ascari ×2, Fangio, Hawthorn, P.Hill, Surtees, Lauda ×2, Scheckter, Schumacher ×5, Räikkönen
-  wins: 248, // updated: 243 pre-2024 + 5 wins in 2024 (Australia/Sainz, Monaco/Leclerc, Italy/Leclerc, COTA/Leclerc, Mexico/Sainz); 0 wins in 2025 · source: formula1.com constructor records
-  podiums: 815, // [VERIFY · source: formula1.com/en/results/constructor/ferrari]
-  seasons: 75, // source: 1950–2024, every season
+  wins: 251, // source: formula1.com/en/teams/ferrari Team Summary Highest Race Finish 1 (x251)
+  podiums: 647, // source: formula1.com Team Summary (was incorrectly 815)
+  seasons: 77, // 1950–2026 inclusive
   firstSeason: 1950,
 };
 
@@ -243,7 +243,7 @@ export const ferrariReelSlides: ReelSlide[] = [
 
 export const ferrariAcademy: TeamAcademyDriver[] = [
   { name: "Charles Leclerc",     tier: "f1",     note: "FDA '16 · RACE SEAT" },
-  { name: "Lewis Hamilton",      tier: "f1",     note: "EXTERNAL · 7× WDC" },
+  { name: "Lewis Hamilton",      tier: "f1",     note: "FERRARI 2025– · 7× WDC" },
   { name: "Oliver Bearman",      tier: "f1",     note: "FDA · HAAS 2025" },
   { name: "Dino Beganovic",      tier: "junior", note: "F2 2025 · HITECH" },
   { name: "Rafael Câmara",       tier: "junior", note: "F3 CHAMP 2025 · TRIDENT" },
@@ -276,16 +276,16 @@ export const redbull: Team = {
   current: true,
   entityColor: "redbull",
   liveryHex: "#1E3A8A",
-  bio: "Eight world championships across two decades. From Newey's aerodynamic revolution in 2010 to Verstappen's dynasty in the 2020s, Red Bull Racing rewrote the record books twice in fifteen active seasons.",
+  bio: "Six constructors' titles and eight drivers' championships across two decades. From Newey's aerodynamic revolution in 2010 to Verstappen's four consecutive WDCs (2021–2024), Red Bull rewrote the record books twice — then faced a McLaren challenge in 2025. Isack Hadjar, a Racing Bulls graduate, joins Verstappen for 2026.",
 };
 
 export const redbullStats: TeamStats = {
   teamId: "redbull",
-  constructorsTitles: 6, // source: Wikipedia — 2010–2013, 2022–2023
+  constructorsTitles: 6, // source: formula1.com / Wikipedia — 2010–2013, 2022–2023
   driversTitles: 8, // source: Wikipedia — Vettel ×4 (2010–2013), Verstappen ×4 (2021–2024)
-  wins: 130, // source: Wikipedia / gpracingstats.com — verified through end 2025
-  podiums: 297, // corrected from 358; source: Wikipedia infobox + gpracingstats.com
-  seasons: 22, // source: 2005–2026
+  wins: 130, // source: formula1.com/en/teams/red-bull-racing Team Summary
+  podiums: 236, // source: formula1.com Team Summary (was incorrectly 297)
+  seasons: 22, // 2005–2026
   firstSeason: 2005,
 };
 
@@ -325,9 +325,9 @@ export const redbullEras: TeamEngineeringEra[] = [
     teamId: "redbull",
     label: "Verstappen's Dynasty",
     seasons: "2021–",
-    description: "Honda power, Newey's focused attention, and Verstappen at his ceiling. The 2021 finale at Abu Dhabi. The RB18's 17 wins. The RB19's record 21 victories from 22 races. Four consecutive World Championships for Max — equal to Vettel's own record set at this very team.",
+    description: "Honda power, Newey's focused attention, and Verstappen at his ceiling. Abu Dhabi 2021. The RB19's record 21 wins from 22 races. Four consecutive WDCs for Max through 2024. McLaren took the 2025 constructors' fight; Hadjar graduates from Racing Bulls to partner Verstappen in 2026.",
     championships: 4,
-    driverNames: "VERSTAPPEN · HADJAR",
+    driverNames: "VERSTAPPEN · PÉREZ · HADJAR",
     champLabel: "4× WDC · 2× WCC",
     current: true,
     imageUrl: "https://upload.wikimedia.org/wikipedia/commons/7/79/FIA_F1_Austria_2023_Nr._1_%281%29.jpg",
@@ -372,6 +372,7 @@ export const redbullReelSlides: ReelSlide[] = [
       { cx: 113, cy: 183, r: 14, fill: "rgba(30,65,190,0.35)" },
       { cx: 280, cy: 183, r: 14, fill: "rgba(30,65,190,0.35)" },
     ],
+    imageUrl: "/images/teams/redbull-verstappen-abu-dhabi-2021.jpg",
   },
   {
     slotLabel: "SV · 01",
@@ -399,6 +400,7 @@ export const redbullReelSlides: ReelSlide[] = [
       { cx: 110, cy: 183, r: 14, fill: "rgba(30,58,138,0.35)" },
       { cx: 285, cy: 183, r: 14, fill: "rgba(30,58,138,0.35)" },
     ],
+    imageUrl: "/images/teams/redbull-vettel-india-2013.jpg",
   },
   {
     slotLabel: "SV · MW",
@@ -2217,6 +2219,7 @@ export const premaReelSlides: ReelSlide[] = [
     headline: "Charles Leclerc",
     meta: "7 WINS · DOMINANT ROOKIE F2 SEASON",
     svgPath: "",
+    imageUrl: "/images/drivers/leclerc-prema-f2-2017.jpg",
   },
   {
     slotLabel: "GRADUATE · 02",
@@ -2226,6 +2229,7 @@ export const premaReelSlides: ReelSlide[] = [
     headline: "George Russell",
     meta: "ROOKIE TITLE · WIRE-TO-WIRE",
     svgPath: "",
+    imageUrl: "/images/drivers/russell-art-f2-2018.jpg",
   },
   {
     slotLabel: "GRADUATE · 03",
@@ -2235,6 +2239,7 @@ export const premaReelSlides: ReelSlide[] = [
     headline: "Oscar Piastri",
     meta: "F3 '20 · F2 '21 · BACK-TO-BACK TITLES",
     svgPath: "",
+    imageUrl: "/images/drivers/piastri-f2-prema-2021.jpg",
   },
   {
     slotLabel: "GRADUATE · 04",
@@ -2253,6 +2258,7 @@ export const premaReelSlides: ReelSlide[] = [
     headline: "Oliver Bearman",
     meta: "F2 P4 · HAAS RACE DRIVER FROM ROUND 1",
     svgPath: "",
+    imageUrl: "/images/drivers/bearman-austria-f2-2024.jpg",
   },
   {
     slotLabel: "GRADUATE · 06",
@@ -2313,18 +2319,18 @@ export const mclaren: Team = {
   current: true,
   entityColor: "mclaren",
   liveryHex: "#FF8700",
-  bio: "Founded by Bruce McLaren and sustained by an obsession with excellence, McLaren has won eight Constructors' Championships and twelve Drivers' titles across six decades. The Senna–Prost era defined team dominance; the 2024 Constructors' title — their first in 26 years — confirmed the Woking renaissance.",
+  bio: "Founded by Bruce McLaren and sustained by an obsession with excellence, McLaren has won ten Constructors' Championships and thirteen Drivers' titles across six decades. The Senna–Prost era defined team dominance; back-to-back WCC in 2024–25 and Lando Norris's 2025 World Championship confirmed the Woking renaissance is complete.",
   quote: "If I look at what was McLaren's single biggest issue, it was lack of clarity and leadership.",
   quoteContext: "Zak Brown, McLaren CEO — The Race",
 };
 
 export const mclarenStats: TeamStats = {
   teamId: "mclaren",
-  constructorsTitles: 10, // corrected from 8; added 2024 + 2025 WCC · source: mclaren.com/racing/heritage/formula-1/2025-championship
-  driversTitles: 13, // corrected from 12; added Norris 2025 WDC · source: Wikipedia 2025 F1 season
-  wins: 203, // corrected from 183; source: Wikipedia "McLaren are second with 203 wins" (through 2025)
-  podiums: 559, // corrected from 514; source: Wikipedia McLaren infobox (through 2025)
-  seasons: 60, // corrected from 59; source: 1966–2025
+  constructorsTitles: 10, // source: formula1.com Team Summary + 2024–2025 WCC
+  driversTitles: 13, // historical WDC incl. Norris 2025 · source: Wikipedia / 2025 season
+  wins: 203, // source: formula1.com/en/teams/mclaren Team Summary
+  podiums: 448, // source: formula1.com Team Summary (was incorrectly 559)
+  seasons: 61, // 1966–2026 inclusive
   firstSeason: 1966,
 };
 
@@ -2366,25 +2372,58 @@ export const mclarenEras: TeamEngineeringEra[] = [
   {
     teamId: "mclaren",
     label: "Hamilton Years",
-    seasons: "2007–2013",
+    seasons: "2007–2012",
     description:
-      "Lewis Hamilton arrived as a rookie and nearly won the title. He did in 2008 by one point in the final lap of the final race. Button joined for a complementary partnership. Alonso returned. Never quite dominant again, but never without drama.",
+      "Lewis Hamilton arrived as a rookie and nearly won the title. He did in 2008 by one point in the final lap of the final race. Button joined in 2010 and took the 2011 championship. Alonso’s 2007 season ended in controversy. Hamilton left for Mercedes after 2012.",
     championships: 2,
     driverNames: "HAMILTON · BUTTON · ALONSO",
     champLabel: "2× WDC",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/1/1f/Lewis_Hamilton_2007.jpg",
+    imageUrl: "/images/drivers/hamilton-mclaren-2008.jpg",
+  },
+  {
+    teamId: "mclaren",
+    label: "Post-Hamilton",
+    seasons: "2013–2014",
+    description:
+      "Still a Mercedes customer after Hamilton’s exit. Button paired with Pérez in 2013, then Magnussen’s rookie season in 2014 — midfield results while the Honda works deal was prepared for 2015.",
+    championships: 0,
+    driverNames: "BUTTON · PÉREZ · MAGNUSSEN",
+    champLabel: "NO TITLES",
+    imageUrl: "/images/drivers/magnussen-mclaren-2014.jpg",
+  },
+  {
+    teamId: "mclaren",
+    label: "McLaren–Honda",
+    seasons: "2015–2017",
+    description:
+      "The works Honda return. Chronic power-unit unreliability and a lack of pace defined three painful seasons. Alonso and Button, then Vandoorne, absorbed the damage before McLaren walked away from Honda after 2017.",
+    championships: 0,
+    driverNames: "ALONSO · BUTTON · VANDOORNE",
+    champLabel: "NO TITLES",
+    imageUrl: "/images/drivers/alonso-mclaren-honda-2016.jpg",
+  },
+  {
+    teamId: "mclaren",
+    label: "Rebuild",
+    seasons: "2018–2022",
+    description:
+      "Renault customer power from 2018, then Mercedes from 2021. Norris arrived in 2019; Sainz scored consistently; Ricciardo’s 2021–22 stint was mixed. Seidl and Stella rebuilt the organisation toward the papaya revival.",
+    championships: 0,
+    driverNames: "NORRIS · SAINZ · RICCIARDO",
+    champLabel: "NO TITLES",
+    imageUrl: "/images/drivers/sainz-mclaren-2019.jpg",
   },
   {
     teamId: "mclaren",
     label: "Norris · Piastri",
-    seasons: "2021–",
+    seasons: "2023–",
     description:
-      "The rebuilding was complete. Norris's maiden win at Miami 2024. Piastri in Hungary. Six race wins between them. The 2024 Constructors' Championship — McLaren's first in 26 years — confirmed the Woking resurgence was real.",
-    championships: 1,
+      "Piastri joined as Norris’s teammate in 2023. Norris’s maiden win at Miami 2024. Back-to-back constructors’ titles in 2024–25. Norris clinched the 2025 World Championship — McLaren’s first drivers’ title since 2008. The pairing carries into the 2026 regulation reset.",
+    championships: 3,
     driverNames: "NORRIS · PIASTRI",
-    champLabel: "1× WCC",
+    champLabel: "2× WCC · 1× WDC",
     current: true,
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/a/ae/Lando_Norris%2CChinese_GP_2024.jpg",
+    imageUrl: "/images/drivers/norris-mclaren-2024.jpg",
   },
 ];
 
@@ -2555,11 +2594,11 @@ export const mercedes: Team = {
 
 export const mercedesStats: TeamStats = {
   teamId: "mercedes",
-  constructorsTitles: 8, // source: Wikipedia — 2014–2021 (8 consecutive)
-  driversTitles: 7, // source: Wikipedia — Hamilton ×6 (2014–2015, 2017–2020), Rosberg 2016
-  wins: 125, // [VERIFY · modern team (2010–2025) year-by-year total is ~122; file may include all-era Mercedes; source: en.wikipedia.org/wiki/Mercedes-Benz_in_Formula_One]
-  podiums: 320, // [VERIFY · Wikipedia infobox shows 315 for all-era Mercedes; source: en.wikipedia.org/wiki/Mercedes-Benz_in_Formula_One]
-  seasons: 16, // source: 2010–2025 (Brawn successor from 2010)
+  constructorsTitles: 8, // source: formula1.com / Wikipedia — 2014–2021
+  driversTitles: 7, // Hamilton ×6 (2014–15, 2017–20), Rosberg 2016 · source: Wikipedia
+  wins: 130, // source: formula1.com/en/teams/mercedes Team Summary (modern + historical rollup)
+  podiums: 211, // source: formula1.com Team Summary (was incorrectly 320)
+  seasons: 17, // modern works team 2010–2026
   firstSeason: 2010,
 };
 
@@ -2603,7 +2642,7 @@ export const mercedesEras: TeamEngineeringEra[] = [
     label: "George Russell Era",
     seasons: "2022–",
     description:
-      "The zero-pod W13 concept failed spectacularly — just one win in 2022, Russell's breakthrough at Brazil. Hamilton's relationship with the team frayed. Kimi Antonelli — 18 years old — replaced Hamilton in 2025. The rebuild is underway.",
+      "The zero-pod W13 concept failed spectacularly — just one win in 2022, Russell's breakthrough at Brazil. Hamilton departed for Ferrari after 2024; Kimi Antonelli — 18 years old — replaced him in 2025. Russell and Antonelli carry the rebuild into the 2026 regulation era.",
     championships: 0,
     driverNames: "RUSSELL · HAMILTON · ANTONELLI",
     champLabel: "NO TITLES · REBUILDING",
@@ -2752,7 +2791,7 @@ export const mercedesIconicCars: TeamIconicCar[] = [
   },
 ];
 
-/* ─── Racing Bulls (Visa Cash App RB) ───────────────────────────────────────── */
+/* ─── Racing Bulls (2025–) — brand page only; Faenza lineage deferred ──────── */
 
 export const racingBulls: Team = {
   id: "rb",
@@ -2760,11 +2799,11 @@ export const racingBulls: Team = {
   shortName: "Racing Bulls",
   country: "Italy",
   series: ["f1"],
-  founded: 2006,
+  founded: 2025,
   current: true,
   entityColor: "redbull",
   liveryHex: "#6692FF",
-  bio: "The Faenza operation began as Minardi (1985–2005), became Toro Rosso (2006–2019), then AlphaTauri (2020–2023), VCARB / RB in 2024, and Racing Bulls from 2025. The STR3 delivered Sebastian Vettel’s shock 2008 Italian GP win; the AT01 gave Pierre Gasly a maiden victory at Monza 2020; the VCARB 01 brought the new blue and red livery. From 2026 the car runs a Red Bull Ford power unit. 2025 highlight: Isack Hadjar P3 at Zandvoort — first podium under the Racing Bulls name; P6 in the constructors' standings. Current drivers: Liam Lawson (#30) and Arvid Lindblad (#41).",
+  bio: "Racing Bulls races from Faenza as Red Bull’s sister team under its current brand from 2025. Isack Hadjar took the team’s first podium as Racing Bulls — P3 at Zandvoort 2025 — en route to P6 in the constructors’ standings. From 2026 the car runs a Red Bull Ford power unit. Current drivers: Liam Lawson (#30) and Arvid Lindblad (#41).",
   quote: "You can never make enough effort to communicate and to engage with your people. If you feel you have done a good job in that, if you reflect on it, you could have done even more.",
   quoteContext: "Laurent Mekies, Racing Bulls Team Principal — RacingNews365 / The Race",
 };
@@ -2773,26 +2812,182 @@ export const racingBullsStats: TeamStats = {
   teamId: "rb",
   constructorsTitles: 0,
   driversTitles: 0,
-  wins: 2,
-  podiums: 0,
-  seasons: 21,
-  firstSeason: 2006,
+  wins: 0,
+  podiums: 1, // Hadjar Zandvoort 2025 — first podium under Racing Bulls name
+  seasons: 2, // 2025–2026 brand seasons
+  firstSeason: 2025,
 };
 
 export const racingBullsEras: TeamEngineeringEra[] = [
   {
     teamId: "rb",
+    label: "Racing Bulls",
+    seasons: "2025–",
+    description:
+      "The Racing Bulls name arrives. Hadjar’s Zandvoort podium 2025 — first under the new brand — and P6 in the constructors’ championship. Lawson and Lindblad carry the 2026 line-up on Red Bull Ford power.",
+    championships: 0,
+    driverNames: "HADJAR · LAWSON · LINDBLAD",
+    champLabel: "P6 WCC '25 · 1 PODIUM",
+    current: true,
+    imageUrl: "/images/teams/hadjar-imola-rb-2025.jpg",
+  },
+];
+
+export const racingBullsSignatureBars: TeamSignatureBar[] = [
+  { label: "Junior pipeline", rating: "HIGH", value: 78, caption: "RED BULL JUNIOR TO F1", sentiment: "strength" },
+  { label: "Sister-team link", rating: "HIGH", value: 74, caption: "SHARED RED BULL DNA", sentiment: "strength" },
+  { label: "Power unit", rating: "MODERATE", value: 55, caption: "RED BULL FORD FROM 2026", sentiment: "neutral" },
+  { label: "2025 form", rating: "STRONG", value: 68, caption: "P6 WCC · ZANDVOORT PODIUM", sentiment: "strength" },
+  { label: "Driver turnover", rating: "INCONSISTENT", value: 42, caption: "HADJAR → RBR · LAWSON / LINDBLAD", sentiment: "weakness" },
+  { label: "Brand identity", rating: "HIGH", value: 70, caption: "RACING BULLS 2025–", sentiment: "strength" },
+];
+
+export const racingBullsReelSlides: ReelSlide[] = [
+  {
+    slotLabel: "IMOLA",
+    badge: "2025",
+    glowColor: "#6692FF",
+    kicker: "EARLY SEASON",
+    headline: "Hadjar at Imola",
+    meta: "EMILIA ROMAGNA 2025 · #6",
+    svgPath: "M 60 170 L 118 165 Q 140 160 150 150 L 185 140 Q 210 135 240 150 L 270 160 Q 280 170 290 170 L 338 170",
+    circles: [
+      { cx: 115, cy: 185, r: 14, fill: "rgba(102,146,255,0.40)" },
+      { cx: 282, cy: 185, r: 14, fill: "rgba(102,146,255,0.40)" },
+    ],
+    imageUrl: "/images/teams/hadjar-imola-rb-2025.jpg",
+  },
+  {
+    slotLabel: "LAWSON",
+    badge: "2025",
+    glowColor: "#1E3A8A",
+    kicker: "SPIELBERG",
+    headline: "Lawson in blue",
+    meta: "AUSTRIA 2025 · #30",
+    svgPath: "M 58 170 L 114 165 Q 136 160 150 150 L 185 140 Q 210 134 234 145 L 270 160 Q 283 168 290 170 L 340 170",
+    circles: [
+      { cx: 112, cy: 185, r: 14, fill: "rgba(30,58,138,0.35)" },
+      { cx: 285, cy: 185, r: 14, fill: "rgba(30,58,138,0.35)" },
+    ],
+    imageUrl: "/images/teams/lawson-austria-rb-2025.jpg",
+  },
+  {
+    slotLabel: "HADJAR",
+    badge: "2025",
+    glowColor: "#2B4998",
+    kicker: "RED BULL RING",
+    headline: "Hadjar mid-season",
+    meta: "AUSTRIA 2025 · #6",
+    svgPath: "M 55 170 L 112 164 Q 135 158 150 147 L 182 136 Q 213 134 238 142 L 270 155 Q 284 162 292 168 L 345 170",
+    circles: [
+      { cx: 110, cy: 185, r: 14, fill: "rgba(43,73,152,0.35)" },
+      { cx: 285, cy: 185, r: 14, fill: "rgba(43,73,152,0.35)" },
+    ],
+    imageUrl: "/images/teams/hadjar-austria-rb-2025.jpg",
+  },
+  {
+    slotLabel: "LINDBLAD",
+    badge: "2026",
+    glowColor: "#6692FF",
+    kicker: "ROOKIE YEAR",
+    headline: "Lindblad arrives",
+    meta: "CHINA 2026 · #41",
+    svgPath: "M 60 170 L 118 165 Q 140 160 150 150 L 185 140 Q 210 135 240 150 L 270 160 Q 280 170 290 170 L 338 170",
+    circles: [
+      { cx: 115, cy: 185, r: 14, fill: "rgba(102,146,255,0.40)" },
+      { cx: 282, cy: 185, r: 14, fill: "rgba(102,146,255,0.40)" },
+    ],
+    imageUrl: "/images/teams/lindblad-china-2026.jpg",
+  },
+  {
+    slotLabel: "41",
+    badge: "2026",
+    glowColor: "#4A6FFF",
+    kicker: "FORD PU ERA",
+    headline: "Lindblad at Spielberg",
+    meta: "AUSTRIA 2026 · RACING BULLS",
+    svgPath: "M 58 170 L 114 165 Q 136 160 150 150 L 185 140 Q 210 134 234 145 L 270 160 Q 283 168 290 170 L 340 170",
+    circles: [
+      { cx: 112, cy: 185, r: 14, fill: "rgba(74,111,255,0.40)" },
+      { cx: 285, cy: 185, r: 14, fill: "rgba(74,111,255,0.40)" },
+    ],
+    imageUrl: "/images/teams/lindblad-austria-rb-2026.jpg",
+  },
+];
+
+export const racingBullsAcademy: TeamAcademyDriver[] = [
+  { name: "Liam Lawson", tier: "f1", note: "#30 · 2025–" },
+  { name: "Arvid Lindblad", tier: "f1", note: "#41 · 2026" },
+  { name: "Isack Hadjar", tier: "alumni", note: "RB 2025 · → RED BULL 2026" },
+];
+
+export const racingBullsIconicCars: TeamIconicCar[] = [
+  {
+    name: "Racing Bulls 2025",
+    year: 2025,
+    subtitle: "Hadjar Imola campaign",
+    meta: "P6 WCC · BRAND DEBUT YEAR",
+    peak: true,
+    imageUrl: "/images/teams/hadjar-imola-rb-2025.jpg",
+  },
+  {
+    name: "Racing Bulls 2026",
+    year: 2026,
+    subtitle: "Lindblad · Ford PU",
+    meta: "LAWSON / LINDBLAD",
+    imageUrl: "/images/teams/lindblad-china-2026.jpg",
+  },
+];
+
+/* ─── Faenza lineage stubs (Toro Rosso / AlphaTauri) — for future lineage UI ─ */
+
+export const toroRosso: Team = {
+  id: "toro_rosso",
+  name: "Scuderia Toro Rosso",
+  shortName: "Toro Rosso",
+  country: "Italy",
+  series: ["f1"],
+  founded: 2006,
+  current: false,
+  entityColor: "redbull",
+  liveryHex: "#C00000",
+  bio: "Toro Rosso constructor history preserved for a future team-lineage view. Current-grid branding lives on the Racing Bulls page.",
+  quote: "[QUOTE PLACEHOLDER · NEEDS SOURCE]",
+  quoteContext: "Toro Rosso lineage — deferred to team lineage system",
+};
+
+export const toroRossoEras: TeamEngineeringEra[] = [
+  {
+    teamId: "toro_rosso",
     label: "Toro Rosso",
     seasons: "2006–2019",
     description:
       "Sister team to Red Bull. Vettel’s Monza 2008 win in the STR3 remains a defining underdog story. A proving ground for Verstappen, Ricciardo, Sainz, Gasly, and many more.",
     championships: 0,
-    driverNames: "VETTEL · FRIES · KVYAT",
+    driverNames: "VETTEL · BUEMI · KVYAT",
     champLabel: "STR3 MONZA '08",
     imageUrl: "https://upload.wikimedia.org/wikipedia/commons/7/7a/Vettel_Monza_2008.jpg",
   },
+];
+
+export const alphaTauri: Team = {
+  id: "alphatauri",
+  name: "Scuderia AlphaTauri",
+  shortName: "AlphaTauri",
+  country: "Italy",
+  series: ["f1"],
+  founded: 2020,
+  current: false,
+  entityColor: "redbull",
+  liveryHex: "#2B4998",
+  bio: "AlphaTauri constructor history preserved for a future team-lineage view. Current-grid branding lives on the Racing Bulls page.",
+  quote: "[QUOTE PLACEHOLDER · NEEDS SOURCE]",
+  quoteContext: "AlphaTauri lineage — deferred to team lineage system",
+};
+
+export const alphaTauriEras: TeamEngineeringEra[] = [
   {
-    teamId: "rb",
+    teamId: "alphatauri",
     label: "AlphaTauri",
     seasons: "2020–2023",
     description:
@@ -2801,118 +2996,6 @@ export const racingBullsEras: TeamEngineeringEra[] = [
     driverNames: "GASLY · TSUNODA",
     champLabel: "GASLY MONZA '20",
     imageUrl: "https://upload.wikimedia.org/wikipedia/commons/8/80/Honda_RACING_Gallery_2020_AlphaTauri_AT01_Pierre_Gasly.jpg",
-  },
-  {
-    teamId: "rb",
-    label: "VCARB / Kick Sauber era",
-    seasons: "2024",
-    description:
-      "The VCARB 01 and blue/red livery. Final season with Honda power before the 2025 Racing Bulls rebrand. Tsunoda and Ricciardo / Lawson rotated through the seats.",
-    championships: 0,
-    driverNames: "TSUNODA · RICCIARDO · LAWSON",
-    champLabel: "LIVERY RESET",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/c/cf/RB_VCARB01_2024_Chinese_GP.jpg",
-  },
-  {
-    teamId: "rb",
-    label: "Racing Bulls",
-    seasons: "2025–",
-    description:
-      "Racing Bulls name and Red Bull Ford power unit from 2026. Hadjar’s Zandvoort podium 2025 — the team’s first in the new era. Current line-up: Lawson and Lindblad.",
-    championships: 0,
-    driverNames: "LAWSON · LINDBLAD",
-    champLabel: "P6 WCC '25",
-    current: true,
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/c/cf/RB_VCARB01_2024_Chinese_GP.jpg",
-  },
-];
-
-export const racingBullsSignatureBars: TeamSignatureBar[] = [
-  { label: "Junior pipeline", rating: "HIGH", value: 78, caption: "RED BULL FAMILY · RBJ TO F1", sentiment: "strength" },
-  { label: "Budget vs factory", rating: "MODERATE", value: 48, caption: "FORD PU FROM 2026", sentiment: "neutral" },
-  { label: "Emotional peaks", rating: "HIGH", value: 72, caption: "MONZA WINS 2008 / 2020", sentiment: "strength" },
-  { label: "Consistency", rating: "MODERATE", value: 52, caption: "MIDFIELD TURMOIL 2022–24", sentiment: "neutral" },
-  { label: "Driver turnover", rating: "INCONSISTENT", value: 40, caption: "LAWSON / TSUNODA / RICCIARDO", sentiment: "weakness" },
-  { label: "Aero development", rating: "MODERATE", value: 55, caption: "SHARED RED BULL DNA", sentiment: "neutral" },
-];
-
-export const racingBullsReelSlides: ReelSlide[] = [
-  {
-    slotLabel: "STR3",
-    badge: "2008",
-    glowColor: "#1E3A8A",
-    kicker: "MONZA · YOUNGEST WINNER",
-    headline: "Vettel shock",
-    meta: "STR3 · TORO ROSSO",
-    svgPath: "M 60 170 L 118 165 Q 140 160 152 150 L 185 140 Q 210 138 232 145 L 265 160 Q 280 168 290 170 L 338 170",
-    circles: [
-      { cx: 115, cy: 185, r: 14, fill: "rgba(30,58,138,0.35)" },
-      { cx: 280, cy: 185, r: 14, fill: "rgba(30,58,138,0.35)" },
-    ],
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/7/7a/Vettel_Monza_2008.jpg",
-  },
-  {
-    slotLabel: "AT01",
-    badge: "2020",
-    glowColor: "#2B4998",
-    kicker: "MONZA · MAIDEN WIN",
-    headline: "Gasly wins",
-    meta: "ALPHATAURI · ITALIAN GP",
-    svgPath: "M 55 170 L 112 164 Q 135 158 150 147 L 182 136 Q 213 134 238 142 L 270 155 Q 284 162 292 168 L 345 170",
-    circles: [
-      { cx: 110, cy: 185, r: 14, fill: "rgba(43,73,152,0.35)" },
-      { cx: 285, cy: 185, r: 14, fill: "rgba(43,73,152,0.35)" },
-    ],
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/8/80/Honda_RACING_Gallery_2020_AlphaTauri_AT01_Pierre_Gasly.jpg",
-  },
-  {
-    slotLabel: "VCARB 01",
-    badge: "2024",
-    glowColor: "#4A6FFF",
-    kicker: "SHANGHAI · NEW LIVERY",
-    headline: "Blue / red reset",
-    meta: "TSUNODA · VCARB",
-    svgPath: "M 58 170 L 114 165 Q 136 160 150 150 L 183 140 Q 210 136 234 145 L 268 158 Q 282 165 288 170 L 340 170",
-    circles: [
-      { cx: 112, cy: 185, r: 14, fill: "rgba(74,111,255,0.40)" },
-      { cx: 283, cy: 185, r: 14, fill: "rgba(74,111,255,0.40)" },
-    ],
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/c/cf/RB_VCARB01_2024_Chinese_GP.jpg",
-  },
-];
-
-export const racingBullsAcademy: TeamAcademyDriver[] = [
-  { name: "Liam Lawson", tier: "f1", note: "#30 · 2025–" },
-  { name: "Arvid Lindblad", tier: "f1", note: "#41 · 2026" },
-  { name: "Isack Hadjar", tier: "f1", note: "Red Bull 2026 · RB podium Zandvoort '25" },
-  { name: "Yuki Tsunoda", tier: "alumni", note: "RB 2021–24 · Red Bull 2025" },
-  { name: "Pierre Gasly", tier: "alumni", note: "AT01 Monza '20" },
-  { name: "Sebastian Vettel", tier: "alumni", note: "STR3 Monza '08" },
-];
-
-export const racingBullsIconicCars: TeamIconicCar[] = [
-  {
-    name: "STR3",
-    year: 2008,
-    subtitle: "Vettel’s Monza miracle",
-    meta: "1 WIN · UNDERDOG LEGEND",
-    peak: true,
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/7/7a/Vettel_Monza_2008.jpg",
-  },
-  {
-    name: "AT01",
-    year: 2020,
-    subtitle: "Gasly’s Monza win",
-    meta: "1 WIN · 2020 ITALIAN GP",
-    peak: true,
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/8/80/Honda_RACING_Gallery_2020_AlphaTauri_AT01_Pierre_Gasly.jpg",
-  },
-  {
-    name: "VCARB 01",
-    year: 2024,
-    subtitle: "Blue and red livery",
-    meta: "TSUNODA · REBRAND SEASON",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/c/cf/RB_VCARB01_2024_Chinese_GP.jpg",
   },
 ];
 
@@ -2932,18 +3015,18 @@ export const williams: Team = {
   current: true,
   entityColor: "williams",
   liveryHex: "#005AFF",
-  bio: "Nine constructors' championships and a legacy of engineering clarity from Sir Frank and Patrick Head. The FW07, FW11, and active-suspension FW14B defined eras. After the Dorilton era the team is rebuilding with Alex Albon and Carlos Sainz Jr. from 2025.",
+  bio: "Nine constructors' championships and a legacy of engineering clarity from Sir Frank and Patrick Head. The FW07, FW11, and active-suspension FW14B defined eras. After the Dorilton sale the team climbed to P5 in 2025 with Alex Albon and Carlos Sainz Jr.; 2026 is another chapter in the Grove rebuild under James Vowles.",
   quote: "People should be in no doubt about our ambition and momentum as we continue our journey back to competitiveness — we are here, we are serious and we are investing in what it takes to return to the front of the grid.",
   quoteContext: "James Vowles, Williams Racing Team Principal — Williams F1 official (2024)",
 };
 
 export const williamsStats: TeamStats = {
   teamId: "williams",
-  constructorsTitles: 9,
-  driversTitles: 7,
-  wins: 114,
-  podiums: 310, // [VERIFY · formula1.com constructor record]
-  seasons: 50,
+  constructorsTitles: 9, // 1980–81, 1986–87, 1992–94, 1996–97 · Wikipedia / historical record (formula1.com Team Summary lists 8)
+  driversTitles: 7, // Jones, K.Rosberg, Piquet, Mansell, Prost, Hill, J.Villeneuve
+  wins: 114, // source: formula1.com/en/teams/williams Team Summary
+  podiums: 245, // source: formula1.com Team Summary (was incorrectly 310)
+  seasons: 52, // 1975–2026 inclusive
   firstSeason: 1975,
 };
 
@@ -2967,25 +3050,25 @@ export const williamsEras: TeamEngineeringEra[] = [
     driverNames: "MANSELL · HILL · VILLENEUVE",
     champLabel: "3× WDC",
     golden: true,
-    imageUrl: W_FW14B,
+    imageUrl: "/images/drivers/mansell-williams-1992.jpg",
   },
   {
     teamId: "williams",
     label: "Dorilton · rebuild",
     seasons: "2020–",
-    description: "Albon-led recovery drives. 2023 FW45 and beyond — fighting back from the back of the grid to regular points. Sainz arrives 2025.",
+    description: "Albon-led recovery drives. Sainz joined in 2025 from Ferrari; the pairing with Albon is established for 2026. Dorilton investment and Grove infrastructure underpin a long rebuild from the back of the grid to regular points.",
     championships: 0,
     driverNames: "ALBON · SAINZ",
     champLabel: "REBUILD",
     current: true,
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/e/ec/Alexander_Albon_-_2023_Italian_Grand_Prix.jpg",
+    imageUrl: "/images/drivers/albon-silverstone-2024.jpg",
   },
 ];
 
 export const williamsSignatureBars: TeamSignatureBar[] = [
   { label: "Heritage aero", rating: "HIGH", value: 70, caption: "HEAD-ERA DISCIPLINE", sentiment: "strength" },
   { label: "Power unit", rating: "MODERATE", value: 52, caption: "MERCEDES CUSTOMER", sentiment: "neutral" },
-  { label: "Driver lineup", rating: "HIGH", value: 75, caption: "ALBON + SAINZ 2025", sentiment: "strength" },
+  { label: "Driver lineup", rating: "HIGH", value: 75, caption: "ALBON + SAINZ 2026", sentiment: "strength" },
   { label: "Budget", rating: "LOW", value: 32, caption: "INDEPENDENT CONSTRAINT", sentiment: "weakness" },
   { label: "Media goodwill", rating: "HIGH", value: 80, caption: "GLOBAL FANBASE", sentiment: "strength" },
   { label: "Development", rating: "MODERATE", value: 50, caption: "LONG-TERM GROVE INVESTMENT", sentiment: "neutral" },
@@ -3018,7 +3101,21 @@ export const williamsReelSlides: ReelSlide[] = [
       { cx: 112, cy: 185, r: 14, fill: "rgba(192,192,192,0.40)" },
       { cx: 285, cy: 185, r: 14, fill: "rgba(192,192,192,0.40)" },
     ],
-    imageUrl: W_FW14B,
+    imageUrl: "/images/drivers/mansell-williams-1992.jpg",
+  },
+  {
+    slotLabel: "FW18",
+    badge: "1996",
+    glowColor: "#005AFF",
+    kicker: "HILL WDC",
+    headline: "Damon Hill champion",
+    meta: "WILLIAMS · TITLE CLINCHER",
+    svgPath: "M 60 170 L 118 165 Q 140 160 150 150 L 185 140 Q 210 135 240 150 L 270 160 Q 280 170 290 170 L 338 170",
+    circles: [
+      { cx: 115, cy: 185, r: 14, fill: "rgba(0,90,255,0.35)" },
+      { cx: 282, cy: 185, r: 14, fill: "rgba(0,90,255,0.35)" },
+    ],
+    imageUrl: "/images/drivers/hill-williams-1996.jpg",
   },
   {
     slotLabel: "FW45",
@@ -3034,11 +3131,25 @@ export const williamsReelSlides: ReelSlide[] = [
     ],
     imageUrl: "https://upload.wikimedia.org/wikipedia/commons/e/ec/Alexander_Albon_-_2023_Italian_Grand_Prix.jpg",
   },
+  {
+    slotLabel: "FW47",
+    badge: "2025",
+    glowColor: "#005AFF",
+    kicker: "SAINZ ERA",
+    headline: "Sainz rebuild",
+    meta: "AUSTRIA 2025 · MIDFIELD CLIMB",
+    svgPath: "M 58 170 L 114 165 Q 136 160 150 150 L 185 140 Q 210 134 234 145 L 270 160 Q 283 168 290 170 L 340 170",
+    circles: [
+      { cx: 112, cy: 185, r: 14, fill: "rgba(0,90,255,0.35)" },
+      { cx: 285, cy: 185, r: 14, fill: "rgba(0,90,255,0.35)" },
+    ],
+    imageUrl: "/images/drivers/sainz-austria-2025.jpg",
+  },
 ];
 
 export const williamsAcademy: TeamAcademyDriver[] = [
-  { name: "Carlos Sainz Jr.", tier: "f1", note: "2025–" },
-  { name: "Alex Albon", tier: "f1", note: "2022–" },
+  { name: "Carlos Sainz Jr.", tier: "f1", note: "WILLIAMS 2025–" },
+  { name: "Alex Albon", tier: "f1", note: "WILLIAMS 2022–" },
   { name: "Lance Stroll", tier: "alumni", note: "WILLIAMS 2024" },
 ];
 
@@ -3086,18 +3197,19 @@ export const alpine: Team = {
   current: true,
   entityColor: "alpine",
   liveryHex: "#0090FF",
-  bio: "The Enstone team carries Renault’s two 2000s titles (R25, R26) and Alpine branding from 2021. A522-era Alonso and Ocon podiums, then a reset into the current hybrid midfield fight.",
+  bio: "The Enstone team carries Renault's two 2000s titles (R25, R26) and Alpine branding from 2021. Gasly and Colapinto lead the 2026 line-up on Mercedes customer power — the Enstone chassis shop rebuilding in the hybrid midfield.",
   quote: "We are here for winning. We are not to be a tourist to go around the world. Every Sunday is torture — but I'm not used to finishing lower than where we should be.",
   quoteContext: "Flavio Briatore, Alpine Executive Advisor — The Race (2024)",
 };
 
 export const alpineStats: TeamStats = {
   teamId: "alpine",
-  constructorsTitles: 2,
-  driversTitles: 2,
-  wins: 21,
-  podiums: 95, // [VERIFY · all-time with Renault+Alpine; source: Wikipedia]
-  seasons: 5,
+  // formula1.com/en/teams/alpine Team Summary (Enstone constructor rollup: Toleman→Benetton→Renault→Lotus→Alpine)
+  constructorsTitles: 2, // Renault WCC 2005–06 · source: formula1.com
+  driversTitles: 2, // Alonso WDC 2005–06 under Renault · source: formula1.com / Wikipedia
+  wins: 21, // source: formula1.com Team Summary Highest Race Finish 1 (x21)
+  podiums: 61, // source: formula1.com Team Summary (was incorrectly 95)
+  seasons: 6, // Alpine brand seasons 2021–2026; firstSeason below
   firstSeason: 2021,
 };
 
@@ -3117,52 +3229,52 @@ export const alpineEras: TeamEngineeringEra[] = [
     teamId: "alpine",
     label: "Alpine era",
     seasons: "2021–",
-    description: "Rebrand to Alpine. A522 2022 podiums, Gasly and Ocon through the regulation cycles. Building toward Audi power from 2026.",
+    description: "Rebrand to Alpine. A522 2022 podiums with Alonso; Ocon's Hungary 2021 win. Gasly and Colapinto from 2025–26 on Mercedes power units — Enstone focused on chassis development through the 2026 regulation reset.",
     championships: 0,
-    driverNames: "OCON · GASLY",
+    driverNames: "ALONSO · OCON · GASLY · COLAPINTO",
     champLabel: "REBUILD",
     current: true,
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/6/66/FIA_F1_Austria_2022_Nr._14_Alonso.jpg",
+    imageUrl: "/images/drivers/gasly-alpine-2024.jpg",
   },
 ];
 
 export const alpineSignatureBars: TeamSignatureBar[] = [
   { label: "Enstone know-how", rating: "HIGH", value: 68, caption: "HISTORIC CHASSIS SHOP", sentiment: "strength" },
   { label: "Engine identity", rating: "MODERATE", value: 50, caption: "RENAULT / ALPINE BADGE", sentiment: "neutral" },
-  { label: "Driver stability", rating: "MODERATE", value: 55, caption: "OCON / GASLY ERA", sentiment: "neutral" },
+  { label: "Driver stability", rating: "MODERATE", value: 55, caption: "GASLY / COLAPINTO", sentiment: "neutral" },
   { label: "Results", rating: "INCONSISTENT", value: 42, caption: "MIDFIELD SWINGS", sentiment: "weakness" },
   { label: "Youth link", rating: "HIGH", value: 64, caption: "ALPINE ACADEMY", sentiment: "strength" },
-  { label: "Future PU", rating: "HIGH", value: 70, caption: "AUDI 2026 HORIZON", sentiment: "strength" },
+  { label: "Power unit", rating: "MODERATE", value: 58, caption: "MERCEDES CUSTOMER 2026", sentiment: "neutral" },
 ];
 
 export const alpineReelSlides: ReelSlide[] = [
   {
-    slotLabel: "R25",
-    badge: "2005",
+    slotLabel: "A521",
+    badge: "2021",
     glowColor: "#0090FF",
-    kicker: "ALONSO FIRST TITLE",
-    headline: "Renault R25",
-    meta: "7 WINS · BRAZIL CLINCHER",
+    kicker: "ALPINE REBRAND",
+    headline: "First Alpine season",
+    meta: "A521 · ENSTONE IDENTITY",
     svgPath: "M 60 170 L 118 165 Q 138 160 150 150 L 183 140 Q 210 136 234 145 L 268 158 Q 280 168 290 170 L 338 170",
     circles: [
       { cx: 115, cy: 185, r: 14, fill: "rgba(0,144,255,0.35)" },
       { cx: 280, cy: 185, r: 14, fill: "rgba(0,144,255,0.35)" },
     ],
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/4/4d/Fernando_Alonso_2005_Canada.jpg",
+    imageUrl: "/images/drivers/alonso-alpine-2021.jpg",
   },
   {
-    slotLabel: "R26",
-    badge: "2006",
+    slotLabel: "HUNGARY",
+    badge: "2021",
     glowColor: "#FFD700",
-    kicker: "BACK-TO-BACK WDC",
-    headline: "Renault R26",
-    meta: "7 WINS · ALONSO '06",
+    kicker: "MAIDEN ALPINE WIN",
+    headline: "Ocon wins Hungary",
+    meta: "ONLY ALPINE-ERA RACE WIN",
     svgPath: "M 55 170 L 112 165 Q 136 160 150 148 L 182 136 Q 213 132 240 145 L 272 160 Q 284 170 295 170 L 345 170",
     circles: [
       { cx: 110, cy: 185, r: 14, fill: "rgba(255,215,0,0.45)" },
       { cx: 288, cy: 185, r: 14, fill: "rgba(255,215,0,0.45)" },
     ],
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/8/80/Fernando_Alonso_-_Renault_R26_-_Monaco_Grand_Prix_2006.jpg",
+    imageUrl: "/images/drivers/ocon-alpine-2021.jpg",
   },
   {
     slotLabel: "A522",
@@ -3170,13 +3282,41 @@ export const alpineReelSlides: ReelSlide[] = [
     glowColor: "#0090FF",
     kicker: "ALONSO PODIUMS",
     headline: "Alpine A522",
-    meta: "BWT LIVERY",
+    meta: "BWT LIVERY · AUSTRIA",
     svgPath: "M 58 170 L 114 165 Q 136 160 150 150 L 185 140 Q 210 134 234 145 L 270 160 Q 283 168 290 170 L 340 170",
     circles: [
       { cx: 112, cy: 185, r: 14, fill: "rgba(0,144,255,0.40)" },
       { cx: 285, cy: 185, r: 14, fill: "rgba(0,144,255,0.40)" },
     ],
     imageUrl: "https://upload.wikimedia.org/wikipedia/commons/6/66/FIA_F1_Austria_2022_Nr._14_Alonso.jpg",
+  },
+  {
+    slotLabel: "GASLY",
+    badge: "2024",
+    glowColor: "#0090FF",
+    kicker: "ENSTONE LEAD",
+    headline: "Gasly chapter",
+    meta: "ALPINE A524",
+    svgPath: "M 60 170 L 118 165 Q 140 160 150 150 L 185 140 Q 210 135 240 150 L 270 160 Q 280 170 290 170 L 338 170",
+    circles: [
+      { cx: 115, cy: 185, r: 14, fill: "rgba(0,144,255,0.35)" },
+      { cx: 282, cy: 185, r: 14, fill: "rgba(0,144,255,0.35)" },
+    ],
+    imageUrl: "/images/drivers/gasly-alpine-2024.jpg",
+  },
+  {
+    slotLabel: "COLAPINTO",
+    badge: "2026",
+    glowColor: "#FF87BC",
+    kicker: "NEW ERA PAIRING",
+    headline: "Colapinto arrives",
+    meta: "ALPINE · MERCEDES PU",
+    svgPath: "M 55 170 L 110 168 Q 135 160 150 148 L 180 135 Q 210 130 240 145 L 275 160 Q 290 170 300 170 L 345 170",
+    circles: [
+      { cx: 110, cy: 185, r: 14, fill: "rgba(255,135,188,0.40)" },
+      { cx: 288, cy: 185, r: 14, fill: "rgba(255,135,188,0.40)" },
+    ],
+    imageUrl: "/images/drivers/colapinto-alpine-2025.jpg",
   },
 ];
 
@@ -3223,7 +3363,7 @@ export const astonMartin: Team = {
   current: true,
   entityColor: "astonmartin",
   liveryHex: "#006F62",
-  bio: "Racing Point DNA rebadged. The AMR23 in 2023 with Fernando Alonso was a stand-out: eight podiums and a car that fought at the very front on merit early in the season. Silverstone based; Stroll family backing.",
+  bio: "Racing Point DNA rebadged. The AMR23 in 2023 with Fernando Alonso was a stand-out: eight podiums and a car that fought at the very front on merit. Adrian Newey joined from 2025; Alonso and Stroll carry experience into the 2026 regulation reset at Silverstone.",
   quote: "I'm relentless. I don't give up until the mission is completed. In this case, the mission is being world champions.",
   quoteContext: "Lawrence Stroll, Aston Martin F1 Executive Chairman — Aston Martin F1 official",
 };
@@ -3232,13 +3372,23 @@ export const astonMartinStats: TeamStats = {
   teamId: "aston_martin",
   constructorsTitles: 0,
   driversTitles: 0,
-  wins: 0,
-  podiums: 9, // [VERIFY · 2023–25 Aston podiums; source: formula1.com]
-  seasons: 5,
+  wins: 0, // Aston Martin constructor 2021– (excludes Racing Point Sakhir 2020); source: Jolpica aston_martin
+  podiums: 9, // 1× Vettel Azerbaijan 2021 + 8× Alonso 2023; source: RacingNews365 / Jolpica
+  seasons: 6, // 2021–2026 inclusive
   firstSeason: 2021,
 };
 
 export const astonMartinEras: TeamEngineeringEra[] = [
+  {
+    teamId: "aston_martin",
+    label: "Vettel green",
+    seasons: "2021–2022",
+    description: "The first Aston Martin seasons. Vettel in British Racing Green at Silverstone and beyond — brand rebirth after Racing Point, before Alonso’s arrival.",
+    championships: 0,
+    driverNames: "VETTEL · STROLL",
+    champLabel: "BRAND DEBUT",
+    imageUrl: "/images/drivers/vettel-silverstone-2021.jpg",
+  },
   {
     teamId: "aston_martin",
     label: "AMR23 peak",
@@ -3248,18 +3398,18 @@ export const astonMartinEras: TeamEngineeringEra[] = [
     driverNames: "ALONSO · STROLL",
     champLabel: "8 P2/P3 FINISHES",
     golden: true,
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/3/39/FIA_F1_Austria_2023_Nr._14_%281%29.jpg",
+    imageUrl: "/images/drivers/alonso-aston-martin-2023.jpg",
   },
   {
     teamId: "aston_martin",
-    label: "Sustainable fight",
-    seasons: "2024–",
-    description: "AMR24 and beyond — consolidating points while regulations converge. Stroll and Alonso, then a generational handover toward Newey-era hardware.",
+    label: "Newey era",
+    seasons: "2025–",
+    description: "Adrian Newey's arrival reshapes the technical direction. AMR25 development and the 2026 regulation reset aim to convert Stroll family backing and Alonso's racecraft into sustained front-running pace.",
     championships: 0,
-    driverNames: "STROLL · ALONSO",
-    champLabel: "MIDCARD",
+    driverNames: "ALONSO · STROLL",
+    champLabel: "FIRST NEWEY SEASON",
     current: true,
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/9/98/FIA_F1_Austria_2024_Nr._14_Alonso.jpg",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/2025_Japan_GP_-_Aston_Martin_-_AMR25_-_Thursday.jpg/1280px-2025_Japan_GP_-_Aston_Martin_-_AMR25_-_Thursday.jpg",
   },
 ];
 
@@ -3274,18 +3424,46 @@ export const astonMartinSignatureBars: TeamSignatureBar[] = [
 
 export const astonMartinReelSlides: ReelSlide[] = [
   {
+    slotLabel: "AMR21",
+    badge: "2021",
+    glowColor: "#006F62",
+    kicker: "FIRST ASTON SEASONS",
+    headline: "Vettel in green",
+    meta: "SILVERSTONE 2021",
+    svgPath: "M 60 170 L 118 165 Q 140 160 150 150 L 185 140 Q 210 135 240 150 L 270 160 Q 280 170 290 170 L 338 170",
+    circles: [
+      { cx: 115, cy: 185, r: 14, fill: "rgba(0,111,98,0.40)" },
+      { cx: 282, cy: 185, r: 14, fill: "rgba(0,111,98,0.40)" },
+    ],
+    imageUrl: "/images/drivers/vettel-silverstone-2021.jpg",
+  },
+  {
     slotLabel: "AMR23",
     badge: "2023",
     glowColor: "#006F62",
     kicker: "ALONSO PODIUMS",
     headline: "Bahrain & beyond",
     meta: "GREEN LIVERY PEAK",
-    svgPath: "M 60 170 L 118 165 Q 140 160 150 150 L 185 140 Q 210 135 240 150 L 270 160 Q 280 170 290 170 L 338 170",
+    svgPath: "M 58 170 L 114 165 Q 136 160 150 150 L 185 140 Q 210 134 234 145 L 270 160 Q 283 168 290 170 L 340 170",
     circles: [
-      { cx: 115, cy: 185, r: 14, fill: "rgba(0,111,98,0.40)" },
-      { cx: 282, cy: 185, r: 14, fill: "rgba(0,111,98,0.40)" },
+      { cx: 112, cy: 185, r: 14, fill: "rgba(0,111,98,0.40)" },
+      { cx: 285, cy: 185, r: 14, fill: "rgba(0,111,98,0.40)" },
     ],
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/3/39/FIA_F1_Austria_2023_Nr._14_%281%29.jpg",
+    imageUrl: "/images/drivers/alonso-aston-martin-2023.jpg",
+  },
+  {
+    slotLabel: "STROLL",
+    badge: "2023",
+    glowColor: "#0A2A22",
+    kicker: "HOME DRIVER",
+    headline: "Stroll in green",
+    meta: "AUSTRIA 2023",
+    svgPath: "M 55 170 L 110 168 Q 135 160 150 148 L 180 135 Q 210 130 240 145 L 275 160 Q 290 170 300 170 L 345 170",
+    circles: [
+      { cx: 110, cy: 185, r: 14, fill: "rgba(10,42,34,0.40)" },
+      { cx: 288, cy: 185, r: 14, fill: "rgba(10,42,34,0.40)" },
+    ],
+    imageUrl: "/images/drivers/stroll-austria-2023.jpg",
   },
   {
     slotLabel: "AMR24",
@@ -3294,12 +3472,26 @@ export const astonMartinReelSlides: ReelSlide[] = [
     kicker: "MIDCARD CONSISTENCY",
     headline: "Alonso deep run",
     meta: "AUSTRIA 2024",
-    svgPath: "M 55 170 L 110 168 Q 135 160 150 148 L 180 135 Q 210 130 240 145 L 275 160 Q 290 170 300 170 L 345 170",
+    svgPath: "M 60 170 L 118 165 Q 140 160 150 150 L 185 140 Q 210 135 240 150 L 270 160 Q 280 170 290 170 L 338 170",
     circles: [
-      { cx: 110, cy: 185, r: 14, fill: "rgba(10,42,34,0.40)" },
-      { cx: 288, cy: 185, r: 14, fill: "rgba(10,42,34,0.40)" },
+      { cx: 115, cy: 185, r: 14, fill: "rgba(10,42,34,0.40)" },
+      { cx: 282, cy: 185, r: 14, fill: "rgba(10,42,34,0.40)" },
     ],
     imageUrl: "https://upload.wikimedia.org/wikipedia/commons/9/98/FIA_F1_Austria_2024_Nr._14_Alonso.jpg",
+  },
+  {
+    slotLabel: "AMR25",
+    badge: "2025",
+    glowColor: "#006F62",
+    kicker: "NEWEY ARRIVES",
+    headline: "AMR25 arrives",
+    meta: "JAPAN 2025 · FIRST NEWEY SEASON",
+    svgPath: "M 55 170 L 112 165 Q 136 160 150 148 L 182 136 Q 213 132 240 145 L 272 160 Q 284 170 295 170 L 345 170",
+    circles: [
+      { cx: 110, cy: 185, r: 14, fill: "rgba(0,111,98,0.40)" },
+      { cx: 288, cy: 185, r: 14, fill: "rgba(0,111,98,0.40)" },
+    ],
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/2025_Japan_GP_-_Aston_Martin_-_AMR25_-_Thursday.jpg/1280px-2025_Japan_GP_-_Aston_Martin_-_AMR25_-_Thursday.jpg",
   },
 ];
 
@@ -3331,26 +3523,26 @@ export const astonMartinIconicCars: TeamIconicCar[] = [
 
 export const sauber: Team = {
   id: "sauber",
-  name: "Kick Sauber · becoming Audi Revolut F1 Team (entry 2026)",
-  shortName: "Kick Sauber",
+  name: "Sauber",
+  shortName: "Sauber",
   country: "Switzerland",
   series: ["f1"],
   founded: 1993,
-  current: true,
+  current: false,
   entityColor: "sauber",
   liveryHex: "#52E252",
-  bio: "Hinwil’s long-running entry: Sauber AG, BMW Sauber, Alfa Romeo, Stake, and Kick branding in the Stake-era C44 seasons. Audi have prepared a full takeover of the grid slot: the Audi Revolut F1 Team name and Berlin launch timeline were confirmed by Audi and Formula 1 ahead of the 2026 championship.",
-  quote: "We are lucky to have started from a blank sheet of paper and therefore we can set up the team with an organisation that is perhaps different from the others. Audi has not only won wherever it has participated but has always innovated.",
-  quoteContext: "Mattia Binotto, Audi F1 Project Lead — Motorsport.com",
+  bio: "Peter Sauber’s Swiss constructor — preserved here for a future team-lineage view. Current-grid Audi branding lives on the Audi F1 Team page.",
+  quote: "[QUOTE PLACEHOLDER · NEEDS SOURCE]",
+  quoteContext: "Sauber lineage — deferred to team lineage system",
 };
 
 export const sauberStats: TeamStats = {
   teamId: "sauber",
   constructorsTitles: 0,
   driversTitles: 0,
-  wins: 1,
-  podiums: 0, // [VERIFY]
-  seasons: 33,
+  wins: 1, // Kubica Canada 2008 (BMW Sauber) · source: formula1.com Kick Sauber Team Summary
+  podiums: 27, // source: formula1.com/en/teams/kick-sauber Team Summary
+  seasons: 33, // 1993–2025 pre-Audi brand
   firstSeason: 1993,
 };
 
@@ -3363,7 +3555,7 @@ export const sauberEras: TeamEngineeringEra[] = [
     championships: 0,
     driverNames: "FISICHELLA · RÄIKKÖNEN",
     champLabel: "NO TITLES",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/3/3a/Sauber_F1_N%C3%BCrburgring_2013_Nico_H%C3%BClkenberg.jpg",
+    imageUrl: "/images/drivers/raikkonen-sauber-2001.jpg",
   },
   {
     teamId: "sauber",
@@ -3377,75 +3569,104 @@ export const sauberEras: TeamEngineeringEra[] = [
   },
   {
     teamId: "sauber",
-    label: "Kick / Audi",
-    seasons: "2024–",
-    description: "C44 raced as Kick Sauber in 2025. The entry transitions to Audi’s works identity as the Audi Revolut F1 Team for 2026 (title partner Revolut confirmed by Audi/F1 announcements).",
+    label: "Audi works",
+    seasons: "2026–",
+    description: "Constructor continuity into the Audi works era — kept for lineage. Brand narrative lives on the Audi page.",
     championships: 0,
-    driverNames: "BOTTAS · BORTOLETO",
-    champLabel: "TRANSITION",
+    driverNames: "BORTOLETO · HÜLKENBERG",
+    champLabel: "WORKS ERA",
     current: true,
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/4/4b/Valtteri_Bottas_Chinese_GP_2024.jpg",
+    imageUrl: "/images/drivers/hulkenberg-audi-2026.jpg",
   },
 ];
 
 export const sauberSignatureBars: TeamSignatureBar[] = [
   { label: "Wind tunnel", rating: "HIGH", value: 70, caption: "HINWIL FACILITY", sentiment: "strength" },
-  { label: "Power unit", rating: "INCONSISTENT", value: 45, caption: "FERRARI → AUDI TIMELINE", sentiment: "neutral" },
-  { label: "Driver line", rating: "STRONG", value: 65, caption: "BOTTAS EXPERIENCE", sentiment: "strength" },
+  { label: "Power unit", rating: "MODERATE", value: 55, caption: "CUSTOMER FERRARI YEARS", sentiment: "neutral" },
+  { label: "Driver line", rating: "STRONG", value: 68, caption: "HISTORIC PIPELINE", sentiment: "strength" },
   { label: "Reliability", rating: "STRONG", value: 60, caption: "TRADITIONAL SWISS BUILD", sentiment: "strength" },
-  { label: "Pace", rating: "LOW", value: 35, caption: "REAR-GRID 2023–25", sentiment: "weakness" },
-  { label: "Future", rating: "HIGH", value: 78, caption: "AUDI 2026", sentiment: "strength" },
+  { label: "Pace", rating: "LOW", value: 35, caption: "REAR-GRID STRETCHES", sentiment: "weakness" },
+  { label: "Heritage", rating: "HIGH", value: 75, caption: "1993– ENTRY", sentiment: "strength" },
 ];
 
 export const sauberReelSlides: ReelSlide[] = [
   {
-    slotLabel: "C32",
-    badge: "2013",
+    slotLabel: "C44",
+    badge: "2024",
     glowColor: "#52E252",
-    kicker: "HÜLKE NÜRBURGRING",
-    headline: "Sauber C32",
-    meta: "FERRARI POWER",
+    kicker: "KICK SAUBER",
+    headline: "Late customer years",
+    meta: "BOTTAS · SILVERSTONE 2024",
     svgPath: "M 60 170 L 118 168 Q 138 160 150 150 L 185 140 Q 210 135 240 150 L 272 160 Q 280 170 292 170 L 340 170",
     circles: [
       { cx: 115, cy: 185, r: 14, fill: "rgba(82,226,82,0.35)" },
       { cx: 280, cy: 185, r: 14, fill: "rgba(82,226,82,0.35)" },
     ],
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/3/3a/Sauber_F1_N%C3%BCrburgring_2013_Nico_H%C3%BClkenberg.jpg",
+    imageUrl: "/images/drivers/bottas-silverstone-2024.jpg",
   },
   {
-    slotLabel: "C43",
-    badge: "2023",
-    glowColor: "#900000",
-    kicker: "ALFA / STAKE",
-    headline: "Bottas / Zhou",
-    meta: "C43 @ MONZA",
-    svgPath: "M 55 170 L 110 168 Q 135 160 150 148 L 182 135 Q 210 130 240 145 L 275 162 Q 290 170 300 170 L 345 170",
-    circles: [
-      { cx: 110, cy: 185, r: 14, fill: "rgba(144,0,0,0.35)" },
-      { cx: 288, cy: 185, r: 14, fill: "rgba(144,0,0,0.35)" },
-    ],
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/d/d4/Valtteri_Bottas_-_2023_Monza_Grand_Prix_-_F1.jpg",
-  },
-  {
-    slotLabel: "C44",
-    badge: "2024",
-    glowColor: "#00FF7F",
-    kicker: "KICK Livery",
-    headline: "Final Sauber year",
-    meta: "CHINESE GP 2024",
+    slotLabel: "C45",
+    badge: "2025",
+    glowColor: "#BB1C2A",
+    kicker: "BORTOLETO ROOKIE",
+    headline: "Kick Sauber C44",
+    meta: "FINAL CUSTOMER PU YEAR",
     svgPath: "M 58 170 L 115 168 Q 136 160 150 150 L 185 138 Q 210 132 240 150 L 270 160 Q 285 170 295 170 L 342 170",
     circles: [
-      { cx: 112, cy: 185, r: 14, fill: "rgba(0,255,127,0.30)" },
-      { cx: 285, cy: 185, r: 14, fill: "rgba(0,255,127,0.30)" },
+      { cx: 112, cy: 185, r: 14, fill: "rgba(187,28,42,0.35)" },
+      { cx: 285, cy: 185, r: 14, fill: "rgba(187,28,42,0.35)" },
     ],
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/4/4b/Valtteri_Bottas_Chinese_GP_2024.jpg",
+    imageUrl: "/images/drivers/bortoleto-sauber-f1-2025.jpg",
+  },
+  {
+    slotLabel: "IMOLA",
+    badge: "2025",
+    glowColor: "#52E252",
+    kicker: "ROOKIE SEASON",
+    headline: "Bortoleto at Imola",
+    meta: "KICK SAUBER · 2025",
+    svgPath: "M 55 170 L 110 168 Q 135 160 150 148 L 182 135 Q 210 130 240 145 L 275 162 Q 290 170 300 170 L 345 170",
+    circles: [
+      { cx: 110, cy: 185, r: 14, fill: "rgba(82,226,82,0.35)" },
+      { cx: 288, cy: 185, r: 14, fill: "rgba(82,226,82,0.35)" },
+    ],
+    imageUrl: "/images/drivers/bortoleto-imola-2025.jpg",
+  },
+  {
+    slotLabel: "AUDI",
+    badge: "2026",
+    glowColor: "#BB1C2A",
+    kicker: "WORKS ENTRY",
+    headline: "Hülkenberg leads Audi",
+    meta: "AUDI F1 TEAM · WORKS PU",
+    svgPath: "M 60 170 L 118 165 Q 140 160 150 150 L 185 140 Q 210 135 240 150 L 270 160 Q 280 170 290 170 L 338 170",
+    circles: [
+      { cx: 115, cy: 185, r: 14, fill: "rgba(187,28,42,0.35)" },
+      { cx: 282, cy: 185, r: 14, fill: "rgba(187,28,42,0.35)" },
+    ],
+    imageUrl: "/images/drivers/hulkenberg-audi-2026.jpg",
+  },
+  {
+    slotLabel: "WORKS",
+    badge: "2026",
+    glowColor: "#BB1C2A",
+    kicker: "WORKS PU AMBITION",
+    headline: "Bortoleto bridge year",
+    meta: "AUSTRIA 2025 · PATH TO AUDI",
+    svgPath: "M 58 170 L 114 165 Q 136 160 150 150 L 185 140 Q 210 134 234 145 L 270 160 Q 283 168 290 170 L 340 170",
+    circles: [
+      { cx: 112, cy: 185, r: 14, fill: "rgba(187,28,42,0.35)" },
+      { cx: 285, cy: 185, r: 14, fill: "rgba(187,28,42,0.35)" },
+    ],
+    imageUrl: "/images/drivers/bortoleto-austria-2025.jpg",
   },
 ];
 
 export const sauberAcademy: TeamAcademyDriver[] = [
-  { name: "Valtteri Bottas", tier: "f1", note: "2022–" },
-  { name: "Gabriel Bortoleto", tier: "f1", note: "2025–" },
-  { name: "Zhou Guanyu", tier: "alumni", note: "2022–24" },
+  { name: "Gabriel Bortoleto", tier: "f1", note: "AUDI 2026 · F2 CHAMP 2024" },
+  { name: "Nico Hülkenberg", tier: "f1", note: "AUDI 2026 · LEAD DRIVER" },
+  { name: "Valtteri Bottas", tier: "alumni", note: "2022–25 · → CADILLAC 2026" },
+  { name: "Zhou Guanyu", tier: "alumni", note: "2022–24 · → CADILLAC RESERVE" },
 ];
 
 export const sauberIconicCars: TeamIconicCar[] = [
@@ -3465,10 +3686,148 @@ export const sauberIconicCars: TeamIconicCar[] = [
   },
   {
     name: "C44",
-    year: 2024,
-    subtitle: "Final Stake / Kick",
-    meta: "BOTTAS / ZHOU",
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/4/4b/Valtteri_Bottas_Chinese_GP_2024.jpg",
+    year: 2025,
+    subtitle: "Bortoleto rookie year",
+    meta: "KICK SAUBER · FINAL CUSTOMER PU",
+    imageUrl: "/images/drivers/bortoleto-sauber-f1-2025.jpg",
+  },
+];
+
+/* ─── Audi F1 (2026–) — brand page only; Sauber lineage deferred ───────────── */
+
+export const audi: Team = {
+  id: "audi",
+  name: "Audi F1 Team",
+  shortName: "Audi",
+  country: "Germany",
+  series: ["f1"],
+  founded: 2026,
+  current: true,
+  entityColor: "sauber",
+  liveryHex: "#BB1C2A",
+  bio: "Audi enters Formula 1 as a works manufacturer from 2026 — a German marque with a full power-unit programme and race team built for the new regulation cycle. Nico Hülkenberg and Gabriel Bortoleto lead the debut line-up under Mattia Binotto’s project leadership.",
+  quote: "We are lucky to have started from a blank sheet of paper and therefore we can set up the team with an organisation that is perhaps different from the others. Audi has not only won wherever it has participated but has always innovated.",
+  quoteContext: "Mattia Binotto, Audi F1 Project Lead — Motorsport.com",
+};
+
+export const audiStats: TeamStats = {
+  teamId: "audi",
+  constructorsTitles: 0,
+  driversTitles: 0,
+  wins: 0,
+  podiums: 0,
+  seasons: 1,
+  firstSeason: 2026,
+};
+
+export const audiEras: TeamEngineeringEra[] = [
+  {
+    teamId: "audi",
+    label: "Works debut",
+    seasons: "2026–",
+    description:
+      "Audi’s first Formula 1 season as a works team. Hülkenberg anchors the project with deep F1 experience; Bortoleto arrives as the 2024 F2 champion. Works power unit, new regulation cycle, German manufacturer ambition.",
+    championships: 0,
+    driverNames: "HÜLKENBERG · BORTOLETO",
+    champLabel: "ROOKIE SEASON",
+    current: true,
+    imageUrl: "/images/drivers/hulkenberg-audi-2026.jpg",
+  },
+];
+
+export const audiSignatureBars: TeamSignatureBar[] = [
+  { label: "Works power unit", rating: "HIGH", value: 78, caption: "AUDI OEM · 2026 REGS", sentiment: "strength" },
+  { label: "Manufacturer backing", rating: "HIGH", value: 82, caption: "GERMAN OEM WEIGHT", sentiment: "strength" },
+  { label: "Driver line", rating: "STRONG", value: 70, caption: "HÜLKENBERG + BORTOLETO", sentiment: "strength" },
+  { label: "F1 race data", rating: "LOW", value: 22, caption: "DEBUT SEASON", sentiment: "weakness" },
+  { label: "Project leadership", rating: "HIGH", value: 75, caption: "BINOTTO PROGRAMME", sentiment: "strength" },
+  { label: "Brand identity", rating: "HIGH", value: 80, caption: "AUDI SPORT DNA", sentiment: "strength" },
+];
+
+export const audiReelSlides: ReelSlide[] = [
+  {
+    slotLabel: "R26",
+    badge: "2026",
+    glowColor: "#BB1C2A",
+    kicker: "BERLIN LAUNCH",
+    headline: "Audi arrives",
+    meta: "R26 · JANUARY 2026 · WORKS REVEAL",
+    svgPath: "M 60 170 L 118 165 Q 140 160 150 150 L 185 140 Q 210 135 240 150 L 270 160 Q 280 170 290 170 L 338 170",
+    circles: [
+      { cx: 115, cy: 185, r: 14, fill: "rgba(187,28,42,0.35)" },
+      { cx: 282, cy: 185, r: 14, fill: "rgba(187,28,42,0.35)" },
+    ],
+    imageUrl: "/images/teams/audi-r26-berlin-launch-2026.jpg",
+  },
+  {
+    slotLabel: "NH",
+    badge: "2026",
+    glowColor: "#BB1C2A",
+    kicker: "LEAD DRIVER",
+    headline: "Hülkenberg leads",
+    meta: "CHINA 2026 · QUALIFYING",
+    svgPath: "M 58 170 L 114 165 Q 136 160 150 150 L 185 140 Q 210 134 234 145 L 270 160 Q 283 168 290 170 L 340 170",
+    circles: [
+      { cx: 112, cy: 185, r: 14, fill: "rgba(187,28,42,0.35)" },
+      { cx: 285, cy: 185, r: 14, fill: "rgba(187,28,42,0.35)" },
+    ],
+    imageUrl: "/images/teams/hulkenberg-audi-china-2026.jpg",
+  },
+  {
+    slotLabel: "GB",
+    badge: "2026",
+    glowColor: "#BB1C2A",
+    kicker: "F2 CHAMPION",
+    headline: "Bortoleto pairs",
+    meta: "CHINA 2026 · AUDI LINE-UP",
+    svgPath: "M 55 170 L 110 168 Q 135 160 150 148 L 182 135 Q 210 130 240 145 L 275 162 Q 290 170 300 170 L 345 170",
+    circles: [
+      { cx: 110, cy: 185, r: 14, fill: "rgba(187,28,42,0.35)" },
+      { cx: 288, cy: 185, r: 14, fill: "rgba(187,28,42,0.35)" },
+    ],
+    imageUrl: "/images/teams/bortoleto-audi-china-2026.jpg",
+  },
+  {
+    slotLabel: "SPIELBERG",
+    badge: "2026",
+    glowColor: "#BB1C2A",
+    kicker: "RACE TRIM",
+    headline: "Austria action",
+    meta: "HÜLKENBERG · R26 · RED BULL RING",
+    svgPath: "M 60 160 L 200 150 L 340 160",
+    circles: [
+      { cx: 200, cy: 170, r: 12, fill: "rgba(187,28,42,0.4)" },
+    ],
+    imageUrl: "/images/teams/hulkenberg-audi-austria-2026.jpg",
+  },
+  {
+    slotLabel: "97",
+    badge: "2026",
+    glowColor: "#BB1C2A",
+    kicker: "ROOKIE SEASON",
+    headline: "Bortoleto turns in",
+    meta: "AUSTRIA 2026 · WORKS AMBITION",
+    svgPath: "M 58 170 L 115 168 Q 136 160 150 150 L 185 138 Q 210 132 240 150 L 270 160 Q 285 170 295 170 L 342 170",
+    circles: [
+      { cx: 112, cy: 185, r: 14, fill: "rgba(187,28,42,0.35)" },
+      { cx: 285, cy: 185, r: 14, fill: "rgba(187,28,42,0.35)" },
+    ],
+    imageUrl: "/images/teams/bortoleto-audi-austria-2026.jpg",
+  },
+];
+
+export const audiAcademy: TeamAcademyDriver[] = [
+  { name: "Nico Hülkenberg", tier: "f1", note: "AUDI 2026 · LEAD DRIVER" },
+  { name: "Gabriel Bortoleto", tier: "f1", note: "AUDI 2026 · F2 CHAMP 2024" },
+];
+
+export const audiIconicCars: TeamIconicCar[] = [
+  {
+    name: "R26",
+    year: 2026,
+    subtitle: "Works debut car",
+    meta: "HÜLKENBERG / BORTOLETO · BERLIN LAUNCH",
+    imageUrl: "/images/teams/audi-r26-berlin-launch-2026.jpg",
   },
 ];
 
@@ -3482,9 +3841,9 @@ export const cadillac: Team = {
   series: ["f1"],
   founded: 2026,
   current: true,
-  entityColor: "mercedes",
+  entityColor: "cadillac",
   liveryHex: "#C8A96E",
-  bio: "General Motors and Andretti Global bring Cadillac to the Formula 1 grid from 2026. The official team profile lists Valtteri Bottas and Sergio Perez as race drivers with Zhou Guanyu as reserve — Ferrari power unit to 2029, with a GM unit planned per F1 reporting. Iconic car imagery will be added when stable open-licence or verified press URLs are available.",
+  bio: "General Motors and Andretti Global bring Cadillac to the Formula 1 grid from 2026 — the first American manufacturer-backed constructor entry of the current era alongside Haas. Sergio Pérez and Valtteri Bottas lead the race team with Zhou Guanyu as reserve; Ferrari customer power initially, with a GM unit planned later.",
   quote: "I cherish the opportunity that it gives me to have a lasting bond with F1.",
   quoteContext: "Mario Andretti, Cadillac F1 Ambassador — The Race (MAC-26 naming announcement)",
 };
@@ -3495,7 +3854,7 @@ export const cadillacStats: TeamStats = {
   driversTitles: 0,
   wins: 0,
   podiums: 0,
-  seasons: 0,
+  seasons: 1, // source: formula1.com / Jolpica — debut season 2026 in progress
   firstSeason: 2026,
 };
 
@@ -3504,11 +3863,12 @@ export const cadillacEras: TeamEngineeringEra[] = [
     teamId: "cadillac",
     label: "Debut",
     seasons: "2026–",
-    description: "New constructor entry. Iconic car photography will be added when Wikimedia or official formula1.com press assets with stable direct URLs are available.",
+    description: "GM's luxury marque enters F1 with experienced hands: Bottas's ten wins and Pérez's Red Bull pedigree. Ferrari power units for the inaugural seasons; Andretti Global operational expertise and a Detroit OEM balance sheet behind the project.",
     championships: 0,
-    driverNames: "BOTTAS · PEREZ",
+    driverNames: "PÉREZ · BOTTAS",
     champLabel: "ROOKIE SEASON",
     current: true,
+    imageUrl: "/images/drivers/bottas-china-2026.jpg",
   },
 ];
 
@@ -3523,29 +3883,87 @@ export const cadillacSignatureBars: TeamSignatureBar[] = [
 
 export const cadillacReelSlides: ReelSlide[] = [
   {
-    slotLabel: "V-Series.R",
+    slotLabel: "MAC-26",
     badge: "2026",
     glowColor: "#C8A96E",
-    kicker: "LAUNCH TBA",
-    headline: "Cadillac F1",
-    meta: "Replace with photo URL when available",
+    kicker: "GRID DEBUT",
+    headline: "Cadillac arrives",
+    meta: "PÉREZ · LAUNCH LIVERY",
     svgPath: "M 60 160 L 200 150 L 340 160",
     circles: [
       { cx: 200, cy: 170, r: 12, fill: "rgba(200,169,110,0.4)" },
     ],
+    imageUrl: "/images/drivers/perez-cadillac-2026.jpg",
+  },
+  {
+    slotLabel: "BOTTAS",
+    badge: "2026",
+    glowColor: "#C8A951",
+    kicker: "PAIRING",
+    headline: "Bottas joins",
+    meta: "CADILLAC · EXPERIENCED HAND",
+    svgPath: "M 58 170 L 114 165 Q 136 160 150 150 L 185 140 Q 210 134 234 145 L 270 160 Q 283 168 290 170 L 340 170",
+    circles: [
+      { cx: 112, cy: 185, r: 14, fill: "rgba(200,169,81,0.4)" },
+      { cx: 285, cy: 185, r: 14, fill: "rgba(200,169,81,0.4)" },
+    ],
+    imageUrl: "/images/drivers/bottas-cadillac-2026.jpg",
+  },
+  {
+    slotLabel: "RACE",
+    badge: "2026",
+    glowColor: "#C8A96E",
+    kicker: "FERRARI CUSTOMER PU",
+    headline: "MAC-26 on track",
+    meta: "CHINA 2026 · BOTTAS",
+    svgPath: "M 60 170 L 118 165 Q 140 160 150 150 L 185 140 Q 210 135 240 150 L 270 160 Q 280 170 290 170 L 338 170",
+    circles: [
+      { cx: 115, cy: 185, r: 14, fill: "rgba(200,169,110,0.4)" },
+      { cx: 282, cy: 185, r: 14, fill: "rgba(200,169,110,0.4)" },
+    ],
+    imageUrl: "/images/drivers/bottas-china-2026.jpg",
+  },
+  {
+    slotLabel: "PEREZ",
+    badge: "2026",
+    glowColor: "#C8A96E",
+    kicker: "RACE SEAT",
+    headline: "Pérez line-up",
+    meta: "CADILLAC · MEXICO'S PIONEER",
+    svgPath: "M 55 170 L 112 165 Q 136 160 150 148 L 182 136 Q 213 132 240 145 L 272 160 Q 284 170 295 170 L 345 170",
+    circles: [
+      { cx: 110, cy: 185, r: 14, fill: "rgba(200,169,110,0.4)" },
+      { cx: 288, cy: 185, r: 14, fill: "rgba(200,169,110,0.4)" },
+    ],
+    // Same asset as launch — only Pérez Cadillac still available locally; distinct copy beat
+    imageUrl: "/images/drivers/perez-cadillac-2026.jpg",
+  },
+  {
+    slotLabel: "V-SERIES",
+    badge: "LMDh",
+    glowColor: "#C8A951",
+    kicker: "CADILLAC DNA",
+    headline: "V-Series.R",
+    meta: "SPA 2024 · ENDURANCE LINEAGE",
+    svgPath: "M 55 170 L 110 168 Q 135 160 150 148 L 180 135 Q 210 130 240 145 L 275 160 Q 290 170 300 170 L 345 170",
+    circles: [
+      { cx: 110, cy: 185, r: 14, fill: "rgba(200,169,81,0.4)" },
+      { cx: 288, cy: 185, r: 14, fill: "rgba(200,169,81,0.4)" },
+    ],
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/2024_6_Hours_of_Spa-Francorchamps_Cadillac_Racing_Cadillac_V-Series.R_No.2_%28DSC02188%29.jpg/1280px-2024_6_Hours_of_Spa-Francorchamps_Cadillac_Racing_Cadillac_V-Series.R_No.2_%28DSC02188%29.jpg",
   },
 ];
 
 export const cadillacAcademy: TeamAcademyDriver[] = [
-  { name: "Valtteri Bottas", tier: "f1", note: "2026 race · per formula1.com/en/teams/cadillac" },
-  { name: "Sergio Perez", tier: "f1", note: "2026 race · per formula1.com/en/teams/cadillac" },
-  { name: "Zhou Guanyu", tier: "f1", note: "2026 reserve · per formula1.com/en/teams/cadillac" },
+  { name: "Sergio Pérez", tier: "f1", note: "CADILLAC 2026 · RACE" },
+  { name: "Valtteri Bottas", tier: "f1", note: "CADILLAC 2026 · RACE" },
+  { name: "Zhou Guanyu", tier: "junior", note: "CADILLAC 2026 · RESERVE" },
 ];
 
 export const cadillacIconicCars: TeamIconicCar[] = [
-  { name: "2026 concept", year: 2026, subtitle: "Launch photography TBA", meta: "NO VERIFIED COMMONS / F1.COM DAM URL YET" },
-  { name: "Factory livery", year: 2026, subtitle: "Add press image when published", meta: "USE GLOW UNTIL URL VERIFIED" },
-  { name: "Grid debut", year: 2026, subtitle: "First race TBA", meta: "PLACEHOLDER — NO HOTLINK YET" },
+  { name: "MAC-26", year: 2026, subtitle: "Grid debut livery", meta: "PÉREZ / BOTTAS · FERRARI PU", imageUrl: "/images/drivers/perez-cadillac-2026.jpg" },
+  { name: "V-Series.R", year: 2026, subtitle: "GM motorsport lineage", meta: "DETROIT OEM BACKING" },
+  { name: "Andretti link", year: 2026, subtitle: "US racing pedigree", meta: "ANDRETTI GLOBAL OPS" },
 ];
 
 /* ─── Haas F1 Team ──────────────────────────────────────────────────────────── */
@@ -3562,7 +3980,7 @@ export const haas: Team = {
   current: true,
   entityColor: "haas",
   liveryHex: "#E8002D",
-  bio: "The first American-owned Formula 1 team since Haas Lola in 1986. Founded by Gene Haas, co-owner of Stewart-Haas Racing NASCAR team. Entered F1 in 2016 with an innovative customer model — running Ferrari-spec power unit and gearbox. Their debut season was a shock: P8 constructors with Romain Grosjean scoring points in their very first race in Australia.",
+  bio: "The first American-owned Formula 1 team since Haas Lola in 1986. Founded by Gene Haas, co-owner of Stewart-Haas Racing NASCAR team. Entered F1 in 2016 with an innovative customer model — Ferrari-spec power unit and gearbox. The Komatsu era pairs Ferrari graduate Oliver Bearman with Esteban Ocon from 2025.",
   quote: "Constant refinement is what drives Haas in business and in motorsports.",
   quoteContext: "Gene Haas, Haas F1 Team Owner — Haas F1 Team official Q&A",
 }
@@ -3585,10 +4003,11 @@ export const haasEras: TeamEngineeringEra[] = [
     imageUrl: "/images/drivers/grosjean-haas-bahrain-2016.jpg",
   },
   {
-    teamId: "haas", label: "Post-Steiner Rebuild", seasons: "2024–present",
-    description: "New team principal Ayao Komatsu took over in 2024. Bearman debuted as a substitute in Saudi Arabia 2024, scoring points. The 2025 pairing of Bearman and Ocon brought fresh energy. A team with the infrastructure of a top-five outfit — if the car matches.",
-    championships: 0, driverNames: "Magnussen · Hülkenberg · Bearman · Ocon",
-    imageUrl: "/images/drivers/magnussen-haas-austria-2024.jpg",
+    teamId: "haas", label: "Komatsu Era", seasons: "2024–",
+    description: "Ayao Komatsu took over in 2024. Bearman debuted as a substitute in Saudi Arabia 2024, scoring points. The 2025–26 pairing of Bearman and Ocon — both Ferrari-linked — continues under the customer-Ferrari model.",
+    championships: 0, driverNames: "BEARMAN · OCON",
+    current: true,
+    imageUrl: "/images/drivers/bearman-haas-2025.jpg",
   },
 ]
 
@@ -3602,13 +4021,13 @@ export const haasSignatureBars: TeamSignatureBar[] = [
 
 export const haasReelSlides: ReelSlide[] = [
   {
-    label: "DEBUT WIN",
-    tags: "2016 · AUSTRALIA · POINTS ON RACE ONE",
-    title: "Australian GP",
-    subtitle: "2016 · HAAS VF-16 · GROSJEAN P6",
+    label: "DEBUT POINTS",
+    tags: "2016 · VF-16 · POINTS FROM THE START",
+    title: "Opening shock",
+    subtitle: "2016 · HAAS VF-16 · GROSJEAN POINTS",
     glowColor: "#E8002D",
     svgPath: "M 30 160 L 80 160 Q 100 145 115 110 L 165 110 Q 185 128 200 160 L 250 160 Q 270 172 285 200 L 330 200 Q 350 178 370 148",
-    imageUrl: "/images/drivers/grosjean-haas-british-2016.jpg",
+    imageUrl: "/images/drivers/grosjean-haas-bahrain-2016.jpg",
   },
   {
     label: "P5 WCC",
@@ -3620,21 +4039,39 @@ export const haasReelSlides: ReelSlide[] = [
     imageUrl: "/images/drivers/magnussen-haas-azerbaijan-2018.jpg",
   },
   {
+    label: "POLE",
+    tags: "2022 · SÃO PAULO · MAGNUSSEN POLE",
+    title: "Interlagos pole",
+    subtitle: "2022 · HAAS VF-22 · WET QUALIFYING",
+    glowColor: "#E8002D",
+    svgPath: "M 30 140 L 90 140 Q 120 125 140 90 L 190 90 Q 215 110 235 140 L 290 140 Q 320 160 340 190 L 370 190",
+    imageUrl: "/images/drivers/magnussen-haas-2022.jpg",
+  },
+  {
     label: "NEW ERA",
-    tags: "2025 · BEARMAN + OCON · POST-STEINER CHAPTER",
-    title: "2025 Rebuild",
-    subtitle: "2025 · VF-25 · KOMATSU ERA",
+    tags: "2025 · BEARMAN · KOMATSU CHAPTER",
+    title: "Bearman arrives",
+    subtitle: "2025 · VF-25 · HAAS",
     glowColor: "#E8002D",
     svgPath: "M 30 150 L 80 150 Q 110 138 130 100 L 175 100 Q 195 115 210 150 L 260 150 Q 290 170 315 200 L 370 200",
-    imageUrl: "/images/drivers/bearman-austria-2025.jpg",
+    imageUrl: "/images/drivers/bearman-haas-2025.jpg",
+  },
+  {
+    label: "PAIRING",
+    tags: "2025–26 · OCON + BEARMAN",
+    title: "Ocon joins Haas",
+    subtitle: "2025 · HAAS · FERRARI PU",
+    glowColor: "#E8002D",
+    svgPath: "M 30 155 L 85 155 Q 115 140 135 105 L 180 105 Q 200 125 220 155 L 275 155 Q 305 175 330 200 L 370 200",
+    imageUrl: "/images/drivers/ocon-haas-2025.jpg",
   },
 ]
 
 export const haasAcademy: TeamAcademyDriver[] = [
-  { name: "Oliver Bearman",   tier: "f1",   note: "Ferrari junior → Haas F1 2025 · Sub debut Saudi 2024" },
-  { name: "Esteban Ocon",     tier: "f1",   note: "Joined Haas 2025 after Alpine departure" },
+  { name: "Oliver Bearman",   tier: "f1",   note: "HAAS 2025– · FERRARI FDA GRADUATE" },
+  { name: "Esteban Ocon",     tier: "f1",   note: "HAAS 2025– · 2021 HUNGARY WINNER" },
   { name: "Romain Grosjean",  tier: "alumni", note: "Debut driver 2016–2020 · P6 on day one" },
-  { name: "Kevin Magnussen",  tier: "alumni", note: "2017–2022 · 2 career podiums · team stalwart" },
+  { name: "Kevin Magnussen",  tier: "alumni", note: "2017–2020 · 2022–2024 · Brazil 2022 pole · team stalwart" },
   { name: "Nico Hülkenberg",  tier: "alumni", note: "2023–2024 · P6 WDC 2023 — career best with Haas" },
   { name: "Mick Schumacher",  tier: "alumni", note: "2021–2022 · first F1 career via Ferrari academy" },
 ]
