@@ -27,7 +27,7 @@ const ENTITY_COLOR_HEX: Record<string, string> = {
   hulkenberg: '#52E252', tsunoda: '#6692FF', gasly: '#0090FF',
   ocon: '#0090FF', stroll: '#006F62', colapinto: '#005AFF',
   hadjar: '#6692FF', lawson: '#1E3A8A', bortoleto: '#52E252',
-  doohan: '#0090FF', bearman: '#B6BABD',
+  doohan: '#0090FF', bearman: '#B6BABD', lindblad: '#6692FF',
   ricciardo: '#1E3A8A', bottas: '#52E252', perez: '#1E3A8A',
   magnussen: '#B6BABD', zhou: '#52E252', schumacher: '#DC0000',
   raikkonen: '#DC0000', rosberg: '#00D2BE', webber: '#1E3A8A',
@@ -37,7 +37,7 @@ const ENTITY_COLOR_HEX: Record<string, string> = {
   mclaren: '#FF8000', mercedes: '#00D2BE', williams: '#005AFF',
   aston_martin: '#006F62', astonmartin: '#006F62',
   alpine: '#0090FF', haas: '#B6BABD', sauber: '#52E252',
-  rb: '#6692FF', cadillac: '#C8A96E',
+  audi: '#BB0A30', rb: '#6692FF', cadillac: '#C8A96E',
   // Historical teams
   alphatauri: '#2B4998', toro_rosso: '#C00000',
   force_india: '#FF80C7', racing_point: '#FF80C7',
@@ -63,10 +63,13 @@ const SERIES_COLOR_HEX: Record<Series, string> = {
 /* ─── Helpers ────────────────────────────────────────────────────────────────── */
 
 function formatCareerSpan(span: string): string {
-  const years = span.replace('–present', '–2025').split('–')
+  const years = span.replace('–present', `–${new Date().getFullYear()}`).split('–')
   if (years.length !== 2) return span
-  const diff = parseInt(years[1]) - parseInt(years[0])
-  return `${diff}y`
+  const start = parseInt(years[0], 10)
+  const end = parseInt(years[1], 10)
+  if (Number.isNaN(start) || Number.isNaN(end)) return span
+  const diff = end - start
+  return `${Math.max(diff, 0)}y`
 }
 
 function renderWithHighlights(text: string, highlights: string[], color: string) {

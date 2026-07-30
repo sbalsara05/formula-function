@@ -54,6 +54,7 @@ import {
   mansell, mansellStats, mansellEras, mansellSignature, mansellReelSlides, mansellScoutingReport,
   nicoRosberg, nicoRosbergStats, nicoRosbergEras, nicoRosbergSignature, nicoRosbergReelSlides, nicoRosbergScoutingReport,
   ricciardo, ricciardoStats, ricciardoEras, ricciardoSignature, ricciardoReelSlides, ricciardoScoutingReport,
+  lindblad, lindbladStats, lindbladEras, lindbladSignature, lindbladReelSlides, lindbladScoutingReport,
 } from '@/data/mock/drivers'
 import type {
   Series, Driver, DriverStats, DriverEra, DrivingSignature,
@@ -77,11 +78,31 @@ interface DriverBundle {
   heroStatRows?: Array<{ label: string; value: string; sub?: string; accent?: boolean }>
 }
 
+const VERSTAPPEN_F1: DriverBundle = {
+  driver: verstappen, stats: verstappenStats, eras: verstappenEras,
+  signature: verstappenSignature, reelSlides: verstappenReelSlides,
+  scoutingReport: verstappenScoutingReport,
+}
+
+const LINDBLAD_F1: DriverBundle = {
+  driver: lindblad, stats: lindbladStats, eras: lindbladEras,
+  signature: lindbladSignature, reelSlides: lindbladReelSlides,
+  scoutingReport: lindbladScoutingReport,
+}
+
+const SCHUMACHER_F1: DriverBundle = {
+  driver: schumacher, stats: schumacherStats, eras: schumacherEras,
+  signature: schumacherSignature, reelSlides: schumacherReelSlides,
+  scoutingReport: schumacherScoutingReport,
+}
+
 const DRIVER_REGISTRY: Partial<Record<Series, Record<string, DriverBundle>>> = {
   f1: {
     vettel:      { driver: vettel,      stats: vettelStats,      eras: vettelEras,      signature: vettelSignature,      reelSlides: vettelReelSlides,      scoutingReport: vettelScoutingReport },
     hamilton:    { driver: hamilton,    stats: hamiltonStats,    eras: hamiltonEras,    signature: hamiltonSignature,    reelSlides: hamiltonReelSlides,    scoutingReport: hamiltonScoutingReport },
-    verstappen:  { driver: verstappen,  stats: verstappenStats,  eras: verstappenEras,  signature: verstappenSignature,  reelSlides: verstappenReelSlides,  scoutingReport: verstappenScoutingReport },
+    verstappen:  VERSTAPPEN_F1,
+    // Jolpica driverId max_verstappen → live standings slug max-verstappen
+    'max-verstappen': VERSTAPPEN_F1,
     leclerc:     { driver: leclerc,     stats: leclerStats,      eras: leclerEras,      signature: leclerSignature,      reelSlides: leclerReelSlides,      scoutingReport: leclerScoutingReport },
     norris:      { driver: norris,      stats: norrisStats,      eras: norrisEras,      signature: norrisSignature,      reelSlides: norrisReelSlides,      scoutingReport: norrisScoutingReport },
     piastri:     { driver: piastriF1,   stats: piastriF1Stats,   eras: piastriF1Eras,   signature: piastriF1Signature,   reelSlides: piastriF1ReelSlides,   scoutingReport: piastriF1ScoutingReport },
@@ -100,10 +121,14 @@ const DRIVER_REGISTRY: Partial<Record<Series, Record<string, DriverBundle>>> = {
     tsunoda:     { driver: tsunoda,     stats: tsunodaStats,     eras: tsunodaEras,     signature: tsunodaSignature,     reelSlides: tsunodaReelSlides,     scoutingReport: tsunodaScoutingReport },
     hadjar:      { driver: hadjar,      stats: hadjarStats,      eras: hadjarEras,      signature: hadjarSignature,      reelSlides: hadjarReelSlides,      scoutingReport: hadjarScoutingReport },
     lawson:      { driver: lawson,      stats: lawsonStats,      eras: lawsonEras,      signature: lawsonSignature,      reelSlides: lawsonReelSlides,      scoutingReport: lawsonScoutingReport },
+    lindblad:    LINDBLAD_F1,
+    // Jolpica driverId arvid_lindblad → live standings slug arvid-lindblad
+    'arvid-lindblad': LINDBLAD_F1,
     perez:       { driver: perez,       stats: perezStats,       eras: perezEras,       signature: perezSignature,       reelSlides: perezReelSlides,       scoutingReport: perezScoutingReport },
     bottas:      { driver: bottas,      stats: bottasStats,      eras: bottasEras,      signature: bottasSignature,      reelSlides: bottasReelSlides,      scoutingReport: bottasScoutingReport },
     prost:       { driver: prost,       stats: prostStats,       eras: prostEras,       signature: prostSignature,       reelSlides: prostReelSlides,       scoutingReport: prostScoutingReport },
-    schumacher:  { driver: schumacher,  stats: schumacherStats,  eras: schumacherEras,  signature: schumacherSignature,  reelSlides: schumacherReelSlides,  scoutingReport: schumacherScoutingReport },
+    schumacher:  SCHUMACHER_F1,
+    'michael-schumacher': SCHUMACHER_F1,
     senna:       { driver: senna,       stats: sennaStats,       eras: sennaEras,       signature: sennaSignature,       reelSlides: sennaReelSlides,       scoutingReport: sennaScoutingReport },
     raikkonen:   { driver: raikkonen,   stats: raikkonenStats,   eras: raikkonenEras,   signature: raikkonenSignature,   reelSlides: raikkonenReelSlides,   scoutingReport: raikkonenScoutingReport },
     button:      { driver: button,      stats: buttonStats,      eras: buttonEras,      signature: buttonSignature,      reelSlides: buttonReelSlides,      scoutingReport: buttonScoutingReport },
