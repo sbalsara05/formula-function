@@ -60,6 +60,21 @@ const SERIES_COLOR_HEX: Record<Series, string> = {
   f3: '#B026FF',
 }
 
+/** Must stay in sync with LAP_REGISTRY in app/.../laps/page.tsx */
+const LAPS_PICKER_SLUGS = new Set(['vettel'])
+
+const DRIVER_ID_TO_ROUTE_SLUG: Record<string, string> = {
+  max_verstappen: 'verstappen',
+  arvid_lindblad: 'lindblad',
+  michael_schumacher: 'schumacher',
+  damon_hill: 'hill',
+}
+
+function driverRouteSlug(driverId: string, routeSlug?: string): string {
+  if (routeSlug) return routeSlug
+  return DRIVER_ID_TO_ROUTE_SLUG[driverId] ?? driverId.replace(/_/g, '-')
+}
+
 /* ─── Helpers ────────────────────────────────────────────────────────────────── */
 
 function formatCareerSpan(span: string): string {
@@ -108,9 +123,17 @@ function normalizeReelSlides(slides: ReelSlide[]): ReelSlide[] {
 
 /* ─── Sub-sections ───────────────────────────────────────────────────────────── */
 
-function DriverHeader({ driver, series }: { driver: Driver; series: Series }) {
+function DriverHeader({
+  driver, series, routeSlug,
+}: {
+  driver: Driver
+  series: Series
+  routeSlug?: string
+}) {
   const seriesNum = series.replace('f', '')
   const seriesColor = SERIES_COLOR_HEX[series]
+  const lapsSlug = driverRouteSlug(driver.id, routeSlug)
+  const hasLapPicker = LAPS_PICKER_SLUGS.has(lapsSlug)
   return (
     <div style={{
       padding: '1rem 1.75rem',
@@ -144,17 +167,34 @@ function DriverHeader({ driver, series }: { driver: Driver; series: Series }) {
         }}>
           COMPARE ↗
         </button>
-        <Link href={`/f/${seriesNum}/driver/${driver.id}/laps`} style={{ textDecoration: 'none' }}>
-          <button style={{
-            background: 'transparent',
-            border: `0.5px solid ${seriesColor}`,
-            color: seriesColor,
-            fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: 1,
-            padding: '6px 12px', borderRadius: 4, cursor: 'pointer',
-          }}>
+        {hasLapPicker ? (
+          <Link href={`/f/${seriesNum}/driver/${lapsSlug}/laps`} style={{ textDecoration: 'none' }}>
+            <button style={{
+              background: 'transparent',
+              border: `0.5px solid ${seriesColor}`,
+              color: seriesColor,
+              fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: 1,
+              padding: '6px 12px', borderRadius: 4, cursor: 'pointer',
+            }}>
+              ANALYZE A LAP ↗
+            </button>
+          </Link>
+        ) : (
+          <button
+            type="button"
+            disabled
+            title="Lap analysis not available for this driver yet"
+            style={{
+              background: 'transparent',
+              border: '0.5px solid #2a2a2a',
+              color: '#444',
+              fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: 1,
+              padding: '6px 12px', borderRadius: 4, cursor: 'not-allowed',
+            }}
+          >
             ANALYZE A LAP ↗
           </button>
-        </Link>
+        )}
         <button style={{
           background: 'transparent', border: '0.5px solid #2a2a2a', color: '#aaa',
           fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: 1,
@@ -548,11 +588,13 @@ export interface DriverPageProps {
   series: Series
   trajectoryPrediction?: TrajectoryPrediction
   heroStatRows?: StatRow[]
+  /** URL slug for this page (may differ from driver.id, e.g. verstappen vs max_verstappen) */
+  routeSlug?: string
 }
 
 export default function DriverPage({
   driver, stats, eras, signature, reelSlides, scoutingReport, series,
-  trajectoryPrediction, heroStatRows,
+  trajectoryPrediction, heroStatRows, routeSlug,
 }: DriverPageProps) {
   const entityHex = ENTITY_COLOR_HEX[driver.entityColor] ?? '#ffffff'
   const seriesHex = SERIES_COLOR_HEX[series]
@@ -568,7 +610,7 @@ export default function DriverPage({
         ['--color-entity' as string]: entityHex,
       } as React.CSSProperties}
     >
-      <DriverHeader driver={driver} series={series} />
+      <DriverHeader driver={driver} series={series} routeSlug={routeSlug} />
       <DriverHero
         driver={driver}
         stats={stats}

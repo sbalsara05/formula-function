@@ -723,7 +723,7 @@ export default async function DriverRoute({
   // Use curated blueprints when available (including F1), then fall back to generic pages.
   const bundle = DRIVER_REGISTRY[series]?.[lcSlug]
   if (bundle) {
-    return <DriverPage {...bundle} series={series} />
+    return <DriverPage {...bundle} series={series} routeSlug={lcSlug} />
   }
 
   // Generic F1 driver pages
@@ -751,9 +751,9 @@ export default async function DriverRoute({
       championships: championsFromHistory,
     }
     const portraitUrl = DRIVER_IMAGE_MAP[jolpicaId] ?? DRIVER_IMAGE_MAP[lcSlug]
-    const bundle = buildDriverBundle(jolpicaId, info, effectiveStats, currentStanding, careerHistory, teamColor, portraitUrl)
+    const built = buildDriverBundle(jolpicaId, info, effectiveStats, currentStanding, careerHistory, teamColor, portraitUrl)
 
-    return <DriverPage {...bundle} series={series} />
+    return <DriverPage {...built} series={series} routeSlug={lcSlug} />
   }
 
   notFound()
