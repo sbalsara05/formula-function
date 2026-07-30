@@ -503,7 +503,8 @@ const TEAM_META: Record<string, { name: string; short: string; color: string; na
   moda:          { name: 'Andrea Moda Formula',       short: 'Moda',          color: '#222222', nat: 'Italian',   wcc:  0, wdc:  0, founded: 1992 },
   // ── 1980s ─────────────────────────────────────────────────────────────────
   benetton:      { name: 'Benetton Formula',          short: 'Benetton',      color: '#009944', nat: 'British',   wcc:  1, wdc:  2, founded: 1986 },
-  renault:       { name: 'Renault F1 Team',           short: 'Renault',       color: '#FFD700', nat: 'French',    wcc:  2, wdc:  2, founded: 2002 },
+  // First F1 season 1977 (Jolpica); 2002 was the Enstone works rebrand era only
+  renault:       { name: 'Renault F1 Team',           short: 'Renault',       color: '#FFD700', nat: 'French',    wcc:  2, wdc:  2, founded: 1977 },
   brawn:         { name: 'Brawn GP',                  short: 'Brawn',         color: '#BFFF00', nat: 'British',   wcc:  1, wdc:  1, founded: 2009 },
   toleman:       { name: 'Toleman Motorsport',        short: 'Toleman',       color: '#CC0000', nat: 'British',   wcc:  0, wdc:  0, founded: 1981 },
   zakspeed:      { name: 'Zakspeed',                  short: 'Zakspeed',      color: '#CC0000', nat: 'German',    wcc:  0, wdc:  0, founded: 1985 },
@@ -590,8 +591,9 @@ interface GenericTeamDriver {
 
 async function fetchRaceStats(jolpicaId: string): Promise<RaceStats> {
   const base = `https://api.jolpi.ca/ergast/f1/constructors/${jolpicaId}`
+  // races.json total = race starts; results.json total = per-driver result rows (~2×)
   const [races, wins, p2, p3, poles] = await Promise.all([
-    jolpicaTotal(`${base}/results.json?limit=1`),
+    jolpicaTotal(`${base}/races.json?limit=1`),
     jolpicaTotal(`${base}/results/1.json?limit=1`),
     jolpicaTotal(`${base}/results/2.json?limit=1`),
     jolpicaTotal(`${base}/results/3.json?limit=1`),

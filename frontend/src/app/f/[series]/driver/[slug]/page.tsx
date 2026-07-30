@@ -55,6 +55,7 @@ import {
   nicoRosberg, nicoRosbergStats, nicoRosbergEras, nicoRosbergSignature, nicoRosbergReelSlides, nicoRosbergScoutingReport,
   ricciardo, ricciardoStats, ricciardoEras, ricciardoSignature, ricciardoReelSlides, ricciardoScoutingReport,
   lindblad, lindbladStats, lindbladEras, lindbladSignature, lindbladReelSlides, lindbladScoutingReport,
+  magnussen, magnussenStats, magnussenEras, magnussenSignature, magnussenReelSlides, magnussenScoutingReport,
 } from '@/data/mock/drivers'
 import type {
   Series, Driver, DriverStats, DriverEra, DrivingSignature,
@@ -96,6 +97,12 @@ const SCHUMACHER_F1: DriverBundle = {
   scoutingReport: schumacherScoutingReport,
 }
 
+const MAGNUSSEN_F1: DriverBundle = {
+  driver: magnussen, stats: magnussenStats, eras: magnussenEras,
+  signature: magnussenSignature, reelSlides: magnussenReelSlides,
+  scoutingReport: magnussenScoutingReport,
+}
+
 const DRIVER_REGISTRY: Partial<Record<Series, Record<string, DriverBundle>>> = {
   f1: {
     vettel:      { driver: vettel,      stats: vettelStats,      eras: vettelEras,      signature: vettelSignature,      reelSlides: vettelReelSlides,      scoutingReport: vettelScoutingReport },
@@ -124,6 +131,9 @@ const DRIVER_REGISTRY: Partial<Record<Series, Record<string, DriverBundle>>> = {
     lindblad:    LINDBLAD_F1,
     // Jolpica driverId arvid_lindblad → live standings slug arvid-lindblad
     'arvid-lindblad': LINDBLAD_F1,
+    // Jolpica short id "magnussen" is Jan; Kevin is kevin_magnussen
+    magnussen:   MAGNUSSEN_F1,
+    'kevin-magnussen': MAGNUSSEN_F1,
     perez:       { driver: perez,       stats: perezStats,       eras: perezEras,       signature: perezSignature,       reelSlides: perezReelSlides,       scoutingReport: perezScoutingReport },
     bottas:      { driver: bottas,      stats: bottasStats,      eras: bottasEras,      signature: bottasSignature,      reelSlides: bottasReelSlides,      scoutingReport: bottasScoutingReport },
     prost:       { driver: prost,       stats: prostStats,       eras: prostEras,       signature: prostSignature,       reelSlides: prostReelSlides,       scoutingReport: prostScoutingReport },
@@ -249,7 +259,10 @@ const DRIVER_SLUG_TO_JOLPICA: Record<string, string> = {
   ricciardo: 'ricciardo',
   bottas: 'bottas',
   perez: 'perez',
-  magnussen: 'magnussen',
+  // Jolpica: magnussen = Jan; kevin_magnussen = Kevin (curated /f/1/driver/magnussen)
+  magnussen: 'kevin_magnussen',
+  'kevin-magnussen': 'kevin_magnussen',
+  'jan-magnussen': 'magnussen',
   zhou: 'zhou',
   'de-vries': 'de_vries',
   mick_schumacher: 'mick_schumacher',
@@ -283,7 +296,10 @@ const DRIVER_SLUG_TO_JOLPICA: Record<string, string> = {
   berger: 'berger',
   andretti: 'andretti',
   hunt: 'hunt',
-  fittipaldi: 'fittipaldi',
+  // Jolpica short id is Christian; Emerson is emerson_fittipaldi
+  fittipaldi: 'emerson_fittipaldi',
+  'emerson-fittipaldi': 'emerson_fittipaldi',
+  'christian-fittipaldi': 'fittipaldi',
   stewart: 'stewart',
   clark: 'clark',
   fangio: 'fangio',
@@ -294,7 +310,10 @@ const DRIVER_SLUG_TO_JOLPICA: Record<string, string> = {
   'jacques-villeneuve': 'villeneuve',
   scheckter: 'scheckter',
   jones: 'jones',
-  brabham: 'brabham',
+  // Jolpica short id is David; Jack (3× WDC) is jack_brabham
+  brabham: 'jack_brabham',
+  'jack-brabham': 'jack_brabham',
+  'david-brabham': 'brabham',
   hulme: 'hulme',
   rindt: 'rindt',
   ickx: 'ickx',
@@ -307,7 +326,9 @@ const DRIVER_SLUG_TO_JOLPICA: Record<string, string> = {
   trulli: 'trulli',
   fisichella: 'fisichella',
   irvine: 'irvine',
-  'de-la-rosa': 'de_la_rosa',
+  // Jolpica id is "rosa", not de_la_rosa
+  'de-la-rosa': 'rosa',
+  rosa: 'rosa',
   button2: 'button',
 }
 
@@ -365,7 +386,7 @@ const DRIVER_IMAGE_MAP: Record<string, string> = {
   perez:              'https://upload.wikimedia.org/wikipedia/commons/5/55/2021_US_GP_driver_parade_%28cropped2%29.jpg',
   arvid_lindblad:     'https://upload.wikimedia.org/wikipedia/commons/0/03/Arvid_Lindblad_at_the_Red_Bull_Fan_Zone_%E2%80%93_Crown_Riverwalk%2C_Melbourne_%28028A7727%29.jpg',
   doohan:             'https://upload.wikimedia.org/wikipedia/commons/8/8d/2025_Japan_GP_-_Alpine_-_Jack_Doohan_-_FP3.jpg',
-  magnussen:          'https://upload.wikimedia.org/wikipedia/commons/5/5b/FIA_F1_Austria_2022_Nr._20_Magnussen.jpg',
+  kevin_magnussen:    'https://upload.wikimedia.org/wikipedia/commons/5/5b/FIA_F1_Austria_2022_Nr._20_Magnussen.jpg',
 }
 
 /* ─── Team color lookup ───────────────────────────────────────────────────── */

@@ -466,6 +466,9 @@ const DRIVER_ID_TO_SLUG: Record<string, string> = {
   arvid_lindblad: 'lindblad',
   michael_schumacher: 'schumacher',
   damon_hill: 'hill',
+  kevin_magnussen: 'magnussen',
+  jack_brabham: 'brabham',
+  emerson_fittipaldi: 'fittipaldi',
 }
 
 function driverStandingHref(driverId: string): string {

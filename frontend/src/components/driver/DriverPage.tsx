@@ -68,6 +68,7 @@ const DRIVER_ID_TO_ROUTE_SLUG: Record<string, string> = {
   arvid_lindblad: 'lindblad',
   michael_schumacher: 'schumacher',
   damon_hill: 'hill',
+  kevin_magnussen: 'magnussen',
 }
 
 function driverRouteSlug(driverId: string, routeSlug?: string): string {
