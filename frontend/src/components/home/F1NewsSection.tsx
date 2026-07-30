@@ -200,7 +200,7 @@ export function F1NewsSection({
       style={{
         padding: '2.5rem 1.75rem 3rem',
         borderTop: '0.5px solid #1a1a1a',
-        scrollMarginTop: 64,
+        scrollMarginTop: 96,
         background: '#000',
         isolation: 'isolate',
         overflow: 'hidden',
