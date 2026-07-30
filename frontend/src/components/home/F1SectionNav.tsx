@@ -13,7 +13,11 @@ const LINKS = [
   { href: '#venues', label: 'VENUES' },
 ] as const
 
-const HEADER_OFFSET = 64
+function headerOffsetPx(): number {
+  const header = document.querySelector<HTMLElement>('[data-f1-sticky-header]')
+  const h = header?.getBoundingClientRect().height
+  return h && h > 0 ? Math.round(h) + 4 : 72
+}
 
 export function F1SectionNav({ accentColor }: { accentColor: string }) {
   const [active, setActive] = useState<string>('')
@@ -26,23 +30,24 @@ export function F1SectionNav({ accentColor }: { accentColor: string }) {
 
     if (elements.length === 0) return
 
-    const observer = new IntersectionObserver(
-      entries => {
-        const visible = entries
-          .filter(e => e.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)
-        if (visible[0]?.target.id) {
-          setActive(`#${visible[0].target.id}`)
-        }
-      },
-      {
-        rootMargin: '-72px 0px -55% 0px',
-        threshold: [0, 0.15, 0.35, 0.55],
-      },
-    )
+    const updateActiveFromScroll = () => {
+      const offset = headerOffsetPx()
+      // Pick the last section whose top has crossed the sticky header line.
+      let current = ''
+      for (const el of elements) {
+        const top = el.getBoundingClientRect().top
+        if (top - offset <= 12) current = `#${el.id}`
+      }
+      if (current) setActive(current)
+    }
 
-    elements.forEach(el => observer.observe(el))
-    return () => observer.disconnect()
+    updateActiveFromScroll()
+    window.addEventListener('scroll', updateActiveFromScroll, { passive: true })
+    window.addEventListener('resize', updateActiveFromScroll)
+    return () => {
+      window.removeEventListener('scroll', updateActiveFromScroll)
+      window.removeEventListener('resize', updateActiveFromScroll)
+    }
   }, [])
 
   function handleNavClick(e: MouseEvent<HTMLAnchorElement>, href: string) {
@@ -51,8 +56,9 @@ export function F1SectionNav({ accentColor }: { accentColor: string }) {
     const el = document.getElementById(href.slice(1))
     if (!el) return
 
-    const top = el.getBoundingClientRect().top + window.scrollY - HEADER_OFFSET
-    window.scrollTo({ top, behavior: 'smooth' })
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    const top = el.getBoundingClientRect().top + window.scrollY - headerOffsetPx()
+    window.scrollTo({ top, behavior: prefersReduced ? 'auto' : 'smooth' })
     window.history.pushState(null, '', href)
   }
 
@@ -68,6 +74,7 @@ export function F1SectionNav({ accentColor }: { accentColor: string }) {
         scrollbarWidth: 'none',
         msOverflowStyle: 'none',
         minWidth: 0,
+        width: '100%',
       }}
     >
       {LINKS.map(link => {
@@ -87,6 +94,7 @@ export function F1SectionNav({ accentColor }: { accentColor: string }) {
               whiteSpace: 'nowrap',
               flexShrink: 0,
               transition: 'color 0.25s ease',
+              padding: '4px 0',
             }}
           >
             {link.label}

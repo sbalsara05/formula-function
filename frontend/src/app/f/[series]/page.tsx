@@ -4,7 +4,7 @@ import { TeamLogo } from '@/components/constructors/TeamLogo'
 import { F1NewsSection } from '@/components/home/F1NewsSection'
 import { F1EraCard } from '@/components/home/F1EraCard'
 import { F1SectionNav } from '@/components/home/F1SectionNav'
-import { CURRENT_F1_DRIVERS, CURRENT_F1_TEAMS, CURRENT_F1_VENUES } from '@/data/f1-current-grid'
+import { CURRENT_F1_DRIVERS, CURRENT_F1_VENUES } from '@/data/f1-current-grid'
 import {
   F1_CHAMPIONS,
   F1_CHAMPIONSHIP_LEGEND,
@@ -352,14 +352,18 @@ function F1LandingPage({ config, standings, news }: {
     <div style={{ background: '#000', color: '#fff', minHeight: '100vh', fontFamily: 'var(--font-sans)' }}>
 
       {/* ── Header ── */}
-      <header style={{
-        padding: '1rem 1.75rem',
-        display: 'flex', justifyContent: 'space-between', alignItems: 'center',
-        gap: 20,
-        borderBottom: '0.5px solid #1a1a1a',
-        background: '#000',
-        position: 'sticky', top: 0, zIndex: 50,
-      }}>
+      <header
+        data-f1-sticky-header
+        style={{
+          padding: '0.75rem 1.75rem 0.65rem',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: 10,
+          borderBottom: '0.5px solid #1a1a1a',
+          background: '#000',
+          position: 'sticky', top: 0, zIndex: 50,
+        }}
+      >
         <div style={{ display: 'flex', alignItems: 'center', gap: 20, flexShrink: 0 }}>
           <Link href="/" style={{ textDecoration: 'none', fontFamily: 'var(--font-mono)', fontSize: 18, fontWeight: 500, color: '#fff', letterSpacing: -0.5 }}>
             f(x)
@@ -373,7 +377,7 @@ function F1LandingPage({ config, standings, news }: {
       </header>
 
       {/* ── DNA: hero + championship timeline ── */}
-      <section id="dna" style={{ scrollMarginTop: 64, background: '#000' }}>
+      <section id="dna" style={{ scrollMarginTop: 96, background: '#000' }}>
       {/* ── Hero ── */}
       <div style={{
         position: 'relative',
@@ -512,98 +516,12 @@ function F1LandingPage({ config, standings, news }: {
       </div>
       </section>
 
-      {/* ── Eras ── */}
-      <section id="eras" style={{ padding: '3rem 1.75rem', scrollMarginTop: 64, background: '#000' }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: 20 }}>
-          <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: 2, color: config.color, margin: 0 }}>
-            ERAS
-          </p>
-          <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, color: '#333', margin: 0 }}>
-            DEFINING CHAPTERS IN THE SPORT&apos;S HISTORY
-          </p>
-        </div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 12 }}>
-          {F1_ERAS.map((era, i) => (
-            <F1EraCard
-              key={era.slug}
-              era={era}
-              wide={i === F1_ERAS.length - 1}
-              href={`/f/1/era/${era.slug}`}
-            />
-          ))}
-        </div>
-      </section>
-
+      {/* Order matches F1SectionNav: DNA → NEWS → STANDINGS → ERAS → TEAMS → DRIVERS → VENUES */}
       <F1NewsSection items={news.items} fetchedAt={news.fetchedAt} accentColor={config.color} />
 
-      {/* ── Teams / Constructors ── */}
-      <section id="teams" style={{ padding: '0 1.75rem 3rem', borderTop: '0.5px solid #1a1a1a', scrollMarginTop: 64 }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: 24, paddingTop: '2rem' }}>
-          <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: 2, color: config.color, margin: 0 }}>
-            TEAMS
-          </p>
-          <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, color: '#333', margin: 0 }}>
-            CURRENT GRID · 2026 · {currentConstructors.length} TEAMS
-          </p>
-        </div>
-
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 8 }}>
-          {currentConstructors.map(t => (
-            <Link
-              key={t.slug}
-              href={`/f/1/team/${t.slug}`}
-              style={{
-                textDecoration: 'none', color: 'inherit',
-                background: '#060606',
-                border: `0.5px solid ${t.wcc > 0 ? t.color + '38' : '#111'}`,
-                borderRadius: 8,
-                padding: '16px 14px',
-                position: 'relative', overflow: 'hidden',
-                display: 'block',
-              }}
-            >
-              <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 2, background: t.color, opacity: t.wcc > 0 ? 0.7 : 0.18 }} />
-              {t.wcc > 3 && (
-                <div style={{ position: 'absolute', inset: 0, background: `radial-gradient(ellipse at 0% 100%, ${t.color}10 0%, transparent 55%)`, pointerEvents: 'none' }} />
-              )}
-              <div style={{ position: 'relative', display: 'flex', flexDirection: 'column', gap: 8 }}>
-                <TeamLogo
-                  logo={(t as { logo?: string }).logo}
-                  abbr={t.abbr}
-                  color={t.color}
-                  size={36}
-                />
-                <div>
-                  <p style={{
-                    fontFamily: 'var(--font-mono)',
-                    fontSize: t.wcc > 0 ? 26 : 18,
-                    fontWeight: 400,
-                    color: t.wcc > 0 ? t.color : '#2a2a2a',
-                    margin: '0 0 3px', letterSpacing: -1, lineHeight: 1,
-                  }}>
-                    {t.wcc > 0 ? `${t.wcc}×` : '—'}
-                  </p>
-                  <p style={{
-                    fontSize: 11,
-                    fontWeight: 500,
-                    color: t.wcc > 4 ? '#ddd' : t.wcc > 0 ? '#aaa' : '#444',
-                    margin: '0 0 2px', letterSpacing: -0.2,
-                  }}>
-                    {t.short}
-                  </p>
-                  <p style={{ fontFamily: 'var(--font-mono)', fontSize: 7, color: '#2a2a2a', margin: 0, letterSpacing: 0.3 }}>
-                    {t.active}
-                  </p>
-                </div>
-              </div>
-            </Link>
-          ))}
-        </div>
-      </section>
-
       {/* ── Live Standings ── */}
-      {standings && (standings.driverStandings.length > 0 || standings.constructorStandings.length > 0) && (
-        <section id="standings" style={{ padding: '0 1.75rem 3rem', borderTop: '0.5px solid #1a1a1a', scrollMarginTop: 64 }}>
+      {standings && (standings.driverStandings.length > 0 || standings.constructorStandings.length > 0) ? (
+        <section id="standings" style={{ padding: '0 1.75rem 3rem', borderTop: '0.5px solid #1a1a1a', scrollMarginTop: 96 }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', margin: '2rem 0 20px' }}>
             <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: 2, color: config.color, margin: 0 }}>
               LIVE STANDINGS
@@ -612,7 +530,7 @@ function F1LandingPage({ config, standings, news }: {
               {standings.season} · ROUND {standings.round}
             </p>
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 12 }}>
             {/* Driver standings */}
             <div style={{ background: '#060606', border: '0.5px solid #1a1a1a', borderRadius: 8, overflow: 'hidden' }}>
               <div style={{ padding: '14px 18px 10px', borderBottom: '0.5px solid #1a1a1a', display: 'flex', justifyContent: 'space-between' }}>
@@ -689,37 +607,145 @@ function F1LandingPage({ config, standings, news }: {
             </div>
           </div>
         </section>
+      ) : (
+        <div id="standings" style={{ scrollMarginTop: 96 }} aria-hidden="true" />
       )}
 
-      {/* ── Browse ── */}
-      <section style={{ padding: '0 1.75rem 4rem', borderTop: '0.5px solid #1a1a1a' }}>
-        <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: 2, color: config.color, margin: '2rem 0 16px' }}>
-          BROWSE
-        </p>
-        {[
-          { id: 'drivers', label: 'DRIVERS', items: CURRENT_F1_DRIVERS, type: 'DRIVER', seg: 'driver' },
-          { id: 'browse-teams', label: 'TEAMS', items: CURRENT_F1_TEAMS, type: 'TEAM', seg: 'team' },
-          { id: 'venues', label: 'VENUES', items: CURRENT_F1_VENUES, type: 'VENUE', seg: 'venue' },
-        ].filter(s => s.items.length > 0).map(section => (
-          <div key={section.label} id={section.id} style={{ marginBottom: 28, scrollMarginTop: 64 }}>
-            <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, letterSpacing: 1.5, color: '#444', margin: '0 0 10px' }}>
-              {section.label}
-            </p>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 10 }}>
-              {section.items.map(item => (
-                <EntityCard
-                  key={item.slug}
-                  href={`/f/1/${section.seg}/${item.slug}`}
-                  type={section.type}
-                  name={item.name}
-                  tagline={item.tagline}
-                  entityColor={item.color}
-                  seriesColor={config.color}
+      {/* ── Eras ── */}
+      <section id="eras" style={{ padding: '3rem 1.75rem', scrollMarginTop: 96, background: '#000' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: 20 }}>
+          <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: 2, color: config.color, margin: 0 }}>
+            ERAS
+          </p>
+          <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, color: '#333', margin: 0 }}>
+            DEFINING CHAPTERS IN THE SPORT&apos;S HISTORY
+          </p>
+        </div>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 12 }}>
+          {F1_ERAS.map((era, i) => (
+            <F1EraCard
+              key={era.slug}
+              era={era}
+              wide={i === F1_ERAS.length - 1}
+              href={`/f/1/era/${era.slug}`}
+            />
+          ))}
+        </div>
+      </section>
+
+      {/* ── Teams / Constructors ── */}
+      <section id="teams" style={{ padding: '0 1.75rem 3rem', borderTop: '0.5px solid #1a1a1a', scrollMarginTop: 96 }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: 24, paddingTop: '2rem' }}>
+          <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: 2, color: config.color, margin: 0 }}>
+            TEAMS
+          </p>
+          <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, color: '#333', margin: 0 }}>
+            CURRENT GRID · 2026 · {currentConstructors.length} TEAMS
+          </p>
+        </div>
+
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(140px, 1fr))', gap: 8 }}>
+          {currentConstructors.map(t => (
+            <Link
+              key={t.slug}
+              href={`/f/1/team/${t.slug}`}
+              style={{
+                textDecoration: 'none', color: 'inherit',
+                background: '#060606',
+                border: `0.5px solid ${t.wcc > 0 ? t.color + '38' : '#111'}`,
+                borderRadius: 8,
+                padding: '16px 14px',
+                position: 'relative', overflow: 'hidden',
+                display: 'block',
+              }}
+            >
+              <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 2, background: t.color, opacity: t.wcc > 0 ? 0.7 : 0.18 }} />
+              {t.wcc > 3 && (
+                <div style={{ position: 'absolute', inset: 0, background: `radial-gradient(ellipse at 0% 100%, ${t.color}10 0%, transparent 55%)`, pointerEvents: 'none' }} />
+              )}
+              <div style={{ position: 'relative', display: 'flex', flexDirection: 'column', gap: 8 }}>
+                <TeamLogo
+                  logo={(t as { logo?: string }).logo}
+                  abbr={t.abbr}
+                  color={t.color}
+                  size={36}
                 />
-              ))}
-            </div>
-          </div>
-        ))}
+                <div>
+                  <p style={{
+                    fontFamily: 'var(--font-mono)',
+                    fontSize: t.wcc > 0 ? 26 : 18,
+                    fontWeight: 400,
+                    color: t.wcc > 0 ? t.color : '#2a2a2a',
+                    margin: '0 0 3px', letterSpacing: -1, lineHeight: 1,
+                  }}>
+                    {t.wcc > 0 ? `${t.wcc}×` : '—'}
+                  </p>
+                  <p style={{
+                    fontSize: 11,
+                    fontWeight: 500,
+                    color: t.wcc > 4 ? '#ddd' : t.wcc > 0 ? '#aaa' : '#444',
+                    margin: '0 0 2px', letterSpacing: -0.2,
+                  }}>
+                    {t.short}
+                  </p>
+                  <p style={{ fontFamily: 'var(--font-mono)', fontSize: 7, color: '#2a2a2a', margin: 0, letterSpacing: 0.3 }}>
+                    {t.active}
+                  </p>
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* ── Drivers ── */}
+      <section id="drivers" style={{ padding: '0 1.75rem 3rem', borderTop: '0.5px solid #1a1a1a', scrollMarginTop: 96 }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: 16, paddingTop: '2rem' }}>
+          <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: 2, color: config.color, margin: 0 }}>
+            DRIVERS
+          </p>
+          <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, color: '#333', margin: 0 }}>
+            CURRENT GRID · 2026 · {CURRENT_F1_DRIVERS.length} DRIVERS
+          </p>
+        </div>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: 10 }}>
+          {CURRENT_F1_DRIVERS.map(item => (
+            <EntityCard
+              key={item.slug}
+              href={`/f/1/driver/${item.slug}`}
+              type="DRIVER"
+              name={item.name}
+              tagline={item.tagline}
+              entityColor={item.color}
+              seriesColor={config.color}
+            />
+          ))}
+        </div>
+      </section>
+
+      {/* ── Venues ── */}
+      <section id="venues" style={{ padding: '0 1.75rem 4rem', borderTop: '0.5px solid #1a1a1a', scrollMarginTop: 96 }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: 16, paddingTop: '2rem' }}>
+          <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: 2, color: config.color, margin: 0 }}>
+            VENUES
+          </p>
+          <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, color: '#333', margin: 0 }}>
+            2026 CALENDAR · {CURRENT_F1_VENUES.length} CIRCUITS
+          </p>
+        </div>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: 10 }}>
+          {CURRENT_F1_VENUES.map(item => (
+            <EntityCard
+              key={item.slug}
+              href={`/f/1/venue/${item.slug}`}
+              type="VENUE"
+              name={item.name}
+              tagline={item.tagline}
+              entityColor={item.color}
+              seriesColor={config.color}
+            />
+          ))}
+        </div>
       </section>
 
       {/* ── Memorial ── */}

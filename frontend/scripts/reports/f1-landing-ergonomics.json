@@ -1,0 +1,231 @@
+{
+  "generatedAt": "2026-07-30T03:34:49.905Z",
+  "baseUrl": "http://localhost:3000",
+  "counts": {
+    "pass": 34,
+    "warn": 0,
+    "fail": 0
+  },
+  "findings": [
+    {
+      "id": "tabs-order",
+      "severity": "pass",
+      "title": "Nav tab order matches DOM section order",
+      "detail": "#dna → #news → #standings → #eras → #teams → #drivers → #venues"
+    },
+    {
+      "id": "tab-dna-scroll",
+      "severity": "pass",
+      "title": "Scroll to #dna lands under sticky header",
+      "detail": "viewport top=81.9px (target ~85.9px, drift 4.0px)",
+      "metricMs": 402
+    },
+    {
+      "id": "tab-dna-hash",
+      "severity": "pass",
+      "title": "Hash updates to #dna",
+      "detail": "got #dna"
+    },
+    {
+      "id": "tab-dna-active",
+      "severity": "pass",
+      "title": "Active state on #dna",
+      "detail": "aria-current=true"
+    },
+    {
+      "id": "tab-news-scroll",
+      "severity": "pass",
+      "title": "Scroll to #news lands under sticky header",
+      "detail": "viewport top=86.4px (target ~85.9px, drift 0.5px)",
+      "metricMs": 889
+    },
+    {
+      "id": "tab-news-hash",
+      "severity": "pass",
+      "title": "Hash updates to #news",
+      "detail": "got #news"
+    },
+    {
+      "id": "tab-news-active",
+      "severity": "pass",
+      "title": "Active state on #news",
+      "detail": "aria-current=true"
+    },
+    {
+      "id": "tab-standings-scroll",
+      "severity": "pass",
+      "title": "Scroll to #standings lands under sticky header",
+      "detail": "viewport top=86.4px (target ~85.9px, drift 0.5px)",
+      "metricMs": 872
+    },
+    {
+      "id": "tab-standings-hash",
+      "severity": "pass",
+      "title": "Hash updates to #standings",
+      "detail": "got #standings"
+    },
+    {
+      "id": "tab-standings-active",
+      "severity": "pass",
+      "title": "Active state on #standings",
+      "detail": "aria-current=true"
+    },
+    {
+      "id": "tab-eras-scroll",
+      "severity": "pass",
+      "title": "Scroll to #eras lands under sticky header",
+      "detail": "viewport top=86.4px (target ~85.9px, drift 0.5px)",
+      "metricMs": 877
+    },
+    {
+      "id": "tab-eras-hash",
+      "severity": "pass",
+      "title": "Hash updates to #eras",
+      "detail": "got #eras"
+    },
+    {
+      "id": "tab-eras-active",
+      "severity": "pass",
+      "title": "Active state on #eras",
+      "detail": "aria-current=true"
+    },
+    {
+      "id": "tab-teams-scroll",
+      "severity": "pass",
+      "title": "Scroll to #teams lands under sticky header",
+      "detail": "viewport top=85.8px (target ~85.9px, drift 0.1px)",
+      "metricMs": 997
+    },
+    {
+      "id": "tab-teams-hash",
+      "severity": "pass",
+      "title": "Hash updates to #teams",
+      "detail": "got #teams"
+    },
+    {
+      "id": "tab-teams-active",
+      "severity": "pass",
+      "title": "Active state on #teams",
+      "detail": "aria-current=true"
+    },
+    {
+      "id": "tab-drivers-scroll",
+      "severity": "pass",
+      "title": "Scroll to #drivers lands under sticky header",
+      "detail": "viewport top=86.3px (target ~85.9px, drift 0.4px)",
+      "metricMs": 750
+    },
+    {
+      "id": "tab-drivers-hash",
+      "severity": "pass",
+      "title": "Hash updates to #drivers",
+      "detail": "got #drivers"
+    },
+    {
+      "id": "tab-drivers-active",
+      "severity": "pass",
+      "title": "Active state on #drivers",
+      "detail": "aria-current=true"
+    },
+    {
+      "id": "tab-venues-scroll",
+      "severity": "pass",
+      "title": "Scroll to #venues lands under sticky header",
+      "detail": "viewport top=85.8px (target ~85.9px, drift 0.1px)",
+      "metricMs": 884
+    },
+    {
+      "id": "tab-venues-hash",
+      "severity": "pass",
+      "title": "Hash updates to #venues",
+      "detail": "got #venues"
+    },
+    {
+      "id": "tab-venues-active",
+      "severity": "pass",
+      "title": "Active state on #venues",
+      "detail": "aria-current=true"
+    },
+    {
+      "id": "driver-link-visible",
+      "severity": "pass",
+      "title": "driver entry point visible after tab → #drivers",
+      "detail": "a[href=\"/f/1/driver/leclerc\"]",
+      "metricMs": 1397
+    },
+    {
+      "id": "driver-page-load",
+      "severity": "pass",
+      "title": "Open driver page from landing",
+      "detail": "href=/f/1/driver/leclerc title=\"f(x) — motorsport analytics\" h1=\"Leclerc\"",
+      "metricMs": 100
+    },
+    {
+      "id": "driver-back-nav",
+      "severity": "pass",
+      "title": "Browser back returns toward F1 landing from driver",
+      "detail": "url=http://localhost:3000/f/1#drivers",
+      "metricMs": 413
+    },
+    {
+      "id": "team-link-visible",
+      "severity": "pass",
+      "title": "team entry point visible after tab → #teams",
+      "detail": "a[href=\"/f/1/team/ferrari\"]",
+      "metricMs": 1399
+    },
+    {
+      "id": "team-page-load",
+      "severity": "pass",
+      "title": "Open team page from landing",
+      "detail": "href=/f/1/team/ferrari title=\"f(x) — motorsport analytics\" h1=\"Ferrari\"",
+      "metricMs": 131
+    },
+    {
+      "id": "team-back-nav",
+      "severity": "pass",
+      "title": "Browser back returns toward F1 landing from team",
+      "detail": "url=http://localhost:3000/f/1#teams",
+      "metricMs": 420
+    },
+    {
+      "id": "venue-link-visible",
+      "severity": "pass",
+      "title": "venue entry point visible after tab → #venues",
+      "detail": "a[href=\"/f/1/venue/monaco\"]",
+      "metricMs": 1511
+    },
+    {
+      "id": "venue-page-load",
+      "severity": "pass",
+      "title": "Open venue page from landing",
+      "detail": "href=/f/1/venue/monaco title=\"f(x) — motorsport analytics\" h1=\"Circuit de Monaco\"",
+      "metricMs": 101
+    },
+    {
+      "id": "venue-back-nav",
+      "severity": "pass",
+      "title": "Browser back returns toward F1 landing from venue",
+      "detail": "url=http://localhost:3000/f/1#venues",
+      "metricMs": 404
+    },
+    {
+      "id": "teams-duplicate",
+      "severity": "pass",
+      "title": "Single clear teams entry section",
+      "detail": "{\"teamLinksInTeams\":11,\"teamLinksInBrowse\":0,\"hasBrowseTeams\":false}"
+    },
+    {
+      "id": "mobile-nav-overflow",
+      "severity": "pass",
+      "title": "Mobile nav is horizontally scrollable (expected for many tabs)",
+      "detail": "scrollWidth=453 clientWidth=334 overflowX=auto"
+    },
+    {
+      "id": "mobile-venues-reach",
+      "severity": "pass",
+      "title": "Mobile: VENUES tab reachable and scrolls to section",
+      "detail": "visible=true top=85.5 headerH=81.9 drift=3.6 lastFullyVisibleWithoutScroll=false"
+    }
+  ]
+}
