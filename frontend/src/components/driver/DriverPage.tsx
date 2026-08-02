@@ -27,7 +27,7 @@ const ENTITY_COLOR_HEX: Record<string, string> = {
   hulkenberg: '#52E252', tsunoda: '#6692FF', gasly: '#0090FF',
   ocon: '#0090FF', stroll: '#006F62', colapinto: '#005AFF',
   hadjar: '#6692FF', lawson: '#1E3A8A', bortoleto: '#52E252',
-  doohan: '#0090FF', bearman: '#B6BABD',
+  doohan: '#0090FF', bearman: '#B6BABD', lindblad: '#6692FF',
   ricciardo: '#1E3A8A', bottas: '#52E252', perez: '#1E3A8A',
   magnussen: '#B6BABD', zhou: '#52E252', schumacher: '#DC0000',
   raikkonen: '#DC0000', rosberg: '#00D2BE', webber: '#1E3A8A',
@@ -37,7 +37,7 @@ const ENTITY_COLOR_HEX: Record<string, string> = {
   mclaren: '#FF8000', mercedes: '#00D2BE', williams: '#005AFF',
   aston_martin: '#006F62', astonmartin: '#006F62',
   alpine: '#0090FF', haas: '#B6BABD', sauber: '#52E252',
-  rb: '#6692FF', cadillac: '#C8A96E',
+  audi: '#BB0A30', rb: '#6692FF', cadillac: '#C8A96E',
   // Historical teams
   alphatauri: '#2B4998', toro_rosso: '#C00000',
   force_india: '#FF80C7', racing_point: '#FF80C7',
@@ -60,13 +60,32 @@ const SERIES_COLOR_HEX: Record<Series, string> = {
   f3: '#B026FF',
 }
 
+/** Must stay in sync with LAP_REGISTRY in app/.../laps/page.tsx */
+const LAPS_PICKER_SLUGS = new Set(['vettel'])
+
+const DRIVER_ID_TO_ROUTE_SLUG: Record<string, string> = {
+  max_verstappen: 'verstappen',
+  arvid_lindblad: 'lindblad',
+  michael_schumacher: 'schumacher',
+  damon_hill: 'hill',
+  kevin_magnussen: 'magnussen',
+}
+
+function driverRouteSlug(driverId: string, routeSlug?: string): string {
+  if (routeSlug) return routeSlug
+  return DRIVER_ID_TO_ROUTE_SLUG[driverId] ?? driverId.replace(/_/g, '-')
+}
+
 /* ─── Helpers ────────────────────────────────────────────────────────────────── */
 
 function formatCareerSpan(span: string): string {
-  const years = span.replace('–present', '–2025').split('–')
+  const years = span.replace('–present', `–${new Date().getFullYear()}`).split('–')
   if (years.length !== 2) return span
-  const diff = parseInt(years[1]) - parseInt(years[0])
-  return `${diff}y`
+  const start = parseInt(years[0], 10)
+  const end = parseInt(years[1], 10)
+  if (Number.isNaN(start) || Number.isNaN(end)) return span
+  const diff = end - start
+  return `${Math.max(diff, 0)}y`
 }
 
 function renderWithHighlights(text: string, highlights: string[], color: string) {
@@ -105,9 +124,17 @@ function normalizeReelSlides(slides: ReelSlide[]): ReelSlide[] {
 
 /* ─── Sub-sections ───────────────────────────────────────────────────────────── */
 
-function DriverHeader({ driver, series }: { driver: Driver; series: Series }) {
+function DriverHeader({
+  driver, series, routeSlug,
+}: {
+  driver: Driver
+  series: Series
+  routeSlug?: string
+}) {
   const seriesNum = series.replace('f', '')
   const seriesColor = SERIES_COLOR_HEX[series]
+  const lapsSlug = driverRouteSlug(driver.id, routeSlug)
+  const hasLapPicker = LAPS_PICKER_SLUGS.has(lapsSlug)
   return (
     <div style={{
       padding: '1rem 1.75rem',
@@ -141,17 +168,34 @@ function DriverHeader({ driver, series }: { driver: Driver; series: Series }) {
         }}>
           COMPARE ↗
         </button>
-        <Link href={`/f/${seriesNum}/driver/${driver.id}/laps`} style={{ textDecoration: 'none' }}>
-          <button style={{
-            background: 'transparent',
-            border: `0.5px solid ${seriesColor}`,
-            color: seriesColor,
-            fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: 1,
-            padding: '6px 12px', borderRadius: 4, cursor: 'pointer',
-          }}>
+        {hasLapPicker ? (
+          <Link href={`/f/${seriesNum}/driver/${lapsSlug}/laps`} style={{ textDecoration: 'none' }}>
+            <button style={{
+              background: 'transparent',
+              border: `0.5px solid ${seriesColor}`,
+              color: seriesColor,
+              fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: 1,
+              padding: '6px 12px', borderRadius: 4, cursor: 'pointer',
+            }}>
+              ANALYZE A LAP ↗
+            </button>
+          </Link>
+        ) : (
+          <button
+            type="button"
+            disabled
+            title="Lap analysis not available for this driver yet"
+            style={{
+              background: 'transparent',
+              border: '0.5px solid #2a2a2a',
+              color: '#444',
+              fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: 1,
+              padding: '6px 12px', borderRadius: 4, cursor: 'not-allowed',
+            }}
+          >
             ANALYZE A LAP ↗
           </button>
-        </Link>
+        )}
         <button style={{
           background: 'transparent', border: '0.5px solid #2a2a2a', color: '#aaa',
           fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: 1,
@@ -545,11 +589,13 @@ export interface DriverPageProps {
   series: Series
   trajectoryPrediction?: TrajectoryPrediction
   heroStatRows?: StatRow[]
+  /** URL slug for this page (may differ from driver.id, e.g. verstappen vs max_verstappen) */
+  routeSlug?: string
 }
 
 export default function DriverPage({
   driver, stats, eras, signature, reelSlides, scoutingReport, series,
-  trajectoryPrediction, heroStatRows,
+  trajectoryPrediction, heroStatRows, routeSlug,
 }: DriverPageProps) {
   const entityHex = ENTITY_COLOR_HEX[driver.entityColor] ?? '#ffffff'
   const seriesHex = SERIES_COLOR_HEX[series]
@@ -565,7 +611,7 @@ export default function DriverPage({
         ['--color-entity' as string]: entityHex,
       } as React.CSSProperties}
     >
-      <DriverHeader driver={driver} series={series} />
+      <DriverHeader driver={driver} series={series} routeSlug={routeSlug} />
       <DriverHero
         driver={driver}
         stats={stats}

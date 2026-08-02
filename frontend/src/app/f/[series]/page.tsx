@@ -457,7 +457,23 @@ async function fetchLiveStandings(): Promise<LiveStandings | null> {
 const CONSTRUCTOR_COLORS: Record<string, string> = {
   ferrari: '#DC0000', mclaren: '#FF8000', mercedes: '#00D2BE', red_bull: '#1E3A8A',
   williams: '#005AFF', aston_martin: '#006F62', alpine: '#0090FF', haas: '#B6BABD',
-  sauber: '#52E252', rb: '#6692FF', cadillac: '#C8A96E',
+  sauber: '#52E252', audi: '#BB0A30', rb: '#6692FF', cadillac: '#C8A96E',
+}
+
+/** Jolpica driverId → app route slug when naive underscore→hyphen misses curated registry */
+const DRIVER_ID_TO_SLUG: Record<string, string> = {
+  max_verstappen: 'verstappen',
+  arvid_lindblad: 'lindblad',
+  michael_schumacher: 'schumacher',
+  damon_hill: 'hill',
+  kevin_magnussen: 'magnussen',
+  jack_brabham: 'brabham',
+  emerson_fittipaldi: 'fittipaldi',
+}
+
+function driverStandingHref(driverId: string): string {
+  const slug = DRIVER_ID_TO_SLUG[driverId] ?? driverId.replace(/_/g, '-')
+  return `/f/1/driver/${slug}`
 }
 
 /* ─── F1 heritage page ───────────────────────────────────────────────────────── */
@@ -838,7 +854,7 @@ function F1LandingPage({ config, standings }: {
                   return (
                     <Link
                       key={d.driverId}
-                      href={`/f/1/driver/${d.driverId.replace(/_/g, '-')}`}
+                      href={driverStandingHref(d.driverId)}
                       style={{
                         display: 'flex', alignItems: 'center', gap: 12, padding: '10px 18px',
                         borderBottom: i < standings.driverStandings.length - 1 ? '0.5px solid #111' : 'none',
