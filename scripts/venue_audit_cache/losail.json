@@ -1,0 +1,211 @@
+{
+  "circuitId": "losail",
+  "fetchedAt": "2026-07-29T21:44:45.682116+00:00",
+  "raceTotal": 5,
+  "races": [
+    {
+      "season": 2021,
+      "round": 20,
+      "raceName": "Qatar Grand Prix"
+    },
+    {
+      "season": 2023,
+      "round": 17,
+      "raceName": "Qatar Grand Prix"
+    },
+    {
+      "season": 2024,
+      "round": 23,
+      "raceName": "Qatar Grand Prix"
+    },
+    {
+      "season": 2025,
+      "round": 23,
+      "raceName": "Qatar Grand Prix"
+    },
+    {
+      "season": 2026,
+      "round": 21,
+      "raceName": "Qatar Grand Prix"
+    }
+  ],
+  "wins": [
+    {
+      "season": 2021,
+      "driverId": "hamilton",
+      "name": "Lewis Hamilton"
+    },
+    {
+      "season": 2023,
+      "driverId": "max_verstappen",
+      "name": "Max Verstappen"
+    },
+    {
+      "season": 2024,
+      "driverId": "max_verstappen",
+      "name": "Max Verstappen"
+    },
+    {
+      "season": 2025,
+      "driverId": "max_verstappen",
+      "name": "Max Verstappen"
+    }
+  ],
+  "p2": [
+    {
+      "season": 2021,
+      "driverId": "max_verstappen",
+      "name": "Max Verstappen"
+    },
+    {
+      "season": 2023,
+      "driverId": "piastri",
+      "name": "Oscar Piastri"
+    },
+    {
+      "season": 2024,
+      "driverId": "leclerc",
+      "name": "Charles Leclerc"
+    },
+    {
+      "season": 2025,
+      "driverId": "piastri",
+      "name": "Oscar Piastri"
+    }
+  ],
+  "p3": [
+    {
+      "season": 2021,
+      "driverId": "alonso",
+      "name": "Fernando Alonso"
+    },
+    {
+      "season": 2023,
+      "driverId": "norris",
+      "name": "Lando Norris"
+    },
+    {
+      "season": 2024,
+      "driverId": "piastri",
+      "name": "Oscar Piastri"
+    },
+    {
+      "season": 2025,
+      "driverId": "sainz",
+      "name": "Carlos Sainz"
+    }
+  ],
+  "poles": [
+    {
+      "season": 2021,
+      "round": 20,
+      "driverId": "hamilton",
+      "name": "Lewis Hamilton",
+      "source": "qualifying"
+    },
+    {
+      "season": 2023,
+      "round": 17,
+      "driverId": "max_verstappen",
+      "name": "Max Verstappen",
+      "source": "qualifying"
+    },
+    {
+      "season": 2024,
+      "round": 23,
+      "driverId": "max_verstappen",
+      "name": "Max Verstappen",
+      "source": "qualifying"
+    },
+    {
+      "season": 2025,
+      "round": 23,
+      "driverId": "piastri",
+      "name": "Oscar Piastri",
+      "source": "qualifying"
+    }
+  ],
+  "starts": {
+    "hamilton": 4,
+    "max_verstappen": 4,
+    "alonso": 4,
+    "perez": 3,
+    "ocon": 4,
+    "stroll": 4,
+    "sainz": 4,
+    "leclerc": 4,
+    "norris": 4,
+    "vettel": 1,
+    "gasly": 4,
+    "ricciardo": 1,
+    "tsunoda": 4,
+    "raikkonen": 1,
+    "giovinazzi": 1,
+    "mick_schumacher": 1,
+    "russell": 4,
+    "mazepin": 1,
+    "latifi": 1,
+    "bottas": 3,
+    "piastri": 3,
+    "zhou": 2,
+    "albon": 3,
+    "kevin_magnussen": 2,
+    "hulkenberg": 3,
+    "lawson": 3,
+    "sargeant": 1,
+    "colapinto": 2,
+    "antonelli": 1,
+    "bortoleto": 1,
+    "hadjar": 1,
+    "bearman": 1
+  },
+  "names": {
+    "hamilton": "Lewis Hamilton",
+    "max_verstappen": "Max Verstappen",
+    "alonso": "Fernando Alonso",
+    "perez": "Sergio P\u00e9rez",
+    "ocon": "Esteban Ocon",
+    "stroll": "Lance Stroll",
+    "sainz": "Carlos Sainz",
+    "leclerc": "Charles Leclerc",
+    "norris": "Lando Norris",
+    "vettel": "Sebastian Vettel",
+    "gasly": "Pierre Gasly",
+    "ricciardo": "Daniel Ricciardo",
+    "tsunoda": "Yuki Tsunoda",
+    "raikkonen": "Kimi R\u00e4ikk\u00f6nen",
+    "giovinazzi": "Antonio Giovinazzi",
+    "mick_schumacher": "Mick Schumacher",
+    "russell": "George Russell",
+    "mazepin": "Nikita Mazepin",
+    "latifi": "Nicholas Latifi",
+    "bottas": "Valtteri Bottas",
+    "piastri": "Oscar Piastri",
+    "zhou": "Guanyu Zhou",
+    "albon": "Alexander Albon",
+    "kevin_magnussen": "Kevin Magnussen",
+    "hulkenberg": "Nico H\u00fclkenberg",
+    "lawson": "Liam Lawson",
+    "sargeant": "Logan Sargeant",
+    "colapinto": "Franco Colapinto",
+    "antonelli": "Andrea Kimi Antonelli",
+    "bortoleto": "Gabriel Bortoleto",
+    "hadjar": "Isack Hadjar",
+    "bearman": "Oliver Bearman"
+  },
+  "log": {
+    "races_fetched": 5,
+    "races_total": 5,
+    "wins_fetched": 4,
+    "wins_total": 4,
+    "p2_fetched": 4,
+    "p2_total": 4,
+    "p3_fetched": 4,
+    "p3_total": 4,
+    "results_rows_fetched": 80,
+    "qual_rows_fetched": 80,
+    "poles_merged": 4,
+    "poles_from_qualifying": 4,
+    "poles_from_grid": 0
+  }
+}

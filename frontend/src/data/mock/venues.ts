@@ -39,9 +39,9 @@ const SUZUKA_TRACK_PATH =
 const INTERLAGOS_TRACK_PATH =
   "M216.38 19.757c-17.923 4.414-27.502 8.15-29.356 9.005-18.27 8.424-32.89 17.454-41.726 25.47-11.632 10.552-16.108 21.908-19.57 36.02-4.061 16.556-16.797 66.138-24.74 100.06-3.879 16.555-4.247 36.566-.185 54.032 3.524 15.153 37.757 148.06 49.417 194.762 1.78 7.131 2.858 12.295 3.572 14.637 8.863 29.109 24.428 39.214 37.388 24.74 8.308-9.274 18.861-24.656 28.248-16.462 19.385 16.917 45.557 20.194 66.374 12.915 21.845-7.637 33.093-22.602 38.726-34.564 4.023-8.55 6.926-21.201 8.912-28.198 6.46-22.788 58.489-213.536 68.181-249.148 2.697-9.903-6.611-23.196-20.735-26.199-14.069-2.988-16.616-3.274-33.787-6.003-33.892-5.386-48.923 19.7-55.18 27.97-17.862 23.606-59.473 79.48-73.875 99.81-7.299 10.304-12.254 15.556-18.693 19.171-6.871 3.86-11.492 4.98-18.693 5.457-15.733 1.045-43.48-8.05-47.171-28.154-.778-4.232-1.627-8.452-2.374-12.605-2.733-15.174-4.86-29.288-6.119-37.97-2.03-14.008 11.078-22.014 29.17-6.55 13.644 11.663 27.325 9.64 34.34-3.458 5.474-10.222 3.693-17.099-3.325-24.377-9.62-9.98-22.155-22.559-26.586-27.473-3.537-3.923-7.569-10.732-9.232-16.737-1.486-5.368-5.17-19.466-7.568-29.835-1.978-8.542 12.737-17.465 20.677-7.46 9.464 11.93 18.92 22.85 29.54 32.567 20.68 18.92 52.023 22.238 74.591-13.463 21.538-34.077 30.701-48.147 36.584-58.697 2.926-5.25.988-16.44-7.043-19.441-17.76-6.638-20.77-7.914-36.555-12.28-16.496-4.56-24.376-2.182-43.207 2.458z";
 
-// bahrain-3.svg (2004-present layout)
+// bahrain-1.svg (Grand Prix layout; 2004–2009, 2011–present)
 const BAHRAIN_TRACK_PATH =
-  "M68.857 109.34c-1.98-.53-3.647-.987-4.549-.987-1.902 0-3.821.32-5.627.838-1.666.479-3.836.86-4.788 2.155-1.483 2.016-1.979 5.116-2.515 7.78-1.18 5.874-1.795 11.885-2.634 17.835-3.311 23.494-6.642 46.988-9.816 70.5-3.45 25.563-6.723 51.15-10.058 76.727-1.534 11.768-3.15 23.527-4.548 35.31-.478 4.017-1.103 8.073-1.078 12.09.016 2.565.37 5.22 1.196 7.66 3.525 10.408 8.21 20.507 11.854 30.882.546 1.555.822 3.297.718 4.907-.096 1.462-.422 3.124-1.317 4.308-4.652 6.157-10.14 11.88-15.324 17.716-1.481 1.666-3.664 2.95-4.67 4.788-.63 1.154-.58 2.898-.239 4.19.376 1.42.951 3.774 2.394 3.95 9.69 1.18 20.673.092 31.008.118 48.887.133 97.773.491 146.66.36 84.963-.227 169.98-.364 254.888-1.436a32.795 32.788 0 0 0 10.536-1.915c7.354-2.635 15.281-5.503 21.55-9.576 1.713-1.114 2.137-3.933 2.394-5.985.223-1.779-.053-3.894-.959-5.505-6.637-11.835-14.522-23.175-21.668-34.833-9.535-15.553-18.94-31.186-28.375-46.8-22.77-37.69-45.192-75.597-68.242-113.115-10.312-16.785-20.689-33.64-31.845-49.792-.558-.808-.324-.595-1.512-1.886-3.536-3.84-8.46-8.026-12.855-10.683-16.197-9.792-32.104-18.355-48.847-26.931-2.573-1.318-5.887-1.893-8.62-1.437-3.014.502-5.865 2.671-8.62 4.309-3.15 1.873-5.808 5.445-9.098 6.225-2.776.657-6.415-.573-9.099-1.916-2.744-1.371-4.633-4.354-7.184-6.223-4.633-3.397-9.123-7.48-14.366-9.576-5.93-2.372-12.723-3.607-19.156-3.83-7.295-.255-15.301-.262-22.029 2.394-11.47 4.526-21.579 13-32.564 19.15-8.969 5.022-17.917 10.517-27.296 14.364-3.072 1.26-6.885 1.647-10.057.958-4.171-.907-8.19-3.476-11.972-5.745-4.997-2.998-16.411-9.933-21.67-11.342z";
+  "M462.85 365.784 329.224 131.432c-4.038-7.082-11.039-11.307-18.724-11.307-7.65 0-14.626 4.201-18.66 11.24-9.299 16.238-17.16 32.823-23.356 49.293-5.14 13.655-5.658 25.341-1.594 35.727 7.746 19.786 30.936 29.875 53.367 39.633l4.14 1.806c16.661 7.291 23.048 25.67 25.473 39.799.724 4.218-.317 8.525-2.847 11.823-2.535 3.297-6.256 5.19-10.22 5.19H143.68c-2.374 0-4.767-.129-7.111-.385l-31.072-3.39 5.256-9.353c5.08-9.04 15.179-13.982 24.85-12.089 14.027 2.747 34.175 6.298 50.485 7.621 14.248 1.16 34.693 2.699 51.662 3.956q.505.038.995.038h.005c5.95 0 11.14-4.174 12.916-10.381 1.8-6.287-.282-12.757-5.3-16.485l-49.515-36.75c-7.077-5.252-11.07-14.267-10.421-23.53l.739-10.54c1.111-15.893-7.328-30.547-20.997-36.47l-11.045-4.781c-2.881-1.25-5.512-3.205-7.62-5.658l-43.734-50.881c-3.697-4.302-8.681-6.671-14.037-6.671-9.551 0-17.588 7.382-19.112 17.548L43.822 295.397c-2.137 14.267-.11 28.647 5.865 41.58l5.3 11.493c2.415 5.22 1.504 11.534-2.273 15.705l-14.47 16c-3.208 3.553-4.134 8.81-2.353 13.393 1.775 4.583 5.894 7.545 10.486 7.545H414.29c10.748 0 21.596-2.565 31.373-7.414l10.894-5.41c3.777-1.874 6.634-5.416 7.836-9.718s.639-8.964-1.544-12.787z";
 
 // yas-marina-2.svg (2021-present layout)
 const ABU_DHABI_TRACK_PATH =
@@ -141,52 +141,24 @@ export const spaStats: VenueStats = {
 
 export const spaFingerprint: VenueFingerprint = {
   venueId: "spa",
-  bars: [ // [EDITORIAL · ratings based on circuit characteristics, historical team data, and expert consensus — not official F1 data]
-    {
-      label: "Engine Power",
-      rating: "CRITICAL",
-      value: 92,
-      caption: "Kemmel straight · 320+ km/h",
-    },
-    {
-      label: "Aero Efficiency",
-      rating: "HIGH",
-      value: 78,
-      caption: "Low-drag setup wins",
-    },
-    {
-      label: "Mechanical Grip",
-      rating: "MODERATE",
-      value: 52,
-      caption: "Sector 2 technical",
-    },
-    {
-      label: "Braking Stability",
-      rating: "MODERATE",
-      value: 48,
-      caption: "Les Combes · Bus Stop",
-    },
-    {
-      label: "Tyre Degradation",
-      rating: "LOW",
-      value: 32,
-      caption: "Abrasiveness low",
-    },
-    {
-      label: "Driver Bravery",
-      rating: "EXTREME",
-      value: 97,
-      caption: "Eau Rouge · commitment",
-    },
+  description: "Engine power and high-speed commitment dominate — low-drag efficiency on the straights, heavy braking into Les Combes and Bus Stop.",
+  bars: [
+    { label: "Engine Power", rating: "CRITICAL", value: 94, caption: "Kemmel · Blanchimont full throttle" },
+    { label: "Aero Efficiency", rating: "HIGH", value: 82, caption: "Low-drag / medium-low wing" },
+    { label: "Mechanical Grip", rating: "MODERATE", value: 55, caption: "Sector 2 medium-speed mix" },
+    { label: "Braking Stability", rating: "HIGH", value: 72, caption: "Les Combes · Bus Stop warp" },
+    { label: "Tyre Degradation", rating: "MODERATE", value: 58, caption: "Lateral load · post-resurface" },
+    { label: "High-speed commitment", rating: "EXTREME", value: 96, caption: "Eau Rouge · Raidillon flat" },
   ],
 };
 
 export const spaDriverFit: DriverTrackFit[] = [
-  { venueId: "spa", driverId: "senna", driverName: "Ayrton Senna", fitScore: 98, wins: 5, poles: 7 },
-  { venueId: "spa", driverId: "schumacher", driverName: "Michael Schumacher", fitScore: 96, wins: 6, poles: 4 },
-  { venueId: "spa", driverId: "hamilton", driverName: "Lewis Hamilton", fitScore: 95, wins: 5, poles: 6 },
-  { venueId: "spa", driverId: "verstappen", driverName: "Max Verstappen", fitScore: 92, wins: 3, poles: 3 },
-  { venueId: "spa", driverId: "vettel", driverName: "Sebastian Vettel", fitScore: 88, wins: 3, poles: 1 },
+  // Jolpica circuit results/qualifying · scripts/audit_venue_data.py
+  { venueId: "spa", driverId: "senna", driverName: "Ayrton Senna", fitScore: 98, wins: 5, poles: 4, podiums: 6, starts: 9 },
+  { venueId: "spa", driverId: "fangio", driverName: "Juan Fangio", fitScore: 88, wins: 3, poles: 4, podiums: 3, starts: 7 },
+  { venueId: "spa", driverId: "clark", driverName: "Jim Clark", fitScore: 85, wins: 4, poles: 1, podiums: 4, starts: 8 },
+  { venueId: "spa", driverId: "schumacher", driverName: "Michael Schumacher", fitScore: 84, wins: 6, poles: 1, podiums: 9, starts: 16 },
+  { venueId: "spa", driverId: "hamilton", driverName: "Lewis Hamilton", fitScore: 83, wins: 5, poles: 6, podiums: 11, starts: 20 },
 ];
 
 /* ─── Hotspots ────────────────────────────────────────────────────────────────
@@ -321,18 +293,25 @@ export const spaIconicMoments: VenueIconicMoment[] = [
   },
 ];
 
-/* ─── Weather ────────────────────────────────────────────────────────────────── */
+/* ─── Weather ──────────────────────────────────────────────────────────────────
+   Classification: scripts/venue_weather_classifications.json (spa).
+   DRY / MIXED / WET from race reports; percentages from event counts (sum 100).
+   ─────────────────────────────────────────────────────────────────────────── */
 export const spaWeather: VenueWeather = {
   venueId: "spa",
-  dryPct: 42,
-  mixedPct: 31,
-  wetPct: 27,
+  dryPct: 70,
+  mixedPct: 20,
+  wetPct: 10,
   totalRaces: 59,
+  description:
+    "Historical race-day conditions across 59 World Championship races at this circuit. Classified dry / mixed / wet from race reports.",
+  circuitNote:
+    "Spa-Francorchamps — 41 dry / 12 mixed / 6 wet of 59 races.",
   chaoticRaces: [
-    { year: 2021, label: '"The race that wasn\'t"', type: "WET" },
-    { year: 1998, label: "Lap-1 13-car pile-up", type: "WET" },
-    { year: 1992, label: "Schumacher's maiden F1 victory", type: "DRY" },
-  ],
+    { year: 2021, label: "Race abandoned to SC-only wet running", type: "WET" },
+    { year: 1998, label: "Torrential monsoon race", type: "WET" },
+    { year: 2025, label: "80-minute rain delay then wet-dry race (Piastri)", type: "MIXED" },
+],
 };
 
 /* ─── Circuit de Monaco ────────────────────────────────────────────────────── */
@@ -369,22 +348,24 @@ export const monacoStats: VenueStats = {
 
 export const monacoFingerprint: VenueFingerprint = {
   venueId: "monaco",
-  bars: [ // [EDITORIAL · ratings based on circuit characteristics, historical team data, and expert consensus — not official F1 data]
-    { label: "Engine Power",      rating: "LOW",     value: 35, caption: "Street circuit · tight turns" },
-    { label: "Aero Efficiency",   rating: "LOW",     value: 30, caption: "Maximum downforce required" },
-    { label: "Mechanical Grip",   rating: "EXTREME", value: 99, caption: "Walls define the limit" },
-    { label: "Braking Stability", rating: "HIGH",    value: 78, caption: "Mirabeau · Casino · Nouvelle Chicane" },
-    { label: "Tyre Degradation",  rating: "LOW",     value: 22, caption: "Smooth surface · gentle on rubber" },
-    { label: "Driver Bravery",    rating: "EXTREME", value: 99, caption: "Zero runoff · Armco everywhere" },
+  description: "Mechanical grip and braking stability define Monaco — zero runoff, low power sensitivity, extreme wall commitment.",
+  bars: [
+    { label: "Engine Power", rating: "LOW", value: 28, caption: "Short straights · traction exits" },
+    { label: "Aero Efficiency", rating: "HIGH", value: 88, caption: "Max downforce package" },
+    { label: "Mechanical Grip", rating: "EXTREME", value: 97, caption: "Kerbs · bumps · traction" },
+    { label: "Braking Stability", rating: "CRITICAL", value: 94, caption: "Mirabeau · Nouvelle Chicane" },
+    { label: "Tyre Degradation", rating: "LOW", value: 35, caption: "Low abrasion street surface" },
+    { label: "High-speed commitment", rating: "EXTREME", value: 99, caption: "Zero runoff · Armco" },
   ],
 };
 
 export const monacoDriverFit: DriverTrackFit[] = [
-  { venueId: "monaco", driverId: "senna",              driverName: "Ayrton Senna",       fitScore: 99, wins: 6, poles: 5 },
-  { venueId: "monaco", driverId: "michael_schumacher", driverName: "Michael Schumacher", fitScore: 95, wins: 5, poles: 3 },
-  { venueId: "monaco", driverId: "hamilton",           driverName: "Lewis Hamilton",      fitScore: 90, wins: 3, poles: 2 },
-  { venueId: "monaco", driverId: "max_verstappen",     driverName: "Max Verstappen",      fitScore: 85, wins: 2, poles: 1 },
-  { venueId: "monaco", driverId: "norris",             driverName: "Lando Norris",        fitScore: 78, wins: 1, poles: 1 },
+  // Jolpica circuit results/qualifying · scripts/audit_venue_data.py
+  { venueId: "monaco", driverId: "senna", driverName: "Ayrton Senna", fitScore: 98, wins: 6, poles: 5, podiums: 8, starts: 10 },
+  { venueId: "monaco", driverId: "stewart", driverName: "Jackie Stewart", fitScore: 82, wins: 3, poles: 4, podiums: 4, starts: 8 },
+  { venueId: "monaco", driverId: "fangio", driverName: "Juan Fangio", fitScore: 81, wins: 2, poles: 3, podiums: 3, starts: 5 },
+  { venueId: "monaco", driverId: "moss", driverName: "Stirling Moss", fitScore: 81, wins: 3, poles: 3, podiums: 3, starts: 7 },
+  { venueId: "monaco", driverId: "prost", driverName: "Alain Prost", fitScore: 79, wins: 4, poles: 4, podiums: 6, starts: 13 },
 ];
 
 export const monacoHotspots: Hotspot[] = [];
@@ -403,15 +384,19 @@ export const monacoIconicMoments: VenueIconicMoment[] = [
 
 export const monacoWeather: VenueWeather = {
   venueId: "monaco",
-  dryPct: 68,
-  mixedPct: 22,
-  wetPct: 10,
-  totalRaces: 64,
+  dryPct: 82,
+  mixedPct: 14,
+  wetPct: 4,
+  totalRaces: 72,
+  description:
+    "Historical race-day conditions across 72 World Championship races at this circuit. Classified dry / mixed / wet from race reports.",
+  circuitNote:
+    "Circuit de Monaco — 59 dry / 10 mixed / 3 wet of 72 races.",
   chaoticRaces: [
-    { year: 1996, label: "Six-car finish in the rain", type: "WET" },
-    { year: 1984, label: "Senna leads Toleman, red-flagged", type: "WET" },
-    { year: 2021, label: "Multiple crashes, Verstappen barrier in Q3", type: "MIXED" },
-  ],
+    { year: 2008, label: "Catalogue rain-affected · curated WET", type: "WET" },
+    { year: 1996, label: "Catalogue rain-affected · curated WET", type: "WET" },
+    { year: 2023, label: "Catalogue rain-affected · MIXED", type: "MIXED" },
+],
 };
 
 /* ─── Autodromo Nazionale Monza ─────────────────────────────────────────────── */
@@ -448,22 +433,24 @@ export const monzaStats: VenueStats = {
 
 export const monzaFingerprint: VenueFingerprint = {
   venueId: "monza",
-  bars: [ // [EDITORIAL · ratings based on circuit characteristics, historical team data, and expert consensus — not official F1 data]
-    { label: "Engine Power",      rating: "EXTREME",  value: 99, caption: "Temple of speed · 340+ km/h" },
-    { label: "Aero Efficiency",   rating: "CRITICAL", value: 95, caption: "Minimum wing · straight-line supremacy" },
-    { label: "Mechanical Grip",   rating: "LOW",      value: 30, caption: "Limited cornering demand" },
-    { label: "Braking Stability", rating: "CRITICAL", value: 92, caption: "Lesmo · Parabolica · Variante del Rettifilo" },
-    { label: "Tyre Degradation",  rating: "HIGH",     value: 74, caption: "Hard on fronts under heavy braking" },
-    { label: "Driver Bravery",    rating: "MODERATE", value: 55, caption: "Open runoff at most corners" },
+  description: "Pure power circuit — slipstream efficiency and braking stability into the chicanes decide the lap.",
+  bars: [
+    { label: "Engine Power", rating: "EXTREME", value: 98, caption: "Rettifilo · Ascari slipstream" },
+    { label: "Aero Efficiency", rating: "CRITICAL", value: 95, caption: "Minimum wing · drag wins" },
+    { label: "Mechanical Grip", rating: "MODERATE", value: 48, caption: "Chicanes · Lesmo support" },
+    { label: "Braking Stability", rating: "HIGH", value: 80, caption: "Prima Variante · Parabolica" },
+    { label: "Tyre Degradation", rating: "MODERATE", value: 52, caption: "Longitudinal load spikes" },
+    { label: "High-speed commitment", rating: "HIGH", value: 78, caption: "Curva Grande · Parabolica" },
   ],
 };
 
 export const monzaDriverFit: DriverTrackFit[] = [
-  { venueId: "monza", driverId: "michael_schumacher", driverName: "Michael Schumacher", fitScore: 97, wins: 5, poles: 4 },
-  { venueId: "monza", driverId: "hamilton",           driverName: "Lewis Hamilton",      fitScore: 93, wins: 5, poles: 7 },
-  { venueId: "monza", driverId: "vettel",             driverName: "Sebastian Vettel",    fitScore: 88, wins: 4, poles: 5 },
-  { venueId: "monza", driverId: "senna",              driverName: "Ayrton Senna",        fitScore: 84, wins: 2, poles: 6 },
-  { venueId: "monza", driverId: "leclerc",            driverName: "Charles Leclerc",     fitScore: 82, wins: 2, poles: 2 },
+  // Jolpica circuit results/qualifying · scripts/audit_venue_data.py
+  { venueId: "monza", driverId: "fangio", driverName: "Juan Fangio", fitScore: 98, wins: 3, poles: 5, podiums: 5, starts: 9 },
+  { venueId: "monza", driverId: "hamilton", driverName: "Lewis Hamilton", fitScore: 92, wins: 5, poles: 7, podiums: 8, starts: 19 },
+  { venueId: "monza", driverId: "senna", driverName: "Ayrton Senna", fitScore: 91, wins: 2, poles: 5, podiums: 5, starts: 9 },
+  { venueId: "monza", driverId: "montoya", driverName: "Juan Pablo Montoya", fitScore: 91, wins: 2, poles: 2, podiums: 3, starts: 5 },
+  { venueId: "monza", driverId: "schumacher", driverName: "Michael Schumacher", fitScore: 89, wins: 5, poles: 3, podiums: 8, starts: 17 },
 ];
 
 export const monzaHotspots: Hotspot[] = [];
@@ -482,15 +469,19 @@ export const monzaIconicMoments: VenueIconicMoment[] = [
 
 export const monzaWeather: VenueWeather = {
   venueId: "monza",
-  dryPct: 80,
-  mixedPct: 12,
-  wetPct: 8,
-  totalRaces: 73,
+  dryPct: 96,
+  mixedPct: 4,
+  wetPct: 0,
+  totalRaces: 75,
+  description:
+    "Historical race-day conditions across 75 World Championship races at this circuit. Classified dry / mixed / wet from race reports.",
+  circuitNote:
+    "Autodromo Nazionale Monza — 72 dry / 3 mixed / 0 wet of 75 races.",
   chaoticRaces: [
-    { year: 2020, label: "Gasly wins from P10 in Alphatauri", type: "DRY" },
-    { year: 2008, label: "Vettel's shock debut win in Toro Rosso", type: "DRY" },
-    { year: 1978, label: "Multi-car accident, Peterson fatal", type: "DRY" },
-  ],
+    { year: 2008, label: "Catalogue rain-affected · MIXED", type: "MIXED" },
+    { year: 2004, label: "Catalogue rain-affected · MIXED", type: "MIXED" },
+    { year: 1962, label: "Catalogue rain-affected · MIXED", type: "MIXED" },
+],
 };
 
 /* ─── Silverstone Circuit ───────────────────────────────────────────────────── */
@@ -527,22 +518,24 @@ export const silverstoneStats: VenueStats = {
 
 export const silverstoneFingerprint: VenueFingerprint = {
   venueId: "silverstone",
-  bars: [ // [EDITORIAL · ratings based on circuit characteristics, historical team data, and expert consensus — not official F1 data]
-    { label: "Engine Power",      rating: "MODERATE",  value: 65, caption: "Balanced power requirement" },
-    { label: "Aero Efficiency",   rating: "CRITICAL",  value: 92, caption: "Maggotts / Becketts at 300+ km/h" },
-    { label: "Mechanical Grip",   rating: "EXTREME",   value: 97, caption: "Maggotts · Becketts · Chapel · Copse" },
-    { label: "Braking Stability", rating: "HIGH",      value: 75, caption: "Stowe · Vale · Village complex" },
-    { label: "Tyre Degradation",  rating: "HIGH",      value: 80, caption: "Abrasive surface · sustained high-G load" },
-    { label: "Driver Bravery",    rating: "EXTREME",   value: 96, caption: "Copse flat · Maggotts blind commitment" },
+  description: "High-speed aero efficiency and commitment through Maggotts–Becketts define the British GP.",
+  bars: [
+    { label: "Engine Power", rating: "HIGH", value: 78, caption: "Hangar · Wellington straights" },
+    { label: "Aero Efficiency", rating: "CRITICAL", value: 93, caption: "Medium-high wing balance" },
+    { label: "Mechanical Grip", rating: "HIGH", value: 74, caption: "Medium-speed complex" },
+    { label: "Braking Stability", rating: "MODERATE", value: 58, caption: "Village · Brooklands" },
+    { label: "Tyre Degradation", rating: "HIGH", value: 82, caption: "High energy lateral load" },
+    { label: "High-speed commitment", rating: "EXTREME", value: 96, caption: "Copse · Maggotts blind" },
   ],
 };
 
 export const silverstoneDriverFit: DriverTrackFit[] = [
-  { venueId: "silverstone", driverId: "hamilton",           driverName: "Lewis Hamilton",      fitScore: 98, wins: 8, poles: 9 },
-  { venueId: "silverstone", driverId: "michael_schumacher", driverName: "Michael Schumacher",  fitScore: 90, wins: 4, poles: 6 },
-  { venueId: "silverstone", driverId: "mansell",            driverName: "Nigel Mansell",        fitScore: 89, wins: 5, poles: 4 },
-  { venueId: "silverstone", driverId: "verstappen",         driverName: "Max Verstappen",       fitScore: 85, wins: 3, poles: 3 },
-  { venueId: "silverstone", driverId: "vettel",             driverName: "Sebastian Vettel",     fitScore: 82, wins: 3, poles: 4 },
+  // Jolpica circuit results/qualifying · scripts/audit_venue_data.py
+  { venueId: "silverstone", driverId: "hamilton", driverName: "Lewis Hamilton", fitScore: 98, wins: 9, poles: 8, podiums: 16, starts: 21 },
+  { venueId: "silverstone", driverId: "clark", driverName: "Jim Clark", fitScore: 97, wins: 3, poles: 3, podiums: 3, starts: 4 },
+  { venueId: "silverstone", driverId: "prost", driverName: "Alain Prost", fitScore: 90, wins: 5, poles: 1, podiums: 6, starts: 9 },
+  { venueId: "silverstone", driverId: "mansell", driverName: "Nigel Mansell", fitScore: 85, wins: 3, poles: 3, podiums: 5, starts: 8 },
+  { venueId: "silverstone", driverId: "gonzalez", driverName: "José Froilán González", fitScore: 79, wins: 2, poles: 1, podiums: 2, starts: 4 },
 ];
 
 export const silverstoneHotspots: Hotspot[] = [];
@@ -561,15 +554,19 @@ export const silverstoneIconicMoments: VenueIconicMoment[] = [
 
 export const silverstoneWeather: VenueWeather = {
   venueId: "silverstone",
-  dryPct: 48,
-  mixedPct: 30,
-  wetPct: 22,
-  totalRaces: 70,
+  dryPct: 80,
+  mixedPct: 17,
+  wetPct: 3,
+  totalRaces: 61,
+  description:
+    "Historical race-day conditions across 61 World Championship races at this circuit. Classified dry / mixed / wet from race reports.",
+  circuitNote:
+    "Silverstone Circuit — 49 dry / 10 mixed / 2 wet of 61 races.",
   chaoticRaces: [
-    { year: 2021, label: "Hamilton–Verstappen first-lap collision", type: "DRY" },
-    { year: 2008, label: "Hamilton charges through the field in the wet", type: "WET" },
-    { year: 1987, label: "Mansell tyre failure at 300 km/h", type: "DRY" },
-  ],
+    { year: 2024, label: "Catalogue rain-affected · curated WET", type: "WET" },
+    { year: 2008, label: "Catalogue rain-affected · curated WET", type: "WET" },
+    { year: 2025, label: "Catalogue rain-affected · MIXED", type: "MIXED" },
+],
 };
 
 /* ─── Suzuka International Racing Course ────────────────────────────────────── */
@@ -606,22 +603,24 @@ export const suzukaStats: VenueStats = {
 
 export const suzukaFingerprint: VenueFingerprint = {
   venueId: "suzuka",
-  bars: [ // [EDITORIAL · ratings based on circuit characteristics, historical team data, and expert consensus — not official F1 data]
-    { label: "Engine Power",      rating: "HIGH",     value: 72, caption: "Back straight · 130R at speed" },
-    { label: "Aero Efficiency",   rating: "HIGH",     value: 80, caption: "130R taken flat in qualifying" },
-    { label: "Mechanical Grip",   rating: "EXTREME",  value: 97, caption: "S-curves · figure-eight layout" },
-    { label: "Braking Stability", rating: "HIGH",     value: 75, caption: "Spoon curve · chicane complex" },
-    { label: "Tyre Degradation",  rating: "HIGH",     value: 78, caption: "Demanding on all four compounds" },
-    { label: "Driver Bravery",    rating: "EXTREME",  value: 97, caption: "130R · blind crests · S-curves flat" },
+  description: "Flowing high-speed commitment and aero platform — S-curves and 130R reward precision.",
+  bars: [
+    { label: "Engine Power", rating: "HIGH", value: 76, caption: "Main straight · Degner exit" },
+    { label: "Aero Efficiency", rating: "CRITICAL", value: 92, caption: "High-downforce figure-8" },
+    { label: "Mechanical Grip", rating: "HIGH", value: 80, caption: "Spoon · Casio chicane" },
+    { label: "Braking Stability", rating: "MODERATE", value: 55, caption: "Chicane · Degner" },
+    { label: "Tyre Degradation", rating: "HIGH", value: 78, caption: "Sustained lateral load" },
+    { label: "High-speed commitment", rating: "EXTREME", value: 97, caption: "130R · S-curves flat" },
   ],
 };
 
 export const suzukaDriverFit: DriverTrackFit[] = [
-  { venueId: "suzuka", driverId: "schumacher",         driverName: "Michael Schumacher",  fitScore: 97, wins: 6, poles: 6 },
-  { venueId: "suzuka", driverId: "senna",              driverName: "Ayrton Senna",         fitScore: 96, wins: 3, poles: 5 },
-  { venueId: "suzuka", driverId: "hamilton",           driverName: "Lewis Hamilton",       fitScore: 92, wins: 4, poles: 5 },
-  { venueId: "suzuka", driverId: "max_verstappen",     driverName: "Max Verstappen",       fitScore: 88, wins: 2, poles: 3 },
-  { venueId: "suzuka", driverId: "vettel",             driverName: "Sebastian Vettel",     fitScore: 85, wins: 3, poles: 4 },
+  // Jolpica circuit results/qualifying · scripts/audit_venue_data.py
+  { venueId: "suzuka", driverId: "verstappen", driverName: "Max Verstappen", fitScore: 98, wins: 4, poles: 4, podiums: 7, starts: 10 },
+  { venueId: "suzuka", driverId: "vettel", driverName: "Sebastian Vettel", fitScore: 96, wins: 4, poles: 5, podiums: 8, starts: 12 },
+  { venueId: "suzuka", driverId: "schumacher", driverName: "Michael Schumacher", fitScore: 94, wins: 6, poles: 8, podiums: 9, starts: 19 },
+  { venueId: "suzuka", driverId: "senna", driverName: "Ayrton Senna", fitScore: 86, wins: 2, poles: 3, podiums: 4, starts: 7 },
+  { venueId: "suzuka", driverId: "hamilton", driverName: "Lewis Hamilton", fitScore: 80, wins: 4, poles: 2, podiums: 7, starts: 16 },
 ];
 
 export const suzukaHotspots: Hotspot[] = [];
@@ -640,15 +639,19 @@ export const suzukaIconicMoments: VenueIconicMoment[] = [
 
 export const suzukaWeather: VenueWeather = {
   venueId: "suzuka",
-  dryPct: 65,
-  mixedPct: 20,
-  wetPct: 15,
-  totalRaces: 37,
+  dryPct: 81,
+  mixedPct: 14,
+  wetPct: 5,
+  totalRaces: 36,
+  description:
+    "Historical race-day conditions across 36 World Championship races at this circuit. Classified dry / mixed / wet from race reports.",
+  circuitNote:
+    "Suzuka International Racing Course — 29 dry / 5 mixed / 2 wet of 36 races.",
   chaoticRaces: [
-    { year: 2022, label: "Verstappen wins title in wet — half points", type: "WET" },
-    { year: 1989, label: "Senna–Prost chicane collision", type: "DRY" },
-    { year: 1990, label: "Senna takes Prost out at Turn 1", type: "DRY" },
-  ],
+    { year: 2022, label: "Catalogue rain-affected · curated WET", type: "WET" },
+    { year: 1994, label: "Catalogue rain-affected · curated WET", type: "WET" },
+    { year: 2014, label: "Catalogue rain-affected · MIXED", type: "MIXED" },
+],
 };
 
 /* ─── Autódromo José Carlos Pace (Interlagos) ──────────────────────────────── */
@@ -685,22 +688,24 @@ export const interlagosStats: VenueStats = {
 
 export const interlagosFingerprint: VenueFingerprint = {
   venueId: "interlagos",
-  bars: [ // [EDITORIAL · ratings based on circuit characteristics, historical team data, and expert consensus — not official F1 data]
-    { label: "Engine Power",      rating: "HIGH",     value: 72, caption: "Back straight · Junção exit speed" },
-    { label: "Aero Efficiency",   rating: "MODERATE", value: 60, caption: "Medium downforce · balanced circuit" },
-    { label: "Mechanical Grip",   rating: "HIGH",     value: 82, caption: "Anti-clockwise · sustained lateral load" },
-    { label: "Braking Stability", rating: "HIGH",     value: 78, caption: "Senna S braking zone · Turn 4" },
-    { label: "Tyre Degradation",  rating: "HIGH",     value: 84, caption: "Abrasive surface · anti-clockwise stress" },
-    { label: "Driver Bravery",    rating: "HIGH",     value: 85, caption: "High-energy lap · unpredictable conditions" },
+  description: "Mixed elevation and weather-sensitive grip — traction and mid-corner balance matter most.",
+  bars: [
+    { label: "Engine Power", rating: "MODERATE", value: 62, caption: "Reta Oposta · climb" },
+    { label: "Aero Efficiency", rating: "HIGH", value: 80, caption: "Medium wing compromise" },
+    { label: "Mechanical Grip", rating: "HIGH", value: 84, caption: "Senna S · elevation" },
+    { label: "Braking Stability", rating: "HIGH", value: 76, caption: "Juncao · Descida do Lago" },
+    { label: "Tyre Degradation", rating: "MODERATE", value: 60, caption: "Short lap · thermal cycles" },
+    { label: "High-speed commitment", rating: "HIGH", value: 85, caption: "Unpredictable conditions" },
   ],
 };
 
 export const interlagosDriverFit: DriverTrackFit[] = [
-  { venueId: "interlagos", driverId: "senna",          driverName: "Ayrton Senna",       fitScore: 99, wins: 3, poles: 5 },
-  { venueId: "interlagos", driverId: "hamilton",       driverName: "Lewis Hamilton",     fitScore: 94, wins: 5, poles: 5 },
-  { venueId: "interlagos", driverId: "schumacher",     driverName: "Michael Schumacher", fitScore: 88, wins: 4, poles: 3 },
-  { venueId: "interlagos", driverId: "vettel",         driverName: "Sebastian Vettel",   fitScore: 84, wins: 3, poles: 2 },
-  { venueId: "interlagos", driverId: "max_verstappen", driverName: "Max Verstappen",     fitScore: 80, wins: 2, poles: 2 },
+  // Jolpica circuit results/qualifying · scripts/audit_venue_data.py
+  { venueId: "interlagos", driverId: "senna", driverName: "Ayrton Senna", fitScore: 98, wins: 2, poles: 3, podiums: 3, starts: 5 },
+  { venueId: "interlagos", driverId: "verstappen", driverName: "Max Verstappen", fitScore: 94, wins: 3, poles: 2, podiums: 7, starts: 10 },
+  { venueId: "interlagos", driverId: "montoya", driverName: "Juan Pablo Montoya", fitScore: 86, wins: 2, poles: 1, podiums: 2, starts: 5 },
+  { venueId: "interlagos", driverId: "schumacher", driverName: "Michael Schumacher", fitScore: 84, wins: 4, poles: 1, podiums: 10, starts: 18 },
+  { venueId: "interlagos", driverId: "emerson_fittipaldi", driverName: "Emerson Fittipaldi", fitScore: 82, wins: 2, poles: 1, podiums: 3, starts: 7 },
 ];
 
 export const interlagosHotspots: Hotspot[] = [];
@@ -719,15 +724,19 @@ export const interlagosIconicMoments: VenueIconicMoment[] = [
 
 export const interlagosWeather: VenueWeather = {
   venueId: "interlagos",
-  dryPct: 55,
-  mixedPct: 25,
-  wetPct: 20,
-  totalRaces: 52,
+  dryPct: 74,
+  mixedPct: 21,
+  wetPct: 5,
+  totalRaces: 42,
+  description:
+    "Historical race-day conditions across 42 World Championship races at this circuit. Classified dry / mixed / wet from race reports.",
+  circuitNote:
+    "Autódromo José Carlos Pace — 31 dry / 9 mixed / 2 wet of 42 races.",
   chaoticRaces: [
-    { year: 2008, label: "Glock drops positions final lap, Hamilton title", type: "DRY" },
-    { year: 2012, label: "Vettel hit first lap, fights back to title", type: "DRY" },
-    { year: 1991, label: "Senna wins home race on one gear", type: "DRY" },
-  ],
+    { year: 2024, label: "Catalogue rain-affected · curated WET", type: "WET" },
+    { year: 2016, label: "Catalogue rain-affected · curated WET", type: "WET" },
+    { year: 2012, label: "Catalogue rain-affected · MIXED", type: "MIXED" },
+],
 };
 
 /* ─── Bahrain International Circuit ─────────────────────────────────────────── */
@@ -764,22 +773,24 @@ export const bahrainStats: VenueStats = {
 
 export const bahrainFingerprint: VenueFingerprint = {
   venueId: "bahrain",
-  bars: [ // [EDITORIAL · ratings based on circuit characteristics, historical team data, and expert consensus — not official F1 data]
-    { label: "Engine Power",      rating: "MODERATE", value: 65, caption: "Medium-length straights" },
-    { label: "Aero Efficiency",   rating: "MODERATE", value: 58, caption: "Medium downforce configuration" },
-    { label: "Mechanical Grip",   rating: "HIGH",     value: 76, caption: "Traction out of hairpin complex" },
-    { label: "Braking Stability", rating: "CRITICAL", value: 90, caption: "Turn 1 · Turn 4 · heavy anchor" },
-    { label: "Tyre Degradation",  rating: "EXTREME",  value: 96, caption: "Abrasive desert surface · thermal deg" },
-    { label: "Driver Bravery",    rating: "MODERATE", value: 50, caption: "Large runoff areas throughout" },
+  description: "Heavy braking and tyre thermal management on a high-abrasion desert circuit.",
+  bars: [
+    { label: "Engine Power", rating: "HIGH", value: 74, caption: "Main straight DRS" },
+    { label: "Aero Efficiency", rating: "MODERATE", value: 58, caption: "Medium downforce" },
+    { label: "Mechanical Grip", rating: "HIGH", value: 72, caption: "Traction zones · T10" },
+    { label: "Braking Stability", rating: "CRITICAL", value: 92, caption: "T1 · T8 heavy stops" },
+    { label: "Tyre Degradation", rating: "CRITICAL", value: 94, caption: "High abrasion surface" },
+    { label: "High-speed commitment", rating: "MODERATE", value: 50, caption: "Large runoff areas" },
   ],
 };
 
 export const bahrainDriverFit: DriverTrackFit[] = [
-  { venueId: "bahrain", driverId: "hamilton",       driverName: "Lewis Hamilton",     fitScore: 94, wins: 5, poles: 5 },
-  { venueId: "bahrain", driverId: "max_verstappen", driverName: "Max Verstappen",     fitScore: 92, wins: 4, poles: 3 },
-  { venueId: "bahrain", driverId: "vettel",         driverName: "Sebastian Vettel",   fitScore: 86, wins: 3, poles: 4 },
-  { venueId: "bahrain", driverId: "alonso",         driverName: "Fernando Alonso",    fitScore: 82, wins: 3, poles: 2 },
-  { venueId: "bahrain", driverId: "leclerc",        driverName: "Charles Leclerc",    fitScore: 78, wins: 2, poles: 3 },
+  // Jolpica circuit results/qualifying · scripts/audit_venue_data.py
+  { venueId: "bahrain", driverId: "hamilton", driverName: "Lewis Hamilton", fitScore: 98, wins: 5, poles: 3, podiums: 11, starts: 18 },
+  { venueId: "bahrain", driverId: "vettel", driverName: "Sebastian Vettel", fitScore: 92, wins: 4, poles: 3, podiums: 5, starts: 14 },
+  { venueId: "bahrain", driverId: "schumacher", driverName: "Michael Schumacher", fitScore: 83, wins: 1, poles: 2, podiums: 2, starts: 5 },
+  { venueId: "bahrain", driverId: "verstappen", driverName: "Max Verstappen", fitScore: 82, wins: 2, poles: 3, podiums: 4, starts: 12 },
+  { venueId: "bahrain", driverId: "piastri", driverName: "Oscar Piastri", fitScore: 81, wins: 1, poles: 1, podiums: 1, starts: 3 },
 ];
 
 export const bahrainHotspots: Hotspot[] = [];
@@ -798,15 +809,16 @@ export const bahrainIconicMoments: VenueIconicMoment[] = [
 
 export const bahrainWeather: VenueWeather = {
   venueId: "bahrain",
-  dryPct: 95,
-  mixedPct: 4,
-  wetPct: 1,
+  dryPct: 100,
+  mixedPct: 0,
+  wetPct: 0,
   totalRaces: 22,
+  description:
+    "Historical race-day conditions across 22 World Championship races at this circuit. Classified dry / mixed / wet from race reports.",
+  circuitNote:
+    "Bahrain International Circuit — 22 dry / 0 mixed / 0 wet of 22 races.",
   chaoticRaces: [
-    { year: 2020, label: "Grosjean crash and fire — miraculous escape", type: "DRY" },
-    { year: 2021, label: "Hamilton–Verstappen season-opening battle", type: "DRY" },
-    { year: 2022, label: "Ferrari 1-2 in season opener, Red Bull DNF × 2", type: "DRY" },
-  ],
+],
 };
 
 /* ─── Yas Marina Circuit (Abu Dhabi) ────────────────────────────────────────── */
@@ -843,22 +855,24 @@ export const abadhabiStats: VenueStats = {
 
 export const abuDhabiFingerprint: VenueFingerprint = {
   venueId: "abu-dhabi",
-  bars: [ // [EDITORIAL · ratings based on circuit characteristics, historical team data, and expert consensus — not official F1 data]
-    { label: "Engine Power",      rating: "HIGH",     value: 78, caption: "DRS zone S1 · long back straight" },
-    { label: "Aero Efficiency",   rating: "MODERATE", value: 65, caption: "Medium-low downforce setting" },
-    { label: "Mechanical Grip",   rating: "HIGH",     value: 75, caption: "Sector 3 slow hairpin sequence" },
-    { label: "Braking Stability", rating: "HIGH",     value: 72, caption: "Turn 5 · Turn 11 braking zones" },
-    { label: "Tyre Degradation",  rating: "MODERATE", value: 55, caption: "Smooth surface · careful degradation" },
-    { label: "Driver Bravery",    rating: "LOW",      value: 38, caption: "Large runoff · safe circuit design" },
+  description: "Traction and braking into tight complexes — moderate power, low weather risk.",
+  bars: [
+    { label: "Engine Power", rating: "MODERATE", value: 55, caption: "Long back straight" },
+    { label: "Aero Efficiency", rating: "HIGH", value: 70, caption: "Medium-high downforce" },
+    { label: "Mechanical Grip", rating: "HIGH", value: 78, caption: "Hotel section traction" },
+    { label: "Braking Stability", rating: "HIGH", value: 82, caption: "T5 · T9 stops" },
+    { label: "Tyre Degradation", rating: "MODERATE", value: 58, caption: "Thermal management" },
+    { label: "High-speed commitment", rating: "LOW", value: 38, caption: "Large runoff · safe design" },
   ],
 };
 
 export const abuDhabiDriverFit: DriverTrackFit[] = [
-  { venueId: "abu-dhabi", driverId: "max_verstappen", driverName: "Max Verstappen",     fitScore: 96, wins: 5, poles: 4 },
-  { venueId: "abu-dhabi", driverId: "hamilton",       driverName: "Lewis Hamilton",     fitScore: 90, wins: 5, poles: 6 },
-  { venueId: "abu-dhabi", driverId: "vettel",         driverName: "Sebastian Vettel",   fitScore: 85, wins: 2, poles: 3 },
-  { venueId: "abu-dhabi", driverId: "rosberg",        driverName: "Nico Rosberg",       fitScore: 80, wins: 2, poles: 3 },
-  { venueId: "abu-dhabi", driverId: "leclerc",        driverName: "Charles Leclerc",    fitScore: 76, wins: 1, poles: 2 },
+  // Jolpica circuit results/qualifying · scripts/audit_venue_data.py
+  { venueId: "abu-dhabi", driverId: "verstappen", driverName: "Max Verstappen", fitScore: 98, wins: 5, poles: 5, podiums: 7, starts: 11 },
+  { venueId: "abu-dhabi", driverId: "hamilton", driverName: "Lewis Hamilton", fitScore: 88, wins: 5, poles: 5, podiums: 10, starts: 17 },
+  { venueId: "abu-dhabi", driverId: "vettel", driverName: "Sebastian Vettel", fitScore: 77, wins: 3, poles: 2, podiums: 7, starts: 14 },
+  { venueId: "abu-dhabi", driverId: "rosberg", driverName: "Nico Rosberg", fitScore: 69, wins: 1, poles: 2, podiums: 3, starts: 8 },
+  { venueId: "abu-dhabi", driverId: "norris", driverName: "Lando Norris", fitScore: 66, wins: 1, poles: 1, podiums: 2, starts: 7 },
 ];
 
 export const abuDhabiHotspots: Hotspot[] = [];
@@ -876,15 +890,16 @@ export const abuDhabiIconicMoments: VenueIconicMoment[] = [
 
 export const abuDhabiWeather: VenueWeather = {
   venueId: "abu-dhabi",
-  dryPct: 97,
-  mixedPct: 2,
-  wetPct: 1,
+  dryPct: 100,
+  mixedPct: 0,
+  wetPct: 0,
   totalRaces: 17,
+  description:
+    "Historical race-day conditions across 17 World Championship races at this circuit. Classified dry / mixed / wet from race reports.",
+  circuitNote:
+    "Yas Marina Circuit — 17 dry / 0 mixed / 0 wet of 17 races.",
   chaoticRaces: [
-    { year: 2021, label: "Safety car restart, Verstappen wins title final lap", type: "DRY" },
-    { year: 2010, label: "Alonso stranded behind Petrov, Vettel wins title", type: "DRY" },
-    { year: 2016, label: "Rosberg wraps up title, retires from F1 days later", type: "DRY" },
-  ],
+],
 };
 
 /* ─── Jeddah Corniche Circuit ───────────────────────────────────────────────── */
@@ -921,20 +936,24 @@ export const jeddahStats: VenueStats = {
 
 export const jeddahFingerprint: VenueFingerprint = {
   venueId: "jeddah",
-  bars: [ // [EDITORIAL · ratings based on circuit characteristics, historical team data, and expert consensus — not official F1 data]
-    { label: "Engine Power",      rating: "EXTREME",  value: 98, caption: "Long straights · 320+ km/h average" },
-    { label: "Aero Efficiency",   rating: "CRITICAL", value: 92, caption: "Low downforce — straight-line priority" },
-    { label: "Mechanical Grip",   rating: "MODERATE", value: 55, caption: "Street surface · concrete walls" },
-    { label: "Braking Stability", rating: "HIGH",     value: 80, caption: "Multiple heavy braking zones" },
-    { label: "Tyre Degradation",  rating: "MODERATE", value: 60, caption: "Smooth asphalt · manageable deg" },
-    { label: "Driver Bravery",    rating: "EXTREME",  value: 98, caption: "Walls everywhere · no runoff" },
+  description: "Ultra-fast walls-and-commitment street circuit — power and bravery with light braking share.",
+  bars: [
+    { label: "Engine Power", rating: "CRITICAL", value: 90, caption: "Longest street laps · 320+" },
+    { label: "Aero Efficiency", rating: "HIGH", value: 84, caption: "Low-drag street package" },
+    { label: "Mechanical Grip", rating: "MODERATE", value: 50, caption: "Fast sweeps · few hairpins" },
+    { label: "Braking Stability", rating: "MODERATE", value: 48, caption: "Few heavy stops" },
+    { label: "Tyre Degradation", rating: "MODERATE", value: 55, caption: "Smooth asphalt · energy" },
+    { label: "High-speed commitment", rating: "EXTREME", value: 98, caption: "Walls · no runoff" },
   ],
 };
 
 export const jeddahDriverFit: DriverTrackFit[] = [
-  { venueId: "jeddah", driverId: "max_verstappen", driverName: "Max Verstappen", fitScore: 95, wins: 2, poles: 2 },
-  { venueId: "jeddah", driverId: "hamilton",       driverName: "Lewis Hamilton", fitScore: 88, wins: 1, poles: 1 },
-  { venueId: "jeddah", driverId: "leclerc",        driverName: "Charles Leclerc",fitScore: 84, wins: 1, poles: 2 },
+  // Jolpica circuit results/qualifying · scripts/audit_venue_data.py
+  { venueId: "jeddah", driverId: "verstappen", driverName: "Max Verstappen", fitScore: 98, wins: 2, poles: 2, podiums: 5, starts: 5 },
+  { venueId: "jeddah", driverId: "perez", driverName: "Sergio Pérez", fitScore: 83, wins: 1, poles: 2, podiums: 2, starts: 4 },
+  { venueId: "jeddah", driverId: "piastri", driverName: "Oscar Piastri", fitScore: 73, wins: 1, poles: 0, podiums: 1, starts: 3 },
+  { venueId: "jeddah", driverId: "hamilton", driverName: "Lewis Hamilton", fitScore: 72, wins: 1, poles: 1, podiums: 1, starts: 5 },
+  { venueId: "jeddah", driverId: "leclerc", driverName: "Charles Leclerc", fitScore: 65, wins: 0, poles: 0, podiums: 3, starts: 5 },
 ];
 
 export const jeddahHotspots: Hotspot[] = [];
@@ -948,13 +967,16 @@ export const jeddahIconicMoments: VenueIconicMoment[] = [
 
 export const jeddahWeather: VenueWeather = {
   venueId: "jeddah",
-  dryPct: 98,
-  mixedPct: 2,
+  dryPct: 100,
+  mixedPct: 0,
   wetPct: 0,
-  totalRaces: 4,
+  totalRaces: 5,
+  description:
+    "Historical race-day conditions across 5 World Championship races at this circuit. Classified dry / mixed / wet from race reports.",
+  circuitNote:
+    "Jeddah Corniche Circuit — 5 dry / 0 mixed / 0 wet of 5 races.",
   chaoticRaces: [
-    { year: 2021, label: "Hamilton–Verstappen clash in the dark", type: "DRY" },
-  ],
+],
 };
 
 /* ─── Albert Park (Melbourne) ───────────────────────────────────────────────── */
@@ -991,20 +1013,24 @@ export const melbourneStats: VenueStats = {
 
 export const melbourneFingerprint: VenueFingerprint = {
   venueId: "melbourne",
-  bars: [ // [EDITORIAL · ratings based on circuit characteristics, historical team data, and expert consensus — not official F1 data]
-    { label: "Engine Power",      rating: "HIGH",     value: 78, caption: "Back straight and pit straight" },
-    { label: "Aero Efficiency",   rating: "MODERATE", value: 62, caption: "Medium downforce setting" },
-    { label: "Mechanical Grip",   rating: "HIGH",     value: 80, caption: "Sweeping mid-speed corners" },
-    { label: "Braking Stability", rating: "MODERATE", value: 65, caption: "Moderate braking demand" },
-    { label: "Tyre Degradation",  rating: "MODERATE", value: 58, caption: "Generally kind to tyres" },
-    { label: "Driver Bravery",    rating: "HIGH",     value: 76, caption: "Street circuit barriers nearby" },
+  description: "Street-park hybrid — traction, braking, and mid-corner grip over raw power.",
+  bars: [
+    { label: "Engine Power", rating: "MODERATE", value: 58, caption: "Short bursts · DRS zones" },
+    { label: "Aero Efficiency", rating: "HIGH", value: 76, caption: "Medium-high wing" },
+    { label: "Mechanical Grip", rating: "HIGH", value: 82, caption: "Kerbs · surface changes" },
+    { label: "Braking Stability", rating: "HIGH", value: 80, caption: "T1 · T3 heavy zones" },
+    { label: "Tyre Degradation", rating: "MODERATE", value: 55, caption: "Low–medium abrasion" },
+    { label: "High-speed commitment", rating: "HIGH", value: 76, caption: "Barriers nearby" },
   ],
 };
 
 export const melbourneDriverFit: DriverTrackFit[] = [
-  { venueId: "melbourne", driverId: "schumacher",     driverName: "Michael Schumacher", fitScore: 92, wins: 4, poles: 3 },
-  { venueId: "melbourne", driverId: "hamilton",       driverName: "Lewis Hamilton",     fitScore: 88, wins: 5, poles: 4 },
-  { venueId: "melbourne", driverId: "max_verstappen", driverName: "Max Verstappen",     fitScore: 85, wins: 2, poles: 2 },
+  // Jolpica circuit results/qualifying · scripts/audit_venue_data.py
+  { venueId: "melbourne", driverId: "vettel", driverName: "Sebastian Vettel", fitScore: 98, wins: 3, poles: 3, podiums: 7, starts: 13 },
+  { venueId: "melbourne", driverId: "hamilton", driverName: "Lewis Hamilton", fitScore: 98, wins: 2, poles: 8, podiums: 10, starts: 18 },
+  { venueId: "melbourne", driverId: "schumacher", driverName: "Michael Schumacher", fitScore: 98, wins: 4, poles: 3, podiums: 5, starts: 14 },
+  { venueId: "melbourne", driverId: "hakkinen", driverName: "Mika Häkkinen", fitScore: 89, wins: 1, poles: 3, podiums: 2, starts: 6 },
+  { venueId: "melbourne", driverId: "russell", driverName: "George Russell", fitScore: 83, wins: 1, poles: 1, podiums: 3, starts: 6 },
 ];
 
 export const melbourneHotspots: Hotspot[] = [];
@@ -1019,14 +1045,18 @@ export const melbourneIconicMoments: VenueIconicMoment[] = [
 
 export const melbourneWeather: VenueWeather = {
   venueId: "melbourne",
-  dryPct: 70,
-  mixedPct: 22,
-  wetPct: 8,
+  dryPct: 93,
+  mixedPct: 7,
+  wetPct: 0,
   totalRaces: 29,
+  description:
+    "Historical race-day conditions across 29 World Championship races at this circuit. Classified dry / mixed / wet from race reports.",
+  circuitNote:
+    "Albert Park Circuit — 27 dry / 2 mixed / 0 wet of 29 races.",
   chaoticRaces: [
-    { year: 2002, label: "Multi-car crash at Turn 1 — lap one carnage", type: "DRY" },
-    { year: 2009, label: "Trulli–Hamilton post-race drama", type: "DRY" },
-  ],
+    { year: 2025, label: "Catalogue rain-affected · MIXED", type: "MIXED" },
+    { year: 2010, label: "Catalogue rain-affected · MIXED", type: "MIXED" },
+],
 };
 
 /* ─── Shanghai International Circuit ───────────────────────────────────────── */
@@ -1063,20 +1093,24 @@ export const shanghaiStats: VenueStats = {
 
 export const shanghaiFingerprint: VenueFingerprint = {
   venueId: "shanghai",
-  bars: [ // [EDITORIAL · ratings based on circuit characteristics, historical team data, and expert consensus — not official F1 data]
-    { label: "Engine Power",      rating: "HIGH",     value: 74, caption: "Back straight DRS zone" },
-    { label: "Aero Efficiency",   rating: "HIGH",     value: 78, caption: "Long sweeping T1 — downforce critical" },
-    { label: "Mechanical Grip",   rating: "HIGH",     value: 76, caption: "T1 sustained load · hairpin traction" },
-    { label: "Braking Stability", rating: "HIGH",     value: 80, caption: "T6 hairpin · T11 chicane" },
-    { label: "Tyre Degradation",  rating: "EXTREME",  value: 95, caption: "Highest deg circuit on calendar" },
-    { label: "Driver Bravery",    rating: "MODERATE", value: 55, caption: "Open runoff at most corners" },
+  description: "Long-radius T1–T3 and a huge back straight — aero platform plus power.",
+  bars: [
+    { label: "Engine Power", rating: "HIGH", value: 82, caption: "1.2 km back straight" },
+    { label: "Aero Efficiency", rating: "HIGH", value: 80, caption: "T1–T3 aero load" },
+    { label: "Mechanical Grip", rating: "MODERATE", value: 60, caption: "Hairpin · final sector" },
+    { label: "Braking Stability", rating: "HIGH", value: 78, caption: "Hairpin · T14" },
+    { label: "Tyre Degradation", rating: "MODERATE", value: 62, caption: "Front-left stress T1–3" },
+    { label: "High-speed commitment", rating: "MODERATE", value: 55, caption: "Open runoff mostly" },
   ],
 };
 
 export const shanghaiDriverFit: DriverTrackFit[] = [
-  { venueId: "shanghai", driverId: "hamilton",       driverName: "Lewis Hamilton",     fitScore: 96, wins: 6, poles: 7 },
-  { venueId: "shanghai", driverId: "vettel",         driverName: "Sebastian Vettel",   fitScore: 88, wins: 4, poles: 3 },
-  { venueId: "shanghai", driverId: "max_verstappen", driverName: "Max Verstappen",     fitScore: 85, wins: 2, poles: 1 },
+  // Jolpica circuit results/qualifying · scripts/audit_venue_data.py
+  { venueId: "shanghai", driverId: "hamilton", driverName: "Lewis Hamilton", fitScore: 98, wins: 6, poles: 6, podiums: 10, starts: 16 },
+  { venueId: "shanghai", driverId: "rosberg", driverName: "Nico Rosberg", fitScore: 75, wins: 2, poles: 2, podiums: 5, starts: 11 },
+  { venueId: "shanghai", driverId: "piastri", driverName: "Oscar Piastri", fitScore: 74, wins: 1, poles: 1, podiums: 1, starts: 3 },
+  { venueId: "shanghai", driverId: "vettel", driverName: "Sebastian Vettel", fitScore: 73, wins: 1, poles: 4, podiums: 6, starts: 13 },
+  { venueId: "shanghai", driverId: "alonso", driverName: "Fernando Alonso", fitScore: 67, wins: 2, poles: 2, podiums: 5, starts: 18 },
 ];
 
 export const shanghaiHotspots: Hotspot[] = [];
@@ -1091,14 +1125,19 @@ export const shanghaiIconicMoments: VenueIconicMoment[] = [
 
 export const shanghaiWeather: VenueWeather = {
   venueId: "shanghai",
-  dryPct: 75,
-  mixedPct: 18,
-  wetPct: 7,
-  totalRaces: 20,
+  dryPct: 68,
+  mixedPct: 32,
+  wetPct: 0,
+  totalRaces: 19,
+  description:
+    "Historical race-day conditions across 19 World Championship races at this circuit. Classified dry / mixed / wet from race reports.",
+  circuitNote:
+    "Shanghai International Circuit — 13 dry / 6 mixed / 0 wet of 19 races.",
   chaoticRaces: [
-    { year: 2007, label: "Raikkonen wins — Hamilton tyre failure", type: "DRY" },
-    { year: 2014, label: "Hamilton wins strategy masterclass", type: "DRY" },
-  ],
+    { year: 2019, label: "Catalogue rain-affected · MIXED", type: "MIXED" },
+    { year: 2017, label: "Catalogue rain-affected · MIXED", type: "MIXED" },
+    { year: 2010, label: "Catalogue rain-affected · MIXED", type: "MIXED" },
+],
 };
 
 /* ─── Miami International Autodrome ────────────────────────────────────────── */
@@ -1135,20 +1174,24 @@ export const miamiStats: VenueStats = {
 
 export const miamiFingerprint: VenueFingerprint = {
   venueId: "miami",
-  bars: [ // [EDITORIAL · ratings based on circuit characteristics, historical team data, and expert consensus — not official F1 data]
-    { label: "Engine Power",      rating: "HIGH",     value: 75, caption: "Long pit straight · Turn 17 run" },
-    { label: "Aero Efficiency",   rating: "MODERATE", value: 68, caption: "Medium downforce setting" },
-    { label: "Mechanical Grip",   rating: "HIGH",     value: 78, caption: "Tight infield sections" },
-    { label: "Braking Stability", rating: "HIGH",     value: 76, caption: "T1 and T11 heavy braking" },
-    { label: "Tyre Degradation",  rating: "HIGH",     value: 82, caption: "Abrasive surface · thermal deg" },
-    { label: "Driver Bravery",    rating: "MODERATE", value: 62, caption: "Mixed runoff — some walls" },
+  description: "Stop-go stadium section plus medium-speed sweeps — braking and traction biased.",
+  bars: [
+    { label: "Engine Power", rating: "MODERATE", value: 60, caption: "DRS straights" },
+    { label: "Aero Efficiency", rating: "HIGH", value: 72, caption: "Medium downforce" },
+    { label: "Mechanical Grip", rating: "HIGH", value: 78, caption: "Stadium traction" },
+    { label: "Braking Stability", rating: "HIGH", value: 80, caption: "T17 · chicane stops" },
+    { label: "Tyre Degradation", rating: "MODERATE", value: 58, caption: "Thermal management" },
+    { label: "High-speed commitment", rating: "MODERATE", value: 62, caption: "Mixed runoff · walls" },
   ],
 };
 
 export const miamiDriverFit: DriverTrackFit[] = [
-  { venueId: "miami", driverId: "max_verstappen", driverName: "Max Verstappen", fitScore: 94, wins: 2, poles: 1 },
-  { venueId: "miami", driverId: "leclerc",        driverName: "Charles Leclerc",fitScore: 82, wins: 1, poles: 1 },
-  { venueId: "miami", driverId: "norris",         driverName: "Lando Norris",   fitScore: 80, wins: 1, poles: 1 },
+  // Jolpica circuit results/qualifying · scripts/audit_venue_data.py
+  { venueId: "miami", driverId: "verstappen", driverName: "Max Verstappen", fitScore: 98, wins: 2, poles: 2, podiums: 3, starts: 5 },
+  { venueId: "miami", driverId: "norris", driverName: "Lando Norris", fitScore: 78, wins: 1, poles: 0, podiums: 3, starts: 5 },
+  { venueId: "miami", driverId: "piastri", driverName: "Oscar Piastri", fitScore: 77, wins: 1, poles: 0, podiums: 2, starts: 4 },
+  { venueId: "miami", driverId: "leclerc", driverName: "Charles Leclerc", fitScore: 67, wins: 0, poles: 1, podiums: 2, starts: 5 },
+  { venueId: "miami", driverId: "perez", driverName: "Sergio Pérez", fitScore: 65, wins: 0, poles: 1, podiums: 1, starts: 4 },
 ];
 
 export const miamiHotspots: Hotspot[] = [];
@@ -1162,11 +1205,16 @@ export const miamiIconicMoments: VenueIconicMoment[] = [
 
 export const miamiWeather: VenueWeather = {
   venueId: "miami",
-  dryPct: 82,
-  mixedPct: 12,
-  wetPct: 6,
-  totalRaces: 3,
-  chaoticRaces: [],
+  dryPct: 100,
+  mixedPct: 0,
+  wetPct: 0,
+  totalRaces: 5,
+  description:
+    "Historical race-day conditions across 5 World Championship races at this circuit. Classified dry / mixed / wet from race reports.",
+  circuitNote:
+    "Miami International Autodrome — 5 dry / 0 mixed / 0 wet of 5 races.",
+  chaoticRaces: [
+],
 };
 
 /* ─── Autodromo Enzo e Dino Ferrari (Imola) ─────────────────────────────────── */
@@ -1203,21 +1251,24 @@ export const imolaStats: VenueStats = {
 
 export const imolaFingerprint: VenueFingerprint = {
   venueId: "imola",
-  bars: [ // [EDITORIAL · ratings based on circuit characteristics, historical team data, and expert consensus — not official F1 data]
-    { label: "Engine Power",      rating: "HIGH",     value: 72, caption: "Pit straight · back straight" },
-    { label: "Aero Efficiency",   rating: "HIGH",     value: 78, caption: "High-speed Piratella complex" },
-    { label: "Mechanical Grip",   rating: "HIGH",     value: 80, caption: "Acque Minerali · Rivazza" },
-    { label: "Braking Stability", rating: "HIGH",     value: 76, caption: "Tosa hairpin · Variante Alta" },
-    { label: "Tyre Degradation",  rating: "MODERATE", value: 60, caption: "Moderate surface abrasion" },
-    { label: "Driver Bravery",    rating: "HIGH",     value: 84, caption: "Narrow circuit · limited runoff" },
+  description: "Old-school narrow rhythm — commitment and mechanical precision over overtaking power.",
+  bars: [
+    { label: "Engine Power", rating: "MODERATE", value: 58, caption: "Short straights" },
+    { label: "Aero Efficiency", rating: "HIGH", value: 84, caption: "High downforce needed" },
+    { label: "Mechanical Grip", rating: "HIGH", value: 86, caption: "Variante Alta · kerbs" },
+    { label: "Braking Stability", rating: "HIGH", value: 78, caption: "Tosa · Rivazza" },
+    { label: "Tyre Degradation", rating: "MODERATE", value: 55, caption: "Low abrasion historic asphalt" },
+    { label: "High-speed commitment", rating: "HIGH", value: 84, caption: "Narrow · limited runoff" },
   ],
 };
 
 export const imolaDriverFit: DriverTrackFit[] = [
-  { venueId: "imola", driverId: "senna",          driverName: "Ayrton Senna",       fitScore: 99, wins: 3, poles: 5 },
-  { venueId: "imola", driverId: "schumacher",     driverName: "Michael Schumacher", fitScore: 96, wins: 7, poles: 6 },
-  { venueId: "imola", driverId: "hamilton",       driverName: "Lewis Hamilton",     fitScore: 88, wins: 3, poles: 2 },
-  { venueId: "imola", driverId: "max_verstappen", driverName: "Max Verstappen",     fitScore: 85, wins: 2, poles: 2 },
+  // Jolpica circuit results/qualifying · scripts/audit_venue_data.py
+  { venueId: "imola", driverId: "verstappen", driverName: "Max Verstappen", fitScore: 98, wins: 4, poles: 2, podiums: 4, starts: 5 },
+  { venueId: "imola", driverId: "schumacher", driverName: "Michael Schumacher", fitScore: 97, wins: 7, poles: 5, podiums: 12, starts: 15 },
+  { venueId: "imola", driverId: "senna", driverName: "Ayrton Senna", fitScore: 89, wins: 3, poles: 8, podiums: 5, starts: 10 },
+  { venueId: "imola", driverId: "prost", driverName: "Alain Prost", fitScore: 72, wins: 3, poles: 1, podiums: 6, starts: 13 },
+  { venueId: "imola", driverId: "damon_hill", driverName: "Damon Hill", fitScore: 68, wins: 2, poles: 0, podiums: 2, starts: 7 },
 ];
 
 export const imolaHotspots: Hotspot[] = [];
@@ -1232,14 +1283,19 @@ export const imolaIconicMoments: VenueIconicMoment[] = [
 
 export const imolaWeather: VenueWeather = {
   venueId: "imola",
-  dryPct: 65,
-  mixedPct: 22,
-  wetPct: 13,
-  totalRaces: 34,
+  dryPct: 78,
+  mixedPct: 19,
+  wetPct: 3,
+  totalRaces: 32,
+  description:
+    "Historical race-day conditions across 32 World Championship races at this circuit. Classified dry / mixed / wet from race reports.",
+  circuitNote:
+    "Autodromo Enzo e Dino Ferrari — 25 dry / 6 mixed / 1 wet of 32 races.",
   chaoticRaces: [
-    { year: 2021, label: "Multi-car crash in the wet — Bottas collision", type: "WET" },
-    { year: 1994, label: "Senna and Ratzenberger fatalities", type: "DRY" },
-  ],
+    { year: 2022, label: "Catalogue rain-affected · curated WET", type: "WET" },
+    { year: 2021, label: "Catalogue rain-affected · MIXED", type: "MIXED" },
+    { year: 2020, label: "Catalogue rain-affected · MIXED", type: "MIXED" },
+],
 };
 
 /* ─── Circuit Gilles Villeneuve (Montreal) ──────────────────────────────────── */
@@ -1276,21 +1332,24 @@ export const montrealStats: VenueStats = {
 
 export const montrealFingerprint: VenueFingerprint = {
   venueId: "montreal",
-  bars: [ // [EDITORIAL · ratings based on circuit characteristics, historical team data, and expert consensus — not official F1 data]
-    { label: "Engine Power",      rating: "CRITICAL", value: 90, caption: "Long pit straight · DRS zone" },
-    { label: "Aero Efficiency",   rating: "HIGH",     value: 80, caption: "Low drag setup competitive" },
-    { label: "Mechanical Grip",   rating: "MODERATE", value: 58, caption: "Slow chicane sequence" },
-    { label: "Braking Stability", rating: "EXTREME",  value: 95, caption: "Hairpin braking · Wall of Champions" },
-    { label: "Tyre Degradation",  rating: "CRITICAL", value: 90, caption: "Hard on brakes · thermal stress" },
-    { label: "Driver Bravery",    rating: "HIGH",     value: 82, caption: "Wall of Champions last chicane" },
+  description: "Heavy braking into the Wall of Champions and power on the island straights.",
+  bars: [
+    { label: "Engine Power", rating: "HIGH", value: 84, caption: "Long island straights" },
+    { label: "Aero Efficiency", rating: "MODERATE", value: 58, caption: "Low–medium wing" },
+    { label: "Mechanical Grip", rating: "MODERATE", value: 52, caption: "Hairpin traction" },
+    { label: "Braking Stability", rating: "CRITICAL", value: 93, caption: "Wall of Champions" },
+    { label: "Tyre Degradation", rating: "MODERATE", value: 50, caption: "Stop-go longitudinal" },
+    { label: "High-speed commitment", rating: "HIGH", value: 82, caption: "Walls · chicane exit" },
   ],
 };
 
 export const montrealDriverFit: DriverTrackFit[] = [
-  { venueId: "montreal", driverId: "schumacher", driverName: "Michael Schumacher", fitScore: 97, wins: 7, poles: 6 },
-  { venueId: "montreal", driverId: "hamilton",   driverName: "Lewis Hamilton",     fitScore: 92, wins: 4, poles: 5 },
-  { venueId: "montreal", driverId: "alonso",     driverName: "Fernando Alonso",    fitScore: 88, wins: 2, poles: 2 },
-  { venueId: "montreal", driverId: "vettel",     driverName: "Sebastian Vettel",   fitScore: 84, wins: 2, poles: 3 },
+  // Jolpica circuit results/qualifying · scripts/audit_venue_data.py
+  { venueId: "montreal", driverId: "hamilton", driverName: "Lewis Hamilton", fitScore: 98, wins: 7, poles: 6, podiums: 11, starts: 17 },
+  { venueId: "montreal", driverId: "schumacher", driverName: "Michael Schumacher", fitScore: 97, wins: 7, poles: 6, podiums: 12, starts: 18 },
+  { venueId: "montreal", driverId: "verstappen", driverName: "Max Verstappen", fitScore: 83, wins: 3, poles: 2, podiums: 6, starts: 10 },
+  { venueId: "montreal", driverId: "vettel", driverName: "Sebastian Vettel", fitScore: 80, wins: 2, poles: 5, podiums: 6, starts: 12 },
+  { venueId: "montreal", driverId: "jones", driverName: "Alan Jones", fitScore: 79, wins: 2, poles: 1, podiums: 2, starts: 5 },
 ];
 
 export const montrealHotspots: Hotspot[] = [];
@@ -1306,15 +1365,19 @@ export const montrealIconicMoments: VenueIconicMoment[] = [
 
 export const montrealWeather: VenueWeather = {
   venueId: "montreal",
-  dryPct: 62,
-  mixedPct: 25,
-  wetPct: 13,
-  totalRaces: 46,
+  dryPct: 87,
+  mixedPct: 11,
+  wetPct: 2,
+  totalRaces: 45,
+  description:
+    "Historical race-day conditions across 45 World Championship races at this circuit. Classified dry / mixed / wet from race reports.",
+  circuitNote:
+    "Circuit Gilles Villeneuve — 39 dry / 5 mixed / 1 wet of 45 races.",
   chaoticRaces: [
-    { year: 2011, label: "Button wins rain-soaked epic after 4 safety cars", type: "WET" },
-    { year: 2019, label: "Vettel leads then penalised, Hamilton wins", type: "DRY" },
-    { year: 2007, label: "Hamilton and Raikkonen pit lane collision", type: "DRY" },
-  ],
+    { year: 2011, label: "Catalogue rain-affected · curated WET", type: "WET" },
+    { year: 2024, label: "Catalogue rain-affected · MIXED", type: "MIXED" },
+    { year: 2000, label: "Catalogue rain-affected · MIXED", type: "MIXED" },
+],
 };
 
 /* ─── Circuit de Barcelona-Catalunya ────────────────────────────────────────── */
@@ -1351,21 +1414,24 @@ export const barcelonaStats: VenueStats = {
 
 export const barcelonaFingerprint: VenueFingerprint = {
   venueId: "barcelona",
-  bars: [ // [EDITORIAL · ratings based on circuit characteristics, historical team data, and expert consensus — not official F1 data]
-    { label: "Engine Power",      rating: "HIGH",     value: 74, caption: "Main straight DRS zone" },
-    { label: "Aero Efficiency",   rating: "CRITICAL", value: 92, caption: "High downforce mandatory" },
-    { label: "Mechanical Grip",   rating: "EXTREME",  value: 96, caption: "T3 · T5 · T9 high-speed sectors" },
-    { label: "Braking Stability", rating: "HIGH",     value: 76, caption: "T1 · T10 heavy braking" },
-    { label: "Tyre Degradation",  rating: "EXTREME",  value: 95, caption: "Abrasive surface · hard on fronts" },
-    { label: "Driver Bravery",    rating: "HIGH",     value: 78, caption: "T9 taken flat · high commitment" },
+  description: "Aero-sensitive test venue — high-speed T3 and tyre energy across a technical lap.",
+  bars: [
+    { label: "Engine Power", rating: "MODERATE", value: 60, caption: "Main straight DRS" },
+    { label: "Aero Efficiency", rating: "CRITICAL", value: 94, caption: "T3 aero platform" },
+    { label: "Mechanical Grip", rating: "HIGH", value: 78, caption: "Final sector technical" },
+    { label: "Braking Stability", rating: "MODERATE", value: 55, caption: "T1 · T10" },
+    { label: "Tyre Degradation", rating: "HIGH", value: 86, caption: "High energy · abrasive" },
+    { label: "High-speed commitment", rating: "HIGH", value: 78, caption: "T9 flat commitment" },
   ],
 };
 
 export const barcelonaDriverFit: DriverTrackFit[] = [
-  { venueId: "barcelona", driverId: "schumacher", driverName: "Michael Schumacher", fitScore: 97, wins: 6, poles: 5 },
-  { venueId: "barcelona", driverId: "hamilton",   driverName: "Lewis Hamilton",     fitScore: 95, wins: 6, poles: 8 },
-  { venueId: "barcelona", driverId: "alonso",     driverName: "Fernando Alonso",    fitScore: 90, wins: 3, poles: 2 },
-  { venueId: "barcelona", driverId: "vettel",     driverName: "Sebastian Vettel",   fitScore: 86, wins: 4, poles: 4 },
+  // Jolpica circuit results/qualifying · scripts/audit_venue_data.py
+  { venueId: "barcelona", driverId: "hamilton", driverName: "Lewis Hamilton", fitScore: 98, wins: 7, poles: 7, podiums: 13, starts: 20 },
+  { venueId: "barcelona", driverId: "schumacher", driverName: "Michael Schumacher", fitScore: 95, wins: 6, poles: 7, podiums: 12, starts: 19 },
+  { venueId: "barcelona", driverId: "mansell", driverName: "Nigel Mansell", fitScore: 89, wins: 2, poles: 1, podiums: 2, starts: 3 },
+  { venueId: "barcelona", driverId: "verstappen", driverName: "Max Verstappen", fitScore: 87, wins: 4, poles: 1, podiums: 8, starts: 12 },
+  { venueId: "barcelona", driverId: "hakkinen", driverName: "Mika Häkkinen", fitScore: 79, wins: 3, poles: 2, podiums: 3, starts: 10 },
 ];
 
 export const barcelonaHotspots: Hotspot[] = [];
@@ -1381,14 +1447,19 @@ export const barcelonaIconicMoments: VenueIconicMoment[] = [
 
 export const barcelonaWeather: VenueWeather = {
   venueId: "barcelona",
-  dryPct: 82,
-  mixedPct: 12,
-  wetPct: 6,
-  totalRaces: 34,
+  dryPct: 92,
+  mixedPct: 8,
+  wetPct: 0,
+  totalRaces: 36,
+  description:
+    "Historical race-day conditions across 36 World Championship races at this circuit. Classified dry / mixed / wet from race reports.",
+  circuitNote:
+    "Circuit de Barcelona-Catalunya — 33 dry / 3 mixed / 0 wet of 36 races.",
   chaoticRaces: [
-    { year: 2012, label: "Maldonado wins for Williams — explosive finish", type: "DRY" },
-    { year: 2016, label: "Hamilton–Rosberg T1 crash — first lap DNF", type: "DRY" },
-  ],
+    { year: 1996, label: "Catalogue rain-affected · MIXED", type: "MIXED" },
+    { year: 1992, label: "Catalogue rain-affected · MIXED", type: "MIXED" },
+    { year: 1991, label: "Catalogue rain-affected · MIXED", type: "MIXED" },
+],
 };
 
 /* ─── Hungaroring ───────────────────────────────────────────────────────────── */
@@ -1425,21 +1496,24 @@ export const hungaroringStats: VenueStats = {
 
 export const hungaroringFingerprint: VenueFingerprint = {
   venueId: "hungaroring",
-  bars: [ // [EDITORIAL · ratings based on circuit characteristics, historical team data, and expert consensus — not official F1 data]
-    { label: "Engine Power",      rating: "LOW",      value: 35, caption: "Short straights · slow circuit" },
-    { label: "Aero Efficiency",   rating: "LOW",      value: 30, caption: "Maximum downforce required" },
-    { label: "Mechanical Grip",   rating: "EXTREME",  value: 97, caption: "High-downforce twisty layout" },
-    { label: "Braking Stability", rating: "MODERATE", value: 62, caption: "T1 braking · T2 chicane" },
-    { label: "Tyre Degradation",  rating: "MODERATE", value: 65, caption: "Slow speed — moderate deg" },
-    { label: "Driver Bravery",    rating: "MODERATE", value: 58, caption: "Run-off areas available" },
+  description: "Narrow downforce track — mechanical grip and tyre temperature over engine power.",
+  bars: [
+    { label: "Engine Power", rating: "LOW", value: 32, caption: "Short straights" },
+    { label: "Aero Efficiency", rating: "CRITICAL", value: 95, caption: "Max downforce" },
+    { label: "Mechanical Grip", rating: "EXTREME", value: 96, caption: "Continuous direction changes" },
+    { label: "Braking Stability", rating: "MODERATE", value: 55, caption: "T1 primary stop" },
+    { label: "Tyre Degradation", rating: "HIGH", value: 80, caption: "Thermal graining risk" },
+    { label: "High-speed commitment", rating: "MODERATE", value: 58, caption: "Run-off available" },
   ],
 };
 
 export const hungaroringDriverFit: DriverTrackFit[] = [
-  { venueId: "hungaroring", driverId: "hamilton",   driverName: "Lewis Hamilton",     fitScore: 96, wins: 8, poles: 9 },
-  { venueId: "hungaroring", driverId: "schumacher", driverName: "Michael Schumacher", fitScore: 90, wins: 4, poles: 5 },
-  { venueId: "hungaroring", driverId: "alonso",     driverName: "Fernando Alonso",    fitScore: 88, wins: 4, poles: 3 },
-  { venueId: "hungaroring", driverId: "vettel",     driverName: "Sebastian Vettel",   fitScore: 84, wins: 2, poles: 5 },
+  // Jolpica circuit results/qualifying · scripts/audit_venue_data.py
+  { venueId: "hungaroring", driverId: "hamilton", driverName: "Lewis Hamilton", fitScore: 98, wins: 8, poles: 8, podiums: 12, starts: 20 },
+  { venueId: "hungaroring", driverId: "senna", driverName: "Ayrton Senna", fitScore: 92, wins: 3, poles: 3, podiums: 7, starts: 8 },
+  { venueId: "hungaroring", driverId: "schumacher", driverName: "Michael Schumacher", fitScore: 83, wins: 4, poles: 7, podiums: 7, starts: 17 },
+  { venueId: "hungaroring", driverId: "norris", driverName: "Lando Norris", fitScore: 78, wins: 2, poles: 2, podiums: 4, starts: 8 },
+  { venueId: "hungaroring", driverId: "damon_hill", driverName: "Damon Hill", fitScore: 77, wins: 2, poles: 1, podiums: 5, starts: 8 },
 ];
 
 export const hungaroringHotspots: Hotspot[] = [];
@@ -1455,14 +1529,19 @@ export const hungaroringIconicMoments: VenueIconicMoment[] = [
 
 export const hungaroringWeather: VenueWeather = {
   venueId: "hungaroring",
-  dryPct: 72,
-  mixedPct: 20,
-  wetPct: 8,
-  totalRaces: 39,
+  dryPct: 93,
+  mixedPct: 7,
+  wetPct: 0,
+  totalRaces: 41,
+  description:
+    "Historical race-day conditions across 41 World Championship races at this circuit. Classified dry / mixed / wet from race reports.",
+  circuitNote:
+    "Hungaroring — 38 dry / 3 mixed / 0 wet of 41 races.",
   chaoticRaces: [
-    { year: 2021, label: "First-lap chaos — Ocon wins shock race", type: "WET" },
-    { year: 2006, label: "Massa fuel fire in pitstop", type: "DRY" },
-  ],
+    { year: 2014, label: "Catalogue rain-affected · MIXED", type: "MIXED" },
+    { year: 2011, label: "Catalogue rain-affected · MIXED", type: "MIXED" },
+    { year: 2006, label: "Catalogue rain-affected · MIXED", type: "MIXED" },
+],
 };
 
 /* ─── Circuit Zandvoort ─────────────────────────────────────────────────────── */
@@ -1499,19 +1578,24 @@ export const zandvoortStats: VenueStats = {
 
 export const zandvoortFingerprint: VenueFingerprint = {
   venueId: "zandvoort",
-  bars: [ // [EDITORIAL · ratings based on circuit characteristics, historical team data, and expert consensus — not official F1 data]
-    { label: "Engine Power",      rating: "MODERATE", value: 62, caption: "Short circuit — limited straights" },
-    { label: "Aero Efficiency",   rating: "CRITICAL", value: 90, caption: "Banked corners demand high downforce" },
-    { label: "Mechanical Grip",   rating: "HIGH",     value: 82, caption: "Banked T3 and T14 extreme lateral G" },
-    { label: "Braking Stability", rating: "MODERATE", value: 58, caption: "Few heavy braking points" },
-    { label: "Tyre Degradation",  rating: "HIGH",     value: 80, caption: "Sustained lateral load on tyres" },
-    { label: "Driver Bravery",    rating: "HIGH",     value: 78, caption: "Banked turns — commit or oversteer" },
+  description: "Banked commitment corners and high downforce — unique camber demands.",
+  bars: [
+    { label: "Engine Power", rating: "MODERATE", value: 52, caption: "Short straights" },
+    { label: "Aero Efficiency", rating: "HIGH", value: 86, caption: "High downforce banked" },
+    { label: "Mechanical Grip", rating: "HIGH", value: 84, caption: "Banking · camber load" },
+    { label: "Braking Stability", rating: "MODERATE", value: 58, caption: "T1 · chicane" },
+    { label: "Tyre Degradation", rating: "HIGH", value: 78, caption: "Left-side stress" },
+    { label: "High-speed commitment", rating: "HIGH", value: 78, caption: "Banked turns commit" },
   ],
 };
 
 export const zandvoortDriverFit: DriverTrackFit[] = [
-  { venueId: "zandvoort", driverId: "max_verstappen", driverName: "Max Verstappen", fitScore: 99, wins: 3, poles: 3 },
-  { venueId: "zandvoort", driverId: "hamilton",       driverName: "Lewis Hamilton", fitScore: 86, wins: 1, poles: 1 },
+  // Jolpica circuit results/qualifying · scripts/audit_venue_data.py
+  { venueId: "zandvoort", driverId: "verstappen", driverName: "Max Verstappen", fitScore: 98, wins: 3, poles: 3, podiums: 5, starts: 5 },
+  { venueId: "zandvoort", driverId: "ascari", driverName: "Alberto Ascari", fitScore: 95, wins: 2, poles: 2, podiums: 2, starts: 2 },
+  { venueId: "zandvoort", driverId: "clark", driverName: "Jim Clark", fitScore: 89, wins: 4, poles: 1, podiums: 6, starts: 8 },
+  { venueId: "zandvoort", driverId: "lauda", driverName: "Niki Lauda", fitScore: 80, wins: 3, poles: 2, podiums: 6, starts: 10 },
+  { venueId: "zandvoort", driverId: "prost", driverName: "Alain Prost", fitScore: 79, wins: 2, poles: 2, podiums: 3, starts: 6 },
 ];
 
 export const zandvoortHotspots: Hotspot[] = [];
@@ -1526,13 +1610,19 @@ export const zandvoortIconicMoments: VenueIconicMoment[] = [
 
 export const zandvoortWeather: VenueWeather = {
   venueId: "zandvoort",
-  dryPct: 65,
-  mixedPct: 25,
-  wetPct: 10,
-  totalRaces: 34,
+  dryPct: 83,
+  mixedPct: 14,
+  wetPct: 3,
+  totalRaces: 35,
+  description:
+    "Historical race-day conditions across 35 World Championship races at this circuit. Classified dry / mixed / wet from race reports.",
+  circuitNote:
+    "Circuit Zandvoort — 29 dry / 5 mixed / 1 wet of 35 races.",
   chaoticRaces: [
-    { year: 2023, label: "Red flag in rain — Verstappen wins sprint format", type: "MIXED" },
-  ],
+    { year: 2023, label: "Catalogue rain-affected · curated WET", type: "WET" },
+    { year: 1975, label: "Catalogue rain-affected · MIXED", type: "MIXED" },
+    { year: 1971, label: "Catalogue rain-affected · MIXED", type: "MIXED" },
+],
 };
 
 /* ─── Baku City Circuit ─────────────────────────────────────────────────────── */
@@ -1569,20 +1659,24 @@ export const bakuStats: VenueStats = {
 
 export const bakuFingerprint: VenueFingerprint = {
   venueId: "baku",
-  bars: [ // [EDITORIAL · ratings based on circuit characteristics, historical team data, and expert consensus — not official F1 data]
-    { label: "Engine Power",      rating: "EXTREME",  value: 99, caption: "2km straight — 360 km/h possible" },
-    { label: "Aero Efficiency",   rating: "CRITICAL", value: 94, caption: "Minimum wing — straight-line priority" },
-    { label: "Mechanical Grip",   rating: "MODERATE", value: 60, caption: "Low-speed castle section" },
-    { label: "Braking Stability", rating: "EXTREME",  value: 96, caption: "T1 from 360 → 60 km/h" },
-    { label: "Tyre Degradation",  rating: "MODERATE", value: 65, caption: "Street surface — smooth tarmac" },
-    { label: "Driver Bravery",    rating: "EXTREME",  value: 99, caption: "Narrow castle walls · no runoff" },
+  description: "Extreme power-to-braking contrast — castle walls demand commitment.",
+  bars: [
+    { label: "Engine Power", rating: "EXTREME", value: 97, caption: "2.2 km main straight" },
+    { label: "Aero Efficiency", rating: "CRITICAL", value: 92, caption: "Ultra-low drag setup" },
+    { label: "Mechanical Grip", rating: "MODERATE", value: 55, caption: "Castle section technical" },
+    { label: "Braking Stability", rating: "CRITICAL", value: 94, caption: "T1 end-of-straight" },
+    { label: "Tyre Degradation", rating: "LOW", value: 40, caption: "Smooth surface · low wear" },
+    { label: "High-speed commitment", rating: "EXTREME", value: 99, caption: "Narrow castle walls" },
   ],
 };
 
 export const bakuDriverFit: DriverTrackFit[] = [
-  { venueId: "baku", driverId: "max_verstappen", driverName: "Max Verstappen", fitScore: 88, wins: 2, poles: 2 },
-  { venueId: "baku", driverId: "leclerc",        driverName: "Charles Leclerc",fitScore: 92, wins: 2, poles: 3 },
-  { venueId: "baku", driverId: "perez",          driverName: "Sergio Pérez",   fitScore: 86, wins: 2, poles: 1 },
+  // Jolpica circuit results/qualifying · scripts/audit_venue_data.py
+  { venueId: "baku", driverId: "perez", driverName: "Sergio Pérez", fitScore: 98, wins: 2, poles: 0, podiums: 5, starts: 8 },
+  { venueId: "baku", driverId: "verstappen", driverName: "Max Verstappen", fitScore: 92, wins: 2, poles: 1, podiums: 3, starts: 9 },
+  { venueId: "baku", driverId: "piastri", driverName: "Oscar Piastri", fitScore: 86, wins: 1, poles: 0, podiums: 1, starts: 3 },
+  { venueId: "baku", driverId: "leclerc", driverName: "Charles Leclerc", fitScore: 85, wins: 0, poles: 4, podiums: 2, starts: 7 },
+  { venueId: "baku", driverId: "bottas", driverName: "Valtteri Bottas", fitScore: 80, wins: 1, poles: 1, podiums: 2, starts: 8 },
 ];
 
 export const bakuHotspots: Hotspot[] = [];
@@ -1598,14 +1692,16 @@ export const bakuIconicMoments: VenueIconicMoment[] = [
 
 export const bakuWeather: VenueWeather = {
   venueId: "baku",
-  dryPct: 90,
-  mixedPct: 8,
-  wetPct: 2,
-  totalRaces: 8,
+  dryPct: 100,
+  mixedPct: 0,
+  wetPct: 0,
+  totalRaces: 9,
+  description:
+    "Historical race-day conditions across 9 World Championship races at this circuit. Classified dry / mixed / wet from race reports.",
+  circuitNote:
+    "Baku City Circuit — 9 dry / 0 mixed / 0 wet of 9 races.",
   chaoticRaces: [
-    { year: 2021, label: "Verstappen tyre blowout — Hamilton brake magic", type: "DRY" },
-    { year: 2018, label: "Hamilton–Verstappen wheel-to-wheel collision", type: "DRY" },
-  ],
+],
 };
 
 /* ─── Marina Bay Street Circuit (Singapore) ─────────────────────────────────── */
@@ -1642,21 +1738,24 @@ export const singaporeStats: VenueStats = {
 
 export const singaporeFingerprint: VenueFingerprint = {
   venueId: "singapore",
-  bars: [ // [EDITORIAL · ratings based on circuit characteristics, historical team data, and expert consensus — not official F1 data]
-    { label: "Engine Power",      rating: "LOW",      value: 40, caption: "Street circuit — low speed average" },
-    { label: "Aero Efficiency",   rating: "LOW",      value: 35, caption: "Maximum downforce circuit" },
-    { label: "Mechanical Grip",   rating: "HIGH",     value: 85, caption: "Bumpy surface · complex T18-T23" },
-    { label: "Braking Stability", rating: "HIGH",     value: 80, caption: "Multiple slow hairpins" },
-    { label: "Tyre Degradation",  rating: "EXTREME",  value: 95, caption: "Hot humid night · thermal stress" },
-    { label: "Driver Bravery",    rating: "HIGH",     value: 82, caption: "Walls close · floodlit at night" },
+  description: "Night street endurance — braking, traction, and tyre management under humidity.",
+  bars: [
+    { label: "Engine Power", rating: "LOW", value: 35, caption: "Short bursts only" },
+    { label: "Aero Efficiency", rating: "HIGH", value: 82, caption: "High downforce street" },
+    { label: "Mechanical Grip", rating: "CRITICAL", value: 93, caption: "Kerbs · bumps · traction" },
+    { label: "Braking Stability", rating: "CRITICAL", value: 92, caption: "Many heavy stops" },
+    { label: "Tyre Degradation", rating: "HIGH", value: 80, caption: "Thermal · long stints" },
+    { label: "High-speed commitment", rating: "HIGH", value: 82, caption: "Walls · floodlit night" },
   ],
 };
 
 export const singaporeDriverFit: DriverTrackFit[] = [
-  { venueId: "singapore", driverId: "hamilton",       driverName: "Lewis Hamilton",     fitScore: 94, wins: 4, poles: 5 },
-  { venueId: "singapore", driverId: "vettel",         driverName: "Sebastian Vettel",   fitScore: 90, wins: 5, poles: 5 },
-  { venueId: "singapore", driverId: "alonso",         driverName: "Fernando Alonso",    fitScore: 88, wins: 1, poles: 2 },
-  { venueId: "singapore", driverId: "max_verstappen", driverName: "Max Verstappen",     fitScore: 82, wins: 2, poles: 3 },
+  // Jolpica circuit results/qualifying · scripts/audit_venue_data.py
+  { venueId: "singapore", driverId: "vettel", driverName: "Sebastian Vettel", fitScore: 98, wins: 5, poles: 4, podiums: 8, starts: 13 },
+  { venueId: "singapore", driverId: "hamilton", driverName: "Lewis Hamilton", fitScore: 85, wins: 4, poles: 4, podiums: 7, starts: 16 },
+  { venueId: "singapore", driverId: "norris", driverName: "Lando Norris", fitScore: 76, wins: 1, poles: 1, podiums: 3, starts: 5 },
+  { venueId: "singapore", driverId: "russell", driverName: "George Russell", fitScore: 70, wins: 1, poles: 1, podiums: 1, starts: 5 },
+  { venueId: "singapore", driverId: "alonso", driverName: "Fernando Alonso", fitScore: 70, wins: 2, poles: 1, podiums: 5, starts: 15 },
 ];
 
 export const singaporeHotspots: Hotspot[] = [];
@@ -1671,14 +1770,18 @@ export const singaporeIconicMoments: VenueIconicMoment[] = [
 
 export const singaporeWeather: VenueWeather = {
   venueId: "singapore",
-  dryPct: 55,
-  mixedPct: 30,
-  wetPct: 15,
-  totalRaces: 17,
+  dryPct: 88,
+  mixedPct: 6,
+  wetPct: 6,
+  totalRaces: 16,
+  description:
+    "Historical race-day conditions across 16 World Championship races at this circuit. Classified dry / mixed / wet from race reports.",
+  circuitNote:
+    "Marina Bay Street Circuit — 14 dry / 1 mixed / 1 wet of 16 races.",
   chaoticRaces: [
-    { year: 2008, label: "Piquet Jr. crashgate — Alonso wins rigged race", type: "DRY" },
-    { year: 2017, label: "Vettel, Raikkonen, Verstappen T1 collision", type: "DRY" },
-  ],
+    { year: 2017, label: "Catalogue rain-affected · curated WET", type: "WET" },
+    { year: 2022, label: "Catalogue rain-affected · MIXED", type: "MIXED" },
+],
 };
 
 /* ─── Circuit of the Americas (COTA) ────────────────────────────────────────── */
@@ -1715,20 +1818,24 @@ export const cotaStats: VenueStats = {
 
 export const cotaFingerprint: VenueFingerprint = {
   venueId: "cota",
-  bars: [ // [EDITORIAL · ratings based on circuit characteristics, historical team data, and expert consensus — not official F1 data]
-    { label: "Engine Power",      rating: "HIGH",     value: 76, caption: "Back straight DRS zone" },
-    { label: "Aero Efficiency",   rating: "CRITICAL", value: 88, caption: "Esses S2 require high downforce" },
-    { label: "Mechanical Grip",   rating: "EXTREME",  value: 96, caption: "T1 blind apex · T3–T12 esses" },
-    { label: "Braking Stability", rating: "HIGH",     value: 80, caption: "T1 uphill brake · T11 hairpin" },
-    { label: "Tyre Degradation",  rating: "HIGH",     value: 82, caption: "Bumpy surface · high-speed loads" },
-    { label: "Driver Bravery",    rating: "EXTREME",  value: 96, caption: "Blind T1 crest · esses at 300+ km/h" },
+  description: "Elevation and blind crests — aero platform through the esses and T1 commitment.",
+  bars: [
+    { label: "Engine Power", rating: "HIGH", value: 78, caption: "Back straight DRS" },
+    { label: "Aero Efficiency", rating: "CRITICAL", value: 91, caption: "Esses aero load" },
+    { label: "Mechanical Grip", rating: "HIGH", value: 76, caption: "Stadium · elevation" },
+    { label: "Braking Stability", rating: "HIGH", value: 74, caption: "T12 · T1" },
+    { label: "Tyre Degradation", rating: "HIGH", value: 80, caption: "High energy surface" },
+    { label: "High-speed commitment", rating: "EXTREME", value: 96, caption: "Blind T1 crest · esses" },
   ],
 };
 
 export const cotaDriverFit: DriverTrackFit[] = [
-  { venueId: "cota", driverId: "hamilton",       driverName: "Lewis Hamilton",     fitScore: 96, wins: 7, poles: 6 },
-  { venueId: "cota", driverId: "max_verstappen", driverName: "Max Verstappen",     fitScore: 90, wins: 3, poles: 2 },
-  { venueId: "cota", driverId: "vettel",         driverName: "Sebastian Vettel",   fitScore: 84, wins: 2, poles: 3 },
+  // Jolpica circuit results/qualifying · scripts/audit_venue_data.py
+  { venueId: "cota", driverId: "hamilton", driverName: "Lewis Hamilton", fitScore: 98, wins: 5, poles: 3, podiums: 9, starts: 13 },
+  { venueId: "cota", driverId: "verstappen", driverName: "Max Verstappen", fitScore: 96, wins: 4, poles: 2, podiums: 7, starts: 10 },
+  { venueId: "cota", driverId: "leclerc", driverName: "Charles Leclerc", fitScore: 72, wins: 1, poles: 1, podiums: 3, starts: 7 },
+  { venueId: "cota", driverId: "vettel", driverName: "Sebastian Vettel", fitScore: 71, wins: 1, poles: 2, podiums: 4, starts: 10 },
+  { venueId: "cota", driverId: "rosberg", driverName: "Nico Rosberg", fitScore: 71, wins: 0, poles: 2, podiums: 3, starts: 5 },
 ];
 
 export const cotaHotspots: Hotspot[] = [];
@@ -1743,14 +1850,17 @@ export const cotaIconicMoments: VenueIconicMoment[] = [
 
 export const cotaWeather: VenueWeather = {
   venueId: "cota",
-  dryPct: 70,
-  mixedPct: 20,
-  wetPct: 10,
-  totalRaces: 12,
+  dryPct: 92,
+  mixedPct: 8,
+  wetPct: 0,
+  totalRaces: 13,
+  description:
+    "Historical race-day conditions across 13 World Championship races at this circuit. Classified dry / mixed / wet from race reports.",
+  circuitNote:
+    "Circuit of the Americas — 12 dry / 1 mixed / 0 wet of 13 races.",
   chaoticRaces: [
-    { year: 2015, label: "Rain delays — restart drama", type: "WET" },
-    { year: 2018, label: "Verstappen penalised — Raikkonen wins", type: "DRY" },
-  ],
+    { year: 2015, label: "Catalogue rain-affected · MIXED", type: "MIXED" },
+],
 };
 
 /* ─── Autodromo Hermanos Rodriguez (Mexico City) ────────────────────────────── */
@@ -1787,20 +1897,24 @@ export const mexicoStats: VenueStats = {
 
 export const mexicoFingerprint: VenueFingerprint = {
   venueId: "mexico",
-  bars: [ // [EDITORIAL · ratings based on circuit characteristics, historical team data, and expert consensus — not official F1 data]
-    { label: "Engine Power",      rating: "CRITICAL", value: 90, caption: "Long pit straight — alt effects" },
-    { label: "Aero Efficiency",   rating: "LOW",      value: 28, caption: "Near-maximum wing — less aero grip" },
-    { label: "Mechanical Grip",   rating: "HIGH",     value: 80, caption: "T1-T3 esses · Peraltada sweep" },
-    { label: "Braking Stability", rating: "EXTREME",  value: 96, caption: "T1 braking at altitude — longer" },
-    { label: "Tyre Degradation",  rating: "LOW",      value: 30, caption: "Cold air — gentle on rubber" },
-    { label: "Driver Bravery",    rating: "HIGH",     value: 84, caption: "High-speed Peraltada overpass" },
+  description: "High altitude cuts downforce — power and braking into the stadium.",
+  bars: [
+    { label: "Engine Power", rating: "CRITICAL", value: 92, caption: "Altitude · long straight" },
+    { label: "Aero Efficiency", rating: "HIGH", value: 78, caption: "Thin air · wing trade-off" },
+    { label: "Mechanical Grip", rating: "MODERATE", value: 58, caption: "Stadium section" },
+    { label: "Braking Stability", rating: "HIGH", value: 84, caption: "T1 · T13" },
+    { label: "Tyre Degradation", rating: "MODERATE", value: 55, caption: "Lower aero load wear" },
+    { label: "High-speed commitment", rating: "HIGH", value: 84, caption: "Peraltada overpass" },
   ],
 };
 
 export const mexicoDriverFit: DriverTrackFit[] = [
-  { venueId: "mexico", driverId: "max_verstappen", driverName: "Max Verstappen", fitScore: 96, wins: 4, poles: 3 },
-  { venueId: "mexico", driverId: "hamilton",       driverName: "Lewis Hamilton", fitScore: 88, wins: 4, poles: 6 },
-  { venueId: "mexico", driverId: "vettel",         driverName: "Sebastian Vettel", fitScore: 85, wins: 2, poles: 3 },
+  // Jolpica circuit results/qualifying · scripts/audit_venue_data.py
+  { venueId: "mexico", driverId: "verstappen", driverName: "Max Verstappen", fitScore: 98, wins: 5, poles: 2, podiums: 6, starts: 10 },
+  { venueId: "mexico", driverId: "clark", driverName: "Jim Clark", fitScore: 93, wins: 2, poles: 4, podiums: 2, starts: 5 },
+  { venueId: "mexico", driverId: "mansell", driverName: "Nigel Mansell", fitScore: 84, wins: 2, poles: 2, podiums: 4, starts: 7 },
+  { venueId: "mexico", driverId: "senna", driverName: "Ayrton Senna", fitScore: 79, wins: 1, poles: 3, podiums: 4, starts: 7 },
+  { venueId: "mexico", driverId: "prost", driverName: "Alain Prost", fitScore: 78, wins: 2, poles: 0, podiums: 3, starts: 6 },
 ];
 
 export const mexicoHotspots: Hotspot[] = [];
@@ -1815,14 +1929,16 @@ export const mexicoIconicMoments: VenueIconicMoment[] = [
 
 export const mexicoWeather: VenueWeather = {
   venueId: "mexico",
-  dryPct: 88,
-  mixedPct: 10,
-  wetPct: 2,
-  totalRaces: 22,
+  dryPct: 100,
+  mixedPct: 0,
+  wetPct: 0,
+  totalRaces: 25,
+  description:
+    "Historical race-day conditions across 25 World Championship races at this circuit. Classified dry / mixed / wet from race reports.",
+  circuitNote:
+    "Autodromo Hermanos Rodriguez — 25 dry / 0 mixed / 0 wet of 25 races.",
   chaoticRaces: [
-    { year: 2016, label: "Hamilton–Rosberg T1 clash — season title", type: "DRY" },
-    { year: 2018, label: "Verstappen–Hamilton T1 contact", type: "DRY" },
-  ],
+],
 };
 
 /* ─── Las Vegas Strip Circuit ───────────────────────────────────────────────── */
@@ -1859,19 +1975,24 @@ export const lasVegasStats: VenueStats = {
 
 export const lasVegasFingerprint: VenueFingerprint = {
   venueId: "las-vegas",
-  bars: [ // [EDITORIAL · ratings based on circuit characteristics, historical team data, and expert consensus — not official F1 data]
-    { label: "Engine Power",      rating: "EXTREME",  value: 98, caption: "Three DRS zones — max speed" },
-    { label: "Aero Efficiency",   rating: "CRITICAL", value: 92, caption: "Low-drag setup priority" },
-    { label: "Mechanical Grip",   rating: "MODERATE", value: 58, caption: "Cold tarmac — night temperatures" },
-    { label: "Braking Stability", rating: "HIGH",     value: 78, caption: "T1 · T14 hairpins heavy braking" },
-    { label: "Tyre Degradation",  rating: "HIGH",     value: 82, caption: "Cold air — thermal management critical" },
-    { label: "Driver Bravery",    rating: "HIGH",     value: 82, caption: "Strip walls at 340+ km/h" },
+  description: "Strip power circuit — cold-tyre braking and wall commitment at night.",
+  bars: [
+    { label: "Engine Power", rating: "EXTREME", value: 96, caption: "Strip · 340+ km/h" },
+    { label: "Aero Efficiency", rating: "CRITICAL", value: 93, caption: "Ultra-low drag" },
+    { label: "Mechanical Grip", rating: "MODERATE", value: 48, caption: "Few technical corners" },
+    { label: "Braking Stability", rating: "HIGH", value: 82, caption: "Heavy T14 · cold brakes" },
+    { label: "Tyre Degradation", rating: "LOW", value: 38, caption: "Cold night · low abrasion" },
+    { label: "High-speed commitment", rating: "HIGH", value: 82, caption: "Strip walls at speed" },
   ],
 };
 
 export const lasVegasDriverFit: DriverTrackFit[] = [
-  { venueId: "las-vegas", driverId: "max_verstappen", driverName: "Max Verstappen", fitScore: 92, wins: 1, poles: 1 },
-  { venueId: "las-vegas", driverId: "leclerc",        driverName: "Charles Leclerc",fitScore: 88, wins: 1, poles: 1 },
+  // Jolpica circuit results/qualifying · scripts/audit_venue_data.py
+  { venueId: "las-vegas", driverId: "jones", driverName: "Alan Jones", fitScore: 98, wins: 1, poles: 0, podiums: 1, starts: 1 },
+  { venueId: "las-vegas", driverId: "alboreto", driverName: "Michele Alboreto", fitScore: 90, wins: 1, poles: 0, podiums: 1, starts: 2 },
+  { venueId: "las-vegas", driverId: "prost", driverName: "Alain Prost", fitScore: 76, wins: 0, poles: 1, podiums: 1, starts: 2 },
+  { venueId: "las-vegas", driverId: "reutemann", driverName: "Carlos Reutemann", fitScore: 72, wins: 0, poles: 1, podiums: 0, starts: 1 },
+  { venueId: "las-vegas", driverId: "watson", driverName: "John Watson", fitScore: 67, wins: 0, poles: 0, podiums: 1, starts: 2 },
 ];
 
 export const lasVegasHotspots: Hotspot[] = [];
@@ -1886,13 +2007,16 @@ export const lasVegasIconicMoments: VenueIconicMoment[] = [
 
 export const lasVegasWeather: VenueWeather = {
   venueId: "las-vegas",
-  dryPct: 99,
-  mixedPct: 1,
+  dryPct: 100,
+  mixedPct: 0,
   wetPct: 0,
   totalRaces: 2,
+  description:
+    "Historical race-day conditions across 2 World Championship races at this circuit. Classified dry / mixed / wet from race reports.",
+  circuitNote:
+    "Las Vegas Strip Circuit — 2 dry / 0 mixed / 0 wet of 2 races.",
   chaoticRaces: [
-    { year: 2023, label: "Drain cover destroys cars in FP1 — session cancelled", type: "DRY" },
-  ],
+],
 };
 
 /* ─── Lusail International Circuit (Qatar) ──────────────────────────────────── */
@@ -1929,20 +2053,24 @@ export const qatarStats: VenueStats = {
 
 export const qatarFingerprint: VenueFingerprint = {
   venueId: "qatar",
-  bars: [ // [EDITORIAL · ratings based on circuit characteristics, historical team data, and expert consensus — not official F1 data]
-    { label: "Engine Power",      rating: "HIGH",     value: 76, caption: "Long straights · front straight" },
-    { label: "Aero Efficiency",   rating: "CRITICAL", value: 90, caption: "Fast flowing corners — downforce key" },
-    { label: "Mechanical Grip",   rating: "EXTREME",  value: 96, caption: "High-speed sweeping corners" },
-    { label: "Braking Stability", rating: "HIGH",     value: 74, caption: "T1 · T7 medium braking zones" },
-    { label: "Tyre Degradation",  rating: "EXTREME",  value: 99, caption: "Highest deg + extreme heat on earth" },
-    { label: "Driver Bravery",    rating: "HIGH",     value: 88, caption: "Flat fast corners at 290+ km/h" },
+  description: "Fast flowing desert lap — sustained high-speed load and tyre stress.",
+  bars: [
+    { label: "Engine Power", rating: "HIGH", value: 80, caption: "Long flowing sectors" },
+    { label: "Aero Efficiency", rating: "HIGH", value: 84, caption: "Medium-high wing" },
+    { label: "Mechanical Grip", rating: "HIGH", value: 72, caption: "Medium-speed sequence" },
+    { label: "Braking Stability", rating: "MODERATE", value: 55, caption: "Few heavy stops" },
+    { label: "Tyre Degradation", rating: "CRITICAL", value: 95, caption: "Extreme lateral energy" },
+    { label: "High-speed commitment", rating: "HIGH", value: 88, caption: "Flat fast corners 290+" },
   ],
 };
 
 export const qatarDriverFit: DriverTrackFit[] = [
-  { venueId: "qatar", driverId: "max_verstappen", driverName: "Max Verstappen", fitScore: 96, wins: 2, poles: 1 },
-  { venueId: "qatar", driverId: "alonso",         driverName: "Fernando Alonso",fitScore: 88, wins: 0, poles: 0 },
-  { venueId: "qatar", driverId: "hamilton",       driverName: "Lewis Hamilton", fitScore: 86, wins: 1, poles: 1 },
+  // Jolpica circuit results/qualifying · scripts/audit_venue_data.py
+  { venueId: "qatar", driverId: "verstappen", driverName: "Max Verstappen", fitScore: 98, wins: 3, poles: 2, podiums: 4, starts: 4 },
+  { venueId: "qatar", driverId: "hamilton", driverName: "Lewis Hamilton", fitScore: 70, wins: 1, poles: 1, podiums: 1, starts: 4 },
+  { venueId: "qatar", driverId: "piastri", driverName: "Oscar Piastri", fitScore: 69, wins: 0, poles: 1, podiums: 3, starts: 3 },
+  { venueId: "qatar", driverId: "leclerc", driverName: "Charles Leclerc", fitScore: 58, wins: 0, poles: 0, podiums: 1, starts: 4 },
+  { venueId: "qatar", driverId: "alonso", driverName: "Fernando Alonso", fitScore: 58, wins: 0, poles: 0, podiums: 1, starts: 4 },
 ];
 
 export const qatarHotspots: Hotspot[] = [];
@@ -1961,10 +2089,13 @@ export const qatarWeather: VenueWeather = {
   dryPct: 100,
   mixedPct: 0,
   wetPct: 0,
-  totalRaces: 3,
+  totalRaces: 4,
+  description:
+    "Historical race-day conditions across 4 World Championship races at this circuit. Classified dry / mixed / wet from race reports.",
+  circuitNote:
+    "Lusail International Circuit — 4 dry / 0 mixed / 0 wet of 4 races.",
   chaoticRaces: [
-    { year: 2023, label: "Extreme tyre deg — multiple stops forced", type: "DRY" },
-  ],
+],
 };
 
 /* ─── Export index ────────────────────────────────────────────────────────── */
@@ -1993,4 +2124,31 @@ export const MOCK_VENUES: Record<string, Venue> = {
   mexico,
   "las-vegas": lasVegas,
   qatar,
+};
+
+/** Browse-card track silhouettes — keys match CURRENT_F1_VENUES slugs */
+export const VENUE_TRACK_PATHS: Record<string, string> = {
+  spa: spa.trackPath!,
+  monaco: monaco.trackPath!,
+  monza: monza.trackPath!,
+  silverstone: silverstone.trackPath!,
+  suzuka: suzuka.trackPath!,
+  interlagos: interlagos.trackPath!,
+  bahrain: bahrain.trackPath!,
+  "abu-dhabi": abudhabi.trackPath!,
+  jeddah: jeddah.trackPath!,
+  melbourne: melbourne.trackPath!,
+  shanghai: shanghai.trackPath!,
+  miami: miami.trackPath!,
+  imola: imola.trackPath!,
+  montreal: montreal.trackPath!,
+  barcelona: barcelona.trackPath!,
+  hungaroring: hungaroring.trackPath!,
+  zandvoort: zandvoort.trackPath!,
+  baku: baku.trackPath!,
+  singapore: singapore.trackPath!,
+  cota: cota.trackPath!,
+  mexico: mexico.trackPath!,
+  "las-vegas": lasVegas.trackPath!,
+  qatar: qatar.trackPath!,
 };

@@ -1,10 +1,14 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
-import { TeamLogo } from '@/components/constructors/TeamLogo'
+import FallbackImg from '@/components/ui/FallbackImg'
 import { F1NewsSection } from '@/components/home/F1NewsSection'
 import { F1EraCard } from '@/components/home/F1EraCard'
 import { F1SectionNav } from '@/components/home/F1SectionNav'
+import VenueCardTrack from '@/components/venue/VenueCardTrack'
 import { CURRENT_F1_DRIVERS, CURRENT_F1_TEAMS, CURRENT_F1_VENUES } from '@/data/f1-current-grid'
+import { VENUE_TRACK_PATHS } from '@/data/mock/venues'
+import { applyDriverNumbers, fetchF1DriverNumberData, type DriverNumberData } from '@/lib/f1-driver-numbers'
+import { applyTeamAssets } from '@/lib/f1-team-assets'
 import {
   F1_CHAMPIONS,
   F1_CHAMPIONSHIP_LEGEND,
@@ -16,84 +20,6 @@ import {
 } from '@/data/f1-champions'
 import { F1_ERAS } from '@/data/f1-eras'
 import { fetchF1News, type F1NewsItem } from '@/lib/f1-news'
-
-/* ─── Constructor history ────────────────────────────────────────────────────── */
-
-const W = 'https://en.wikipedia.org/wiki/Special:FilePath/'
-
-const F1_CONSTRUCTORS = [
-  // ── CURRENT GRID (2026) ──────────────────────────────────────────────────────
-  { name: 'Scuderia Ferrari',        short: 'Ferrari',       abbr: 'FER', wcc: 16, active: '1950–',    color: '#DC0000', status: 'current', slug: 'ferrari' },
-  { name: 'McLaren Racing',          short: 'McLaren',       abbr: 'MCL', wcc: 10, active: '1966–',    color: '#FF8700', status: 'current', slug: 'mclaren' },
-  { name: 'Mercedes-AMG Petronas',   short: 'Mercedes',      abbr: 'MER', wcc: 8,  active: '2010–',    color: '#00D2BE', status: 'current', slug: 'mercedes' },
-  { name: 'Williams Racing',         short: 'Williams',      abbr: 'WIL', wcc: 9,  active: '1977–',    color: '#005AFF', status: 'current', slug: 'williams' },
-  { name: 'Red Bull Racing',         short: 'Red Bull',      abbr: 'RBR', wcc: 6,  active: '2005–',    color: '#1E3A8A', status: 'current', slug: 'red-bull' },
-  { name: 'Aston Martin Aramco',     short: 'Aston Martin',  abbr: 'AMF', wcc: 0,  active: '2021–',    color: '#006F62', status: 'current', slug: 'aston-martin' },
-  { name: 'BWT Alpine F1',           short: 'Alpine',        abbr: 'ALP', wcc: 2,  active: '2021–',    color: '#FF87BC', status: 'current', slug: 'alpine' },
-  { name: 'MoneyGram Haas F1',       short: 'Haas',          abbr: 'HAA', wcc: 0,  active: '2016–',    color: '#B6BABD', status: 'current', slug: 'haas' },
-  { name: 'Audi F1 Team',            short: 'Audi',          abbr: 'AUD', wcc: 0,  active: '2026–',    color: '#BB1C2A', status: 'current', slug: 'audi' },
-  { name: 'Racing Bulls',            short: 'Racing Bulls', abbr: 'RB',  wcc: 0,  active: '2025–',    color: '#6692FF', status: 'current', slug: 'rb' },
-  { name: 'Cadillac F1 Team',        short: 'Cadillac',      abbr: 'CAD', wcc: 0,  active: '2026–',    color: '#C8A96E', status: 'current', slug: 'cadillac' },
-  // ── RECENT DEFUNCT (2000–2023) ───────────────────────────────────────────────
-  { name: 'Brawn GP',                short: 'Brawn GP',      abbr: 'BGP', wcc: 1,  active: '2009',     color: '#BFFF00', status: 'recent',  slug: 'brawn',         logo: W + 'Brawn_GP_logo.svg' },
-  { name: 'AlphaTauri',              short: 'AlphaTauri',    abbr: 'AT',  wcc: 0,  active: '2020–23',  color: '#4E7C9B', status: 'recent',  slug: 'alphatauri' },
-  { name: 'Scuderia Toro Rosso',     short: 'Toro Rosso',    abbr: 'STR', wcc: 0,  active: '2006–19',  color: '#5588AA', status: 'recent',  slug: 'toro-rosso' },
-  { name: 'Force India / Racing Point', short: 'Force India', abbr: 'FIN', wcc: 0, active: '2008–20',  color: '#FF80C7', status: 'recent',  slug: 'force-india' },
-  { name: 'Lotus F1 Team',           short: 'Lotus (2012)',  abbr: 'LOT', wcc: 0,  active: '2012–15',  color: '#FFD700', status: 'recent',  slug: 'lotus-2012' },
-  { name: 'Manor / Marussia / Virgin', short: 'Manor',       abbr: 'MAN', wcc: 0,  active: '2010–16',  color: '#CC0000', status: 'recent',  slug: 'manor' },
-  { name: 'Caterham F1',             short: 'Caterham',      abbr: 'CAT', wcc: 0,  active: '2012–14',  color: '#2E7D32', status: 'recent',  slug: 'caterham' },
-  { name: 'HRT (Hispania Racing)',   short: 'HRT',           abbr: 'HRT', wcc: 0,  active: '2010–12',  color: '#AAAAAA', status: 'recent',  slug: 'hrt' },
-  { name: 'BMW Sauber',              short: 'BMW Sauber',    abbr: 'BMW', wcc: 0,  active: '2006–09',  color: '#6699CC', status: 'recent',  slug: 'bmw-sauber' },
-  { name: 'Toyota F1 Team',          short: 'Toyota',        abbr: 'TOY', wcc: 0,  active: '2002–09',  color: '#CC0000', status: 'recent',  slug: 'toyota' },
-  { name: 'Super Aguri',             short: 'Super Aguri',   abbr: 'SA',  wcc: 0,  active: '2006–08',  color: '#AA0000', status: 'recent',  slug: 'super-aguri' },
-  { name: 'Spyker / Midland / MF1',  short: 'Spyker',        abbr: 'SPY', wcc: 0,  active: '2005–07',  color: '#FF6600', status: 'recent',  slug: 'spyker' },
-  { name: 'Jaguar Racing',           short: 'Jaguar',        abbr: 'JAG', wcc: 0,  active: '2000–04',  color: '#006400', status: 'recent',  slug: 'jaguar' },
-  { name: 'BAR / Honda Racing',      short: 'BAR/Honda',     abbr: 'BAR', wcc: 0,  active: '1999–08',  color: '#888800', status: 'recent',  slug: 'bar-honda' },
-  { name: 'Stewart Grand Prix',      short: 'Stewart',       abbr: 'STW', wcc: 0,  active: '1997–99',  color: '#C0C0C0', status: 'recent',  slug: 'stewart' },
-  { name: 'Prost Grand Prix',        short: 'Prost GP',      abbr: 'PRO', wcc: 0,  active: '1997–01',  color: '#1565C0', status: 'recent',  slug: 'prost' },
-  // ── HISTORIC (1970–2000) ─────────────────────────────────────────────────────
-  { name: 'Team Lotus',              short: 'Lotus',         abbr: 'LOT', wcc: 7,  active: '1958–94',  color: '#FFD700', status: 'historic', slug: 'lotus' },
-  { name: 'Williams F1',             short: 'Williams',      abbr: 'WIL', wcc: 9,  active: '1977–',    color: '#005AFF', status: 'historic', slug: 'williams' },
-  { name: 'Brabham Racing',          short: 'Brabham',       abbr: 'BRA', wcc: 2,  active: '1962–92',  color: '#4A90D9', status: 'historic', slug: 'brabham' },
-  { name: 'Tyrrell Racing',          short: 'Tyrrell',       abbr: 'TYR', wcc: 1,  active: '1970–98',  color: '#1565C0', status: 'historic', slug: 'tyrrell' },
-  { name: 'Benetton Formula',        short: 'Benetton',      abbr: 'BEN', wcc: 1,  active: '1986–02',  color: '#009F6B', status: 'historic', slug: 'benetton' },
-  { name: 'Renault F1',              short: 'Renault',       abbr: 'REN', wcc: 2,  active: '1977–11',  color: '#FFF500', status: 'historic', slug: 'renault' },
-  { name: 'Jordan Grand Prix',       short: 'Jordan',        abbr: 'JOR', wcc: 0,  active: '1991–05',  color: '#F5C400', status: 'historic', slug: 'jordan' },
-  { name: 'Ligier',                  short: 'Ligier',        abbr: 'LIG', wcc: 0,  active: '1976–96',  color: '#005AFF', status: 'historic', slug: 'ligier' },
-  { name: 'Arrows / Footwork',       short: 'Arrows',        abbr: 'ARR', wcc: 0,  active: '1978–02',  color: '#FF6600', status: 'historic', slug: 'arrows' },
-  { name: 'Toleman Motorsport',      short: 'Toleman',       abbr: 'TOL', wcc: 0,  active: '1981–85',  color: '#AA6600', status: 'historic', slug: 'toleman' },
-  { name: 'Shadow Racing Cars',      short: 'Shadow',        abbr: 'SHA', wcc: 0,  active: '1973–80',  color: '#444444', status: 'historic', slug: 'shadow' },
-  { name: 'Wolf Racing',             short: 'Wolf',          abbr: 'WOL', wcc: 0,  active: '1977–79',  color: '#884400', status: 'historic', slug: 'wolf' },
-  { name: 'Hesketh Racing',          short: 'Hesketh',       abbr: 'HES', wcc: 0,  active: '1973–78',  color: '#CC3333', status: 'historic', slug: 'hesketh' },
-  { name: 'Surtees Racing',          short: 'Surtees',       abbr: 'SUR', wcc: 0,  active: '1970–78',  color: '#CC6600', status: 'historic', slug: 'surtees' },
-  { name: 'March Engineering',       short: 'March',         abbr: 'MAR', wcc: 0,  active: '1970–77',  color: '#CC6600', status: 'historic', slug: 'march' },
-  { name: 'Ensign Racing',           short: 'Ensign',        abbr: 'ENS', wcc: 0,  active: '1973–82',  color: '#446600', status: 'historic', slug: 'ensign' },
-  { name: 'Theodore Racing',         short: 'Theodore',      abbr: 'THE', wcc: 0,  active: '1978–83',  color: '#885500', status: 'historic', slug: 'theodore' },
-  { name: 'ATS (Automobiltechnik)',   short: 'ATS',           abbr: 'ATS', wcc: 0,  active: '1977–84',  color: '#880000', status: 'historic', slug: 'ats' },
-  { name: 'Osella Squadra Corse',    short: 'Osella',        abbr: 'OSE', wcc: 0,  active: '1980–90',  color: '#CC0044', status: 'historic', slug: 'osella' },
-  { name: 'Zakspeed',                short: 'Zakspeed',      abbr: 'ZAK', wcc: 0,  active: '1985–89',  color: '#334455', status: 'historic', slug: 'zakspeed' },
-  { name: 'Larrousse',               short: 'Larrousse',     abbr: 'LAR', wcc: 0,  active: '1987–94',  color: '#556677', status: 'historic', slug: 'larrousse' },
-  { name: 'Minardi',                 short: 'Minardi',       abbr: 'MIN', wcc: 0,  active: '1985–05',  color: '#999922', status: 'historic', slug: 'minardi' },
-  { name: 'Leyton House / March',    short: 'Leyton House',  abbr: 'LH',  wcc: 0,  active: '1987–92',  color: '#007755', status: 'historic', slug: 'leyton-house' },
-  { name: 'Simtek Research',         short: 'Simtek',        abbr: 'SIM', wcc: 0,  active: '1994–95',  color: '#666666', status: 'historic', slug: 'simtek' },
-  { name: 'Pacific Grand Prix',      short: 'Pacific',       abbr: 'PAC', wcc: 0,  active: '1994–95',  color: '#556699', status: 'historic', slug: 'pacific' },
-  { name: 'Penske Racing',           short: 'Penske',        abbr: 'PEN', wcc: 0,  active: '1974–76',  color: '#C0C0C0', status: 'historic', slug: 'penske' },
-  // ── EARLY ERA (1950–1970) ────────────────────────────────────────────────────
-  { name: 'Alfa Romeo Corse',        short: 'Alfa Romeo',    abbr: 'ALF', wcc: 1,  active: '1950–51',  color: '#9C0000', status: 'early',   slug: 'alfa-romeo-50s' },
-  { name: 'Cooper Car Company',      short: 'Cooper',        abbr: 'COO', wcc: 2,  active: '1950–69',  color: '#2E7D32', status: 'early',   slug: 'cooper' },
-  { name: 'British Racing Motors',   short: 'BRM',           abbr: 'BRM', wcc: 1,  active: '1951–77',  color: '#1B5E20', status: 'early',   slug: 'brm' },
-  { name: 'Vanwall',                 short: 'Vanwall',       abbr: 'VAN', wcc: 1,  active: '1954–60',  color: '#006400', status: 'early',   slug: 'vanwall' },
-  { name: 'Officine Maserati',       short: 'Maserati',      abbr: 'MAS', wcc: 0,  active: '1950–60',  color: '#1A3A5C', status: 'early',   slug: 'maserati' },
-  { name: 'Équipe Gordini',          short: 'Gordini',       abbr: 'GOR', wcc: 0,  active: '1950–56',  color: '#1188BB', status: 'early',   slug: 'gordini' },
-  { name: 'Matra Sports',            short: 'Matra',         abbr: 'MAT', wcc: 1,  active: '1966–72',  color: '#1565C0', status: 'early',   slug: 'matra' },
-  { name: 'Honda F1 (1960s)',        short: 'Honda \'64',    abbr: 'HON', wcc: 0,  active: '1964–68',  color: '#CC0000', status: 'early',   slug: 'honda-60s' },
-  { name: 'All American Racers / Eagle', short: 'Eagle/AAR', abbr: 'EAG', wcc: 0,  active: '1966–69',  color: '#BB8800', status: 'early',   slug: 'eagle' },
-  { name: 'Connaught Engineering',   short: 'Connaught',     abbr: 'CON', wcc: 0,  active: '1950–59',  color: '#558800', status: 'early',   slug: 'connaught' },
-  { name: 'Porsche (F1)',            short: 'Porsche',       abbr: 'POR', wcc: 0,  active: '1961–62',  color: '#888800', status: 'early',   slug: 'porsche-f1' },
-  { name: 'Lancia',                  short: 'Lancia',        abbr: 'LAN', wcc: 0,  active: '1954–55',  color: '#3344CC', status: 'early',   slug: 'lancia' },
-  { name: 'HWM',                     short: 'HWM',           abbr: 'HWM', wcc: 0,  active: '1950–54',  color: '#554400', status: 'early',   slug: 'hwm' },
-  { name: 'Talbot-Lago',             short: 'Talbot-Lago',   abbr: 'TAL', wcc: 0,  active: '1950–51',  color: '#336699', status: 'early',   slug: 'talbot-lago' },
-]
 
 /* ─── Series config ──────────────────────────────────────────────────────────── */
 
@@ -221,32 +147,249 @@ const SERIES_CONFIG = {
 
 /* ─── Shared EntityCard ──────────────────────────────────────────────────────── */
 
-function EntityCard({ href, type, name, tagline, entityColor, seriesColor }: {
+function EntityCard({ href, type, name, tagline, entityColor, seriesColor, image, imageFallback, number, numberImage, logoImage, logoFallback, trackPath, flipTrackVertical, flipTrackHorizontal }: {
   href: string; type: string; name: string; tagline: string; entityColor: string; seriesColor: string
+  image?: string; imageFallback?: string; number?: string; numberImage?: string; logoImage?: string; logoFallback?: string
+  trackPath?: string
+  flipTrackVertical?: boolean
+  flipTrackHorizontal?: boolean
 }) {
+  const isDriver = type === 'DRIVER'
+  const isTeam = type === 'TEAM'
+  const isVenue = type === 'VENUE'
+  const hasPhoto = Boolean(image)
+  const hasHero = hasPhoto && (isDriver || isTeam)
+  const teamUsesPhoto = isTeam && Boolean(image?.startsWith('/images/'))
+  const showNumber = isDriver && Boolean(numberImage || number)
+  const showLogo = isTeam && Boolean(logoImage || logoFallback)
+  const showTrack = isVenue && Boolean(trackPath)
   return (
-    <Link href={href} style={{
+    <Link href={href} className="entity-card-link" style={{
       display: 'block', textDecoration: 'none', color: 'inherit',
       background: '#080808', border: '0.5px solid #1a1a1a',
-      borderRadius: 8, padding: '20px 22px', position: 'relative', overflow: 'hidden',
+      borderRadius: 10, position: 'relative', overflow: 'hidden',
     }}>
-      <div style={{
-        position: 'absolute', inset: 0,
-        background: `radial-gradient(ellipse at 0% 50%, ${entityColor} 0%, transparent 50%)`,
-        opacity: 0.06, pointerEvents: 'none',
-      }} />
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 12 }}>
-        <span style={{
-          fontFamily: 'var(--font-mono)', fontSize: 8, color: entityColor,
-          background: entityColor + '18', border: `0.5px solid ${entityColor}44`,
-          padding: '2px 7px', borderRadius: 3, letterSpacing: 1.5,
-        }}>{type}</span>
-        <span style={{ fontFamily: 'var(--font-mono)', fontSize: 10, color: seriesColor }}>→</span>
+      {hasHero && isTeam ? (
+        <div style={{
+          position: 'relative',
+          overflow: 'hidden',
+          height: 300,
+          background: `linear-gradient(165deg, ${entityColor}40 0%, ${entityColor}18 38%, #070707 100%)`,
+        }}>
+          <div style={{
+            position: 'absolute', inset: 0, opacity: 0.04, pointerEvents: 'none',
+            backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.85) 1px, transparent 1px)',
+            backgroundSize: '10px 10px',
+          }} />
+          {teamUsesPhoto ? (
+            <FallbackImg
+              src={image!}
+              alt={name}
+              fallbackSrc={imageFallback}
+              style={{
+                position: 'absolute', inset: 0, width: '100%', height: '100%',
+                objectFit: 'cover',
+                objectPosition: '42% 58%',
+                opacity: 0.92,
+                zIndex: 1,
+              }}
+            />
+          ) : (
+            <div style={{
+              position: 'absolute', left: '-8%', right: '-8%', bottom: -6, height: '70%',
+              display: 'flex', alignItems: 'flex-end', justifyContent: 'center',
+              zIndex: 1, pointerEvents: 'none',
+            }}>
+              <FallbackImg
+                src={image!}
+                alt={name}
+                fallbackSrc={imageFallback}
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'contain',
+                  objectPosition: 'bottom center',
+                  opacity: 0.96,
+                }}
+              />
+            </div>
+          )}
+          <div style={{
+            position: 'absolute', inset: 0, pointerEvents: 'none', zIndex: 2,
+            background: teamUsesPhoto
+              ? `linear-gradient(165deg, ${entityColor}55 0%, transparent 42%), linear-gradient(to bottom, transparent 40%, rgba(8,8,8,0.7) 82%, #080808 100%)`
+              : 'linear-gradient(to bottom, transparent 48%, rgba(8,8,8,0.55) 78%, #080808 100%)',
+          }} />
+          <div style={{
+            position: 'absolute', top: 10, left: 12, right: 12, zIndex: 3,
+            display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start',
+          }}>
+            <span style={{
+              fontFamily: 'var(--font-mono)', fontSize: 8, color: entityColor,
+              background: 'rgba(0,0,0,0.45)', border: `0.5px solid ${entityColor}55`,
+              padding: '2px 7px', borderRadius: 3, letterSpacing: 1.5,
+            }}>{type}</span>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+              {showLogo && (
+                <div style={{
+                  width: 48, height: 48, borderRadius: '50%', flexShrink: 0,
+                  background: 'rgba(255,255,255,0.1)', border: '0.5px solid rgba(255,255,255,0.2)',
+                  display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 9,
+                }}>
+                  {logoImage ? (
+                    <FallbackImg
+                      src={logoImage}
+                      alt={`${name} logo`}
+                      fallbackSrc={logoFallback}
+                      style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+                    />
+                  ) : logoFallback ? (
+                    <FallbackImg
+                      src={logoFallback}
+                      alt={`${name} logo`}
+                      style={{
+                        width: '100%', height: '100%', objectFit: 'contain',
+                        filter: 'brightness(0) invert(1)', opacity: 0.9,
+                      }}
+                    />
+                  ) : null}
+                </div>
+              )}
+              <span style={{ fontFamily: 'var(--font-mono)', fontSize: 10, color: seriesColor }}>→</span>
+            </div>
+          </div>
+        </div>
+      ) : hasHero && isDriver ? (
+        <div style={{
+          position: 'relative',
+          overflow: 'hidden',
+          background: '#050505',
+          height: 300,
+        }}>
+          <FallbackImg
+            src={image!}
+            alt={name}
+            style={{
+              display: 'block',
+              width: '100%',
+              height: 'auto',
+              opacity: 0.92,
+              position: 'relative',
+            }}
+          />
+          <div style={{
+            position: 'absolute', inset: 0,
+            background: 'linear-gradient(to bottom, transparent 50%, #080808 100%)',
+          }} />
+          {showNumber && (
+            <div style={{
+              position: 'absolute',
+              right: 6,
+              top: '18%',
+              bottom: '12%',
+              width: '40%',
+              maxWidth: 130,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              pointerEvents: 'none',
+            }}>
+              {numberImage ? (
+                <FallbackImg
+                  src={numberImage}
+                  alt={number ? `#${number}` : ''}
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'contain',
+                    objectPosition: 'center',
+                  }}
+                />
+              ) : (
+                <span style={{
+                  fontFamily: 'var(--font-mono)',
+                  fontSize: 52,
+                  fontWeight: 500,
+                  lineHeight: 1,
+                  letterSpacing: -2,
+                  color: 'rgba(255,255,255,0.85)',
+                }}>
+                  {number}
+                </span>
+              )}
+            </div>
+          )}
+          <div style={{ position: 'absolute', top: 10, left: 12, right: 12, display: 'flex', justifyContent: 'space-between' }}>
+            <span style={{
+              fontFamily: 'var(--font-mono)', fontSize: 8, color: entityColor,
+              background: 'rgba(0,0,0,0.55)', border: `0.5px solid ${entityColor}55`,
+              padding: '2px 7px', borderRadius: 3, letterSpacing: 1.5,
+            }}>{type}</span>
+            <span style={{ fontFamily: 'var(--font-mono)', fontSize: 10, color: seriesColor }}>→</span>
+          </div>
+        </div>
+      ) : hasPhoto ? (
+        <div style={{
+          position: 'relative',
+          overflow: 'hidden',
+          background: '#050505',
+          height: 152,
+        }}>
+          <FallbackImg
+            src={image!}
+            alt={name}
+            style={{
+              position: 'absolute', inset: 0,
+              width: '100%', height: '100%',
+              objectFit: 'cover',
+              objectPosition: 'center top',
+              opacity: 0.92,
+            }}
+          />
+          <div style={{
+            position: 'absolute', inset: 0,
+            background: 'radial-gradient(120% 90% at 50% 22%, transparent 32%, #080808 92%)',
+          }} />
+          <div style={{ position: 'absolute', top: 10, left: 12, right: 12, display: 'flex', justifyContent: 'space-between' }}>
+            <span style={{
+              fontFamily: 'var(--font-mono)', fontSize: 8, color: entityColor,
+              background: 'rgba(0,0,0,0.55)', border: `0.5px solid ${entityColor}55`,
+              padding: '2px 7px', borderRadius: 3, letterSpacing: 1.5,
+            }}>{type}</span>
+            <span style={{ fontFamily: 'var(--font-mono)', fontSize: 10, color: seriesColor }}>→</span>
+          </div>
+        </div>
+      ) : (
+        <div style={{
+          position: 'absolute', inset: 0,
+          background: `radial-gradient(ellipse at 0% 50%, ${entityColor} 0%, transparent 50%)`,
+          opacity: 0.06, pointerEvents: 'none',
+        }} />
+      )}
+      {showTrack && trackPath && (
+        <VenueCardTrack
+          d={trackPath}
+          color={entityColor}
+          flipVertical={flipTrackVertical}
+          flipHorizontal={flipTrackHorizontal}
+        />
+      )}
+      <div style={{ padding: hasHero || hasPhoto ? '14px 18px 18px' : '20px 22px', position: 'relative', zIndex: 1 }}>
+        {!hasHero && !hasPhoto && (
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 12 }}>
+            <span style={{
+              fontFamily: 'var(--font-mono)', fontSize: 8, color: entityColor,
+              background: entityColor + '18', border: `0.5px solid ${entityColor}44`,
+              padding: '2px 7px', borderRadius: 3, letterSpacing: 1.5,
+            }}>{type}</span>
+            <span style={{ fontFamily: 'var(--font-mono)', fontSize: 10, color: seriesColor }}>→</span>
+          </div>
+        )}
+        <p style={{ fontSize: 18, fontWeight: 400, color: '#fff', margin: '0 0 6px', letterSpacing: -0.5 }}>{name}</p>
+        <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, color: '#555', margin: 0, letterSpacing: 0.5 }}>
+          {tagline.toUpperCase()}
+        </p>
       </div>
-      <p style={{ fontSize: 18, fontWeight: 400, color: '#fff', margin: '0 0 6px', letterSpacing: -0.5 }}>{name}</p>
-      <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, color: '#555', margin: 0, letterSpacing: 0.5 }}>
-        {tagline.toUpperCase()}
-      </p>
     </Link>
   )
 }
@@ -341,12 +484,14 @@ const CONSTRUCTOR_COLORS: Record<string, string> = {
 
 /* ─── F1 heritage page ───────────────────────────────────────────────────────── */
 
-function F1LandingPage({ config, standings, news }: {
+function F1LandingPage({ config, standings, news, driverNumberData }: {
   config: typeof SERIES_CONFIG['1']
   standings: LiveStandings | null
   news: { items: F1NewsItem[]; fetchedAt: string }
+  driverNumberData: DriverNumberData
 }) {
-  const currentConstructors = F1_CONSTRUCTORS.filter(t => t.status === 'current')
+  const f1Drivers = applyDriverNumbers(CURRENT_F1_DRIVERS, driverNumberData)
+  const f1Teams = applyTeamAssets(CURRENT_F1_TEAMS)
 
   return (
     <div style={{ background: '#000', color: '#fff', minHeight: '100vh', fontFamily: 'var(--font-sans)' }}>
@@ -512,94 +657,7 @@ function F1LandingPage({ config, standings, news }: {
       </div>
       </section>
 
-      {/* ── Eras ── */}
-      <section id="eras" style={{ padding: '3rem 1.75rem', scrollMarginTop: 64, background: '#000' }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: 20 }}>
-          <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: 2, color: config.color, margin: 0 }}>
-            ERAS
-          </p>
-          <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, color: '#333', margin: 0 }}>
-            DEFINING CHAPTERS IN THE SPORT&apos;S HISTORY
-          </p>
-        </div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 12 }}>
-          {F1_ERAS.map((era, i) => (
-            <F1EraCard
-              key={era.slug}
-              era={era}
-              wide={i === F1_ERAS.length - 1}
-              href={`/f/1/era/${era.slug}`}
-            />
-          ))}
-        </div>
-      </section>
-
       <F1NewsSection items={news.items} fetchedAt={news.fetchedAt} accentColor={config.color} />
-
-      {/* ── Teams / Constructors ── */}
-      <section id="teams" style={{ padding: '0 1.75rem 3rem', borderTop: '0.5px solid #1a1a1a', scrollMarginTop: 64 }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: 24, paddingTop: '2rem' }}>
-          <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: 2, color: config.color, margin: 0 }}>
-            TEAMS
-          </p>
-          <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, color: '#333', margin: 0 }}>
-            CURRENT GRID · 2026 · {currentConstructors.length} TEAMS
-          </p>
-        </div>
-
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 8 }}>
-          {currentConstructors.map(t => (
-            <Link
-              key={t.slug}
-              href={`/f/1/team/${t.slug}`}
-              style={{
-                textDecoration: 'none', color: 'inherit',
-                background: '#060606',
-                border: `0.5px solid ${t.wcc > 0 ? t.color + '38' : '#111'}`,
-                borderRadius: 8,
-                padding: '16px 14px',
-                position: 'relative', overflow: 'hidden',
-                display: 'block',
-              }}
-            >
-              <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 2, background: t.color, opacity: t.wcc > 0 ? 0.7 : 0.18 }} />
-              {t.wcc > 3 && (
-                <div style={{ position: 'absolute', inset: 0, background: `radial-gradient(ellipse at 0% 100%, ${t.color}10 0%, transparent 55%)`, pointerEvents: 'none' }} />
-              )}
-              <div style={{ position: 'relative', display: 'flex', flexDirection: 'column', gap: 8 }}>
-                <TeamLogo
-                  logo={(t as { logo?: string }).logo}
-                  abbr={t.abbr}
-                  color={t.color}
-                  size={36}
-                />
-                <div>
-                  <p style={{
-                    fontFamily: 'var(--font-mono)',
-                    fontSize: t.wcc > 0 ? 26 : 18,
-                    fontWeight: 400,
-                    color: t.wcc > 0 ? t.color : '#2a2a2a',
-                    margin: '0 0 3px', letterSpacing: -1, lineHeight: 1,
-                  }}>
-                    {t.wcc > 0 ? `${t.wcc}×` : '—'}
-                  </p>
-                  <p style={{
-                    fontSize: 11,
-                    fontWeight: 500,
-                    color: t.wcc > 4 ? '#ddd' : t.wcc > 0 ? '#aaa' : '#444',
-                    margin: '0 0 2px', letterSpacing: -0.2,
-                  }}>
-                    {t.short}
-                  </p>
-                  <p style={{ fontFamily: 'var(--font-mono)', fontSize: 7, color: '#2a2a2a', margin: 0, letterSpacing: 0.3 }}>
-                    {t.active}
-                  </p>
-                </div>
-              </div>
-            </Link>
-          ))}
-        </div>
-      </section>
 
       {/* ── Live Standings ── */}
       {standings && (standings.driverStandings.length > 0 || standings.constructorStandings.length > 0) && (
@@ -691,35 +749,112 @@ function F1LandingPage({ config, standings, news }: {
         </section>
       )}
 
-      {/* ── Browse ── */}
-      <section style={{ padding: '0 1.75rem 4rem', borderTop: '0.5px solid #1a1a1a' }}>
-        <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: 2, color: config.color, margin: '2rem 0 16px' }}>
-          BROWSE
-        </p>
-        {[
-          { id: 'drivers', label: 'DRIVERS', items: CURRENT_F1_DRIVERS, type: 'DRIVER', seg: 'driver' },
-          { id: 'browse-teams', label: 'TEAMS', items: CURRENT_F1_TEAMS, type: 'TEAM', seg: 'team' },
-          { id: 'venues', label: 'VENUES', items: CURRENT_F1_VENUES, type: 'VENUE', seg: 'venue' },
-        ].filter(s => s.items.length > 0).map(section => (
-          <div key={section.label} id={section.id} style={{ marginBottom: 28, scrollMarginTop: 64 }}>
-            <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, letterSpacing: 1.5, color: '#444', margin: '0 0 10px' }}>
-              {section.label}
-            </p>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 10 }}>
-              {section.items.map(item => (
-                <EntityCard
-                  key={item.slug}
-                  href={`/f/1/${section.seg}/${item.slug}`}
-                  type={section.type}
-                  name={item.name}
-                  tagline={item.tagline}
-                  entityColor={item.color}
-                  seriesColor={config.color}
-                />
-              ))}
-            </div>
-          </div>
-        ))}
+      {/* ── Teams ── */}
+      <section id="teams" style={{ padding: '0 1.75rem 3rem', borderTop: '0.5px solid #1a1a1a', scrollMarginTop: 64 }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: 16, paddingTop: '2rem' }}>
+          <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: 2, color: config.color, margin: 0 }}>
+            TEAMS
+          </p>
+          <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, color: '#333', margin: 0 }}>
+            CURRENT GRID · 2026 · {f1Teams.length} TEAMS
+          </p>
+        </div>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 10 }}>
+          {f1Teams.map(item => (
+            <EntityCard
+              key={item.slug}
+              href={`/f/1/team/${item.slug}`}
+              type="TEAM"
+              name={item.name}
+              tagline={item.tagline}
+              entityColor={item.color}
+              seriesColor={config.color}
+              image={item.image}
+              imageFallback={item.imageFallback}
+              logoImage={item.logoImage}
+              logoFallback={item.logoFallback}
+            />
+          ))}
+        </div>
+      </section>
+
+      {/* ── Drivers ── */}
+      <section id="drivers" style={{ padding: '0 1.75rem 3rem', borderTop: '0.5px solid #1a1a1a', scrollMarginTop: 64 }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: 16, paddingTop: '2rem' }}>
+          <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: 2, color: config.color, margin: 0 }}>
+            DRIVERS
+          </p>
+          <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, color: '#333', margin: 0 }}>
+            CURRENT GRID · 2026 · {f1Drivers.length} DRIVERS
+          </p>
+        </div>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 10 }}>
+          {f1Drivers.map(item => (
+            <EntityCard
+              key={item.slug}
+              href={`/f/1/driver/${item.slug}`}
+              type="DRIVER"
+              name={item.name}
+              tagline={item.tagline}
+              entityColor={item.color}
+              seriesColor={config.color}
+              image={item.image}
+              number={item.number}
+              numberImage={item.numberImage}
+            />
+          ))}
+        </div>
+      </section>
+
+      {/* ── Eras ── */}
+      <section id="eras" style={{ padding: '3rem 1.75rem', scrollMarginTop: 64, background: '#000', borderTop: '0.5px solid #1a1a1a' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: 20 }}>
+          <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: 2, color: config.color, margin: 0 }}>
+            ERAS
+          </p>
+          <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, color: '#333', margin: 0 }}>
+            DEFINING CHAPTERS IN THE SPORT&apos;S HISTORY
+          </p>
+        </div>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 12 }}>
+          {F1_ERAS.map((era, i) => (
+            <F1EraCard
+              key={era.slug}
+              era={era}
+              wide={i === F1_ERAS.length - 1}
+              href={`/f/1/era/${era.slug}`}
+            />
+          ))}
+        </div>
+      </section>
+
+      {/* ── Venues ── */}
+      <section id="venues" style={{ padding: '0 1.75rem 4rem', borderTop: '0.5px solid #1a1a1a', scrollMarginTop: 64 }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: 16, paddingTop: '2rem' }}>
+          <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: 2, color: config.color, margin: 0 }}>
+            VENUES
+          </p>
+          <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, color: '#333', margin: 0 }}>
+            2026 CALENDAR · {CURRENT_F1_VENUES.length} CIRCUITS
+          </p>
+        </div>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 10 }}>
+          {CURRENT_F1_VENUES.map(item => (
+            <EntityCard
+              key={item.slug}
+              href={`/f/1/venue/${item.slug}`}
+              type="VENUE"
+              name={item.name}
+              tagline={item.tagline}
+              entityColor={item.color}
+              seriesColor={config.color}
+              image={item.image}
+              trackPath={VENUE_TRACK_PATHS[item.slug]}
+              flipTrackVertical={item.slug === 'spa' || item.slug === 'monza'}
+              flipTrackHorizontal={item.slug === 'spa' || item.slug === 'monza'}
+            />
+          ))}
+        </div>
       </section>
 
       {/* ── Memorial ── */}
@@ -1194,15 +1329,17 @@ export default async function SeriesLandingPage({ params }: { params: Promise<{ 
   if (!config) notFound()
 
   if (series === '1') {
-    const [standings, news] = await Promise.all([
+    const [standings, news, driverNumberData] = await Promise.all([
       fetchLiveStandings(),
       fetchF1News(8),
+      fetchF1DriverNumberData(),
     ])
     return (
       <F1LandingPage
         config={config as typeof SERIES_CONFIG['1']}
         standings={standings}
         news={news}
+        driverNumberData={driverNumberData}
       />
     )
   }

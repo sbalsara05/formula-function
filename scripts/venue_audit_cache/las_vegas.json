@@ -1,0 +1,154 @@
+{
+  "circuitId": "las_vegas",
+  "fetchedAt": "2026-07-29T21:44:30.204595+00:00",
+  "raceTotal": 2,
+  "races": [
+    {
+      "season": 1981,
+      "round": 15,
+      "raceName": "Caesars Palace Grand Prix"
+    },
+    {
+      "season": 1982,
+      "round": 16,
+      "raceName": "Caesars Palace Grand Prix"
+    }
+  ],
+  "wins": [
+    {
+      "season": 1981,
+      "driverId": "jones",
+      "name": "Alan Jones"
+    },
+    {
+      "season": 1982,
+      "driverId": "alboreto",
+      "name": "Michele Alboreto"
+    }
+  ],
+  "p2": [
+    {
+      "season": 1981,
+      "driverId": "prost",
+      "name": "Alain Prost"
+    },
+    {
+      "season": 1982,
+      "driverId": "watson",
+      "name": "John Watson"
+    }
+  ],
+  "p3": [
+    {
+      "season": 1981,
+      "driverId": "giacomelli",
+      "name": "Bruno Giacomelli"
+    },
+    {
+      "season": 1982,
+      "driverId": "cheever",
+      "name": "Eddie Cheever"
+    }
+  ],
+  "poles": [
+    {
+      "season": 1981,
+      "round": 15,
+      "driverId": "reutemann",
+      "name": "Carlos Reutemann",
+      "source": "grid"
+    },
+    {
+      "season": 1982,
+      "round": 16,
+      "driverId": "prost",
+      "name": "Alain Prost",
+      "source": "grid"
+    }
+  ],
+  "starts": {
+    "jones": 1,
+    "prost": 2,
+    "giacomelli": 2,
+    "mansell": 2,
+    "piquet": 2,
+    "laffite": 2,
+    "watson": 2,
+    "reutemann": 1,
+    "pironi": 1,
+    "keke_rosberg": 2,
+    "patrese": 2,
+    "cesaris": 2,
+    "alboreto": 2,
+    "salazar": 1,
+    "warwick": 2,
+    "mario_andretti": 2,
+    "gilles_villeneuve": 1,
+    "rebaque": 1,
+    "surer": 2,
+    "cheever": 2,
+    "arnoux": 2,
+    "tambay": 2,
+    "angelis": 2,
+    "jarier": 2,
+    "daly": 1,
+    "henton": 1,
+    "baldi": 1,
+    "keegan": 1,
+    "boesel": 1,
+    "manfred_winkelhock": 1,
+    "lauda": 1,
+    "byrne": 1,
+    "guerrero": 1
+  },
+  "names": {
+    "jones": "Alan Jones",
+    "prost": "Alain Prost",
+    "giacomelli": "Bruno Giacomelli",
+    "mansell": "Nigel Mansell",
+    "piquet": "Nelson Piquet",
+    "laffite": "Jacques Laffite",
+    "watson": "John Watson",
+    "reutemann": "Carlos Reutemann",
+    "pironi": "Didier Pironi",
+    "keke_rosberg": "Keke Rosberg",
+    "patrese": "Riccardo Patrese",
+    "cesaris": "Andrea de Cesaris",
+    "alboreto": "Michele Alboreto",
+    "salazar": "Eliseo Salazar",
+    "warwick": "Derek Warwick",
+    "mario_andretti": "Mario Andretti",
+    "gilles_villeneuve": "Gilles Villeneuve",
+    "rebaque": "Hector Rebaque",
+    "surer": "Marc Surer",
+    "cheever": "Eddie Cheever",
+    "arnoux": "Ren\u00e9 Arnoux",
+    "tambay": "Patrick Tambay",
+    "angelis": "Elio de Angelis",
+    "jarier": "Jean-Pierre Jarier",
+    "daly": "Derek Daly",
+    "henton": "Brian Henton",
+    "baldi": "Mauro Baldi",
+    "keegan": "Rupert Keegan",
+    "boesel": "Raul Boesel",
+    "manfred_winkelhock": "Manfred Winkelhock",
+    "lauda": "Niki Lauda",
+    "byrne": "Tommy Byrne",
+    "guerrero": "Roberto Guerrero"
+  },
+  "log": {
+    "races_fetched": 2,
+    "races_total": 2,
+    "wins_fetched": 2,
+    "wins_total": 2,
+    "p2_fetched": 2,
+    "p2_total": 2,
+    "p3_fetched": 2,
+    "p3_total": 2,
+    "results_rows_fetched": 51,
+    "qual_rows_fetched": 0,
+    "poles_merged": 2,
+    "poles_from_qualifying": 0,
+    "poles_from_grid": 2
+  }
+}

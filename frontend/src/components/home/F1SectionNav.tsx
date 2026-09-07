@@ -7,9 +7,9 @@ const LINKS = [
   { href: '#dna', label: 'DNA' },
   { href: '#news', label: 'NEWS' },
   { href: '#standings', label: 'STANDINGS' },
-  { href: '#eras', label: 'ERAS' },
   { href: '#teams', label: 'TEAMS' },
   { href: '#drivers', label: 'DRIVERS' },
+  { href: '#eras', label: 'ERAS' },
   { href: '#venues', label: 'VENUES' },
 ] as const
 

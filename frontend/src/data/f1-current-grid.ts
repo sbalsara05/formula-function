@@ -10,6 +10,12 @@ export type GridEntity = {
   name: string
   tagline: string
   color: string
+  image?: string
+  imageFallback?: string
+  number?: string
+  numberImage?: string
+  logoImage?: string
+  logoFallback?: string
 }
 
 const TEAM_COLORS = {
@@ -27,12 +33,19 @@ const TEAM_COLORS = {
   cadillac: '#C8A96E',
 } as const
 
+/** Browse-card slugs match DRIVER_REGISTRY keys (may differ from mock `Driver.id`). */
+const DRIVER_GRID_SLUG: Record<string, string> = {
+  max_verstappen: 'verstappen',
+}
+
 function driver(
-  d: { id: string; name: string },
+  d: { id: string; name: string; portraitUrl?: string },
   tagline: string,
   teamSlug: keyof typeof TEAM_COLORS,
 ): GridEntity {
-  return { slug: d.id, name: d.name, tagline, color: TEAM_COLORS[teamSlug] }
+  const image = d.portraitUrl?.startsWith('/images/') ? d.portraitUrl : undefined
+  const slug = DRIVER_GRID_SLUG[d.id] ?? d.id
+  return { slug, name: d.name, tagline, color: TEAM_COLORS[teamSlug], image }
 }
 
 /** 2026 F1 grid — teams with curated detail pages in TEAM_REGISTRY.f1 */

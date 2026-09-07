@@ -237,16 +237,22 @@ export default function VenuePage({
           <div style={{ background: '#080808', border: '1px solid #1a1a1a', borderRadius: 10, padding: 32, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 32 }}>
             <div>
               <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, letterSpacing: 1.5, color: '#555', margin: '0 0 16px' }}>CONDITIONS BREAKDOWN</p>
-              <div style={{ display: 'flex', gap: 3, height: 48, marginBottom: 14, borderRadius: 4, overflow: 'hidden' }}>
-                <div style={{ flex: weather.dryPct, background: '#FFD700', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'var(--font-mono)', fontSize: 10, color: '#4a3800', fontWeight: 500 }}>
-                  DRY {weather.dryPct}%
-                </div>
-                <div style={{ flex: weather.mixedPct, background: '#5FB87C', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'var(--font-mono)', fontSize: 10, color: '#0a2512', fontWeight: 500 }}>
-                  MIXED {weather.mixedPct}%
-                </div>
-                <div style={{ flex: weather.wetPct, background: '#378ADD', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'var(--font-mono)', fontSize: 10, color: '#042c53', fontWeight: 500 }}>
-                  WET {weather.wetPct}%
-                </div>
+              <div style={{ display: 'flex', gap: [weather.dryPct, weather.mixedPct, weather.wetPct].filter(p => p > 0).length > 1 ? 3 : 0, height: 48, marginBottom: 14, borderRadius: 4, overflow: 'hidden' }}>
+                {weather.dryPct > 0 && (
+                  <div style={{ flex: weather.dryPct, minWidth: 0, background: '#FFD700', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'var(--font-mono)', fontSize: 10, color: '#4a3800', fontWeight: 500 }}>
+                    DRY {weather.dryPct}%
+                  </div>
+                )}
+                {weather.mixedPct > 0 && (
+                  <div style={{ flex: weather.mixedPct, minWidth: 0, background: '#5FB87C', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'var(--font-mono)', fontSize: 10, color: '#0a2512', fontWeight: 500 }}>
+                    MIXED {weather.mixedPct}%
+                  </div>
+                )}
+                {weather.wetPct > 0 && (
+                  <div style={{ flex: weather.wetPct, minWidth: 0, background: '#378ADD', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'var(--font-mono)', fontSize: 10, color: '#042c53', fontWeight: 500 }}>
+                    WET {weather.wetPct}%
+                  </div>
+                )}
               </div>
               <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, color: '#555', margin: 0, letterSpacing: 0.5 }}>
                 OF {weather.totalRaces} F1 RACES SINCE {venue.f1Since}
@@ -254,14 +260,18 @@ export default function VenuePage({
 
               <div style={{ marginTop: 24 }}>
                 <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, letterSpacing: 1.5, color: '#555', margin: '0 0 10px' }}>MOST CHAOTIC RACES</p>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-                  {weather.chaoticRaces.map((r, i) => (
-                    <div key={i} style={{ display: 'flex', justifyContent: 'space-between', fontSize: 12, padding: '6px 0', borderBottom: i < weather.chaoticRaces.length - 1 ? '0.5px solid #1a1a1a' : undefined }}>
-                      <span style={{ color: '#ccc' }}>{r.year} · {r.label}</span>
-                      <span style={{ fontFamily: 'var(--font-mono)', color: CONDITION_LABEL_COLOR[r.type] ?? '#888', fontSize: 10 }}>{r.type}</span>
-                    </div>
-                  ))}
-                </div>
+                {weather.chaoticRaces.length === 0 ? (
+                  <p style={{ fontSize: 12, color: '#666', margin: 0 }}>No rain-affected races in the classified sample.</p>
+                ) : (
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+                    {weather.chaoticRaces.map((r, i) => (
+                      <div key={i} style={{ display: 'flex', justifyContent: 'space-between', fontSize: 12, padding: '6px 0', borderBottom: i < weather.chaoticRaces.length - 1 ? '0.5px solid #1a1a1a' : undefined }}>
+                        <span style={{ color: '#ccc' }}>{r.year} · {r.label}</span>
+                        <span style={{ fontFamily: 'var(--font-mono)', color: CONDITION_LABEL_COLOR[r.type] ?? '#888', fontSize: 10 }}>{r.type}</span>
+                      </div>
+                    ))}
+                  </div>
+                )}
               </div>
             </div>
 
@@ -289,7 +299,7 @@ export default function VenuePage({
             <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, letterSpacing: 1, color: '#555' }}>HISTORICAL</p>
           </div>
           <p style={{ fontSize: 13, color: '#888', margin: '0 0 24px', maxWidth: 520, lineHeight: 1.6 }}>
-            Drivers whose style correlates most strongly with success here. Not the same as most wins — this accounts for car strength.
+            Drivers with the strongest results here relative to their starts — wins, podiums, and poles at this circuit, with shrinkage so small samples do not dominate.
           </p>
 
           <div style={{ background: '#080808', border: '1px solid #1a1a1a', borderRadius: 10, padding: 24 }}>
@@ -317,13 +327,13 @@ export default function VenuePage({
                     {d.fitScore}
                   </span>
                   <span style={{ fontFamily: 'var(--font-mono)', fontSize: 10, color: '#888', textAlign: 'right' }}>
-                    {d.wins}W {d.poles}P
+                    {d.wins}W{d.podiums != null ? ` ${d.podiums}PD` : ''} {d.poles}P
                   </span>
                 </div>
               ))}
             </div>
             <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, color: '#444', margin: '16px 0 0', letterSpacing: 0.5, textAlign: 'center' }}>
-              FIT SCORES DERIVED FROM WINS · POLES · PODIUMS AT THIS CIRCUIT
+              FIT = (25×WINS + 8×PODIUMS + 10×POLES) / STARTS · BAYESIAN SHRINKAGE · MIN SAMPLE
             </p>
           </div>
         </section>

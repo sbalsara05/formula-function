@@ -133,6 +133,17 @@ body {
   border-color: rgba(255, 255, 255, 0.18) !important;
 }
 
+/* ─── Browse grid entity cards (drivers/teams/venues) ────────────────────────── */
+.entity-card-link {
+  cursor: pointer;
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.entity-card-link:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.18) !important;
+}
+
 /* ─── Homepage telemetry / polish ──────────────────────────────────────────── */
 @keyframes homeTelemetryDraw {
   0%   { stroke-dashoffset: 1200; opacity: 0; }

@@ -1,0 +1,3871 @@
+{
+  "generatedAt": "2026-07-29T21:44:45.990980+00:00",
+  "formula": {
+    "points": "25*wins + 8*podiums + 10*poles",
+    "rate": "points / starts",
+    "shrinkage": "(rate*starts + mean*4.0) / (starts + 4.0)",
+    "eligibility": "starts >= 3 OR wins >= 2",
+    "poles": "Qualifying P1 when Jolpica has qualifying; else race grid=1",
+    "note": "Not car-strength adjusted."
+  },
+  "circuits": {
+    "spa": {
+      "circuitId": "spa",
+      "raceCount": 59,
+      "log": {
+        "races_fetched": 59,
+        "races_total": 59,
+        "wins_fetched": 59,
+        "wins_total": 59,
+        "p2_fetched": 59,
+        "p2_total": 59,
+        "p3_fetched": 59,
+        "p3_total": 60,
+        "results_rows_fetched": 1259,
+        "qual_rows_fetched": 532,
+        "poles_merged": 59,
+        "poles_from_qualifying": 25,
+        "poles_from_grid": 34
+      },
+      "driverFit": [
+        {
+          "driverId": "senna",
+          "driverName": "Ayrton Senna",
+          "fitScore": 98,
+          "wins": 5,
+          "poles": 4,
+          "podiums": 6,
+          "starts": 9,
+          "rate": 23.667,
+          "shrunk": 17.185
+        },
+        {
+          "driverId": "fangio",
+          "driverName": "Juan Fangio",
+          "fitScore": 88,
+          "wins": 3,
+          "poles": 4,
+          "podiums": 3,
+          "starts": 7,
+          "rate": 19.857,
+          "shrunk": 13.583
+        },
+        {
+          "driverId": "clark",
+          "driverName": "Jim Clark",
+          "fitScore": 85,
+          "wins": 4,
+          "poles": 1,
+          "podiums": 4,
+          "starts": 8,
+          "rate": 17.75,
+          "shrunk": 12.701
+        },
+        {
+          "driverId": "michael_schumacher",
+          "driverName": "Michael Schumacher",
+          "fitScore": 84,
+          "wins": 6,
+          "poles": 1,
+          "podiums": 9,
+          "starts": 16,
+          "rate": 14.5,
+          "shrunk": 12.121
+        },
+        {
+          "driverId": "hamilton",
+          "driverName": "Lewis Hamilton",
+          "fitScore": 83,
+          "wins": 5,
+          "poles": 6,
+          "podiums": 11,
+          "starts": 20,
+          "rate": 13.65,
+          "shrunk": 11.809
+        }
+      ],
+      "topWins": [
+        {
+          "driverId": "michael_schumacher",
+          "driverName": "Michael Schumacher",
+          "wins": 6,
+          "poles": 1,
+          "podiums": 9,
+          "starts": 16
+        },
+        {
+          "driverId": "senna",
+          "driverName": "Ayrton Senna",
+          "wins": 5,
+          "poles": 4,
+          "podiums": 6,
+          "starts": 9
+        },
+        {
+          "driverId": "hamilton",
+          "driverName": "Lewis Hamilton",
+          "wins": 5,
+          "poles": 6,
+          "podiums": 11,
+          "starts": 20
+        },
+        {
+          "driverId": "clark",
+          "driverName": "Jim Clark",
+          "wins": 4,
+          "poles": 1,
+          "podiums": 4,
+          "starts": 8
+        },
+        {
+          "driverId": "raikkonen",
+          "driverName": "Kimi R\u00e4ikk\u00f6nen",
+          "wins": 4,
+          "poles": 1,
+          "podiums": 5,
+          "starts": 17
+        },
+        {
+          "driverId": "fangio",
+          "driverName": "Juan Fangio",
+          "wins": 3,
+          "poles": 4,
+          "podiums": 3,
+          "starts": 7
+        },
+        {
+          "driverId": "damon_hill",
+          "driverName": "Damon Hill",
+          "wins": 3,
+          "poles": 0,
+          "podiums": 4,
+          "starts": 7
+        },
+        {
+          "driverId": "vettel",
+          "driverName": "Sebastian Vettel",
+          "wins": 3,
+          "poles": 1,
+          "podiums": 6,
+          "starts": 16
+        },
+        {
+          "driverId": "max_verstappen",
+          "driverName": "Max Verstappen",
+          "wins": 3,
+          "poles": 4,
+          "podiums": 6,
+          "starts": 12
+        },
+        {
+          "driverId": "ascari",
+          "driverName": "Alberto Ascari",
+          "wins": 2,
+          "poles": 1,
+          "podiums": 3,
+          "starts": 4
+        },
+        {
+          "driverId": "prost",
+          "driverName": "Alain Prost",
+          "wins": 2,
+          "poles": 3,
+          "podiums": 7,
+          "starts": 9
+        },
+        {
+          "driverId": "farina",
+          "driverName": "Nino Farina",
+          "wins": 1,
+          "poles": 1,
+          "podiums": 3,
+          "starts": 6
+        },
+        {
+          "driverId": "collins",
+          "driverName": "Peter Collins",
+          "wins": 1,
+          "poles": 0,
+          "podiums": 1,
+          "starts": 4
+        },
+        {
+          "driverId": "brooks",
+          "driverName": "Tony Brooks",
+          "wins": 1,
+          "poles": 0,
+          "podiums": 1,
+          "starts": 3
+        },
+        {
+          "driverId": "jack_brabham",
+          "driverName": "Jack Brabham",
+          "wins": 1,
+          "poles": 1,
+          "podiums": 2,
+          "starts": 11
+        }
+      ]
+    },
+    "monaco": {
+      "circuitId": "monaco",
+      "raceCount": 72,
+      "log": {
+        "races_fetched": 72,
+        "races_total": 72,
+        "wins_fetched": 72,
+        "wins_total": 72,
+        "p2_fetched": 72,
+        "p2_total": 73,
+        "p3_fetched": 72,
+        "p3_total": 73,
+        "results_rows_fetched": 1508,
+        "qual_rows_fetched": 550,
+        "poles_merged": 72,
+        "poles_from_qualifying": 26,
+        "poles_from_grid": 46
+      },
+      "driverFit": [
+        {
+          "driverId": "senna",
+          "driverName": "Ayrton Senna",
+          "fitScore": 98,
+          "wins": 6,
+          "poles": 5,
+          "podiums": 8,
+          "starts": 10,
+          "rate": 26.4,
+          "shrunk": 19.562
+        },
+        {
+          "driverId": "stewart",
+          "driverName": "Jackie Stewart",
+          "fitScore": 82,
+          "wins": 3,
+          "poles": 4,
+          "podiums": 4,
+          "starts": 8,
+          "rate": 18.375,
+          "shrunk": 13.072
+        },
+        {
+          "driverId": "fangio",
+          "driverName": "Juan Fangio",
+          "fitScore": 81,
+          "wins": 2,
+          "poles": 3,
+          "podiums": 3,
+          "starts": 5,
+          "rate": 20.8,
+          "shrunk": 12.652
+        },
+        {
+          "driverId": "moss",
+          "driverName": "Stirling Moss",
+          "fitScore": 81,
+          "wins": 3,
+          "poles": 3,
+          "podiums": 3,
+          "starts": 7,
+          "rate": 18.429,
+          "shrunk": 12.624
+        },
+        {
+          "driverId": "prost",
+          "driverName": "Alain Prost",
+          "fitScore": 79,
+          "wins": 4,
+          "poles": 4,
+          "podiums": 6,
+          "starts": 13,
+          "rate": 14.462,
+          "shrunk": 11.639
+        }
+      ],
+      "topWins": [
+        {
+          "driverId": "senna",
+          "driverName": "Ayrton Senna",
+          "wins": 6,
+          "poles": 5,
+          "podiums": 8,
+          "starts": 10
+        },
+        {
+          "driverId": "hill",
+          "driverName": "Graham Hill",
+          "wins": 5,
+          "poles": 2,
+          "podiums": 7,
+          "starts": 17
+        },
+        {
+          "driverId": "michael_schumacher",
+          "driverName": "Michael Schumacher",
+          "wins": 5,
+          "poles": 4,
+          "podiums": 7,
+          "starts": 18
+        },
+        {
+          "driverId": "prost",
+          "driverName": "Alain Prost",
+          "wins": 4,
+          "poles": 4,
+          "podiums": 6,
+          "starts": 13
+        },
+        {
+          "driverId": "moss",
+          "driverName": "Stirling Moss",
+          "wins": 3,
+          "poles": 3,
+          "podiums": 3,
+          "starts": 7
+        },
+        {
+          "driverId": "stewart",
+          "driverName": "Jackie Stewart",
+          "wins": 3,
+          "poles": 4,
+          "podiums": 4,
+          "starts": 8
+        },
+        {
+          "driverId": "hamilton",
+          "driverName": "Lewis Hamilton",
+          "wins": 3,
+          "poles": 2,
+          "podiums": 8,
+          "starts": 19
+        },
+        {
+          "driverId": "rosberg",
+          "driverName": "Nico Rosberg",
+          "wins": 3,
+          "poles": 2,
+          "podiums": 4,
+          "starts": 11
+        },
+        {
+          "driverId": "fangio",
+          "driverName": "Juan Fangio",
+          "wins": 2,
+          "poles": 3,
+          "podiums": 3,
+          "starts": 5
+        },
+        {
+          "driverId": "trintignant",
+          "driverName": "Maurice Trintignant",
+          "wins": 2,
+          "poles": 0,
+          "podiums": 3,
+          "starts": 11
+        },
+        {
+          "driverId": "lauda",
+          "driverName": "Niki Lauda",
+          "wins": 2,
+          "poles": 3,
+          "podiums": 4,
+          "starts": 11
+        },
+        {
+          "driverId": "scheckter",
+          "driverName": "Jody Scheckter",
+          "wins": 2,
+          "poles": 1,
+          "podiums": 5,
+          "starts": 7
+        },
+        {
+          "driverId": "coulthard",
+          "driverName": "David Coulthard",
+          "wins": 2,
+          "poles": 1,
+          "podiums": 4,
+          "starts": 14
+        },
+        {
+          "driverId": "alonso",
+          "driverName": "Fernando Alonso",
+          "wins": 2,
+          "poles": 2,
+          "podiums": 5,
+          "starts": 22
+        },
+        {
+          "driverId": "webber",
+          "driverName": "Mark Webber",
+          "wins": 2,
+          "poles": 1,
+          "podiums": 4,
+          "starts": 12
+        }
+      ]
+    },
+    "monza": {
+      "circuitId": "monza",
+      "raceCount": 76,
+      "log": {
+        "races_fetched": 76,
+        "races_total": 76,
+        "wins_fetched": 75,
+        "wins_total": 75,
+        "p2_fetched": 75,
+        "p2_total": 77,
+        "p3_fetched": 75,
+        "p3_total": 77,
+        "results_rows_fetched": 1732,
+        "qual_rows_fetched": 530,
+        "poles_merged": 75,
+        "poles_from_qualifying": 25,
+        "poles_from_grid": 50
+      },
+      "driverFit": [
+        {
+          "driverId": "fangio",
+          "driverName": "Juan Fangio",
+          "fitScore": 98,
+          "wins": 3,
+          "poles": 5,
+          "podiums": 5,
+          "starts": 9,
+          "rate": 18.333,
+          "shrunk": 13.385
+        },
+        {
+          "driverId": "hamilton",
+          "driverName": "Lewis Hamilton",
+          "fitScore": 92,
+          "wins": 5,
+          "poles": 7,
+          "podiums": 8,
+          "starts": 19,
+          "rate": 13.632,
+          "shrunk": 11.653
+        },
+        {
+          "driverId": "senna",
+          "driverName": "Ayrton Senna",
+          "fitScore": 91,
+          "wins": 2,
+          "poles": 5,
+          "podiums": 5,
+          "starts": 9,
+          "rate": 15.556,
+          "shrunk": 11.462
+        },
+        {
+          "driverId": "montoya",
+          "driverName": "Juan Pablo Montoya",
+          "fitScore": 91,
+          "wins": 2,
+          "poles": 2,
+          "podiums": 3,
+          "starts": 5,
+          "rate": 18.8,
+          "shrunk": 11.446
+        },
+        {
+          "driverId": "michael_schumacher",
+          "driverName": "Michael Schumacher",
+          "fitScore": 89,
+          "wins": 5,
+          "poles": 3,
+          "podiums": 8,
+          "starts": 17,
+          "rate": 12.882,
+          "shrunk": 10.858
+        }
+      ],
+      "topWins": [
+        {
+          "driverId": "michael_schumacher",
+          "driverName": "Michael Schumacher",
+          "wins": 5,
+          "poles": 3,
+          "podiums": 8,
+          "starts": 17
+        },
+        {
+          "driverId": "hamilton",
+          "driverName": "Lewis Hamilton",
+          "wins": 5,
+          "poles": 7,
+          "podiums": 8,
+          "starts": 19
+        },
+        {
+          "driverId": "fangio",
+          "driverName": "Juan Fangio",
+          "wins": 3,
+          "poles": 5,
+          "podiums": 5,
+          "starts": 9
+        },
+        {
+          "driverId": "moss",
+          "driverName": "Stirling Moss",
+          "wins": 3,
+          "poles": 2,
+          "podiums": 3,
+          "starts": 9
+        },
+        {
+          "driverId": "peterson",
+          "driverName": "Ronnie Peterson",
+          "wins": 3,
+          "poles": 1,
+          "podiums": 4,
+          "starts": 9
+        },
+        {
+          "driverId": "prost",
+          "driverName": "Alain Prost",
+          "wins": 3,
+          "poles": 1,
+          "podiums": 5,
+          "starts": 12
+        },
+        {
+          "driverId": "piquet",
+          "driverName": "Nelson Piquet",
+          "wins": 3,
+          "poles": 2,
+          "podiums": 4,
+          "starts": 13
+        },
+        {
+          "driverId": "barrichello",
+          "driverName": "Rubens Barrichello",
+          "wins": 3,
+          "poles": 1,
+          "podiums": 5,
+          "starts": 19
+        },
+        {
+          "driverId": "vettel",
+          "driverName": "Sebastian Vettel",
+          "wins": 3,
+          "poles": 3,
+          "podiums": 6,
+          "starts": 16
+        },
+        {
+          "driverId": "max_verstappen",
+          "driverName": "Max Verstappen",
+          "wins": 3,
+          "poles": 1,
+          "podiums": 3,
+          "starts": 11
+        },
+        {
+          "driverId": "ascari",
+          "driverName": "Alberto Ascari",
+          "wins": 2,
+          "poles": 2,
+          "podiums": 2,
+          "starts": 6
+        },
+        {
+          "driverId": "phil_hill",
+          "driverName": "Phil Hill",
+          "wins": 2,
+          "poles": 1,
+          "podiums": 4,
+          "starts": 6
+        },
+        {
+          "driverId": "surtees",
+          "driverName": "John Surtees",
+          "wins": 2,
+          "poles": 3,
+          "podiums": 2,
+          "starts": 12
+        },
+        {
+          "driverId": "stewart",
+          "driverName": "Jackie Stewart",
+          "wins": 2,
+          "poles": 0,
+          "podiums": 3,
+          "starts": 9
+        },
+        {
+          "driverId": "regazzoni",
+          "driverName": "Clay Regazzoni",
+          "wins": 2,
+          "poles": 0,
+          "podiums": 4,
+          "starts": 10
+        }
+      ]
+    },
+    "silverstone": {
+      "circuitId": "silverstone",
+      "raceCount": 61,
+      "log": {
+        "races_fetched": 61,
+        "races_total": 61,
+        "wins_fetched": 61,
+        "wins_total": 61,
+        "p2_fetched": 61,
+        "p2_total": 62,
+        "p3_fetched": 61,
+        "p3_total": 61,
+        "results_rows_fetched": 1407,
+        "qual_rows_fetched": 639,
+        "poles_merged": 61,
+        "poles_from_qualifying": 30,
+        "poles_from_grid": 31
+      },
+      "driverFit": [
+        {
+          "driverId": "hamilton",
+          "driverName": "Lewis Hamilton",
+          "fitScore": 98,
+          "wins": 9,
+          "poles": 8,
+          "podiums": 16,
+          "starts": 21,
+          "rate": 20.619,
+          "shrunk": 17.736
+        },
+        {
+          "driverId": "clark",
+          "driverName": "Jim Clark",
+          "fitScore": 97,
+          "wins": 3,
+          "poles": 3,
+          "podiums": 3,
+          "starts": 4,
+          "rate": 32.25,
+          "shrunk": 17.427
+        },
+        {
+          "driverId": "prost",
+          "driverName": "Alain Prost",
+          "fitScore": 90,
+          "wins": 5,
+          "poles": 1,
+          "podiums": 6,
+          "starts": 9,
+          "rate": 20.333,
+          "shrunk": 14.878
+        },
+        {
+          "driverId": "mansell",
+          "driverName": "Nigel Mansell",
+          "fitScore": 85,
+          "wins": 3,
+          "poles": 3,
+          "podiums": 5,
+          "starts": 8,
+          "rate": 18.125,
+          "shrunk": 12.951
+        },
+        {
+          "driverId": "gonzalez",
+          "driverName": "Jos\u00e9 Froil\u00e1n Gonz\u00e1lez",
+          "fitScore": 79,
+          "wins": 2,
+          "poles": 1,
+          "podiums": 2,
+          "starts": 4,
+          "rate": 19.0,
+          "shrunk": 10.802
+        }
+      ],
+      "topWins": [
+        {
+          "driverId": "hamilton",
+          "driverName": "Lewis Hamilton",
+          "wins": 9,
+          "poles": 8,
+          "podiums": 16,
+          "starts": 21
+        },
+        {
+          "driverId": "prost",
+          "driverName": "Alain Prost",
+          "wins": 5,
+          "poles": 1,
+          "podiums": 6,
+          "starts": 9
+        },
+        {
+          "driverId": "clark",
+          "driverName": "Jim Clark",
+          "wins": 3,
+          "poles": 3,
+          "podiums": 3,
+          "starts": 4
+        },
+        {
+          "driverId": "mansell",
+          "driverName": "Nigel Mansell",
+          "wins": 3,
+          "poles": 3,
+          "podiums": 5,
+          "starts": 8
+        },
+        {
+          "driverId": "michael_schumacher",
+          "driverName": "Michael Schumacher",
+          "wins": 3,
+          "poles": 1,
+          "podiums": 7,
+          "starts": 18
+        },
+        {
+          "driverId": "gonzalez",
+          "driverName": "Jos\u00e9 Froil\u00e1n Gonz\u00e1lez",
+          "wins": 2,
+          "poles": 1,
+          "podiums": 2,
+          "starts": 4
+        },
+        {
+          "driverId": "ascari",
+          "driverName": "Alberto Ascari",
+          "wins": 2,
+          "poles": 1,
+          "podiums": 2,
+          "starts": 5
+        },
+        {
+          "driverId": "stewart",
+          "driverName": "Jackie Stewart",
+          "wins": 2,
+          "poles": 0,
+          "podiums": 2,
+          "starts": 5
+        },
+        {
+          "driverId": "villeneuve",
+          "driverName": "Jacques Villeneuve",
+          "wins": 2,
+          "poles": 1,
+          "podiums": 2,
+          "starts": 10
+        },
+        {
+          "driverId": "coulthard",
+          "driverName": "David Coulthard",
+          "wins": 2,
+          "poles": 0,
+          "podiums": 3,
+          "starts": 15
+        },
+        {
+          "driverId": "alonso",
+          "driverName": "Fernando Alonso",
+          "wins": 2,
+          "poles": 3,
+          "podiums": 6,
+          "starts": 23
+        },
+        {
+          "driverId": "vettel",
+          "driverName": "Sebastian Vettel",
+          "wins": 2,
+          "poles": 2,
+          "podiums": 5,
+          "starts": 16
+        },
+        {
+          "driverId": "webber",
+          "driverName": "Mark Webber",
+          "wins": 2,
+          "poles": 1,
+          "podiums": 5,
+          "starts": 12
+        },
+        {
+          "driverId": "max_verstappen",
+          "driverName": "Max Verstappen",
+          "wins": 2,
+          "poles": 2,
+          "podiums": 5,
+          "starts": 13
+        },
+        {
+          "driverId": "farina",
+          "driverName": "Nino Farina",
+          "wins": 1,
+          "poles": 2,
+          "podiums": 2,
+          "starts": 4
+        }
+      ]
+    },
+    "suzuka": {
+      "circuitId": "suzuka",
+      "raceCount": 36,
+      "log": {
+        "races_fetched": 36,
+        "races_total": 36,
+        "wins_fetched": 36,
+        "wins_total": 36,
+        "p2_fetched": 36,
+        "p2_total": 36,
+        "p3_fetched": 36,
+        "p3_total": 36,
+        "results_rows_fetched": 801,
+        "qual_rows_fetched": 514,
+        "poles_merged": 36,
+        "poles_from_qualifying": 24,
+        "poles_from_grid": 12
+      },
+      "driverFit": [
+        {
+          "driverId": "max_verstappen",
+          "driverName": "Max Verstappen",
+          "fitScore": 98,
+          "wins": 4,
+          "poles": 4,
+          "podiums": 7,
+          "starts": 10,
+          "rate": 19.6,
+          "shrunk": 14.601
+        },
+        {
+          "driverId": "vettel",
+          "driverName": "Sebastian Vettel",
+          "fitScore": 96,
+          "wins": 4,
+          "poles": 5,
+          "podiums": 8,
+          "starts": 12,
+          "rate": 17.833,
+          "shrunk": 13.901
+        },
+        {
+          "driverId": "michael_schumacher",
+          "driverName": "Michael Schumacher",
+          "fitScore": 94,
+          "wins": 6,
+          "poles": 8,
+          "podiums": 9,
+          "starts": 19,
+          "rate": 15.895,
+          "shrunk": 13.496
+        },
+        {
+          "driverId": "senna",
+          "driverName": "Ayrton Senna",
+          "fitScore": 86,
+          "wins": 2,
+          "poles": 3,
+          "podiums": 4,
+          "starts": 7,
+          "rate": 16.0,
+          "shrunk": 10.947
+        },
+        {
+          "driverId": "hamilton",
+          "driverName": "Lewis Hamilton",
+          "fitScore": 80,
+          "wins": 4,
+          "poles": 2,
+          "podiums": 7,
+          "starts": 16,
+          "rate": 11.0,
+          "shrunk": 9.221
+        }
+      ],
+      "topWins": [
+        {
+          "driverId": "michael_schumacher",
+          "driverName": "Michael Schumacher",
+          "wins": 6,
+          "poles": 8,
+          "podiums": 9,
+          "starts": 19
+        },
+        {
+          "driverId": "vettel",
+          "driverName": "Sebastian Vettel",
+          "wins": 4,
+          "poles": 5,
+          "podiums": 8,
+          "starts": 12
+        },
+        {
+          "driverId": "hamilton",
+          "driverName": "Lewis Hamilton",
+          "wins": 4,
+          "poles": 2,
+          "podiums": 7,
+          "starts": 16
+        },
+        {
+          "driverId": "max_verstappen",
+          "driverName": "Max Verstappen",
+          "wins": 4,
+          "poles": 4,
+          "podiums": 7,
+          "starts": 10
+        },
+        {
+          "driverId": "berger",
+          "driverName": "Gerhard Berger",
+          "wins": 2,
+          "poles": 2,
+          "podiums": 3,
+          "starts": 11
+        },
+        {
+          "driverId": "senna",
+          "driverName": "Ayrton Senna",
+          "wins": 2,
+          "poles": 3,
+          "podiums": 4,
+          "starts": 7
+        },
+        {
+          "driverId": "damon_hill",
+          "driverName": "Damon Hill",
+          "wins": 2,
+          "poles": 0,
+          "podiums": 2,
+          "starts": 7
+        },
+        {
+          "driverId": "hakkinen",
+          "driverName": "Mika H\u00e4kkinen",
+          "wins": 2,
+          "poles": 0,
+          "podiums": 6,
+          "starts": 11
+        },
+        {
+          "driverId": "nannini",
+          "driverName": "Alessandro Nannini",
+          "wins": 1,
+          "poles": 0,
+          "podiums": 1,
+          "starts": 3
+        },
+        {
+          "driverId": "piquet",
+          "driverName": "Nelson Piquet",
+          "wins": 1,
+          "poles": 0,
+          "podiums": 1,
+          "starts": 5
+        },
+        {
+          "driverId": "patrese",
+          "driverName": "Riccardo Patrese",
+          "wins": 1,
+          "poles": 0,
+          "podiums": 3,
+          "starts": 7
+        },
+        {
+          "driverId": "barrichello",
+          "driverName": "Rubens Barrichello",
+          "wins": 1,
+          "poles": 1,
+          "podiums": 2,
+          "starts": 17
+        },
+        {
+          "driverId": "raikkonen",
+          "driverName": "Kimi R\u00e4ikk\u00f6nen",
+          "wins": 1,
+          "poles": 0,
+          "podiums": 3,
+          "starts": 15
+        },
+        {
+          "driverId": "alonso",
+          "driverName": "Fernando Alonso",
+          "wins": 1,
+          "poles": 0,
+          "podiums": 4,
+          "starts": 20
+        },
+        {
+          "driverId": "button",
+          "driverName": "Jenson Button",
+          "wins": 1,
+          "poles": 0,
+          "podiums": 2,
+          "starts": 15
+        }
+      ]
+    },
+    "interlagos": {
+      "circuitId": "interlagos",
+      "raceCount": 43,
+      "log": {
+        "races_fetched": 43,
+        "races_total": 43,
+        "wins_fetched": 42,
+        "wins_total": 42,
+        "p2_fetched": 42,
+        "p2_total": 42,
+        "p3_fetched": 42,
+        "p3_total": 42,
+        "results_rows_fetched": 926,
+        "qual_rows_fetched": 596,
+        "poles_merged": 42,
+        "poles_from_qualifying": 28,
+        "poles_from_grid": 14
+      },
+      "driverFit": [
+        {
+          "driverId": "senna",
+          "driverName": "Ayrton Senna",
+          "fitScore": 98,
+          "wins": 2,
+          "poles": 3,
+          "podiums": 3,
+          "starts": 5,
+          "rate": 20.8,
+          "shrunk": 12.67
+        },
+        {
+          "driverId": "max_verstappen",
+          "driverName": "Max Verstappen",
+          "fitScore": 94,
+          "wins": 3,
+          "poles": 2,
+          "podiums": 7,
+          "starts": 10,
+          "rate": 15.1,
+          "shrunk": 11.502
+        },
+        {
+          "driverId": "montoya",
+          "driverName": "Juan Pablo Montoya",
+          "fitScore": 86,
+          "wins": 2,
+          "poles": 1,
+          "podiums": 2,
+          "starts": 5,
+          "rate": 15.2,
+          "shrunk": 9.559
+        },
+        {
+          "driverId": "michael_schumacher",
+          "driverName": "Michael Schumacher",
+          "fitScore": 84,
+          "wins": 4,
+          "poles": 1,
+          "podiums": 10,
+          "starts": 18,
+          "rate": 10.556,
+          "shrunk": 9.092
+        },
+        {
+          "driverId": "emerson_fittipaldi",
+          "driverName": "Emerson Fittipaldi",
+          "fitScore": 82,
+          "wins": 2,
+          "poles": 1,
+          "podiums": 3,
+          "starts": 7,
+          "rate": 12.0,
+          "shrunk": 8.548
+        }
+      ],
+      "topWins": [
+        {
+          "driverId": "michael_schumacher",
+          "driverName": "Michael Schumacher",
+          "wins": 4,
+          "poles": 1,
+          "podiums": 10,
+          "starts": 18
+        },
+        {
+          "driverId": "vettel",
+          "driverName": "Sebastian Vettel",
+          "wins": 3,
+          "poles": 2,
+          "podiums": 5,
+          "starts": 15
+        },
+        {
+          "driverId": "hamilton",
+          "driverName": "Lewis Hamilton",
+          "wins": 3,
+          "poles": 4,
+          "podiums": 7,
+          "starts": 18
+        },
+        {
+          "driverId": "max_verstappen",
+          "driverName": "Max Verstappen",
+          "wins": 3,
+          "poles": 2,
+          "podiums": 7,
+          "starts": 10
+        },
+        {
+          "driverId": "emerson_fittipaldi",
+          "driverName": "Emerson Fittipaldi",
+          "wins": 2,
+          "poles": 1,
+          "podiums": 3,
+          "starts": 7
+        },
+        {
+          "driverId": "senna",
+          "driverName": "Ayrton Senna",
+          "wins": 2,
+          "poles": 3,
+          "podiums": 3,
+          "starts": 5
+        },
+        {
+          "driverId": "hakkinen",
+          "driverName": "Mika H\u00e4kkinen",
+          "wins": 2,
+          "poles": 3,
+          "podiums": 2,
+          "starts": 10
+        },
+        {
+          "driverId": "montoya",
+          "driverName": "Juan Pablo Montoya",
+          "wins": 2,
+          "poles": 1,
+          "podiums": 2,
+          "starts": 5
+        },
+        {
+          "driverId": "massa",
+          "driverName": "Felipe Massa",
+          "wins": 2,
+          "poles": 3,
+          "podiums": 5,
+          "starts": 14
+        },
+        {
+          "driverId": "webber",
+          "driverName": "Mark Webber",
+          "wins": 2,
+          "poles": 0,
+          "podiums": 4,
+          "starts": 12
+        },
+        {
+          "driverId": "rosberg",
+          "driverName": "Nico Rosberg",
+          "wins": 2,
+          "poles": 2,
+          "podiums": 3,
+          "starts": 11
+        },
+        {
+          "driverId": "pace",
+          "driverName": "Carlos Pace",
+          "wins": 1,
+          "poles": 0,
+          "podiums": 1,
+          "starts": 5
+        },
+        {
+          "driverId": "lauda",
+          "driverName": "Niki Lauda",
+          "wins": 1,
+          "poles": 0,
+          "podiums": 2,
+          "starts": 6
+        },
+        {
+          "driverId": "reutemann",
+          "driverName": "Carlos Reutemann",
+          "wins": 1,
+          "poles": 0,
+          "podiums": 2,
+          "starts": 7
+        },
+        {
+          "driverId": "laffite",
+          "driverName": "Jacques Laffite",
+          "wins": 1,
+          "poles": 1,
+          "podiums": 1,
+          "starts": 5
+        }
+      ]
+    },
+    "bahrain": {
+      "circuitId": "bahrain",
+      "raceCount": 22,
+      "log": {
+        "races_fetched": 22,
+        "races_total": 22,
+        "wins_fetched": 22,
+        "wins_total": 22,
+        "p2_fetched": 22,
+        "p2_total": 22,
+        "p3_fetched": 22,
+        "p3_total": 22,
+        "results_rows_fetched": 460,
+        "qual_rows_fetched": 459,
+        "poles_merged": 22,
+        "poles_from_qualifying": 22,
+        "poles_from_grid": 0
+      },
+      "driverFit": [
+        {
+          "driverId": "hamilton",
+          "driverName": "Lewis Hamilton",
+          "fitScore": 98,
+          "wins": 5,
+          "poles": 3,
+          "podiums": 11,
+          "starts": 18,
+          "rate": 13.5,
+          "shrunk": 11.473
+        },
+        {
+          "driverId": "vettel",
+          "driverName": "Sebastian Vettel",
+          "fitScore": 92,
+          "wins": 4,
+          "poles": 3,
+          "podiums": 5,
+          "starts": 14,
+          "rate": 12.143,
+          "shrunk": 9.966
+        },
+        {
+          "driverId": "michael_schumacher",
+          "driverName": "Michael Schumacher",
+          "fitScore": 83,
+          "wins": 1,
+          "poles": 2,
+          "podiums": 2,
+          "starts": 5,
+          "rate": 12.2,
+          "shrunk": 7.822
+        },
+        {
+          "driverId": "max_verstappen",
+          "driverName": "Max Verstappen",
+          "fitScore": 82,
+          "wins": 2,
+          "poles": 3,
+          "podiums": 4,
+          "starts": 12,
+          "rate": 9.333,
+          "shrunk": 7.587
+        },
+        {
+          "driverId": "piastri",
+          "driverName": "Oscar Piastri",
+          "fitScore": 81,
+          "wins": 1,
+          "poles": 1,
+          "podiums": 1,
+          "starts": 3,
+          "rate": 14.333,
+          "shrunk": 7.485
+        }
+      ],
+      "topWins": [
+        {
+          "driverId": "hamilton",
+          "driverName": "Lewis Hamilton",
+          "wins": 5,
+          "poles": 3,
+          "podiums": 11,
+          "starts": 18
+        },
+        {
+          "driverId": "vettel",
+          "driverName": "Sebastian Vettel",
+          "wins": 4,
+          "poles": 3,
+          "podiums": 5,
+          "starts": 14
+        },
+        {
+          "driverId": "alonso",
+          "driverName": "Fernando Alonso",
+          "wins": 3,
+          "poles": 1,
+          "podiums": 4,
+          "starts": 18
+        },
+        {
+          "driverId": "massa",
+          "driverName": "Felipe Massa",
+          "wins": 2,
+          "poles": 1,
+          "podiums": 3,
+          "starts": 13
+        },
+        {
+          "driverId": "max_verstappen",
+          "driverName": "Max Verstappen",
+          "wins": 2,
+          "poles": 3,
+          "podiums": 4,
+          "starts": 12
+        },
+        {
+          "driverId": "michael_schumacher",
+          "driverName": "Michael Schumacher",
+          "wins": 1,
+          "poles": 2,
+          "podiums": 2,
+          "starts": 5
+        },
+        {
+          "driverId": "button",
+          "driverName": "Jenson Button",
+          "wins": 1,
+          "poles": 0,
+          "podiums": 2,
+          "starts": 12
+        },
+        {
+          "driverId": "rosberg",
+          "driverName": "Nico Rosberg",
+          "wins": 1,
+          "poles": 2,
+          "podiums": 3,
+          "starts": 10
+        },
+        {
+          "driverId": "perez",
+          "driverName": "Sergio P\u00e9rez",
+          "wins": 1,
+          "poles": 0,
+          "podiums": 4,
+          "starts": 14
+        },
+        {
+          "driverId": "leclerc",
+          "driverName": "Charles Leclerc",
+          "wins": 1,
+          "poles": 2,
+          "podiums": 2,
+          "starts": 9
+        },
+        {
+          "driverId": "piastri",
+          "driverName": "Oscar Piastri",
+          "wins": 1,
+          "poles": 1,
+          "podiums": 1,
+          "starts": 3
+        }
+      ]
+    },
+    "abu-dhabi": {
+      "circuitId": "yas_marina",
+      "raceCount": 18,
+      "log": {
+        "races_fetched": 18,
+        "races_total": 18,
+        "wins_fetched": 17,
+        "wins_total": 17,
+        "p2_fetched": 17,
+        "p2_total": 17,
+        "p3_fetched": 17,
+        "p3_total": 17,
+        "results_rows_fetched": 356,
+        "qual_rows_fetched": 353,
+        "poles_merged": 17,
+        "poles_from_qualifying": 17,
+        "poles_from_grid": 0
+      },
+      "driverFit": [
+        {
+          "driverId": "max_verstappen",
+          "driverName": "Max Verstappen",
+          "fitScore": 98,
+          "wins": 5,
+          "poles": 5,
+          "podiums": 7,
+          "starts": 11,
+          "rate": 21.0,
+          "shrunk": 15.919
+        },
+        {
+          "driverId": "hamilton",
+          "driverName": "Lewis Hamilton",
+          "fitScore": 88,
+          "wins": 5,
+          "poles": 5,
+          "podiums": 10,
+          "starts": 17,
+          "rate": 15.0,
+          "shrunk": 12.513
+        },
+        {
+          "driverId": "vettel",
+          "driverName": "Sebastian Vettel",
+          "fitScore": 77,
+          "wins": 3,
+          "poles": 2,
+          "podiums": 7,
+          "starts": 14,
+          "rate": 10.786,
+          "shrunk": 8.821
+        },
+        {
+          "driverId": "rosberg",
+          "driverName": "Nico Rosberg",
+          "fitScore": 69,
+          "wins": 1,
+          "poles": 2,
+          "podiums": 3,
+          "starts": 8,
+          "rate": 8.625,
+          "shrunk": 6.399
+        },
+        {
+          "driverId": "norris",
+          "driverName": "Lando Norris",
+          "fitScore": 66,
+          "wins": 1,
+          "poles": 1,
+          "podiums": 2,
+          "starts": 7,
+          "rate": 7.286,
+          "shrunk": 5.344
+        }
+      ],
+      "topWins": [
+        {
+          "driverId": "hamilton",
+          "driverName": "Lewis Hamilton",
+          "wins": 5,
+          "poles": 5,
+          "podiums": 10,
+          "starts": 17
+        },
+        {
+          "driverId": "max_verstappen",
+          "driverName": "Max Verstappen",
+          "wins": 5,
+          "poles": 5,
+          "podiums": 7,
+          "starts": 11
+        },
+        {
+          "driverId": "vettel",
+          "driverName": "Sebastian Vettel",
+          "wins": 3,
+          "poles": 2,
+          "podiums": 7,
+          "starts": 14
+        },
+        {
+          "driverId": "raikkonen",
+          "driverName": "Kimi R\u00e4ikk\u00f6nen",
+          "wins": 1,
+          "poles": 0,
+          "podiums": 2,
+          "starts": 11
+        },
+        {
+          "driverId": "rosberg",
+          "driverName": "Nico Rosberg",
+          "wins": 1,
+          "poles": 2,
+          "podiums": 3,
+          "starts": 8
+        },
+        {
+          "driverId": "bottas",
+          "driverName": "Valtteri Bottas",
+          "wins": 1,
+          "poles": 1,
+          "podiums": 3,
+          "starts": 12
+        },
+        {
+          "driverId": "norris",
+          "driverName": "Lando Norris",
+          "wins": 1,
+          "poles": 1,
+          "podiums": 2,
+          "starts": 7
+        }
+      ]
+    },
+    "jeddah": {
+      "circuitId": "jeddah",
+      "raceCount": 5,
+      "log": {
+        "races_fetched": 5,
+        "races_total": 5,
+        "wins_fetched": 5,
+        "wins_total": 5,
+        "p2_fetched": 5,
+        "p2_total": 5,
+        "p3_fetched": 5,
+        "p3_total": 5,
+        "results_rows_fetched": 100,
+        "qual_rows_fetched": 100,
+        "poles_merged": 5,
+        "poles_from_qualifying": 5,
+        "poles_from_grid": 0
+      },
+      "driverFit": [
+        {
+          "driverId": "max_verstappen",
+          "driverName": "Max Verstappen",
+          "fitScore": 98,
+          "wins": 2,
+          "poles": 2,
+          "podiums": 5,
+          "starts": 5,
+          "rate": 22.0,
+          "shrunk": 13.795
+        },
+        {
+          "driverId": "perez",
+          "driverName": "Sergio P\u00e9rez",
+          "fitScore": 83,
+          "wins": 1,
+          "poles": 2,
+          "podiums": 2,
+          "starts": 4,
+          "rate": 15.25,
+          "shrunk": 9.395
+        },
+        {
+          "driverId": "piastri",
+          "driverName": "Oscar Piastri",
+          "fitScore": 73,
+          "wins": 1,
+          "poles": 0,
+          "podiums": 1,
+          "starts": 3,
+          "rate": 11.0,
+          "shrunk": 6.737
+        },
+        {
+          "driverId": "hamilton",
+          "driverName": "Lewis Hamilton",
+          "fitScore": 72,
+          "wins": 1,
+          "poles": 1,
+          "podiums": 1,
+          "starts": 5,
+          "rate": 8.6,
+          "shrunk": 6.351
+        },
+        {
+          "driverId": "leclerc",
+          "driverName": "Charles Leclerc",
+          "fitScore": 65,
+          "wins": 0,
+          "poles": 0,
+          "podiums": 3,
+          "starts": 5,
+          "rate": 4.8,
+          "shrunk": 4.24
+        }
+      ],
+      "topWins": [
+        {
+          "driverId": "max_verstappen",
+          "driverName": "Max Verstappen",
+          "wins": 2,
+          "poles": 2,
+          "podiums": 5,
+          "starts": 5
+        },
+        {
+          "driverId": "hamilton",
+          "driverName": "Lewis Hamilton",
+          "wins": 1,
+          "poles": 1,
+          "podiums": 1,
+          "starts": 5
+        },
+        {
+          "driverId": "perez",
+          "driverName": "Sergio P\u00e9rez",
+          "wins": 1,
+          "poles": 2,
+          "podiums": 2,
+          "starts": 4
+        },
+        {
+          "driverId": "piastri",
+          "driverName": "Oscar Piastri",
+          "wins": 1,
+          "poles": 0,
+          "podiums": 1,
+          "starts": 3
+        }
+      ]
+    },
+    "melbourne": {
+      "circuitId": "albert_park",
+      "raceCount": 29,
+      "log": {
+        "races_fetched": 29,
+        "races_total": 29,
+        "wins_fetched": 29,
+        "wins_total": 29,
+        "p2_fetched": 29,
+        "p2_total": 29,
+        "p3_fetched": 29,
+        "p3_total": 29,
+        "results_rows_fetched": 611,
+        "qual_rows_fetched": 568,
+        "poles_merged": 29,
+        "poles_from_qualifying": 27,
+        "poles_from_grid": 2
+      },
+      "driverFit": [
+        {
+          "driverId": "vettel",
+          "driverName": "Sebastian Vettel",
+          "fitScore": 98,
+          "wins": 3,
+          "poles": 3,
+          "podiums": 7,
+          "starts": 13,
+          "rate": 12.385,
+          "shrunk": 10.049
+        },
+        {
+          "driverId": "hamilton",
+          "driverName": "Lewis Hamilton",
+          "fitScore": 98,
+          "wins": 2,
+          "poles": 8,
+          "podiums": 10,
+          "starts": 18,
+          "rate": 11.667,
+          "shrunk": 9.992
+        },
+        {
+          "driverId": "michael_schumacher",
+          "driverName": "Michael Schumacher",
+          "fitScore": 98,
+          "wins": 4,
+          "poles": 3,
+          "podiums": 5,
+          "starts": 14,
+          "rate": 12.143,
+          "shrunk": 9.991
+        },
+        {
+          "driverId": "hakkinen",
+          "driverName": "Mika H\u00e4kkinen",
+          "fitScore": 89,
+          "wins": 1,
+          "poles": 3,
+          "podiums": 2,
+          "starts": 6,
+          "rate": 11.833,
+          "shrunk": 8.083
+        },
+        {
+          "driverId": "russell",
+          "driverName": "George Russell",
+          "fitScore": 83,
+          "wins": 1,
+          "poles": 1,
+          "podiums": 3,
+          "starts": 6,
+          "rate": 9.833,
+          "shrunk": 6.883
+        }
+      ],
+      "topWins": [
+        {
+          "driverId": "michael_schumacher",
+          "driverName": "Michael Schumacher",
+          "wins": 4,
+          "poles": 3,
+          "podiums": 5,
+          "starts": 14
+        },
+        {
+          "driverId": "button",
+          "driverName": "Jenson Button",
+          "wins": 3,
+          "poles": 2,
+          "podiums": 4,
+          "starts": 17
+        },
+        {
+          "driverId": "vettel",
+          "driverName": "Sebastian Vettel",
+          "wins": 3,
+          "poles": 3,
+          "podiums": 7,
+          "starts": 13
+        },
+        {
+          "driverId": "coulthard",
+          "driverName": "David Coulthard",
+          "wins": 2,
+          "poles": 0,
+          "podiums": 4,
+          "starts": 13
+        },
+        {
+          "driverId": "raikkonen",
+          "driverName": "Kimi R\u00e4ikk\u00f6nen",
+          "wins": 2,
+          "poles": 1,
+          "podiums": 6,
+          "starts": 17
+        },
+        {
+          "driverId": "hamilton",
+          "driverName": "Lewis Hamilton",
+          "wins": 2,
+          "poles": 8,
+          "podiums": 10,
+          "starts": 18
+        },
+        {
+          "driverId": "rosberg",
+          "driverName": "Nico Rosberg",
+          "wins": 2,
+          "poles": 0,
+          "podiums": 4,
+          "starts": 11
+        },
+        {
+          "driverId": "damon_hill",
+          "driverName": "Damon Hill",
+          "wins": 1,
+          "poles": 0,
+          "podiums": 1,
+          "starts": 4
+        },
+        {
+          "driverId": "hakkinen",
+          "driverName": "Mika H\u00e4kkinen",
+          "wins": 1,
+          "poles": 3,
+          "podiums": 2,
+          "starts": 6
+        },
+        {
+          "driverId": "irvine",
+          "driverName": "Eddie Irvine",
+          "wins": 1,
+          "poles": 0,
+          "podiums": 2,
+          "starts": 7
+        },
+        {
+          "driverId": "fisichella",
+          "driverName": "Giancarlo Fisichella",
+          "wins": 1,
+          "poles": 1,
+          "podiums": 1,
+          "starts": 14
+        },
+        {
+          "driverId": "alonso",
+          "driverName": "Fernando Alonso",
+          "wins": 1,
+          "poles": 0,
+          "podiums": 6,
+          "starts": 21
+        },
+        {
+          "driverId": "bottas",
+          "driverName": "Valtteri Bottas",
+          "wins": 1,
+          "poles": 0,
+          "podiums": 2,
+          "starts": 11
+        },
+        {
+          "driverId": "leclerc",
+          "driverName": "Charles Leclerc",
+          "wins": 1,
+          "poles": 1,
+          "podiums": 3,
+          "starts": 7
+        },
+        {
+          "driverId": "max_verstappen",
+          "driverName": "Max Verstappen",
+          "wins": 1,
+          "poles": 2,
+          "podiums": 3,
+          "starts": 10
+        }
+      ]
+    },
+    "shanghai": {
+      "circuitId": "shanghai",
+      "raceCount": 19,
+      "log": {
+        "races_fetched": 19,
+        "races_total": 19,
+        "wins_fetched": 19,
+        "wins_total": 19,
+        "p2_fetched": 19,
+        "p2_total": 19,
+        "p3_fetched": 19,
+        "p3_total": 19,
+        "results_rows_fetched": 404,
+        "qual_rows_fetched": 402,
+        "poles_merged": 19,
+        "poles_from_qualifying": 19,
+        "poles_from_grid": 0
+      },
+      "driverFit": [
+        {
+          "driverId": "hamilton",
+          "driverName": "Lewis Hamilton",
+          "fitScore": 98,
+          "wins": 6,
+          "poles": 6,
+          "podiums": 10,
+          "starts": 16,
+          "rate": 18.125,
+          "shrunk": 14.946
+        },
+        {
+          "driverId": "rosberg",
+          "driverName": "Nico Rosberg",
+          "fitScore": 75,
+          "wins": 2,
+          "poles": 2,
+          "podiums": 5,
+          "starts": 11,
+          "rate": 10.0,
+          "shrunk": 7.928
+        },
+        {
+          "driverId": "piastri",
+          "driverName": "Oscar Piastri",
+          "fitScore": 74,
+          "wins": 1,
+          "poles": 1,
+          "podiums": 1,
+          "starts": 3,
+          "rate": 14.333,
+          "shrunk": 7.417
+        },
+        {
+          "driverId": "vettel",
+          "driverName": "Sebastian Vettel",
+          "fitScore": 73,
+          "wins": 1,
+          "poles": 4,
+          "podiums": 6,
+          "starts": 13,
+          "rate": 8.692,
+          "shrunk": 7.172
+        },
+        {
+          "driverId": "alonso",
+          "driverName": "Fernando Alonso",
+          "fitScore": 67,
+          "wins": 2,
+          "poles": 2,
+          "podiums": 5,
+          "starts": 18,
+          "rate": 6.111,
+          "shrunk": 5.406
+        }
+      ],
+      "topWins": [
+        {
+          "driverId": "hamilton",
+          "driverName": "Lewis Hamilton",
+          "wins": 6,
+          "poles": 6,
+          "podiums": 10,
+          "starts": 16
+        },
+        {
+          "driverId": "alonso",
+          "driverName": "Fernando Alonso",
+          "wins": 2,
+          "poles": 2,
+          "podiums": 5,
+          "starts": 18
+        },
+        {
+          "driverId": "rosberg",
+          "driverName": "Nico Rosberg",
+          "wins": 2,
+          "poles": 2,
+          "podiums": 5,
+          "starts": 11
+        },
+        {
+          "driverId": "barrichello",
+          "driverName": "Rubens Barrichello",
+          "wins": 1,
+          "poles": 1,
+          "podiums": 1,
+          "starts": 8
+        },
+        {
+          "driverId": "michael_schumacher",
+          "driverName": "Michael Schumacher",
+          "wins": 1,
+          "poles": 0,
+          "podiums": 1,
+          "starts": 6
+        },
+        {
+          "driverId": "raikkonen",
+          "driverName": "Kimi R\u00e4ikk\u00f6nen",
+          "wins": 1,
+          "poles": 0,
+          "podiums": 6,
+          "starts": 14
+        },
+        {
+          "driverId": "vettel",
+          "driverName": "Sebastian Vettel",
+          "wins": 1,
+          "poles": 4,
+          "podiums": 6,
+          "starts": 13
+        },
+        {
+          "driverId": "button",
+          "driverName": "Jenson Button",
+          "wins": 1,
+          "poles": 0,
+          "podiums": 4,
+          "starts": 13
+        },
+        {
+          "driverId": "ricciardo",
+          "driverName": "Daniel Ricciardo",
+          "wins": 1,
+          "poles": 0,
+          "podiums": 1,
+          "starts": 9
+        },
+        {
+          "driverId": "max_verstappen",
+          "driverName": "Max Verstappen",
+          "wins": 1,
+          "poles": 1,
+          "podiums": 2,
+          "starts": 8
+        },
+        {
+          "driverId": "piastri",
+          "driverName": "Oscar Piastri",
+          "wins": 1,
+          "poles": 1,
+          "podiums": 1,
+          "starts": 3
+        },
+        {
+          "driverId": "antonelli",
+          "driverName": "Andrea Kimi Antonelli",
+          "wins": 1,
+          "poles": 1,
+          "podiums": 1,
+          "starts": 2
+        }
+      ]
+    },
+    "miami": {
+      "circuitId": "miami",
+      "raceCount": 5,
+      "log": {
+        "races_fetched": 5,
+        "races_total": 5,
+        "wins_fetched": 5,
+        "wins_total": 5,
+        "p2_fetched": 5,
+        "p2_total": 5,
+        "p3_fetched": 5,
+        "p3_total": 5,
+        "results_rows_fetched": 102,
+        "qual_rows_fetched": 102,
+        "poles_merged": 5,
+        "poles_from_qualifying": 5,
+        "poles_from_grid": 0
+      },
+      "driverFit": [
+        {
+          "driverId": "max_verstappen",
+          "driverName": "Max Verstappen",
+          "fitScore": 98,
+          "wins": 2,
+          "poles": 2,
+          "podiums": 3,
+          "starts": 5,
+          "rate": 18.8,
+          "shrunk": 11.762
+        },
+        {
+          "driverId": "norris",
+          "driverName": "Lando Norris",
+          "fitScore": 78,
+          "wins": 1,
+          "poles": 0,
+          "podiums": 3,
+          "starts": 5,
+          "rate": 9.8,
+          "shrunk": 6.762
+        },
+        {
+          "driverId": "piastri",
+          "driverName": "Oscar Piastri",
+          "fitScore": 77,
+          "wins": 1,
+          "poles": 0,
+          "podiums": 2,
+          "starts": 4,
+          "rate": 10.25,
+          "shrunk": 6.607
+        },
+        {
+          "driverId": "leclerc",
+          "driverName": "Charles Leclerc",
+          "fitScore": 67,
+          "wins": 0,
+          "poles": 1,
+          "podiums": 2,
+          "starts": 5,
+          "rate": 5.2,
+          "shrunk": 4.206
+        },
+        {
+          "driverId": "perez",
+          "driverName": "Sergio P\u00e9rez",
+          "fitScore": 65,
+          "wins": 0,
+          "poles": 1,
+          "podiums": 1,
+          "starts": 4,
+          "rate": 4.5,
+          "shrunk": 3.732
+        }
+      ],
+      "topWins": [
+        {
+          "driverId": "max_verstappen",
+          "driverName": "Max Verstappen",
+          "wins": 2,
+          "poles": 2,
+          "podiums": 3,
+          "starts": 5
+        },
+        {
+          "driverId": "norris",
+          "driverName": "Lando Norris",
+          "wins": 1,
+          "poles": 0,
+          "podiums": 3,
+          "starts": 5
+        },
+        {
+          "driverId": "piastri",
+          "driverName": "Oscar Piastri",
+          "wins": 1,
+          "poles": 0,
+          "podiums": 2,
+          "starts": 4
+        },
+        {
+          "driverId": "antonelli",
+          "driverName": "Andrea Kimi Antonelli",
+          "wins": 1,
+          "poles": 1,
+          "podiums": 1,
+          "starts": 2
+        }
+      ]
+    },
+    "imola": {
+      "circuitId": "imola",
+      "raceCount": 32,
+      "log": {
+        "races_fetched": 32,
+        "races_total": 32,
+        "wins_fetched": 32,
+        "wins_total": 32,
+        "p2_fetched": 32,
+        "p2_total": 32,
+        "p3_fetched": 32,
+        "p3_total": 32,
+        "results_rows_fetched": 740,
+        "qual_rows_fetched": 324,
+        "poles_merged": 32,
+        "poles_from_qualifying": 15,
+        "poles_from_grid": 17
+      },
+      "driverFit": [
+        {
+          "driverId": "max_verstappen",
+          "driverName": "Max Verstappen",
+          "fitScore": 98,
+          "wins": 4,
+          "poles": 2,
+          "podiums": 4,
+          "starts": 5,
+          "rate": 30.4,
+          "shrunk": 17.915
+        },
+        {
+          "driverId": "michael_schumacher",
+          "driverName": "Michael Schumacher",
+          "fitScore": 97,
+          "wins": 7,
+          "poles": 5,
+          "podiums": 12,
+          "starts": 15,
+          "rate": 21.4,
+          "shrunk": 17.381
+        },
+        {
+          "driverId": "senna",
+          "driverName": "Ayrton Senna",
+          "fitScore": 89,
+          "wins": 3,
+          "poles": 8,
+          "podiums": 5,
+          "starts": 10,
+          "rate": 19.5,
+          "shrunk": 14.588
+        },
+        {
+          "driverId": "prost",
+          "driverName": "Alain Prost",
+          "fitScore": 72,
+          "wins": 3,
+          "poles": 1,
+          "podiums": 6,
+          "starts": 13,
+          "rate": 10.231,
+          "shrunk": 8.367
+        },
+        {
+          "driverId": "damon_hill",
+          "driverName": "Damon Hill",
+          "fitScore": 68,
+          "wins": 2,
+          "poles": 0,
+          "podiums": 2,
+          "starts": 7,
+          "rate": 9.429,
+          "shrunk": 6.839
+        }
+      ],
+      "topWins": [
+        {
+          "driverId": "michael_schumacher",
+          "driverName": "Michael Schumacher",
+          "wins": 7,
+          "poles": 5,
+          "podiums": 12,
+          "starts": 15
+        },
+        {
+          "driverId": "max_verstappen",
+          "driverName": "Max Verstappen",
+          "wins": 4,
+          "poles": 2,
+          "podiums": 4,
+          "starts": 5
+        },
+        {
+          "driverId": "prost",
+          "driverName": "Alain Prost",
+          "wins": 3,
+          "poles": 1,
+          "podiums": 6,
+          "starts": 13
+        },
+        {
+          "driverId": "senna",
+          "driverName": "Ayrton Senna",
+          "wins": 3,
+          "poles": 8,
+          "podiums": 5,
+          "starts": 10
+        },
+        {
+          "driverId": "piquet",
+          "driverName": "Nelson Piquet",
+          "wins": 2,
+          "poles": 1,
+          "podiums": 4,
+          "starts": 11
+        },
+        {
+          "driverId": "mansell",
+          "driverName": "Nigel Mansell",
+          "wins": 2,
+          "poles": 1,
+          "podiums": 2,
+          "starts": 12
+        },
+        {
+          "driverId": "damon_hill",
+          "driverName": "Damon Hill",
+          "wins": 2,
+          "poles": 0,
+          "podiums": 2,
+          "starts": 7
+        },
+        {
+          "driverId": "pironi",
+          "driverName": "Didier Pironi",
+          "wins": 1,
+          "poles": 0,
+          "podiums": 1,
+          "starts": 3
+        },
+        {
+          "driverId": "tambay",
+          "driverName": "Patrick Tambay",
+          "wins": 1,
+          "poles": 0,
+          "podiums": 2,
+          "starts": 5
+        },
+        {
+          "driverId": "angelis",
+          "driverName": "Elio de Angelis",
+          "wins": 1,
+          "poles": 0,
+          "podiums": 2,
+          "starts": 6
+        },
+        {
+          "driverId": "patrese",
+          "driverName": "Riccardo Patrese",
+          "wins": 1,
+          "poles": 0,
+          "podiums": 3,
+          "starts": 13
+        },
+        {
+          "driverId": "frentzen",
+          "driverName": "Heinz-Harald Frentzen",
+          "wins": 1,
+          "poles": 0,
+          "podiums": 1,
+          "starts": 10
+        },
+        {
+          "driverId": "coulthard",
+          "driverName": "David Coulthard",
+          "wins": 1,
+          "poles": 2,
+          "podiums": 4,
+          "starts": 12
+        },
+        {
+          "driverId": "ralf_schumacher",
+          "driverName": "Ralf Schumacher",
+          "wins": 1,
+          "poles": 0,
+          "podiums": 2,
+          "starts": 10
+        },
+        {
+          "driverId": "alonso",
+          "driverName": "Fernando Alonso",
+          "wins": 1,
+          "poles": 0,
+          "podiums": 2,
+          "starts": 9
+        }
+      ]
+    },
+    "montreal": {
+      "circuitId": "villeneuve",
+      "raceCount": 45,
+      "log": {
+        "races_fetched": 45,
+        "races_total": 45,
+        "wins_fetched": 45,
+        "wins_total": 45,
+        "p2_fetched": 45,
+        "p2_total": 45,
+        "p3_fetched": 45,
+        "p3_total": 45,
+        "results_rows_fetched": 1026,
+        "qual_rows_fetched": 514,
+        "poles_merged": 45,
+        "poles_from_qualifying": 24,
+        "poles_from_grid": 21
+      },
+      "driverFit": [
+        {
+          "driverId": "hamilton",
+          "driverName": "Lewis Hamilton",
+          "fitScore": 98,
+          "wins": 7,
+          "poles": 6,
+          "podiums": 11,
+          "starts": 17,
+          "rate": 19.0,
+          "shrunk": 15.778
+        },
+        {
+          "driverId": "michael_schumacher",
+          "driverName": "Michael Schumacher",
+          "fitScore": 97,
+          "wins": 7,
+          "poles": 6,
+          "podiums": 12,
+          "starts": 18,
+          "rate": 18.389,
+          "shrunk": 15.425
+        },
+        {
+          "driverId": "max_verstappen",
+          "driverName": "Max Verstappen",
+          "fitScore": 83,
+          "wins": 3,
+          "poles": 2,
+          "podiums": 6,
+          "starts": 10,
+          "rate": 14.3,
+          "shrunk": 10.81
+        },
+        {
+          "driverId": "vettel",
+          "driverName": "Sebastian Vettel",
+          "fitScore": 80,
+          "wins": 2,
+          "poles": 5,
+          "podiums": 6,
+          "starts": 12,
+          "rate": 12.333,
+          "shrunk": 9.771
+        },
+        {
+          "driverId": "jones",
+          "driverName": "Alan Jones",
+          "fitScore": 79,
+          "wins": 2,
+          "poles": 1,
+          "podiums": 2,
+          "starts": 5,
+          "rate": 15.2,
+          "shrunk": 9.371
+        }
+      ],
+      "topWins": [
+        {
+          "driverId": "michael_schumacher",
+          "driverName": "Michael Schumacher",
+          "wins": 7,
+          "poles": 6,
+          "podiums": 12,
+          "starts": 18
+        },
+        {
+          "driverId": "hamilton",
+          "driverName": "Lewis Hamilton",
+          "wins": 7,
+          "poles": 6,
+          "podiums": 11,
+          "starts": 17
+        },
+        {
+          "driverId": "piquet",
+          "driverName": "Nelson Piquet",
+          "wins": 3,
+          "poles": 3,
+          "podiums": 5,
+          "starts": 13
+        },
+        {
+          "driverId": "max_verstappen",
+          "driverName": "Max Verstappen",
+          "wins": 3,
+          "poles": 2,
+          "podiums": 6,
+          "starts": 10
+        },
+        {
+          "driverId": "jones",
+          "driverName": "Alan Jones",
+          "wins": 2,
+          "poles": 1,
+          "podiums": 2,
+          "starts": 5
+        },
+        {
+          "driverId": "senna",
+          "driverName": "Ayrton Senna",
+          "wins": 2,
+          "poles": 3,
+          "podiums": 2,
+          "starts": 9
+        },
+        {
+          "driverId": "vettel",
+          "driverName": "Sebastian Vettel",
+          "wins": 2,
+          "poles": 5,
+          "podiums": 6,
+          "starts": 12
+        },
+        {
+          "driverId": "gilles_villeneuve",
+          "driverName": "Gilles Villeneuve",
+          "wins": 1,
+          "poles": 0,
+          "podiums": 3,
+          "starts": 4
+        },
+        {
+          "driverId": "laffite",
+          "driverName": "Jacques Laffite",
+          "wins": 1,
+          "poles": 0,
+          "podiums": 1,
+          "starts": 9
+        },
+        {
+          "driverId": "arnoux",
+          "driverName": "Ren\u00e9 Arnoux",
+          "wins": 1,
+          "poles": 1,
+          "podiums": 1,
+          "starts": 10
+        },
+        {
+          "driverId": "alboreto",
+          "driverName": "Michele Alboreto",
+          "wins": 1,
+          "poles": 0,
+          "podiums": 1,
+          "starts": 12
+        },
+        {
+          "driverId": "mansell",
+          "driverName": "Nigel Mansell",
+          "wins": 1,
+          "poles": 1,
+          "podiums": 2,
+          "starts": 11
+        },
+        {
+          "driverId": "boutsen",
+          "driverName": "Thierry Boutsen",
+          "wins": 1,
+          "poles": 0,
+          "podiums": 2,
+          "starts": 10
+        },
+        {
+          "driverId": "berger",
+          "driverName": "Gerhard Berger",
+          "wins": 1,
+          "poles": 0,
+          "podiums": 1,
+          "starts": 11
+        },
+        {
+          "driverId": "prost",
+          "driverName": "Alain Prost",
+          "wins": 1,
+          "poles": 2,
+          "podiums": 5,
+          "starts": 12
+        }
+      ]
+    },
+    "barcelona": {
+      "circuitId": "catalunya",
+      "raceCount": 36,
+      "log": {
+        "races_fetched": 36,
+        "races_total": 36,
+        "wins_fetched": 36,
+        "wins_total": 36,
+        "p2_fetched": 36,
+        "p2_total": 36,
+        "p3_fetched": 36,
+        "p3_total": 36,
+        "results_rows_fetched": 784,
+        "qual_rows_fetched": 597,
+        "poles_merged": 36,
+        "poles_from_qualifying": 28,
+        "poles_from_grid": 8
+      },
+      "driverFit": [
+        {
+          "driverId": "hamilton",
+          "driverName": "Lewis Hamilton",
+          "fitScore": 98,
+          "wins": 7,
+          "poles": 7,
+          "podiums": 13,
+          "starts": 20,
+          "rate": 17.45,
+          "shrunk": 14.907
+        },
+        {
+          "driverId": "michael_schumacher",
+          "driverName": "Michael Schumacher",
+          "fitScore": 95,
+          "wins": 6,
+          "poles": 7,
+          "podiums": 12,
+          "starts": 19,
+          "rate": 16.632,
+          "shrunk": 14.12
+        },
+        {
+          "driverId": "mansell",
+          "driverName": "Nigel Mansell",
+          "fitScore": 89,
+          "wins": 2,
+          "poles": 1,
+          "podiums": 2,
+          "starts": 3,
+          "rate": 25.333,
+          "shrunk": 12.109
+        },
+        {
+          "driverId": "max_verstappen",
+          "driverName": "Max Verstappen",
+          "fitScore": 87,
+          "wins": 4,
+          "poles": 1,
+          "podiums": 8,
+          "starts": 12,
+          "rate": 14.5,
+          "shrunk": 11.423
+        },
+        {
+          "driverId": "hakkinen",
+          "driverName": "Mika H\u00e4kkinen",
+          "fitScore": 79,
+          "wins": 3,
+          "poles": 2,
+          "podiums": 3,
+          "starts": 10,
+          "rate": 11.9,
+          "shrunk": 9.126
+        }
+      ],
+      "topWins": [
+        {
+          "driverId": "hamilton",
+          "driverName": "Lewis Hamilton",
+          "wins": 7,
+          "poles": 7,
+          "podiums": 13,
+          "starts": 20
+        },
+        {
+          "driverId": "michael_schumacher",
+          "driverName": "Michael Schumacher",
+          "wins": 6,
+          "poles": 7,
+          "podiums": 12,
+          "starts": 19
+        },
+        {
+          "driverId": "max_verstappen",
+          "driverName": "Max Verstappen",
+          "wins": 4,
+          "poles": 1,
+          "podiums": 8,
+          "starts": 12
+        },
+        {
+          "driverId": "hakkinen",
+          "driverName": "Mika H\u00e4kkinen",
+          "wins": 3,
+          "poles": 2,
+          "podiums": 3,
+          "starts": 10
+        },
+        {
+          "driverId": "mansell",
+          "driverName": "Nigel Mansell",
+          "wins": 2,
+          "poles": 1,
+          "podiums": 2,
+          "starts": 3
+        },
+        {
+          "driverId": "raikkonen",
+          "driverName": "Kimi R\u00e4ikk\u00f6nen",
+          "wins": 2,
+          "poles": 2,
+          "podiums": 5,
+          "starts": 19
+        },
+        {
+          "driverId": "alonso",
+          "driverName": "Fernando Alonso",
+          "wins": 2,
+          "poles": 1,
+          "podiums": 7,
+          "starts": 23
+        },
+        {
+          "driverId": "prost",
+          "driverName": "Alain Prost",
+          "wins": 1,
+          "poles": 1,
+          "podiums": 2,
+          "starts": 2
+        },
+        {
+          "driverId": "damon_hill",
+          "driverName": "Damon Hill",
+          "wins": 1,
+          "poles": 1,
+          "podiums": 1,
+          "starts": 7
+        },
+        {
+          "driverId": "villeneuve",
+          "driverName": "Jacques Villeneuve",
+          "wins": 1,
+          "poles": 1,
+          "podiums": 3,
+          "starts": 10
+        },
+        {
+          "driverId": "massa",
+          "driverName": "Felipe Massa",
+          "wins": 1,
+          "poles": 1,
+          "podiums": 3,
+          "starts": 15
+        },
+        {
+          "driverId": "button",
+          "driverName": "Jenson Button",
+          "wins": 1,
+          "poles": 1,
+          "podiums": 2,
+          "starts": 16
+        },
+        {
+          "driverId": "webber",
+          "driverName": "Mark Webber",
+          "wins": 1,
+          "poles": 2,
+          "podiums": 2,
+          "starts": 12
+        },
+        {
+          "driverId": "vettel",
+          "driverName": "Sebastian Vettel",
+          "wins": 1,
+          "poles": 0,
+          "podiums": 5,
+          "starts": 15
+        },
+        {
+          "driverId": "maldonado",
+          "driverName": "Pastor Maldonado",
+          "wins": 1,
+          "poles": 0,
+          "podiums": 1,
+          "starts": 5
+        }
+      ]
+    },
+    "hungaroring": {
+      "circuitId": "hungaroring",
+      "raceCount": 41,
+      "log": {
+        "races_fetched": 41,
+        "races_total": 41,
+        "wins_fetched": 41,
+        "wins_total": 41,
+        "p2_fetched": 41,
+        "p2_total": 41,
+        "p3_fetched": 41,
+        "p3_total": 41,
+        "results_rows_fetched": 911,
+        "qual_rows_fetched": 554,
+        "poles_merged": 41,
+        "poles_from_qualifying": 26,
+        "poles_from_grid": 15
+      },
+      "driverFit": [
+        {
+          "driverId": "hamilton",
+          "driverName": "Lewis Hamilton",
+          "fitScore": 98,
+          "wins": 8,
+          "poles": 8,
+          "podiums": 12,
+          "starts": 20,
+          "rate": 18.8,
+          "shrunk": 16.019
+        },
+        {
+          "driverId": "senna",
+          "driverName": "Ayrton Senna",
+          "fitScore": 92,
+          "wins": 3,
+          "poles": 3,
+          "podiums": 7,
+          "starts": 8,
+          "rate": 20.125,
+          "shrunk": 14.121
+        },
+        {
+          "driverId": "michael_schumacher",
+          "driverName": "Michael Schumacher",
+          "fitScore": 83,
+          "wins": 4,
+          "poles": 7,
+          "podiums": 7,
+          "starts": 17,
+          "rate": 13.294,
+          "shrunk": 11.164
+        },
+        {
+          "driverId": "norris",
+          "driverName": "Lando Norris",
+          "fitScore": 78,
+          "wins": 2,
+          "poles": 2,
+          "podiums": 4,
+          "starts": 8,
+          "rate": 12.75,
+          "shrunk": 9.205
+        },
+        {
+          "driverId": "damon_hill",
+          "driverName": "Damon Hill",
+          "fitScore": 77,
+          "wins": 2,
+          "poles": 1,
+          "podiums": 5,
+          "starts": 8,
+          "rate": 12.5,
+          "shrunk": 9.038
+        }
+      ],
+      "topWins": [
+        {
+          "driverId": "hamilton",
+          "driverName": "Lewis Hamilton",
+          "wins": 8,
+          "poles": 8,
+          "podiums": 12,
+          "starts": 20
+        },
+        {
+          "driverId": "michael_schumacher",
+          "driverName": "Michael Schumacher",
+          "wins": 4,
+          "poles": 7,
+          "podiums": 7,
+          "starts": 17
+        },
+        {
+          "driverId": "senna",
+          "driverName": "Ayrton Senna",
+          "wins": 3,
+          "poles": 3,
+          "podiums": 7,
+          "starts": 8
+        },
+        {
+          "driverId": "piquet",
+          "driverName": "Nelson Piquet",
+          "wins": 2,
+          "poles": 0,
+          "podiums": 3,
+          "starts": 6
+        },
+        {
+          "driverId": "damon_hill",
+          "driverName": "Damon Hill",
+          "wins": 2,
+          "poles": 1,
+          "podiums": 5,
+          "starts": 8
+        },
+        {
+          "driverId": "villeneuve",
+          "driverName": "Jacques Villeneuve",
+          "wins": 2,
+          "poles": 0,
+          "podiums": 3,
+          "starts": 9
+        },
+        {
+          "driverId": "hakkinen",
+          "driverName": "Mika H\u00e4kkinen",
+          "wins": 2,
+          "poles": 2,
+          "podiums": 2,
+          "starts": 9
+        },
+        {
+          "driverId": "button",
+          "driverName": "Jenson Button",
+          "wins": 2,
+          "poles": 0,
+          "podiums": 2,
+          "starts": 17
+        },
+        {
+          "driverId": "vettel",
+          "driverName": "Sebastian Vettel",
+          "wins": 2,
+          "poles": 3,
+          "podiums": 7,
+          "starts": 16
+        },
+        {
+          "driverId": "max_verstappen",
+          "driverName": "Max Verstappen",
+          "wins": 2,
+          "poles": 1,
+          "podiums": 5,
+          "starts": 12
+        },
+        {
+          "driverId": "norris",
+          "driverName": "Lando Norris",
+          "wins": 2,
+          "poles": 2,
+          "podiums": 4,
+          "starts": 8
+        },
+        {
+          "driverId": "mansell",
+          "driverName": "Nigel Mansell",
+          "wins": 1,
+          "poles": 1,
+          "podiums": 4,
+          "starts": 7
+        },
+        {
+          "driverId": "boutsen",
+          "driverName": "Thierry Boutsen",
+          "wins": 1,
+          "poles": 1,
+          "podiums": 3,
+          "starts": 8
+        },
+        {
+          "driverId": "barrichello",
+          "driverName": "Rubens Barrichello",
+          "wins": 1,
+          "poles": 1,
+          "podiums": 3,
+          "starts": 19
+        },
+        {
+          "driverId": "alonso",
+          "driverName": "Fernando Alonso",
+          "wins": 1,
+          "poles": 3,
+          "podiums": 5,
+          "starts": 23
+        }
+      ]
+    },
+    "zandvoort": {
+      "circuitId": "zandvoort",
+      "raceCount": 36,
+      "log": {
+        "races_fetched": 36,
+        "races_total": 36,
+        "wins_fetched": 35,
+        "wins_total": 35,
+        "p2_fetched": 35,
+        "p2_total": 35,
+        "p3_fetched": 35,
+        "p3_total": 36,
+        "results_rows_fetched": 747,
+        "qual_rows_fetched": 100,
+        "poles_merged": 35,
+        "poles_from_qualifying": 5,
+        "poles_from_grid": 30
+      },
+      "driverFit": [
+        {
+          "driverId": "max_verstappen",
+          "driverName": "Max Verstappen",
+          "fitScore": 98,
+          "wins": 3,
+          "poles": 3,
+          "podiums": 5,
+          "starts": 5,
+          "rate": 29.0,
+          "shrunk": 17.495
+        },
+        {
+          "driverId": "ascari",
+          "driverName": "Alberto Ascari",
+          "fitScore": 95,
+          "wins": 2,
+          "poles": 2,
+          "podiums": 2,
+          "starts": 2,
+          "rate": 43.0,
+          "shrunk": 16.409
+        },
+        {
+          "driverId": "clark",
+          "driverName": "Jim Clark",
+          "fitScore": 89,
+          "wins": 4,
+          "poles": 1,
+          "podiums": 6,
+          "starts": 8,
+          "rate": 19.75,
+          "shrunk": 14.204
+        },
+        {
+          "driverId": "lauda",
+          "driverName": "Niki Lauda",
+          "fitScore": 80,
+          "wins": 3,
+          "poles": 2,
+          "podiums": 6,
+          "starts": 10,
+          "rate": 14.3,
+          "shrunk": 11.104
+        },
+        {
+          "driverId": "prost",
+          "driverName": "Alain Prost",
+          "fitScore": 79,
+          "wins": 2,
+          "poles": 2,
+          "podiums": 3,
+          "starts": 6,
+          "rate": 15.667,
+          "shrunk": 10.645
+        }
+      ],
+      "topWins": [
+        {
+          "driverId": "clark",
+          "driverName": "Jim Clark",
+          "wins": 4,
+          "poles": 1,
+          "podiums": 6,
+          "starts": 8
+        },
+        {
+          "driverId": "stewart",
+          "driverName": "Jackie Stewart",
+          "wins": 3,
+          "poles": 0,
+          "podiums": 5,
+          "starts": 8
+        },
+        {
+          "driverId": "lauda",
+          "driverName": "Niki Lauda",
+          "wins": 3,
+          "poles": 2,
+          "podiums": 6,
+          "starts": 10
+        },
+        {
+          "driverId": "max_verstappen",
+          "driverName": "Max Verstappen",
+          "wins": 3,
+          "poles": 3,
+          "podiums": 5,
+          "starts": 5
+        },
+        {
+          "driverId": "ascari",
+          "driverName": "Alberto Ascari",
+          "wins": 2,
+          "poles": 2,
+          "podiums": 2,
+          "starts": 2
+        },
+        {
+          "driverId": "jack_brabham",
+          "driverName": "Jack Brabham",
+          "wins": 2,
+          "poles": 1,
+          "podiums": 4,
+          "starts": 12
+        },
+        {
+          "driverId": "hunt",
+          "driverName": "James Hunt",
+          "wins": 2,
+          "poles": 0,
+          "podiums": 3,
+          "starts": 6
+        },
+        {
+          "driverId": "prost",
+          "driverName": "Alain Prost",
+          "wins": 2,
+          "poles": 2,
+          "podiums": 3,
+          "starts": 6
+        },
+        {
+          "driverId": "fangio",
+          "driverName": "Juan Fangio",
+          "wins": 1,
+          "poles": 1,
+          "podiums": 1,
+          "starts": 2
+        },
+        {
+          "driverId": "moss",
+          "driverName": "Stirling Moss",
+          "wins": 1,
+          "poles": 1,
+          "podiums": 2,
+          "starts": 7
+        },
+        {
+          "driverId": "bonnier",
+          "driverName": "Jo Bonnier",
+          "wins": 1,
+          "poles": 1,
+          "podiums": 1,
+          "starts": 10
+        },
+        {
+          "driverId": "trips",
+          "driverName": "Wolfgang von Trips",
+          "wins": 1,
+          "poles": 0,
+          "podiums": 1,
+          "starts": 2
+        },
+        {
+          "driverId": "hill",
+          "driverName": "Graham Hill",
+          "wins": 1,
+          "poles": 2,
+          "podiums": 3,
+          "starts": 16
+        },
+        {
+          "driverId": "rindt",
+          "driverName": "Jochen Rindt",
+          "wins": 1,
+          "poles": 2,
+          "podiums": 1,
+          "starts": 6
+        },
+        {
+          "driverId": "ickx",
+          "driverName": "Jacky Ickx",
+          "wins": 1,
+          "poles": 1,
+          "podiums": 2,
+          "starts": 8
+        }
+      ]
+    },
+    "baku": {
+      "circuitId": "baku",
+      "raceCount": 10,
+      "log": {
+        "races_fetched": 10,
+        "races_total": 10,
+        "wins_fetched": 9,
+        "wins_total": 9,
+        "p2_fetched": 9,
+        "p2_total": 9,
+        "p3_fetched": 9,
+        "p3_total": 9,
+        "results_rows_fetched": 182,
+        "qual_rows_fetched": 181,
+        "poles_merged": 9,
+        "poles_from_qualifying": 9,
+        "poles_from_grid": 0
+      },
+      "driverFit": [
+        {
+          "driverId": "perez",
+          "driverName": "Sergio P\u00e9rez",
+          "fitScore": 98,
+          "wins": 2,
+          "poles": 0,
+          "podiums": 5,
+          "starts": 8,
+          "rate": 11.25,
+          "shrunk": 8.481
+        },
+        {
+          "driverId": "max_verstappen",
+          "driverName": "Max Verstappen",
+          "fitScore": 92,
+          "wins": 2,
+          "poles": 1,
+          "podiums": 3,
+          "starts": 9,
+          "rate": 9.333,
+          "shrunk": 7.367
+        },
+        {
+          "driverId": "piastri",
+          "driverName": "Oscar Piastri",
+          "fitScore": 86,
+          "wins": 1,
+          "poles": 0,
+          "podiums": 1,
+          "starts": 3,
+          "rate": 11.0,
+          "shrunk": 6.396
+        },
+        {
+          "driverId": "leclerc",
+          "driverName": "Charles Leclerc",
+          "fitScore": 85,
+          "wins": 0,
+          "poles": 4,
+          "podiums": 2,
+          "starts": 7,
+          "rate": 8.0,
+          "shrunk": 6.161
+        },
+        {
+          "driverId": "bottas",
+          "driverName": "Valtteri Bottas",
+          "fitScore": 80,
+          "wins": 1,
+          "poles": 1,
+          "podiums": 2,
+          "starts": 8,
+          "rate": 6.375,
+          "shrunk": 5.231
+        }
+      ],
+      "topWins": [
+        {
+          "driverId": "perez",
+          "driverName": "Sergio P\u00e9rez",
+          "wins": 2,
+          "poles": 0,
+          "podiums": 5,
+          "starts": 8
+        },
+        {
+          "driverId": "max_verstappen",
+          "driverName": "Max Verstappen",
+          "wins": 2,
+          "poles": 1,
+          "podiums": 3,
+          "starts": 9
+        },
+        {
+          "driverId": "rosberg",
+          "driverName": "Nico Rosberg",
+          "wins": 1,
+          "poles": 1,
+          "podiums": 1,
+          "starts": 1
+        },
+        {
+          "driverId": "ricciardo",
+          "driverName": "Daniel Ricciardo",
+          "wins": 1,
+          "poles": 0,
+          "podiums": 1,
+          "starts": 7
+        },
+        {
+          "driverId": "hamilton",
+          "driverName": "Lewis Hamilton",
+          "wins": 1,
+          "poles": 1,
+          "podiums": 2,
+          "starts": 9
+        },
+        {
+          "driverId": "bottas",
+          "driverName": "Valtteri Bottas",
+          "wins": 1,
+          "poles": 1,
+          "podiums": 2,
+          "starts": 8
+        },
+        {
+          "driverId": "piastri",
+          "driverName": "Oscar Piastri",
+          "wins": 1,
+          "poles": 0,
+          "podiums": 1,
+          "starts": 3
+        }
+      ]
+    },
+    "singapore": {
+      "circuitId": "marina_bay",
+      "raceCount": 17,
+      "log": {
+        "races_fetched": 17,
+        "races_total": 17,
+        "wins_fetched": 16,
+        "wins_total": 16,
+        "p2_fetched": 16,
+        "p2_total": 16,
+        "p3_fetched": 16,
+        "p3_total": 16,
+        "results_rows_fetched": 338,
+        "qual_rows_fetched": 338,
+        "poles_merged": 16,
+        "poles_from_qualifying": 16,
+        "poles_from_grid": 0
+      },
+      "driverFit": [
+        {
+          "driverId": "vettel",
+          "driverName": "Sebastian Vettel",
+          "fitScore": 98,
+          "wins": 5,
+          "poles": 4,
+          "podiums": 8,
+          "starts": 13,
+          "rate": 17.615,
+          "shrunk": 13.96
+        },
+        {
+          "driverId": "hamilton",
+          "driverName": "Lewis Hamilton",
+          "fitScore": 85,
+          "wins": 4,
+          "poles": 4,
+          "podiums": 7,
+          "starts": 16,
+          "rate": 12.25,
+          "shrunk": 10.216
+        },
+        {
+          "driverId": "norris",
+          "driverName": "Lando Norris",
+          "fitScore": 76,
+          "wins": 1,
+          "poles": 1,
+          "podiums": 3,
+          "starts": 5,
+          "rate": 11.8,
+          "shrunk": 7.48
+        },
+        {
+          "driverId": "russell",
+          "driverName": "George Russell",
+          "fitScore": 70,
+          "wins": 1,
+          "poles": 1,
+          "podiums": 1,
+          "starts": 5,
+          "rate": 8.6,
+          "shrunk": 5.702
+        },
+        {
+          "driverId": "alonso",
+          "driverName": "Fernando Alonso",
+          "fitScore": 70,
+          "wins": 2,
+          "poles": 1,
+          "podiums": 5,
+          "starts": 15,
+          "rate": 6.667,
+          "shrunk": 5.701
+        }
+      ],
+      "topWins": [
+        {
+          "driverId": "vettel",
+          "driverName": "Sebastian Vettel",
+          "wins": 5,
+          "poles": 4,
+          "podiums": 8,
+          "starts": 13
+        },
+        {
+          "driverId": "hamilton",
+          "driverName": "Lewis Hamilton",
+          "wins": 4,
+          "poles": 4,
+          "podiums": 7,
+          "starts": 16
+        },
+        {
+          "driverId": "alonso",
+          "driverName": "Fernando Alonso",
+          "wins": 2,
+          "poles": 1,
+          "podiums": 5,
+          "starts": 15
+        },
+        {
+          "driverId": "rosberg",
+          "driverName": "Nico Rosberg",
+          "wins": 1,
+          "poles": 1,
+          "podiums": 2,
+          "starts": 9
+        },
+        {
+          "driverId": "perez",
+          "driverName": "Sergio P\u00e9rez",
+          "wins": 1,
+          "poles": 0,
+          "podiums": 1,
+          "starts": 12
+        },
+        {
+          "driverId": "sainz",
+          "driverName": "Carlos Sainz",
+          "wins": 1,
+          "poles": 1,
+          "podiums": 2,
+          "starts": 9
+        },
+        {
+          "driverId": "norris",
+          "driverName": "Lando Norris",
+          "wins": 1,
+          "poles": 1,
+          "podiums": 3,
+          "starts": 5
+        },
+        {
+          "driverId": "russell",
+          "driverName": "George Russell",
+          "wins": 1,
+          "poles": 1,
+          "podiums": 1,
+          "starts": 5
+        }
+      ]
+    },
+    "cota": {
+      "circuitId": "americas",
+      "raceCount": 14,
+      "log": {
+        "races_fetched": 14,
+        "races_total": 14,
+        "wins_fetched": 13,
+        "wins_total": 13,
+        "p2_fetched": 13,
+        "p2_total": 13,
+        "p3_fetched": 13,
+        "p3_total": 13,
+        "results_rows_fetched": 266,
+        "qual_rows_fetched": 266,
+        "poles_merged": 13,
+        "poles_from_qualifying": 13,
+        "poles_from_grid": 0
+      },
+      "driverFit": [
+        {
+          "driverId": "hamilton",
+          "driverName": "Lewis Hamilton",
+          "fitScore": 98,
+          "wins": 5,
+          "poles": 3,
+          "podiums": 9,
+          "starts": 13,
+          "rate": 17.462,
+          "shrunk": 13.978
+        },
+        {
+          "driverId": "max_verstappen",
+          "driverName": "Max Verstappen",
+          "fitScore": 96,
+          "wins": 4,
+          "poles": 2,
+          "podiums": 7,
+          "starts": 10,
+          "rate": 17.6,
+          "shrunk": 13.331
+        },
+        {
+          "driverId": "leclerc",
+          "driverName": "Charles Leclerc",
+          "fitScore": 72,
+          "wins": 1,
+          "poles": 1,
+          "podiums": 3,
+          "starts": 7,
+          "rate": 8.429,
+          "shrunk": 6.33
+        },
+        {
+          "driverId": "vettel",
+          "driverName": "Sebastian Vettel",
+          "fitScore": 71,
+          "wins": 1,
+          "poles": 2,
+          "podiums": 4,
+          "starts": 10,
+          "rate": 7.7,
+          "shrunk": 6.259
+        },
+        {
+          "driverId": "rosberg",
+          "driverName": "Nico Rosberg",
+          "fitScore": 71,
+          "wins": 0,
+          "poles": 2,
+          "podiums": 3,
+          "starts": 5,
+          "rate": 8.8,
+          "shrunk": 6.07
+        }
+      ],
+      "topWins": [
+        {
+          "driverId": "hamilton",
+          "driverName": "Lewis Hamilton",
+          "wins": 5,
+          "poles": 3,
+          "podiums": 9,
+          "starts": 13
+        },
+        {
+          "driverId": "max_verstappen",
+          "driverName": "Max Verstappen",
+          "wins": 4,
+          "poles": 2,
+          "podiums": 7,
+          "starts": 10
+        },
+        {
+          "driverId": "vettel",
+          "driverName": "Sebastian Vettel",
+          "wins": 1,
+          "poles": 2,
+          "podiums": 4,
+          "starts": 10
+        },
+        {
+          "driverId": "raikkonen",
+          "driverName": "Kimi R\u00e4ikk\u00f6nen",
+          "wins": 1,
+          "poles": 0,
+          "podiums": 2,
+          "starts": 8
+        },
+        {
+          "driverId": "bottas",
+          "driverName": "Valtteri Bottas",
+          "wins": 1,
+          "poles": 1,
+          "podiums": 1,
+          "starts": 11
+        },
+        {
+          "driverId": "leclerc",
+          "driverName": "Charles Leclerc",
+          "wins": 1,
+          "poles": 1,
+          "podiums": 3,
+          "starts": 7
+        }
+      ]
+    },
+    "mexico": {
+      "circuitId": "rodriguez",
+      "raceCount": 26,
+      "log": {
+        "races_fetched": 26,
+        "races_total": 26,
+        "wins_fetched": 25,
+        "wins_total": 25,
+        "p2_fetched": 25,
+        "p2_total": 25,
+        "p3_fetched": 25,
+        "p3_total": 25,
+        "results_rows_fetched": 541,
+        "qual_rows_fetched": 200,
+        "poles_merged": 25,
+        "poles_from_qualifying": 10,
+        "poles_from_grid": 15
+      },
+      "driverFit": [
+        {
+          "driverId": "max_verstappen",
+          "driverName": "Max Verstappen",
+          "fitScore": 98,
+          "wins": 5,
+          "poles": 2,
+          "podiums": 6,
+          "starts": 10,
+          "rate": 19.3,
+          "shrunk": 14.575
+        },
+        {
+          "driverId": "clark",
+          "driverName": "Jim Clark",
+          "fitScore": 93,
+          "wins": 2,
+          "poles": 4,
+          "podiums": 2,
+          "starts": 5,
+          "rate": 21.2,
+          "shrunk": 13.006
+        },
+        {
+          "driverId": "mansell",
+          "driverName": "Nigel Mansell",
+          "fitScore": 84,
+          "wins": 2,
+          "poles": 2,
+          "podiums": 4,
+          "starts": 7,
+          "rate": 14.571,
+          "shrunk": 10.277
+        },
+        {
+          "driverId": "senna",
+          "driverName": "Ayrton Senna",
+          "fitScore": 79,
+          "wins": 1,
+          "poles": 3,
+          "podiums": 4,
+          "starts": 7,
+          "rate": 12.429,
+          "shrunk": 8.914
+        },
+        {
+          "driverId": "prost",
+          "driverName": "Alain Prost",
+          "fitScore": 78,
+          "wins": 2,
+          "poles": 0,
+          "podiums": 3,
+          "starts": 6,
+          "rate": 12.333,
+          "shrunk": 8.505
+        }
+      ],
+      "topWins": [
+        {
+          "driverId": "max_verstappen",
+          "driverName": "Max Verstappen",
+          "wins": 5,
+          "poles": 2,
+          "podiums": 6,
+          "starts": 10
+        },
+        {
+          "driverId": "clark",
+          "driverName": "Jim Clark",
+          "wins": 2,
+          "poles": 4,
+          "podiums": 2,
+          "starts": 5
+        },
+        {
+          "driverId": "mansell",
+          "driverName": "Nigel Mansell",
+          "wins": 2,
+          "poles": 2,
+          "podiums": 4,
+          "starts": 7
+        },
+        {
+          "driverId": "prost",
+          "driverName": "Alain Prost",
+          "wins": 2,
+          "poles": 0,
+          "podiums": 3,
+          "starts": 6
+        },
+        {
+          "driverId": "hamilton",
+          "driverName": "Lewis Hamilton",
+          "wins": 2,
+          "poles": 1,
+          "podiums": 6,
+          "starts": 10
+        },
+        {
+          "driverId": "gurney",
+          "driverName": "Dan Gurney",
+          "wins": 1,
+          "poles": 0,
+          "podiums": 2,
+          "starts": 6
+        },
+        {
+          "driverId": "ginther",
+          "driverName": "Richie Ginther",
+          "wins": 1,
+          "poles": 0,
+          "podiums": 2,
+          "starts": 4
+        },
+        {
+          "driverId": "surtees",
+          "driverName": "John Surtees",
+          "wins": 1,
+          "poles": 1,
+          "podiums": 2,
+          "starts": 7
+        },
+        {
+          "driverId": "hill",
+          "driverName": "Graham Hill",
+          "wins": 1,
+          "poles": 0,
+          "podiums": 1,
+          "starts": 7
+        },
+        {
+          "driverId": "hulme",
+          "driverName": "Denny Hulme",
+          "wins": 1,
+          "poles": 0,
+          "podiums": 4,
+          "starts": 5
+        },
+        {
+          "driverId": "ickx",
+          "driverName": "Jacky Ickx",
+          "wins": 1,
+          "poles": 0,
+          "podiums": 2,
+          "starts": 3
+        },
+        {
+          "driverId": "berger",
+          "driverName": "Gerhard Berger",
+          "wins": 1,
+          "poles": 1,
+          "podiums": 3,
+          "starts": 7
+        },
+        {
+          "driverId": "senna",
+          "driverName": "Ayrton Senna",
+          "wins": 1,
+          "poles": 3,
+          "podiums": 4,
+          "starts": 7
+        },
+        {
+          "driverId": "patrese",
+          "driverName": "Riccardo Patrese",
+          "wins": 1,
+          "poles": 1,
+          "podiums": 4,
+          "starts": 7
+        },
+        {
+          "driverId": "rosberg",
+          "driverName": "Nico Rosberg",
+          "wins": 1,
+          "poles": 1,
+          "podiums": 2,
+          "starts": 2
+        }
+      ]
+    },
+    "las-vegas": {
+      "circuitId": "las_vegas",
+      "raceCount": 2,
+      "log": {
+        "races_fetched": 2,
+        "races_total": 2,
+        "wins_fetched": 2,
+        "wins_total": 2,
+        "p2_fetched": 2,
+        "p2_total": 2,
+        "p3_fetched": 2,
+        "p3_total": 2,
+        "results_rows_fetched": 51,
+        "qual_rows_fetched": 0,
+        "poles_merged": 2,
+        "poles_from_qualifying": 0,
+        "poles_from_grid": 2
+      },
+      "driverFit": [
+        {
+          "driverId": "jones",
+          "driverName": "Alan Jones",
+          "fitScore": 98,
+          "wins": 1,
+          "poles": 0,
+          "podiums": 1,
+          "starts": 1,
+          "rate": 33.0,
+          "shrunk": 8.552
+        },
+        {
+          "driverId": "alboreto",
+          "driverName": "Michele Alboreto",
+          "fitScore": 90,
+          "wins": 1,
+          "poles": 0,
+          "podiums": 1,
+          "starts": 2,
+          "rate": 16.5,
+          "shrunk": 7.126
+        },
+        {
+          "driverId": "prost",
+          "driverName": "Alain Prost",
+          "fitScore": 76,
+          "wins": 0,
+          "poles": 1,
+          "podiums": 1,
+          "starts": 2,
+          "rate": 9.0,
+          "shrunk": 4.626
+        },
+        {
+          "driverId": "reutemann",
+          "driverName": "Carlos Reutemann",
+          "fitScore": 72,
+          "wins": 0,
+          "poles": 1,
+          "podiums": 0,
+          "starts": 1,
+          "rate": 10.0,
+          "shrunk": 3.952
+        },
+        {
+          "driverId": "watson",
+          "driverName": "John Watson",
+          "fitScore": 67,
+          "wins": 0,
+          "poles": 0,
+          "podiums": 1,
+          "starts": 2,
+          "rate": 4.0,
+          "shrunk": 2.96
+        }
+      ],
+      "topWins": [
+        {
+          "driverId": "jones",
+          "driverName": "Alan Jones",
+          "wins": 1,
+          "poles": 0,
+          "podiums": 1,
+          "starts": 1
+        },
+        {
+          "driverId": "alboreto",
+          "driverName": "Michele Alboreto",
+          "wins": 1,
+          "poles": 0,
+          "podiums": 1,
+          "starts": 2
+        }
+      ]
+    },
+    "qatar": {
+      "circuitId": "losail",
+      "raceCount": 5,
+      "log": {
+        "races_fetched": 5,
+        "races_total": 5,
+        "wins_fetched": 4,
+        "wins_total": 4,
+        "p2_fetched": 4,
+        "p2_total": 4,
+        "p3_fetched": 4,
+        "p3_total": 4,
+        "results_rows_fetched": 80,
+        "qual_rows_fetched": 80,
+        "poles_merged": 4,
+        "poles_from_qualifying": 4,
+        "poles_from_grid": 0
+      },
+      "driverFit": [
+        {
+          "driverId": "max_verstappen",
+          "driverName": "Max Verstappen",
+          "fitScore": 98,
+          "wins": 3,
+          "poles": 2,
+          "podiums": 4,
+          "starts": 4,
+          "rate": 31.75,
+          "shrunk": 17.694
+        },
+        {
+          "driverId": "hamilton",
+          "driverName": "Lewis Hamilton",
+          "fitScore": 70,
+          "wins": 1,
+          "poles": 1,
+          "podiums": 1,
+          "starts": 4,
+          "rate": 10.75,
+          "shrunk": 7.194
+        },
+        {
+          "driverId": "piastri",
+          "driverName": "Oscar Piastri",
+          "fitScore": 69,
+          "wins": 0,
+          "poles": 1,
+          "podiums": 3,
+          "starts": 3,
+          "rate": 11.333,
+          "shrunk": 6.936
+        },
+        {
+          "driverId": "leclerc",
+          "driverName": "Charles Leclerc",
+          "fitScore": 58,
+          "wins": 0,
+          "poles": 0,
+          "podiums": 1,
+          "starts": 4,
+          "rate": 2.0,
+          "shrunk": 2.819
+        },
+        {
+          "driverId": "alonso",
+          "driverName": "Fernando Alonso",
+          "fitScore": 58,
+          "wins": 0,
+          "poles": 0,
+          "podiums": 1,
+          "starts": 4,
+          "rate": 2.0,
+          "shrunk": 2.819
+        }
+      ],
+      "topWins": [
+        {
+          "driverId": "max_verstappen",
+          "driverName": "Max Verstappen",
+          "wins": 3,
+          "poles": 2,
+          "podiums": 4,
+          "starts": 4
+        },
+        {
+          "driverId": "hamilton",
+          "driverName": "Lewis Hamilton",
+          "wins": 1,
+          "poles": 1,
+          "podiums": 1,
+          "starts": 4
+        }
+      ]
+    }
+  }
+}
