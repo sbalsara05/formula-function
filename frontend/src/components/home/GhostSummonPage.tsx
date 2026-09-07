@@ -1,7 +1,8 @@
 'use client'
 
-import { Fragment, useState, useCallback, useRef, useEffect } from 'react'
+import { Fragment, useState, useCallback, useEffect } from 'react'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 
 /* ─── Types ──────────────────────────────────────────────────────────────────── */
 
@@ -15,57 +16,28 @@ interface MomentEntry {
   imageUrl: string
 }
 
-interface GhostPos {
-  side: 'left' | 'right'
+interface PanelGhostPos {
   top: string
+  right: string
   size: number
-  /** Distance from side edge in px (negative = peek off-canvas) */
-  inset?: number
+  rotate: number
+  zIndex: number
 }
 
-interface Portrait {
-  initials: string
-  livery: string
-  bg: string
-  imageUrl: string
-}
-
-interface CardConfig {
+interface SeriesConfig {
   key: SeriesKey
   num: string
   tier: string
   color: string
-  description: string
-  svgPath: string
-  iconLabel: string
   wordmark: string
-  portraits: Portrait[]
+  title: string
+  copy: string
+  tags: string
+  logo: string
 }
 
 /* ─── Data ───────────────────────────────────────────────────────────────────── */
 
-// Portrait-strip images (small square thumbnails, headshots ok)
-const IMG = {
-  senna:    'https://upload.wikimedia.org/wikipedia/commons/6/65/Ayrton_Senna_9_%28cropped%29.jpg',
-  prost:    'https://upload.wikimedia.org/wikipedia/commons/7/74/Festival_automobile_international_2015_-_Photocall_-_065_%28cropped3%29.jpg',
-  mschumacher: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/A%C3%A9cio_Neves%2C_Michael_Schumacher_e_Didi_%28Cropped%29.jpg/440px-A%C3%A9cio_Neves%2C_Michael_Schumacher_e_Didi_%28Cropped%29.jpg',
-  vettel:   'https://upload.wikimedia.org/wikipedia/commons/4/4c/Sebastian_Vettel_-_2022236172324_2022-08-24_Champions_for_Charity_-_Sven_-_1D_X_MK_II_-_0418_-_B70I2428_%28cropped%29.jpg',
-  hamilton: 'https://upload.wikimedia.org/wikipedia/commons/d/d3/Prime_Minister_Keir_Starmer_meets_Sir_Lewis_Hamilton_%2854566928382%29_%28cropped%29.jpg',
-  russell:  'https://upload.wikimedia.org/wikipedia/commons/7/7f/KingsLeonSilverstne040724_%2828_of_112%29_%2853838006028%29_%28cropped%29.jpg',
-  leclerc:  'https://upload.wikimedia.org/wikipedia/commons/7/7b/2024-08-25_Motorsport%2C_Formel_1%2C_Gro%C3%9Fer_Preis_der_Niederlande_2024_STP_3978_by_Stepro_%28cropped2%29.jpg',
-  piastri:  'https://upload.wikimedia.org/wikipedia/commons/e/e5/2026_Chinese_GP_-_Oscar_Piastri_%28cropped%29_%28cropped%29.jpg',
-  mickschumacher: 'https://upload.wikimedia.org/wikipedia/commons/9/9e/Mick_Schumacher_2024_WEC_Fuji.jpg',
-  bortoleto:'https://upload.wikimedia.org/wikipedia/commons/f/fe/Gabriel_Bortoleto_%28cropped%29.jpg',
-  gasly:    'https://upload.wikimedia.org/wikipedia/commons/f/fd/2022_French_Grand_Prix_%2852279065728%29_%28midcrop%29.png',
-  norris:   'https://upload.wikimedia.org/wikipedia/commons/9/90/2024-08-25_Motorsport%2C_Formel_1%2C_Gro%C3%9Fer_Preis_der_Niederlande_2024_STP_3968_by_Stepro_%28cropped2%29.jpg',
-  antonelli:'https://upload.wikimedia.org/wikipedia/commons/f/f3/Kimi_Antonelli_at_the_2025_US_Grand_Prix_in_Austin%2C_TX_%28cropped%29.jpg',
-  lindblad: 'https://upload.wikimedia.org/wikipedia/commons/0/0c/Arvid_Lindblad_at_the_Red_Bull_Fan_Zone_%E2%80%93_Crown_Riverwalk%2C_Melbourne_%28028A7869%29_%28cropped%29.jpg',
-  hadjar:   'https://upload.wikimedia.org/wikipedia/commons/7/75/Isack_Hadjar_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8753%29_%28cropped%29.jpg',
-  bearman:  'https://upload.wikimedia.org/wikipedia/commons/9/9a/2025_Japan_GP_-_Haas_-_Oliver_Bearman_-_Thursday_%28cropped%29.jpg',
-}
-
-// Race/era-specific images for ghost moment cards — homepage-only canonical stills
-// (not shared with driver-page /images/drivers/ assets)
 const GHOST = '/images/home/ghosts'
 
 const MOMENTS: Record<SeriesKey, MomentEntry[]> = {
@@ -78,6 +50,8 @@ const MOMENTS: Record<SeriesKey, MomentEntry[]> = {
     { name: 'Vettel',     moment: 'Abu Dhabi 10',   livery: '#1E3A8A', initials: 'SV', imageUrl: `${GHOST}/f1-vettel-abudhabi-2010.jpg` },
     { name: 'Hamilton',   moment: 'Interlagos 08',  livery: '#B0B0B0', initials: 'LH', imageUrl: `${GHOST}/f1-hamilton-brazil-2008.jpg` },
     { name: 'Hamilton',   moment: 'Shanghai 14',    livery: '#00D2BE', initials: 'LH', imageUrl: `${GHOST}/f1-hamilton-china-2014.jpg` },
+    { name: 'Senna',      moment: 'Spa 89 podium',  livery: '#E10600', initials: 'AS', imageUrl: `${GHOST}/f1-senna-spa-1989-podium.jpg` },
+    { name: 'Vettel',     moment: 'Malaysia 15',    livery: '#DC0000', initials: 'SV', imageUrl: `${GHOST}/f1-vettel-malaysia-2015-podium.jpg` },
   ],
   f2: [
     { name: 'Piastri',    moment: 'Prema · F2 2021', livery: '#FF8700', initials: 'OP', imageUrl: `${GHOST}/f2-piastri-prema-2021.jpg` },
@@ -88,6 +62,14 @@ const MOMENTS: Record<SeriesKey, MomentEntry[]> = {
     { name: 'Schumacher', moment: 'Prema · F2 2019', livery: '#DC143C', initials: 'MS', imageUrl: `${GHOST}/f2-mick-prema-2019.jpg` },
     { name: 'Bortoleto',  moment: 'Invicta · F2 2024', livery: '#00E5FF', initials: 'GB', imageUrl: `${GHOST}/f2-bortoleto-invicta-2024.jpg` },
     { name: 'Bearman',    moment: 'Prema · F2 2024', livery: '#DC0000', initials: 'OB', imageUrl: `${GHOST}/f2-bearman-austria-2024.jpg` },
+    { name: 'Norris',     moment: 'Austria · F2 2018', livery: '#FFD700', initials: 'LN', imageUrl: `${GHOST}/f2-norris-austria-2018-trophy-crop.jpg` },
+    { name: 'Leclerc',    moment: 'Jerez champion', livery: '#DC0000', initials: 'CL', imageUrl: `${GHOST}/f2-leclerc-jerez-2017-champion-crop.jpg` },
+    { name: 'Fuoco',      moment: 'Austria · F2 2018', livery: '#DC0000', initials: 'AF', imageUrl: `${GHOST}/f2-fuoco-austria-2018-trophy-crop.jpg` },
+    { name: 'Albon',      moment: 'Silverstone 18', livery: '#1E3A8A', initials: 'AA', imageUrl: `${GHOST}/f2-albon-silverstone-2018-champagne-crop.jpg` },
+    { name: 'Bortoleto',  moment: 'Monza · F2 2024', livery: '#FF8700', initials: 'GB', imageUrl: `${GHOST}/f2-bortoleto-monza-2024-official.jpg` },
+    { name: 'Colapinto',  moment: 'Imola · F2 2024', livery: '#3156A3', initials: 'FC', imageUrl: `${GHOST}/f2-colapinto-imola-2024-official.jpg` },
+    { name: 'Hadjar',     moment: 'Silverstone · F2 2024', livery: '#1E3A8A', initials: 'IH', imageUrl: `${GHOST}/f2-hadjar-silverstone-2024-official.jpg` },
+    { name: 'Piastri',    moment: 'Yas Marina · F2 2021', livery: '#2E8BCB', initials: 'OP', imageUrl: `${GHOST}/f2-piastri-yas-marina-2021-official.jpg` },
   ],
   f3: [
     { name: 'Norris',     moment: 'F3 era · 2017',    livery: '#FFD700', initials: 'LN', imageUrl: `${GHOST}/f3-norris-2017.jpg` },
@@ -98,72 +80,99 @@ const MOMENTS: Record<SeriesKey, MomentEntry[]> = {
     { name: 'Russell',    moment: 'GP3 · ART 2017',   livery: '#00D2BE', initials: 'GR', imageUrl: `${GHOST}/f3-russell-gp3-2017.jpg` },
     { name: 'Schumacher', moment: 'Prema F3 · 2017',  livery: '#DC143C', initials: 'MS', imageUrl: `${GHOST}/f3-mick-prema-2017.jpg` },
     { name: 'Bortoleto',  moment: 'Trident F3 · 2023',livery: '#00E5FF', initials: 'GB', imageUrl: `${GHOST}/f3-bortoleto-trident-2023.jpg` },
+    { name: 'Bearman',    moment: 'Spielberg 22',    livery: '#DC0000', initials: 'OB', imageUrl: `${GHOST}/f3-bearman-austria-2022-podium-crop.jpg` },
+    { name: 'Podium',     moment: 'Spielberg 22',    livery: '#00E5FF', initials: 'F3', imageUrl: `${GHOST}/f3-austria-2022-podium.jpg` },
+    { name: 'Hadjar',     moment: 'Spielberg 22',    livery: '#2293D1', initials: 'IH', imageUrl: `${GHOST}/f3-hadjar-austria-2022-celebrate-crop.jpg` },
+    { name: 'Martins',    moment: 'Spielberg 22',    livery: '#0090FF', initials: 'VM', imageUrl: `${GHOST}/f3-martins-austria-2022-podium-crop.jpg` },
+    { name: 'De Palo',    moment: 'Silverstone · F3 2026', livery: '#3156A3', initials: 'MD', imageUrl: `${GHOST}/f3-de-palo-silverstone-2026-official.jpg` },
+    { name: 'Kato',       moment: 'Monza · F3 2026', livery: '#E10600', initials: 'TK', imageUrl: `${GHOST}/f3-kato-monza-2026-official.jpg` },
+    { name: 'Lacorte',    moment: 'Monza · F3 2026', livery: '#00AEEF', initials: 'NL', imageUrl: `${GHOST}/f3-lacorte-monza-2026-official.jpg` },
+    { name: 'Inthraphuvasak', moment: 'Monza · F3 2025', livery: '#FF5A1F', initials: 'TI', imageUrl: `${GHOST}/f3-inthraphuvasak-monza-2025-official.jpg` },
   ],
 }
 
-// Edge collage — same layout for every series
-const POSITIONS: GhostPos[] = [
-  { side: 'left',  top: '2%',  size: 148 },
-  { side: 'left',  top: '26%', size: 156 },
-  { side: 'left',  top: '50%', size: 148 },
-  { side: 'left',  top: '74%', size: 152 },
-  { side: 'right', top: '4%',  size: 152 },
-  { side: 'right', top: '28%', size: 148 },
-  { side: 'right', top: '52%', size: 156 },
-  { side: 'right', top: '76%', size: 148 },
+function toCutout(entry: MomentEntry): MomentEntry {
+  const file = entry.imageUrl.split('/').pop()?.replace(/\.jpg$/, '-cutout.webp')
+  return { ...entry, imageUrl: `${GHOST}/cutouts/${file}` }
+}
+
+/** Four podium / celebration stills for the cinematic panel. No in-car shots. */
+const PANEL_MOMENTS: Record<SeriesKey, MomentEntry[]> = {
+  f1: [
+    toCutout(MOMENTS.f1[2]),  // Prost Spa 89 podium
+    toCutout(MOMENTS.f1[8]),  // Senna Spa 89 podium
+    toCutout(MOMENTS.f1[6]),  // Hamilton Interlagos 08
+    toCutout(MOMENTS.f1[9]),  // Vettel Malaysia 15
+  ],
+  f2: [
+    toCutout(MOMENTS.f2[14]), // Hadjar Silverstone win
+    toCutout(MOMENTS.f2[12]), // Bortoleto Monza win
+    toCutout(MOMENTS.f2[13]), // Colapinto Imola win
+    toCutout(MOMENTS.f2[15]), // Piastri F2 champion
+  ],
+  f3: [
+    toCutout(MOMENTS.f3[15]), // Inthraphuvasak Monza win
+    toCutout(MOMENTS.f3[14]), // Lacorte Monza trophy
+    toCutout(MOMENTS.f3[13]), // Kato Monza win
+    toCutout(MOMENTS.f3[12]), // De Palo Silverstone win
+  ],
+}
+
+/** North, east, west, south — full figures, inset from the rounded panel. */
+const PANEL_POSITIONS: PanelGhostPos[] = [
+  { top: '3%',  right: '16%', size: 200, rotate: -1.4, zIndex: 2 },
+  { top: '20%', right: '4%',  size: 214, rotate:  1.8, zIndex: 3 },
+  { top: '22%', right: '34%', size: 186, rotate: -1.9, zIndex: 4 },
+  { top: '40%', right: '16%', size: 192, rotate:  1.2, zIndex: 5 },
 ]
 
-const CARD_CONFIGS: CardConfig[] = [
+const F2_PANEL_POSITIONS: PanelGhostPos[] = [
+  { top: '2%',  right: '17%', size: 184, rotate: -1.2, zIndex: 2 },
+  { top: '23%', right: '1%',  size: 228, rotate:  1.5, zIndex: 3 },
+  { top: '24%', right: '34%', size: 224, rotate: -1.7, zIndex: 4 },
+  { top: '43%', right: '17%', size: 194, rotate:  1.0, zIndex: 5 },
+]
+
+const F3_PANEL_POSITIONS: PanelGhostPos[] = [
+  { top: '2%',  right: '17%', size: 182, rotate: -1.2, zIndex: 2 },
+  { top: '22%', right: '2%',  size: 214, rotate:  1.5, zIndex: 3 },
+  { top: '24%', right: '34%', size: 216, rotate: -1.7, zIndex: 4 },
+  { top: '42%', right: '17%', size: 190, rotate:  1.0, zIndex: 5 },
+]
+
+const SERIES: SeriesConfig[] = [
   {
     key: 'f1',
     num: '1',
     tier: 'TIER 1',
     color: '#FF1E56',
-    description: 'The pinnacle. Championships, constructors, and the drivers who shaped the modern era.',
-    svgPath: 'M 0 12 L 40 12 L 50 2 L 80 22 L 110 6 L 140 18 L 170 10 L 200 16 L 240 12',
-    iconLabel: 'ICONS',
     wordmark: 'ONE',
-    portraits: [
-      { initials: 'AS', livery: '#FFD700', bg: '#1a1300', imageUrl: IMG.senna },
-      { initials: 'AP', livery: '#E10600', bg: '#1a0000', imageUrl: IMG.prost },
-      { initials: 'MS', livery: '#DC0000', bg: '#1a0000', imageUrl: IMG.mschumacher },
-      { initials: 'SV', livery: '#1E3A8A', bg: '#000814', imageUrl: IMG.vettel },
-      { initials: 'LH', livery: '#00D2BE', bg: '#001a17', imageUrl: IMG.hamilton },
-    ],
+    title: 'FORMULA ONE',
+    copy: 'The pinnacle. Six decades of championships, constructors, and the drivers who rewrote what fast means. This is where the function is proven — not guessed.',
+    tags: 'CHAMPIONSHIPS · CONSTRUCTORS · SIX DECADES',
+    logo: '/images/series/f1.svg',
   },
   {
     key: 'f2',
     num: '2',
     tier: 'TIER 2',
     color: '#00E5FF',
-    description: 'The proving ground. Where the next generation of F1 talent earns the call-up.',
-    svgPath: 'M 0 12 L 30 12 L 45 2 L 70 20 L 100 6 L 130 16 L 160 10 L 195 14 L 240 12',
-    iconLabel: 'GRADUATED TO F1',
     wordmark: 'TWO',
-    portraits: [
-      { initials: 'GR', livery: '#00D2BE', bg: '#001a17', imageUrl: IMG.russell },
-      { initials: 'CL', livery: '#DC0000', bg: '#1a0000', imageUrl: IMG.leclerc },
-      { initials: 'OP', livery: '#FF8700', bg: '#1a0c00', imageUrl: IMG.piastri },
-      { initials: 'MS', livery: '#0090FF', bg: '#000a14', imageUrl: IMG.mickschumacher },
-      { initials: 'GB', livery: '#00FF00', bg: '#001a00', imageUrl: IMG.bortoleto },
-    ],
+    title: 'FORMULA TWO',
+    copy: 'The proving ground. One season between the call-up and the wilderness. Every graduate who made the grid earned it here — in the wet, in the pack, on the last lap.',
+    tags: 'GRADUATES · TITLE FIGHTS · THE CALL-UP',
+    logo: '/images/series/f2.svg',
   },
   {
     key: 'f3',
     num: '3',
     tier: 'TIER 3',
     color: '#B026FF',
-    description: 'The first rung. Where raw talent meets the pyramid for the first time.',
-    svgPath: 'M 0 12 L 25 12 L 40 4 L 65 18 L 95 8 L 125 16 L 155 6 L 190 16 L 240 12',
-    iconLabel: 'NOTABLE ALUMNI',
     wordmark: 'THREE',
-    portraits: [
-      { initials: 'LN', livery: '#FFD700', bg: '#1a1300', imageUrl: IMG.norris },
-      { initials: 'GR', livery: '#00D2BE', bg: '#001a17', imageUrl: IMG.russell },
-      { initials: 'OP', livery: '#FF8700', bg: '#1a0c00', imageUrl: IMG.piastri },
-      { initials: 'KA', livery: '#00D2BE', bg: '#001a17', imageUrl: IMG.antonelli },
-      { initials: 'AL', livery: '#1E3A8A', bg: '#000814', imageUrl: IMG.lindblad },
-    ],
+    title: 'FORMULA THREE',
+    copy: 'The first rung. Raw talent meets the pyramid. Names that will define the next decade start here — before anyone knows their function.',
+    tags: 'ALUMNI · FIRST TITLES · THE PYRAMID',
+    logo: '/images/series/f3.svg',
   },
 ]
 
@@ -280,319 +289,263 @@ function FeaturedCard({ link }: { link: FeaturedLink }) {
   )
 }
 
-/* ─── GhostCard ──────────────────────────────────────────────────────────────── */
+/* ─── GhostCard (in-panel) ───────────────────────────────────────────────────── */
 
-function GhostCard({ moment, position }: { moment: MomentEntry; position: GhostPos }) {
-  const [delay] = useState<number>(() => Math.random() * 0.45)
-  const [rotation] = useState<number>(() => (Math.random() - 0.5) * 4) // ±2°
-  const [active, setActive] = useState(false)
-
-  useEffect(() => {
-    let raf1: number, raf2: number
-    raf1 = requestAnimationFrame(() => {
-      raf2 = requestAnimationFrame(() => setActive(true))
-    })
-    return () => {
-      cancelAnimationFrame(raf1)
-      cancelAnimationFrame(raf2)
-    }
-  }, [])
-
-  const initTransform =
-    position.side === 'left' ? 'translateX(-60px)' : 'translateX(60px)'
-
-  const posStyle: React.CSSProperties = {
-    position: 'absolute',
-    width: position.size,
-    height: Math.round(position.size * 1.5),
-    top: position.top,
-    opacity: active ? 0.88 : 0,
-    transform: active ? `rotate(${rotation}deg)` : `${initTransform} rotate(${rotation}deg)`,
-    transition: `opacity 0.65s ease ${delay}s, transform 0.8s ease ${delay}s`,
-  }
-  if (position.side === 'left') posStyle.left = position.inset ?? -36
-  else posStyle.right = position.inset ?? -36
-
-  return (
-    <div style={{ ...posStyle, overflow: 'visible' }}>
-      <div style={{
-        position: 'absolute', inset: '-30%',
-        background: `radial-gradient(ellipse at 50% 55%, ${moment.livery}55 0%, ${moment.livery}18 35%, transparent 65%)`,
-        filter: 'blur(24px)',
-        pointerEvents: 'none',
-        zIndex: 0,
-      }} />
-
-      <div style={{ position: 'relative', width: '100%', height: '100%', zIndex: 1, overflow: 'hidden', borderRadius: 4 }}>
-        <img
-          src={moment.imageUrl}
-          alt={moment.name}
-          style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top' }}
-        />
-        <div style={{
-          position: 'absolute', inset: 0,
-          background: 'radial-gradient(ellipse at 50% 45%, transparent 38%, rgba(0,0,0,0.7) 68%, rgba(0,0,0,0.97) 88%)',
-        }} />
-        <div style={{
-          position: 'absolute', inset: 0,
-          background: `radial-gradient(ellipse at 50% 15%, ${moment.livery}30 0%, transparent 55%)`,
-        }} />
-        <div style={{
-          position: 'absolute', bottom: 0, left: 0, right: 0, height: '48%',
-          background: 'linear-gradient(to top, rgba(0,0,0,0.98) 0%, rgba(0,0,0,0.6) 45%, transparent 100%)',
-        }} />
-      </div>
-
-      <span style={{
-        position: 'absolute', top: 8, right: 8, zIndex: 2,
-        fontFamily: 'var(--font-mono)', fontSize: 8, color: moment.livery,
-        background: 'rgba(0,0,0,0.55)', padding: '2px 5px', borderRadius: 3, letterSpacing: 1.5,
-      }}>
-        {moment.initials}
-      </span>
-      <span style={{
-        position: 'absolute', bottom: 20, left: 0, right: 0, zIndex: 2,
-        textAlign: 'center', fontFamily: 'var(--font-sans)',
-        fontSize: 12, fontWeight: 600, color: '#fff', letterSpacing: 0.3,
-      }}>
-        {moment.name}
-      </span>
-      <span style={{
-        position: 'absolute', bottom: 6, left: 0, right: 0, zIndex: 2,
-        textAlign: 'center', fontFamily: 'var(--font-mono)',
-        fontSize: 8, color: `${moment.livery}cc`, letterSpacing: 1.5,
-      }}>
-        {moment.moment.toUpperCase()}
-      </span>
-    </div>
-  )
-}
-
-/* ─── DriverPortrait ─────────────────────────────────────────────────────────── */
-
-function DriverPortrait({
-  portrait,
-  cardHovered,
-  index,
-}: {
-  portrait: Portrait
-  cardHovered: boolean
-  index: number
-}) {
+function GhostCard({ moment, position, delay }: { moment: MomentEntry; position: PanelGhostPos; delay: number }) {
   return (
     <div
+      className="home-ghost-card"
       style={{
-        aspectRatio: '1',
-        background: '#000',
-        border: '0.5px solid #222',
-        borderRadius: 4,
-        overflow: 'hidden',
-        position: 'relative',
-        transform: cardHovered ? 'scale(1.04)' : 'scale(1)',
-        filter: cardHovered ? 'brightness(1.08)' : 'brightness(1)',
-        transition: `transform 0.35s ease ${index * 40}ms, filter 0.35s ease ${index * 40}ms`,
+        position: 'absolute',
+        width: position.size,
+        height: Math.round(position.size * 1.48),
+        top: position.top,
+        right: position.right,
+        zIndex: position.zIndex,
+        overflow: 'visible',
+        display: 'flex',
+        alignItems: 'flex-end',
+        justifyContent: 'center',
+        ['--ghost-rotate' as string]: `${position.rotate}deg`,
+        ['--ghost-delay' as string]: `${delay}s`,
+        ['--ghost-outline' as string]: moment.livery,
       }}
     >
-      <img
-        src={portrait.imageUrl}
-        alt={portrait.initials}
-        style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top' }}
+      <div className="home-ghost-figure">
+        <img
+          className="home-ghost-cutout"
+          src={moment.imageUrl}
+          alt=""
+          style={{
+            filter: [
+              `drop-shadow(1px 0 0 ${moment.livery}88)`,
+              `drop-shadow(-1px 0 0 ${moment.livery}88)`,
+              `drop-shadow(0 1px 0 ${moment.livery}88)`,
+              `drop-shadow(0 -1px 0 ${moment.livery}88)`,
+              `drop-shadow(0 0 18px ${moment.livery}55)`,
+            ].join(' '),
+          }}
+        />
+      </div>
+    </div>
+  )
+}
+
+/* ─── SeriesRow ──────────────────────────────────────────────────────────────── */
+
+function SeriesRow({
+  config,
+  selected,
+  onHover,
+}: {
+  config: SeriesConfig
+  selected: boolean
+  onHover: () => void
+}) {
+  const router = useRouter()
+  const href = `/f/${config.num}`
+
+  return (
+    <div
+      role="link"
+      tabIndex={0}
+      data-series={config.key}
+      aria-current={selected ? 'true' : undefined}
+      className="home-series-row"
+      onPointerEnter={onHover}
+      onMouseEnter={onHover}
+      onFocus={onHover}
+      onClick={() => router.push(href)}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault()
+          router.push(href)
+        }
+      }}
+      style={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        gap: 12,
+        padding: '22px 16px',
+        color: 'inherit',
+        position: 'relative',
+        borderBottom: '0.5px solid #1a1a1a',
+        background: selected ? `${config.color}10` : 'transparent',
+        transition: 'background 0.25s ease',
+      }}
+    >
+      <span
+        aria-hidden="true"
+        style={{
+          position: 'absolute', left: 0, top: 10, bottom: 10, width: 2,
+          background: config.color,
+          opacity: selected ? 1 : 0,
+          transition: 'opacity 0.25s ease',
+        }}
       />
-      <div style={{
-        position: 'absolute', bottom: 0, left: 0, right: 0,
-        height: '50%', background: 'linear-gradient(to top, #000 0%, rgba(0,0,0,0.6) 50%, transparent 100%)',
-      }} />
+      <div style={{ display: 'flex', alignItems: 'center', gap: 12, minWidth: 0, flex: 1 }}>
+        <img
+          className="home-series-logo"
+          src={config.logo}
+          alt={config.title}
+          style={{
+            opacity: selected ? 1 : 0.32,
+            filter: selected ? `drop-shadow(0 0 10px ${config.color}66)` : 'none',
+          }}
+        />
+      </div>
       <span style={{
-        position: 'absolute', bottom: 3, left: 4,
-        fontFamily: 'var(--font-mono)', fontSize: 7, color: '#ccc',
+        fontFamily: 'var(--font-mono)', fontSize: 9, letterSpacing: 1.5,
+        color: selected ? '#666' : '#333',
+        flexShrink: 0,
+        transition: 'color 0.25s ease',
       }}>
-        {portrait.initials}
+        {config.tier}
       </span>
     </div>
   )
 }
 
-/* ─── SeriesCard ─────────────────────────────────────────────────────────────── */
+/* ─── CinematicPanel ─────────────────────────────────────────────────────────── */
 
-function SeriesCard({
-  config,
-  onMouseEnter,
-  onMouseLeave,
-}: {
-  config: CardConfig
-  onMouseEnter: () => void
-  onMouseLeave: () => void
-}) {
-  const [hovered, setHovered] = useState(false)
-
-  const handleEnter = () => { setHovered(true); onMouseEnter() }
-  const handleLeave = () => { setHovered(false); onMouseLeave() }
+function CinematicPanel({ config }: { config: SeriesConfig }) {
+  const moments = PANEL_MOMENTS[config.key]
+  const [ctaHover, setCtaHover] = useState(false)
 
   return (
-    <Link
-      href={`/f/${config.num}`}
-      className="home-series-card"
-      style={{
-        display: 'block', textDecoration: 'none', color: 'inherit',
-        position: 'relative', background: '#080808',
-        border: `1px solid ${hovered ? config.color : '#1a1a1a'}`,
-        borderRadius: 10, padding: '24px 20px',
-        overflow: 'hidden', cursor: 'pointer',
-        transition: 'border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease',
-        boxShadow: hovered ? `0 0 32px ${config.color}55` : 'none',
-        transform: hovered ? 'translateY(-2px)' : 'translateY(0)',
-      }}
-      onMouseEnter={handleEnter}
-      onMouseLeave={handleLeave}
-    >
-      {/* Corner radial wash */}
+    <div style={{
+      position: 'relative',
+      minHeight: 560,
+      overflow: 'hidden',
+      background: '#050505',
+      border: '0.5px solid #1a1a1a',
+      borderRadius: 10,
+      isolation: 'isolate',
+    }}>
       <div
         aria-hidden="true"
         style={{
-          position: 'absolute', inset: 0,
-          background: `radial-gradient(ellipse at 0% 0%, ${config.color} 0%, transparent 55%)`,
-          opacity: hovered ? 0.12 : 0.05,
-          transition: 'opacity 0.3s ease',
-          pointerEvents: 'none',
-        }}
-      />
-      {/* Top accent bar */}
-      <div
-        aria-hidden="true"
-        style={{
-          position: 'absolute', top: 0, left: 0, right: 0, height: 2,
-          background: config.color,
-          opacity: hovered ? 0.9 : 0,
-          transition: 'opacity 0.3s ease',
+          position: 'absolute', inset: 0, zIndex: 0,
+          background: `radial-gradient(ellipse at 85% 40%, ${config.color}22 0%, transparent 55%)`,
           pointerEvents: 'none',
         }}
       />
 
-      {/* Header */}
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 14, position: 'relative' }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-          <span style={{
-            fontFamily: 'var(--font-mono)', fontSize: 34, fontWeight: 400,
-            color: config.color, letterSpacing: -1,
-            filter: hovered ? 'brightness(1.1)' : 'none',
-            transition: 'filter 0.3s ease',
-          }}>
-            {`f(${config.num})`}
-          </span>
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: 3, lineHeight: 1 }}>
-            <span style={{
-              fontFamily: 'var(--font-mono)', fontSize: 8, letterSpacing: 2,
-              color: hovered ? '#888' : '#555',
-              transition: 'color 0.3s ease',
-            }}>
-              FORMULA
-            </span>
-            <span style={{
-              fontFamily: 'var(--font-mono)', fontSize: 13, fontWeight: 500,
-              color: config.color, letterSpacing: 3,
-              opacity: hovered ? 1 : 0.85,
-              transition: 'opacity 0.3s ease',
-            }}>
-              {config.wordmark}
-            </span>
-            <span
-              aria-hidden="true"
-              style={{
-                display: 'block',
-                height: 1,
-                marginTop: 2,
-                background: config.color,
-                width: hovered ? '100%' : '40%',
-                opacity: hovered ? 0.9 : 0.45,
-                transition: 'width 0.35s ease, opacity 0.3s ease',
-                alignSelf: 'stretch',
-              }}
-            />
-          </div>
-        </div>
-        <span style={{
-          fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: 1.5,
-          color: hovered ? '#888' : '#666',
-          transition: 'color 0.3s ease',
-        }}>
-          {config.tier}
-        </span>
+      <div
+        className="home-ghost-layer"
+        style={{
+          position: 'absolute',
+          top: 28,
+          right: 56,
+          bottom: 36,
+          left: 0,
+          zIndex: 2,
+          pointerEvents: 'none',
+        }}
+      >
+        {moments.map((moment, i) => (
+          <GhostCard
+            key={`${config.key}-${moment.name}-${moment.moment}`}
+            moment={moment}
+            position={(
+              config.key === 'f2'
+                ? F2_PANEL_POSITIONS
+                : config.key === 'f3'
+                  ? F3_PANEL_POSITIONS
+                  : PANEL_POSITIONS
+            )[i]}
+            delay={0.04 + i * 0.08}
+          />
+        ))}
       </div>
 
-      {/* Telemetry squiggle */}
-      <svg viewBox="0 0 240 24" style={{ width: '100%', height: 20, margin: '0 0 16px', display: 'block', position: 'relative' }} aria-hidden="true">
-        <path
-          d={config.svgPath}
-          stroke={config.color}
-          strokeWidth={1.2}
-          fill="none"
-          opacity={0.9}
-          className={hovered ? 'home-sparkline-draw' : undefined}
-          style={{
-            strokeDasharray: 500,
-            strokeDashoffset: hovered ? 0 : 120,
-            transition: 'stroke-dashoffset 0.7s cubic-bezier(0.22, 1, 0.36, 1)',
-          }}
-        />
-      </svg>
+      <div
+        aria-hidden="true"
+        style={{
+          position: 'absolute', inset: 0, zIndex: 1, pointerEvents: 'none',
+          background: 'linear-gradient(90deg, rgba(0,0,0,0.94) 0%, rgba(0,0,0,0.78) 32%, rgba(0,0,0,0.22) 54%, transparent 74%)',
+        }}
+      />
 
-      {/* Description */}
-      <p style={{ fontSize: 13, color: '#aaa', margin: '0 0 18px', lineHeight: 1.5, position: 'relative' }}>
-        {config.description}
-      </p>
-
-      {/* Driver portraits */}
-      <div style={{ borderTop: '0.5px solid #1a1a1a', paddingTop: 14, position: 'relative' }}>
-        <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, letterSpacing: 1.5, color: '#555', margin: '0 0 12px' }}>
-          {config.iconLabel}
-        </p>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: 6 }}>
-          {config.portraits.map((p, i) => (
-            <DriverPortrait key={p.initials} portrait={p} cardHovered={hovered} index={i} />
-          ))}
-        </div>
-      </div>
-
-      {/* CTA */}
-      <p style={{
-        fontFamily: 'var(--font-mono)', fontSize: 10, color: config.color,
-        letterSpacing: 1.5, margin: '18px 0 0', position: 'relative',
-        display: 'flex', alignItems: 'center', gap: 6,
+      <div style={{
+        position: 'absolute',
+        left: 0,
+        top: 0,
+        bottom: 0,
+        width: 'min(380px, 54%)',
+        zIndex: 3,
+        padding: '40px 32px',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        pointerEvents: 'none',
       }}>
-        <span>ENTER</span>
-        <span
-          aria-hidden="true"
+        <span style={{
+          display: 'block', width: 28, height: 1, background: config.color, marginBottom: 16, opacity: 0.9,
+        }} />
+        <h2 style={{
+          fontFamily: 'var(--font-mono)', fontSize: 28, fontWeight: 500,
+          letterSpacing: 3, color: '#fff', margin: '0 0 16px', lineHeight: 1.15,
+        }}>
+          {config.title}
+        </h2>
+        <p style={{
+          fontSize: 14, color: '#bbb', lineHeight: 1.65, margin: '0 0 20px',
+        }}>
+          {config.copy}
+        </p>
+        <p style={{
+          fontFamily: 'var(--font-mono)', fontSize: 9, letterSpacing: 1.5,
+          color: config.color, margin: '0 0 28px',
+        }}>
+          {config.tags}
+        </p>
+        <Link
+          href={`/f/${config.num}`}
+          onMouseEnter={() => setCtaHover(true)}
+          onMouseLeave={() => setCtaHover(false)}
           style={{
-            display: 'inline-block',
-            transform: hovered ? 'translateX(4px)' : 'translateX(0)',
-            transition: 'transform 0.3s ease',
+            pointerEvents: 'auto',
+            alignSelf: 'flex-start',
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: 10,
+            padding: '11px 22px',
+            background: ctaHover ? '#fff' : 'transparent',
+            color: ctaHover ? '#000' : '#f2f2f2',
+            border: '0.5px solid #f2f2f2',
+            textDecoration: 'none',
+            fontFamily: 'var(--font-mono)',
+            fontSize: 11,
+            letterSpacing: 1.6,
+            fontWeight: 500,
+            borderRadius: 2,
+            transition: 'background 0.2s ease, color 0.2s ease, transform 0.2s ease',
+            transform: ctaHover ? 'translateY(-1px)' : 'none',
           }}
         >
-          →
-        </span>
-      </p>
-    </Link>
+          ENTER f({config.num})
+          <span aria-hidden="true" style={{
+            display: 'inline-block',
+            transform: ctaHover ? 'translateX(3px)' : 'none',
+            transition: 'transform 0.2s ease',
+          }}>→</span>
+        </Link>
+      </div>
+    </div>
   )
 }
 
 /* ─── Page ───────────────────────────────────────────────────────────────────── */
 
 export default function GhostSummonPage() {
-  const [ghostSeries, setGhostSeries] = useState<SeriesKey | null>(null)
-  const [ghostVisible, setGhostVisible] = useState(false)
+  const [selected, setSelected] = useState<SeriesKey>('f1')
   const [heroReady, setHeroReady] = useState(false)
-  const clearTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+  const active = SERIES.find(s => s.key === selected) ?? SERIES[0]
 
-  const handleEnter = useCallback((series: SeriesKey) => {
-    if (clearTimerRef.current) clearTimeout(clearTimerRef.current)
-    setGhostSeries(series)
-    setGhostVisible(true)
-  }, [])
-
-  const handleLeave = useCallback(() => {
-    setGhostVisible(false)
-    // Keep ghostSeries mounted until the fade-out completes, then unmount
-    clearTimerRef.current = setTimeout(() => setGhostSeries(null), 600)
+  const handleHover = useCallback((series: SeriesKey) => {
+    setSelected(series)
   }, [])
 
   useEffect(() => {
@@ -603,14 +556,12 @@ export default function GhostSummonPage() {
     return () => {
       cancelAnimationFrame(raf1)
       cancelAnimationFrame(raf2)
-      if (clearTimerRef.current) clearTimeout(clearTimerRef.current)
     }
   }, [])
 
   return (
     <div style={{ background: '#000', color: '#fff', position: 'relative', overflow: 'hidden', minHeight: '100vh' }}>
 
-      {/* Soft ambient series-color orbs */}
       <div aria-hidden="true" style={{ position: 'absolute', inset: 0, pointerEvents: 'none', zIndex: 0, overflow: 'hidden' }}>
         <div style={{
           position: 'absolute', top: '8%', left: '12%', width: 420, height: 420,
@@ -629,7 +580,6 @@ export default function GhostSummonPage() {
         }} />
       </div>
 
-      {/* Background decorative telemetry lines */}
       <svg
         className="home-telemetry"
         style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', pointerEvents: 'none', opacity: 0.3, zIndex: 1 }}
@@ -650,35 +600,7 @@ export default function GhostSummonPage() {
         </g>
       </svg>
 
-      {/* Ghost layer — fixed to viewport so it never causes scroll */}
-      <div
-        style={{
-          position: 'fixed', inset: 0,
-          pointerEvents: 'none', zIndex: 50,
-          opacity: ghostVisible ? 1 : 0,
-          transition: 'opacity 0.5s ease',
-          overflow: 'hidden',
-          WebkitMaskImage: 'radial-gradient(ellipse 42% 70% at 50% 48%, transparent 0%, transparent 55%, black 82%)',
-          maskImage: 'radial-gradient(ellipse 42% 70% at 50% 48%, transparent 0%, transparent 55%, black 82%)',
-        }}
-      >
-        <div key={ghostSeries}>
-          {ghostSeries !== null &&
-            MOMENTS[ghostSeries].slice(0, POSITIONS.length).map((moment, i) => (
-              <GhostCard key={i} moment={moment} position={POSITIONS[i]} />
-            ))}
-        </div>
-      </div>
-
-      {/* Main content */}
-      <div
-        style={{
-          position: 'relative', zIndex: 2,
-          opacity: ghostVisible ? 0.55 : 1,
-          transition: 'opacity 0.5s ease',
-        }}
-      >
-        {/* Nav */}
+      <div style={{ position: 'relative', zIndex: 2 }}>
         <div style={{
           padding: '1.25rem 1.75rem',
           display: 'flex', justifyContent: 'space-between', alignItems: 'center',
@@ -692,8 +614,7 @@ export default function GhostSummonPage() {
           </span>
         </div>
 
-        {/* Hero text */}
-        <div style={{ padding: '4rem 1.75rem 2.5rem', textAlign: 'center', position: 'relative' }}>
+        <div style={{ padding: '3.25rem 1.75rem 1.75rem', textAlign: 'center', position: 'relative' }}>
           <p
             className="home-hero-line"
             style={{
@@ -729,24 +650,38 @@ export default function GhostSummonPage() {
           </p>
         </div>
 
-        {/* Series cards */}
-        <div style={{
-          padding: '0 1.75rem 3rem',
-          display: 'grid',
-          gridTemplateColumns: 'repeat(3, 1fr)',
-          gap: 14,
-        }}>
-          {CARD_CONFIGS.map((config) => (
-            <SeriesCard
-              key={config.key}
-              config={config}
-              onMouseEnter={() => handleEnter(config.key)}
-              onMouseLeave={handleLeave}
-            />
-          ))}
+        <div className="home-series-stage">
+          <nav
+            aria-label="Series"
+            onPointerMove={(e) => {
+              const row = (e.target as HTMLElement).closest('[data-series]')
+              const key = row?.getAttribute('data-series')
+              if (key === 'f1' || key === 'f2' || key === 'f3') handleHover(key)
+            }}
+            style={{
+              position: 'relative',
+              zIndex: 2,
+              background: '#080808',
+              border: '0.5px solid #1a1a1a',
+              borderRadius: 10,
+              overflow: 'hidden',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+            }}
+          >
+            {SERIES.map(config => (
+              <SeriesRow
+                key={config.key}
+                config={config}
+                selected={selected === config.key}
+                onHover={() => handleHover(config.key)}
+              />
+            ))}
+          </nav>
+          <CinematicPanel key={active.key} config={active} />
         </div>
 
-        {/* Featured pages */}
         <div style={{ padding: '0 1.75rem 3rem', borderTop: '0.5px solid #1a1a1a', paddingTop: '2rem' }}>
           <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', marginBottom: 16 }}>
             <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: 2, color: '#555', margin: 0 }}>
@@ -763,7 +698,6 @@ export default function GhostSummonPage() {
           </div>
         </div>
 
-        {/* Memorial strip */}
         <div style={{
           padding: '2.5rem 1.75rem 2rem',
           textAlign: 'center',
@@ -785,7 +719,6 @@ export default function GhostSummonPage() {
           </div>
         </div>
 
-        {/* Footer */}
         <div style={{
           padding: '1rem 1.75rem',
           borderTop: '0.5px solid #1a1a1a',

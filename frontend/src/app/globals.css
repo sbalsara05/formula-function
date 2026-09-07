@@ -157,6 +157,73 @@ body {
   animation: homeTelemetryDraw 2.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
+.home-series-stage {
+  display: grid;
+  grid-template-columns: minmax(240px, 32%) 1fr;
+  gap: 14px;
+  align-items: stretch;
+  padding: 0 1.75rem 3rem;
+}
+
+.home-series-row {
+  cursor: pointer;
+}
+
+@keyframes homeGhostIn {
+  from {
+    opacity: 0;
+    transform: translateX(32px) rotate(var(--ghost-rotate, 0deg));
+  }
+  to {
+    opacity: 1;
+    transform: rotate(var(--ghost-rotate, 0deg));
+  }
+}
+
+.home-ghost-card {
+  opacity: 1;
+  transform: rotate(var(--ghost-rotate, 0deg));
+  animation: homeGhostIn 0.65s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+  animation-delay: var(--ghost-delay, 0s);
+}
+
+.home-ghost-figure {
+  width: 100%;
+  height: 100%;
+  /* Opaque at the head, fade only toward the feet and far corners. */
+  -webkit-mask-image: radial-gradient(ellipse 96% 110% at 50% 44%, #000 46%, rgba(0, 0, 0, 0.62) 72%, transparent 90%);
+  mask-image: radial-gradient(ellipse 96% 110% at 50% 44%, #000 46%, rgba(0, 0, 0, 0.62) 72%, transparent 90%);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+}
+
+.home-ghost-cutout {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: contain;
+  object-position: center 12%;
+  pointer-events: none;
+}
+
+.home-series-logo {
+  height: 34px;
+  width: auto;
+  max-width: 168px;
+  object-fit: contain;
+  object-position: left center;
+  display: block;
+  transition: opacity 0.25s ease, filter 0.25s ease;
+}
+
+@media (max-width: 860px) {
+  .home-series-stage {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .home-telemetry-path {
     animation: none;
@@ -168,5 +235,11 @@ body {
     opacity: 1 !important;
     transform: none !important;
     transition: none !important;
+  }
+
+  .home-ghost-card {
+    animation: none;
+    opacity: 1;
+    transform: rotate(var(--ghost-rotate, 0deg));
   }
 }
