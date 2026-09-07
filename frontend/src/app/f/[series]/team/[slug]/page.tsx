@@ -45,8 +45,8 @@ import {
   alpineReelSlides, alpineAcademy, alpineIconicCars,
   astonMartin, astonMartinStats, astonMartinEras, astonMartinSignatureBars,
   astonMartinReelSlides, astonMartinAcademy, astonMartinIconicCars,
-  sauber, sauberStats, sauberEras, sauberSignatureBars,
-  sauberReelSlides, sauberAcademy, sauberIconicCars,
+  audi, audiStats, audiEras, audiSignatureBars,
+  audiReelSlides, audiAcademy, audiIconicCars,
   cadillac, cadillacStats, cadillacEras, cadillacSignatureBars,
   cadillacReelSlides, cadillacAcademy, cadillacIconicCars,
 } from '@/data/mock/teams'
@@ -83,22 +83,22 @@ const RACING_BULLS_F1: TeamBundle = {
   reelSlides: racingBullsReelSlides,
   academy: racingBullsAcademy,
   iconicCars: racingBullsIconicCars,
-  academyTitle: 'DRIVER ROSTER · RBJ',
-  academySubtitle: 'FAENZA · RACING BULLS',
-  academyDescription: 'Sister team to Red Bull Racing. The Faenza line produced Vettel’s 2008 Monza win, Gasly’s 2020 Monza win, and from 2026 runs a Red Bull Ford power unit. Liam Lawson and Arvid Lindblad in 2026.',
+  academyTitle: 'DRIVER ROSTER',
+  academySubtitle: 'RACING BULLS · 2026',
+  academyDescription: 'Liam Lawson and Arvid Lindblad race for Racing Bulls in 2026 on Red Bull Ford power. Isack Hadjar graduated to Red Bull after the 2025 campaign.',
 }
 
-const SAUBER_F1: TeamBundle = {
-  team: sauber,
-  stats: sauberStats,
-  eras: sauberEras,
-  signatureBars: sauberSignatureBars,
-  reelSlides: sauberReelSlides,
-  academy: sauberAcademy,
-  iconicCars: sauberIconicCars,
-  academyTitle: 'DRIVER ROSTER · HINWIL',
-  academySubtitle: 'KICK / AUDI · SWISS',
-  academyDescription: 'Hinwil operates as Kick Sauber on the grid through 2025; the entry becomes the Audi Revolut F1 Team from 2026 (per Audi and Formula 1 announcements December 2025).',
+const AUDI_F1: TeamBundle = {
+  team: audi,
+  stats: audiStats,
+  eras: audiEras,
+  signatureBars: audiSignatureBars,
+  reelSlides: audiReelSlides,
+  academy: audiAcademy,
+  iconicCars: audiIconicCars,
+  academyTitle: 'DRIVER ROSTER',
+  academySubtitle: 'AUDI · 2026',
+  academyDescription: 'Nico Hülkenberg and Gabriel Bortoleto lead Audi’s works Formula 1 debut in 2026.',
 }
 
 const TEAM_REGISTRY: Partial<Record<Series, Record<string, TeamBundle>>> = {
@@ -149,8 +149,8 @@ const TEAM_REGISTRY: Partial<Record<Series, Record<string, TeamBundle>>> = {
       academy: mercedesAcademy,
       iconicCars: mercedesIconicCars,
       academyTitle: 'DRIVER ACADEMY · MAF',
-      academySubtitle: 'PIPELINE · 2025',
-      academyDescription: 'Mercedes-AMG F1 junior programme produced Kimi Antonelli (F1 2025) and continues to develop talent across F2 and the wider feeder series pyramid.',
+      academySubtitle: 'PIPELINE · 2026',
+      academyDescription: 'Mercedes-AMG F1 junior programme produced Kimi Antonelli (F1 2025) and continues to develop talent across F2 and the wider feeder series pyramid. Russell and Antonelli race in 2026.',
     },
     haas: {
       team: haas,
@@ -176,7 +176,7 @@ const TEAM_REGISTRY: Partial<Record<Series, Record<string, TeamBundle>>> = {
       iconicCars: williamsIconicCars,
       academyTitle: 'DRIVER ROSTER',
       academySubtitle: 'GROVE · UK',
-      academyDescription: 'Carlos Sainz Jr. and Alex Albon in 2025. Williams is rebuilding on nine constructors’ titles of heritage and the Dorilton investment cycle.',
+      academyDescription: 'Carlos Sainz Jr. and Alex Albon in 2026. Williams is rebuilding on nine constructors’ titles of heritage and the Dorilton investment cycle.',
     },
     alpine: {
       team: alpine,
@@ -188,7 +188,7 @@ const TEAM_REGISTRY: Partial<Record<Series, Record<string, TeamBundle>>> = {
       iconicCars: alpineIconicCars,
       academyTitle: 'DRIVER ROSTER',
       academySubtitle: 'VIRY · ENSTONE',
-      academyDescription: 'Pierre Gasly and Franco Colapinto in 2025. The Enstone team carries Renault’s 2000s titles in spirit while racing as Alpine, with an Audi power partnership from 2026.',
+      academyDescription: 'Pierre Gasly and Franco Colapinto in 2026. The Enstone team carries Renault’s 2000s titles in spirit while racing as Alpine on Mercedes customer power.',
     },
     'aston-martin': {
       team: astonMartin,
@@ -200,10 +200,11 @@ const TEAM_REGISTRY: Partial<Record<Series, Record<string, TeamBundle>>> = {
       iconicCars: astonMartinIconicCars,
       academyTitle: 'DRIVER ROSTER',
       academySubtitle: 'SILVERSTONE · UK',
-      academyDescription: 'Lance Stroll and Fernando Alonso through 2025, with the squad expanding around Adrian Newey from 2025 onward.',
+      academyDescription: 'Lance Stroll and Fernando Alonso in 2026, with Adrian Newey leading technical direction from 2025 onward.',
     },
-    sauber: SAUBER_F1,
-    'kick-sauber': SAUBER_F1,
+    sauber: AUDI_F1,
+    audi: AUDI_F1,
+    'kick-sauber': AUDI_F1,
     cadillac: {
       team: cadillac,
       stats: cadillacStats,
@@ -214,7 +215,7 @@ const TEAM_REGISTRY: Partial<Record<Series, Record<string, TeamBundle>>> = {
       iconicCars: cadillacIconicCars,
       academyTitle: 'DRIVER ROSTER',
       academySubtitle: '2026 · USA',
-      academyDescription: 'Cadillac’s 2026 roster per formula1.com/en/teams/cadillac: Bottas and Perez with Zhou as reserve. Ferrari power unit to 2029. Iconic car cards use the livery-glow until we add a verified formula1.com/content/dam press image or Wikimedia direct URL.',
+      academyDescription: 'Cadillac’s 2026 roster: Sergio Pérez and Valtteri Bottas with Zhou Guanyu as reserve. Ferrari power unit to 2029.',
     },
   },
   f2: {
@@ -410,7 +411,7 @@ const SLUG_TO_JOLPICA: Record<string, string> = {
   ferrari: 'ferrari', mclaren: 'mclaren', mercedes: 'mercedes',
   'red-bull': 'red_bull', williams: 'williams', 'aston-martin': 'aston_martin',
   alpine: 'alpine', haas: 'haas', sauber: 'sauber', rb: 'rb',
-  'kick-sauber': 'sauber', 'racing-bulls': 'rb', cadillac: 'cadillac',
+  audi: 'sauber', 'kick-sauber': 'sauber', 'racing-bulls': 'rb', cadillac: 'cadillac',
   // 2000s–2020s
   alphatauri: 'alphatauri', 'alpha-tauri': 'alphatauri',
   'bmw-sauber': 'bmw_sauber', bmwsauber: 'bmw_sauber',
@@ -462,8 +463,9 @@ const TEAM_META: Record<string, { name: string; short: string; color: string; na
   aston_martin:  { name: 'Aston Martin',              short: 'Aston Martin',  color: '#006F62', nat: 'British',   wcc:  0, wdc:  0, founded: 2021 },
   alpine:        { name: 'Alpine F1 Team',            short: 'Alpine',        color: '#0090FF', nat: 'French',    wcc:  0, wdc:  0, founded: 2021 },
   haas:          { name: 'Haas F1 Team',              short: 'Haas',          color: '#B6BABD', nat: 'American',  wcc:  0, wdc:  0, founded: 2016 },
-  sauber:        { name: 'Kick Sauber · becoming Audi Revolut F1 Team (entry 2026)', short: 'Kick Sauber', color: '#52E252', nat: 'Swiss',     wcc:  0, wdc:  0, founded: 1993 },
-  rb:            { name: 'Racing Bulls',              short: 'Racing Bulls',  color: '#6692FF', nat: 'Italian',   wcc:  0, wdc:  0, founded: 2006 },
+  sauber:        { name: 'Kick Sauber',               short: 'Sauber',        color: '#52E252', nat: 'Swiss',     wcc:  0, wdc:  0, founded: 1993 },
+  audi:          { name: 'Audi F1 Team',              short: 'Audi',          color: '#BB1C2A', nat: 'German',    wcc:  0, wdc:  0, founded: 2026 },
+  rb:            { name: 'Racing Bulls',              short: 'Racing Bulls',  color: '#6692FF', nat: 'Italian',   wcc:  0, wdc:  0, founded: 2025 },
   cadillac:      { name: 'Cadillac F1 Team',          short: 'Cadillac',      color: '#C8A96E', nat: 'American',  wcc:  0, wdc:  0, founded: 2026 },
   // ── 2000s–2020s ────────────────────────────────────────────────────────────
   alphatauri:    { name: 'Scuderia AlphaTauri',       short: 'AlphaTauri',    color: '#2B4998', nat: 'Italian',   wcc:  0, wdc:  0, founded: 2020 },
@@ -919,8 +921,12 @@ export default async function TeamRoute({
       series === 'f1' ? fetchRaceStats(jolpicaId) : Promise.resolve({ races: 0, wins: 0, podiums: 0, poles: 0 }),
       series === 'f1' ? fetchCurrentStandings() : Promise.resolve({ standings: [], meta: { season: '', round: '' } }),
     ])
-    // Blueprint pages have accurate mock data for WCC/seasons — only update race-derived counts
-    const simpleLive: LiveTeamStats | undefined = raceStats.races > 0
+  // Blueprint pages have accurate mock data for WCC/seasons — only update race-derived counts.
+  // Brand-only pages keep curated stats; Jolpica still uses the prior constructor id for standings.
+  const brandOnlyStats =
+    lcSlug === 'audi' || lcSlug === 'sauber' || lcSlug === 'kick-sauber' ||
+    lcSlug === 'rb' || lcSlug === 'racing-bulls'
+  const simpleLive: LiveTeamStats | undefined = !brandOnlyStats && raceStats.races > 0
       ? {
           wins: raceStats.wins || bundle.stats.wins,
           podiums: raceStats.podiums || bundle.stats.podiums,

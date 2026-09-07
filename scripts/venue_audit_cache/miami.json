@@ -1,0 +1,233 @@
+{
+  "circuitId": "miami",
+  "fetchedAt": "2026-07-29T21:10:34.667219+00:00",
+  "raceTotal": 5,
+  "races": [
+    {
+      "season": 2022,
+      "round": 5,
+      "raceName": "Miami Grand Prix"
+    },
+    {
+      "season": 2023,
+      "round": 5,
+      "raceName": "Miami Grand Prix"
+    },
+    {
+      "season": 2024,
+      "round": 6,
+      "raceName": "Miami Grand Prix"
+    },
+    {
+      "season": 2025,
+      "round": 6,
+      "raceName": "Miami Grand Prix"
+    },
+    {
+      "season": 2026,
+      "round": 4,
+      "raceName": "Miami Grand Prix"
+    }
+  ],
+  "wins": [
+    {
+      "season": 2022,
+      "driverId": "max_verstappen",
+      "name": "Max Verstappen"
+    },
+    {
+      "season": 2023,
+      "driverId": "max_verstappen",
+      "name": "Max Verstappen"
+    },
+    {
+      "season": 2024,
+      "driverId": "norris",
+      "name": "Lando Norris"
+    },
+    {
+      "season": 2025,
+      "driverId": "piastri",
+      "name": "Oscar Piastri"
+    },
+    {
+      "season": 2026,
+      "driverId": "antonelli",
+      "name": "Andrea Kimi Antonelli"
+    }
+  ],
+  "p2": [
+    {
+      "season": 2022,
+      "driverId": "leclerc",
+      "name": "Charles Leclerc"
+    },
+    {
+      "season": 2023,
+      "driverId": "perez",
+      "name": "Sergio P\u00e9rez"
+    },
+    {
+      "season": 2024,
+      "driverId": "max_verstappen",
+      "name": "Max Verstappen"
+    },
+    {
+      "season": 2025,
+      "driverId": "norris",
+      "name": "Lando Norris"
+    },
+    {
+      "season": 2026,
+      "driverId": "norris",
+      "name": "Lando Norris"
+    }
+  ],
+  "p3": [
+    {
+      "season": 2022,
+      "driverId": "sainz",
+      "name": "Carlos Sainz"
+    },
+    {
+      "season": 2023,
+      "driverId": "alonso",
+      "name": "Fernando Alonso"
+    },
+    {
+      "season": 2024,
+      "driverId": "leclerc",
+      "name": "Charles Leclerc"
+    },
+    {
+      "season": 2025,
+      "driverId": "russell",
+      "name": "George Russell"
+    },
+    {
+      "season": 2026,
+      "driverId": "piastri",
+      "name": "Oscar Piastri"
+    }
+  ],
+  "poles": [
+    {
+      "season": 2022,
+      "round": 5,
+      "driverId": "leclerc",
+      "name": "Charles Leclerc",
+      "source": "qualifying"
+    },
+    {
+      "season": 2023,
+      "round": 5,
+      "driverId": "perez",
+      "name": "Sergio P\u00e9rez",
+      "source": "qualifying"
+    },
+    {
+      "season": 2024,
+      "round": 6,
+      "driverId": "max_verstappen",
+      "name": "Max Verstappen",
+      "source": "qualifying"
+    },
+    {
+      "season": 2025,
+      "round": 6,
+      "driverId": "max_verstappen",
+      "name": "Max Verstappen",
+      "source": "qualifying"
+    },
+    {
+      "season": 2026,
+      "round": 4,
+      "driverId": "antonelli",
+      "name": "Andrea Kimi Antonelli",
+      "source": "qualifying"
+    }
+  ],
+  "starts": {
+    "max_verstappen": 5,
+    "leclerc": 5,
+    "sainz": 5,
+    "perez": 4,
+    "russell": 5,
+    "hamilton": 5,
+    "bottas": 4,
+    "ocon": 5,
+    "albon": 5,
+    "stroll": 5,
+    "alonso": 5,
+    "tsunoda": 4,
+    "ricciardo": 2,
+    "latifi": 1,
+    "mick_schumacher": 1,
+    "kevin_magnussen": 3,
+    "vettel": 1,
+    "gasly": 5,
+    "norris": 5,
+    "zhou": 3,
+    "hulkenberg": 4,
+    "de_vries": 1,
+    "piastri": 4,
+    "sargeant": 2,
+    "antonelli": 2,
+    "hadjar": 2,
+    "lawson": 2,
+    "bortoleto": 2,
+    "bearman": 2,
+    "doohan": 1,
+    "colapinto": 1,
+    "arvid_lindblad": 1
+  },
+  "names": {
+    "max_verstappen": "Max Verstappen",
+    "leclerc": "Charles Leclerc",
+    "sainz": "Carlos Sainz",
+    "perez": "Sergio P\u00e9rez",
+    "russell": "George Russell",
+    "hamilton": "Lewis Hamilton",
+    "bottas": "Valtteri Bottas",
+    "ocon": "Esteban Ocon",
+    "albon": "Alexander Albon",
+    "stroll": "Lance Stroll",
+    "alonso": "Fernando Alonso",
+    "tsunoda": "Yuki Tsunoda",
+    "ricciardo": "Daniel Ricciardo",
+    "latifi": "Nicholas Latifi",
+    "mick_schumacher": "Mick Schumacher",
+    "kevin_magnussen": "Kevin Magnussen",
+    "vettel": "Sebastian Vettel",
+    "gasly": "Pierre Gasly",
+    "norris": "Lando Norris",
+    "zhou": "Guanyu Zhou",
+    "hulkenberg": "Nico H\u00fclkenberg",
+    "de_vries": "Nyck de Vries",
+    "piastri": "Oscar Piastri",
+    "sargeant": "Logan Sargeant",
+    "antonelli": "Andrea Kimi Antonelli",
+    "hadjar": "Isack Hadjar",
+    "lawson": "Liam Lawson",
+    "bortoleto": "Gabriel Bortoleto",
+    "bearman": "Oliver Bearman",
+    "doohan": "Jack Doohan",
+    "colapinto": "Franco Colapinto",
+    "arvid_lindblad": "Arvid Lindblad"
+  },
+  "log": {
+    "races_fetched": 5,
+    "races_total": 5,
+    "wins_fetched": 5,
+    "wins_total": 5,
+    "p2_fetched": 5,
+    "p2_total": 5,
+    "p3_fetched": 5,
+    "p3_total": 5,
+    "results_rows_fetched": 102,
+    "qual_rows_fetched": 102,
+    "poles_merged": 5,
+    "poles_from_qualifying": 5,
+    "poles_from_grid": 0
+  }
+}

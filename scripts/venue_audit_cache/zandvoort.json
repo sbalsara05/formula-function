@@ -1,0 +1,1448 @@
+{
+  "circuitId": "zandvoort",
+  "fetchedAt": "2026-07-29T21:15:01.430038+00:00",
+  "raceTotal": 36,
+  "races": [
+    {
+      "season": 1952,
+      "round": 7,
+      "raceName": "Dutch Grand Prix"
+    },
+    {
+      "season": 1953,
+      "round": 3,
+      "raceName": "Dutch Grand Prix"
+    },
+    {
+      "season": 1955,
+      "round": 5,
+      "raceName": "Dutch Grand Prix"
+    },
+    {
+      "season": 1958,
+      "round": 3,
+      "raceName": "Dutch Grand Prix"
+    },
+    {
+      "season": 1959,
+      "round": 3,
+      "raceName": "Dutch Grand Prix"
+    },
+    {
+      "season": 1960,
+      "round": 4,
+      "raceName": "Dutch Grand Prix"
+    },
+    {
+      "season": 1961,
+      "round": 2,
+      "raceName": "Dutch Grand Prix"
+    },
+    {
+      "season": 1962,
+      "round": 1,
+      "raceName": "Dutch Grand Prix"
+    },
+    {
+      "season": 1963,
+      "round": 3,
+      "raceName": "Dutch Grand Prix"
+    },
+    {
+      "season": 1964,
+      "round": 2,
+      "raceName": "Dutch Grand Prix"
+    },
+    {
+      "season": 1965,
+      "round": 6,
+      "raceName": "Dutch Grand Prix"
+    },
+    {
+      "season": 1966,
+      "round": 5,
+      "raceName": "Dutch Grand Prix"
+    },
+    {
+      "season": 1967,
+      "round": 3,
+      "raceName": "Dutch Grand Prix"
+    },
+    {
+      "season": 1968,
+      "round": 5,
+      "raceName": "Dutch Grand Prix"
+    },
+    {
+      "season": 1969,
+      "round": 4,
+      "raceName": "Dutch Grand Prix"
+    },
+    {
+      "season": 1970,
+      "round": 5,
+      "raceName": "Dutch Grand Prix"
+    },
+    {
+      "season": 1971,
+      "round": 4,
+      "raceName": "Dutch Grand Prix"
+    },
+    {
+      "season": 1973,
+      "round": 10,
+      "raceName": "Dutch Grand Prix"
+    },
+    {
+      "season": 1974,
+      "round": 8,
+      "raceName": "Dutch Grand Prix"
+    },
+    {
+      "season": 1975,
+      "round": 8,
+      "raceName": "Dutch Grand Prix"
+    },
+    {
+      "season": 1976,
+      "round": 12,
+      "raceName": "Dutch Grand Prix"
+    },
+    {
+      "season": 1977,
+      "round": 13,
+      "raceName": "Dutch Grand Prix"
+    },
+    {
+      "season": 1978,
+      "round": 13,
+      "raceName": "Dutch Grand Prix"
+    },
+    {
+      "season": 1979,
+      "round": 12,
+      "raceName": "Dutch Grand Prix"
+    },
+    {
+      "season": 1980,
+      "round": 11,
+      "raceName": "Dutch Grand Prix"
+    },
+    {
+      "season": 1981,
+      "round": 12,
+      "raceName": "Dutch Grand Prix"
+    },
+    {
+      "season": 1982,
+      "round": 9,
+      "raceName": "Dutch Grand Prix"
+    },
+    {
+      "season": 1983,
+      "round": 12,
+      "raceName": "Dutch Grand Prix"
+    },
+    {
+      "season": 1984,
+      "round": 13,
+      "raceName": "Dutch Grand Prix"
+    },
+    {
+      "season": 1985,
+      "round": 11,
+      "raceName": "Dutch Grand Prix"
+    },
+    {
+      "season": 2021,
+      "round": 13,
+      "raceName": "Dutch Grand Prix"
+    },
+    {
+      "season": 2022,
+      "round": 15,
+      "raceName": "Dutch Grand Prix"
+    },
+    {
+      "season": 2023,
+      "round": 13,
+      "raceName": "Dutch Grand Prix"
+    },
+    {
+      "season": 2024,
+      "round": 15,
+      "raceName": "Dutch Grand Prix"
+    },
+    {
+      "season": 2025,
+      "round": 15,
+      "raceName": "Dutch Grand Prix"
+    },
+    {
+      "season": 2026,
+      "round": 12,
+      "raceName": "Dutch Grand Prix"
+    }
+  ],
+  "wins": [
+    {
+      "season": 1952,
+      "driverId": "ascari",
+      "name": "Alberto Ascari"
+    },
+    {
+      "season": 1953,
+      "driverId": "ascari",
+      "name": "Alberto Ascari"
+    },
+    {
+      "season": 1955,
+      "driverId": "fangio",
+      "name": "Juan Fangio"
+    },
+    {
+      "season": 1958,
+      "driverId": "moss",
+      "name": "Stirling Moss"
+    },
+    {
+      "season": 1959,
+      "driverId": "bonnier",
+      "name": "Jo Bonnier"
+    },
+    {
+      "season": 1960,
+      "driverId": "jack_brabham",
+      "name": "Jack Brabham"
+    },
+    {
+      "season": 1961,
+      "driverId": "trips",
+      "name": "Wolfgang von Trips"
+    },
+    {
+      "season": 1962,
+      "driverId": "hill",
+      "name": "Graham Hill"
+    },
+    {
+      "season": 1963,
+      "driverId": "clark",
+      "name": "Jim Clark"
+    },
+    {
+      "season": 1964,
+      "driverId": "clark",
+      "name": "Jim Clark"
+    },
+    {
+      "season": 1965,
+      "driverId": "clark",
+      "name": "Jim Clark"
+    },
+    {
+      "season": 1966,
+      "driverId": "jack_brabham",
+      "name": "Jack Brabham"
+    },
+    {
+      "season": 1967,
+      "driverId": "clark",
+      "name": "Jim Clark"
+    },
+    {
+      "season": 1968,
+      "driverId": "stewart",
+      "name": "Jackie Stewart"
+    },
+    {
+      "season": 1969,
+      "driverId": "stewart",
+      "name": "Jackie Stewart"
+    },
+    {
+      "season": 1970,
+      "driverId": "rindt",
+      "name": "Jochen Rindt"
+    },
+    {
+      "season": 1971,
+      "driverId": "ickx",
+      "name": "Jacky Ickx"
+    },
+    {
+      "season": 1973,
+      "driverId": "stewart",
+      "name": "Jackie Stewart"
+    },
+    {
+      "season": 1974,
+      "driverId": "lauda",
+      "name": "Niki Lauda"
+    },
+    {
+      "season": 1975,
+      "driverId": "hunt",
+      "name": "James Hunt"
+    },
+    {
+      "season": 1976,
+      "driverId": "hunt",
+      "name": "James Hunt"
+    },
+    {
+      "season": 1977,
+      "driverId": "lauda",
+      "name": "Niki Lauda"
+    },
+    {
+      "season": 1978,
+      "driverId": "mario_andretti",
+      "name": "Mario Andretti"
+    },
+    {
+      "season": 1979,
+      "driverId": "jones",
+      "name": "Alan Jones"
+    },
+    {
+      "season": 1980,
+      "driverId": "piquet",
+      "name": "Nelson Piquet"
+    },
+    {
+      "season": 1981,
+      "driverId": "prost",
+      "name": "Alain Prost"
+    },
+    {
+      "season": 1982,
+      "driverId": "pironi",
+      "name": "Didier Pironi"
+    },
+    {
+      "season": 1983,
+      "driverId": "arnoux",
+      "name": "Ren\u00e9 Arnoux"
+    },
+    {
+      "season": 1984,
+      "driverId": "prost",
+      "name": "Alain Prost"
+    },
+    {
+      "season": 1985,
+      "driverId": "lauda",
+      "name": "Niki Lauda"
+    },
+    {
+      "season": 2021,
+      "driverId": "max_verstappen",
+      "name": "Max Verstappen"
+    },
+    {
+      "season": 2022,
+      "driverId": "max_verstappen",
+      "name": "Max Verstappen"
+    },
+    {
+      "season": 2023,
+      "driverId": "max_verstappen",
+      "name": "Max Verstappen"
+    },
+    {
+      "season": 2024,
+      "driverId": "norris",
+      "name": "Lando Norris"
+    },
+    {
+      "season": 2025,
+      "driverId": "piastri",
+      "name": "Oscar Piastri"
+    }
+  ],
+  "p2": [
+    {
+      "season": 1952,
+      "driverId": "farina",
+      "name": "Nino Farina"
+    },
+    {
+      "season": 1953,
+      "driverId": "farina",
+      "name": "Nino Farina"
+    },
+    {
+      "season": 1955,
+      "driverId": "moss",
+      "name": "Stirling Moss"
+    },
+    {
+      "season": 1958,
+      "driverId": "schell",
+      "name": "Harry Schell"
+    },
+    {
+      "season": 1959,
+      "driverId": "jack_brabham",
+      "name": "Jack Brabham"
+    },
+    {
+      "season": 1960,
+      "driverId": "ireland",
+      "name": "Innes Ireland"
+    },
+    {
+      "season": 1961,
+      "driverId": "phil_hill",
+      "name": "Phil Hill"
+    },
+    {
+      "season": 1962,
+      "driverId": "trevor_taylor",
+      "name": "Trevor Taylor"
+    },
+    {
+      "season": 1963,
+      "driverId": "gurney",
+      "name": "Dan Gurney"
+    },
+    {
+      "season": 1964,
+      "driverId": "surtees",
+      "name": "John Surtees"
+    },
+    {
+      "season": 1965,
+      "driverId": "stewart",
+      "name": "Jackie Stewart"
+    },
+    {
+      "season": 1966,
+      "driverId": "hill",
+      "name": "Graham Hill"
+    },
+    {
+      "season": 1967,
+      "driverId": "jack_brabham",
+      "name": "Jack Brabham"
+    },
+    {
+      "season": 1968,
+      "driverId": "beltoise",
+      "name": "Jean-Pierre Beltoise"
+    },
+    {
+      "season": 1969,
+      "driverId": "siffert",
+      "name": "Jo Siffert"
+    },
+    {
+      "season": 1970,
+      "driverId": "stewart",
+      "name": "Jackie Stewart"
+    },
+    {
+      "season": 1971,
+      "driverId": "rodriguez",
+      "name": "Pedro Rodr\u00edguez"
+    },
+    {
+      "season": 1973,
+      "driverId": "cevert",
+      "name": "Fran\u00e7ois Cevert"
+    },
+    {
+      "season": 1974,
+      "driverId": "regazzoni",
+      "name": "Clay Regazzoni"
+    },
+    {
+      "season": 1975,
+      "driverId": "lauda",
+      "name": "Niki Lauda"
+    },
+    {
+      "season": 1976,
+      "driverId": "regazzoni",
+      "name": "Clay Regazzoni"
+    },
+    {
+      "season": 1977,
+      "driverId": "laffite",
+      "name": "Jacques Laffite"
+    },
+    {
+      "season": 1978,
+      "driverId": "peterson",
+      "name": "Ronnie Peterson"
+    },
+    {
+      "season": 1979,
+      "driverId": "scheckter",
+      "name": "Jody Scheckter"
+    },
+    {
+      "season": 1980,
+      "driverId": "arnoux",
+      "name": "Ren\u00e9 Arnoux"
+    },
+    {
+      "season": 1981,
+      "driverId": "piquet",
+      "name": "Nelson Piquet"
+    },
+    {
+      "season": 1982,
+      "driverId": "piquet",
+      "name": "Nelson Piquet"
+    },
+    {
+      "season": 1983,
+      "driverId": "tambay",
+      "name": "Patrick Tambay"
+    },
+    {
+      "season": 1984,
+      "driverId": "lauda",
+      "name": "Niki Lauda"
+    },
+    {
+      "season": 1985,
+      "driverId": "prost",
+      "name": "Alain Prost"
+    },
+    {
+      "season": 2021,
+      "driverId": "hamilton",
+      "name": "Lewis Hamilton"
+    },
+    {
+      "season": 2022,
+      "driverId": "russell",
+      "name": "George Russell"
+    },
+    {
+      "season": 2023,
+      "driverId": "alonso",
+      "name": "Fernando Alonso"
+    },
+    {
+      "season": 2024,
+      "driverId": "max_verstappen",
+      "name": "Max Verstappen"
+    },
+    {
+      "season": 2025,
+      "driverId": "max_verstappen",
+      "name": "Max Verstappen"
+    }
+  ],
+  "p3": [
+    {
+      "season": 1952,
+      "driverId": "villoresi",
+      "name": "Luigi Villoresi"
+    },
+    {
+      "season": 1953,
+      "driverId": "gonzalez",
+      "name": "Jos\u00e9 Froil\u00e1n Gonz\u00e1lez"
+    },
+    {
+      "season": 1955,
+      "driverId": "musso",
+      "name": "Luigi Musso"
+    },
+    {
+      "season": 1958,
+      "driverId": "behra",
+      "name": "Jean Behra"
+    },
+    {
+      "season": 1959,
+      "driverId": "gregory",
+      "name": "Masten Gregory"
+    },
+    {
+      "season": 1960,
+      "driverId": "hill",
+      "name": "Graham Hill"
+    },
+    {
+      "season": 1961,
+      "driverId": "clark",
+      "name": "Jim Clark"
+    },
+    {
+      "season": 1962,
+      "driverId": "phil_hill",
+      "name": "Phil Hill"
+    },
+    {
+      "season": 1963,
+      "driverId": "surtees",
+      "name": "John Surtees"
+    },
+    {
+      "season": 1964,
+      "driverId": "arundell",
+      "name": "Peter Arundell"
+    },
+    {
+      "season": 1965,
+      "driverId": "gurney",
+      "name": "Dan Gurney"
+    },
+    {
+      "season": 1966,
+      "driverId": "clark",
+      "name": "Jim Clark"
+    },
+    {
+      "season": 1967,
+      "driverId": "hulme",
+      "name": "Denny Hulme"
+    },
+    {
+      "season": 1968,
+      "driverId": "rodriguez",
+      "name": "Pedro Rodr\u00edguez"
+    },
+    {
+      "season": 1969,
+      "driverId": "amon",
+      "name": "Chris Amon"
+    },
+    {
+      "season": 1970,
+      "driverId": "ickx",
+      "name": "Jacky Ickx"
+    },
+    {
+      "season": 1971,
+      "driverId": "regazzoni",
+      "name": "Clay Regazzoni"
+    },
+    {
+      "season": 1973,
+      "driverId": "hunt",
+      "name": "James Hunt"
+    },
+    {
+      "season": 1974,
+      "driverId": "emerson_fittipaldi",
+      "name": "Emerson Fittipaldi"
+    },
+    {
+      "season": 1975,
+      "driverId": "regazzoni",
+      "name": "Clay Regazzoni"
+    },
+    {
+      "season": 1976,
+      "driverId": "mario_andretti",
+      "name": "Mario Andretti"
+    },
+    {
+      "season": 1977,
+      "driverId": "scheckter",
+      "name": "Jody Scheckter"
+    },
+    {
+      "season": 1978,
+      "driverId": "lauda",
+      "name": "Niki Lauda"
+    },
+    {
+      "season": 1979,
+      "driverId": "laffite",
+      "name": "Jacques Laffite"
+    },
+    {
+      "season": 1980,
+      "driverId": "laffite",
+      "name": "Jacques Laffite"
+    },
+    {
+      "season": 1981,
+      "driverId": "jones",
+      "name": "Alan Jones"
+    },
+    {
+      "season": 1982,
+      "driverId": "keke_rosberg",
+      "name": "Keke Rosberg"
+    },
+    {
+      "season": 1983,
+      "driverId": "watson",
+      "name": "John Watson"
+    },
+    {
+      "season": 1984,
+      "driverId": "mansell",
+      "name": "Nigel Mansell"
+    },
+    {
+      "season": 1985,
+      "driverId": "senna",
+      "name": "Ayrton Senna"
+    },
+    {
+      "season": 2021,
+      "driverId": "bottas",
+      "name": "Valtteri Bottas"
+    },
+    {
+      "season": 2022,
+      "driverId": "leclerc",
+      "name": "Charles Leclerc"
+    },
+    {
+      "season": 2023,
+      "driverId": "gasly",
+      "name": "Pierre Gasly"
+    },
+    {
+      "season": 2024,
+      "driverId": "leclerc",
+      "name": "Charles Leclerc"
+    },
+    {
+      "season": 2025,
+      "driverId": "hadjar",
+      "name": "Isack Hadjar"
+    }
+  ],
+  "poles": [
+    {
+      "season": 1952,
+      "round": 7,
+      "driverId": "ascari",
+      "name": "Alberto Ascari",
+      "source": "grid"
+    },
+    {
+      "season": 1953,
+      "round": 3,
+      "driverId": "ascari",
+      "name": "Alberto Ascari",
+      "source": "grid"
+    },
+    {
+      "season": 1955,
+      "round": 5,
+      "driverId": "fangio",
+      "name": "Juan Fangio",
+      "source": "grid"
+    },
+    {
+      "season": 1958,
+      "round": 3,
+      "driverId": "lewis-evans",
+      "name": "Stuart Lewis-Evans",
+      "source": "grid"
+    },
+    {
+      "season": 1959,
+      "round": 3,
+      "driverId": "bonnier",
+      "name": "Jo Bonnier",
+      "source": "grid"
+    },
+    {
+      "season": 1960,
+      "round": 4,
+      "driverId": "moss",
+      "name": "Stirling Moss",
+      "source": "grid"
+    },
+    {
+      "season": 1961,
+      "round": 2,
+      "driverId": "phil_hill",
+      "name": "Phil Hill",
+      "source": "grid"
+    },
+    {
+      "season": 1962,
+      "round": 1,
+      "driverId": "surtees",
+      "name": "John Surtees",
+      "source": "grid"
+    },
+    {
+      "season": 1963,
+      "round": 3,
+      "driverId": "clark",
+      "name": "Jim Clark",
+      "source": "grid"
+    },
+    {
+      "season": 1964,
+      "round": 2,
+      "driverId": "gurney",
+      "name": "Dan Gurney",
+      "source": "grid"
+    },
+    {
+      "season": 1965,
+      "round": 6,
+      "driverId": "hill",
+      "name": "Graham Hill",
+      "source": "grid"
+    },
+    {
+      "season": 1966,
+      "round": 5,
+      "driverId": "jack_brabham",
+      "name": "Jack Brabham",
+      "source": "grid"
+    },
+    {
+      "season": 1967,
+      "round": 3,
+      "driverId": "hill",
+      "name": "Graham Hill",
+      "source": "grid"
+    },
+    {
+      "season": 1968,
+      "round": 5,
+      "driverId": "amon",
+      "name": "Chris Amon",
+      "source": "grid"
+    },
+    {
+      "season": 1969,
+      "round": 4,
+      "driverId": "rindt",
+      "name": "Jochen Rindt",
+      "source": "grid"
+    },
+    {
+      "season": 1970,
+      "round": 5,
+      "driverId": "rindt",
+      "name": "Jochen Rindt",
+      "source": "grid"
+    },
+    {
+      "season": 1971,
+      "round": 4,
+      "driverId": "ickx",
+      "name": "Jacky Ickx",
+      "source": "grid"
+    },
+    {
+      "season": 1973,
+      "round": 10,
+      "driverId": "peterson",
+      "name": "Ronnie Peterson",
+      "source": "grid"
+    },
+    {
+      "season": 1974,
+      "round": 8,
+      "driverId": "lauda",
+      "name": "Niki Lauda",
+      "source": "grid"
+    },
+    {
+      "season": 1975,
+      "round": 8,
+      "driverId": "lauda",
+      "name": "Niki Lauda",
+      "source": "grid"
+    },
+    {
+      "season": 1976,
+      "round": 12,
+      "driverId": "peterson",
+      "name": "Ronnie Peterson",
+      "source": "grid"
+    },
+    {
+      "season": 1977,
+      "round": 13,
+      "driverId": "mario_andretti",
+      "name": "Mario Andretti",
+      "source": "grid"
+    },
+    {
+      "season": 1978,
+      "round": 13,
+      "driverId": "mario_andretti",
+      "name": "Mario Andretti",
+      "source": "grid"
+    },
+    {
+      "season": 1979,
+      "round": 12,
+      "driverId": "arnoux",
+      "name": "Ren\u00e9 Arnoux",
+      "source": "grid"
+    },
+    {
+      "season": 1980,
+      "round": 11,
+      "driverId": "arnoux",
+      "name": "Ren\u00e9 Arnoux",
+      "source": "grid"
+    },
+    {
+      "season": 1981,
+      "round": 12,
+      "driverId": "prost",
+      "name": "Alain Prost",
+      "source": "grid"
+    },
+    {
+      "season": 1982,
+      "round": 9,
+      "driverId": "arnoux",
+      "name": "Ren\u00e9 Arnoux",
+      "source": "grid"
+    },
+    {
+      "season": 1983,
+      "round": 12,
+      "driverId": "piquet",
+      "name": "Nelson Piquet",
+      "source": "grid"
+    },
+    {
+      "season": 1984,
+      "round": 13,
+      "driverId": "prost",
+      "name": "Alain Prost",
+      "source": "grid"
+    },
+    {
+      "season": 1985,
+      "round": 11,
+      "driverId": "piquet",
+      "name": "Nelson Piquet",
+      "source": "grid"
+    },
+    {
+      "season": 2021,
+      "round": 13,
+      "driverId": "max_verstappen",
+      "name": "Max Verstappen",
+      "source": "qualifying"
+    },
+    {
+      "season": 2022,
+      "round": 15,
+      "driverId": "max_verstappen",
+      "name": "Max Verstappen",
+      "source": "qualifying"
+    },
+    {
+      "season": 2023,
+      "round": 13,
+      "driverId": "max_verstappen",
+      "name": "Max Verstappen",
+      "source": "qualifying"
+    },
+    {
+      "season": 2024,
+      "round": 15,
+      "driverId": "norris",
+      "name": "Lando Norris",
+      "source": "qualifying"
+    },
+    {
+      "season": 2025,
+      "round": 15,
+      "driverId": "piastri",
+      "name": "Oscar Piastri",
+      "source": "qualifying"
+    }
+  ],
+  "starts": {
+    "ascari": 2,
+    "farina": 2,
+    "villoresi": 2,
+    "hawthorn": 4,
+    "manzon": 2,
+    "trintignant": 7,
+    "duncan_hamilton": 1,
+    "macklin": 2,
+    "landi": 1,
+    "flinterman": 2,
+    "wharton": 2,
+    "moss": 7,
+    "lof": 1,
+    "downing": 1,
+    "tornaco": 1,
+    "frere": 1,
+    "behra": 4,
+    "bianco": 1,
+    "gonzalez": 2,
+    "bonetto": 1,
+    "graffenried": 1,
+    "rosier": 2,
+    "collins": 2,
+    "mcalpine": 1,
+    "schell": 3,
+    "claes": 2,
+    "fangio": 2,
+    "mieres": 2,
+    "salvadori": 5,
+    "musso": 2,
+    "castellotti": 1,
+    "ramos": 1,
+    "pollet": 1,
+    "gould": 2,
+    "kling": 1,
+    "peter_walker": 1,
+    "allison": 2,
+    "jack_brabham": 12,
+    "bonnier": 10,
+    "beaufort": 7,
+    "scarlatti": 1,
+    "lewis-evans": 1,
+    "hill": 16,
+    "gregory": 5,
+    "brooks": 4,
+    "ireland": 5,
+    "phil_hill": 6,
+    "shelby": 1,
+    "trips": 2,
+    "ginther": 6,
+    "henry_taylor": 1,
+    "stacey": 1,
+    "clark": 8,
+    "gurney": 10,
+    "bristow": 1,
+    "mclaren": 9,
+    "reventlow": 1,
+    "daigh": 1,
+    "surtees": 11,
+    "trevor_taylor": 3,
+    "herrmann": 1,
+    "burgess": 2,
+    "baghetti": 3,
+    "maggs": 3,
+    "lewis": 1,
+    "ricardo_rodriguez": 1,
+    "seidel": 1,
+    "pon": 1,
+    "slotemaker": 1,
+    "scarfiotti": 2,
+    "siffert": 9,
+    "hall": 1,
+    "amon": 8,
+    "mitter": 1,
+    "settember": 1,
+    "arundell": 2,
+    "anderson": 4,
+    "hailwood": 3,
+    "bandini": 3,
+    "stewart": 8,
+    "hulme": 8,
+    "spence": 3,
+    "gardner": 1,
+    "attwood": 2,
+    "rindt": 6,
+    "taylor": 1,
+    "ligier": 1,
+    "parkes": 2,
+    "irwin": 1,
+    "rodriguez": 4,
+    "beltoise": 6,
+    "ickx": 8,
+    "moser": 2,
+    "oliver": 4,
+    "courage": 3,
+    "bianchi": 1,
+    "elford": 1,
+    "regazzoni": 8,
+    "miles": 1,
+    "pescarolo": 4,
+    "peterson": 8,
+    "cevert": 3,
+    "eaton": 1,
+    "gethin": 2,
+    "ganley": 2,
+    "lennep": 3,
+    "barber": 1,
+    "roig": 1,
+    "schenken": 1,
+    "stommelen": 2,
+    "wisell": 1,
+    "mario_andretti": 7,
+    "walker": 1,
+    "hunt": 6,
+    "revson": 1,
+    "pace": 3,
+    "follmer": 1,
+    "lauda": 10,
+    "wilson_fittipaldi": 2,
+    "reutemann": 9,
+    "purley": 1,
+    "williamson": 1,
+    "emerson_fittipaldi": 8,
+    "beuttler": 1,
+    "opel": 2,
+    "scheckter": 7,
+    "depailler": 5,
+    "watson": 10,
+    "brambilla": 6,
+    "schuppan": 1,
+    "migault": 1,
+    "merzario": 3,
+    "edwards": 1,
+    "jarier": 9,
+    "mass": 7,
+    "pryce": 3,
+    "stuck": 5,
+    "brise": 1,
+    "donohue": 1,
+    "ian_scheckter": 2,
+    "jones": 7,
+    "lombardi": 1,
+    "laffite": 11,
+    "evans": 1,
+    "fushida": 1,
+    "hayje": 1,
+    "ertl": 1,
+    "perkins": 1,
+    "nilsson": 2,
+    "andersson": 1,
+    "tambay": 8,
+    "binder": 1,
+    "lunger": 2,
+    "ribeiro": 1,
+    "patrese": 9,
+    "henton": 2,
+    "jabouille": 4,
+    "keegan": 2,
+    "gilles_villeneuve": 4,
+    "rebaque": 4,
+    "giacomelli": 5,
+    "arnoux": 7,
+    "keke_rosberg": 6,
+    "piquet": 8,
+    "daly": 4,
+    "pironi": 5,
+    "angelis": 7,
+    "lammers": 2,
+    "prost": 6,
+    "surer": 6,
+    "cheever": 5,
+    "lees": 1,
+    "mansell": 5,
+    "salazar": 2,
+    "stohr": 1,
+    "alboreto": 5,
+    "borgudd": 1,
+    "cesaris": 5,
+    "baldi": 2,
+    "manfred_winkelhock": 3,
+    "boesel": 2,
+    "serra": 1,
+    "warwick": 4,
+    "johansson": 3,
+    "corrado_fabi": 1,
+    "guerrero": 1,
+    "boutsen": 3,
+    "sullivan": 1,
+    "fabi": 2,
+    "hesnault": 1,
+    "palmer": 2,
+    "alliot": 2,
+    "gartner": 1,
+    "bellof": 2,
+    "rothengatter": 2,
+    "senna": 2,
+    "ghinzani": 2,
+    "brundle": 1,
+    "berger": 1,
+    "martini": 1,
+    "max_verstappen": 5,
+    "hamilton": 5,
+    "bottas": 4,
+    "gasly": 5,
+    "leclerc": 5,
+    "alonso": 5,
+    "sainz": 5,
+    "perez": 4,
+    "ocon": 5,
+    "norris": 5,
+    "ricciardo": 3,
+    "stroll": 5,
+    "vettel": 2,
+    "giovinazzi": 1,
+    "kubica": 1,
+    "latifi": 2,
+    "russell": 5,
+    "mick_schumacher": 2,
+    "tsunoda": 5,
+    "mazepin": 1,
+    "albon": 4,
+    "kevin_magnussen": 3,
+    "zhou": 3,
+    "piastri": 3,
+    "hulkenberg": 3,
+    "lawson": 2,
+    "sargeant": 2,
+    "hadjar": 1,
+    "bearman": 1,
+    "colapinto": 1,
+    "bortoleto": 1,
+    "antonelli": 1
+  },
+  "names": {
+    "ascari": "Alberto Ascari",
+    "farina": "Nino Farina",
+    "villoresi": "Luigi Villoresi",
+    "hawthorn": "Mike Hawthorn",
+    "manzon": "Robert Manzon",
+    "trintignant": "Maurice Trintignant",
+    "duncan_hamilton": "Duncan Hamilton",
+    "macklin": "Lance Macklin",
+    "landi": "Chico Landi",
+    "flinterman": "Jan Flinterman",
+    "wharton": "Ken Wharton",
+    "moss": "Stirling Moss",
+    "lof": "Dries van der Lof",
+    "downing": "Ken Downing",
+    "tornaco": "Charles de Tornaco",
+    "frere": "Paul Fr\u00e8re",
+    "behra": "Jean Behra",
+    "bianco": "Gino Bianco",
+    "gonzalez": "Jos\u00e9 Froil\u00e1n Gonz\u00e1lez",
+    "bonetto": "Felice Bonetto",
+    "graffenried": "Toulo de Graffenried",
+    "rosier": "Louis Rosier",
+    "collins": "Peter Collins",
+    "mcalpine": "Kenneth McAlpine",
+    "schell": "Harry Schell",
+    "claes": "Johnny Claes",
+    "fangio": "Juan Fangio",
+    "mieres": "Roberto Mieres",
+    "salvadori": "Roy Salvadori",
+    "musso": "Luigi Musso",
+    "castellotti": "Eugenio Castellotti",
+    "ramos": "Hernando da Silva Ramos",
+    "pollet": "Jacques Pollet",
+    "gould": "Horace Gould",
+    "kling": "Karl Kling",
+    "peter_walker": "Peter Walker",
+    "allison": "Cliff Allison",
+    "jack_brabham": "Jack Brabham",
+    "bonnier": "Jo Bonnier",
+    "beaufort": "Carel Godin de Beaufort",
+    "scarlatti": "Giorgio Scarlatti",
+    "lewis-evans": "Stuart Lewis-Evans",
+    "hill": "Graham Hill",
+    "gregory": "Masten Gregory",
+    "brooks": "Tony Brooks",
+    "ireland": "Innes Ireland",
+    "phil_hill": "Phil Hill",
+    "shelby": "Carroll Shelby",
+    "trips": "Wolfgang von Trips",
+    "ginther": "Richie Ginther",
+    "henry_taylor": "Henry Taylor",
+    "stacey": "Alan Stacey",
+    "clark": "Jim Clark",
+    "gurney": "Dan Gurney",
+    "bristow": "Chris Bristow",
+    "mclaren": "Bruce McLaren",
+    "reventlow": "Lance Reventlow",
+    "daigh": "Chuck Daigh",
+    "surtees": "John Surtees",
+    "trevor_taylor": "Trevor Taylor",
+    "herrmann": "Hans Herrmann",
+    "burgess": "Ian Burgess",
+    "baghetti": "Giancarlo Baghetti",
+    "maggs": "Tony Maggs",
+    "lewis": "Jackie Lewis",
+    "ricardo_rodriguez": "Ricardo Rodr\u00edguez",
+    "seidel": "Wolfgang Seidel",
+    "pon": "Ben Pon",
+    "slotemaker": "Rob Slotemaker",
+    "scarfiotti": "Ludovico Scarfiotti",
+    "siffert": "Jo Siffert",
+    "hall": "Jim Hall",
+    "amon": "Chris Amon",
+    "mitter": "Gerhard Mitter",
+    "settember": "Tony Settember",
+    "arundell": "Peter Arundell",
+    "anderson": "Bob Anderson",
+    "hailwood": "Mike Hailwood",
+    "bandini": "Lorenzo Bandini",
+    "stewart": "Jackie Stewart",
+    "hulme": "Denny Hulme",
+    "spence": "Mike Spence",
+    "gardner": "Frank Gardner",
+    "attwood": "Richard Attwood",
+    "rindt": "Jochen Rindt",
+    "taylor": "John Taylor",
+    "ligier": "Guy Ligier",
+    "parkes": "Mike Parkes",
+    "irwin": "Chris Irwin",
+    "rodriguez": "Pedro Rodr\u00edguez",
+    "beltoise": "Jean-Pierre Beltoise",
+    "ickx": "Jacky Ickx",
+    "moser": "Silvio Moser",
+    "oliver": "Jackie Oliver",
+    "courage": "Piers Courage",
+    "bianchi": "Lucien Bianchi",
+    "elford": "Vic Elford",
+    "regazzoni": "Clay Regazzoni",
+    "miles": "John Miles",
+    "pescarolo": "Henri Pescarolo",
+    "peterson": "Ronnie Peterson",
+    "cevert": "Fran\u00e7ois Cevert",
+    "eaton": "George Eaton",
+    "gethin": "Peter Gethin",
+    "ganley": "Howden Ganley",
+    "lennep": "Gijs van Lennep",
+    "barber": "Skip Barber",
+    "roig": "Alex Soler-Roig",
+    "schenken": "Tim Schenken",
+    "stommelen": "Rolf Stommelen",
+    "wisell": "Reine Wisell",
+    "mario_andretti": "Mario Andretti",
+    "walker": "David Walker",
+    "hunt": "James Hunt",
+    "revson": "Peter Revson",
+    "pace": "Carlos Pace",
+    "follmer": "George Follmer",
+    "lauda": "Niki Lauda",
+    "wilson_fittipaldi": "Wilson Fittipaldi",
+    "reutemann": "Carlos Reutemann",
+    "purley": "David Purley",
+    "williamson": "Roger Williamson",
+    "emerson_fittipaldi": "Emerson Fittipaldi",
+    "beuttler": "Mike Beuttler",
+    "opel": "Rikky von Opel",
+    "scheckter": "Jody Scheckter",
+    "depailler": "Patrick Depailler",
+    "watson": "John Watson",
+    "brambilla": "Vittorio Brambilla",
+    "schuppan": "Vern Schuppan",
+    "migault": "Fran\u00e7ois Migault",
+    "merzario": "Arturo Merzario",
+    "edwards": "Guy Edwards",
+    "jarier": "Jean-Pierre Jarier",
+    "mass": "Jochen Mass",
+    "pryce": "Tom Pryce",
+    "stuck": "Hans-Joachim Stuck",
+    "brise": "Tony Brise",
+    "donohue": "Mark Donohue",
+    "ian_scheckter": "Ian Scheckter",
+    "jones": "Alan Jones",
+    "lombardi": "Lella Lombardi",
+    "laffite": "Jacques Laffite",
+    "evans": "Bob Evans",
+    "fushida": "Hiroshi Fushida",
+    "hayje": "Boy Lunger",
+    "ertl": "Harald Ertl",
+    "perkins": "Larry Perkins",
+    "nilsson": "Gunnar Nilsson",
+    "andersson": "Conny Andersson",
+    "tambay": "Patrick Tambay",
+    "binder": "Hans Binder",
+    "lunger": "Brett Lunger",
+    "ribeiro": "Alex Ribeiro",
+    "patrese": "Riccardo Patrese",
+    "henton": "Brian Henton",
+    "jabouille": "Jean-Pierre Jabouille",
+    "keegan": "Rupert Keegan",
+    "gilles_villeneuve": "Gilles Villeneuve",
+    "rebaque": "Hector Rebaque",
+    "giacomelli": "Bruno Giacomelli",
+    "arnoux": "Ren\u00e9 Arnoux",
+    "keke_rosberg": "Keke Rosberg",
+    "piquet": "Nelson Piquet",
+    "daly": "Derek Daly",
+    "pironi": "Didier Pironi",
+    "angelis": "Elio de Angelis",
+    "lammers": "Jan Lammers",
+    "prost": "Alain Prost",
+    "surer": "Marc Surer",
+    "cheever": "Eddie Cheever",
+    "lees": "Geoff Lees",
+    "mansell": "Nigel Mansell",
+    "salazar": "Eliseo Salazar",
+    "stohr": "Siegfried Stohr",
+    "alboreto": "Michele Alboreto",
+    "borgudd": "Slim Borgudd",
+    "cesaris": "Andrea de Cesaris",
+    "baldi": "Mauro Baldi",
+    "manfred_winkelhock": "Manfred Winkelhock",
+    "boesel": "Raul Boesel",
+    "serra": "Chico Serra",
+    "warwick": "Derek Warwick",
+    "johansson": "Stefan Johansson",
+    "corrado_fabi": "Corrado Fabi",
+    "guerrero": "Roberto Guerrero",
+    "boutsen": "Thierry Boutsen",
+    "sullivan": "Danny Sullivan",
+    "fabi": "Teo Fabi",
+    "hesnault": "Fran\u00e7ois Hesnault",
+    "palmer": "Jonathan Palmer",
+    "alliot": "Philippe Alliot",
+    "gartner": "Jo Gartner",
+    "bellof": "Stefan Bellof",
+    "rothengatter": "Huub Rothengatter",
+    "senna": "Ayrton Senna",
+    "ghinzani": "Piercarlo Ghinzani",
+    "brundle": "Martin Brundle",
+    "berger": "Gerhard Berger",
+    "martini": "Pierluigi Martini",
+    "max_verstappen": "Max Verstappen",
+    "hamilton": "Lewis Hamilton",
+    "bottas": "Valtteri Bottas",
+    "gasly": "Pierre Gasly",
+    "leclerc": "Charles Leclerc",
+    "alonso": "Fernando Alonso",
+    "sainz": "Carlos Sainz",
+    "perez": "Sergio P\u00e9rez",
+    "ocon": "Esteban Ocon",
+    "norris": "Lando Norris",
+    "ricciardo": "Daniel Ricciardo",
+    "stroll": "Lance Stroll",
+    "vettel": "Sebastian Vettel",
+    "giovinazzi": "Antonio Giovinazzi",
+    "kubica": "Robert Kubica",
+    "latifi": "Nicholas Latifi",
+    "russell": "George Russell",
+    "mick_schumacher": "Mick Schumacher",
+    "tsunoda": "Yuki Tsunoda",
+    "mazepin": "Nikita Mazepin",
+    "albon": "Alexander Albon",
+    "kevin_magnussen": "Kevin Magnussen",
+    "zhou": "Guanyu Zhou",
+    "piastri": "Oscar Piastri",
+    "hulkenberg": "Nico H\u00fclkenberg",
+    "lawson": "Liam Lawson",
+    "sargeant": "Logan Sargeant",
+    "hadjar": "Isack Hadjar",
+    "bearman": "Oliver Bearman",
+    "colapinto": "Franco Colapinto",
+    "bortoleto": "Gabriel Bortoleto",
+    "antonelli": "Andrea Kimi Antonelli"
+  },
+  "log": {
+    "races_fetched": 36,
+    "races_total": 36,
+    "wins_fetched": 35,
+    "wins_total": 35,
+    "p2_fetched": 35,
+    "p2_total": 35,
+    "p3_fetched": 35,
+    "p3_total": 36,
+    "results_rows_fetched": 747,
+    "qual_rows_fetched": 100,
+    "poles_merged": 35,
+    "poles_from_qualifying": 5,
+    "poles_from_grid": 30
+  }
+}

@@ -1,0 +1,290 @@
+{
+  "rubric": "Each bar is a 0–100 normalized index with a categorical rating. Inputs: full-throttle/top-speed demand, downforce category, corner-speed mix, braking events/severity, tyre abrasion/thermal load, and high-speed commitment (walls/blind crests/commitment corners). Sources prefer F1 circuit pages, Pirelli compound notes, and Raceteq/team technical briefings. Not telemetry.",
+  "dataThrough": "2026-07-29",
+  "labels": [
+    "Engine Power",
+    "Aero Efficiency",
+    "Mechanical Grip",
+    "Braking Stability",
+    "Tyre Degradation",
+    "High-speed commitment"
+  ],
+  "venues": {
+    "spa": {
+      "description": "Engine power and high-speed commitment dominate — low-drag efficiency on the straights, heavy braking into Les Combes and Bus Stop.",
+      "bars": [
+        { "label": "Engine Power", "rating": "CRITICAL", "value": 94, "caption": "Kemmel · Blanchimont full throttle" },
+        { "label": "Aero Efficiency", "rating": "HIGH", "value": 82, "caption": "Low-drag / medium-low wing" },
+        { "label": "Mechanical Grip", "rating": "MODERATE", "value": 55, "caption": "Sector 2 medium-speed mix" },
+        { "label": "Braking Stability", "rating": "HIGH", "value": 72, "caption": "Les Combes · Bus Stop warp" },
+        { "label": "Tyre Degradation", "rating": "MODERATE", "value": 58, "caption": "Lateral load · post-resurface" },
+        { "label": "High-speed commitment", "rating": "EXTREME", "value": 96, "caption": "Eau Rouge · Raidillon flat" }
+      ],
+      "sources": ["scripts/venue_sources.json#spa.fingerprintRubric"]
+    },
+    "monaco": {
+      "description": "Mechanical grip and braking stability define Monaco — zero runoff, low power sensitivity, extreme wall commitment.",
+      "bars": [
+        { "label": "Engine Power", "rating": "LOW", "value": 28, "caption": "Short straights · traction exits" },
+        { "label": "Aero Efficiency", "rating": "HIGH", "value": 88, "caption": "Max downforce package" },
+        { "label": "Mechanical Grip", "rating": "EXTREME", "value": 97, "caption": "Kerbs · bumps · traction" },
+        { "label": "Braking Stability", "rating": "CRITICAL", "value": 94, "caption": "Mirabeau · Nouvelle Chicane" },
+        { "label": "Tyre Degradation", "rating": "LOW", "value": 35, "caption": "Low abrasion street surface" },
+        { "label": "High-speed commitment", "rating": "EXTREME", "value": 99, "caption": "Zero runoff · Armco" }
+      ],
+      "sources": ["https://www.formula1.com/en/racing/2024/monaco", "https://press.pirelli.com/"]
+    },
+    "monza": {
+      "description": "Pure power circuit — slipstream efficiency and braking stability into the chicanes decide the lap.",
+      "bars": [
+        { "label": "Engine Power", "rating": "EXTREME", "value": 98, "caption": "Rettifilo · Ascari slipstream" },
+        { "label": "Aero Efficiency", "rating": "CRITICAL", "value": 95, "caption": "Minimum wing · drag wins" },
+        { "label": "Mechanical Grip", "rating": "MODERATE", "value": 48, "caption": "Chicanes · Lesmo support" },
+        { "label": "Braking Stability", "rating": "HIGH", "value": 80, "caption": "Prima Variante · Parabolica" },
+        { "label": "Tyre Degradation", "rating": "MODERATE", "value": 52, "caption": "Longitudinal load spikes" },
+        { "label": "High-speed commitment", "rating": "HIGH", "value": 78, "caption": "Curva Grande · Parabolica" }
+      ],
+      "sources": ["https://www.formula1.com/en/racing/2024/italy", "https://www.raceteq.com/"]
+    },
+    "silverstone": {
+      "description": "High-speed aero efficiency and commitment through Maggotts–Becketts define the British GP.",
+      "bars": [
+        { "label": "Engine Power", "rating": "HIGH", "value": 78, "caption": "Hangar · Wellington straights" },
+        { "label": "Aero Efficiency", "rating": "CRITICAL", "value": 93, "caption": "Medium-high wing balance" },
+        { "label": "Mechanical Grip", "rating": "HIGH", "value": 74, "caption": "Medium-speed complex" },
+        { "label": "Braking Stability", "rating": "MODERATE", "value": 58, "caption": "Village · Brooklands" },
+        { "label": "Tyre Degradation", "rating": "HIGH", "value": 82, "caption": "High energy lateral load" },
+        { "label": "High-speed commitment", "rating": "EXTREME", "value": 96, "caption": "Copse · Maggotts blind" }
+      ],
+      "sources": ["https://www.formula1.com/en/racing/2024/great-britain", "https://press.pirelli.com/"]
+    },
+    "suzuka": {
+      "description": "Flowing high-speed commitment and aero platform — S-curves and 130R reward precision.",
+      "bars": [
+        { "label": "Engine Power", "rating": "HIGH", "value": 76, "caption": "Main straight · Degner exit" },
+        { "label": "Aero Efficiency", "rating": "CRITICAL", "value": 92, "caption": "High-downforce figure-8" },
+        { "label": "Mechanical Grip", "rating": "HIGH", "value": 80, "caption": "Spoon · Casio chicane" },
+        { "label": "Braking Stability", "rating": "MODERATE", "value": 55, "caption": "Chicane · Degner" },
+        { "label": "Tyre Degradation", "rating": "HIGH", "value": 78, "caption": "Sustained lateral load" },
+        { "label": "High-speed commitment", "rating": "EXTREME", "value": 97, "caption": "130R · S-curves flat" }
+      ],
+      "sources": ["https://www.formula1.com/en/racing/2024/japan", "https://press.pirelli.com/"]
+    },
+    "interlagos": {
+      "description": "Mixed elevation and weather-sensitive grip — traction and mid-corner balance matter most.",
+      "bars": [
+        { "label": "Engine Power", "rating": "MODERATE", "value": 62, "caption": "Reta Oposta · climb" },
+        { "label": "Aero Efficiency", "rating": "HIGH", "value": 80, "caption": "Medium wing compromise" },
+        { "label": "Mechanical Grip", "rating": "HIGH", "value": 84, "caption": "Senna S · elevation" },
+        { "label": "Braking Stability", "rating": "HIGH", "value": 76, "caption": "Juncao · Descida do Lago" },
+        { "label": "Tyre Degradation", "rating": "MODERATE", "value": 60, "caption": "Short lap · thermal cycles" },
+        { "label": "High-speed commitment", "rating": "HIGH", "value": 85, "caption": "Unpredictable conditions" }
+      ],
+      "sources": ["https://www.formula1.com/en/racing/2024/brazil", "https://press.pirelli.com/"]
+    },
+    "bahrain": {
+      "description": "Heavy braking and tyre thermal management on a high-abrasion desert circuit.",
+      "bars": [
+        { "label": "Engine Power", "rating": "HIGH", "value": 74, "caption": "Main straight DRS" },
+        { "label": "Aero Efficiency", "rating": "MODERATE", "value": 58, "caption": "Medium downforce" },
+        { "label": "Mechanical Grip", "rating": "HIGH", "value": 72, "caption": "Traction zones · T10" },
+        { "label": "Braking Stability", "rating": "CRITICAL", "value": 92, "caption": "T1 · T8 heavy stops" },
+        { "label": "Tyre Degradation", "rating": "CRITICAL", "value": 94, "caption": "High abrasion surface" },
+        { "label": "High-speed commitment", "rating": "MODERATE", "value": 50, "caption": "Large runoff areas" }
+      ],
+      "sources": ["https://www.formula1.com/en/racing/2024/bahrain", "https://press.pirelli.com/"]
+    },
+    "abu-dhabi": {
+      "description": "Traction and braking into tight complexes — moderate power, low weather risk.",
+      "bars": [
+        { "label": "Engine Power", "rating": "MODERATE", "value": 55, "caption": "Long back straight" },
+        { "label": "Aero Efficiency", "rating": "HIGH", "value": 70, "caption": "Medium-high downforce" },
+        { "label": "Mechanical Grip", "rating": "HIGH", "value": 78, "caption": "Hotel section traction" },
+        { "label": "Braking Stability", "rating": "HIGH", "value": 82, "caption": "T5 · T9 stops" },
+        { "label": "Tyre Degradation", "rating": "MODERATE", "value": 58, "caption": "Thermal management" },
+        { "label": "High-speed commitment", "rating": "LOW", "value": 38, "caption": "Large runoff · safe design" }
+      ],
+      "sources": ["https://www.formula1.com/en/racing/2024/abu-dhabi"]
+    },
+    "jeddah": {
+      "description": "Ultra-fast walls-and-commitment street circuit — power and bravery with light braking share.",
+      "bars": [
+        { "label": "Engine Power", "rating": "CRITICAL", "value": 90, "caption": "Longest street laps · 320+" },
+        { "label": "Aero Efficiency", "rating": "HIGH", "value": 84, "caption": "Low-drag street package" },
+        { "label": "Mechanical Grip", "rating": "MODERATE", "value": 50, "caption": "Fast sweeps · few hairpins" },
+        { "label": "Braking Stability", "rating": "MODERATE", "value": 48, "caption": "Few heavy stops" },
+        { "label": "Tyre Degradation", "rating": "MODERATE", "value": 55, "caption": "Smooth asphalt · energy" },
+        { "label": "High-speed commitment", "rating": "EXTREME", "value": 98, "caption": "Walls · no runoff" }
+      ],
+      "sources": ["https://www.formula1.com/en/racing/2024/saudi-arabia", "https://press.pirelli.com/"]
+    },
+    "melbourne": {
+      "description": "Street-park hybrid — traction, braking, and mid-corner grip over raw power.",
+      "bars": [
+        { "label": "Engine Power", "rating": "MODERATE", "value": 58, "caption": "Short bursts · DRS zones" },
+        { "label": "Aero Efficiency", "rating": "HIGH", "value": 76, "caption": "Medium-high wing" },
+        { "label": "Mechanical Grip", "rating": "HIGH", "value": 82, "caption": "Kerbs · surface changes" },
+        { "label": "Braking Stability", "rating": "HIGH", "value": 80, "caption": "T1 · T3 heavy zones" },
+        { "label": "Tyre Degradation", "rating": "MODERATE", "value": 55, "caption": "Low–medium abrasion" },
+        { "label": "High-speed commitment", "rating": "HIGH", "value": 76, "caption": "Barriers nearby" }
+      ],
+      "sources": ["https://www.formula1.com/en/racing/2024/australia"]
+    },
+    "shanghai": {
+      "description": "Long-radius T1–T3 and a huge back straight — aero platform plus power.",
+      "bars": [
+        { "label": "Engine Power", "rating": "HIGH", "value": 82, "caption": "1.2 km back straight" },
+        { "label": "Aero Efficiency", "rating": "HIGH", "value": 80, "caption": "T1–T3 aero load" },
+        { "label": "Mechanical Grip", "rating": "MODERATE", "value": 60, "caption": "Hairpin · final sector" },
+        { "label": "Braking Stability", "rating": "HIGH", "value": 78, "caption": "Hairpin · T14" },
+        { "label": "Tyre Degradation", "rating": "MODERATE", "value": 62, "caption": "Front-left stress T1–3" },
+        { "label": "High-speed commitment", "rating": "MODERATE", "value": 55, "caption": "Open runoff mostly" }
+      ],
+      "sources": ["https://www.formula1.com/en/racing/2024/china", "https://press.pirelli.com/"]
+    },
+    "miami": {
+      "description": "Stop-go stadium section plus medium-speed sweeps — braking and traction biased.",
+      "bars": [
+        { "label": "Engine Power", "rating": "MODERATE", "value": 60, "caption": "DRS straights" },
+        { "label": "Aero Efficiency", "rating": "HIGH", "value": 72, "caption": "Medium downforce" },
+        { "label": "Mechanical Grip", "rating": "HIGH", "value": 78, "caption": "Stadium traction" },
+        { "label": "Braking Stability", "rating": "HIGH", "value": 80, "caption": "T17 · chicane stops" },
+        { "label": "Tyre Degradation", "rating": "MODERATE", "value": 58, "caption": "Thermal management" },
+        { "label": "High-speed commitment", "rating": "MODERATE", "value": 62, "caption": "Mixed runoff · walls" }
+      ],
+      "sources": ["https://www.formula1.com/en/racing/2024/miami"]
+    },
+    "imola": {
+      "description": "Old-school narrow rhythm — commitment and mechanical precision over overtaking power.",
+      "bars": [
+        { "label": "Engine Power", "rating": "MODERATE", "value": 58, "caption": "Short straights" },
+        { "label": "Aero Efficiency", "rating": "HIGH", "value": 84, "caption": "High downforce needed" },
+        { "label": "Mechanical Grip", "rating": "HIGH", "value": 86, "caption": "Variante Alta · kerbs" },
+        { "label": "Braking Stability", "rating": "HIGH", "value": 78, "caption": "Tosa · Rivazza" },
+        { "label": "Tyre Degradation", "rating": "MODERATE", "value": 55, "caption": "Low abrasion historic asphalt" },
+        { "label": "High-speed commitment", "rating": "HIGH", "value": 84, "caption": "Narrow · limited runoff" }
+      ],
+      "sources": ["https://www.formula1.com/en/racing/2024/emilia-romagna"]
+    },
+    "montreal": {
+      "description": "Heavy braking into the Wall of Champions and power on the island straights.",
+      "bars": [
+        { "label": "Engine Power", "rating": "HIGH", "value": 84, "caption": "Long island straights" },
+        { "label": "Aero Efficiency", "rating": "MODERATE", "value": 58, "caption": "Low–medium wing" },
+        { "label": "Mechanical Grip", "rating": "MODERATE", "value": 52, "caption": "Hairpin traction" },
+        { "label": "Braking Stability", "rating": "CRITICAL", "value": 93, "caption": "Wall of Champions" },
+        { "label": "Tyre Degradation", "rating": "MODERATE", "value": 50, "caption": "Stop-go longitudinal" },
+        { "label": "High-speed commitment", "rating": "HIGH", "value": 82, "caption": "Walls · chicane exit" }
+      ],
+      "sources": ["https://www.formula1.com/en/racing/2024/canada", "https://press.pirelli.com/"]
+    },
+    "barcelona": {
+      "description": "Aero-sensitive test venue — high-speed T3 and tyre energy across a technical lap.",
+      "bars": [
+        { "label": "Engine Power", "rating": "MODERATE", "value": 60, "caption": "Main straight DRS" },
+        { "label": "Aero Efficiency", "rating": "CRITICAL", "value": 94, "caption": "T3 aero platform" },
+        { "label": "Mechanical Grip", "rating": "HIGH", "value": 78, "caption": "Final sector technical" },
+        { "label": "Braking Stability", "rating": "MODERATE", "value": 55, "caption": "T1 · T10" },
+        { "label": "Tyre Degradation", "rating": "HIGH", "value": 86, "caption": "High energy · abrasive" },
+        { "label": "High-speed commitment", "rating": "HIGH", "value": 78, "caption": "T9 flat commitment" }
+      ],
+      "sources": ["https://www.formula1.com/en/racing/2024/spain", "https://press.pirelli.com/"]
+    },
+    "hungaroring": {
+      "description": "Narrow downforce track — mechanical grip and tyre temperature over engine power.",
+      "bars": [
+        { "label": "Engine Power", "rating": "LOW", "value": 32, "caption": "Short straights" },
+        { "label": "Aero Efficiency", "rating": "CRITICAL", "value": 95, "caption": "Max downforce" },
+        { "label": "Mechanical Grip", "rating": "EXTREME", "value": 96, "caption": "Continuous direction changes" },
+        { "label": "Braking Stability", "rating": "MODERATE", "value": 55, "caption": "T1 primary stop" },
+        { "label": "Tyre Degradation", "rating": "HIGH", "value": 80, "caption": "Thermal graining risk" },
+        { "label": "High-speed commitment", "rating": "MODERATE", "value": 58, "caption": "Run-off available" }
+      ],
+      "sources": ["https://www.formula1.com/en/racing/2024/hungary", "https://press.pirelli.com/"]
+    },
+    "zandvoort": {
+      "description": "Banked commitment corners and high downforce — unique camber demands.",
+      "bars": [
+        { "label": "Engine Power", "rating": "MODERATE", "value": 52, "caption": "Short straights" },
+        { "label": "Aero Efficiency", "rating": "HIGH", "value": 86, "caption": "High downforce banked" },
+        { "label": "Mechanical Grip", "rating": "HIGH", "value": 84, "caption": "Banking · camber load" },
+        { "label": "Braking Stability", "rating": "MODERATE", "value": 58, "caption": "T1 · chicane" },
+        { "label": "Tyre Degradation", "rating": "HIGH", "value": 78, "caption": "Left-side stress" },
+        { "label": "High-speed commitment", "rating": "HIGH", "value": 78, "caption": "Banked turns commit" }
+      ],
+      "sources": ["https://www.formula1.com/en/racing/2024/netherlands"]
+    },
+    "baku": {
+      "description": "Extreme power-to-braking contrast — castle walls demand commitment.",
+      "bars": [
+        { "label": "Engine Power", "rating": "EXTREME", "value": 97, "caption": "2.2 km main straight" },
+        { "label": "Aero Efficiency", "rating": "CRITICAL", "value": 92, "caption": "Ultra-low drag setup" },
+        { "label": "Mechanical Grip", "rating": "MODERATE", "value": 55, "caption": "Castle section technical" },
+        { "label": "Braking Stability", "rating": "CRITICAL", "value": 94, "caption": "T1 end-of-straight" },
+        { "label": "Tyre Degradation", "rating": "LOW", "value": 40, "caption": "Smooth surface · low wear" },
+        { "label": "High-speed commitment", "rating": "EXTREME", "value": 99, "caption": "Narrow castle walls" }
+      ],
+      "sources": ["https://www.formula1.com/en/racing/2024/azerbaijan", "https://press.pirelli.com/"]
+    },
+    "singapore": {
+      "description": "Night street endurance — braking, traction, and tyre management under humidity.",
+      "bars": [
+        { "label": "Engine Power", "rating": "LOW", "value": 35, "caption": "Short bursts only" },
+        { "label": "Aero Efficiency", "rating": "HIGH", "value": 82, "caption": "High downforce street" },
+        { "label": "Mechanical Grip", "rating": "CRITICAL", "value": 93, "caption": "Kerbs · bumps · traction" },
+        { "label": "Braking Stability", "rating": "CRITICAL", "value": 92, "caption": "Many heavy stops" },
+        { "label": "Tyre Degradation", "rating": "HIGH", "value": 80, "caption": "Thermal · long stints" },
+        { "label": "High-speed commitment", "rating": "HIGH", "value": 82, "caption": "Walls · floodlit night" }
+      ],
+      "sources": ["https://www.formula1.com/en/racing/2024/singapore", "https://press.pirelli.com/"]
+    },
+    "cota": {
+      "description": "Elevation and blind crests — aero platform through the esses and T1 commitment.",
+      "bars": [
+        { "label": "Engine Power", "rating": "HIGH", "value": 78, "caption": "Back straight DRS" },
+        { "label": "Aero Efficiency", "rating": "CRITICAL", "value": 91, "caption": "Esses aero load" },
+        { "label": "Mechanical Grip", "rating": "HIGH", "value": 76, "caption": "Stadium · elevation" },
+        { "label": "Braking Stability", "rating": "HIGH", "value": 74, "caption": "T12 · T1" },
+        { "label": "Tyre Degradation", "rating": "HIGH", "value": 80, "caption": "High energy surface" },
+        { "label": "High-speed commitment", "rating": "EXTREME", "value": 96, "caption": "Blind T1 crest · esses" }
+      ],
+      "sources": ["https://www.formula1.com/en/racing/2024/united-states", "https://press.pirelli.com/"]
+    },
+    "mexico": {
+      "description": "High altitude cuts downforce — power and braking into the stadium.",
+      "bars": [
+        { "label": "Engine Power", "rating": "CRITICAL", "value": 92, "caption": "Altitude · long straight" },
+        { "label": "Aero Efficiency", "rating": "HIGH", "value": 78, "caption": "Thin air · wing trade-off" },
+        { "label": "Mechanical Grip", "rating": "MODERATE", "value": 58, "caption": "Stadium section" },
+        { "label": "Braking Stability", "rating": "HIGH", "value": 84, "caption": "T1 · T13" },
+        { "label": "Tyre Degradation", "rating": "MODERATE", "value": 55, "caption": "Lower aero load wear" },
+        { "label": "High-speed commitment", "rating": "HIGH", "value": 84, "caption": "Peraltada overpass" }
+      ],
+      "sources": ["https://www.formula1.com/en/racing/2024/mexico", "https://press.pirelli.com/"]
+    },
+    "las-vegas": {
+      "description": "Strip power circuit — cold-tyre braking and wall commitment at night.",
+      "bars": [
+        { "label": "Engine Power", "rating": "EXTREME", "value": 96, "caption": "Strip · 340+ km/h" },
+        { "label": "Aero Efficiency", "rating": "CRITICAL", "value": 93, "caption": "Ultra-low drag" },
+        { "label": "Mechanical Grip", "rating": "MODERATE", "value": 48, "caption": "Few technical corners" },
+        { "label": "Braking Stability", "rating": "HIGH", "value": 82, "caption": "Heavy T14 · cold brakes" },
+        { "label": "Tyre Degradation", "rating": "LOW", "value": 38, "caption": "Cold night · low abrasion" },
+        { "label": "High-speed commitment", "rating": "HIGH", "value": 82, "caption": "Strip walls at speed" }
+      ],
+      "sources": ["https://www.formula1.com/en/racing/2024/las-vegas"]
+    },
+    "qatar": {
+      "description": "Fast flowing desert lap — sustained high-speed load and tyre stress.",
+      "bars": [
+        { "label": "Engine Power", "rating": "HIGH", "value": 80, "caption": "Long flowing sectors" },
+        { "label": "Aero Efficiency", "rating": "HIGH", "value": 84, "caption": "Medium-high wing" },
+        { "label": "Mechanical Grip", "rating": "HIGH", "value": 72, "caption": "Medium-speed sequence" },
+        { "label": "Braking Stability", "rating": "MODERATE", "value": 55, "caption": "Few heavy stops" },
+        { "label": "Tyre Degradation", "rating": "CRITICAL", "value": 95, "caption": "Extreme lateral energy" },
+        { "label": "High-speed commitment", "rating": "HIGH", "value": 88, "caption": "Flat fast corners 290+" }
+      ],
+      "sources": ["https://www.formula1.com/en/racing/2024/qatar", "https://press.pirelli.com/"]
+    }
+  }
+}

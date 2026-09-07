@@ -282,6 +282,7 @@ function CurrentSeasonSection({
 /* ─── Eras ────────────────────────────────────────────────────────────────── */
 
 function ErasSection({ eras, entityHex }: { eras: TeamEngineeringEra[]; entityHex: string }) {
+  const earliestYear = eras[0]?.seasons?.split(/[–-]/)[0]?.trim() ?? ''
   return (
     <div style={{ padding: '2rem 1.75rem 2rem' }}>
       <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', marginBottom: 6 }}>
@@ -289,14 +290,18 @@ function ErasSection({ eras, entityHex }: { eras: TeamEngineeringEra[]; entityHe
           ENGINEERING ERAS
         </p>
         <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, letterSpacing: 1, color: '#555' }}>
-          {eras.length} CHAPTERS · {eras[0]?.seasons?.split('–')[0] ?? ''}–PRESENT
+          {eras.length} CHAPTER{eras.length === 1 ? '' : 'S'} · {earliestYear}–PRESENT
         </p>
       </div>
       <p style={{ fontSize: 13, color: '#888', margin: '0 0 24px', maxWidth: 520, lineHeight: 1.6 }}>
         The story told through engineering leadership and the chapters they defined.
       </p>
 
-      <div style={{ display: 'grid', gridTemplateColumns: `repeat(${eras.length}, 1fr)`, gap: 10 }}>
+      <div style={{
+        display: 'grid',
+        gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 260px))',
+        gap: 10,
+      }}>
         {eras.map((era, idx) => {
           const glowColor = era.golden ? '#FFD700' : entityHex
           const champColor = era.championships === 0 ? '#888' : era.golden ? '#FFD700' : entityHex
@@ -304,13 +309,14 @@ function ErasSection({ eras, entityHex }: { eras: TeamEngineeringEra[]; entityHe
           return (
             <div key={era.label} style={{
               aspectRatio: '4/5',
+              maxWidth: 260,
               background: '#080808',
               border: `0.5px solid ${era.golden ? '#FFD70044' : '#1a1a1a'}`,
               borderRadius: 8, overflow: 'hidden', position: 'relative', padding: 14,
             }}>
               {era.imageUrl && isAllowedImageUrl(era.imageUrl) && (
                 <FallbackImg src={era.imageUrl} alt="" ariaHidden
-                  style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 30%', opacity: 0.55 }}
+                  style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center center', opacity: 0.55 }}
                 />
               )}
               {!era.imageUrl && era.golden && (

@@ -1,0 +1,654 @@
+{
+  "circuitId": "yas_marina",
+  "fetchedAt": "2026-07-29T21:08:49.842363+00:00",
+  "raceTotal": 18,
+  "races": [
+    {
+      "season": 2009,
+      "round": 17,
+      "raceName": "Abu Dhabi Grand Prix"
+    },
+    {
+      "season": 2010,
+      "round": 19,
+      "raceName": "Abu Dhabi Grand Prix"
+    },
+    {
+      "season": 2011,
+      "round": 18,
+      "raceName": "Abu Dhabi Grand Prix"
+    },
+    {
+      "season": 2012,
+      "round": 18,
+      "raceName": "Abu Dhabi Grand Prix"
+    },
+    {
+      "season": 2013,
+      "round": 17,
+      "raceName": "Abu Dhabi Grand Prix"
+    },
+    {
+      "season": 2014,
+      "round": 19,
+      "raceName": "Abu Dhabi Grand Prix"
+    },
+    {
+      "season": 2015,
+      "round": 19,
+      "raceName": "Abu Dhabi Grand Prix"
+    },
+    {
+      "season": 2016,
+      "round": 21,
+      "raceName": "Abu Dhabi Grand Prix"
+    },
+    {
+      "season": 2017,
+      "round": 20,
+      "raceName": "Abu Dhabi Grand Prix"
+    },
+    {
+      "season": 2018,
+      "round": 21,
+      "raceName": "Abu Dhabi Grand Prix"
+    },
+    {
+      "season": 2019,
+      "round": 21,
+      "raceName": "Abu Dhabi Grand Prix"
+    },
+    {
+      "season": 2020,
+      "round": 17,
+      "raceName": "Abu Dhabi Grand Prix"
+    },
+    {
+      "season": 2021,
+      "round": 22,
+      "raceName": "Abu Dhabi Grand Prix"
+    },
+    {
+      "season": 2022,
+      "round": 22,
+      "raceName": "Abu Dhabi Grand Prix"
+    },
+    {
+      "season": 2023,
+      "round": 22,
+      "raceName": "Abu Dhabi Grand Prix"
+    },
+    {
+      "season": 2024,
+      "round": 24,
+      "raceName": "Abu Dhabi Grand Prix"
+    },
+    {
+      "season": 2025,
+      "round": 24,
+      "raceName": "Abu Dhabi Grand Prix"
+    },
+    {
+      "season": 2026,
+      "round": 22,
+      "raceName": "Abu Dhabi Grand Prix"
+    }
+  ],
+  "wins": [
+    {
+      "season": 2009,
+      "driverId": "vettel",
+      "name": "Sebastian Vettel"
+    },
+    {
+      "season": 2010,
+      "driverId": "vettel",
+      "name": "Sebastian Vettel"
+    },
+    {
+      "season": 2011,
+      "driverId": "hamilton",
+      "name": "Lewis Hamilton"
+    },
+    {
+      "season": 2012,
+      "driverId": "raikkonen",
+      "name": "Kimi R\u00e4ikk\u00f6nen"
+    },
+    {
+      "season": 2013,
+      "driverId": "vettel",
+      "name": "Sebastian Vettel"
+    },
+    {
+      "season": 2014,
+      "driverId": "hamilton",
+      "name": "Lewis Hamilton"
+    },
+    {
+      "season": 2015,
+      "driverId": "rosberg",
+      "name": "Nico Rosberg"
+    },
+    {
+      "season": 2016,
+      "driverId": "hamilton",
+      "name": "Lewis Hamilton"
+    },
+    {
+      "season": 2017,
+      "driverId": "bottas",
+      "name": "Valtteri Bottas"
+    },
+    {
+      "season": 2018,
+      "driverId": "hamilton",
+      "name": "Lewis Hamilton"
+    },
+    {
+      "season": 2019,
+      "driverId": "hamilton",
+      "name": "Lewis Hamilton"
+    },
+    {
+      "season": 2020,
+      "driverId": "max_verstappen",
+      "name": "Max Verstappen"
+    },
+    {
+      "season": 2021,
+      "driverId": "max_verstappen",
+      "name": "Max Verstappen"
+    },
+    {
+      "season": 2022,
+      "driverId": "max_verstappen",
+      "name": "Max Verstappen"
+    },
+    {
+      "season": 2023,
+      "driverId": "max_verstappen",
+      "name": "Max Verstappen"
+    },
+    {
+      "season": 2024,
+      "driverId": "norris",
+      "name": "Lando Norris"
+    },
+    {
+      "season": 2025,
+      "driverId": "max_verstappen",
+      "name": "Max Verstappen"
+    }
+  ],
+  "p2": [
+    {
+      "season": 2009,
+      "driverId": "webber",
+      "name": "Mark Webber"
+    },
+    {
+      "season": 2010,
+      "driverId": "hamilton",
+      "name": "Lewis Hamilton"
+    },
+    {
+      "season": 2011,
+      "driverId": "alonso",
+      "name": "Fernando Alonso"
+    },
+    {
+      "season": 2012,
+      "driverId": "alonso",
+      "name": "Fernando Alonso"
+    },
+    {
+      "season": 2013,
+      "driverId": "webber",
+      "name": "Mark Webber"
+    },
+    {
+      "season": 2014,
+      "driverId": "massa",
+      "name": "Felipe Massa"
+    },
+    {
+      "season": 2015,
+      "driverId": "hamilton",
+      "name": "Lewis Hamilton"
+    },
+    {
+      "season": 2016,
+      "driverId": "rosberg",
+      "name": "Nico Rosberg"
+    },
+    {
+      "season": 2017,
+      "driverId": "hamilton",
+      "name": "Lewis Hamilton"
+    },
+    {
+      "season": 2018,
+      "driverId": "vettel",
+      "name": "Sebastian Vettel"
+    },
+    {
+      "season": 2019,
+      "driverId": "max_verstappen",
+      "name": "Max Verstappen"
+    },
+    {
+      "season": 2020,
+      "driverId": "bottas",
+      "name": "Valtteri Bottas"
+    },
+    {
+      "season": 2021,
+      "driverId": "hamilton",
+      "name": "Lewis Hamilton"
+    },
+    {
+      "season": 2022,
+      "driverId": "leclerc",
+      "name": "Charles Leclerc"
+    },
+    {
+      "season": 2023,
+      "driverId": "leclerc",
+      "name": "Charles Leclerc"
+    },
+    {
+      "season": 2024,
+      "driverId": "sainz",
+      "name": "Carlos Sainz"
+    },
+    {
+      "season": 2025,
+      "driverId": "piastri",
+      "name": "Oscar Piastri"
+    }
+  ],
+  "p3": [
+    {
+      "season": 2009,
+      "driverId": "button",
+      "name": "Jenson Button"
+    },
+    {
+      "season": 2010,
+      "driverId": "button",
+      "name": "Jenson Button"
+    },
+    {
+      "season": 2011,
+      "driverId": "button",
+      "name": "Jenson Button"
+    },
+    {
+      "season": 2012,
+      "driverId": "vettel",
+      "name": "Sebastian Vettel"
+    },
+    {
+      "season": 2013,
+      "driverId": "rosberg",
+      "name": "Nico Rosberg"
+    },
+    {
+      "season": 2014,
+      "driverId": "bottas",
+      "name": "Valtteri Bottas"
+    },
+    {
+      "season": 2015,
+      "driverId": "raikkonen",
+      "name": "Kimi R\u00e4ikk\u00f6nen"
+    },
+    {
+      "season": 2016,
+      "driverId": "vettel",
+      "name": "Sebastian Vettel"
+    },
+    {
+      "season": 2017,
+      "driverId": "vettel",
+      "name": "Sebastian Vettel"
+    },
+    {
+      "season": 2018,
+      "driverId": "max_verstappen",
+      "name": "Max Verstappen"
+    },
+    {
+      "season": 2019,
+      "driverId": "leclerc",
+      "name": "Charles Leclerc"
+    },
+    {
+      "season": 2020,
+      "driverId": "hamilton",
+      "name": "Lewis Hamilton"
+    },
+    {
+      "season": 2021,
+      "driverId": "sainz",
+      "name": "Carlos Sainz"
+    },
+    {
+      "season": 2022,
+      "driverId": "perez",
+      "name": "Sergio P\u00e9rez"
+    },
+    {
+      "season": 2023,
+      "driverId": "russell",
+      "name": "George Russell"
+    },
+    {
+      "season": 2024,
+      "driverId": "leclerc",
+      "name": "Charles Leclerc"
+    },
+    {
+      "season": 2025,
+      "driverId": "norris",
+      "name": "Lando Norris"
+    }
+  ],
+  "poles": [
+    {
+      "season": 2009,
+      "round": 17,
+      "driverId": "hamilton",
+      "name": "Lewis Hamilton",
+      "source": "qualifying"
+    },
+    {
+      "season": 2010,
+      "round": 19,
+      "driverId": "vettel",
+      "name": "Sebastian Vettel",
+      "source": "qualifying"
+    },
+    {
+      "season": 2011,
+      "round": 18,
+      "driverId": "vettel",
+      "name": "Sebastian Vettel",
+      "source": "qualifying"
+    },
+    {
+      "season": 2012,
+      "round": 18,
+      "driverId": "hamilton",
+      "name": "Lewis Hamilton",
+      "source": "qualifying"
+    },
+    {
+      "season": 2013,
+      "round": 17,
+      "driverId": "webber",
+      "name": "Mark Webber",
+      "source": "qualifying"
+    },
+    {
+      "season": 2014,
+      "round": 19,
+      "driverId": "rosberg",
+      "name": "Nico Rosberg",
+      "source": "qualifying"
+    },
+    {
+      "season": 2015,
+      "round": 19,
+      "driverId": "rosberg",
+      "name": "Nico Rosberg",
+      "source": "qualifying"
+    },
+    {
+      "season": 2016,
+      "round": 21,
+      "driverId": "hamilton",
+      "name": "Lewis Hamilton",
+      "source": "qualifying"
+    },
+    {
+      "season": 2017,
+      "round": 20,
+      "driverId": "bottas",
+      "name": "Valtteri Bottas",
+      "source": "qualifying"
+    },
+    {
+      "season": 2018,
+      "round": 21,
+      "driverId": "hamilton",
+      "name": "Lewis Hamilton",
+      "source": "qualifying"
+    },
+    {
+      "season": 2019,
+      "round": 21,
+      "driverId": "hamilton",
+      "name": "Lewis Hamilton",
+      "source": "qualifying"
+    },
+    {
+      "season": 2020,
+      "round": 17,
+      "driverId": "max_verstappen",
+      "name": "Max Verstappen",
+      "source": "qualifying"
+    },
+    {
+      "season": 2021,
+      "round": 22,
+      "driverId": "max_verstappen",
+      "name": "Max Verstappen",
+      "source": "qualifying"
+    },
+    {
+      "season": 2022,
+      "round": 22,
+      "driverId": "max_verstappen",
+      "name": "Max Verstappen",
+      "source": "qualifying"
+    },
+    {
+      "season": 2023,
+      "round": 22,
+      "driverId": "max_verstappen",
+      "name": "Max Verstappen",
+      "source": "qualifying"
+    },
+    {
+      "season": 2024,
+      "round": 24,
+      "driverId": "norris",
+      "name": "Lando Norris",
+      "source": "qualifying"
+    },
+    {
+      "season": 2025,
+      "round": 24,
+      "driverId": "max_verstappen",
+      "name": "Max Verstappen",
+      "source": "qualifying"
+    }
+  ],
+  "starts": {
+    "vettel": 14,
+    "webber": 5,
+    "button": 8,
+    "barrichello": 3,
+    "heidfeld": 2,
+    "kobayashi": 5,
+    "trulli": 3,
+    "buemi": 3,
+    "rosberg": 8,
+    "kubica": 3,
+    "kovalainen": 4,
+    "raikkonen": 11,
+    "nakajima": 1,
+    "alonso": 15,
+    "liuzzi": 3,
+    "fisichella": 1,
+    "sutil": 5,
+    "grosjean": 9,
+    "hamilton": 17,
+    "alguersuari": 3,
+    "petrov": 3,
+    "massa": 8,
+    "hulkenberg": 12,
+    "grassi": 1,
+    "bruno_senna": 3,
+    "klien": 1,
+    "glock": 3,
+    "michael_schumacher": 3,
+    "resta": 3,
+    "perez": 14,
+    "maldonado": 5,
+    "ricciardo": 13,
+    "ambrosio": 1,
+    "vergne": 3,
+    "rosa": 1,
+    "pic": 2,
+    "karthikeyan": 1,
+    "gutierrez": 3,
+    "bottas": 12,
+    "garde": 1,
+    "jules_bianchi": 1,
+    "chilton": 1,
+    "kevin_magnussen": 9,
+    "stevens": 2,
+    "kvyat": 5,
+    "sainz": 11,
+    "ericsson": 4,
+    "nasr": 2,
+    "max_verstappen": 11,
+    "merhi": 1,
+    "ocon": 8,
+    "wehrlein": 2,
+    "jolyon_palmer": 1,
+    "vandoorne": 2,
+    "brendon_hartley": 2,
+    "gasly": 9,
+    "stroll": 9,
+    "leclerc": 8,
+    "sirotkin": 1,
+    "albon": 6,
+    "norris": 7,
+    "giovinazzi": 3,
+    "russell": 7,
+    "latifi": 3,
+    "pietro_fittipaldi": 1,
+    "tsunoda": 5,
+    "mick_schumacher": 2,
+    "mazepin": 1,
+    "zhou": 3,
+    "piastri": 3,
+    "sargeant": 1,
+    "doohan": 1,
+    "lawson": 2,
+    "colapinto": 2,
+    "bortoleto": 1,
+    "bearman": 1,
+    "antonelli": 1,
+    "hadjar": 1
+  },
+  "names": {
+    "vettel": "Sebastian Vettel",
+    "webber": "Mark Webber",
+    "button": "Jenson Button",
+    "barrichello": "Rubens Barrichello",
+    "heidfeld": "Nick Heidfeld",
+    "kobayashi": "Kamui Kobayashi",
+    "trulli": "Jarno Trulli",
+    "buemi": "S\u00e9bastien Buemi",
+    "rosberg": "Nico Rosberg",
+    "kubica": "Robert Kubica",
+    "kovalainen": "Heikki Kovalainen",
+    "raikkonen": "Kimi R\u00e4ikk\u00f6nen",
+    "nakajima": "Kazuki Nakajima",
+    "alonso": "Fernando Alonso",
+    "liuzzi": "Vitantonio Liuzzi",
+    "fisichella": "Giancarlo Fisichella",
+    "sutil": "Adrian Sutil",
+    "grosjean": "Romain Grosjean",
+    "hamilton": "Lewis Hamilton",
+    "alguersuari": "Jaime Alguersuari",
+    "petrov": "Vitaly Petrov",
+    "massa": "Felipe Massa",
+    "hulkenberg": "Nico H\u00fclkenberg",
+    "grassi": "Lucas di Grassi",
+    "bruno_senna": "Bruno Senna",
+    "klien": "Christian Klien",
+    "glock": "Timo Glock",
+    "michael_schumacher": "Michael Schumacher",
+    "resta": "Paul di Resta",
+    "perez": "Sergio P\u00e9rez",
+    "maldonado": "Pastor Maldonado",
+    "ricciardo": "Daniel Ricciardo",
+    "ambrosio": "J\u00e9r\u00f4me d'Ambrosio",
+    "vergne": "Jean-\u00c9ric Vergne",
+    "rosa": "Pedro de la Rosa",
+    "pic": "Charles Pic",
+    "karthikeyan": "Narain Karthikeyan",
+    "gutierrez": "Esteban Guti\u00e9rrez",
+    "bottas": "Valtteri Bottas",
+    "garde": "Giedo van der Garde",
+    "jules_bianchi": "Jules Bianchi",
+    "chilton": "Max Chilton",
+    "kevin_magnussen": "Kevin Magnussen",
+    "stevens": "Will Stevens",
+    "kvyat": "Daniil Kvyat",
+    "sainz": "Carlos Sainz",
+    "ericsson": "Marcus Ericsson",
+    "nasr": "Felipe Nasr",
+    "max_verstappen": "Max Verstappen",
+    "merhi": "Roberto Merhi",
+    "ocon": "Esteban Ocon",
+    "wehrlein": "Pascal Wehrlein",
+    "jolyon_palmer": "Jolyon Palmer",
+    "vandoorne": "Stoffel Vandoorne",
+    "brendon_hartley": "Brendon Hartley",
+    "gasly": "Pierre Gasly",
+    "stroll": "Lance Stroll",
+    "leclerc": "Charles Leclerc",
+    "sirotkin": "Sergey Sirotkin",
+    "albon": "Alexander Albon",
+    "norris": "Lando Norris",
+    "giovinazzi": "Antonio Giovinazzi",
+    "russell": "George Russell",
+    "latifi": "Nicholas Latifi",
+    "pietro_fittipaldi": "Pietro Fittipaldi",
+    "tsunoda": "Yuki Tsunoda",
+    "mick_schumacher": "Mick Schumacher",
+    "mazepin": "Nikita Mazepin",
+    "zhou": "Guanyu Zhou",
+    "piastri": "Oscar Piastri",
+    "sargeant": "Logan Sargeant",
+    "doohan": "Jack Doohan",
+    "lawson": "Liam Lawson",
+    "colapinto": "Franco Colapinto",
+    "bortoleto": "Gabriel Bortoleto",
+    "bearman": "Oliver Bearman",
+    "antonelli": "Andrea Kimi Antonelli",
+    "hadjar": "Isack Hadjar"
+  },
+  "log": {
+    "races_fetched": 18,
+    "races_total": 18,
+    "wins_fetched": 17,
+    "wins_total": 17,
+    "p2_fetched": 17,
+    "p2_total": 17,
+    "p3_fetched": 17,
+    "p3_total": 17,
+    "results_rows_fetched": 356,
+    "qual_rows_fetched": 353,
+    "poles_merged": 17,
+    "poles_from_qualifying": 17,
+    "poles_from_grid": 0
+  }
+}

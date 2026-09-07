@@ -1,0 +1,120 @@
+{
+  "dataThrough": "2026-07-29",
+  "layoutScope": "current Spa-Francorchamps layout (2007–present for lap record; WC races at spa circuitId only, excluding Zolder/Nivelles)",
+  "spa": {
+    "circuitFacts": {
+      "lengthKm": {
+        "value": 7.004,
+        "sources": [
+          "https://www.formula1.com/en/latest/article/circuit-guide-everything-you-need-to-know-about-the-circuit-de-spa-francorchamps.pC5N3J3W9LEj8REFvU6FX",
+          "https://www.formula1.com/en/racing/2024/belgium"
+        ]
+      },
+      "corners": {
+        "value": 19,
+        "sources": [
+          "https://www.formula1.com/en/latest/article/circuit-guide-everything-you-need-to-know-about-the-circuit-de-spa-francorchamps.pC5N3J3W9LEj8REFvU6FX"
+        ]
+      },
+      "elevationDeltaM": {
+        "value": 102,
+        "note": "Rounded from ~102.2 m published elevation change",
+        "sources": [
+          "https://www.f1-fansite.com/f1-circuits/spa-francorchamps-circuit/"
+        ]
+      },
+      "lapRecord": {
+        "value": "1:44.701",
+        "driver": "Pérez",
+        "year": 2024,
+        "note": "Official F1 race lap record on current layout",
+        "sources": [
+          "https://www.formula1.com/en/latest/article/circuit-guide-everything-you-need-to-know-about-the-circuit-de-spa-francorchamps.pC5N3J3W9LEj8REFvU6FX",
+          "https://www.formula1.com/en/racing/2024/belgium"
+        ]
+      },
+      "f1Since": {
+        "value": 1950,
+        "sources": [
+          "https://www.formula1.com/en/latest/article/circuit-guide-everything-you-need-to-know-about-the-circuit-de-spa-francorchamps.pC5N3J3W9LEj8REFvU6FX"
+        ]
+      },
+      "raceCountAtCircuit": {
+        "value": 59,
+        "source": "Jolpica /circuits/spa/races.json total",
+        "note": "Spa only; Belgian GPs at Zolder/Nivelles excluded"
+      },
+      "trackMap": {
+        "source": "julesr0y/f1-circuits-svg (MIT) spa-francorchamps-4.svg 2007-present"
+      }
+    },
+    "fingerprintRubric": {
+      "Engine Power": {
+        "rating": "CRITICAL",
+        "value": 94,
+        "basis": "Longest current F1 circuit; Kemmel + Blanchimont full-throttle sections; low-downforce trade-off per Raceteq engineer guide",
+        "sources": [
+          "https://www.raceteq.com/articles/2025/07/2025-belgian-gp-guide-f1-f2-f3",
+          "https://www.formula1.com/en/latest/article/what-tyres-will-the-teams-and-drivers-have-for-the-2025-belgian-grand-prix.6B5G9r7T9TZNTbPp8GOsho"
+        ]
+      },
+      "Aero Efficiency": {
+        "rating": "HIGH",
+        "value": 82,
+        "basis": "Low-drag / medium-low wing setup required; efficiency on straights vs grip in S2",
+        "sources": [
+          "https://www.raceteq.com/articles/2025/07/2025-belgian-gp-guide-f1-f2-f3",
+          "http://www.mclaren.com/racing/formula-1/2025/belgian-grand-prix/the-belgian-gp-briefing-powered-by-google-cloud/"
+        ]
+      },
+      "Mechanical Grip": {
+        "rating": "MODERATE",
+        "value": 55,
+        "basis": "Sector 2 medium-speed / downhill technical mix; smaller share of lap than power sections",
+        "sources": [
+          "https://press.pirelli.com/sprint-with-a-jump-in-compounds-in-the-ardennes/",
+          "https://www.raceteq.com/articles/2025/07/2025-belgian-gp-guide-f1-f2-f3"
+        ]
+      },
+      "Braking Stability": {
+        "rating": "HIGH",
+        "value": 72,
+        "basis": "Heavy Les Combes and Bus Stop braking; Bus Stop among highest platform-warp braking zones",
+        "sources": [
+          "https://www.raceteq.com/articles/2025/07/2025-belgian-gp-guide-f1-f2-f3"
+        ]
+      },
+      "Tyre Degradation": {
+        "rating": "MODERATE",
+        "value": 58,
+        "basis": "2024 resurfacing reduced abrasiveness, but high lateral load / thermal stress through Eau Rouge and S2; Pirelli C1/C3/C4 allocation",
+        "sources": [
+          "https://www.formula1.com/en/latest/article/what-tyres-will-the-teams-and-drivers-have-for-the-2025-belgian-grand-prix.6B5G9r7T9TZNTbPp8GOsho",
+          "https://press.pirelli.com/sprint-with-a-jump-in-compounds-in-the-ardennes/",
+          "https://scuderiafans.com/f1-2025-belgian-gp-tyre-wear-and-lateral-load-challenges-revealed-in-spa-simulation/"
+        ]
+      },
+      "High-speed commitment": {
+        "rating": "EXTREME",
+        "value": 96,
+        "basis": "Eau Rouge / Raidillon flat commitment; Blanchimont near-flat; elevation and blind crest",
+        "sources": [
+          "https://www.formula1.com/en/racing/2024/belgium",
+          "https://www.raceteq.com/articles/2025/07/2025-belgian-gp-guide-f1-f2-f3"
+        ],
+        "renamedFrom": "Driver Bravery"
+      }
+    },
+    "weather": {
+      "method": "Manual classification of each WC race at spa from race reports (Wikipedia Belgian GP + F1.com + wet-race catalogues). DRY = no meaningful rain effect on race; MIXED = rain affected part of weekend race or drying/changing; WET = race run primarily in rain or red-flagged for rain.",
+      "artifact": "scripts/venue_weather_classifications.json#spa",
+      "counts": { "dry": 41, "mixed": 12, "wet": 6, "totalRaces": 59 },
+      "percentages": { "dryPct": 69, "mixedPct": 20, "wetPct": 11 },
+      "note": "Percentages derived from classified event counts via largest-remainder; sum to 100."
+    },
+    "driverFit": {
+      "source": "Jolpica ergast fork api.jolpi.ca — circuits/spa results + qualifying",
+      "script": "scripts/audit_venue_data.py"
+    }
+  }
+}

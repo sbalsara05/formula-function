@@ -325,7 +325,7 @@ export const leclerc: Driver = {
   bio: "Ferrari's lead driver and one of the fastest qualifiers of his generation. Rose through Prema's F2 academy, won the 2017 F2 title, and became the youngest Ferrari driver to win multiple races.",
   quote: "",
   quoteContext: "",
-  portraitUrl: 'https://upload.wikimedia.org/wikipedia/commons/7/7b/2024-08-25_Motorsport%2C_Formel_1%2C_Gro%C3%9Fer_Preis_der_Niederlande_2024_STP_3978_by_Stepro_%28cropped2%29.jpg',
+  portraitUrl: '/images/drivers/leclerc-f1-portrait-2026.webp',
 };
 
 export const leclerStats: DriverStats = {
@@ -373,7 +373,7 @@ export const bearman: Driver = {
   bio: "Ferrari Driver Academy graduate. Won F4 Italy before progressing through Prema's F3 and F2 programs. Made his F1 debut for Ferrari at Jeddah 2024 as a last-minute Sainz substitute, scoring points on debut.",
   quote:
     "Two F3 wins at 17. F2 podium debut at 18. F1 debut for Ferrari at 18 after a last-minute Sainz appendicitis.",
-  portraitUrl: '/images/drivers/bearman-austria-2025.jpg',
+  portraitUrl: '/images/drivers/bearman-f1-portrait-2026.webp',
 };
 
 export const bearmanStats: DriverStats = {
@@ -399,6 +399,7 @@ export const bearmanEras: DriverEra[] = [
     teamLiveryHex: "#00E5FF",
     teamAccentHex: "#FFD700",
     statLabel: "TITLE",
+    imageUrl: "/images/drivers/bearman-f4-italy-2021.jpg",
   },
   {
     driverId: "bearman",
@@ -410,6 +411,7 @@ export const bearmanEras: DriverEra[] = [
     wins: 2,
     teamLiveryHex: "#B026FF",
     statLabel: "P3",
+    imageUrl: "/images/drivers/bearman-f3-prema-2022.jpg",
   },
   {
     driverId: "bearman",
@@ -421,6 +423,7 @@ export const bearmanEras: DriverEra[] = [
     wins: 3,
     teamLiveryHex: "#00E5FF",
     statLabel: "P4",
+    imageUrl: "/images/drivers/bearman-austria-f2-2024.jpg",
   },
   {
     driverId: "bearman",
@@ -1015,7 +1018,7 @@ export const hamilton: Driver = {
   bio: "Seven-time world champion. The most decorated driver in Formula 1 history, with 105 wins and 104 pole positions. Dominated the hybrid era at Mercedes before moving to Ferrari for 2025.",
   quote: "",
   quoteContext: "",
-  portraitUrl: 'https://upload.wikimedia.org/wikipedia/commons/d/d3/Prime_Minister_Keir_Starmer_meets_Sir_Lewis_Hamilton_%2854566928382%29_%28cropped%29.jpg',
+  portraitUrl: '/images/drivers/hamilton-f1-portrait-2026.webp',
 };
 
 export const hamiltonStats: DriverStats = {
@@ -1192,7 +1195,7 @@ export const verstappen: Driver = {
   bio: "Four-time world champion. The defining driver of the late hybrid era — ferociously quick in all conditions with an aggressive entry style that redefined what was considered possible in modern F1.",
   quote: "",
   quoteContext: "",
-  portraitUrl: '/images/drivers/verstappen-redbull-portrait-2024.jpg',
+  portraitUrl: '/images/drivers/verstappen-f1-portrait-2026.webp',
 };
 
 export const verstappenStats: DriverStats = {
@@ -1381,6 +1384,7 @@ export const leclercF2Eras: DriverEra[] = [
     wins: 7,
     teamLiveryHex: "#E8001C",
     statLabel: "CHAMPION",
+    imageUrl: "/images/drivers/leclerc-prema-f2-2017.jpg",
   },
 ];
 
@@ -1499,6 +1503,7 @@ export const russellF2Eras: DriverEra[] = [
     wins: 4,
     teamLiveryHex: "#888888",
     statLabel: "CHAMPION",
+    imageUrl: "/images/drivers/russell-art-f2-2018.jpg",
   },
 ];
 
@@ -1607,6 +1612,7 @@ export const piastriF2Eras: DriverEra[] = [
     wins: 3,
     teamLiveryHex: "#B026FF",
     statLabel: "F3 CHAMP",
+    imageUrl: "/images/drivers/piastri-f3-prema-2020.jpg",
   },
   {
     driverId: "piastri-f2",
@@ -1618,6 +1624,7 @@ export const piastriF2Eras: DriverEra[] = [
     wins: 5,
     teamLiveryHex: "#E8001C",
     statLabel: "CHAMPION",
+    imageUrl: "/images/drivers/piastri-f2-prema-2021.jpg",
   },
 ];
 
@@ -1712,7 +1719,7 @@ export const bortoleto: Driver = {
   bio: "The first South American to win the FIA F3 Championship (2023, Trident), then back-to-back: the 2024 F2 champion with Invicta Racing. Signed by Audi's Sauber programme for F1 2025 — the fourth driver to win back-to-back F2/F3 titles after Leclerc, Russell, and Piastri.",
   quote: "",
   quoteContext: "",
-  portraitUrl: 'https://upload.wikimedia.org/wikipedia/commons/f/fe/Gabriel_Bortoleto_%28cropped%29.jpg',
+  portraitUrl: '/images/drivers/bortoleto-f1-portrait-2026.webp',
 };
 
 export const bortoletoStats: DriverStats = {
@@ -1737,6 +1744,7 @@ export const bortoletoEras: DriverEra[] = [
     wins: 4,
     teamLiveryHex: "#990000",
     statLabel: "F3 CHAMP",
+    imageUrl: "/images/drivers/bortoleto-f3-trident-2023.jpg",
   },
   {
     driverId: "bortoleto",
@@ -1748,6 +1756,7 @@ export const bortoletoEras: DriverEra[] = [
     wins: 5,
     teamLiveryHex: "#1199CC",
     statLabel: "CHAMPION",
+    imageUrl: "/images/drivers/bortoleto-invicta-f2-2024.jpg",
   },
   {
     driverId: "bortoleto",
@@ -1759,6 +1768,7 @@ export const bortoletoEras: DriverEra[] = [
     wins: 0,
     teamLiveryHex: "#52E252",
     statLabel: "F1",
+    imageUrl: "/images/drivers/bortoleto-sauber-f1-2025.jpg",
   },
 ];
 
@@ -1873,7 +1883,7 @@ export const norris: Driver = {
   bio:"McLaren's linchpin who transformed from fan favourite into genuine championship threat. His 2024 season — four wins including Miami, Monaco, Netherlands, and Singapore — marked a step-change in race execution to match his already elite qualifying pace.",
   quote:"",
   quoteContext:"",
-  portraitUrl: 'https://upload.wikimedia.org/wikipedia/commons/9/90/2024-08-25_Motorsport%2C_Formel_1%2C_Gro%C3%9Fer_Preis_der_Niederlande_2024_STP_3968_by_Stepro_%28cropped2%29.jpg',
+  portraitUrl: '/images/drivers/norris-f1-portrait-2026.webp',
 }
 
 export const norrisStats: DriverStats = { driverId:"norris", series:"f1", titles:0, wins:8, poles:20, podiums:44, careerSpan:"2019–present", racesEntered:130, fastestLaps:7, pointsScored:1085 }
@@ -1924,7 +1934,7 @@ export const piastriF1: Driver = {
   bio:"The latest in the great Australian F1 lineage. F3 champion 2020, F2 champion 2021, McLaren race winner from 2023. Ice-cool racecraft, elite racecraft under pressure, and a car-feel that engineers describe as 'pure signal, no noise.'",
   quote:"",
   quoteContext:"",
-  portraitUrl: 'https://upload.wikimedia.org/wikipedia/commons/e/e5/2026_Chinese_GP_-_Oscar_Piastri_%28cropped%29_%28cropped%29.jpg',
+  portraitUrl: '/images/drivers/piastri-f1-portrait-2026.webp',
 }
 
 export const piastriF1Stats: DriverStats = { driverId:"piastri", series:"f1", titles:0, wins:9, poles:6, podiums:27, careerSpan:"2023–present", racesEntered:73, fastestLaps:9, pointsScored:820 }
@@ -1975,7 +1985,7 @@ export const russellF1: Driver = {
   bio:"Three consecutive junior titles (GP3, F2, F1 rookie pace) before three seasons with Williams — where he out-qualified his teammate 36 times in a row — established the template: precision, efficiency, maximum extraction. At Mercedes from 2022, wins have followed.",
   quote:"",
   quoteContext:"",
-  portraitUrl: '/images/drivers/russell-silverstone-2024.jpg',
+  portraitUrl: '/images/drivers/russell-f1-portrait-2026.webp',
 }
 
 export const russellF1Stats: DriverStats = { driverId:"russell", series:"f1", titles:0, wins:6, poles:8, podiums:26, careerSpan:"2019–present", racesEntered:155, fastestLaps:11, pointsScored:1096 }
@@ -2027,7 +2037,7 @@ export const antonelli: Driver = {
   bio:"Mercedes' most anticipated junior in a generation. F2 runner-up in 2024 as a 17-year-old before a direct promotion to the Silver Arrows for 2025. Named after his godfather Kimi Räikkönen, the pressure of expectation sits alongside startling natural pace.",
   quote:"",
   quoteContext:"",
-  portraitUrl: 'https://upload.wikimedia.org/wikipedia/commons/f/f3/Kimi_Antonelli_at_the_2025_US_Grand_Prix_in_Austin%2C_TX_%28cropped%29.jpg',
+  portraitUrl: '/images/drivers/antonelli-f1-portrait-2026.webp',
 }
 
 export const antonelliStats: DriverStats = { driverId:"antonelli", series:"f1", titles:0, wins:0, poles:1, podiums:3, careerSpan:"2025–present", racesEntered:25, fastestLaps:1, pointsScored:62 }
@@ -2078,7 +2088,7 @@ export const alonso: Driver = {
   bio:"Two-time world champion. The most analytically complete driver F1 has produced. Renault bookends frame a career of tactical brilliance — three stints at Ferrari, two at McLaren, alpine interludes — all producing performances above machinery. Active at 44 with Aston Martin in 2026.",
   quote:"",
   quoteContext:"",
-  portraitUrl: 'https://upload.wikimedia.org/wikipedia/commons/9/97/Alonso-68_%2824710447098%29.jpg',
+  portraitUrl: '/images/drivers/alonso-f1-portrait-2026.webp',
 }
 
 export const alonsoStats: DriverStats = { driverId:"alonso", series:"f1", titles:2, wins:32, poles:22, podiums:106, careerSpan:"2001–present", racesEntered:403, fastestLaps:23, pointsScored:2267 }
@@ -2135,7 +2145,7 @@ export const stroll: Driver = {
   bio:"The youngest Canadian to score F1 points. Three poles tell a different story to his reputation — Stroll in wet or unusual conditions is a different driver entirely, possessing elite car balance feel in degraded grip. A more complete driver than his standing suggests.",
   quote:"",
   quoteContext:"",
-  portraitUrl: 'https://upload.wikimedia.org/wikipedia/commons/a/ae/FIA_F1_Austria_2024_Nr._18_Stroll.jpg',
+  portraitUrl: '/images/drivers/stroll-f1-portrait-2026.webp',
 }
 
 export const strollStats: DriverStats = { driverId:"stroll", series:"f1", titles:0, wins:0, poles:3, podiums:12, careerSpan:"2017–present", racesEntered:165, fastestLaps:0, pointsScored:298 }
@@ -2188,7 +2198,7 @@ export const gasly: Driver = {
   bio:"French Formula 1 driver for Alpine. Gasly's headline result remains his maiden win at the 2020 Italian Grand Prix with AlphaTauri, followed by podium finishes with both AlphaTauri and Alpine.",
   quote:"",
   quoteContext:"",
-  portraitUrl: 'https://upload.wikimedia.org/wikipedia/commons/7/70/2022_French_Grand_Prix_%2852279065728%29_%28cropped%29.png',
+  portraitUrl: '/images/drivers/gasly-f1-portrait-2026.webp',
 }
 
 export const gaslyStats: DriverStats = { driverId:"gasly", series:"f1", titles:0, wins:1, poles:0, podiums:5, careerSpan:"2017–present", racesEntered:179, fastestLaps:3, pointsScored:459 }
@@ -2242,14 +2252,14 @@ export const colapinto: Driver = {
   bio:"Argentina's first F1 representative since 2001. Thrust into a Williams mid-season in 2024 after just 9 races, he delivered performances that prompted Alpine to sign him for 2026. Carries the weight of a nation with visible ease.",
   quote:"",
   quoteContext:"",
-  portraitUrl: 'https://upload.wikimedia.org/wikipedia/commons/a/a0/Franco_Colapinto_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8704%29_%28cropped%29.jpg',
+  portraitUrl: '/images/drivers/colapinto-f1-portrait-2026.webp',
 }
 
 export const colapintoStats: DriverStats = { driverId:"colapinto", series:"f1", titles:0, wins:0, poles:0, podiums:0, careerSpan:"2024–present", racesEntered:22, fastestLaps:0, pointsScored:11 }
 
 export const colapintoEras: DriverEra[] = [
-  { driverId:"colapinto", teamId:"williams", teamName:"Williams", seasons:"2024", highlights:["Mid-season debut replacing Sargeant","P6 Singapore 2024 — breakthrough result","First Argentine driver since 2001"], titles:0, wins:0, teamLiveryHex:"#005AFF", statLabel:"P6 SGP" },
-  { driverId:"colapinto", teamId:"alpine", teamName:"Alpine", seasons:"2025–present", highlights:["Full-season contract 2026","Argentina following his every race"], titles:0, wins:0, teamLiveryHex:"#0090FF", statLabel:"FULL SEASON" },
+  { driverId:"colapinto", teamId:"williams", teamName:"Williams", seasons:"2024", highlights:["Mid-season debut replacing Sargeant","P6 Singapore 2024 — breakthrough result","First Argentine driver since 2001"], titles:0, wins:0, teamLiveryHex:"#005AFF", statLabel:"P6 SGP", imageUrl:"/images/drivers/colapinto-williams-2024.jpg" },
+  { driverId:"colapinto", teamId:"alpine", teamName:"Alpine", seasons:"2025–present", highlights:["Full-season contract 2026","Argentina following his every race"], titles:0, wins:0, teamLiveryHex:"#0090FF", statLabel:"FULL SEASON", imageUrl:"/images/drivers/colapinto-alpine-2025.jpg" },
 ]
 
 export const colapintoSignature: DrivingSignature = {
@@ -2294,7 +2304,7 @@ export const albon: Driver = {
   bio:"Wrongly dismissed by Red Bull after two seasons, Albon spent 2021 as a reserve before Williams gave him a second chance. The consistency and car development skill he showed with Williams — dragging the FW46 to regular points against better machinery — vindicated every manager who backed his return.",
   quote:"",
   quoteContext:"",
-  portraitUrl: '/images/drivers/albon-austria-2025.jpg',
+  portraitUrl: '/images/drivers/albon-f1-portrait-2026.webp',
 }
 
 export const albonStats: DriverStats = { driverId:"albon", series:"f1", titles:0, wins:0, poles:0, podiums:2, careerSpan:"2019–present", racesEntered:112, fastestLaps:1, pointsScored:258 }
@@ -2346,7 +2356,7 @@ export const sainz: Driver = {
   bio:"Son of a rally legend, built his own legacy on racecraft over raw pace. Four teams, four different car philosophies, consistent top-10 results throughout. Three wins including Silverstone 2022 and Singapore 2023 — a driver who extracts more than the machinery deserves.",
   quote:"",
   quoteContext:"",
-  portraitUrl: 'https://upload.wikimedia.org/wikipedia/commons/c/ce/Formula1Gabelhofen2022_%2804%29_%28cropped2%29.jpg',
+  portraitUrl: '/images/drivers/sainz-f1-portrait-2026.webp',
 }
 
 export const sainzStats: DriverStats = { driverId:"sainz", series:"f1", titles:0, wins:4, poles:6, podiums:28, careerSpan:"2015–present", racesEntered:198, fastestLaps:5, pointsScored:1166 }
@@ -2440,7 +2450,7 @@ export const ocon: Driver = {
   bio:"Hungary 2021 defines his career: a perfect race from start to finish — surviving a first-lap incident, managing tyres on a strategy that no one else attempted, holding off Hamilton for the final ten laps. One win, delivered with precision when it mattered most.",
   quote:"",
   quoteContext:"",
-  portraitUrl: '/images/drivers/ocon-austria-2024.jpg',
+  portraitUrl: '/images/drivers/ocon-f1-portrait-2026.webp',
 }
 
 export const oconStats: DriverStats = { driverId:"ocon", series:"f1", titles:0, wins:1, poles:0, podiums:4, careerSpan:"2016–present", racesEntered:170, fastestLaps:2, pointsScored:406 }
@@ -2494,7 +2504,7 @@ export const hulkenberg: Driver = {
   bio:"Le Mans 24H winner in his debut attempt. The most starts in F1 history without a podium — a record that reflects machinery as much as the driver. Back as Audi's lead driver for the new constructor era. One of the sport's most analytically respected racers.",
   quote:"",
   quoteContext:"",
-  portraitUrl: '/images/drivers/hulkenberg-belgium-2024.jpg',
+  portraitUrl: '/images/drivers/hulkenberg-f1-portrait-2026.webp',
 }
 
 export const hulkenbergStats: DriverStats = { driverId:"hulkenberg", series:"f1", titles:0, wins:0, poles:1, podiums:0, careerSpan:"2010–present", racesEntered:228, fastestLaps:2, pointsScored:545 }
@@ -2639,13 +2649,13 @@ export const hadjar: Driver = {
   bio:"F2 runner-up 2024, F1 debut with Racing Bulls 2025. French-Algerian dual heritage, Parisian upbringing, Red Bull academy graduate. A driver who showed remarkable racecraft maturity in junior categories for his age.",
   quote:"",
   quoteContext:"",
-  portraitUrl: 'https://upload.wikimedia.org/wikipedia/commons/7/75/Isack_Hadjar_at_the_Melbourne_Walk_during_the_2026_Australian_Grand_Prix_%28028A8753%29_%28cropped%29.jpg',
+  portraitUrl: '/images/drivers/hadjar-f1-portrait-2026.webp',
 }
 
 export const hadjarStats: DriverStats = { driverId:"hadjar", series:"f1", titles:0, wins:0, poles:0, podiums:0, careerSpan:"2025–present", racesEntered:22, fastestLaps:0, pointsScored:18 }
 
 export const hadjarEras: DriverEra[] = [
-  { driverId:"hadjar", teamId:"rb", teamName:"Racing Bulls", seasons:"2025–present", highlights:["F1 debut 2025","F2 runner-up 2024 — strong junior platform","Red Bull academy training"], titles:0, wins:0, teamLiveryHex:"#6692FF", statLabel:"ROOKIE" },
+  { driverId:"hadjar", teamId:"rb", teamName:"Racing Bulls", seasons:"2025–present", highlights:["F1 debut 2025","F2 runner-up 2024 — strong junior platform","Red Bull academy training"], titles:0, wins:0, teamLiveryHex:"#6692FF", statLabel:"ROOKIE", imageUrl:"/images/drivers/hadjar-racing-bulls-2025.jpg" },
 ]
 
 export const hadjarSignature: DrivingSignature = {
@@ -2689,14 +2699,14 @@ export const lawson: Driver = {
   bio:"The New Zealander who answered every call. Substitute for Ricciardo at 21 with one day's notice. Promoted to Red Bull for 2025 but demoted after two rounds. Returned to Racing Bulls and rebuilt his reputation, securing his 2026 seat alongside Arvid Lindblad.",
   quote:"",
   quoteContext:"",
-  portraitUrl: 'https://upload.wikimedia.org/wikipedia/commons/5/53/Liam_Lawson_at_the_Red_Bull_Fan_Zone_%E2%80%93_Crown_Riverwalk%2C_Melbourne_%28028A7793%29.jpg',
+  portraitUrl: '/images/drivers/lawson-f1-portrait-2026.webp',
 }
 
 export const lawsonStats: DriverStats = { driverId:"lawson", series:"f1", titles:0, wins:0, poles:0, podiums:0, careerSpan:"2023–present", racesEntered:38, fastestLaps:0, pointsScored:54 }
 
 export const lawsonEras: DriverEra[] = [
   { driverId:"lawson", teamId:"alphatauri", teamName:"AlphaTauri / VCARB", seasons:"2023–2024", highlights:["F1 debut Zandvoort 2023 — called up mid-weekend replacing injured Ricciardo","Scored points at Singapore 2023 on same substitute run","Final 6 rounds of 2024 replacing Ricciardo at VCARB"], titles:0, wins:0, teamLiveryHex:"#6692FF", statLabel:"SUB DEBUT", imageUrl:"/images/drivers/lawson-racing-bulls-2025.jpg" },
-  { driverId:"lawson", teamId:"red_bull", teamName:"Red Bull", seasons:"2025", highlights:["Promoted to Red Bull as Verstappen's teammate","2 rounds only — Australia and China GPs 2025","Returned to Racing Bulls from Round 3 after difficult start"], titles:0, wins:0, teamLiveryHex:"#1E3A8A", statLabel:"2 ROUNDS" },
+  { driverId:"lawson", teamId:"red_bull", teamName:"Red Bull", seasons:"2025", highlights:["Promoted to Red Bull as Verstappen's teammate","2 rounds only — Australia and China GPs 2025","Returned to Racing Bulls from Round 3 after difficult start"], titles:0, wins:0, teamLiveryHex:"#1E3A8A", statLabel:"2 ROUNDS", imageUrl:"/images/drivers/lawson-redbull-2025.jpg" },
   { driverId:"lawson", teamId:"racing_bulls", teamName:"Racing Bulls", seasons:"2025–present", highlights:["Returned to Racing Bulls from Round 3, 2025","Rebuilt form — secured 2026 contract at Austrian GP inflection point","Racing Bulls 2026 alongside rookie Arvid Lindblad (#41)"], titles:0, wins:0, teamLiveryHex:"#6692FF", statLabel:"ONGOING", imageUrl:"/images/drivers/lawson-rb-vcarb-2024.jpg" },
 ]
 
@@ -2741,7 +2751,7 @@ export const perez: Driver = {
   bio:"Mexico's greatest racing driver. The Sakhir GP 2020 win against all odds launched a Red Bull career that delivered multiple race victories and a pole position. Alongside Verstappen he formed one of the most dominant driver pairings of the modern era, before joining the Cadillac project.",
   quote:"",
   quoteContext:"",
-  portraitUrl: 'https://upload.wikimedia.org/wikipedia/commons/5/55/2021_US_GP_driver_parade_%28cropped2%29.jpg',
+  portraitUrl: '/images/drivers/perez-f1-portrait-2026.webp',
 }
 
 export const perezStats: DriverStats = { driverId:"perez", series:"f1", titles:0, wins:27, poles:3, podiums:66, careerSpan:"2011–present", racesEntered:280, fastestLaps:12, pointsScored:1614 }
@@ -2795,7 +2805,7 @@ export const bottas: Driver = {
   bio:"Finland's best Grand Prix driver since Mika Häkkinen. Ten wins and twenty poles at Mercedes, where he was Hamilton's closest challenger but never his conqueror. The quiet Finn who anchored Alfa Romeo's midfield through four seasons before joining Cadillac's pioneering project.",
   quote:"",
   quoteContext:"",
-  portraitUrl: 'https://upload.wikimedia.org/wikipedia/commons/9/93/Valtteri_Bottas_at_the_2026_Adelaide_Motorsport_Festival_%28028A7567%29.jpg',
+  portraitUrl: '/images/drivers/bottas-f1-portrait-2026.webp',
 }
 
 export const bottasStats: DriverStats = { driverId:"bottas", series:"f1", titles:0, wins:10, poles:20, podiums:67, careerSpan:"2013–present", racesEntered:238, fastestLaps:19, pointsScored:1878 }
@@ -4067,6 +4077,7 @@ export const mansellEras: DriverEra[] = [
     wins: 0,
     teamLiveryHex: "#005AFF",
     statLabel: "BRIEF RETURN",
+    imageUrl: "/images/drivers/mansell-williams-1994.jpg",
   },
 ]
 
@@ -4473,7 +4484,7 @@ export const magnussenStats: DriverStats = { driverId:"magnussen", series:"f1", 
 
 export const magnussenEras: DriverEra[] = [
   { driverId:"magnussen", teamId:"mclaren", teamName:"McLaren", seasons:"2014", highlights:["P2 on debut — Australia 2014","Outqualified Button in first season"], titles:0, wins:0, teamLiveryHex:"#E8002D", statLabel:"DEBUT P2", imageUrl:"/images/drivers/magnussen-mclaren-2014.jpg" },
-  { driverId:"magnussen", teamId:"renault", teamName:"Renault", seasons:"2016", highlights:["Return to grid after McLaren reserve year","Consistent midfield scoring"], titles:0, wins:0, teamLiveryHex:"#FFD700", statLabel:"2016" },
+  { driverId:"magnussen", teamId:"renault", teamName:"Renault", seasons:"2016", highlights:["Return to grid after McLaren reserve year","Consistent midfield scoring"], titles:0, wins:0, teamLiveryHex:"#FFD700", statLabel:"2016", imageUrl:"/images/drivers/magnussen-renault-2016.jpg" },
   { driverId:"magnussen", teamId:"haas", teamName:"Haas", seasons:"2017–2020", highlights:["P9 WDC 2018 — career best","Combative wheel-to-wheel racing","Became core of the Haas identity"], titles:0, wins:0, teamLiveryHex:"#B6BABD", statLabel:"P9 WDC 18", imageUrl:"/images/drivers/magnussen-haas-2022.jpg" },
   { driverId:"magnussen", teamId:"haas", teamName:"Haas", seasons:"2022–2024", highlights:["Sao Paulo 2022 pole — Haas first-ever front row","Strong early 2022 campaign","Replaced by Ocon and Bearman for 2025"], titles:0, wins:0, teamLiveryHex:"#B6BABD", statLabel:"SAO PAULO POLE", imageUrl:"/images/drivers/magnussen-haas-2022.jpg" },
 ]
@@ -4570,7 +4581,7 @@ export const lindblad: Driver = {
   bio:"The youngest F2 race winner in history (Jeddah 2025, aged 17y 254d) and youngest British driver ever in F1. Red Bull Junior since 2021, F3 4th (2024), F2 6th (2025) — direct promotion to Racing Bulls for 2026 alongside Liam Lawson. Scored points on his F1 debut at the 2026 Australian GP.",
   quote:"",
   quoteContext:"",
-  portraitUrl: '/images/drivers/lindblad-redbull-2026.jpg',
+  portraitUrl: '/images/drivers/lindblad-f1-portrait-2026.webp',
 }
 
 export const lindbladStats: DriverStats = { driverId:"lindblad", series:"f1", titles:0, wins:0, poles:0, podiums:0, careerSpan:"2026–present", racesEntered:5, fastestLaps:0, pointsScored:4 }

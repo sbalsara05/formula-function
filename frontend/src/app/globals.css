@@ -121,3 +121,52 @@ body {
   background: #2a2a2a;
   border-radius: 2px;
 }
+
+/* ─── Era hub cards ────────────────────────────────────────────────────────── */
+.era-card-link {
+  cursor: pointer;
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.era-card-link:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.18) !important;
+}
+
+/* ─── Browse grid entity cards (drivers/teams/venues) ────────────────────────── */
+.entity-card-link {
+  cursor: pointer;
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.entity-card-link:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.18) !important;
+}
+
+/* ─── Homepage telemetry / polish ──────────────────────────────────────────── */
+@keyframes homeTelemetryDraw {
+  0%   { stroke-dashoffset: 1200; opacity: 0; }
+  20%  { opacity: 0.9; }
+  100% { stroke-dashoffset: 0; opacity: 1; }
+}
+
+.home-telemetry-path {
+  stroke-dasharray: 1200;
+  stroke-dashoffset: 1200;
+  animation: homeTelemetryDraw 2.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-telemetry-path {
+    animation: none;
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+
+  .home-hero-line {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}

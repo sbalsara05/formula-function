@@ -1,0 +1,1403 @@
+{
+  "method": "Rain-affected years from the curated wet/damp F1 race catalogue (todosobreformula1) mapped to Jolpica circuit race years, plus curated supplements. DRY = not rain-affected; MIXED = rain-affected; WET = curated primarily-wet overrides. Percentages via largest-remainder so integers sum to 100. Spa retains its finer curated year list when present.",
+  "dataThrough": "2026-07-29",
+  "sources": [
+    "https://en.tudosobreformula1.com.br/corridas-com-pista-molhada-ou-%C3%BAmida",
+    "scripts/venue_weather_classifications.json (spa curated)",
+    "Jolpica circuit race lists in scripts/venue_audit_cache/"
+  ],
+  "spa": {
+    "circuitId": "spa",
+    "totalRaces": 59,
+    "note": "WC races at Jolpica circuitId spa only (excludes Zolder/Nivelles Belgian GPs).",
+    "wetYears": [
+      1956,
+      1963,
+      1966,
+      1989,
+      1998,
+      2021
+    ],
+    "mixedYears": [
+      1952,
+      1965,
+      1985,
+      1992,
+      1995,
+      1997,
+      2000,
+      2005,
+      2008,
+      2010,
+      2016,
+      2025
+    ],
+    "dryYears": [
+      1950,
+      1951,
+      1953,
+      1954,
+      1955,
+      1958,
+      1960,
+      1961,
+      1962,
+      1964,
+      1967,
+      1968,
+      1970,
+      1983,
+      1986,
+      1987,
+      1988,
+      1990,
+      1991,
+      1993,
+      1994,
+      1996,
+      1999,
+      2001,
+      2002,
+      2004,
+      2007,
+      2009,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2017,
+      2018,
+      2019,
+      2020,
+      2022,
+      2023,
+      2024,
+      2026
+    ],
+    "counts": {
+      "dry": 41,
+      "mixed": 12,
+      "wet": 6
+    },
+    "percentages": {
+      "dryPct": 70,
+      "mixedPct": 20,
+      "wetPct": 10
+    },
+    "sources": [
+      "https://en.tudosobreformula1.com.br/corridas-com-pista-molhada-ou-%C3%BAmida",
+      "https://www.lightsoutblog.com/f1-track-stats-belgian-grand-prix-spa-francorchamps/",
+      "https://www.formula1.com/en/latest/article/verstappen-takes-victory-in-severely-shortened-rain-affected-belgian-gp-as.4AqGhiKQfFaqr7KZjyDjPZ",
+      "https://www.skysports.com/f1/news/12433/13402607/belgian-gp-oscar-piastri-beats-lando-norris-to-spa-win-in-wet-dry-race-to-increase-f1-title-lead",
+      "https://en.wikipedia.org/wiki/Belgian_Grand_Prix"
+    ],
+    "yearNotes": {
+      "1952": "Listed wet/damp Belgian GP (Ascari)",
+      "1956": "Wet race (Collins)",
+      "1963": "Wet race (Clark)",
+      "1965": "Wet/damp (Clark)",
+      "1966": "Wet race (Surtees)",
+      "1985": "Rain at start, drying, late rain (Senna) \u2014 MIXED",
+      "1989": "Wet race (Senna)",
+      "1992": "Wet/changing conditions for Schumacher maiden win \u2014 MIXED",
+      "1995": "Rain-affected (Schumacher) \u2014 MIXED",
+      "1997": "Rain-affected (Schumacher) \u2014 MIXED",
+      "1998": "Torrential monsoon race \u2014 WET",
+      "2000": "Rain at start then dried (H\u00e4kkinen) \u2014 MIXED",
+      "2005": "Rain-affected (R\u00e4ikk\u00f6nen) \u2014 MIXED",
+      "2008": "Late-race shower decisive \u2014 MIXED",
+      "2010": "Rain-affected (Hamilton) \u2014 MIXED",
+      "2016": "Rain periods; Verstappen P11\u2192P3 \u2014 MIXED",
+      "2021": "Race abandoned to SC-only wet running \u2014 WET",
+      "2025": "80-minute rain delay then wet-dry race (Piastri) \u2014 MIXED"
+    }
+  },
+  "monaco": {
+    "circuitId": "monaco",
+    "totalRaces": 72,
+    "wetYears": [
+      1984,
+      1996,
+      2008
+    ],
+    "mixedYears": [
+      1960,
+      1972,
+      1975,
+      1980,
+      1982,
+      1983,
+      1997,
+      2016,
+      2022,
+      2023
+    ],
+    "dryYears": [
+      1950,
+      1955,
+      1956,
+      1957,
+      1958,
+      1959,
+      1961,
+      1962,
+      1963,
+      1964,
+      1965,
+      1966,
+      1967,
+      1968,
+      1969,
+      1970,
+      1971,
+      1973,
+      1974,
+      1976,
+      1977,
+      1978,
+      1979,
+      1981,
+      1985,
+      1986,
+      1987,
+      1988,
+      1989,
+      1990,
+      1991,
+      1992,
+      1993,
+      1994,
+      1995,
+      1998,
+      1999,
+      2000,
+      2001,
+      2002,
+      2003,
+      2004,
+      2005,
+      2006,
+      2007,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2017,
+      2018,
+      2019,
+      2021,
+      2024,
+      2025,
+      2026
+    ],
+    "counts": {
+      "dry": 59,
+      "mixed": 10,
+      "wet": 3
+    },
+    "percentages": {
+      "dryPct": 82,
+      "mixedPct": 14,
+      "wetPct": 4
+    },
+    "sources": [
+      "https://en.tudosobreformula1.com.br/corridas-com-pista-molhada-ou-%C3%BAmida",
+      "scripts/venue_weather_classifications.json (spa curated)",
+      "Jolpica circuit race lists in scripts/venue_audit_cache/"
+    ],
+    "yearNotes": {
+      "1960": "Catalogue rain-affected \u00b7 MIXED",
+      "1972": "Catalogue rain-affected \u00b7 MIXED",
+      "1975": "Catalogue rain-affected \u00b7 MIXED",
+      "1980": "Catalogue rain-affected \u00b7 MIXED",
+      "1982": "Catalogue rain-affected \u00b7 MIXED",
+      "1983": "Catalogue rain-affected \u00b7 MIXED",
+      "1984": "Catalogue rain-affected \u00b7 curated WET",
+      "1996": "Catalogue rain-affected \u00b7 curated WET",
+      "1997": "Catalogue rain-affected \u00b7 MIXED",
+      "2008": "Catalogue rain-affected \u00b7 curated WET",
+      "2016": "Catalogue rain-affected \u00b7 MIXED",
+      "2022": "Catalogue rain-affected \u00b7 MIXED",
+      "2023": "Catalogue rain-affected \u00b7 MIXED"
+    }
+  },
+  "monza": {
+    "circuitId": "monza",
+    "totalRaces": 75,
+    "wetYears": [],
+    "mixedYears": [
+      1962,
+      2004,
+      2008
+    ],
+    "dryYears": [
+      1950,
+      1951,
+      1952,
+      1953,
+      1954,
+      1955,
+      1956,
+      1957,
+      1958,
+      1959,
+      1960,
+      1961,
+      1963,
+      1964,
+      1965,
+      1966,
+      1967,
+      1968,
+      1969,
+      1970,
+      1971,
+      1972,
+      1973,
+      1974,
+      1975,
+      1976,
+      1977,
+      1978,
+      1979,
+      1981,
+      1982,
+      1983,
+      1984,
+      1985,
+      1986,
+      1987,
+      1988,
+      1989,
+      1990,
+      1991,
+      1992,
+      1993,
+      1994,
+      1995,
+      1996,
+      1997,
+      1998,
+      1999,
+      2000,
+      2001,
+      2002,
+      2003,
+      2005,
+      2006,
+      2007,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "counts": {
+      "dry": 72,
+      "mixed": 3,
+      "wet": 0
+    },
+    "percentages": {
+      "dryPct": 96,
+      "mixedPct": 4,
+      "wetPct": 0
+    },
+    "sources": [
+      "https://en.tudosobreformula1.com.br/corridas-com-pista-molhada-ou-%C3%BAmida",
+      "scripts/venue_weather_classifications.json (spa curated)",
+      "Jolpica circuit race lists in scripts/venue_audit_cache/"
+    ],
+    "yearNotes": {
+      "1962": "Catalogue rain-affected \u00b7 MIXED",
+      "2004": "Catalogue rain-affected \u00b7 MIXED",
+      "2008": "Catalogue rain-affected \u00b7 MIXED"
+    }
+  },
+  "silverstone": {
+    "circuitId": "silverstone",
+    "totalRaces": 61,
+    "wetYears": [
+      2008,
+      2024
+    ],
+    "mixedYears": [
+      1953,
+      1954,
+      1975,
+      1988,
+      1998,
+      2002,
+      2011,
+      2015,
+      2016,
+      2025
+    ],
+    "dryYears": [
+      1950,
+      1951,
+      1952,
+      1956,
+      1958,
+      1960,
+      1963,
+      1965,
+      1967,
+      1969,
+      1971,
+      1973,
+      1977,
+      1979,
+      1981,
+      1983,
+      1985,
+      1987,
+      1989,
+      1990,
+      1991,
+      1992,
+      1993,
+      1994,
+      1995,
+      1996,
+      1997,
+      1999,
+      2000,
+      2001,
+      2003,
+      2004,
+      2005,
+      2006,
+      2007,
+      2009,
+      2010,
+      2012,
+      2013,
+      2014,
+      2017,
+      2018,
+      2019,
+      2020,
+      2020,
+      2021,
+      2022,
+      2023,
+      2026
+    ],
+    "counts": {
+      "dry": 49,
+      "mixed": 10,
+      "wet": 2
+    },
+    "percentages": {
+      "dryPct": 80,
+      "mixedPct": 17,
+      "wetPct": 3
+    },
+    "sources": [
+      "https://en.tudosobreformula1.com.br/corridas-com-pista-molhada-ou-%C3%BAmida",
+      "scripts/venue_weather_classifications.json (spa curated)",
+      "Jolpica circuit race lists in scripts/venue_audit_cache/"
+    ],
+    "yearNotes": {
+      "1953": "Catalogue rain-affected \u00b7 MIXED",
+      "1954": "Catalogue rain-affected \u00b7 MIXED",
+      "1975": "Catalogue rain-affected \u00b7 MIXED",
+      "1988": "Catalogue rain-affected \u00b7 MIXED",
+      "1998": "Catalogue rain-affected \u00b7 MIXED",
+      "2002": "Catalogue rain-affected \u00b7 MIXED",
+      "2008": "Catalogue rain-affected \u00b7 curated WET",
+      "2011": "Catalogue rain-affected \u00b7 MIXED",
+      "2015": "Catalogue rain-affected \u00b7 MIXED",
+      "2016": "Catalogue rain-affected \u00b7 MIXED",
+      "2024": "Catalogue rain-affected \u00b7 curated WET",
+      "2025": "Catalogue rain-affected \u00b7 MIXED"
+    }
+  },
+  "suzuka": {
+    "circuitId": "suzuka",
+    "totalRaces": 36,
+    "wetYears": [
+      1994,
+      2022
+    ],
+    "mixedYears": [
+      1988,
+      1993,
+      1995,
+      2000,
+      2014
+    ],
+    "dryYears": [
+      1987,
+      1989,
+      1990,
+      1991,
+      1992,
+      1996,
+      1997,
+      1998,
+      1999,
+      2001,
+      2002,
+      2003,
+      2004,
+      2005,
+      2006,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "counts": {
+      "dry": 29,
+      "mixed": 5,
+      "wet": 2
+    },
+    "percentages": {
+      "dryPct": 81,
+      "mixedPct": 14,
+      "wetPct": 5
+    },
+    "sources": [
+      "https://en.tudosobreformula1.com.br/corridas-com-pista-molhada-ou-%C3%BAmida",
+      "scripts/venue_weather_classifications.json (spa curated)",
+      "Jolpica circuit race lists in scripts/venue_audit_cache/"
+    ],
+    "yearNotes": {
+      "1988": "Catalogue rain-affected \u00b7 MIXED",
+      "1993": "Catalogue rain-affected \u00b7 MIXED",
+      "1994": "Catalogue rain-affected \u00b7 curated WET",
+      "1995": "Catalogue rain-affected \u00b7 MIXED",
+      "2000": "Catalogue rain-affected \u00b7 MIXED",
+      "2014": "Catalogue rain-affected \u00b7 MIXED",
+      "2022": "Catalogue rain-affected \u00b7 curated WET"
+    }
+  },
+  "interlagos": {
+    "circuitId": "interlagos",
+    "totalRaces": 42,
+    "wetYears": [
+      2016,
+      2024
+    ],
+    "mixedYears": [
+      1974,
+      1991,
+      1993,
+      1996,
+      2001,
+      2003,
+      2004,
+      2008,
+      2012
+    ],
+    "dryYears": [
+      1973,
+      1975,
+      1976,
+      1977,
+      1979,
+      1980,
+      1990,
+      1992,
+      1994,
+      1995,
+      1997,
+      1998,
+      1999,
+      2000,
+      2002,
+      2005,
+      2006,
+      2007,
+      2009,
+      2010,
+      2011,
+      2013,
+      2014,
+      2015,
+      2017,
+      2018,
+      2019,
+      2021,
+      2022,
+      2023,
+      2025
+    ],
+    "counts": {
+      "dry": 31,
+      "mixed": 9,
+      "wet": 2
+    },
+    "percentages": {
+      "dryPct": 74,
+      "mixedPct": 21,
+      "wetPct": 5
+    },
+    "sources": [
+      "https://en.tudosobreformula1.com.br/corridas-com-pista-molhada-ou-%C3%BAmida",
+      "scripts/venue_weather_classifications.json (spa curated)",
+      "Jolpica circuit race lists in scripts/venue_audit_cache/"
+    ],
+    "yearNotes": {
+      "1974": "Catalogue rain-affected \u00b7 MIXED",
+      "1991": "Catalogue rain-affected \u00b7 MIXED",
+      "1993": "Catalogue rain-affected \u00b7 MIXED",
+      "1996": "Catalogue rain-affected \u00b7 MIXED",
+      "2001": "Catalogue rain-affected \u00b7 MIXED",
+      "2003": "Catalogue rain-affected \u00b7 MIXED",
+      "2004": "Catalogue rain-affected \u00b7 MIXED",
+      "2008": "Catalogue rain-affected \u00b7 MIXED",
+      "2012": "Catalogue rain-affected \u00b7 MIXED",
+      "2016": "Catalogue rain-affected \u00b7 curated WET",
+      "2024": "Catalogue rain-affected \u00b7 curated WET"
+    }
+  },
+  "bahrain": {
+    "circuitId": "bahrain",
+    "totalRaces": 22,
+    "wetYears": [],
+    "mixedYears": [],
+    "dryYears": [
+      2004,
+      2005,
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "counts": {
+      "dry": 22,
+      "mixed": 0,
+      "wet": 0
+    },
+    "percentages": {
+      "dryPct": 100,
+      "mixedPct": 0,
+      "wetPct": 0
+    },
+    "sources": [
+      "https://en.tudosobreformula1.com.br/corridas-com-pista-molhada-ou-%C3%BAmida",
+      "scripts/venue_weather_classifications.json (spa curated)",
+      "Jolpica circuit race lists in scripts/venue_audit_cache/"
+    ],
+    "yearNotes": {}
+  },
+  "abu-dhabi": {
+    "circuitId": "yas_marina",
+    "totalRaces": 17,
+    "wetYears": [],
+    "mixedYears": [],
+    "dryYears": [
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "counts": {
+      "dry": 17,
+      "mixed": 0,
+      "wet": 0
+    },
+    "percentages": {
+      "dryPct": 100,
+      "mixedPct": 0,
+      "wetPct": 0
+    },
+    "sources": [
+      "https://en.tudosobreformula1.com.br/corridas-com-pista-molhada-ou-%C3%BAmida",
+      "scripts/venue_weather_classifications.json (spa curated)",
+      "Jolpica circuit race lists in scripts/venue_audit_cache/"
+    ],
+    "yearNotes": {}
+  },
+  "jeddah": {
+    "circuitId": "jeddah",
+    "totalRaces": 5,
+    "wetYears": [],
+    "mixedYears": [],
+    "dryYears": [
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "counts": {
+      "dry": 5,
+      "mixed": 0,
+      "wet": 0
+    },
+    "percentages": {
+      "dryPct": 100,
+      "mixedPct": 0,
+      "wetPct": 0
+    },
+    "sources": [
+      "https://en.tudosobreformula1.com.br/corridas-com-pista-molhada-ou-%C3%BAmida",
+      "scripts/venue_weather_classifications.json (spa curated)",
+      "Jolpica circuit race lists in scripts/venue_audit_cache/"
+    ],
+    "yearNotes": {}
+  },
+  "melbourne": {
+    "circuitId": "albert_park",
+    "totalRaces": 29,
+    "wetYears": [],
+    "mixedYears": [
+      2010,
+      2025
+    ],
+    "dryYears": [
+      1996,
+      1997,
+      1998,
+      1999,
+      2000,
+      2001,
+      2002,
+      2003,
+      2004,
+      2005,
+      2006,
+      2007,
+      2008,
+      2009,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2022,
+      2023,
+      2024,
+      2026
+    ],
+    "counts": {
+      "dry": 27,
+      "mixed": 2,
+      "wet": 0
+    },
+    "percentages": {
+      "dryPct": 93,
+      "mixedPct": 7,
+      "wetPct": 0
+    },
+    "sources": [
+      "https://en.tudosobreformula1.com.br/corridas-com-pista-molhada-ou-%C3%BAmida",
+      "scripts/venue_weather_classifications.json (spa curated)",
+      "Jolpica circuit race lists in scripts/venue_audit_cache/"
+    ],
+    "yearNotes": {
+      "2010": "Catalogue rain-affected \u00b7 MIXED",
+      "2025": "Catalogue rain-affected \u00b7 MIXED"
+    }
+  },
+  "shanghai": {
+    "circuitId": "shanghai",
+    "totalRaces": 19,
+    "wetYears": [],
+    "mixedYears": [
+      2006,
+      2007,
+      2009,
+      2010,
+      2017,
+      2019
+    ],
+    "dryYears": [
+      2004,
+      2005,
+      2008,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2018,
+      2024,
+      2025,
+      2026
+    ],
+    "counts": {
+      "dry": 13,
+      "mixed": 6,
+      "wet": 0
+    },
+    "percentages": {
+      "dryPct": 68,
+      "mixedPct": 32,
+      "wetPct": 0
+    },
+    "sources": [
+      "https://en.tudosobreformula1.com.br/corridas-com-pista-molhada-ou-%C3%BAmida",
+      "scripts/venue_weather_classifications.json (spa curated)",
+      "Jolpica circuit race lists in scripts/venue_audit_cache/"
+    ],
+    "yearNotes": {
+      "2006": "Catalogue rain-affected \u00b7 MIXED",
+      "2007": "Catalogue rain-affected \u00b7 MIXED",
+      "2009": "Catalogue rain-affected \u00b7 MIXED",
+      "2010": "Catalogue rain-affected \u00b7 MIXED",
+      "2017": "Catalogue rain-affected \u00b7 MIXED",
+      "2019": "Catalogue rain-affected \u00b7 MIXED"
+    }
+  },
+  "miami": {
+    "circuitId": "miami",
+    "totalRaces": 5,
+    "wetYears": [],
+    "mixedYears": [],
+    "dryYears": [
+      2022,
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "counts": {
+      "dry": 5,
+      "mixed": 0,
+      "wet": 0
+    },
+    "percentages": {
+      "dryPct": 100,
+      "mixedPct": 0,
+      "wetPct": 0
+    },
+    "sources": [
+      "https://en.tudosobreformula1.com.br/corridas-com-pista-molhada-ou-%C3%BAmida",
+      "scripts/venue_weather_classifications.json (spa curated)",
+      "Jolpica circuit race lists in scripts/venue_audit_cache/"
+    ],
+    "yearNotes": {}
+  },
+  "imola": {
+    "circuitId": "imola",
+    "totalRaces": 32,
+    "wetYears": [
+      2022
+    ],
+    "mixedYears": [
+      1981,
+      1991,
+      1993,
+      1995,
+      2020,
+      2021
+    ],
+    "dryYears": [
+      1980,
+      1982,
+      1983,
+      1984,
+      1985,
+      1986,
+      1987,
+      1988,
+      1989,
+      1990,
+      1992,
+      1994,
+      1996,
+      1997,
+      1998,
+      1999,
+      2000,
+      2001,
+      2002,
+      2003,
+      2004,
+      2005,
+      2006,
+      2024,
+      2025
+    ],
+    "counts": {
+      "dry": 25,
+      "mixed": 6,
+      "wet": 1
+    },
+    "percentages": {
+      "dryPct": 78,
+      "mixedPct": 19,
+      "wetPct": 3
+    },
+    "sources": [
+      "https://en.tudosobreformula1.com.br/corridas-com-pista-molhada-ou-%C3%BAmida",
+      "scripts/venue_weather_classifications.json (spa curated)",
+      "Jolpica circuit race lists in scripts/venue_audit_cache/"
+    ],
+    "yearNotes": {
+      "1981": "Catalogue rain-affected \u00b7 MIXED",
+      "1991": "Catalogue rain-affected \u00b7 MIXED",
+      "1993": "Catalogue rain-affected \u00b7 MIXED",
+      "1995": "Catalogue rain-affected \u00b7 MIXED",
+      "2020": "Catalogue rain-affected \u00b7 MIXED",
+      "2021": "Catalogue rain-affected \u00b7 MIXED",
+      "2022": "Catalogue rain-affected \u00b7 curated WET"
+    }
+  },
+  "montreal": {
+    "circuitId": "villeneuve",
+    "totalRaces": 45,
+    "wetYears": [
+      2011
+    ],
+    "mixedYears": [
+      1981,
+      1989,
+      1990,
+      2000,
+      2024
+    ],
+    "dryYears": [
+      1978,
+      1979,
+      1980,
+      1982,
+      1983,
+      1984,
+      1985,
+      1986,
+      1988,
+      1991,
+      1992,
+      1993,
+      1994,
+      1995,
+      1996,
+      1997,
+      1998,
+      1999,
+      2001,
+      2002,
+      2003,
+      2004,
+      2005,
+      2006,
+      2007,
+      2008,
+      2010,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2022,
+      2023,
+      2025,
+      2026
+    ],
+    "counts": {
+      "dry": 39,
+      "mixed": 5,
+      "wet": 1
+    },
+    "percentages": {
+      "dryPct": 87,
+      "mixedPct": 11,
+      "wetPct": 2
+    },
+    "sources": [
+      "https://en.tudosobreformula1.com.br/corridas-com-pista-molhada-ou-%C3%BAmida",
+      "scripts/venue_weather_classifications.json (spa curated)",
+      "Jolpica circuit race lists in scripts/venue_audit_cache/"
+    ],
+    "yearNotes": {
+      "1981": "Catalogue rain-affected \u00b7 MIXED",
+      "1989": "Catalogue rain-affected \u00b7 MIXED",
+      "1990": "Catalogue rain-affected \u00b7 MIXED",
+      "2000": "Catalogue rain-affected \u00b7 MIXED",
+      "2011": "Catalogue rain-affected \u00b7 curated WET",
+      "2024": "Catalogue rain-affected \u00b7 MIXED"
+    }
+  },
+  "barcelona": {
+    "circuitId": "catalunya",
+    "totalRaces": 36,
+    "wetYears": [],
+    "mixedYears": [
+      1991,
+      1992,
+      1996
+    ],
+    "dryYears": [
+      1993,
+      1994,
+      1995,
+      1997,
+      1998,
+      1999,
+      2000,
+      2001,
+      2002,
+      2003,
+      2004,
+      2005,
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "counts": {
+      "dry": 33,
+      "mixed": 3,
+      "wet": 0
+    },
+    "percentages": {
+      "dryPct": 92,
+      "mixedPct": 8,
+      "wetPct": 0
+    },
+    "sources": [
+      "https://en.tudosobreformula1.com.br/corridas-com-pista-molhada-ou-%C3%BAmida",
+      "scripts/venue_weather_classifications.json (spa curated)",
+      "Jolpica circuit race lists in scripts/venue_audit_cache/"
+    ],
+    "yearNotes": {
+      "1991": "Catalogue rain-affected \u00b7 MIXED",
+      "1992": "Catalogue rain-affected \u00b7 MIXED",
+      "1996": "Catalogue rain-affected \u00b7 MIXED"
+    }
+  },
+  "hungaroring": {
+    "circuitId": "hungaroring",
+    "totalRaces": 41,
+    "wetYears": [],
+    "mixedYears": [
+      2006,
+      2011,
+      2014
+    ],
+    "dryYears": [
+      1986,
+      1987,
+      1988,
+      1989,
+      1990,
+      1991,
+      1992,
+      1993,
+      1994,
+      1995,
+      1996,
+      1997,
+      1998,
+      1999,
+      2000,
+      2001,
+      2002,
+      2003,
+      2004,
+      2005,
+      2007,
+      2008,
+      2009,
+      2010,
+      2012,
+      2013,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "counts": {
+      "dry": 38,
+      "mixed": 3,
+      "wet": 0
+    },
+    "percentages": {
+      "dryPct": 93,
+      "mixedPct": 7,
+      "wetPct": 0
+    },
+    "sources": [
+      "https://en.tudosobreformula1.com.br/corridas-com-pista-molhada-ou-%C3%BAmida",
+      "scripts/venue_weather_classifications.json (spa curated)",
+      "Jolpica circuit race lists in scripts/venue_audit_cache/"
+    ],
+    "yearNotes": {
+      "2006": "Catalogue rain-affected \u00b7 MIXED",
+      "2011": "Catalogue rain-affected \u00b7 MIXED",
+      "2014": "Catalogue rain-affected \u00b7 MIXED"
+    }
+  },
+  "zandvoort": {
+    "circuitId": "zandvoort",
+    "totalRaces": 35,
+    "wetYears": [
+      2023
+    ],
+    "mixedYears": [
+      1952,
+      1955,
+      1968,
+      1971,
+      1975
+    ],
+    "dryYears": [
+      1953,
+      1958,
+      1959,
+      1960,
+      1961,
+      1962,
+      1963,
+      1964,
+      1965,
+      1966,
+      1967,
+      1969,
+      1970,
+      1973,
+      1974,
+      1976,
+      1977,
+      1978,
+      1979,
+      1980,
+      1981,
+      1982,
+      1983,
+      1984,
+      1985,
+      2021,
+      2022,
+      2024,
+      2025
+    ],
+    "counts": {
+      "dry": 29,
+      "mixed": 5,
+      "wet": 1
+    },
+    "percentages": {
+      "dryPct": 83,
+      "mixedPct": 14,
+      "wetPct": 3
+    },
+    "sources": [
+      "https://en.tudosobreformula1.com.br/corridas-com-pista-molhada-ou-%C3%BAmida",
+      "scripts/venue_weather_classifications.json (spa curated)",
+      "Jolpica circuit race lists in scripts/venue_audit_cache/"
+    ],
+    "yearNotes": {
+      "1952": "Catalogue rain-affected \u00b7 MIXED",
+      "1955": "Catalogue rain-affected \u00b7 MIXED",
+      "1968": "Catalogue rain-affected \u00b7 MIXED",
+      "1971": "Catalogue rain-affected \u00b7 MIXED",
+      "1975": "Catalogue rain-affected \u00b7 MIXED",
+      "2023": "Catalogue rain-affected \u00b7 curated WET"
+    }
+  },
+  "baku": {
+    "circuitId": "baku",
+    "totalRaces": 9,
+    "wetYears": [],
+    "mixedYears": [],
+    "dryYears": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "counts": {
+      "dry": 9,
+      "mixed": 0,
+      "wet": 0
+    },
+    "percentages": {
+      "dryPct": 100,
+      "mixedPct": 0,
+      "wetPct": 0
+    },
+    "sources": [
+      "https://en.tudosobreformula1.com.br/corridas-com-pista-molhada-ou-%C3%BAmida",
+      "scripts/venue_weather_classifications.json (spa curated)",
+      "Jolpica circuit race lists in scripts/venue_audit_cache/"
+    ],
+    "yearNotes": {}
+  },
+  "singapore": {
+    "circuitId": "marina_bay",
+    "totalRaces": 16,
+    "wetYears": [
+      2017
+    ],
+    "mixedYears": [
+      2022
+    ],
+    "dryYears": [
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2018,
+      2019,
+      2023,
+      2024,
+      2025
+    ],
+    "counts": {
+      "dry": 14,
+      "mixed": 1,
+      "wet": 1
+    },
+    "percentages": {
+      "dryPct": 88,
+      "mixedPct": 6,
+      "wetPct": 6
+    },
+    "sources": [
+      "https://en.tudosobreformula1.com.br/corridas-com-pista-molhada-ou-%C3%BAmida",
+      "scripts/venue_weather_classifications.json (spa curated)",
+      "Jolpica circuit race lists in scripts/venue_audit_cache/"
+    ],
+    "yearNotes": {
+      "2017": "Catalogue rain-affected \u00b7 curated WET",
+      "2022": "Catalogue rain-affected \u00b7 MIXED"
+    }
+  },
+  "cota": {
+    "circuitId": "americas",
+    "totalRaces": 13,
+    "wetYears": [],
+    "mixedYears": [
+      2015
+    ],
+    "dryYears": [
+      2012,
+      2013,
+      2014,
+      2016,
+      2017,
+      2018,
+      2019,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "counts": {
+      "dry": 12,
+      "mixed": 1,
+      "wet": 0
+    },
+    "percentages": {
+      "dryPct": 92,
+      "mixedPct": 8,
+      "wetPct": 0
+    },
+    "sources": [
+      "https://en.tudosobreformula1.com.br/corridas-com-pista-molhada-ou-%C3%BAmida",
+      "scripts/venue_weather_classifications.json (spa curated)",
+      "Jolpica circuit race lists in scripts/venue_audit_cache/"
+    ],
+    "yearNotes": {
+      "2015": "Catalogue rain-affected \u00b7 MIXED"
+    }
+  },
+  "mexico": {
+    "circuitId": "rodriguez",
+    "totalRaces": 25,
+    "wetYears": [],
+    "mixedYears": [],
+    "dryYears": [
+      1963,
+      1964,
+      1965,
+      1966,
+      1967,
+      1968,
+      1969,
+      1970,
+      1986,
+      1987,
+      1988,
+      1989,
+      1990,
+      1991,
+      1992,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "counts": {
+      "dry": 25,
+      "mixed": 0,
+      "wet": 0
+    },
+    "percentages": {
+      "dryPct": 100,
+      "mixedPct": 0,
+      "wetPct": 0
+    },
+    "sources": [
+      "https://en.tudosobreformula1.com.br/corridas-com-pista-molhada-ou-%C3%BAmida",
+      "scripts/venue_weather_classifications.json (spa curated)",
+      "Jolpica circuit race lists in scripts/venue_audit_cache/"
+    ],
+    "yearNotes": {}
+  },
+  "las-vegas": {
+    "circuitId": "las_vegas",
+    "totalRaces": 2,
+    "wetYears": [],
+    "mixedYears": [],
+    "dryYears": [
+      1981,
+      1982
+    ],
+    "counts": {
+      "dry": 2,
+      "mixed": 0,
+      "wet": 0
+    },
+    "percentages": {
+      "dryPct": 100,
+      "mixedPct": 0,
+      "wetPct": 0
+    },
+    "sources": [
+      "https://en.tudosobreformula1.com.br/corridas-com-pista-molhada-ou-%C3%BAmida",
+      "scripts/venue_weather_classifications.json (spa curated)",
+      "Jolpica circuit race lists in scripts/venue_audit_cache/"
+    ],
+    "yearNotes": {}
+  },
+  "qatar": {
+    "circuitId": "losail",
+    "totalRaces": 4,
+    "wetYears": [],
+    "mixedYears": [],
+    "dryYears": [
+      2021,
+      2023,
+      2024,
+      2025
+    ],
+    "counts": {
+      "dry": 4,
+      "mixed": 0,
+      "wet": 0
+    },
+    "percentages": {
+      "dryPct": 100,
+      "mixedPct": 0,
+      "wetPct": 0
+    },
+    "sources": [
+      "https://en.tudosobreformula1.com.br/corridas-com-pista-molhada-ou-%C3%BAmida",
+      "scripts/venue_weather_classifications.json (spa curated)",
+      "Jolpica circuit race lists in scripts/venue_audit_cache/"
+    ],
+    "yearNotes": {}
+  }
+}
