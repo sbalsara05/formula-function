@@ -76,6 +76,7 @@ export default function LapAnalysisPage({
   entityHex,
 }: Props) {
   const [scrubPct, setScrubPct] = useState(35)
+  const compareHref = `/f/${seriesNum}/compare/laps/${analysis.lapId}/web-suzuka-2009-q3`
 
   const derived = useMemo(() => {
     const playheadX = (scrubPct / 100) * 800
@@ -114,7 +115,7 @@ export default function LapAnalysisPage({
           </div>
         </div>
         <div style={{ display: 'flex', gap: 8 }}>
-          <Link href={`/f/${seriesNum}/compare/laps/${analysis.lapId}/webber-suzuka-2009-q3`} style={{ textDecoration: 'none' }}>
+          <Link href={compareHref} style={{ textDecoration: 'none' }}>
             <button style={{
               background: 'transparent', border: '0.5px solid #FF1E56', color: '#FF1E56',
               fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: 1,
@@ -456,7 +457,7 @@ export default function LapAnalysisPage({
           <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, color: '#666', letterSpacing: 0.5, margin: '0 0 20px' }}>
             SUGGESTED: VETTEL 2013 SUZUKA Q3 · WEBBER 2009 SUZUKA Q3 · HAMILTON 2009 SUZUKA Q3
           </p>
-          <Link href={`/f/${seriesNum}/compare/laps/${analysis.lapId}/webber-suzuka-2009-q3`} style={{ textDecoration: 'none' }}>
+          <Link href={compareHref} style={{ textDecoration: 'none' }}>
             <button style={{
               background: 'transparent', border: '0.5px solid #FF1E56', color: '#FF1E56',
               fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: 1.5,
