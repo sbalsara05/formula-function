@@ -209,9 +209,9 @@ body {
 }
 
 .home-series-logo {
-  height: 34px;
+  height: 56px;
   width: auto;
-  max-width: 168px;
+  max-width: 200px;
   object-fit: contain;
   object-position: left center;
   display: block;

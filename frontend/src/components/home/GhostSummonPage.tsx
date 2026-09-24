@@ -52,6 +52,10 @@ const MOMENTS: Record<SeriesKey, MomentEntry[]> = {
     { name: 'Hamilton',   moment: 'Shanghai 14',    livery: '#00D2BE', initials: 'LH', imageUrl: `${GHOST}/f1-hamilton-china-2014.jpg` },
     { name: 'Senna',      moment: 'Spa 89 podium',  livery: '#E10600', initials: 'AS', imageUrl: `${GHOST}/f1-senna-spa-1989-podium.jpg` },
     { name: 'Vettel',     moment: 'Malaysia 15',    livery: '#DC0000', initials: 'SV', imageUrl: `${GHOST}/f1-vettel-malaysia-2015-podium.jpg` },
+    { name: 'Prost',      moment: 'Adelaide · F1 1986', livery: '#E10600', initials: 'AP', imageUrl: `${GHOST}/f1-prost-adelaide-1986-official.jpg` },
+    { name: 'Senna',      moment: 'Interlagos · F1 1991', livery: '#E10600', initials: 'AS', imageUrl: `${GHOST}/f1-senna-brazil-1991-official.jpg` },
+    { name: 'Hamilton',   moment: 'Interlagos · F1 2008', livery: '#B0B0B0', initials: 'LH', imageUrl: `${GHOST}/f1-hamilton-brazil-2008-official.jpg` },
+    { name: 'Vettel',     moment: 'Sepang · F1 2015', livery: '#DC0000', initials: 'SV', imageUrl: `${GHOST}/f1-vettel-malaysia-2015-official.jpg` },
   ],
   f2: [
     { name: 'Piastri',    moment: 'Prema · F2 2021', livery: '#FF8700', initials: 'OP', imageUrl: `${GHOST}/f2-piastri-prema-2021.jpg` },
@@ -99,10 +103,10 @@ function toCutout(entry: MomentEntry): MomentEntry {
 /** Four podium / celebration stills for the cinematic panel. No in-car shots. */
 const PANEL_MOMENTS: Record<SeriesKey, MomentEntry[]> = {
   f1: [
-    toCutout(MOMENTS.f1[2]),  // Prost Spa 89 podium
-    toCutout(MOMENTS.f1[8]),  // Senna Spa 89 podium
-    toCutout(MOMENTS.f1[6]),  // Hamilton Interlagos 08
-    toCutout(MOMENTS.f1[9]),  // Vettel Malaysia 15
+    toCutout(MOMENTS.f1[10]), // Prost Adelaide title
+    toCutout(MOMENTS.f1[11]), // Senna Interlagos win
+    toCutout(MOMENTS.f1[12]), // Hamilton Interlagos title
+    toCutout(MOMENTS.f1[13]), // Vettel Sepang win
   ],
   f2: [
     toCutout(MOMENTS.f2[14]), // Hadjar Silverstone win
@@ -120,10 +124,10 @@ const PANEL_MOMENTS: Record<SeriesKey, MomentEntry[]> = {
 
 /** North, east, west, south — full figures, inset from the rounded panel. */
 const PANEL_POSITIONS: PanelGhostPos[] = [
-  { top: '3%',  right: '16%', size: 200, rotate: -1.4, zIndex: 2 },
-  { top: '20%', right: '4%',  size: 214, rotate:  1.8, zIndex: 3 },
-  { top: '22%', right: '34%', size: 186, rotate: -1.9, zIndex: 4 },
-  { top: '40%', right: '16%', size: 192, rotate:  1.2, zIndex: 5 },
+  { top: '3%',  right: '16%', size: 224, rotate: -1.4, zIndex: 2 },
+  { top: '20%', right: '4%',  size: 238, rotate:  1.8, zIndex: 3 },
+  { top: '22%', right: '34%', size: 208, rotate: -1.9, zIndex: 4 },
+  { top: '40%', right: '16%', size: 214, rotate:  1.2, zIndex: 5 },
 ]
 
 const F2_PANEL_POSITIONS: PanelGhostPos[] = [
@@ -390,6 +394,10 @@ function SeriesRow({
           src={config.logo}
           alt={config.title}
           style={{
+            height: 56,
+            width: 'auto',
+            maxWidth: 200,
+            flexShrink: 0,
             opacity: selected ? 1 : 0.32,
             filter: selected ? `drop-shadow(0 0 10px ${config.color}66)` : 'none',
           }}
