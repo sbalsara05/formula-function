@@ -461,7 +461,7 @@ export const monzaMomentOverlays: MomentOverlay[] = [];
 export const monzaIconicMoments: VenueIconicMoment[] = [
   { id: "peterson-1978",   year: 1978, title: "Peterson fatal crash at start",  teamLabel: "LOTUS · LAP 1",            conditionBadge: "TRAGEDY", conditionColor: "#FF1E56", glowColor: "#FFD700", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/2/2b/1978_Italian_Grand_Prix_accident.jpg" },
   { id: "vettel-2008",     year: 2008, title: "Vettel's debut win — Toro Rosso",teamLabel: "TORO ROSSO · SHOCK WIN",   conditionBadge: "DEBUT",   conditionColor: "#C00000", glowColor: "#C00000", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/7/7a/Vettel_Monza_2008.jpg" },
-  { id: "leclerc-2019",    year: 2019, title: "Leclerc's maiden F1 victory",    teamLabel: "FERRARI · HOME WIN",       conditionBadge: "WIN",     conditionColor: "#DC0000", glowColor: "#DC0000", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/9/93/Charles_Leclerc_2019_Italian_Grand_Prix.jpg" },
+  { id: "leclerc-2019",    year: 2019, title: "Leclerc ends Ferrari's Monza drought", teamLabel: "FERRARI · HOME WIN",       conditionBadge: "WIN",     conditionColor: "#DC0000", glowColor: "#DC0000", imageUrl: "/images/venues/monza-leclerc-2019.jpg" },
   { id: "monza-2020",      year: 2020, title: "Gasly shock win · Hamilton pitlane penalty", teamLabel: "ALPHATAURI vs MERCEDES", conditionBadge: "CHAOS", conditionColor: "#FF1E56", glowColor: "#6692FF", imageUrl: "/images/venues/monza-gasly-2020.jpg" },
   { id: "hamilton-2017",   year: 2017, title: "Hamilton lights-to-flag victory", teamLabel: "MERCEDES · CHAMPIONSHIP", conditionBadge: "WIN",     conditionColor: "#00D2BE", glowColor: "#00D2BE", imageUrl: "/images/venues/monza-hamilton-2017.jpg" },
   { id: "schumacher-2000", year: 2000, title: "Schumacher wins Monza — tears on podium", teamLabel: "FERRARI · HOME TRIUMPH", conditionBadge: "WIN",     conditionColor: "#DC0000", glowColor: "#DC0000", imageUrl: "/images/venues/monza-schumacher-2000.jpg" },
@@ -548,8 +548,8 @@ export const silverstoneIconicMoments: VenueIconicMoment[] = [
   { id: "mansell-1992-sil",  year: 1992, title: "Mansell clinches WDC at home — dominant 8th win", teamLabel: "WILLIAMS · CHAMPION",  conditionBadge: "TITLE",   conditionColor: "#005AFF", glowColor: "#005AFF", imageUrl: "/images/venues/silverstone-mansell-1992.jpg" },
   { id: "hamilton-2008",     year: 2008, title: "Hamilton charges through the field",  teamLabel: "McLAREN · 9 POSITIONS",     conditionBadge: "WET",     conditionColor: "#378ADD", glowColor: "#C0C0C0", imageUrl: "/images/venues/silverstone-hamilton-2008.jpg" },
   { id: "verstappen-2021-sil",year: 2021, title: "Hamilton vs Verstappen T1 crash",   teamLabel: "RED BULL vs MERCEDES",      conditionBadge: "CRASH",   conditionColor: "#FF1E56", glowColor: "#1E3A8A", imageUrl: "/images/venues/silverstone-2021-crash.jpg" },
-  { id: "hamilton-2016",     year: 2016, title: "Hamilton's 4th Silverstone win",      teamLabel: "MERCEDES · DOMINANT",       conditionBadge: "WIN",     conditionColor: "#00D2BE", glowColor: "#00D2BE", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/e/e4/Lewis_Hamilton_2016_British_Grand_Prix_%282%29.jpg" },
-  { id: "norris-2024",       year: 2024, title: "Norris first British GP victory",     teamLabel: "McLAREN · HOME WIN",        conditionBadge: "WIN",     conditionColor: "#FF8000", glowColor: "#FF8000", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/4/46/2024_British_Grand_Prix%2C_Norris_%281%29.jpg" },
+  { id: "hamilton-2016",     year: 2016, title: "Hamilton's 4th Silverstone win",      teamLabel: "MERCEDES · DOMINANT",       conditionBadge: "WIN",     conditionColor: "#00D2BE", glowColor: "#00D2BE", imageUrl: "/images/venues/silverstone-hamilton-2016.jpg" },
+  { id: "hamilton-2024-sil", year: 2024, title: "Hamilton's record 9th British GP win", teamLabel: "MERCEDES · FIRST WIN SINCE 2021", conditionBadge: "RECORD", conditionColor: "#00D2BE", glowColor: "#00D2BE", imageUrl: "/images/venues/silverstone-hamilton-2024.jpg" },
 ];
 
 export const silverstoneWeather: VenueWeather = {
@@ -1844,7 +1844,7 @@ export const cotaHotspots: Hotspot[] = [];
 export const cotaMomentOverlays: MomentOverlay[] = [];
 export const cotaIconicMoments: VenueIconicMoment[] = [
   { id: "hamilton-2012-cota", year: 2012, title: "Inaugural US GP — Hamilton wins",    teamLabel: "McLAREN · FIRST RACE",    conditionBadge: "WIN",    conditionColor: "#C0C0C0", glowColor: "#C0C0C0", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/5/52/US_Grand_Prix_2012_%288227888953%29.jpg" },
-  { id: "vettel-2013-cota",   year: 2013, title: "Vettel wins 4th title in Texas",    teamLabel: "RED BULL · WDC TITLE",    conditionBadge: "TITLE",  conditionColor: "#1E3A8A", glowColor: "#1E3A8A", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/6/61/Podium_%2811121874996%29.jpg" },
+  { id: "vettel-2013-cota",   year: 2013, title: "Vettel's 8th straight win — season record", teamLabel: "RED BULL · 8 IN A ROW",    conditionBadge: "RECORD",  conditionColor: "#1E3A8A", glowColor: "#1E3A8A", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/6/61/Podium_%2811121874996%29.jpg" },
   { id: "verstappen-2021-cota",year: 2021, title: "Verstappen holds off Hamilton to win thriller", teamLabel: "RED BULL · CHAMPIONSHIP LEAD", conditionBadge: "WIN", conditionColor: "#1E3A8A", glowColor: "#1E3A8A", imageUrl: "/images/venues/cota-verstappen-2021.jpg" },
 ];
 
@@ -1922,7 +1922,7 @@ export const mexicoHotspots: Hotspot[] = [];
 
 export const mexicoMomentOverlays: MomentOverlay[] = [];
 export const mexicoIconicMoments: VenueIconicMoment[] = [
-  { id: "verstappen-title-2017", year: 2017, title: "Verstappen wins — Hamilton gets title", teamLabel: "RED BULL · WINS · MERCEDES WDC", conditionBadge: "TITLE", conditionColor: "#1E3A8A", glowColor: "#00D2BE", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/7/7a/F1_2017_-i---i-_%2826299298269%29.jpg" },
+  { id: "verstappen-title-2017", year: 2017, title: "Verstappen wins — Hamilton gets title", teamLabel: "RED BULL · WINS · MERCEDES WDC", conditionBadge: "TITLE", conditionColor: "#1E3A8A", glowColor: "#00D2BE", imageUrl: "/images/venues/mexico-verstappen-2017.jpg" },
   { id: "hamilton-2016-mex",    year: 2016, title: "Hamilton wins Mexico — title fight tightens", teamLabel: "MERCEDES · TITLE RACE",    conditionBadge: "WIN",   conditionColor: "#00D2BE", glowColor: "#00D2BE", imageUrl: "/images/venues/mexico-hamilton-2016.jpg" },
   { id: "verstappen-2022-mex",  year: 2022, title: "Verstappen dominant — record points",   teamLabel: "RED BULL · RECORD SEASON",       conditionBadge: "WIN",   conditionColor: "#1E3A8A", glowColor: "#1E3A8A", imageUrl: "/images/venues/mexico-verstappen-2022.jpg" },
 ];

@@ -235,11 +235,11 @@ All 23 venue `IconicMoments` arrays were reviewed. Key verified moments:
 | Monaco | Norris first Monaco win 2025 | ✓ |
 | Monza | Peterson fatal crash 1978 | ✓ |
 | Monza | Vettel debut win (Toro Rosso) 2008 | ✓ |
-| Monza | Leclerc maiden win 2019 | ✓ |
+| Monza | Leclerc ends Ferrari's Monza drought 2019 (corrected: was "maiden win") | ✓ |
 | Monza | Gasly shock win 2020 | ✓ |
 | Silverstone | Mansell overtakes Piquet 1987 | ✓ |
 | Silverstone | Hamilton vs Verstappen T1 2021 | ✓ |
-| Silverstone | Norris first British GP win 2024 | ✓ |
+| Silverstone | Hamilton record 9th British GP win 2024 (corrected: was "Norris first British GP win") | ✓ |
 | Suzuka | Senna–Prost 1989 chicane collision | ✓ |
 | Suzuka | Senna takes Prost out T1 1990 | ✓ |
 | Suzuka | Verstappen wins WDC 2022 in rain | ✓ |

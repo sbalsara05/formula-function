@@ -1358,6 +1358,7 @@ export const leclercF2: Driver = {
   peakEraTeamId: "prema-f2",
   entityColor: "leclerc",
   bio: "The 2017 F2 champion announced himself on the world stage with one of the most dominant rookie campaigns in the series' short history. Racing under the Ferrari Driver Academy banner with Prema, Leclerc's raw speed and late-braking commitment earned him the title in his first and only F2 season.",
+  portraitUrl: "/images/drivers/leclerc-f2-champion-jerez-2017.jpg",
   quote: "",
   quoteContext: "",
 };
@@ -1416,12 +1417,13 @@ export const leclercF2ReelSlides: ReelSlide[] = [
     imageUrl: "/images/drivers/leclerc-monza-f2-2017.jpg",
   },
   {
-    slotLabel: "BUDAPEST · 2017",
+    slotLabel: "JEREZ · 2017",
     label: "TITLE SEALED",
     glowColor: "#FFD700",
     tags: "F2 · PREMA · CHAMPIONSHIP CLINCHED",
     title: "Title sealed",
-    subtitle: "CHAMPION BEFORE FINAL ROUND · FDA MANDATE FULFILLED [VERIFY · title sealed at Jerez round, not Budapest · search: \"Leclerc 2017 F2 title Jerez\"]",
+    // source: formula1.com "Rising stars Leclerc and Russell seal junior titles"; autosport.com 7 Oct 2017
+    subtitle: "JEREZ FEATURE WIN · SIXTH OF THE SEASON · CHAMPION WITH THREE RACES TO SPARE",
     svgPath: "M 30 155 L 85 155 Q 110 140 140 100 L 185 100 Q 210 118 235 155 L 290 155 Q 315 138 345 100 L 375 100",
     imageUrl: "/images/drivers/leclerc-f2-champion-2017.jpg",
   },
@@ -1477,6 +1479,7 @@ export const russellF2: Driver = {
   peakEraTeamId: "art-f2",
   entityColor: "russell",
   bio: "The 2018 F2 champion with ART Grand Prix. A Mercedes junior who approached the season with strategic intelligence and consistency rather than raw aggression — leading the standings from early rounds and executing a controlled wire-to-wire title.",
+  portraitUrl: "/images/drivers/russell-art-f2-champion-abu-dhabi-2018.jpg",
   quote: "",
   quoteContext: "",
 };
@@ -1586,6 +1589,7 @@ export const piastriF2: Driver = {
   peakEraTeamId: "prema-f2",
   entityColor: "piastri",
   bio: "The 2021 F2 champion — and the first rookie to win the title since Charles Leclerc in 2017. Racing for Prema in his debut F2 season, the Australian delivered a composed, dominant campaign that had already been telegraphed by his 2020 F3 title.",
+  portraitUrl: "/images/drivers/piastri-prema-f2-portrait-2021.jpg",
   quote: "",
   quoteContext: "",
 };
