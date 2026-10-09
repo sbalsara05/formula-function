@@ -281,6 +281,99 @@ All 23 venue `IconicMoments` arrays were reviewed. Key verified moments:
 | Qatar | Hamilton wins 2021 | ✓ |
 | Qatar | Verstappen clinches 3rd title in sprint 2023 | ✓ |
 
+### Track fingerprint pass (2025 published data)
+
+All 23 current-circuit fingerprints were re-scored from one consistent 2025 source set. The six labels are unchanged; values and captions are new.
+
+- **Inputs:** `scripts/venue_fingerprint_inputs.json`. **Scorer:** `scripts/score_venue_fingerprints.py`. **Output:** `scripts/venue_fingerprint_rubrics.json`, then `python3 scripts/apply_venue_audit.py --fingerprints --skip-fit` (driverFit untouched).
+- **Per-bar basis and sources:** `scripts/venue_sources.json` → `<slug>.fingerprintRubric` (and `fingerprintCopySource` for named corners and g-figures).
+- **Engine Power:** 65% full-throttle share of a 2025 qualifying lap (Formula Dream, FastF1) + 35% top speed. Exceptions: Shanghai uses TSN's 55% (Formula Dream excluded China); Las Vegas uses RaceFans' 66% (the 2025 session was wet).
+- **Aero Efficiency:** Pirelli 2025 downforce rating; tracks rated 1–2/5 are scored on drag efficiency instead.
+- **Mechanical Grip:** Pirelli traction rating, adjusted down for high asphalt grip.
+- **Braking Stability:** Brembo 2025 difficulty index (1–5), adjusted by Pirelli's braking rating.
+- **Tyre Degradation:** Pirelli tyre-stress rating, adjusted by abrasion and the hardest compound nominated. Not cross-checked against actual 2025 stop counts.
+- **High-speed commitment:** Pirelli lateral-load rating. Wall proximity no longer counts (it appears in captions only), so street circuits drop.
+- **Bands:** LOW 0–39 · MODERATE 40–64 · HIGH 65–84 · CRITICAL 85–94 · EXTREME 95–100.
+- **Caption errors fixed:** Mexico "Peraltada" (bypassed since 2015), Jeddah "longest street lap" (Las Vegas is longer), Interlagos "unpredictable conditions", and runoff-based high-speed captions at Monaco, Bahrain, Abu Dhabi, Shanghai, Hungaroring and Miami.
+
+**Bars that moved 15 or more points (73 of 138):**
+
+| Venue | Bar | Before → After | Why |
+|---|---|---|---|
+| Spa | Engine Power | 94 → 71 | 65.4% flat, 339 km/h: mid-pack, below Monza and Jeddah |
+| Spa | Aero Efficiency | 82 → 62 | Pirelli downforce 2/5 |
+| Spa | Mechanical Grip | 55 → 76 | Pirelli traction 4/5 |
+| Spa | Tyre Degradation | 58 → 96 | Pirelli tyre stress 5/5 |
+| Monaco | Braking Stability | 94 → 55 | Brembo 3/5: 15 zones but only 2 heavy |
+| Monaco | Tyre Degradation | 35 → 13 | Pirelli stress 1/5, abrasion 1/5 |
+| Monaco | High-speed commitment | 99 → 17 | Pirelli lateral 1/5; walls no longer scored |
+| Monza | Braking Stability | 80 → 95 | Brembo 5/5 (T1 337 to 89 km/h) |
+| Monza | High-speed commitment | 78 → 45 | Pirelli lateral 2/5 |
+| Silverstone | Aero Efficiency | 93 → 76 | Pirelli downforce 4/5 |
+| Silverstone | Mechanical Grip | 74 → 53 | Pirelli traction 3/5, asphalt grip 4/5 |
+| Silverstone | Braking Stability | 58 → 19 | Brembo 1/5, joint-lowest with Suzuka |
+| Suzuka | Aero Efficiency | 92 → 76 | Pirelli downforce 4/5 |
+| Suzuka | Mechanical Grip | 80 → 53 | Pirelli traction 3/5, asphalt grip 4/5 |
+| Suzuka | Braking Stability | 55 → 19 | Brembo 1/5, joint-lowest with Silverstone |
+| Suzuka | Tyre Degradation | 78 → 99 | Pirelli stress 5/5, abrasion 4/5, hardest compounds |
+| Interlagos | Mechanical Grip | 84 → 58 | Pirelli traction 3/5 |
+| Interlagos | Braking Stability | 76 → 58 | Brembo 3/5 (5 zones) |
+| Interlagos | High-speed commitment | 85 → 58 | Pirelli lateral 3/5 |
+| Bahrain | Engine Power | 74 → 47 | 57% flat, 315 km/h (lowest top speed of the 23) |
+| Bahrain | Tyre Degradation | 94 → 68 | Pirelli stress 3/5; abrasion 5/5 is the driver |
+| Abu Dhabi | Braking Stability | 82 → 61 | Brembo 3/5 |
+| Abu Dhabi | High-speed commitment | 38 → 60 | Pirelli lateral 3/5 |
+| Jeddah | Mechanical Grip | 50 → 35 | Pirelli traction 2/5, asphalt grip 4/5 |
+| Jeddah | Braking Stability | 48 → 76 | Brembo 4/5 (6 heavy stops) |
+| Jeddah | High-speed commitment | 98 → 81 | Pirelli lateral 4/5; walls no longer scored |
+| Melbourne | Aero Efficiency | 76 → 58 | Pirelli downforce 3/5 |
+| Melbourne | Mechanical Grip | 82 → 45 | Pirelli traction 2/5 |
+| Melbourne | Braking Stability | 80 → 55 | Brembo 3/5 (11% of lap on brakes) |
+| Melbourne | High-speed commitment | 76 → 57 | Pirelli lateral 3/5 |
+| Shanghai | Engine Power | 82 → 45 | 55% flat, 318 km/h |
+| Shanghai | Aero Efficiency | 80 → 58 | Pirelli downforce 3/5 |
+| Shanghai | Braking Stability | 78 → 61 | Brembo 3/5 |
+| Shanghai | Tyre Degradation | 62 → 78 | Pirelli stress 4/5 |
+| Shanghai | High-speed commitment | 55 → 74 | Pirelli lateral 4/5 |
+| Miami | Mechanical Grip | 78 → 53 | Pirelli traction 3/5, asphalt grip 4/5 |
+| Miami | Braking Stability | 80 → 58 | Brembo 3/5 |
+| Imola | Aero Efficiency | 84 → 58 | Pirelli downforce 3/5 |
+| Imola | Mechanical Grip | 86 → 45 | Pirelli traction 2/5 |
+| Imola | Braking Stability | 78 → 58 | Brembo 3/5 |
+| Imola | High-speed commitment | 84 → 60 | Pirelli lateral 3/5 |
+| Montreal | Mechanical Grip | 52 → 81 | Pirelli traction 4/5, low asphalt grip |
+| Montreal | High-speed commitment | 82 → 24 | Pirelli lateral 1/5 |
+| Barcelona | Aero Efficiency | 94 → 76 | Pirelli downforce 4/5 |
+| Barcelona | Mechanical Grip | 78 → 58 | Pirelli traction 3/5 |
+| Barcelona | Braking Stability | 55 → 40 | Brembo 2/5 |
+| Barcelona | High-speed commitment | 78 → 93 | Pirelli lateral 5/5 |
+| Hungaroring | Mechanical Grip | 96 → 76 | Pirelli traction 4/5 |
+| Hungaroring | Tyre Degradation | 80 → 58 | Pirelli stress 3/5 |
+| Zandvoort | Mechanical Grip | 84 → 58 | Pirelli traction 3/5 |
+| Zandvoort | Braking Stability | 58 → 40 | Brembo 2/5 (only Tarzan heavy) |
+| Zandvoort | Tyre Degradation | 78 → 94 | Pirelli stress 5/5 |
+| Baku | Engine Power | 97 → 64 | 60.8% flat, 339 km/h |
+| Baku | Aero Efficiency | 92 → 55 | Pirelli downforce 2/5 |
+| Baku | Mechanical Grip | 55 → 97 | Pirelli traction 5/5 |
+| Baku | Braking Stability | 94 → 79 | Brembo 4/5 |
+| Baku | High-speed commitment | 99 → 22 | Pirelli lateral 1/5; walls no longer scored |
+| Singapore | Mechanical Grip | 93 → 76 | Pirelli traction 4/5 |
+| Singapore | Tyre Degradation | 80 → 40 | Pirelli stress 2/5 (thermal, not wear) |
+| Singapore | High-speed commitment | 82 → 38 | Pirelli lateral 2/5 |
+| COTA | Engine Power | 78 → 53 | 57.9% flat, 324 km/h |
+| COTA | Aero Efficiency | 91 → 76 | Pirelli downforce 4/5 |
+| COTA | Braking Stability | 74 → 58 | Brembo 3/5 |
+| COTA | High-speed commitment | 96 → 75 | Pirelli lateral 4/5 |
+| Mexico | Engine Power | 92 → 46 | 351 km/h top speed but only 45.6% flat |
+| Mexico | Tyre Degradation | 55 → 39 | Pirelli stress 2/5 |
+| Mexico | High-speed commitment | 84 → 36 | Pirelli lateral 2/5 |
+| Las Vegas | Engine Power | 96 → 77 | 66% flat, 350 km/h |
+| Las Vegas | Aero Efficiency | 93 → 67 | Pirelli downforce 1/5, scored on drag |
+| Las Vegas | Braking Stability | 82 → 58 | Brembo 3/5 |
+| Las Vegas | Tyre Degradation | 38 → 73 | Pirelli stress 4/5 |
+| Las Vegas | High-speed commitment | 82 → 42 | Pirelli lateral 2/5 |
+| Qatar | Mechanical Grip | 72 → 53 | Pirelli traction 3/5, asphalt grip 4/5 |
+
 ---
 
 ## ITEMS STILL REQUIRING MANUAL INPUT

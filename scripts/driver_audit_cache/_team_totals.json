@@ -1,0 +1,50 @@
+{
+ "ferrari": {
+  "wins": 251,
+  "podiums": 858
+ },
+ "red_bull": {
+  "wins": 131,
+  "podiums": 307
+ },
+ "mclaren": {
+  "wins": 201,
+  "podiums": 549
+ },
+ "mercedes": {
+  "wins": 142,
+  "podiums": 331
+ },
+ "williams": {
+  "wins": 114,
+  "podiums": 316
+ },
+ "alpine": {
+  "wins": 1,
+  "podiums": 6
+ },
+ "aston_martin": {
+  "wins": 0,
+  "podiums": 9
+ },
+ "haas": {
+  "wins": 0,
+  "podiums": 0
+ },
+ "rb": {
+  "wins": 0,
+  "podiums": 1
+ },
+ "sauber": {
+  "wins": 0,
+  "podiums": 11
+ },
+ "audi": {
+  "wins": 0,
+  "podiums": 0
+ },
+ "cadillac": {
+  "wins": 0,
+  "podiums": 0
+ }
+}

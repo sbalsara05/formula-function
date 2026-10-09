@@ -1,0 +1,131 @@
+SOURCE: https://tracinginsights.com/blog/all-you-need-to-know-about-the-2023-canadian-grand-prix/
+
+NEW
+ALL YOU NEED TO KNOW - 2025 HUNGARIAN GRAND PRIX
+Read Now
+Tracing Insights
+Blog
+Schedule
+Analysis
+Dash
+Socials
+Contact
+Data
+Tracing Insights
+Analysis All Analysis
+Race Pace
+Championship Standings
+Corner Analysis
+Circuit Maps
+Downforce Configurations
+Download Raw Data
+Drivers In Traffic
+Fan Ratings
+Fastest Lap
+GG Plot
+Heat Map
+Ideal Lap
+Lap Chart
+Laps In Top Ten
+Laptimes Delta
+Lateral Acceleration vs Speed
+Longitudinal Acceleration vs Speed
+Long Run Race Pace
+Max Throttle
+Overtakes
+Peak G Forces
+Penalty Points
+Pit Stops
+Positions Change
+Race Launch Performance Ratings
+Race Trace
+Top Speed At Speed Trap
+Track Temperature
+Tyre Degradation
+Tyre Strategy
+WDC Contenders
+Weekend Results
+Blog
+Schedule F1 Schedule 2027
+F1 Schedule 2026
+F2 Schedule
+F3 Schedule
+F1Academy Schedule
+Formula E Schedule
+Dash Penalty Points
+F1 Schedule and Weather
+Driver of the Day
+2025 WDC What if
+Socials Twitter
+Instagram
+Sub Reddit
+Bluesky
+Mastodon
+Facebook
+Threads
+LinkedIn
+Pixelfed
+YouTube
+WhatsApp Channel
+Telegram Channel
+Tumblr
+SubStack
+Contact
+Data
+Default ✓
+Luxury ✓
+Dim ✓
+Synthwave ✓
+EN 🇬🇧 English
+🇫🇷 Français
+🇪🇸 Español
+🇮🇩 Bahasa Indonesia
+🇵🇹 Português
+🇮🇳 ಕನ್ನಡ
+Support
+ALL YOU NEED TO KNOW ABOUT THE 2023 CANADIAN GRAND PRIX
+Track Characteristics
+The track is a 4.361-kilometer semi-permanent circuit situated on an artificial island in the St. Lawrence River.
+It features a combination of long straights that require lower drag and slower speed corners such as chicanes and hairpins that demand higher downforce. It is similar in its characteristics to that of the Baku City Circuit in Azerbaijan
+The circuit consists of 14 corners, with six left-hand turns and eight right-hand turns. Most of the corners are in a similar speed range, which is at the lower end of the scale compared to the rest of the circuits on the 2023 calendar.
+Some corners involve rapid changes of direction, such as combinations of left/right or right/left turns, which demand responsive handling from the cars. These include the combinations that comprise turns one and two, turns three and four, turns six and seven, turns eight and nine, and the final chicane at turns 13 and 14.
+The race runs for 70 laps. Average speed is relatively low, thanks to the frequent changes of direction caused by the close succession of corners, with continuous braking.
+Changes to the Circuit
+Each year, circuits may undergo modifications or improvements, and the Circuit Gilles Villeneuve is no exception. The specific changes made to the circuit for this year's race weekend include:
+Braking and Tire Degradation
+The Circuit Gilles Villeneuve is notorious for being tough on brakes, similar to the Austrian Grand Prix. However, there are usually fewer cooling problems in Canada than in Spielberg because the lap distance is greater and there is more time for the brakes to dissipate temperature.
+Although the track surface in Montreal is quite smooth, tyre degradation is traditionally high. Combined with the track characteristics, which are of a stop-go nature, this improves the chances of overtaking and generally provides an entertaining race.
+With the constant cycle of heavy braking and equally heavy acceleration, the track takes its toll on the hybrid components of the powertrain, with many long deployments followed by big charging events. In the course of a single lap, there are three stron braking events that generate forces greater than 4G for a duration of more than 0.4 seconds.
+Safety Car and Race Interruptions
+There hasn't been a red flag here since the infamous 2011 Canadian Grand Prix, but Safety Cars are common: there have been five since 2014.
+Since the Virtual Safety Car (VSC) was implemented in 2015, there have been four deployments of the VSC and since then, only 2015 and 2019 have been Safety Car- or VSC-free.
+Owing to the proximity of walls and limited run-off areas, even minor accidents can trigger safety car interventions.
+2022 Canadian Grand Prix - Telemetry of Fastest Lap
+Overtaking Opportunities
+While overtaking is possible at the Circuit Gilles Villeneuve, the short lap length and minimal speed differentials between cars make it challenging to gain an advantage. The long straight following Turn 12 is the most popular zone for overtaking.
+Tire Selection and Race Strategy
+For the Formula 1 Pirelli Grand Prix du Canada, the following tire compounds have been chosen: C3 as P Zero White hard, C4 as P Zero Yellow medium, C5 as P Zero Red soft.
+Typically, the softest compounds are predominantly used in qualifying sessions as was the case last year when just the medium and hard compounds were used in the race. The strategy preferred by most drivers was a two-stop strategy but some opted for a one-stopper with a very long initial stint on hard; especially those starting close to the back.
+However, considering the ground-effect cars and the likelihood of Safety Car and Virtual Safety Car deployments, this year's Canadian Grand Prix could see a mix of one-stop and two-stop strategies. The high-speed pit entry and short pit lane make it advantageous to make pit stops during these caution periods.
+Based on last year’s data, the average time taken for a pitstop is 18.5 seconds, despite more than 400 metres of pitlane. The 405-metre pit lane ranks eighth in terms of length across all the circuits we race at.
+However, time expended during a pit stop is not especially high, as drivers are spared the inconvenience of going through the last chicane, instead entering the pit lane directly. Additionally, the pit exit feeds in at Turn two, thus drivers avoid having to negotiate the first corner too.
+Historical Records and Statistics
+The first Canadian Grand Prix held on this track was in 1978, with Gilles Villeneuve emerging as the winner. The track was renamed in memory of the Canadian driver a few weeks after his tragic death in 1982.
+Lewis Hamilton and Michael Schumacher hold the record for the most wins at the Circuit Gilles Villeneuve, with seven victories each.
+Over the course of 41 Grand Prix races at this circuit, there have been 24 different winners. 21 different drivers have taken pole position in Montreal.
+Nearly 49 percent of Grand Prix wins at the Circuit Gilles Villeneuve have come from pole position, while 17 percent have come from the second position on the grid
+Follow me on  Twitter ,  Mastodon ,  Instagram ,  Sub-Reddit  for more analysis
+Subscribe to our Newsletter
+Get the latest insights and updates delivered directly to your inbox!
+Open the newsletter in a new tab
+← Back to Blog Posts
+Your one-stop home for unparalleled F1 insights
+Support Data Contact Privacy Terms
+Connect on Socials
+Subscribe to our Newsletter
+Get the latest insights and updates delivered directly to your inbox!
+Prefer a new tab? Open the newsletter on Substack.
+TracingInsights and this website are unofficial and are not associated in any way with the Formula 1 companies. F1, FORMULA ONE, FORMULA 1, FIA FORMULA ONE WORLD CHAMPIONSHIP, GRAND PRIX and related marks are trade marks of Formula One Licensing B.V. This is a fan-made application. Data is used under fair use. All product and company names are trademarks™ or registered® trademarks of their respective holders. Use of them does not imply any affiliation with or endorsement by them.
+Any product names, logos, brands, and other trademarks or images featured or referred to within the app are the property of their respective trademark holders. These trademark holders are not affiliated with TracingInsights or its contributors. They do not sponsor or endorse TracingInsights or any of our products.
+"F1 TV®", "Formula 1®", "F1®", "Alfa Romeo®", "AlphaTauri®", "Alpine®", "Aston Martin®", "Ferrari®", "Haas®", "Haas F1 Team®", "McLaren®", "Mercedes®", "Red Bull®", "Red Bull Racing®", "Williams®" are trademarks of their respective owners and are not affiliated, endorsed, connected or sponsored in any way to this app.
+Some links on this website are affiliate links. This means that if you click on the link and purchase the item, it supports the development of TracingInsights. This is at no additional cost to you.

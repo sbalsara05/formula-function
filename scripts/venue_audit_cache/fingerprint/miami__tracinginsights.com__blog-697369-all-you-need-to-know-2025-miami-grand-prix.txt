@@ -1,0 +1,263 @@
+SOURCE: https://tracinginsights.com/blog/697369/all-you-need-to-know-2025-miami-grand-prix/
+
+ALL YOU NEED TO KNOW - 2025 MIAMI GRAND PRIX - Tracing Insights
+NEW
+ALL YOU NEED TO KNOW - 2025 HUNGARIAN GRAND PRIX
+Read Now
+Tracing Insights
+Blog
+Schedule
+Analysis
+Dash
+Socials
+Contact
+Data
+Tracing Insights
+Analysis All Analysis
+Race Pace
+Championship Standings
+Corner Analysis
+Circuit Maps
+Downforce Configurations
+Download Raw Data
+Drivers In Traffic
+Fan Ratings
+Fastest Lap
+GG Plot
+Heat Map
+Ideal Lap
+Lap Chart
+Laps In Top Ten
+Laptimes Delta
+Lateral Acceleration vs Speed
+Longitudinal Acceleration vs Speed
+Long Run Race Pace
+Max Throttle
+Overtakes
+Peak G Forces
+Penalty Points
+Pit Stops
+Positions Change
+Race Launch Performance Ratings
+Race Trace
+Top Speed At Speed Trap
+Track Temperature
+Tyre Degradation
+Tyre Strategy
+WDC Contenders
+Weekend Results
+Blog
+Schedule F1 Schedule 2027
+F1 Schedule 2026
+F2 Schedule
+F3 Schedule
+F1Academy Schedule
+Formula E Schedule
+Dash Penalty Points
+F1 Schedule and Weather
+Driver of the Day
+2025 WDC What if
+Socials Twitter
+Instagram
+Sub Reddit
+Bluesky
+Mastodon
+Facebook
+Threads
+LinkedIn
+Pixelfed
+YouTube
+WhatsApp Channel
+Telegram Channel
+Tumblr
+SubStack
+Contact
+Data
+Default ✓
+Luxury ✓
+Dim ✓
+Synthwave ✓
+EN 🇬🇧 English
+🇫🇷 Français
+🇪🇸 Español
+🇮🇩 Bahasa Indonesia
+🇵🇹 Português
+🇮🇳 ಕನ್ನಡ
+Support
+Home
+Blog
+ALL YOU NEED TO KNOW - 2025 MIAMI GRAND PRIX
+ALL YOU NEED TO KNOW - 2025 MIAMI GRAND PRIX
+Tracing Insights • May 1, 2025 • 16 min read
+Table of Contents
+[ Hide ]
+Dissecting the 5.412km Autodrome – Featuring 19 Turns, 1.2 Km Straights Hitting 355km/h, the Critical T11-T16 Low-Speed Complex, Three Heavy Braking Zones, and High Aerodynamic Drag Sensitivity.
+[ Hide ]
+Table of Contents
+Circuit Characteristics and Challenges
+Spanning 5.412 km (3.363 miles) with 19 turns, the Miami International Autodrome defies easy categorization. It's not a traditional street circuit requiring public road closures, nor is it a fully permanent road course. Instead, it occupies a middle ground: a temporary, purpose-built facility integrated within the Hard Rock Stadium grounds, designed to feel like a permanent track but constructed and disassembled around other events. This hybrid nature results in close walls, typical of street venues, combined with a layout featuring permanent-style facilities. The current 19-turn, anti-clockwise configuration (one of nine such tracks on the 2025 calendar) was selected after an extensive design process that reportedly saw 75 different concepts considered and 36 layouts simulated.
+The layout features a combination of long straights and tight corners. The opening Sector 1 sequence around the stadium brings a wholly new backdrop to the sport. Sector 2 is a high-speed blast down a DRS straight, with overtaking possible into a technical complex of relentless corners and a tricky chicane before shooting the drivers into the final third. Sector 3 features a 1.2 km arrow-straight run into Turn 17, giving a great chance to pick up a tow, followed by a hairpin left and a short run to the finish line, concluding this like-no-other tour of Miami.
+The track surface itself has evolved. Following grip issues noted during the inaugural 2022 race, the circuit was resurfaced with a new aggregate before the 2023 event. This was done specifically to improve mechanical grip for the drivers. The current surface is described as very smooth, which can contribute to rear sliding and tyre overheating. As is characteristic of temporary circuits, track evolution is expected to be substantial throughout the weekend, with grip levels increasing significantly as more rubber is laid down by F1 cars and the support races (F1 Academy and Porsche Carrera Cup North America).
+The layout is generally flat, but incorporates some engineered elevation changes, notably the section between Turns 13 and 16 where the track rises and falls as it passes under overpasses, including ramps for the Florida Turnpike, featuring an uneven surface. Specifically, there's an uphill approach into the chicane at Turns 14 and 15, before cars head back downhill into Turn 17.
+The Sprint Format Returns
+For the second consecutive year, Miami hosts the F1 Sprint format, making it the second of six such events planned for the 2025 calendar. A significant rule adjustment introduced last year impacts the weekend structure: parc fermé regulations, which previously locked car setups from the start of Sprint Qualifying, are now suspended between the conclusion of the Sprint race and the beginning of qualifying for Sunday's Grand Prix. This change allows teams to gather performance data during the Sprint – effectively a short-stint race simulation, albeit with roughly one-third the fuel load of the main GP – and apply those learnings to car setup modifications before the crucial Grand Prix qualifying session. Teams utilize simulation tools to accurately calculate how fuel weight differences affect tyre behaviour.
+Pit Lane and Technical Features:
+Technically, the circuit's long straights place it high amongst F1 venues for top speeds achieved, comparable only to Monza, Mexico City's Autódromo Hermanos Rodríguez, Baku, and Las Vegas in recent seasons. The circuit has a top speed of roughly 340km/h, though the combined effect of slipstreaming and DRS produces even higher speeds: last year, Lance Stroll hit 355 km/h in the race. This high-speed nature, combined with the specific aerodynamic demands of the layout, means Miami, along with Baku, ranks among the circuits with the highest sensitivity to aerodynamic drag. Teams face a setup conundrum: balancing low-drag configurations for the kilometre-plus full-throttle sections against the need for downforce in slower, more technical areas.
+Key Corners:
+Turn 1: A tight right-hander following the 400-metre pit straight, demanding heavy braking and serving as a primary overtaking zone.
+Turns 2-6: A fast, flowing sequence demanding rapid changes of direction, testing car balance and driver commitment early in the lap.
+Turns 6, 7, 8 Combination: This sequence of consecutive left-handers flows together. Accurate braking on entry is difficult, and the exit is critical, feeding onto the long run towards Turn 11.
+Turns 7-8: A long, sweeping arc past the circuit's distinctive 'dry marina' feature, leading onto a long, full-throttle run.
+Turn 11: A heavy braking zone into a left-hander at the end of the first long DRS straight, another key overtaking point.
+Turns 11-16 Complex: A tight, twisting, and relatively low-speed sequence necessitated by the track's proximity to the highway interchange, sometimes described by drivers as a fairly dissatisfying sequence of low-speed corners. It includes the deceptively tricky Turn 13, which might not look like much on paper but is slightly uphill, awkwardly cambered, and leads into a very tight, slow T14-T15 chicane. This section, while not ideal for passing, is critical for lap time, and errors are easily punished by the close barriers, having caused several red flags in previous years due to drivers losing control over the kerbs. Large amounts of time can be lost in this sequence, which is far from ideal as the longest straight on the circuit follows shortly after.
+Turn 17: A hairpin left at the end of the 1.2km back straight, requiring massive deceleration (approx. 325 km/h to 67 km/h in under 100 metres). It's the final major overtaking opportunity before the lap concludes. The corner opens on exit, making defensive driving challenging through Turns 18 and 19 and down the start-finish straight, especially with DRS available into Turn 1.
+Mastering Miami International Autodrome
+The Miami International Autodrome isn't a street circuit and it isn't a permanent road course; instead it occupies a nebulous middle ground, being a purpose-built circuit, incorporating elements of a street grid, and designed to be rapidly constructed and disassembled. The walls are close, the grip is… variable and the challenge is extreme.
+The 19-turn circuit tests cars at both ends of the speed range – deliberately so to ensure teams have tricky decisions to make. Running low-downforce can prove advantageous with the kilometre-plus full-throttle sections between T8-T11 and T16-T17, but the high-speed section that really catches the eye comes in the first sector, with a sequence of sweepers that exists on the boundary between being grip- and power-limited, really pushing F1 cars to their limit.
+It certainly isn't all high-speed though, with the bigger gains and losses in laptime to be found in the slower corners – particularly the stadium section between T11-T16 where the track negotiates its way around and below the Turnpike interchange. Unusual for a low-speed section of track, it's been the sight of several red flags in previous years, with drivers losing control over the kerbs and discovering there really isn't any margin for error.
+If this slow section is all about laptime, then the hairpin at the end of the backstraight (T17), and the tight first corner are all about attack and defence. Miami International Autodrome features three DRS zones. The first, on the sinuous 'straight' into T11 is a one-shot deal, but the second and third, into the T17 hairpin, and then along the start-finish straight (after T19) are more of a combination: similar to Jeddah, anyone who doesn't get the move done – or decides to hold fire – into T17 gets another shot into T1. It makes for quite a bit of action, and no small amount of wheel-banging.
+Racing Considerations:
+The circuit's design aims to test cars at both ends of the speed spectrum. While the long straights favour low drag, lap time gains and losses are often more significant in the slower sections, particularly the T11-T16 stadium complex.
+The interaction between the DRS zones is a key tactical element. The zone into Turn 11 is somewhat isolated, but the zones into Turn 17 and then along the start-finish straight into Turn 1 work in combination, similar to Jeddah. A driver attempting a pass into T17 who doesn't complete the move (or chooses to wait) gets another immediate opportunity into Turn 1. This dynamic often leads to close wheel-to-wheel action.
+Overtaking Opportunities:
+The circuit features three DRS zones, which create three possible overtaking opportunities.
+Into Turn 1: Following the 400-metre-long pit-straight and aided by DRS. There’s one immediately at the opening corner, a low-speed right-hander.
+Into Turn 11: At the end of the back straight between T8 and T11, aided by DRS. Overtaking is possible after the DRS straight at this left-hander.
+Into Turn 17: After the circuit's longest straight (1.2km) and aided by DRS. This follows the tight and twisting Turns 11-16 sequence, where cars can get bunched up, potentially setting up moves into this left-hand hairpin.
+While initially considered tricky, overtaking is possible, though perhaps more challenging than at some other circuits. The resurfacing aimed to improve passing chances. Timing overtakes correctly is important, as battling proved trickier than initially anticipated in the first race, although close racing certainly occurs, especially through the tighter sections leading onto the main straights.
+Tyre Selection and Strategy:
+Pirelli brings the C3 (Hard), C4 (Medium), and C5 (Soft) compounds to Miami. This is a deliberate step softer than the C2, C3, and C4 compounds used in the 2022, 2023, and 2024 races. The objective behind this change is to introduce greater strategic diversity and potentially encourage two-stop strategies by creating larger performance differentials between tyre compounds over a stint.
+Historically, Miami has strongly favoured one-stop strategies. The high ambient temperatures and potential for high track temperatures (exceeding 55°C previously) lead to significant thermal tyre degradation, even though the track surface itself imposes only moderate longitudinal and lateral forces on the tyres. The smooth surface, however, increases the risk of sliding, which exacerbates tyre overheating.
+The critical question for 2025 is whether the softer C3/C4/C5 allocation, combined with the heat, will be enough to make the two-stop strategy genuinely competitive or even necessary. While Pirelli's 2025 compounds are designed for better thermal management than their predecessors, the inherent softness might still make a one-stop challenging, requiring careful tyre management. The performance differential between the C2, C3, and C4 used last year was noted as being quite small. It will be interesting to see if the softer range opens the door to more varied approaches, unlike in Jeddah where the softer allocation still resulted predominantly in one-stoppers. Pirelli’s 2025 compounds have been designed to suffer that less than last year’s, so there is a possibility teams will push tyre management to the top of the agenda and still target the quicker one-stop.
+TRACK CHARACTERISTICS
+TRACTION
+3/5
+TYRE STRESS
+3/5
+ASPHALT GRIP
+4/5
+BRAKING
+3/5
+ASPHALT ABRASION
+2/5
+LATERAL
+3/5
+TRACK EVOLUTION
+5/5
+DOWNFORCE
+3/5
+Last Year's Strategic Picture (2024):
+Grand Prix: The race was predominantly a one-stop affair, won by Lando Norris (McLaren) on a Medium-Hard strategy, pitting under a Safety Car on lap 29 of 57. 15 of the 20 drivers started on the Medium tyre, switching mainly to the Hard. The Soft tyre saw limited use, displaying relatively low degradation for the few who used it; Esteban Ocon finished P8 on a Hard-Soft strategy (pitting lap 41). Sergio Pérez was the only points scorer on a two-stop (Medium-Hard-Medium, stops laps 17 & 28, finishing P5). The timing of stops was influenced by a Virtual Safety Car period that transitioned into a full Safety Car. The performance differential between all three of last year’s compounds, C2, C3 and C4, was quite small.
+Sprint Race: The 19-lap Sprint saw the Medium tyre as the overwhelming choice for 18 drivers (including winner Max Verstappen), with teams splitting between using new or used sets from Sprint Qualifying. Only Yuki Tsunoda and Logan Sargeant started on Softs; Tsunoda used the initial grip advantage to climb from P15 to P10 towards the points before the race was neutralised, eventually finishing P8.
+Historical Strategy: Three years of the Miami Grand Prix have seen three victories for one-stop strategies. In fact, of the 30 points-scoring finishes across the three years, 28 have been one-stoppers. The overwhelming preference has been for a Medium-Hard race, with a broad pit window, running from the mid-teen laps to the late 20s in the 57-lap race. The reverse strategy of Hard-Medium has been effective for drivers with pace, starting out-of-position, including a Max Verstappen victory in 2023 from P9 on the grid. He ran to lap 45 on the Hard tyre before switching to Medium. That is later than the average stop for this strategy: high-30s/low 40s is more common, though Lewis Hamilton went as early as lap 26 last year. The only driver to score with a two-stop is Sergio Pérez; he did Medium-Hard-Medium in 2022, with stops on laps 27 and 41, to finish fourth, and the same again in 2024 with stops on laps 17 and 28, to finish fifth.
+Braking Demands
+The Miami circuit places significant stress on braking systems. Three corners stand out as particularly demanding:
+Turn 17: The heaviest braking zone, scrubbing off immense speed at the end of the long back straight (approx. 325 km/h to 67 km/h in under 100 metres).
+Turn 1: Requires substantial stopping power after the pit straight DRS zone.
+Turn 11: Another significant braking event following the first long DRS straight.
+F1 BREMBO BRAKING DATA – MIAMI GP 2025
+Turn | Initial Speed (km/h) | Final Speed (km/h) | Stopping Distance (m) | Braking Time (sec) | Maximum Deceleration (g) | Maximum Pedal Load (kg) | Braking Power (kW) |
+≡ 01 | 311 | 93 | 117 | 2.60 | 4.6 | 169 | 2,426 |
+_ 07 | 242 | 132 | 85 | 1.75 | 2.8 | 75 | 884 |
+≡ 11 | 314 | 89 | 119 | 2.55 | 4.6 | 167 | 2,417 |
+_ 12 | 149 | 111 | 44 | 1.24 | 1.6 | 45 | 283 |
+_ 14 | 182 | 87 | 61 | 1.72 | 2.1 | 58 | 486 |
+_ 15 | 118 | 101 | 19 | 0.64 | 1.2 | 32 | 112 |
+_ 16 | 128 | 87 | 29 | 1.08 | 2.0 | 68 | 352 |
+≡ 17 | 319 | 76 | 121 | 2.81 | 4.6 | 169 | 2,462 |
+Weather Outlook and Its Impact
+Miami in May typically presents hot and humid conditions. Drivers consistently reference the event as one of the most physically demanding on the calendar due to the energy-sapping heat, comparable to Singapore, especially the heat in Sector 2 during the day race. The forecast for this weekend predicts strong sunshine with temperatures approaching 30°C, but feeling potentially five degrees hotter due to humidity. This points towards another physically punishing race for the drivers and will be a major factor in tyre thermal degradation management.
+F1 Schedule with Live Weather Forecasts
+Historical Records and Statistics
+Race Winners: Max Verstappen (Red Bull) won in 2022 and 2023. Lando Norris (McLaren) won in 2024, his first F1 victory.
+Pole Sitters: Charles Leclerc (Ferrari, 2022), Sergio Pérez (Red Bull, 2023), Max Verstappen (Red Bull, 2024).
+Pole Position Anomaly: No driver starting from pole position or the front row has won the Miami Grand Prix; the pole-sitter has finished second in all three editions. Verstappen's 2023 win from P9 was the first F1 victory from that grid slot since Alain Prost at the 1984 French Grand Prix.
+Podium Finishers: Besides the winners and pole-sitters (who finished P2), only Fernando Alonso and Carlos Sainz have reached the podium, both finishing third.
+US Grand Prix History: This will be the 80th F1 World Championship round held in the USA, moving it to second place ahead of Germany and Great Britain but all-time behind Italy (107). Miami is the 11th US venue used. Lewis Hamilton and Max Verstappen share the record for most US wins (6 each). Ferrari is the most successful team in the USA (14 wins).
+Mercedes Record: Miami is the only current track where the Mercedes works team (since 2010) hasn't won. (They also haven't won at Zandvoort since its return, but Fangio won the 1955 Dutch GP for Mercedes).
+Driver/Team Milestones: Max Verstappen leads Sprint history (11 wins/19 races, 9 poles, 200 laps led) - no other driver has led more than 42 laps. Yuki Tsunoda scored points in both Miami races last year (P8 Sprint, P7 GP). The Red Bull team's Jeddah qualifying (Verstappen P1, Tsunoda P8) was their best combined since Azerbaijan 2023.
+2025 Miami Grand Prix – Stat Sheet
+Circuit Characteristics
+Characteristic | Value |
+Circuit Length | 5.412 km |
+Race Laps | 58 |
+Race Distance | 308.3 km |
+Number of Corners | 19 (12 L / 7 R) |
+Distance from Pole to First Braking Zone | 176 m |
+Pole Position Side | Left |
+Pit Lane Length Under Speed Limit Control | 376 m |
+Drive-Through Time at 80 km/h | 17s |
+Lap Time At Full Throttle | 55% |
+Lap Distance At Full Throttle | 68% |
+Gear Changes Per Lap | 45 |
+Braking Events (>2G) | 3 |
+Heavy Braking Events (<0.4s @ >4G) | 3 |
+Braking Energy | Medium |
+Maximum Lateral G-Force | 4.6 (T5) |
+Maximum Speed | 331 km/h |
+Fuel Consumption | Low |
+DRS Zones | T9–11, T16–17, T19–1 |
+Key Overtaking Opportunities | T1, T11, T17 |
+2024 Statistics
+Statistic | Value |
+Fastest Lap FP1 | 1:28.595 |
+Fastest Lap Sprint Qualifying | 1:27.641 |
+Fastest Lap Sprint Race | 1:30.415 |
+Fastest Lap Q1 | 1:27.689 |
+Fastest Lap Q2 | 1:27.533 |
+Fastest Lap Q3 | 1:27.241 |
+Delta FP1 to Q3 | -1.354s |
+Delta Q1 to Q3 | -0.447s |
+Podium | NOR / VER / LEC |
+Team Result | HAM P6 / RUS P8 |
+Fastest Race Lap | 1:30.634 (PIA) |
+Winning Race Time | 1:30:49.876 |
+Winning Average Speed | 237 km/h |
+Qualifying Speed Trap | 345 km/h (ALB) |
+Race Speed Trap | 355 km/h (STR) |
+Winning Strategy | 1 Stop (L29) |
+Total Pit Stops | 28 |
+Total Normal Overtakes | 12 |
+Total DRS Overtakes | 25 |
+Race Lap Record | 1:29.708 (VER, 2023) |
+Absolute Lap Record | 1:26.814 (VER, Q3, 2023) |
+Not Classified (Accident/DSQ) | 1 |
+Not Classified (Mechanical) | 0 |
+Race Characteristics (2022–2024)
+Characteristic | Value |
+Races Featuring Safety Car | 2/3 |
+Total Safety Car Deployments | 2 |
+Safety Car Probability | 67% |
+Safety Car Ratio | 0.7 |
+Wet Sessions | 0/15 |
+Wet Session Probability | 0% |
+Average Track Temperature | 38°C |
+Maximum Track Temperature | 47°C |
+Average Ambient Temperature | 28°C |
+Maximum Ambient Temperature | 30°C |
+Ambient Pressure | 1096.7 hPa |
+Tyre Allocation
+Compound | Sets Per Driver |
+Soft | 6 |
+Medium | 4 |
+Hard | 2 |
+Where to Watch 2025 Miami Grand Prix
+The Ultimate F1 2025 Viewing Guide
+I’m constantly changing things up to make this newsletter more useful, so let me know what you think by commenting below. I read every reply! Please do reply. I'm not a robot, I talk back.
+Follow me on Whatsapp , Telegram , Facebook , YouTube , LinkedIn , Pixelfed , Tumblr , Bsky , Twitter , Mastodon , Instagram , Sub-Reddit , Threads for more analysis!
+Subscribe to our Newsletter
+Get the latest insights and updates delivered directly to your inbox!
+Open the newsletter in a new tab
+Share:
+Previous Next
+← Back to Blog Posts
+Your one-stop home for unparalleled F1 insights
+Support Data Contact Privacy Terms
+Connect on Socials
+Subscribe to our Newsletter
+Get the latest insights and updates delivered directly to your inbox!
+Prefer a new tab? Open the newsletter on Substack.
+TracingInsights and this website are unofficial and are not associated in any way with the Formula 1 companies. F1, FORMULA ONE, FORMULA 1, FIA FORMULA ONE WORLD CHAMPIONSHIP, GRAND PRIX and related marks are trade marks of Formula One Licensing B.V. This is a fan-made application. Data is used under fair use. All product and company names are trademarks™ or registered® trademarks of their respective holders. Use of them does not imply any affiliation with or endorsement by them.
+Any product names, logos, brands, and other trademarks or images featured or referred to within the app are the property of their respective trademark holders. These trademark holders are not affiliated with TracingInsights or its contributors. They do not sponsor or endorse TracingInsights or any of our products.
+"F1 TV®", "Formula 1®", "F1®", "Alfa Romeo®", "AlphaTauri®", "Alpine®", "Aston Martin®", "Ferrari®", "Haas®", "Haas F1 Team®", "McLaren®", "Mercedes®", "Red Bull®", "Red Bull Racing®", "Williams®" are trademarks of their respective owners and are not affiliated, endorsed, connected or sponsored in any way to this app.
+Some links on this website are affiliate links. This means that if you click on the link and purchase the item, it supports the development of TracingInsights. This is at no additional cost to you.

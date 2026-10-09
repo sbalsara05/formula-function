@@ -23,9 +23,10 @@ const SPA_TRACK_PATH =
 const MONACO_TRACK_PATH =
   "M118.34 246.687c-5.14.774-6.994 2.392-9.853 7.317-4.586 7.898-9.192 18.211-11.413 27.357-2.486 10.243-2.829 25.557-1.95 39.458.445 7.034 2.23 10.04 8.243 12.045 7.17 2.387 8.339 2.488 9.949 9.801 1.61 7.319 6.389 33.36 8.047 42.434 1.188 6.495 2.042 8.91-3.805 11.704-6.436 3.07-7.9 3.95-6.729 9.07 1.17 5.12 6.805 23.714 11.023 30.435 11.51 18.336 19.262 23.945 27.311 26.726 5.165 1.784 11.935 2.284 13.315 7.946 1.317 5.416 1.181 7.937-2.341 9.074-13.167 4.244-26.043 5.56-38.334 5.268-4.24-.102-4.829-.294-4.245-5.56.442-3.967.44-9.514-3.803-14.047-3.322-3.553-10.24-13.756-16.093-28.531-9.486-23.955-16.97-48.602-19.168-60.132-2.924-15.363-5.422-36.152-6.435-49.746-1.903-25.458-.928-45.988 3.217-55.89 5.267-12.585 6.437-17.12 5.999-21.07-.878-7.9-.355-10.97 4.242-12.437 14.192-4.535 27.36-4.242 37.456-5.852 10.094-1.609 27.134-4.495 33.651-6.439 8.34-2.486 23.423-7.227 36.577-9.363 11.704-1.903 21.801-3.073 32.774-8.34 6.195-2.974 21.8-11.119 28.384-13.169 6.585-2.046 18.713-4.606 25.75-6.143 8.048-1.759 17.221-3.118 23.994-4.534 9.32-1.953 25.118-13.113 27.46-27.898 2.535-15.996-2.563-24.582-12.876-33.749-7.022-6.243-11.658-11.657-12.68-15.461-1.987-7.38.472-12.368 3.803-16.97 4.974-6.877 50.625-68.034 53.99-72.277 3.366-4.244 6.436-3.658 9.95-.88 3.509 2.783 7.415 5.432 7.023 10.39-.438 5.56-.515 9.95 1.757 13.607 2.632 4.244 3.365 5.121 6.585 9.51 2.136 2.914 3.949 5.707 5.121 9.51 1.097 3.565 6.103 5.143 8.922 2.633 2.632-2.341 3.073-6.585-.876-9.51-1.636-1.211-3.58-2.506-5.269-5.12-2.926-4.537-5.415-7.9-7.168-10.681-1.389-2.204-3.13-11.026 2.778-12.73 8.632-2.487 19.607-5.853 25.31-7.608 2.719-.835 11.123-.146 11.123 8.34 0 8.485-.294 17.848-1.17 25.896-.394 3.597-3.482 47.7-22.192 77.593-23.132 36.952-62.28 63.471-70.912 68.28-19.604 10.923-39.682 17.952-46.525 19.703-12.584 3.218-28.287 4.485-42.725 6.437-3.529.476-5.299 3.87-5.074 5.463.586 4.098-.946 5.21-4.484 5.852-8.585 1.563-10.73 2.731-12.486-.388-1.8-3.2-3.085-2.424-7.805-1.759-15.215 2.147-86.663 12.827-97.344 14.435z";
 
-// monza-7.svg (2000-present layout)
+// monza-7.svg (2000-present layout), rotated 90° counter-clockwise to broadcast orientation
+// (scripts/rotate_track_path.py) — the source SVG is north-up.
 const MONZA_TRACK_PATH =
-  "M218.372 50.51c17.128-1.458 28.349-2.045 40.274-3.238 9.544-.954 18.648-.863 32.116-1.38 3.542-.136 3.729-.748 5.353-5.354 1.036-2.935 1.478-4.501 4.144-4.835 5.525-.69 9.921-1.651 11.443-2.091 14.149-4.09 33.715-10.744 48.213-17.291 6.233-2.814 20.461 2.978 21.497 16.187s3.53 38.46 4.015 45.973c.518 8.029.022 9.197-4.533 11.655-9.842 5.31-36.237 19.593-46.102 25.511-14.892 8.936-29.224 17.864-38.59 26.03-10.102 8.806-73.808 64.464-80.377 70.318-3.39 3.023-6.907 6.216-12.087 10.705-3.24 2.809-2.08 5.871-1.38 10.878 1.035 7.425-.519 16.403-8.289 21.756-5.758 3.967-6.446 5.425-7.248 12.962-4.732 44.498-20.042 187.268-21.674 201.017-1.813 15.28-17.22 18.9-29.267 11.784-24.993-14.763-21.878-47.89-20.85-65.527.408-6.966 12.017-143.36 19.435-230.17.309-3.611.466-5.692 5.3-5.347 5.184.37 5.612-1.727 3.54-7.77-3.737-10.9-5.649-24.2-5.06-31.068 1.369-15.987 2.231-26.008 2.297-26.732 1.804-19.481 7.9-39.11 33.93-52.707 14.168-7.4 25.64-9.712 43.9-11.266z";
+  "M50.51 281.628C49.052 264.5 48.465 253.279 47.272 241.354C46.318 231.81 46.409 222.706 45.892 209.238C45.756 205.696 45.144 205.509 40.538 203.885C37.603 202.849 36.037 202.407 35.703 199.741C35.013 194.216 34.052 189.82 33.612 188.298C29.522 174.149 22.868 154.583 16.321 140.085C13.507 133.852 19.299 119.624 32.508 118.588C45.717 117.552 70.968 115.058 78.481 114.573C86.51 114.055 87.678 114.551 90.136 119.106C95.446 128.948 109.729 155.343 115.647 165.208C124.583 180.1 133.511 194.432 141.677 203.798C150.483 213.9 206.141 277.606 211.995 284.175C215.018 287.565 218.211 291.082 222.7 296.262C225.509 299.502 228.571 298.342 233.578 297.642C241.003 296.607 249.981 298.161 255.334 305.931C259.301 311.689 260.759 312.377 268.296 313.179C312.794 317.911 455.564 333.221 469.313 334.853C484.593 336.666 488.213 352.073 481.097 364.12C466.334 389.113 433.207 385.998 415.57 384.97C408.604 384.562 272.21 372.953 185.4 365.535C181.789 365.226 179.708 365.069 180.053 360.235C180.423 355.051 178.326 354.623 172.283 356.695C161.383 360.432 148.083 362.344 141.215 361.755C125.228 360.386 115.207 359.524 114.483 359.458C95.002 357.654 75.373 351.558 61.776 325.528C54.376 311.36 52.064 299.888 50.51 281.628Z";
 
 // silverstone-8.svg (2010-present layout)
 const SILVERSTONE_TRACK_PATH =
@@ -141,14 +142,14 @@ export const spaStats: VenueStats = {
 
 export const spaFingerprint: VenueFingerprint = {
   venueId: "spa",
-  description: "Engine power and high-speed commitment dominate — low-drag efficiency on the straights, heavy braking into Les Combes and Bus Stop.",
+  description: "Tyres and fast corners define Spa — Pirelli's top tyre-stress and lateral ratings, with 65% of the lap flat out.",
   bars: [
-    { label: "Engine Power", rating: "CRITICAL", value: 94, caption: "Kemmel · Blanchimont full throttle" },
-    { label: "Aero Efficiency", rating: "HIGH", value: 82, caption: "Low-drag / medium-low wing" },
-    { label: "Mechanical Grip", rating: "MODERATE", value: 55, caption: "Sector 2 medium-speed mix" },
-    { label: "Braking Stability", rating: "HIGH", value: 72, caption: "Les Combes · Bus Stop warp" },
-    { label: "Tyre Degradation", rating: "MODERATE", value: 58, caption: "Lateral load · post-resurface" },
-    { label: "High-speed commitment", rating: "EXTREME", value: 96, caption: "Eau Rouge · Raidillon flat" },
+    { label: "Engine Power", rating: "HIGH", value: 71, caption: "65.4% flat · 339 km/h" },
+    { label: "Aero Efficiency", rating: "MODERATE", value: 62, caption: "Downforce 2/5 · low-drag wing" },
+    { label: "Mechanical Grip", rating: "HIGH", value: 76, caption: "Traction 4/5 · La Source exit" },
+    { label: "Braking Stability", rating: "HIGH", value: 79, caption: "Brembo 4/5 · 5 heavy stops" },
+    { label: "Tyre Degradation", rating: "EXTREME", value: 96, caption: "Stress 5/5 · C1/C3/C4" },
+    { label: "High-speed commitment", rating: "CRITICAL", value: 94, caption: "Eau Rouge · Pouhon · Blanchimont" },
   ],
 };
 
@@ -348,14 +349,14 @@ export const monacoStats: VenueStats = {
 
 export const monacoFingerprint: VenueFingerprint = {
   venueId: "monaco",
-  description: "Mechanical grip and braking stability define Monaco — zero runoff, low power sensitivity, extreme wall commitment.",
+  description: "Traction and maximum downforce decide Monaco — the lowest throttle share of 2025 and almost no tyre wear.",
   bars: [
-    { label: "Engine Power", rating: "LOW", value: 28, caption: "Short straights · traction exits" },
-    { label: "Aero Efficiency", rating: "HIGH", value: 88, caption: "Max downforce package" },
-    { label: "Mechanical Grip", rating: "EXTREME", value: 97, caption: "Kerbs · bumps · traction" },
-    { label: "Braking Stability", rating: "CRITICAL", value: 94, caption: "Mirabeau · Nouvelle Chicane" },
-    { label: "Tyre Degradation", rating: "LOW", value: 35, caption: "Low abrasion street surface" },
-    { label: "High-speed commitment", rating: "EXTREME", value: 99, caption: "Zero runoff · Armco" },
+    { label: "Engine Power", rating: "LOW", value: 16, caption: "44.4% flat · lowest of 2025" },
+    { label: "Aero Efficiency", rating: "CRITICAL", value: 92, caption: "Max downforce · Pirelli 5/5" },
+    { label: "Mechanical Grip", rating: "EXTREME", value: 97, caption: "Traction 5/5 · Loews hairpin" },
+    { label: "Braking Stability", rating: "MODERATE", value: 55, caption: "15 stops · chicane 290 to 96" },
+    { label: "Tyre Degradation", rating: "LOW", value: 13, caption: "Stress 1/5 · C4/C5/C6" },
+    { label: "High-speed commitment", rating: "LOW", value: 17, caption: "Lateral 1/5 · tunnel only" },
   ],
 };
 
@@ -433,14 +434,14 @@ export const monzaStats: VenueStats = {
 
 export const monzaFingerprint: VenueFingerprint = {
   venueId: "monza",
-  description: "Pure power circuit — slipstream efficiency and braking stability into the chicanes decide the lap.",
+  description: "Power and braking define Monza — 77% of the lap flat out and Brembo's joint-hardest braking rating.",
   bars: [
-    { label: "Engine Power", rating: "EXTREME", value: 98, caption: "Rettifilo · Ascari slipstream" },
-    { label: "Aero Efficiency", rating: "CRITICAL", value: 95, caption: "Minimum wing · drag wins" },
-    { label: "Mechanical Grip", rating: "MODERATE", value: 48, caption: "Chicanes · Lesmo support" },
-    { label: "Braking Stability", rating: "HIGH", value: 80, caption: "Prima Variante · Parabolica" },
-    { label: "Tyre Degradation", rating: "MODERATE", value: 52, caption: "Longitudinal load spikes" },
-    { label: "High-speed commitment", rating: "HIGH", value: 78, caption: "Curva Grande · Parabolica" },
+    { label: "Engine Power", rating: "CRITICAL", value: 94, caption: "77% flat · 348 km/h" },
+    { label: "Aero Efficiency", rating: "HIGH", value: 84, caption: "Lowest wing · drag decides" },
+    { label: "Mechanical Grip", rating: "MODERATE", value: 58, caption: "Traction 3/5 · chicane exits" },
+    { label: "Braking Stability", rating: "EXTREME", value: 95, caption: "Brembo 5/5 · T1 337 to 89" },
+    { label: "Tyre Degradation", rating: "MODERATE", value: 55, caption: "Stress 3/5 · C3/C4/C5" },
+    { label: "High-speed commitment", rating: "MODERATE", value: 45, caption: "Curva Grande · Parabolica" },
   ],
 };
 
@@ -518,14 +519,14 @@ export const silverstoneStats: VenueStats = {
 
 export const silverstoneFingerprint: VenueFingerprint = {
   venueId: "silverstone",
-  description: "High-speed aero efficiency and commitment through Maggotts–Becketts define the British GP.",
+  description: "Fast corners and tyre load define Silverstone — Pirelli's top lateral rating, and one of Brembo's two easiest tracks on brakes.",
   bars: [
-    { label: "Engine Power", rating: "HIGH", value: 78, caption: "Hangar · Wellington straights" },
-    { label: "Aero Efficiency", rating: "CRITICAL", value: 93, caption: "Medium-high wing balance" },
-    { label: "Mechanical Grip", rating: "HIGH", value: 74, caption: "Medium-speed complex" },
-    { label: "Braking Stability", rating: "MODERATE", value: 58, caption: "Village · Brooklands" },
-    { label: "Tyre Degradation", rating: "HIGH", value: 82, caption: "High energy lateral load" },
-    { label: "High-speed commitment", rating: "EXTREME", value: 96, caption: "Copse · Maggotts blind" },
+    { label: "Engine Power", rating: "HIGH", value: 69, caption: "68.5% flat · 324 km/h" },
+    { label: "Aero Efficiency", rating: "HIGH", value: 76, caption: "Downforce 4/5" },
+    { label: "Mechanical Grip", rating: "MODERATE", value: 53, caption: "Traction 3/5 · Village · Loop" },
+    { label: "Braking Stability", rating: "LOW", value: 19, caption: "Brembo 1/5 · joint-lightest" },
+    { label: "Tyre Degradation", rating: "CRITICAL", value: 91, caption: "Stress 5/5 · C2/C3/C4" },
+    { label: "High-speed commitment", rating: "EXTREME", value: 95, caption: "Copse · Maggotts · Becketts" },
   ],
 };
 
@@ -603,14 +604,14 @@ export const suzukaStats: VenueStats = {
 
 export const suzukaFingerprint: VenueFingerprint = {
   venueId: "suzuka",
-  description: "Flowing high-speed commitment and aero platform — S-curves and 130R reward precision.",
+  description: "Tyre energy and fast direction changes define Suzuka — Pirelli's maximum tyre-stress and lateral ratings.",
   bars: [
-    { label: "Engine Power", rating: "HIGH", value: 76, caption: "Main straight · Degner exit" },
-    { label: "Aero Efficiency", rating: "CRITICAL", value: 92, caption: "High-downforce figure-8" },
-    { label: "Mechanical Grip", rating: "HIGH", value: 80, caption: "Spoon · Casio chicane" },
-    { label: "Braking Stability", rating: "MODERATE", value: 55, caption: "Chicane · Degner" },
-    { label: "Tyre Degradation", rating: "HIGH", value: 78, caption: "Sustained lateral load" },
-    { label: "High-speed commitment", rating: "EXTREME", value: 97, caption: "130R · S-curves flat" },
+    { label: "Engine Power", rating: "HIGH", value: 69, caption: "68.2% flat · 325 km/h" },
+    { label: "Aero Efficiency", rating: "HIGH", value: 76, caption: "Downforce 4/5" },
+    { label: "Mechanical Grip", rating: "MODERATE", value: 53, caption: "Traction 3/5 · hairpin · chicane" },
+    { label: "Braking Stability", rating: "LOW", value: 19, caption: "Brembo 1/5 · joint-lightest" },
+    { label: "Tyre Degradation", rating: "EXTREME", value: 99, caption: "Stress 5/5 · hardest C1/C2/C3" },
+    { label: "High-speed commitment", rating: "CRITICAL", value: 94, caption: "S Curves · Degner · 130R" },
   ],
 };
 
@@ -688,14 +689,14 @@ export const interlagosStats: VenueStats = {
 
 export const interlagosFingerprint: VenueFingerprint = {
   venueId: "interlagos",
-  description: "Mixed elevation and weather-sensitive grip — traction and mid-corner balance matter most.",
+  description: "No single extreme — high downforce for the infield and a surface that rubbers in fast (Pirelli track evolution 5/5).",
   bars: [
-    { label: "Engine Power", rating: "MODERATE", value: 62, caption: "Reta Oposta · climb" },
-    { label: "Aero Efficiency", rating: "HIGH", value: 80, caption: "Medium wing compromise" },
-    { label: "Mechanical Grip", rating: "HIGH", value: 84, caption: "Senna S · elevation" },
-    { label: "Braking Stability", rating: "HIGH", value: 76, caption: "Juncao · Descida do Lago" },
-    { label: "Tyre Degradation", rating: "MODERATE", value: 60, caption: "Short lap · thermal cycles" },
-    { label: "High-speed commitment", rating: "HIGH", value: 85, caption: "Unpredictable conditions" },
+    { label: "Engine Power", rating: "MODERATE", value: 60, caption: "58.9% flat · 336 km/h" },
+    { label: "Aero Efficiency", rating: "HIGH", value: 76, caption: "Downforce 4/5 · infield" },
+    { label: "Mechanical Grip", rating: "MODERATE", value: 58, caption: "Traction 3/5 · Junção exit" },
+    { label: "Braking Stability", rating: "MODERATE", value: 58, caption: "Brembo 3/5 · T1 337 to 124" },
+    { label: "Tyre Degradation", rating: "MODERATE", value: 57, caption: "Stress 3/5 · C2/C3/C4" },
+    { label: "High-speed commitment", rating: "MODERATE", value: 58, caption: "Lateral 3/5 · Ferradura" },
   ],
 };
 
@@ -773,14 +774,14 @@ export const bahrainStats: VenueStats = {
 
 export const bahrainFingerprint: VenueFingerprint = {
   venueId: "bahrain",
-  description: "Heavy braking and tyre thermal management on a high-abrasion desert circuit.",
+  description: "Braking and abrasion define Bahrain — Brembo's joint-hardest track, on Pirelli's most abrasive asphalt.",
   bars: [
-    { label: "Engine Power", rating: "HIGH", value: 74, caption: "Main straight DRS" },
-    { label: "Aero Efficiency", rating: "MODERATE", value: 58, caption: "Medium downforce" },
-    { label: "Mechanical Grip", rating: "HIGH", value: 72, caption: "Traction zones · T10" },
-    { label: "Braking Stability", rating: "CRITICAL", value: 92, caption: "T1 · T8 heavy stops" },
-    { label: "Tyre Degradation", rating: "CRITICAL", value: 94, caption: "High abrasion surface" },
-    { label: "High-speed commitment", rating: "MODERATE", value: 50, caption: "Large runoff areas" },
+    { label: "Engine Power", rating: "MODERATE", value: 47, caption: "57% flat · 315 km/h" },
+    { label: "Aero Efficiency", rating: "MODERATE", value: 58, caption: "Downforce 3/5" },
+    { label: "Mechanical Grip", rating: "HIGH", value: 76, caption: "Traction 4/5 · slow exits" },
+    { label: "Braking Stability", rating: "EXTREME", value: 95, caption: "Brembo 5/5 · T1 · T4" },
+    { label: "Tyre Degradation", rating: "HIGH", value: 68, caption: "Abrasion 5/5 · C1/C2/C3" },
+    { label: "High-speed commitment", rating: "MODERATE", value: 57, caption: "Lateral 3/5 · T12 at 3.9 g" },
   ],
 };
 
@@ -855,14 +856,14 @@ export const abadhabiStats: VenueStats = {
 
 export const abuDhabiFingerprint: VenueFingerprint = {
   venueId: "abu-dhabi",
-  description: "Traction and braking into tight complexes — moderate power, low weather risk.",
+  description: "Traction and straight-line speed — long straights out of slow corners, with medium tyre and braking demands.",
   bars: [
-    { label: "Engine Power", rating: "MODERATE", value: 55, caption: "Long back straight" },
-    { label: "Aero Efficiency", rating: "HIGH", value: 70, caption: "Medium-high downforce" },
-    { label: "Mechanical Grip", rating: "HIGH", value: 78, caption: "Hotel section traction" },
-    { label: "Braking Stability", rating: "HIGH", value: 82, caption: "T5 · T9 stops" },
-    { label: "Tyre Degradation", rating: "MODERATE", value: 58, caption: "Thermal management" },
-    { label: "High-speed commitment", rating: "LOW", value: 38, caption: "Large runoff · safe design" },
+    { label: "Engine Power", rating: "HIGH", value: 69, caption: "66.1% flat · 331 km/h" },
+    { label: "Aero Efficiency", rating: "MODERATE", value: 58, caption: "Downforce 3/5" },
+    { label: "Mechanical Grip", rating: "HIGH", value: 76, caption: "Traction 4/5 · hotel section" },
+    { label: "Braking Stability", rating: "MODERATE", value: 61, caption: "Brembo 3/5 · T6 321 to 78" },
+    { label: "Tyre Degradation", rating: "MODERATE", value: 58, caption: "Stress 3/5 · C3/C4/C5" },
+    { label: "High-speed commitment", rating: "MODERATE", value: 60, caption: "Lateral 3/5" },
   ],
 };
 
@@ -936,14 +937,14 @@ export const jeddahStats: VenueStats = {
 
 export const jeddahFingerprint: VenueFingerprint = {
   venueId: "jeddah",
-  description: "Ultra-fast walls-and-commitment street circuit — power and bravery with light braking share.",
+  description: "Power and fast corners between walls — 76% of the lap flat out, with little traction demand.",
   bars: [
-    { label: "Engine Power", rating: "CRITICAL", value: 90, caption: "Longest street laps · 320+" },
-    { label: "Aero Efficiency", rating: "HIGH", value: 84, caption: "Low-drag street package" },
-    { label: "Mechanical Grip", rating: "MODERATE", value: 50, caption: "Fast sweeps · few hairpins" },
-    { label: "Braking Stability", rating: "MODERATE", value: 48, caption: "Few heavy stops" },
-    { label: "Tyre Degradation", rating: "MODERATE", value: 55, caption: "Smooth asphalt · energy" },
-    { label: "High-speed commitment", rating: "EXTREME", value: 98, caption: "Walls · no runoff" },
+    { label: "Engine Power", rating: "CRITICAL", value: 88, caption: "76.2% flat · 338 km/h" },
+    { label: "Aero Efficiency", rating: "HIGH", value: 79, caption: "Downforce 2/5 · low drag" },
+    { label: "Mechanical Grip", rating: "LOW", value: 35, caption: "Traction 2/5 · few slow exits" },
+    { label: "Braking Stability", rating: "HIGH", value: 76, caption: "Brembo 4/5 · T1 317 to 110" },
+    { label: "Tyre Degradation", rating: "MODERATE", value: 55, caption: "Stress 3/5 · C3/C4/C5" },
+    { label: "High-speed commitment", rating: "HIGH", value: 81, caption: "Sector 1 esses · walls close" },
   ],
 };
 
@@ -1013,14 +1014,14 @@ export const melbourneStats: VenueStats = {
 
 export const melbourneFingerprint: VenueFingerprint = {
   venueId: "melbourne",
-  description: "Street-park hybrid — traction, braking, and mid-corner grip over raw power.",
+  description: "A balanced park lap — no Pirelli rating above 3/5, with the fast Turn 9–10 sweep as its signature.",
   bars: [
-    { label: "Engine Power", rating: "MODERATE", value: 58, caption: "Short bursts · DRS zones" },
-    { label: "Aero Efficiency", rating: "HIGH", value: 76, caption: "Medium-high wing" },
-    { label: "Mechanical Grip", rating: "HIGH", value: 82, caption: "Kerbs · surface changes" },
-    { label: "Braking Stability", rating: "HIGH", value: 80, caption: "T1 · T3 heavy zones" },
-    { label: "Tyre Degradation", rating: "MODERATE", value: 55, caption: "Low–medium abrasion" },
-    { label: "High-speed commitment", rating: "HIGH", value: 76, caption: "Barriers nearby" },
+    { label: "Engine Power", rating: "MODERATE", value: 53, caption: "56.6% flat · 329 km/h" },
+    { label: "Aero Efficiency", rating: "MODERATE", value: 58, caption: "Downforce 3/5" },
+    { label: "Mechanical Grip", rating: "MODERATE", value: 45, caption: "Traction 2/5 · grip 2/5" },
+    { label: "Braking Stability", rating: "MODERATE", value: 55, caption: "Brembo 3/5 · T11 · T3 · T1" },
+    { label: "Tyre Degradation", rating: "MODERATE", value: 55, caption: "Stress 3/5 · C3/C4/C5" },
+    { label: "High-speed commitment", rating: "MODERATE", value: 57, caption: "T9–T10 sweep · 5.1 g" },
   ],
 };
 
@@ -1093,14 +1094,14 @@ export const shanghaiStats: VenueStats = {
 
 export const shanghaiFingerprint: VenueFingerprint = {
   venueId: "shanghai",
-  description: "Long-radius T1–T3 and a huge back straight — aero platform plus power.",
+  description: "Long corners and a long straight — the slow T1–T3 spiral works the left-side tyres, then a 1.2 km straight runs into T14.",
   bars: [
-    { label: "Engine Power", rating: "HIGH", value: 82, caption: "1.2 km back straight" },
-    { label: "Aero Efficiency", rating: "HIGH", value: 80, caption: "T1–T3 aero load" },
-    { label: "Mechanical Grip", rating: "MODERATE", value: 60, caption: "Hairpin · final sector" },
-    { label: "Braking Stability", rating: "HIGH", value: 78, caption: "Hairpin · T14" },
-    { label: "Tyre Degradation", rating: "MODERATE", value: 62, caption: "Front-left stress T1–3" },
-    { label: "High-speed commitment", rating: "MODERATE", value: 55, caption: "Open runoff mostly" },
+    { label: "Engine Power", rating: "MODERATE", value: 45, caption: "55% flat · 318 km/h" },
+    { label: "Aero Efficiency", rating: "MODERATE", value: 58, caption: "Downforce 3/5" },
+    { label: "Mechanical Grip", rating: "MODERATE", value: 58, caption: "Traction 3/5 · T6 · T14" },
+    { label: "Braking Stability", rating: "MODERATE", value: 61, caption: "Brembo 3/5 · T14 318 to 72" },
+    { label: "Tyre Degradation", rating: "HIGH", value: 78, caption: "Stress 4/5 · C2/C3/C4" },
+    { label: "High-speed commitment", rating: "HIGH", value: 74, caption: "Lateral 4/5 · T7–T8 esses" },
   ],
 };
 
@@ -1174,14 +1175,14 @@ export const miamiStats: VenueStats = {
 
 export const miamiFingerprint: VenueFingerprint = {
   venueId: "miami",
-  description: "Stop-go stadium section plus medium-speed sweeps — braking and traction biased.",
+  description: "A mid-range lap — three heavy stops at T1, T11 and T17, on a surface that gains grip fast (Pirelli 5/5).",
   bars: [
-    { label: "Engine Power", rating: "MODERATE", value: 60, caption: "DRS straights" },
-    { label: "Aero Efficiency", rating: "HIGH", value: 72, caption: "Medium downforce" },
-    { label: "Mechanical Grip", rating: "HIGH", value: 78, caption: "Stadium traction" },
-    { label: "Braking Stability", rating: "HIGH", value: 80, caption: "T17 · chicane stops" },
-    { label: "Tyre Degradation", rating: "MODERATE", value: 58, caption: "Thermal management" },
-    { label: "High-speed commitment", rating: "MODERATE", value: 62, caption: "Mixed runoff · walls" },
+    { label: "Engine Power", rating: "HIGH", value: 65, caption: "61.4% flat · 340 km/h" },
+    { label: "Aero Efficiency", rating: "MODERATE", value: 58, caption: "Downforce 3/5" },
+    { label: "Mechanical Grip", rating: "MODERATE", value: 53, caption: "Traction 3/5 · T14–T16" },
+    { label: "Braking Stability", rating: "MODERATE", value: 58, caption: "Brembo 3/5 · T17 319 to 76" },
+    { label: "Tyre Degradation", rating: "MODERATE", value: 55, caption: "Stress 3/5 · C3/C4/C5" },
+    { label: "High-speed commitment", rating: "MODERATE", value: 58, caption: "T4–T8 esses · 4.6 g" },
   ],
 };
 
@@ -1251,14 +1252,14 @@ export const imolaStats: VenueStats = {
 
 export const imolaFingerprint: VenueFingerprint = {
   venueId: "imola",
-  description: "Old-school narrow rhythm — commitment and mechanical precision over overtaking power.",
+  description: "A flowing old-school lap — 66.5% flat out, light tyre wear, and medium braking into Tosa and Rivazza.",
   bars: [
-    { label: "Engine Power", rating: "MODERATE", value: 58, caption: "Short straights" },
-    { label: "Aero Efficiency", rating: "HIGH", value: 84, caption: "High downforce needed" },
-    { label: "Mechanical Grip", rating: "HIGH", value: 86, caption: "Variante Alta · kerbs" },
-    { label: "Braking Stability", rating: "HIGH", value: 78, caption: "Tosa · Rivazza" },
-    { label: "Tyre Degradation", rating: "MODERATE", value: 55, caption: "Low abrasion historic asphalt" },
-    { label: "High-speed commitment", rating: "HIGH", value: 84, caption: "Narrow · limited runoff" },
+    { label: "Engine Power", rating: "HIGH", value: 66, caption: "66.5% flat · 323 km/h" },
+    { label: "Aero Efficiency", rating: "MODERATE", value: 58, caption: "Downforce 3/5" },
+    { label: "Mechanical Grip", rating: "MODERATE", value: 45, caption: "Traction 2/5 · grip 2/5" },
+    { label: "Braking Stability", rating: "MODERATE", value: 58, caption: "Brembo 3/5 · Rivazza 292 to 122" },
+    { label: "Tyre Degradation", rating: "MODERATE", value: 52, caption: "Stress 3/5 · C4/C5/C6" },
+    { label: "High-speed commitment", rating: "MODERATE", value: 60, caption: "Piratella · Acque Minerali" },
   ],
 };
 
@@ -1332,14 +1333,14 @@ export const montrealStats: VenueStats = {
 
 export const montrealFingerprint: VenueFingerprint = {
   venueId: "montreal",
-  description: "Heavy braking into the Wall of Champions and power on the island straights.",
+  description: "Stop-go braking and traction — six heavy stops per lap and Pirelli's lowest downforce and lateral ratings.",
   bars: [
-    { label: "Engine Power", rating: "HIGH", value: 84, caption: "Long island straights" },
-    { label: "Aero Efficiency", rating: "MODERATE", value: 58, caption: "Low–medium wing" },
-    { label: "Mechanical Grip", rating: "MODERATE", value: 52, caption: "Hairpin traction" },
-    { label: "Braking Stability", rating: "CRITICAL", value: 93, caption: "Wall of Champions" },
-    { label: "Tyre Degradation", rating: "MODERATE", value: 50, caption: "Stop-go longitudinal" },
-    { label: "High-speed commitment", rating: "HIGH", value: 82, caption: "Walls · chicane exit" },
+    { label: "Engine Power", rating: "HIGH", value: 72, caption: "67.9% flat · 332 km/h" },
+    { label: "Aero Efficiency", rating: "MODERATE", value: 64, caption: "Downforce 1/5 · low drag" },
+    { label: "Mechanical Grip", rating: "HIGH", value: 81, caption: "Traction 4/5 · hairpin exit" },
+    { label: "Braking Stability", rating: "HIGH", value: 82, caption: "Brembo 4/5 · hairpin 292 to 69" },
+    { label: "Tyre Degradation", rating: "MODERATE", value: 49, caption: "Stress 3/5 · C4/C5/C6" },
+    { label: "High-speed commitment", rating: "LOW", value: 24, caption: "Lateral 1/5 · chicanes only" },
   ],
 };
 
@@ -1414,14 +1415,14 @@ export const barcelonaStats: VenueStats = {
 
 export const barcelonaFingerprint: VenueFingerprint = {
   venueId: "barcelona",
-  description: "Aero-sensitive test venue — high-speed T3 and tyre energy across a technical lap.",
+  description: "Tyre energy and long fast corners define Barcelona — Pirelli's maximum tyre-stress and lateral ratings.",
   bars: [
-    { label: "Engine Power", rating: "MODERATE", value: 60, caption: "Main straight DRS" },
-    { label: "Aero Efficiency", rating: "CRITICAL", value: 94, caption: "T3 aero platform" },
-    { label: "Mechanical Grip", rating: "HIGH", value: 78, caption: "Final sector technical" },
-    { label: "Braking Stability", rating: "MODERATE", value: 55, caption: "T1 · T10" },
-    { label: "Tyre Degradation", rating: "HIGH", value: 86, caption: "High energy · abrasive" },
-    { label: "High-speed commitment", rating: "HIGH", value: 78, caption: "T9 flat commitment" },
+    { label: "Engine Power", rating: "MODERATE", value: 64, caption: "63.7% flat · 328 km/h" },
+    { label: "Aero Efficiency", rating: "HIGH", value: 76, caption: "Downforce 4/5 · T3 · T9" },
+    { label: "Mechanical Grip", rating: "MODERATE", value: 58, caption: "Traction 3/5 · final sector" },
+    { label: "Braking Stability", rating: "MODERATE", value: 40, caption: "Brembo 2/5 · T10 310 to 106" },
+    { label: "Tyre Degradation", rating: "EXTREME", value: 99, caption: "Stress 5/5 · C1/C2/C3" },
+    { label: "High-speed commitment", rating: "CRITICAL", value: 93, caption: "T3 · T9 · T14 at 4.8 g" },
   ],
 };
 
@@ -1496,14 +1497,14 @@ export const hungaroringStats: VenueStats = {
 
 export const hungaroringFingerprint: VenueFingerprint = {
   venueId: "hungaroring",
-  description: "Narrow downforce track — mechanical grip and tyre temperature over engine power.",
+  description: "Maximum downforce and traction — 14 corners, one real straight, and only 54% of the lap flat out.",
   bars: [
-    { label: "Engine Power", rating: "LOW", value: 32, caption: "Short straights" },
-    { label: "Aero Efficiency", rating: "CRITICAL", value: 95, caption: "Max downforce" },
-    { label: "Mechanical Grip", rating: "EXTREME", value: 96, caption: "Continuous direction changes" },
-    { label: "Braking Stability", rating: "MODERATE", value: 55, caption: "T1 primary stop" },
-    { label: "Tyre Degradation", rating: "HIGH", value: 80, caption: "Thermal graining risk" },
-    { label: "High-speed commitment", rating: "MODERATE", value: 58, caption: "Run-off available" },
+    { label: "Engine Power", rating: "MODERATE", value: 44, caption: "54% flat · 318 km/h" },
+    { label: "Aero Efficiency", rating: "CRITICAL", value: 92, caption: "Max downforce · Pirelli 5/5" },
+    { label: "Mechanical Grip", rating: "HIGH", value: 76, caption: "Traction 4/5 · 14 corners" },
+    { label: "Braking Stability", rating: "MODERATE", value: 58, caption: "Brembo 3/5 · T1 307 to 95" },
+    { label: "Tyre Degradation", rating: "MODERATE", value: 58, caption: "Stress 3/5 · C3/C4/C5" },
+    { label: "High-speed commitment", rating: "MODERATE", value: 56, caption: "Lateral 3/5 · T4 · T11" },
   ],
 };
 
@@ -1578,14 +1579,14 @@ export const zandvoortStats: VenueStats = {
 
 export const zandvoortFingerprint: VenueFingerprint = {
   venueId: "zandvoort",
-  description: "Banked commitment corners and high downforce — unique camber demands.",
+  description: "Tyre stress on a twisting, banked lap — Pirelli's top stress rating, with light braking outside Tarzan.",
   bars: [
-    { label: "Engine Power", rating: "MODERATE", value: 52, caption: "Short straights" },
-    { label: "Aero Efficiency", rating: "HIGH", value: 86, caption: "High downforce banked" },
-    { label: "Mechanical Grip", rating: "HIGH", value: 84, caption: "Banking · camber load" },
-    { label: "Braking Stability", rating: "MODERATE", value: 58, caption: "T1 · chicane" },
-    { label: "Tyre Degradation", rating: "HIGH", value: 78, caption: "Left-side stress" },
-    { label: "High-speed commitment", rating: "HIGH", value: 78, caption: "Banked turns commit" },
+    { label: "Engine Power", rating: "MODERATE", value: 52, caption: "57% flat · 326 km/h" },
+    { label: "Aero Efficiency", rating: "HIGH", value: 76, caption: "Downforce 4/5" },
+    { label: "Mechanical Grip", rating: "MODERATE", value: 58, caption: "Traction 3/5 · banked T3" },
+    { label: "Braking Stability", rating: "MODERATE", value: 40, caption: "Brembo 2/5 · Tarzan only heavy" },
+    { label: "Tyre Degradation", rating: "CRITICAL", value: 94, caption: "Stress 5/5 · C2/C3/C4" },
+    { label: "High-speed commitment", rating: "HIGH", value: 75, caption: "Scheivlak · banked T14" },
   ],
 };
 
@@ -1659,14 +1660,14 @@ export const bakuStats: VenueStats = {
 
 export const bakuFingerprint: VenueFingerprint = {
   venueId: "baku",
-  description: "Extreme power-to-braking contrast — castle walls demand commitment.",
+  description: "Traction and braking between the walls — 90-degree corners onto straights, including the longest flat-out run of the year.",
   bars: [
-    { label: "Engine Power", rating: "EXTREME", value: 97, caption: "2.2 km main straight" },
-    { label: "Aero Efficiency", rating: "CRITICAL", value: 92, caption: "Ultra-low drag setup" },
-    { label: "Mechanical Grip", rating: "MODERATE", value: 55, caption: "Castle section technical" },
-    { label: "Braking Stability", rating: "CRITICAL", value: 94, caption: "T1 end-of-straight" },
-    { label: "Tyre Degradation", rating: "LOW", value: 40, caption: "Smooth surface · low wear" },
-    { label: "High-speed commitment", rating: "EXTREME", value: 99, caption: "Narrow castle walls" },
+    { label: "Engine Power", rating: "MODERATE", value: 64, caption: "60.8% flat · 339 km/h" },
+    { label: "Aero Efficiency", rating: "MODERATE", value: 55, caption: "Downforce 2/5 · low drag" },
+    { label: "Mechanical Grip", rating: "EXTREME", value: 97, caption: "Traction 5/5 · 90° corners" },
+    { label: "Braking Stability", rating: "HIGH", value: 79, caption: "Brembo 4/5 · 6 heavy stops" },
+    { label: "Tyre Degradation", rating: "MODERATE", value: 49, caption: "Stress 3/5 · C4/C5/C6" },
+    { label: "High-speed commitment", rating: "LOW", value: 22, caption: "Lateral 1/5 · castle walls" },
   ],
 };
 
@@ -1738,14 +1739,14 @@ export const singaporeStats: VenueStats = {
 
 export const singaporeFingerprint: VenueFingerprint = {
   venueId: "singapore",
-  description: "Night street endurance — braking, traction, and tyre management under humidity.",
+  description: "Maximum downforce and braking — 11 braking zones per lap, five of them heavy, and only 53% of the lap flat out.",
   bars: [
-    { label: "Engine Power", rating: "LOW", value: 35, caption: "Short bursts only" },
-    { label: "Aero Efficiency", rating: "HIGH", value: 82, caption: "High downforce street" },
-    { label: "Mechanical Grip", rating: "CRITICAL", value: 93, caption: "Kerbs · bumps · traction" },
-    { label: "Braking Stability", rating: "CRITICAL", value: 92, caption: "Many heavy stops" },
-    { label: "Tyre Degradation", rating: "HIGH", value: 80, caption: "Thermal · long stints" },
-    { label: "High-speed commitment", rating: "HIGH", value: 82, caption: "Walls · floodlit night" },
+    { label: "Engine Power", rating: "MODERATE", value: 41, caption: "53% flat · 316 km/h" },
+    { label: "Aero Efficiency", rating: "CRITICAL", value: 92, caption: "Max downforce · Pirelli 5/5" },
+    { label: "Mechanical Grip", rating: "HIGH", value: 76, caption: "Traction 4/5 · 19 corners" },
+    { label: "Braking Stability", rating: "HIGH", value: 82, caption: "Brembo 4/5 · T7 308 to 128" },
+    { label: "Tyre Degradation", rating: "MODERATE", value: 40, caption: "Stress 2/5 · heat, not wear" },
+    { label: "High-speed commitment", rating: "LOW", value: 38, caption: "Lateral 2/5 · few fast bends" },
   ],
 };
 
@@ -1818,14 +1819,14 @@ export const cotaStats: VenueStats = {
 
 export const cotaFingerprint: VenueFingerprint = {
   venueId: "cota",
-  description: "Elevation and blind crests — aero platform through the esses and T1 commitment.",
+  description: "High downforce and tyre load — the fast Turn 3–6 esses, then heavy stops into T1 and T12.",
   bars: [
-    { label: "Engine Power", rating: "HIGH", value: 78, caption: "Back straight DRS" },
-    { label: "Aero Efficiency", rating: "CRITICAL", value: 91, caption: "Esses aero load" },
-    { label: "Mechanical Grip", rating: "HIGH", value: 76, caption: "Stadium · elevation" },
-    { label: "Braking Stability", rating: "HIGH", value: 74, caption: "T12 · T1" },
-    { label: "Tyre Degradation", rating: "HIGH", value: 80, caption: "High energy surface" },
-    { label: "High-speed commitment", rating: "EXTREME", value: 96, caption: "Blind T1 crest · esses" },
+    { label: "Engine Power", rating: "MODERATE", value: 53, caption: "57.9% flat · 324 km/h" },
+    { label: "Aero Efficiency", rating: "HIGH", value: 76, caption: "Downforce 4/5 · esses" },
+    { label: "Mechanical Grip", rating: "HIGH", value: 76, caption: "Traction 4/5 · stadium" },
+    { label: "Braking Stability", rating: "MODERATE", value: 58, caption: "Brembo 3/5 · T12 312 to 92" },
+    { label: "Tyre Degradation", rating: "HIGH", value: 80, caption: "Stress 4/5 · C1/C3/C4" },
+    { label: "High-speed commitment", rating: "HIGH", value: 75, caption: "T3–T6 esses" },
   ],
 };
 
@@ -1897,14 +1898,14 @@ export const mexicoStats: VenueStats = {
 
 export const mexicoFingerprint: VenueFingerprint = {
   venueId: "mexico",
-  description: "High altitude cuts downforce — power and braking into the stadium.",
+  description: "Thin air above 2,200 m — maximum wing still gives little downforce, so cars hit 351 km/h yet spend only 45.6% of the lap flat out.",
   bars: [
-    { label: "Engine Power", rating: "CRITICAL", value: 92, caption: "Altitude · long straight" },
-    { label: "Aero Efficiency", rating: "HIGH", value: 78, caption: "Thin air · wing trade-off" },
-    { label: "Mechanical Grip", rating: "MODERATE", value: 58, caption: "Stadium section" },
-    { label: "Braking Stability", rating: "HIGH", value: 84, caption: "T1 · T13" },
-    { label: "Tyre Degradation", rating: "MODERATE", value: 55, caption: "Lower aero load wear" },
-    { label: "High-speed commitment", rating: "HIGH", value: 84, caption: "Peraltada overpass" },
+    { label: "Engine Power", rating: "MODERATE", value: 46, caption: "45.6% flat · 351 km/h top" },
+    { label: "Aero Efficiency", rating: "CRITICAL", value: 92, caption: "Max wing · thin air" },
+    { label: "Mechanical Grip", rating: "MODERATE", value: 63, caption: "Traction 3/5 · stadium" },
+    { label: "Braking Stability", rating: "HIGH", value: 76, caption: "Brembo 4/5" },
+    { label: "Tyre Degradation", rating: "LOW", value: 39, caption: "Stress 2/5 · C2/C4/C5" },
+    { label: "High-speed commitment", rating: "LOW", value: 36, caption: "Lateral 2/5 · sector 2 esses" },
   ],
 };
 
@@ -1975,14 +1976,14 @@ export const lasVegasStats: VenueStats = {
 
 export const lasVegasFingerprint: VenueFingerprint = {
   venueId: "las-vegas",
-  description: "Strip power circuit — cold-tyre braking and wall commitment at night.",
+  description: "Straight-line speed — 350 km/h into T14 at the end of the Strip, minimum downforce and Pirelli's lowest asphalt grip.",
   bars: [
-    { label: "Engine Power", rating: "EXTREME", value: 96, caption: "Strip · 340+ km/h" },
-    { label: "Aero Efficiency", rating: "CRITICAL", value: 93, caption: "Ultra-low drag" },
-    { label: "Mechanical Grip", rating: "MODERATE", value: 48, caption: "Few technical corners" },
-    { label: "Braking Stability", rating: "HIGH", value: 82, caption: "Heavy T14 · cold brakes" },
-    { label: "Tyre Degradation", rating: "LOW", value: 38, caption: "Cold night · low abrasion" },
-    { label: "High-speed commitment", rating: "HIGH", value: 82, caption: "Strip walls at speed" },
+    { label: "Engine Power", rating: "HIGH", value: 77, caption: "66% flat · 350 km/h" },
+    { label: "Aero Efficiency", rating: "HIGH", value: 67, caption: "Downforce 1/5 · low drag" },
+    { label: "Mechanical Grip", rating: "MODERATE", value: 50, caption: "Grip 1/5 · traction 2/5" },
+    { label: "Braking Stability", rating: "MODERATE", value: 58, caption: "Brembo 3/5 · T14 350 to 102" },
+    { label: "Tyre Degradation", rating: "HIGH", value: 73, caption: "Stress 4/5 · C3/C4/C5" },
+    { label: "High-speed commitment", rating: "MODERATE", value: 42, caption: "Lateral 2/5 · T17 flat" },
   ],
 };
 
@@ -2053,14 +2054,14 @@ export const qatarStats: VenueStats = {
 
 export const qatarFingerprint: VenueFingerprint = {
   venueId: "qatar",
-  description: "Fast flowing desert lap — sustained high-speed load and tyre stress.",
+  description: "Sustained fast corners — Pirelli's maximum lateral and tyre-stress ratings, with just one heavy braking zone.",
   bars: [
-    { label: "Engine Power", rating: "HIGH", value: 80, caption: "Long flowing sectors" },
-    { label: "Aero Efficiency", rating: "HIGH", value: 84, caption: "Medium-high wing" },
-    { label: "Mechanical Grip", rating: "HIGH", value: 72, caption: "Medium-speed sequence" },
-    { label: "Braking Stability", rating: "MODERATE", value: 55, caption: "Few heavy stops" },
-    { label: "Tyre Degradation", rating: "CRITICAL", value: 95, caption: "Extreme lateral energy" },
-    { label: "High-speed commitment", rating: "HIGH", value: 88, caption: "Flat fast corners 290+" },
+    { label: "Engine Power", rating: "HIGH", value: 71, caption: "68.4% flat · 327 km/h" },
+    { label: "Aero Efficiency", rating: "HIGH", value: 76, caption: "Downforce 4/5" },
+    { label: "Mechanical Grip", rating: "MODERATE", value: 53, caption: "Traction 3/5" },
+    { label: "Braking Stability", rating: "MODERATE", value: 58, caption: "Brembo 3/5 · 1 heavy stop" },
+    { label: "Tyre Degradation", rating: "CRITICAL", value: 93, caption: "Stress 5/5 · C1/C2/C3" },
+    { label: "High-speed commitment", rating: "EXTREME", value: 95, caption: "Lateral 5/5 · T12–T14" },
   ],
 };
 

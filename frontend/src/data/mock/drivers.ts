@@ -332,13 +332,13 @@ export const leclerStats: DriverStats = {
   driverId: "leclerc",
   series: "f1",
   titles: 0,
-  wins: 8,
+  wins: 9,
   poles: 27,
-  podiums: 52,
+  podiums: 54,
   careerSpan: "2018–present",
-  racesEntered: 174,
-  fastestLaps: 8,
-  pointsScored: 1721,
+  racesEntered: 189,
+  fastestLaps: 13,
+  pointsScored: 1863,
 };
 
 export const leclerSignature: DrivingSignature = {
@@ -1025,13 +1025,13 @@ export const hamiltonStats: DriverStats = {
   driverId: "hamilton",
   series: "f1",
   titles: 7,
-  wins: 105,
+  wins: 106,
   poles: 104,
-  podiums: 203,
+  podiums: 208,
   careerSpan: "2007–present",
-  racesEntered: 383,
-  fastestLaps: 67,
-  pointsScored: 5059,
+  racesEntered: 396,
+  fastestLaps: 69,
+  pointsScored: 5232.5,
 };
 
 export const hamiltonEras: DriverEra[] = [
@@ -1071,12 +1071,12 @@ export const hamiltonEras: DriverEra[] = [
     driverId: "hamilton",
     teamId: "ferrari",
     teamName: "Ferrari",
-    seasons: "2025–",
-    highlights: ["Joined Ferrari for 2025, seeking 8th WDC"],
+    seasons: "2025–present",
+    highlights: ["Joined Ferrari for 2025, seeking 8th WDC", "First Ferrari win: 2026 Barcelona GP"],
     titles: 0,
-    wins: 0,
+    wins: 1,
     teamLiveryHex: "#DC0000",
-    statLabel: "ONGOING",
+    statLabel: "1W",
     imageUrl: "/images/drivers/hamilton-ferrari-japan-2025.jpg",
   },
 ];
@@ -1202,13 +1202,13 @@ export const verstappenStats: DriverStats = {
   driverId: "max_verstappen",
   series: "f1",
   titles: 4,
-  wins: 71,
-  poles: 48,
-  podiums: 127,
+  wins: 72,
+  poles: 49,
+  podiums: 135,
   careerSpan: "2015–present",
-  racesEntered: 236,
-  fastestLaps: 37,
-  pointsScored: 3456,
+  racesEntered: 249,
+  fastestLaps: 38,
+  pointsScored: 3632.5,
 };
 
 export const verstappenEras: DriverEra[] = [
@@ -1224,7 +1224,7 @@ export const verstappenEras: DriverEra[] = [
     titles: 0,
     wins: 0,
     teamLiveryHex: "#C00000",
-    statLabel: "1W",
+    statLabel: "DEBUT AT 17",
     imageUrl: "/images/drivers/verstappen-tororosso-2015.jpg",
   },
   {
@@ -1236,10 +1236,10 @@ export const verstappenEras: DriverEra[] = [
       "4× WDC: 2021, 2022, 2023, 2024",
       "2023: 19 wins — most in a single F1 season",
       "2022: 15 wins, first dominant championship",
-      "71 wins from Red Bull (as of Japan 2026)",
+      "72 wins with Red Bull (through round 16, 2026)",
     ],
     titles: 4,
-    wins: 71,
+    wins: 72,
     teamLiveryHex: "#1E3A8A",
     teamAccentHex: "#FFD700",
     statLabel: "4× WDC",
@@ -1855,7 +1855,7 @@ export const bortoletoScoutingReport: ScoutingReport = {
 
 export const leclerEras: DriverEra[] = [
   { driverId:"leclerc", teamId:"sauber", teamName:"Sauber", seasons:"2018", highlights:["F1 debut season","P6 Bahrain — shock points haul"], titles:0, wins:0, teamLiveryHex:"#900000", statLabel:"P13", imageUrl:"/images/drivers/leclerc-china-2018.jpg" },
-  { driverId:"leclerc", teamId:"ferrari", teamName:"Ferrari", seasons:"2019–present", highlights:["2 wins in rookie Ferrari season (Spa, Monza)","2022 WDC runner-up — 3 wins, 9 poles","Most F1 poles without a title in modern era"], titles:0, wins:10, teamLiveryHex:"#DC0000", teamAccentHex:"#FFD700", statLabel:"10W · 25P", imageUrl:"/images/drivers/leclerc-ferrari-2024.jpg" },
+  { driverId:"leclerc", teamId:"ferrari", teamName:"Ferrari", seasons:"2019–present", highlights:["2 wins in rookie Ferrari season (Spa, Monza)","2022 WDC runner-up — 3 wins, 9 poles","Most F1 poles without a title in modern era"], titles:0, wins:9, teamLiveryHex:"#DC0000", teamAccentHex:"#FFD700", statLabel:"9W · 27P", imageUrl:"/images/drivers/leclerc-ferrari-2024.jpg" },
 ]
 
 export const leclerReelSlides: ReelSlide[] = [
@@ -1890,10 +1890,10 @@ export const norris: Driver = {
   portraitUrl: '/images/drivers/norris-f1-portrait-2026.webp',
 }
 
-export const norrisStats: DriverStats = { driverId:"norris", series:"f1", titles:0, wins:8, poles:20, podiums:44, careerSpan:"2019–present", racesEntered:130, fastestLaps:7, pointsScored:1085 }
+export const norrisStats: DriverStats = { driverId:"norris", series:"f1", titles:1, wins:13, poles:19, podiums:49, careerSpan:"2019–present", racesEntered:168, fastestLaps:20, pointsScored:1618 }
 
 export const norrisEras: DriverEra[] = [
-  { driverId:"norris", teamId:"mclaren", teamName:"McLaren", seasons:"2019–present", highlights:["First win Miami 2024","4 wins in 2024 season","2024 WDC runner-up behind Verstappen"], titles:0, wins:8, teamLiveryHex:"#FF8000", teamAccentHex:"#FFD700", statLabel:"8W · 20P", imageUrl:"/images/drivers/norris-mclaren-2024.jpg" },
+  { driverId:"norris", teamId:"mclaren", teamName:"McLaren", seasons:"2019–present", highlights:["First win Miami 2024","4 wins in 2024 season","2025 world champion — 7 wins"], titles:1, wins:13, teamLiveryHex:"#FF8000", teamAccentHex:"#FFD700", statLabel:"13W · 19P", imageUrl:"/images/drivers/norris-mclaren-2024.jpg" },
 ]
 
 export const norrisSignature: DrivingSignature = {
@@ -1941,10 +1941,10 @@ export const piastriF1: Driver = {
   portraitUrl: '/images/drivers/piastri-f1-portrait-2026.webp',
 }
 
-export const piastriF1Stats: DriverStats = { driverId:"piastri", series:"f1", titles:0, wins:9, poles:6, podiums:27, careerSpan:"2023–present", racesEntered:73, fastestLaps:9, pointsScored:820 }
+export const piastriF1Stats: DriverStats = { driverId:"piastri", series:"f1", titles:0, wins:9, poles:6, podiums:28, careerSpan:"2023–present", racesEntered:86, fastestLaps:9, pointsScored:927 }
 
 export const piastriF1Eras: DriverEra[] = [
-  { driverId:"piastri", teamId:"mclaren", teamName:"McLaren", seasons:"2023–present", highlights:["First win Hungary 2024","First pole Singapore 2023","3 wins in 2024 season"], titles:0, wins:7, teamLiveryHex:"#FF8000", teamAccentHex:"#FFD700", statLabel:"7W · 6P", imageUrl:"/images/drivers/piastri-mclaren-2024.jpg" },
+  { driverId:"piastri", teamId:"mclaren", teamName:"McLaren", seasons:"2023–present", highlights:["First win Hungary 2024","First pole China 2025","2 wins in 2024, 7 in 2025"], titles:0, wins:9, teamLiveryHex:"#FF8000", teamAccentHex:"#FFD700", statLabel:"9W · 6P", imageUrl:"/images/drivers/piastri-mclaren-2024.jpg" },
 ]
 
 export const piastriF1Signature: DrivingSignature = {
@@ -1992,11 +1992,11 @@ export const russellF1: Driver = {
   portraitUrl: '/images/drivers/russell-f1-portrait-2026.webp',
 }
 
-export const russellF1Stats: DriverStats = { driverId:"russell", series:"f1", titles:0, wins:6, poles:8, podiums:26, careerSpan:"2019–present", racesEntered:155, fastestLaps:11, pointsScored:1096 }
+export const russellF1Stats: DriverStats = { driverId:"russell", series:"f1", titles:0, wins:8, poles:12, podiums:32, careerSpan:"2019–present", racesEntered:168, fastestLaps:13, pointsScored:1269 }
 
 export const russellF1Eras: DriverEra[] = [
   { driverId:"russell", teamId:"williams", teamName:"Williams", seasons:"2019–2021", highlights:["Quali record vs teammates: 36-0","P9 in soaking Nürburgring 2020","Sub debut Sakhir 2020 — led race"], titles:0, wins:0, teamLiveryHex:"#005AFF", statLabel:"36-0 QUALI", imageUrl:"/images/drivers/russell-williams-barcelona-2020.jpg" },
-  { driverId:"russell", teamId:"mercedes", teamName:"Mercedes", seasons:"2022–present", highlights:["First win Brazil 2022","4 wins through 2025","2 poles in debut season"], titles:0, wins:4, teamLiveryHex:"#00D2BE", teamAccentHex:"#FFD700", statLabel:"4W · 8P", imageUrl:"/images/drivers/russell-mercedes-2022.jpg" },
+  { driverId:"russell", teamId:"mercedes", teamName:"Mercedes", seasons:"2022–present", highlights:["First win Brazil 2022","8 wins with Mercedes (5 through 2025)","First pole Hungary 2022"], titles:0, wins:8, teamLiveryHex:"#00D2BE", teamAccentHex:"#FFD700", statLabel:"8W · 12P", imageUrl:"/images/drivers/russell-mercedes-2022.jpg" },
 ]
 
 export const russellF1Signature: DrivingSignature = {
@@ -2044,10 +2044,10 @@ export const antonelli: Driver = {
   portraitUrl: '/images/drivers/antonelli-f1-portrait-2026.webp',
 }
 
-export const antonelliStats: DriverStats = { driverId:"antonelli", series:"f1", titles:0, wins:0, poles:1, podiums:3, careerSpan:"2025–present", racesEntered:25, fastestLaps:1, pointsScored:62 }
+export const antonelliStats: DriverStats = { driverId:"antonelli", series:"f1", titles:0, wins:8, poles:6, podiums:16, careerSpan:"2025–present", racesEntered:40, fastestLaps:10, pointsScored:470 }
 
 export const antonelliEras: DriverEra[] = [
-  { driverId:"antonelli", teamId:"mercedes", teamName:"Mercedes", seasons:"2025–present", highlights:["Youngest driver on 2025 grid","First pole at Imola 2025","Race podium debut"], titles:0, wins:0, teamLiveryHex:"#00D2BE", statLabel:"ROOKIE", imageUrl:"/images/drivers/antonelli-mercedes-2025.jpg" },
+  { driverId:"antonelli", teamId:"mercedes", teamName:"Mercedes", seasons:"2025–present", highlights:["Youngest driver on 2025 grid","First win and first pole: China 2026","8 wins in 2026 through round 16"], titles:0, wins:8, teamLiveryHex:"#00D2BE", statLabel:"8W · 6P", imageUrl:"/images/drivers/antonelli-mercedes-2025.jpg" },
 ]
 
 export const antonelliSignature: DrivingSignature = {
@@ -2095,15 +2095,15 @@ export const alonso: Driver = {
   portraitUrl: '/images/drivers/alonso-f1-portrait-2026.webp',
 }
 
-export const alonsoStats: DriverStats = { driverId:"alonso", series:"f1", titles:2, wins:32, poles:22, podiums:106, careerSpan:"2001–present", racesEntered:403, fastestLaps:23, pointsScored:2267 }
+export const alonsoStats: DriverStats = { driverId:"alonso", series:"f1", titles:2, wins:32, poles:22, podiums:106, careerSpan:"2001–present", racesEntered:444, fastestLaps:26, pointsScored:2400 }
 
 export const alonsoEras: DriverEra[] = [
-  { driverId:"alonso", teamId:"renault", teamName:"Renault", seasons:"2003–2006", highlights:["2× world champion (2005, 2006)","Youngest champion in history at the time","51 starts, 17 wins with Renault"], titles:2, wins:17, teamLiveryHex:"#FFD700", teamAccentHex:"#FFD700", statLabel:"2× WDC", imageUrl:"/images/drivers/alonso-renault-2005.jpg" },
+  { driverId:"alonso", teamId:"renault", teamName:"Renault", seasons:"2003–2006", highlights:["2× world champion (2005, 2006)","Youngest champion in history at the time","70 starts, 15 wins, 15 poles"], titles:2, wins:15, teamLiveryHex:"#FFD700", teamAccentHex:"#FFD700", statLabel:"2× WDC", imageUrl:"/images/drivers/alonso-renault-2005.jpg" },
   { driverId:"alonso", teamId:"mclaren", teamName:"McLaren", seasons:"2007", highlights:["P3 championship on McLaren debut","Controversial Hamilton-Alonso rivalry"], titles:0, wins:4, teamLiveryHex:"#FF8000", statLabel:"4W", imageUrl:"/images/drivers/alonso-mclaren-2007.jpg" },
   { driverId:"alonso", teamId:"renault-2", teamName:"Renault (2nd spell)", seasons:"2008–2009", highlights:["2 wins back at Renault"], titles:0, wins:2, teamLiveryHex:"#FFD700", statLabel:"2W", imageUrl:"/images/drivers/alonso-renault-2008.jpg" },
   { driverId:"alonso", teamId:"ferrari", teamName:"Ferrari", seasons:"2010–2014", highlights:["2 WDC near-misses (2010, 2012)","11 wins with Ferrari","Extracted maximum from non-dominant machinery"], titles:0, wins:11, teamLiveryHex:"#DC0000", statLabel:"11W · 2× P2", imageUrl:"/images/drivers/alonso-ferrari-2012.jpg" },
   { driverId:"alonso", teamId:"mclaren-2", teamName:"McLaren-Honda", seasons:"2015–2018", highlights:["Engine collaboration that failed","Indy 500 attempts","Performed above machinery consistently"], titles:0, wins:0, teamLiveryHex:"#FF8000", statLabel:"0W — fought for scraps", imageUrl:"/images/drivers/alonso-mclaren-honda-2016.jpg" },
-  { driverId:"alonso", teamId:"alpine", teamName:"Alpine", seasons:"2021–2022", highlights:["1 win — Hungary 2021","Consistent top-5 presence with Alpine"], titles:0, wins:1, teamLiveryHex:"#0090FF", statLabel:"1W", imageUrl:"/images/drivers/alonso-alpine-2021.jpg" },
+  { driverId:"alonso", teamId:"alpine", teamName:"Alpine", seasons:"2021–2022", highlights:["Podium at Qatar 2021 (P3)","Consistent top-5 presence with Alpine"], titles:0, wins:0, teamLiveryHex:"#0090FF", statLabel:"1 POD", imageUrl:"/images/drivers/alonso-alpine-2021.jpg" },
   { driverId:"alonso", teamId:"aston_martin", teamName:"Aston Martin", seasons:"2023–present", highlights:["8 podiums in debut Aston Martin season 2023","P4 championship in 2023"], titles:0, wins:0, teamLiveryHex:"#006F62", statLabel:"8 PODS · P4", imageUrl:"/images/drivers/alonso-aston-martin-2023.jpg" },
 ]
 
@@ -2152,10 +2152,10 @@ export const stroll: Driver = {
   portraitUrl: '/images/drivers/stroll-f1-portrait-2026.webp',
 }
 
-export const strollStats: DriverStats = { driverId:"stroll", series:"f1", titles:0, wins:0, poles:3, podiums:12, careerSpan:"2017–present", racesEntered:165, fastestLaps:0, pointsScored:298 }
+export const strollStats: DriverStats = { driverId:"stroll", series:"f1", titles:0, wins:0, poles:1, podiums:3, careerSpan:"2017–present", racesEntered:207, fastestLaps:0, pointsScored:325 }
 
 export const strollEras: DriverEra[] = [
-  { driverId:"stroll", teamId:"williams", teamName:"Williams", seasons:"2017", highlights:["Youngest Canadian to score F1 points","Podium debut in Baku 2017"], titles:0, wins:0, teamLiveryHex:"#005AFF", statLabel:"P2 BAKU", imageUrl:"/images/drivers/stroll-monza-2017.jpg" },
+  { driverId:"stroll", teamId:"williams", teamName:"Williams", seasons:"2017", highlights:["Youngest Canadian to score F1 points","Podium debut in Baku 2017"], titles:0, wins:0, teamLiveryHex:"#005AFF", statLabel:"P3 BAKU", imageUrl:"/images/drivers/stroll-monza-2017.jpg" },
   { driverId:"stroll", teamId:"racing_point", teamName:"Force India / Racing Point", seasons:"2018–2020", highlights:["Pole Monza 2020 (wet)","Pole Turkey 2020","2 podiums Racing Point"], titles:0, wins:0, teamLiveryHex:"#FF80C7", statLabel:"3 POLES", imageUrl:"/images/drivers/stroll-hungary.jpg" },
   { driverId:"stroll", teamId:"aston_martin", teamName:"Aston Martin", seasons:"2021–present", highlights:["Pole position Baku 2021","Multiple top-5 finishes 2023"], titles:0, wins:0, teamLiveryHex:"#006F62", statLabel:"1P · AM", imageUrl:"/images/drivers/stroll-austria-2023.jpg" },
 ]
@@ -2205,7 +2205,7 @@ export const gasly: Driver = {
   portraitUrl: '/images/drivers/gasly-f1-portrait-2026.webp',
 }
 
-export const gaslyStats: DriverStats = { driverId:"gasly", series:"f1", titles:0, wins:1, poles:0, podiums:5, careerSpan:"2017–present", racesEntered:179, fastestLaps:3, pointsScored:459 }
+export const gaslyStats: DriverStats = { driverId:"gasly", series:"f1", titles:0, wins:1, poles:1, podiums:5, careerSpan:"2017–present", racesEntered:194, fastestLaps:3, pointsScored:499 }
 
 export const gaslyEras: DriverEra[] = [
   { driverId:"gasly", teamId:"toro_rosso", teamName:"Toro Rosso", seasons:"2017–2018", highlights:["F1 debut Bahrain 2017","Points score in F1 rookie season"], titles:0, wins:0, teamLiveryHex:"#C00000", statLabel:"F1 DEBUT", imageUrl:"/images/drivers/gasly-toro-rosso-2017.jpg" },
@@ -2259,10 +2259,10 @@ export const colapinto: Driver = {
   portraitUrl: '/images/drivers/colapinto-f1-portrait-2026.webp',
 }
 
-export const colapintoStats: DriverStats = { driverId:"colapinto", series:"f1", titles:0, wins:0, poles:0, podiums:0, careerSpan:"2024–present", racesEntered:22, fastestLaps:0, pointsScored:11 }
+export const colapintoStats: DriverStats = { driverId:"colapinto", series:"f1", titles:0, wins:0, poles:0, podiums:0, careerSpan:"2024–present", racesEntered:43, fastestLaps:0, pointsScored:32 }
 
 export const colapintoEras: DriverEra[] = [
-  { driverId:"colapinto", teamId:"williams", teamName:"Williams", seasons:"2024", highlights:["Mid-season debut replacing Sargeant","P6 Singapore 2024 — breakthrough result","First Argentine driver since 2001"], titles:0, wins:0, teamLiveryHex:"#005AFF", statLabel:"P6 SGP", imageUrl:"/images/drivers/colapinto-williams-2024.jpg" },
+  { driverId:"colapinto", teamId:"williams", teamName:"Williams", seasons:"2024", highlights:["Mid-season debut replacing Sargeant","P8 Baku 2024 — first points","First Argentine driver since 2001"], titles:0, wins:0, teamLiveryHex:"#005AFF", statLabel:"P8 BAKU", imageUrl:"/images/drivers/colapinto-williams-2024.jpg" },
   { driverId:"colapinto", teamId:"alpine", teamName:"Alpine", seasons:"2025–present", highlights:["Full-season contract 2026","Argentina following his every race"], titles:0, wins:0, teamLiveryHex:"#0090FF", statLabel:"FULL SEASON", imageUrl:"/images/drivers/colapinto-alpine-2025.jpg" },
 ]
 
@@ -2311,7 +2311,7 @@ export const albon: Driver = {
   portraitUrl: '/images/drivers/albon-f1-portrait-2026.webp',
 }
 
-export const albonStats: DriverStats = { driverId:"albon", series:"f1", titles:0, wins:0, poles:0, podiums:2, careerSpan:"2019–present", racesEntered:112, fastestLaps:1, pointsScored:258 }
+export const albonStats: DriverStats = { driverId:"albon", series:"f1", titles:0, wins:0, poles:0, podiums:2, careerSpan:"2019–present", racesEntered:145, fastestLaps:1, pointsScored:318 }
 
 export const albonEras: DriverEra[] = [
   { driverId:"albon", teamId:"toro_rosso", teamName:"Toro Rosso / Red Bull", seasons:"2019–2020", highlights:["Promoted to Red Bull mid-2019","2 podiums (Bahrain P3, Abu Dhabi P3)","Released after 2020 season"], titles:0, wins:0, teamLiveryHex:"#1E3A8A", statLabel:"2 PODS", imageUrl:"/images/drivers/albon-redbull-2020.jpg" },
@@ -2363,14 +2363,14 @@ export const sainz: Driver = {
   portraitUrl: '/images/drivers/sainz-f1-portrait-2026.webp',
 }
 
-export const sainzStats: DriverStats = { driverId:"sainz", series:"f1", titles:0, wins:4, poles:6, podiums:28, careerSpan:"2015–present", racesEntered:198, fastestLaps:5, pointsScored:1166 }
+export const sainzStats: DriverStats = { driverId:"sainz", series:"f1", titles:0, wins:4, poles:6, podiums:29, careerSpan:"2015–present", racesEntered:248, fastestLaps:4, pointsScored:1343.5 }
 
 export const sainzEras: DriverEra[] = [
   { driverId:"sainz", teamId:"toro_rosso", teamName:"Toro Rosso", seasons:"2015–2017", highlights:["Outstanding debut year 2015","Points on talent not machinery"], titles:0, wins:0, teamLiveryHex:"#C00000", statLabel:"DEBUT ERA", imageUrl:"/images/drivers/sainz-toro-rosso-2015.jpg" },
   { driverId:"sainz", teamId:"renault", teamName:"Renault", seasons:"2017–2018", highlights:["Podium debut Bahrain 2018 (!)","Mid-grid extraction master"], titles:0, wins:0, teamLiveryHex:"#FFD700", statLabel:"1 POD", imageUrl:"/images/drivers/sainz-renault-2018.jpg" },
   { driverId:"sainz", teamId:"mclaren", teamName:"McLaren", seasons:"2019–2020", highlights:["Consistent P5 finishes","Dragged McLaren toward top 5"], titles:0, wins:0, teamLiveryHex:"#FF8000", statLabel:"TOP 5", imageUrl:"/images/drivers/sainz-mclaren-2019.jpg" },
-  { driverId:"sainz", teamId:"ferrari", teamName:"Ferrari", seasons:"2021–2024", highlights:["First win Silverstone 2022","Singapore 2023 masterclass","Melbourne 2024 win"], titles:0, wins:3, teamLiveryHex:"#DC0000", teamAccentHex:"#FFD700", statLabel:"3W · 6P", imageUrl:"/images/drivers/sainz-italy-2023.jpg" },
-  { driverId:"sainz", teamId:"williams", teamName:"Williams", seasons:"2025–present", highlights:["Elevated Williams to mid-field force","First win for Williams in decades"], titles:0, wins:1, teamLiveryHex:"#005AFF", statLabel:"WIL W", imageUrl:"/images/drivers/sainz-austria-2025.jpg" },
+  { driverId:"sainz", teamId:"ferrari", teamName:"Ferrari", seasons:"2021–2024", highlights:["First win Silverstone 2022","Singapore 2023 masterclass","Melbourne and Mexico City wins in 2024"], titles:0, wins:4, teamLiveryHex:"#DC0000", teamAccentHex:"#FFD700", statLabel:"4W · 6P", imageUrl:"/images/drivers/sainz-italy-2023.jpg" },
+  { driverId:"sainz", teamId:"williams", teamName:"Williams", seasons:"2025–present", highlights:["Elevated Williams to mid-field force","Podiums at Baku and Qatar 2025"], titles:0, wins:0, teamLiveryHex:"#005AFF", statLabel:"2 PODS", imageUrl:"/images/drivers/sainz-austria-2025.jpg" },
 ]
 
 export const sainzSignature: DrivingSignature = {
@@ -2410,7 +2410,7 @@ export const sainzScoutingReport: ScoutingReport = {
 
 /* ─── Bearman F1 ───────────────────────────────────────────────────────────── */
 
-export const bearmanF1Stats: DriverStats = { driverId:"bearman", series:"f1", titles:0, wins:0, poles:0, podiums:0, careerSpan:"2024–present", racesEntered:30, fastestLaps:0, pointsScored:62 }
+export const bearmanF1Stats: DriverStats = { driverId:"bearman", series:"f1", titles:0, wins:0, poles:0, podiums:0, careerSpan:"2024–present", racesEntered:43, fastestLaps:0, pointsScored:68 }
 
 export const bearmanF1Signature: DrivingSignature = {
   driverId:"bearman", series:"f1",
@@ -2457,7 +2457,7 @@ export const ocon: Driver = {
   portraitUrl: '/images/drivers/ocon-f1-portrait-2026.webp',
 }
 
-export const oconStats: DriverStats = { driverId:"ocon", series:"f1", titles:0, wins:1, poles:0, podiums:4, careerSpan:"2016–present", racesEntered:170, fastestLaps:2, pointsScored:406 }
+export const oconStats: DriverStats = { driverId:"ocon", series:"f1", titles:0, wins:1, poles:0, podiums:4, careerSpan:"2016–present", racesEntered:196, fastestLaps:1, pointsScored:490 }
 
 export const oconEras: DriverEra[] = [
   { driverId:"ocon", teamId:"force_india", teamName:"Force India / Racing Point", seasons:"2017–2018", highlights:["Consistent points finishes","Clash with Perez at Force India"], titles:0, wins:0, teamLiveryHex:"#FF80C7", statLabel:"P8 WDC", imageUrl:"/images/drivers/ocon-malaysia-2017.jpg" },
@@ -2511,10 +2511,10 @@ export const hulkenberg: Driver = {
   portraitUrl: '/images/drivers/hulkenberg-f1-portrait-2026.webp',
 }
 
-export const hulkenbergStats: DriverStats = { driverId:"hulkenberg", series:"f1", titles:0, wins:0, poles:1, podiums:0, careerSpan:"2010–present", racesEntered:228, fastestLaps:2, pointsScored:545 }
+export const hulkenbergStats: DriverStats = { driverId:"hulkenberg", series:"f1", titles:0, wins:0, poles:1, podiums:1, careerSpan:"2010–present", racesEntered:270, fastestLaps:2, pointsScored:629 }
 
 export const hulkenbergEras: DriverEra[] = [
-  { driverId:"hulkenberg", teamId:"williams", teamName:"Williams", seasons:"2010", highlights:["Pole position Brazil 2010 in his 3rd race","Promising debut season"], titles:0, wins:0, teamLiveryHex:"#005AFF", statLabel:"POLE P1", imageUrl:"/images/drivers/hulkenberg-williams-2010.jpg" },
+  { driverId:"hulkenberg", teamId:"williams", teamName:"Williams", seasons:"2010", highlights:["Pole position Brazil 2010 in his 18th race","Promising debut season"], titles:0, wins:0, teamLiveryHex:"#005AFF", statLabel:"POLE P1", imageUrl:"/images/drivers/hulkenberg-williams-2010.jpg" },
   { driverId:"hulkenberg", teamId:"force_india", teamName:"Force India", seasons:"2012–2016", highlights:["Le Mans 24H winner 2015 on first attempt","Consistent midfield points scorer"], titles:0, wins:0, teamLiveryHex:"#FF80C7", statLabel:"LM WIN", imageUrl:"/images/drivers/hulkenberg-force-india-2012.jpg" },
   { driverId:"hulkenberg", teamId:"renault", teamName:"Renault / Racing Point / Aston Martin", seasons:"2017–2022", highlights:["Multi-team journeyman","COVID substitute drives","Continued points extraction"], titles:0, wins:0, teamLiveryHex:"#FFD700", statLabel:"JOURNEYMAN", imageUrl:"/images/drivers/hulkenberg-renault-2018.jpg" },
   { driverId:"hulkenberg", teamId:"haas", teamName:"Haas", seasons:"2023–2025", highlights:["P6 WDC 2023 — career best","Inspired Haas resurgence","Full seasons of consistent points"], titles:0, wins:0, teamLiveryHex:"#B6BABD", teamAccentHex:"#FFFFFF", statLabel:"P6 WDC", imageUrl:"/images/drivers/hulkenberg-austria-2023.jpg" },
@@ -2558,7 +2558,7 @@ export const hulkenbergScoutingReport: ScoutingReport = {
 
 /* ─── Bortoleto F1 ─────────────────────────────────────────────────────────── */
 
-export const bortoletoF1Stats: DriverStats = { driverId:"bortoleto", series:"f1", titles:0, wins:0, poles:0, podiums:0, careerSpan:"2025–present", racesEntered:28, fastestLaps:0, pointsScored:30 }
+export const bortoletoF1Stats: DriverStats = { driverId:"bortoleto", series:"f1", titles:0, wins:0, poles:0, podiums:0, careerSpan:"2025–present", racesEntered:40, fastestLaps:0, pointsScored:29 }
 
 export const bortoletoF1Signature: DrivingSignature = {
   driverId:"bortoleto", series:"f1",
@@ -2605,7 +2605,7 @@ export const tsunoda: Driver = {
   portraitUrl: '/images/drivers/tsunoda-austria-2024.jpg',
 }
 
-export const tsunodaStats: DriverStats = { driverId:"tsunoda", series:"f1", titles:0, wins:0, poles:0, podiums:2, careerSpan:"2021–present", racesEntered:98, fastestLaps:3, pointsScored:198 }
+export const tsunodaStats: DriverStats = { driverId:"tsunoda", series:"f1", titles:0, wins:0, poles:0, podiums:0, careerSpan:"2021–present", racesEntered:117, fastestLaps:1, pointsScored:125 }
 
 export const tsunodaEras: DriverEra[] = [
   { driverId:"tsunoda", teamId:"alphatauri", teamName:"AlphaTauri / Racing Bulls", seasons:"2021–present", highlights:["Bahrain 2021 debut — points scored","Rapid pace maturation through 2022–2024","Race podiums as machinery allowed"], titles:0, wins:0, teamLiveryHex:"#6692FF", statLabel:"POINTS SCORER", imageUrl:"/images/drivers/tsunoda-austria-2021.jpg" },
@@ -2656,7 +2656,7 @@ export const hadjar: Driver = {
   portraitUrl: '/images/drivers/hadjar-f1-portrait-2026.webp',
 }
 
-export const hadjarStats: DriverStats = { driverId:"hadjar", series:"f1", titles:0, wins:0, poles:0, podiums:0, careerSpan:"2025–present", racesEntered:22, fastestLaps:0, pointsScored:18 }
+export const hadjarStats: DriverStats = { driverId:"hadjar", series:"f1", titles:0, wins:0, poles:0, podiums:3, careerSpan:"2025–present", racesEntered:37, fastestLaps:0, pointsScored:147 }
 
 export const hadjarEras: DriverEra[] = [
   { driverId:"hadjar", teamId:"rb", teamName:"Racing Bulls", seasons:"2025–present", highlights:["F1 debut 2025","F2 runner-up 2024 — strong junior platform","Red Bull academy training"], titles:0, wins:0, teamLiveryHex:"#6692FF", statLabel:"ROOKIE", imageUrl:"/images/drivers/hadjar-racing-bulls-2025.jpg" },
@@ -2706,7 +2706,7 @@ export const lawson: Driver = {
   portraitUrl: '/images/drivers/lawson-f1-portrait-2026.webp',
 }
 
-export const lawsonStats: DriverStats = { driverId:"lawson", series:"f1", titles:0, wins:0, poles:0, podiums:0, careerSpan:"2023–present", racesEntered:38, fastestLaps:0, pointsScored:54 }
+export const lawsonStats: DriverStats = { driverId:"lawson", series:"f1", titles:0, wins:0, poles:0, podiums:0, careerSpan:"2023–present", racesEntered:51, fastestLaps:0, pointsScored:109 }
 
 export const lawsonEras: DriverEra[] = [
   { driverId:"lawson", teamId:"alphatauri", teamName:"AlphaTauri / VCARB", seasons:"2023–2024", highlights:["F1 debut Zandvoort 2023 — called up mid-weekend replacing injured Ricciardo","Scored points at Singapore 2023 on same substitute run","Final 6 rounds of 2024 replacing Ricciardo at VCARB"], titles:0, wins:0, teamLiveryHex:"#6692FF", statLabel:"SUB DEBUT", imageUrl:"/images/drivers/lawson-racing-bulls-2025.jpg" },
@@ -2758,12 +2758,12 @@ export const perez: Driver = {
   portraitUrl: '/images/drivers/perez-f1-portrait-2026.webp',
 }
 
-export const perezStats: DriverStats = { driverId:"perez", series:"f1", titles:0, wins:27, poles:3, podiums:66, careerSpan:"2011–present", racesEntered:280, fastestLaps:12, pointsScored:1614 }
+export const perezStats: DriverStats = { driverId:"perez", series:"f1", titles:0, wins:6, poles:3, podiums:39, careerSpan:"2011–present", racesEntered:299, fastestLaps:12, pointsScored:1638 }
 
 export const perezEras: DriverEra[] = [
   { driverId:"perez", teamId:"sauber", teamName:"Sauber", seasons:"2011", highlights:["F1 debut with Sauber","Solid debut points scorer"], titles:0, wins:0, teamLiveryHex:"#900000", statLabel:"DEBUT", imageUrl:"/images/drivers/perez-sauber-2011.jpg" },
   { driverId:"perez", teamId:"force_india", teamName:"Force India / Racing Point", seasons:"2014–2020", highlights:["Sakhir GP WIN 2020","Multiple podiums with Racing Point","Bahrain 2020 second chance race win"], titles:0, wins:1, teamLiveryHex:"#FF80C7", teamAccentHex:"#FFD700", statLabel:"SAKHIR WIN", imageUrl:"/images/drivers/perez-force-india-2017.jpg" },
-  { driverId:"perez", teamId:"red_bull", teamName:"Red Bull", seasons:"2021–2024", highlights:["Azerbaijan GP wins (×2)","Monaco GP winner","2023 WDC P2 — best career result","Multiple Red Bull partnership wins"], titles:0, wins:26, teamLiveryHex:"#1E3A8A", teamAccentHex:"#FFD700", statLabel:"26W · P2 WDC", imageUrl:"/images/drivers/perez-austria-2021.jpg" },
+  { driverId:"perez", teamId:"red_bull", teamName:"Red Bull", seasons:"2021–2024", highlights:["Azerbaijan GP wins (×2)","Monaco GP winner","2023 WDC P2 — best career result","Saudi Arabia 2023 and Singapore 2022 wins"], titles:0, wins:5, teamLiveryHex:"#1E3A8A", teamAccentHex:"#FFD700", statLabel:"5W · P2 WDC", imageUrl:"/images/drivers/perez-austria-2021.jpg" },
   { driverId:"perez", teamId:"cadillac", teamName:"Cadillac", seasons:"2026–present", highlights:["Pioneer driver for new F1 constructor","Mexico's hero joins American team"], titles:0, wins:0, teamLiveryHex:"#C8A951", statLabel:"CADILLAC ERA", imageUrl:"/images/drivers/perez-cadillac-2026.jpg" },
 ]
 
@@ -2812,10 +2812,10 @@ export const bottas: Driver = {
   portraitUrl: '/images/drivers/bottas-f1-portrait-2026.webp',
 }
 
-export const bottasStats: DriverStats = { driverId:"bottas", series:"f1", titles:0, wins:10, poles:20, podiums:67, careerSpan:"2013–present", racesEntered:238, fastestLaps:19, pointsScored:1878 }
+export const bottasStats: DriverStats = { driverId:"bottas", series:"f1", titles:0, wins:10, poles:20, podiums:67, careerSpan:"2013–present", racesEntered:263, fastestLaps:19, pointsScored:1797 }
 
 export const bottasEras: DriverEra[] = [
-  { driverId:"bottas", teamId:"williams", teamName:"Williams", seasons:"2013–2016", highlights:["Consistent points scorer at Williams","Pole Silverstone 2017 (with Merc already signed)"], titles:0, wins:0, teamLiveryHex:"#005AFF", statLabel:"WILLIAMS YEARS", imageUrl:"/images/drivers/bottas-williams-2016.jpg" },
+  { driverId:"bottas", teamId:"williams", teamName:"Williams", seasons:"2013–2016", highlights:["Consistent points scorer at Williams","9 podiums with Williams"], titles:0, wins:0, teamLiveryHex:"#005AFF", statLabel:"WILLIAMS YEARS", imageUrl:"/images/drivers/bottas-williams-2016.jpg" },
   { driverId:"bottas", teamId:"mercedes", teamName:"Mercedes", seasons:"2017–2021", highlights:["10 wins","20 poles","4× constructors champion","Fastest lap record holder (2019–2020)"], titles:0, wins:10, teamLiveryHex:"#00D2BE", teamAccentHex:"#FFD700", statLabel:"10W · 20P", imageUrl:"/images/drivers/bottas-mercedes-2021.jpg" },
   { driverId:"bottas", teamId:"alfa_romeo", teamName:"Alfa Romeo / Sauber", seasons:"2022–2025", highlights:["Team leader at Alfa Romeo","Mentored Bortoleto in 2024","Consistent midfield presence"], titles:0, wins:0, teamLiveryHex:"#900000", statLabel:"TEAM LEADER", imageUrl:"/images/drivers/bottas-alfa-romeo-2022.jpg" },
   { driverId:"bottas", teamId:"cadillac", teamName:"Cadillac", seasons:"2026–present", highlights:["Pioneer Cadillac driver alongside Perez","New chapter at 36"], titles:0, wins:0, teamLiveryHex:"#C8A951", statLabel:"CADILLAC 26", imageUrl:"/images/drivers/bottas-cadillac-2026.jpg" },
@@ -4588,7 +4588,7 @@ export const lindblad: Driver = {
   portraitUrl: '/images/drivers/lindblad-f1-portrait-2026.webp',
 }
 
-export const lindbladStats: DriverStats = { driverId:"lindblad", series:"f1", titles:0, wins:0, poles:0, podiums:0, careerSpan:"2026–present", racesEntered:5, fastestLaps:0, pointsScored:4 }
+export const lindbladStats: DriverStats = { driverId:"lindblad", series:"f1", titles:0, wins:0, poles:0, podiums:0, careerSpan:"2026–present", racesEntered:16, fastestLaps:0, pointsScored:38 }
 
 export const lindbladEras: DriverEra[] = [
   { driverId:"lindblad", teamId:"rb", teamName:"Racing Bulls", seasons:"2026–present", highlights:["F1 debut 2026 Australian GP — P8, first points","Youngest British F1 driver ever (surpassed Bearman)","FP1 appearances at 2025 British and Mexico GPs for Red Bull"], titles:0, wins:0, teamLiveryHex:"#6692FF", statLabel:"ROOKIE", imageUrl:"/images/drivers/lindblad-racing-bulls-2026.jpg" },

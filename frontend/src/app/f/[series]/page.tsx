@@ -850,8 +850,8 @@ function F1LandingPage({ config, standings, news, driverNumberData }: {
               seriesColor={config.color}
               image={item.image}
               trackPath={VENUE_TRACK_PATHS[item.slug]}
-              flipTrackVertical={item.slug === 'spa' || item.slug === 'monza'}
-              flipTrackHorizontal={item.slug === 'spa' || item.slug === 'monza'}
+              flipTrackVertical={item.slug === 'spa'}
+              flipTrackHorizontal={item.slug === 'spa'}
             />
           ))}
         </div>

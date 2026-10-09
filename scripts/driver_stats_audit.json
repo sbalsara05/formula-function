@@ -1,0 +1,667 @@
+{
+  "dataThrough": "2026 round 16 · Bahrain Grand Prix in Malaysia · 2026-10-04",
+  "drivers": {
+    "hamilton": {
+      "const": "hamiltonStats",
+      "jolpicaId": "hamilton",
+      "before": {
+        "titles": 7,
+        "wins": 106,
+        "poles": 104,
+        "podiums": 208,
+        "careerSpan": "2007–present",
+        "racesEntered": 396,
+        "fastestLaps": 69,
+        "pointsScored": 5232.5
+      },
+      "after": {
+        "titles": 7,
+        "wins": 106,
+        "poles": 104,
+        "podiums": 208,
+        "careerSpan": "2007–present",
+        "racesEntered": 396,
+        "fastestLaps": 69,
+        "pointsScored": 5232.5,
+        "_titleSeasons": [
+          2008,
+          2014,
+          2015,
+          2017,
+          2018,
+          2019,
+          2020
+        ],
+        "_fastestLapIncomplete": false,
+        "_fastestLapPre2004Source": null,
+        "_dataThrough": "2026 round 16 · Bahrain Grand Prix in Malaysia · 2026-10-04"
+      }
+    },
+    "verstappen": {
+      "const": "verstappenStats",
+      "jolpicaId": "max_verstappen",
+      "before": {
+        "titles": 4,
+        "wins": 72,
+        "poles": 49,
+        "podiums": 135,
+        "careerSpan": "2015–present",
+        "racesEntered": 249,
+        "fastestLaps": 38,
+        "pointsScored": 3632.5
+      },
+      "after": {
+        "titles": 4,
+        "wins": 72,
+        "poles": 49,
+        "podiums": 135,
+        "careerSpan": "2015–present",
+        "racesEntered": 249,
+        "fastestLaps": 38,
+        "pointsScored": 3632.5,
+        "_titleSeasons": [
+          2021,
+          2022,
+          2023,
+          2024
+        ],
+        "_fastestLapIncomplete": false,
+        "_fastestLapPre2004Source": null,
+        "_dataThrough": "2026 round 16 · Bahrain Grand Prix in Malaysia · 2026-10-04"
+      }
+    },
+    "leclerc": {
+      "const": "leclerStats",
+      "jolpicaId": "leclerc",
+      "before": {
+        "titles": 0,
+        "wins": 9,
+        "poles": 27,
+        "podiums": 54,
+        "careerSpan": "2018–present",
+        "racesEntered": 189,
+        "fastestLaps": 13,
+        "pointsScored": 1863
+      },
+      "after": {
+        "titles": 0,
+        "wins": 9,
+        "poles": 27,
+        "podiums": 54,
+        "careerSpan": "2018–present",
+        "racesEntered": 189,
+        "fastestLaps": 13,
+        "pointsScored": 1863,
+        "_titleSeasons": [],
+        "_fastestLapIncomplete": false,
+        "_fastestLapPre2004Source": null,
+        "_dataThrough": "2026 round 16 · Bahrain Grand Prix in Malaysia · 2026-10-04"
+      }
+    },
+    "norris": {
+      "const": "norrisStats",
+      "jolpicaId": "norris",
+      "before": {
+        "titles": 1,
+        "wins": 13,
+        "poles": 19,
+        "podiums": 49,
+        "careerSpan": "2019–present",
+        "racesEntered": 168,
+        "fastestLaps": 20,
+        "pointsScored": 1618
+      },
+      "after": {
+        "titles": 1,
+        "wins": 13,
+        "poles": 19,
+        "podiums": 49,
+        "careerSpan": "2019–present",
+        "racesEntered": 168,
+        "fastestLaps": 20,
+        "pointsScored": 1618,
+        "_titleSeasons": [
+          2025
+        ],
+        "_fastestLapIncomplete": false,
+        "_fastestLapPre2004Source": null,
+        "_dataThrough": "2026 round 16 · Bahrain Grand Prix in Malaysia · 2026-10-04"
+      }
+    },
+    "piastri": {
+      "const": "piastriF1Stats",
+      "jolpicaId": "piastri",
+      "before": {
+        "titles": 0,
+        "wins": 9,
+        "poles": 6,
+        "podiums": 28,
+        "careerSpan": "2023–present",
+        "racesEntered": 86,
+        "fastestLaps": 9,
+        "pointsScored": 927
+      },
+      "after": {
+        "titles": 0,
+        "wins": 9,
+        "poles": 6,
+        "podiums": 28,
+        "careerSpan": "2023–present",
+        "racesEntered": 86,
+        "fastestLaps": 9,
+        "pointsScored": 927,
+        "_titleSeasons": [],
+        "_fastestLapIncomplete": false,
+        "_fastestLapPre2004Source": null,
+        "_dataThrough": "2026 round 16 · Bahrain Grand Prix in Malaysia · 2026-10-04"
+      }
+    },
+    "russell": {
+      "const": "russellF1Stats",
+      "jolpicaId": "russell",
+      "before": {
+        "titles": 0,
+        "wins": 8,
+        "poles": 13,
+        "podiums": 32,
+        "careerSpan": "2019–present",
+        "racesEntered": 168,
+        "fastestLaps": 13,
+        "pointsScored": 1269
+      },
+      "after": {
+        "titles": 0,
+        "wins": 8,
+        "poles": 12,
+        "podiums": 32,
+        "careerSpan": "2019–present",
+        "racesEntered": 168,
+        "fastestLaps": 13,
+        "pointsScored": 1269,
+        "_titleSeasons": [],
+        "_fastestLapIncomplete": false,
+        "_fastestLapPre2004Source": null,
+        "_dataThrough": "2026 round 16 · Bahrain Grand Prix in Malaysia · 2026-10-04"
+      }
+    },
+    "antonelli": {
+      "const": "antonelliStats",
+      "jolpicaId": "antonelli",
+      "before": {
+        "titles": 0,
+        "wins": 8,
+        "poles": 6,
+        "podiums": 16,
+        "careerSpan": "2025–present",
+        "racesEntered": 40,
+        "fastestLaps": 10,
+        "pointsScored": 470
+      },
+      "after": {
+        "titles": 0,
+        "wins": 8,
+        "poles": 6,
+        "podiums": 16,
+        "careerSpan": "2025–present",
+        "racesEntered": 40,
+        "fastestLaps": 10,
+        "pointsScored": 470,
+        "_titleSeasons": [],
+        "_fastestLapIncomplete": false,
+        "_fastestLapPre2004Source": null,
+        "_dataThrough": "2026 round 16 · Bahrain Grand Prix in Malaysia · 2026-10-04"
+      }
+    },
+    "alonso": {
+      "const": "alonsoStats",
+      "jolpicaId": "alonso",
+      "before": {
+        "titles": 2,
+        "wins": 32,
+        "poles": 22,
+        "podiums": 106,
+        "careerSpan": "2001–present",
+        "racesEntered": 444,
+        "fastestLaps": 26,
+        "pointsScored": 2400
+      },
+      "after": {
+        "titles": 2,
+        "wins": 32,
+        "poles": 22,
+        "podiums": 106,
+        "careerSpan": "2001–present",
+        "racesEntered": 444,
+        "fastestLaps": 26,
+        "pointsScored": 2400,
+        "_titleSeasons": [
+          2005,
+          2006
+        ],
+        "_fastestLapIncomplete": false,
+        "_fastestLapPre2004Source": "2003 Canadian GP — https://gpracingstats.com/drivers/fernando-alonso/fastest-laps/",
+        "_dataThrough": "2026 round 16 · Bahrain Grand Prix in Malaysia · 2026-10-04"
+      }
+    },
+    "stroll": {
+      "const": "strollStats",
+      "jolpicaId": "stroll",
+      "before": {
+        "titles": 0,
+        "wins": 0,
+        "poles": 1,
+        "podiums": 3,
+        "careerSpan": "2017–present",
+        "racesEntered": 207,
+        "fastestLaps": 0,
+        "pointsScored": 325
+      },
+      "after": {
+        "titles": 0,
+        "wins": 0,
+        "poles": 1,
+        "podiums": 3,
+        "careerSpan": "2017–present",
+        "racesEntered": 207,
+        "fastestLaps": 0,
+        "pointsScored": 325,
+        "_titleSeasons": [],
+        "_fastestLapIncomplete": false,
+        "_fastestLapPre2004Source": null,
+        "_dataThrough": "2026 round 16 · Bahrain Grand Prix in Malaysia · 2026-10-04"
+      }
+    },
+    "gasly": {
+      "const": "gaslyStats",
+      "jolpicaId": "gasly",
+      "before": {
+        "titles": 0,
+        "wins": 1,
+        "poles": 1,
+        "podiums": 5,
+        "careerSpan": "2017–present",
+        "racesEntered": 194,
+        "fastestLaps": 3,
+        "pointsScored": 499
+      },
+      "after": {
+        "titles": 0,
+        "wins": 1,
+        "poles": 1,
+        "podiums": 5,
+        "careerSpan": "2017–present",
+        "racesEntered": 194,
+        "fastestLaps": 3,
+        "pointsScored": 499,
+        "_titleSeasons": [],
+        "_fastestLapIncomplete": false,
+        "_fastestLapPre2004Source": null,
+        "_dataThrough": "2026 round 16 · Bahrain Grand Prix in Malaysia · 2026-10-04"
+      }
+    },
+    "colapinto": {
+      "const": "colapintoStats",
+      "jolpicaId": "colapinto",
+      "before": {
+        "titles": 0,
+        "wins": 0,
+        "poles": 0,
+        "podiums": 0,
+        "careerSpan": "2024–present",
+        "racesEntered": 43,
+        "fastestLaps": 0,
+        "pointsScored": 32
+      },
+      "after": {
+        "titles": 0,
+        "wins": 0,
+        "poles": 0,
+        "podiums": 0,
+        "careerSpan": "2024–present",
+        "racesEntered": 43,
+        "fastestLaps": 0,
+        "pointsScored": 32,
+        "_titleSeasons": [],
+        "_fastestLapIncomplete": false,
+        "_fastestLapPre2004Source": null,
+        "_dataThrough": "2026 round 16 · Bahrain Grand Prix in Malaysia · 2026-10-04"
+      }
+    },
+    "albon": {
+      "const": "albonStats",
+      "jolpicaId": "albon",
+      "before": {
+        "titles": 0,
+        "wins": 0,
+        "poles": 0,
+        "podiums": 2,
+        "careerSpan": "2019–present",
+        "racesEntered": 145,
+        "fastestLaps": 1,
+        "pointsScored": 318
+      },
+      "after": {
+        "titles": 0,
+        "wins": 0,
+        "poles": 0,
+        "podiums": 2,
+        "careerSpan": "2019–present",
+        "racesEntered": 145,
+        "fastestLaps": 1,
+        "pointsScored": 318,
+        "_titleSeasons": [],
+        "_fastestLapIncomplete": false,
+        "_fastestLapPre2004Source": null,
+        "_dataThrough": "2026 round 16 · Bahrain Grand Prix in Malaysia · 2026-10-04"
+      }
+    },
+    "sainz": {
+      "const": "sainzStats",
+      "jolpicaId": "sainz",
+      "before": {
+        "titles": 0,
+        "wins": 4,
+        "poles": 6,
+        "podiums": 29,
+        "careerSpan": "2015–present",
+        "racesEntered": 248,
+        "fastestLaps": 4,
+        "pointsScored": 1343.5
+      },
+      "after": {
+        "titles": 0,
+        "wins": 4,
+        "poles": 6,
+        "podiums": 29,
+        "careerSpan": "2015–present",
+        "racesEntered": 248,
+        "fastestLaps": 4,
+        "pointsScored": 1343.5,
+        "_titleSeasons": [],
+        "_fastestLapIncomplete": false,
+        "_fastestLapPre2004Source": null,
+        "_dataThrough": "2026 round 16 · Bahrain Grand Prix in Malaysia · 2026-10-04"
+      }
+    },
+    "bearman": {
+      "const": "bearmanF1Stats",
+      "jolpicaId": "bearman",
+      "before": {
+        "titles": 0,
+        "wins": 0,
+        "poles": 0,
+        "podiums": 0,
+        "careerSpan": "2024–present",
+        "racesEntered": 43,
+        "fastestLaps": 0,
+        "pointsScored": 68
+      },
+      "after": {
+        "titles": 0,
+        "wins": 0,
+        "poles": 0,
+        "podiums": 0,
+        "careerSpan": "2024–present",
+        "racesEntered": 43,
+        "fastestLaps": 0,
+        "pointsScored": 68,
+        "_titleSeasons": [],
+        "_fastestLapIncomplete": false,
+        "_fastestLapPre2004Source": null,
+        "_dataThrough": "2026 round 16 · Bahrain Grand Prix in Malaysia · 2026-10-04"
+      }
+    },
+    "ocon": {
+      "const": "oconStats",
+      "jolpicaId": "ocon",
+      "before": {
+        "titles": 0,
+        "wins": 1,
+        "poles": 0,
+        "podiums": 4,
+        "careerSpan": "2016–present",
+        "racesEntered": 196,
+        "fastestLaps": 1,
+        "pointsScored": 490
+      },
+      "after": {
+        "titles": 0,
+        "wins": 1,
+        "poles": 0,
+        "podiums": 4,
+        "careerSpan": "2016–present",
+        "racesEntered": 196,
+        "fastestLaps": 1,
+        "pointsScored": 490,
+        "_titleSeasons": [],
+        "_fastestLapIncomplete": false,
+        "_fastestLapPre2004Source": null,
+        "_dataThrough": "2026 round 16 · Bahrain Grand Prix in Malaysia · 2026-10-04"
+      }
+    },
+    "hulkenberg": {
+      "const": "hulkenbergStats",
+      "jolpicaId": "hulkenberg",
+      "before": {
+        "titles": 0,
+        "wins": 0,
+        "poles": 1,
+        "podiums": 1,
+        "careerSpan": "2010–present",
+        "racesEntered": 270,
+        "fastestLaps": 2,
+        "pointsScored": 629
+      },
+      "after": {
+        "titles": 0,
+        "wins": 0,
+        "poles": 1,
+        "podiums": 1,
+        "careerSpan": "2010–present",
+        "racesEntered": 270,
+        "fastestLaps": 2,
+        "pointsScored": 629,
+        "_titleSeasons": [],
+        "_fastestLapIncomplete": false,
+        "_fastestLapPre2004Source": null,
+        "_dataThrough": "2026 round 16 · Bahrain Grand Prix in Malaysia · 2026-10-04"
+      }
+    },
+    "bortoleto": {
+      "const": "bortoletoF1Stats",
+      "jolpicaId": "bortoleto",
+      "before": {
+        "titles": 0,
+        "wins": 0,
+        "poles": 0,
+        "podiums": 0,
+        "careerSpan": "2025–present",
+        "racesEntered": 40,
+        "fastestLaps": 0,
+        "pointsScored": 29
+      },
+      "after": {
+        "titles": 0,
+        "wins": 0,
+        "poles": 0,
+        "podiums": 0,
+        "careerSpan": "2025–present",
+        "racesEntered": 40,
+        "fastestLaps": 0,
+        "pointsScored": 29,
+        "_titleSeasons": [],
+        "_fastestLapIncomplete": false,
+        "_fastestLapPre2004Source": null,
+        "_dataThrough": "2026 round 16 · Bahrain Grand Prix in Malaysia · 2026-10-04"
+      }
+    },
+    "tsunoda": {
+      "const": "tsunodaStats",
+      "jolpicaId": "tsunoda",
+      "before": {
+        "titles": 0,
+        "wins": 0,
+        "poles": 0,
+        "podiums": 0,
+        "careerSpan": "2021–present",
+        "racesEntered": 117,
+        "fastestLaps": 1,
+        "pointsScored": 125
+      },
+      "after": {
+        "titles": 0,
+        "wins": 0,
+        "poles": 0,
+        "podiums": 0,
+        "careerSpan": "2021–present",
+        "racesEntered": 117,
+        "fastestLaps": 1,
+        "pointsScored": 125,
+        "_titleSeasons": [],
+        "_fastestLapIncomplete": false,
+        "_fastestLapPre2004Source": null,
+        "_dataThrough": "2026 round 16 · Bahrain Grand Prix in Malaysia · 2026-10-04"
+      }
+    },
+    "hadjar": {
+      "const": "hadjarStats",
+      "jolpicaId": "hadjar",
+      "before": {
+        "titles": 0,
+        "wins": 0,
+        "poles": 0,
+        "podiums": 3,
+        "careerSpan": "2025–present",
+        "racesEntered": 37,
+        "fastestLaps": 0,
+        "pointsScored": 147
+      },
+      "after": {
+        "titles": 0,
+        "wins": 0,
+        "poles": 0,
+        "podiums": 3,
+        "careerSpan": "2025–present",
+        "racesEntered": 37,
+        "fastestLaps": 0,
+        "pointsScored": 147,
+        "_titleSeasons": [],
+        "_fastestLapIncomplete": false,
+        "_fastestLapPre2004Source": null,
+        "_dataThrough": "2026 round 16 · Bahrain Grand Prix in Malaysia · 2026-10-04"
+      }
+    },
+    "lawson": {
+      "const": "lawsonStats",
+      "jolpicaId": "lawson",
+      "before": {
+        "titles": 0,
+        "wins": 0,
+        "poles": 0,
+        "podiums": 0,
+        "careerSpan": "2023–present",
+        "racesEntered": 51,
+        "fastestLaps": 0,
+        "pointsScored": 109
+      },
+      "after": {
+        "titles": 0,
+        "wins": 0,
+        "poles": 0,
+        "podiums": 0,
+        "careerSpan": "2023–present",
+        "racesEntered": 51,
+        "fastestLaps": 0,
+        "pointsScored": 109,
+        "_titleSeasons": [],
+        "_fastestLapIncomplete": false,
+        "_fastestLapPre2004Source": null,
+        "_dataThrough": "2026 round 16 · Bahrain Grand Prix in Malaysia · 2026-10-04"
+      }
+    },
+    "perez": {
+      "const": "perezStats",
+      "jolpicaId": "perez",
+      "before": {
+        "titles": 0,
+        "wins": 6,
+        "poles": 3,
+        "podiums": 39,
+        "careerSpan": "2011–present",
+        "racesEntered": 299,
+        "fastestLaps": 12,
+        "pointsScored": 1638
+      },
+      "after": {
+        "titles": 0,
+        "wins": 6,
+        "poles": 3,
+        "podiums": 39,
+        "careerSpan": "2011–present",
+        "racesEntered": 299,
+        "fastestLaps": 12,
+        "pointsScored": 1638,
+        "_titleSeasons": [],
+        "_fastestLapIncomplete": false,
+        "_fastestLapPre2004Source": null,
+        "_dataThrough": "2026 round 16 · Bahrain Grand Prix in Malaysia · 2026-10-04"
+      }
+    },
+    "bottas": {
+      "const": "bottasStats",
+      "jolpicaId": "bottas",
+      "before": {
+        "titles": 0,
+        "wins": 10,
+        "poles": 20,
+        "podiums": 67,
+        "careerSpan": "2013–present",
+        "racesEntered": 263,
+        "fastestLaps": 19,
+        "pointsScored": 1797
+      },
+      "after": {
+        "titles": 0,
+        "wins": 10,
+        "poles": 20,
+        "podiums": 67,
+        "careerSpan": "2013–present",
+        "racesEntered": 263,
+        "fastestLaps": 19,
+        "pointsScored": 1797,
+        "_titleSeasons": [],
+        "_fastestLapIncomplete": false,
+        "_fastestLapPre2004Source": null,
+        "_dataThrough": "2026 round 16 · Bahrain Grand Prix in Malaysia · 2026-10-04"
+      }
+    },
+    "lindblad": {
+      "const": "lindbladStats",
+      "jolpicaId": "arvid_lindblad",
+      "before": {
+        "titles": 0,
+        "wins": 0,
+        "poles": 0,
+        "podiums": 0,
+        "careerSpan": "2026–present",
+        "racesEntered": 16,
+        "fastestLaps": 0,
+        "pointsScored": 38
+      },
+      "after": {
+        "titles": 0,
+        "wins": 0,
+        "poles": 0,
+        "podiums": 0,
+        "careerSpan": "2026–present",
+        "racesEntered": 16,
+        "fastestLaps": 0,
+        "pointsScored": 38,
+        "_titleSeasons": [],
+        "_fastestLapIncomplete": false,
+        "_fastestLapPre2004Source": null,
+        "_dataThrough": "2026 round 16 · Bahrain Grand Prix in Malaysia · 2026-10-04"
+      }
+    }
+  }
+}

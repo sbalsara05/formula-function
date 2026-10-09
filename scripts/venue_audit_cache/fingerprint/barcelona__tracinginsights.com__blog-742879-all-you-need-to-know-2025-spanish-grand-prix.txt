@@ -1,0 +1,285 @@
+SOURCE: https://tracinginsights.com/blog/742879/all-you-need-to-know-2025-spanish-grand-prix/
+
+ALL YOU NEED TO KNOW - 2025 SPANISH GRAND PRIX - Tracing Insights
+NEW
+ALL YOU NEED TO KNOW - 2025 HUNGARIAN GRAND PRIX
+Read Now
+Tracing Insights
+Blog
+Schedule
+Analysis
+Dash
+Socials
+Contact
+Data
+Tracing Insights
+Analysis All Analysis
+Race Pace
+Championship Standings
+Corner Analysis
+Circuit Maps
+Downforce Configurations
+Download Raw Data
+Drivers In Traffic
+Fan Ratings
+Fastest Lap
+GG Plot
+Heat Map
+Ideal Lap
+Lap Chart
+Laps In Top Ten
+Laptimes Delta
+Lateral Acceleration vs Speed
+Longitudinal Acceleration vs Speed
+Long Run Race Pace
+Max Throttle
+Overtakes
+Peak G Forces
+Penalty Points
+Pit Stops
+Positions Change
+Race Launch Performance Ratings
+Race Trace
+Top Speed At Speed Trap
+Track Temperature
+Tyre Degradation
+Tyre Strategy
+WDC Contenders
+Weekend Results
+Blog
+Schedule F1 Schedule 2027
+F1 Schedule 2026
+F2 Schedule
+F3 Schedule
+F1Academy Schedule
+Formula E Schedule
+Dash Penalty Points
+F1 Schedule and Weather
+Driver of the Day
+2025 WDC What if
+Socials Twitter
+Instagram
+Sub Reddit
+Bluesky
+Mastodon
+Facebook
+Threads
+LinkedIn
+Pixelfed
+YouTube
+WhatsApp Channel
+Telegram Channel
+Tumblr
+SubStack
+Contact
+Data
+Default ✓
+Luxury ✓
+Dim ✓
+Synthwave ✓
+EN 🇬🇧 English
+🇫🇷 Français
+🇪🇸 Español
+🇮🇩 Bahasa Indonesia
+🇵🇹 Português
+🇮🇳 ಕನ್ನಡ
+Support
+Home
+Blog
+ALL YOU NEED TO KNOW - 2025 SPANISH GRAND PRIX
+ALL YOU NEED TO KNOW - 2025 SPANISH GRAND PRIX
+Tracing Insights • May 31, 2025 • 15 min read
+Table of Contents
+[ Hide ]
+Circuit Characteristics, Sector-Specific Challenges & Key Corners, Aerodynamic vs. Mechanical Grip, Overtaking Opportunities, Weather Outlook, Historical Records and Statistics and more...
+[ Hide ]
+Table of Contents
+The Circuit de Barcelona-Catalunya, a fixture on the Formula 1 schedule since its 1991 inauguration, prepares to host the Spanish Grand Prix for the 35th consecutive year. This eagerly awaited event, concluding the season's second triple-header, is famous for posing one of the most complete technical challenges on the calendar. Its reputation as an ultimate proving ground remains undiminished; a car showing strong performance here is typically competitive across diverse circuit types.
+Circuit Characteristics and Challenges
+Measuring 4,657 kilometres, the Barcelona-Catalunya layout is a comprehensive test of car and driver. It demands extreme precision, with a diverse portfolio of high, medium, and slow speed corners, significant elevation changes, and a lengthy 1,050-kilometre main straight. The track surface, historically known for its abrasiveness, has seen improvements but continues to play a critical role in tyre behaviour. Teams are generally compelled to run configurations approaching maximum downforce to navigate its varied demands. The old adage holds true: a car that excels in Barcelona will likely perform well universally, as the circuit exposes both strengths and weaknesses. Despite teams and drivers having extensive testing experience and intimate knowledge of every corner, which makes finding an advantage challenging, the track consistently produces thrilling races.
+A particular characteristic is the track's asymmetry: many low-speed turns are left-handers, while the majority of right-hand corners are taken at high speeds. This can lead to nuanced car setups, potentially differing slightly between the left and right-hand sides. It also means the left-side tyres, particularly the front-left, tend to experience higher wear rates and thermal stress, while the right-side tyres may operate at comparatively lower temperatures.
+The advent of the ground effect aerodynamic regulations from the start of 2022 presented a distinctly different challenge. Data indicates a shift in cornering speeds; for example, the long Turn 3 is now navigated at approximately 225 km/h, compared to 240 km/h in 2021. Similarly, the fast Turn 9 right-hander is now taken at around 250 km/h, whereas in 2021, speeds were closer to 265 km/h.
+Layout Evolution and Recent Modifications
+Since its 1991 debut, when the track measured 4,747 metres, the Circuit de Barcelona-Catalunya has undergone five notable layout alterations, evolving to its current 4,657-metre configuration. Initially, the circuit featured no genuinely slow corners and was well-known for its highly abrasive tarmac.
+Key changes include:
+Turn 10: This left-hander was reprofiled and widened in 2021, making for a slightly quicker entry.
+Final Sector Chicane (Original Turns 14-15): A very slow chicane was introduced before the final corner in 2007, primarily to create overtaking opportunities, but it significantly increased lap times by over four seconds and was generally disliked by drivers.
+Chicane Removal (2023): For the 2023 race, this chicane was removed, reverting the final two corners to their original, faster, and more flowing configuration. This change allows cars to carry significantly more speed onto the pit straight, enhancing the slipstream effect.
+These modifications, especially the most recent, have aimed to produce a faster, more flowing circuit, intended to promote closer racing through the final third of the lap.
+Key Corners: A Sector-by-Sector Analysis
+The 14-turn layout (eight right-handers, six left-handers) presents distinct challenges:
+Sector 1: Dominated by the high-energy demands of Turns 1, 2, and the iconic Turn 3.
+Turns 1 & 2: A dramatic change of direction requiring precision.
+Turn 3: A long, sweeping, uphill right-hander, often taken flat-out, particularly in qualifying. It can be made treacherous by tailwinds and places immense load on the tyres. Drivers sometimes have to manage their pace through here on a qualifying lap to prevent overheating tyres before the crucial final sector.
+Sector 2: Features a mix of medium and high-speed corners.
+Turn 4: A demanding braking zone.
+Turn 5: A slow-speed left-hander focusing on mechanical grip.
+Turn 9 (Campsa): One of Formula 1's fastest corners. This right-hander is typically flat-out on a qualifying lap but may require a slight lift of the throttle with a full fuel load during the race. It is a significant test of aerodynamic grip.
+Sector 3: This sector is incredibly important, with significant lap time to be found in its slower corners.
+Turn 10: A tight, reprofiled left-hander demanding heavy braking and good mechanical grip.
+Turns 13 & 14: Following the chicane's removal, this is now a high-speed sweeping sequence leading onto the main straight, testing aerodynamic grip and stability.
+Optimizing performance across all three sectors requires a delicate balance. Maximising grip and speed in Sector 1 can easily overheat the tyres, compromising performance in the traction-dependent final sector. It is rare for a driver to set the fastest time in all three sectors on a single lap.
+TRACK CHARACTERISTICS
+TRACTION
+3/5
+TYRE STRESS
+5/5
+ASPHALT GRIP
+3/5
+BRAKING
+3/5
+ASPHALT ABRASION
+4/5
+LATERAL
+5/5
+TRACK EVOLUTION
+3/5
+DOWNFORCE
+4/5
+Aerodynamic and Mechanical Grip Demands
+The circuit is an ideal test bed because its wide range of corner types and speeds, plus long straights, thoroughly test both a car's aerodynamic efficiency and its mechanical grip.
+Mechanical Grip: Slow-speed corners like Turn 5 and the crucial Turn 10 are paramount tests of a car's mechanical grip, traction, and low-speed balance.
+Aerodynamic Grip: High-speed sections, notably the sweeping Turn 3, the rapid Turn 9 (Campsa), and now the final T13-14 sequence, are where a car's aerodynamic downforce and efficiency are truly challenged.
+Braking Demands
+The Circuit de Barcelona-Catalunya features three braking sections considered particularly demanding on the braking system. The approaches to Turn 10, Turn 1, and Turn 4 are identified as the most severe, requiring significant stopping power and good brake stability.
+F1 BREMBO BRAKING DATA – SPANISH GP 2025
+Turn | Initial Speed (km/h) | Final Speed (km/h) | Stopping Distance (m) | Braking Time (sec) | Max Deceleration (g) | Max Pedal Load (kg) | Braking Power (kW) |
+≡ 01 | 325 | 160 | 105 | 1.64 | 4.0 | 130 | 2,041 |
+≡ 04 | 295 | 160 | 102 | 1.76 | 3.9 | 126 | 1,875 |
+= 05 | 258 | 99 | 103 | 2.34 | 3.6 | 120 | 1,571 |
+= 07 | 269 | 156 | 76 | 1.38 | 3.8 | 125 | 1,692 |
+≡ 10 | 310 | 106 | 125 | 2.46 | 4.0 | 133 | 2,019 |
+= 12 | 223 | 131 | 89 | 1.88 | 2.9 | 81 | 941 |
+Tyre Selection and Strategy
+The track's challenging nature and abrasive surface place high demands on tyres.
+Compound Choice: After two consecutive rounds featuring the softest trio in Pirelli's 2025 range, the hardest compounds have been selected for Barcelona: C1 as Hard, C2 as Medium, and C3 as Soft. These compounds have been revised since the previous year, especially the C2, aiming for more equidistant performance gaps between them. This could lead to the Medium and Soft compounds being favoured for race stints.
+Tyre Stresses: The forces exerted on the tyres are medium to high, primarily due to the many fast corners like Turn 3 and the final two right-handers. The front-left tyre is subjected to the greatest stress due to the prevalence of right-hand turns.
+Pirelli Testing: Although the circuit is no longer extensively used for official in-season testing by teams (due to the virtual elimination of such tests and reduced pre-season work), it remains an important test bench. Pirelli has chosen to conduct development work for next season's tyres here for a third time, following tests in September 2024 and January 2025. These tests will involve Mercedes, Racing Bulls, and Red Bull.
+Compound Popularity: The Hard compound isn't typically popular as a race tyre. Despite its durability, it offers less grip than the softer compounds, leading to more sliding, which can counter-intuitively result in higher degradation. This has an unusual implication for Qualifying, with front-running teams often happy to take the maximum five sets of Soft tyres into the critical sessions, rather than the more common four.
+Strategic Norms: Historically, when Pirelli first became the control tyre supplier, the Spanish Grand Prix could be a four-stop event. However, teams have significantly improved their understanding of tyre preservation, and a two-stop race is now the standard. The choice is generally between a two-stop and a three-stop strategy, with the latter becoming more viable as track temperatures rise.
+Last Year's Strategic Picture
+A two-stop strategy was overwhelmingly the norm at the 2024 Montmelò race.
+Starting Tyres: All drivers, with the exception of Alex Albon (who started from the pit lane on Mediums), lined up on the grid using the Soft compound for their first stint.
+Compound Usage: Twelve drivers used all three available compounds during the race, typically reserving the Hard compound for the final stint.
+Podium Strategy: The top three finishers – winner Max Verstappen, followed by Lando Norris and Lewis Hamilton – were all on a second set of Soft tyres when they took the chequered flag. Verstappen's winning strategy involved starting on used C3 Soft tyres, switching to new C2 Mediums on lap 17, and then fitting another set of Softs on lap 44 for the drive to the flag. The other top-three finishers ran similar Soft-Medium-Soft races, with their first stops between laps 16 and 23, and second stops between laps 43-47.
+Alternative Strategies: Six of the top ten finishers ran the Soft-Medium-Soft strategy. The other four in the points opted for the Hard tyre for their final stint, stopping earlier for their second stop, between laps 36-38. Mercedes' George Russell was the highest-placed driver to try something different, finishing fourth on a Soft-Medium-Hard strategy.
+Three-Stoppers: Only two drivers attempted a three-stop strategy in 2024: Sergio Pérez and Yuki Tsunoda. It didn't yield significant benefits for either; Pérez converted P11 to P8 with a Soft-Soft-Medium-Soft race, while Tsunoda went from P17 to P19 using a Soft-Medium-Hard-Soft approach.
+Comparison to Previous Years: In 2023, the three-stop was slightly more popular, although not among the points-scoring cars. Looking further back, in 2022, the top five finishers all successfully executed a three-stop race.
+Overtaking Opportunities and Grid Position
+The Circuit de Barcelona-Catalunya is not traditionally famous for plenty of overtakes, mainly due to its aerodynamic characteristics making it difficult for cars to follow closely.
+Key Overtaking Zone: Turn 1 is the major overtaking opportunity, especially with the improved slipstream effect onto the main straight following the removal of the final chicane in 2023.
+Importance of Grid Position: Grid position is critically important. Of the 34 Grands Prix held at this circuit, a remarkable 24 have been won from pole position, and 31 from the front row.
+Winning from Further Back: The furthest back on the grid a driver has won from is P5, achieved by Fernando Alonso in 2013. Max Verstappen is also among the non-front-row winners, securing his maiden victory in 2016 from P4 on the grid.
+Pole Sitters Failing to Convert: Four drivers starting from pole have failed to finish the race. Of the six pole-sitters who finished but did not win, only Michael Schumacher (1994, famously stuck in fifth gear for much of the race), Valtteri Bottas (2019, beaten into Turn 1 by teammate Hamilton), and Lando Norris (2024, overtaken into Turn 1 by George Russell and Max Verstappen) managed to finish on the podium, all in second place.
+Weather Outlook and Its Impact
+The local weather, specifically wind, is a well-known and often influential factor.
+Unpredictable Gusts: The track is frequently subject to strong winds and unpredictable gusts that have caught out many drivers in the past. A sudden change in wind direction in 2022 resulted in an off-track moment for Max Verstappen at Turn 4 during the race.
+Wind Patterns: If there is an obvious pattern, it often involves a tailwind on the main straight during morning sessions, which translates to a headwind into the high-speed turns. This tends to rotate or shift in the afternoon, causing car balance more difficult to manage and needing constant driver adaptation.
+F1 Schedule with Live Weather Forecasts
+Technical Directives and Development Focus
+Barcelona has usually been a circuit where teams introduce significant car updates, using its demanding nature as a proving ground.
+Wing Flexibility: The flexibility of front and rear wings has been a contentious topic. Concerns have been raised about teams potentially exploiting regulations with wings that flex under aerodynamic load. For rear wings, this could create a "mini-DRS" effect on straights as the wing deformed, increasing the slot gap. Tighter controls on rear wing stiffness were implemented earlier in the season (China and Japan).
+Front Wing Scrutiny: For the Spanish Grand Prix, the focus shifts to front wings. Deflection tests have been made more stringent, requiring stiffer front wing designs. While this is unlikely to be a complete game-changer, it could slightly narrow the performance gap between teams.
+Historical Records and Statistics
+This year marks the 55th running of the World Championship Spanish Grand Prix.
+Previous Venues: Before settling at the Circuit de Barcelona-Catalunya, the Spanish Grand Prix was hosted at four other tracks: Pedralbes (a street circuit in Barcelona, 1951, 1954), Montjuïc Park (another Barcelona street circuit, held on odd-numbered years from 1969 to 1975), Jarama (near Madrid, in 1968, 1970, 1972, from 1976-1979, and 1981), and Jerez de la Frontera (Andalusia, from 1986 to 1990).
+European Grands Prix in Spain: Spain has also hosted seven European Grands Prix: two in Jerez (1994 and 1997) and five on the Valencia street circuit (2008-2012).
+Driver Records (Spanish GP):
+Most Wins: Michael Schumacher and Lewis Hamilton (6 each).
+Most Wins on Spanish Soil: Michael Schumacher (7, including his 1994 European GP win at Jerez).
+Most Pole Positions: Michael Schumacher (7), followed by Lewis Hamilton (6).
+Most Podium Finishes: Michael Schumacher and Lewis Hamilton (12 each).
+Consecutive Wins: Lewis Hamilton holds the record for most consecutive wins at a single Grand Prix circuit with five in Barcelona (2017-2021), a record he shares with Ayrton Senna (Monaco, 1989-1993).
+Maiden F1 Wins: Four drivers took their first Grand Prix victory in Spain: Niki Lauda (1974), Jochen Mass (1975), Pastor Maldonado (2012), and Max Verstappen (2016).
+Team Records (Spanish GP):
+Most Wins: Ferrari (12), plus two European GP victories in Valencia.
+Most Pole Positions: Ferrari (14).
+Most Podium Finishes: Ferrari (38).
+Max Verstappen at Barcelona: Max Verstappen secured his maiden F1 win here with Red Bull Racing in 2016, just over a week after joining the team. He has achieved victories in each of the last three races at this circuit (prior to the event being previewed). In nine Spanish Grands Prix with the team, he has finished off the podium only once (due to a Turn 1 collision in 2017).
+Future of the Spanish GP: The Spanish Grand Prix is scheduled to move to a new purpose-built circuit on the outskirts of Madrid from next year. However, there is also an expectation that a race will continue to be held at the Circuit de Barcelona-Catalunya in 2026.
+F1 and MotoGP: Barcelona is one of the rare venues that hosts both Formula 1 and MotoGP (the Grand Prix of Catalonia), with both currently using the same track layout. F1 cars are approximately 22 seconds quicker per lap.
+2025 Spanish Grand Prix – Stat Sheet
+Circuit Characteristics
+Characteristic | Value |
+Circuit Length | 4.657 km |
+Race Laps | 66 |
+Race Distance | 307 km |
+Number of Corners | 14 (6 L / 8 R) |
+Distance from Pole to First Braking Zone | 549 m |
+Pole Position Side | Left |
+Pit Lane Length Under Speed Limit Control | 548 m |
+Drive-Through Time at 80 km/h | 17s |
+Lap Time At Full Throttle | 66% |
+Lap Distance At Full Throttle | 73% |
+Gear Changes Per Lap | 44 |
+Braking Events (>2G) | 5 |
+Heavy Braking Events (<0.4s @ >4G) | 2 |
+Braking Energy | Medium |
+Maximum Lateral G-Force | 4.8 (T14) |
+Maximum Speed | 326 km/h |
+Fuel Consumption | High |
+DRS Zones | T9–10, T14–1 |
+Key Overtaking Opportunities | T1 |
+2024 Statistics
+Statistic | Value |
+Fastest Lap FP1 | 1:14.228 |
+Fastest Lap FP2 | 1:13.264 |
+Fastest Lap FP3 | 1:13.013 |
+Fastest Lap Q1 | 1:12.143 |
+Fastest Lap Q2 | 1:11.653 |
+Fastest Lap Q3 | 1:11.383 |
+Delta FP1 to Q3 | -2.845s |
+Delta Q1 to Q3 | -0.760s |
+Podium | VER / NOR / HAM |
+Team Result | HAM P3 / RUS P4 |
+Fastest Race Lap | 1:17.115 (NOR) |
+Winning Race Time | 1:28:20.227 |
+Winning Average Speed | 208.679 km/h |
+Qualifying Speed Trap | 329 km/h (RUS) |
+Race Speed Trap | 330 km/h (VER) |
+Winning Strategy | 2 Stop (L17 / L44) |
+Total Pit Stops | 42 |
+Total Normal Overtakes | 7 |
+Total DRS Overtakes | 41 |
+Race Lap Record | 1:16.330 (VER, 2023) |
+Absolute Lap Record | 1:12.272 (VER, Q3, 2023) |
+Not Classified (Accident/DSQ) | 0 |
+Not Classified (Mechanical) | 0 |
+Race Characteristics (2020–2024)
+Characteristic | Value |
+Races Featuring Safety Car | 1/5 |
+Total Safety Car Deployments | 1 |
+Safety Car Probability | 20% |
+Safety Car Ratio | 0.2 |
+Wet Sessions | 1/25 |
+Wet Session Probability | 4% |
+Average Track Temperature | 37°C |
+Maximum Track Temperature | 45.9°C |
+Average Ambient Temperature | 25.3°C |
+Maximum Ambient Temperature | 34.4°C |
+Ambient Pressure | 998 hPa |
+Tyre Allocation
+Compound | Sets Per Driver |
+Soft | 8 |
+Medium | 3 |
+Hard | 2 |
+Where to Watch 2025 Spanish Grand Prix
+The Ultimate F1 2025 Viewing Guide
+I’m constantly changing things up to make this newsletter more useful, so let me know what you think by commenting below. I read every reply! Please do reply. I'm not a robot, I talk back.
+Follow me on Whatsapp , Telegram , Facebook , YouTube , LinkedIn , Pixelfed , Tumblr , Bsky , Twitter , Mastodon , Instagram , Sub-Reddit , Threads for more analysis!
+Subscribe to our Newsletter
+Get the latest insights and updates delivered directly to your inbox!
+Open the newsletter in a new tab
+Share:
+Previous Next
+← Back to Blog Posts
+Your one-stop home for unparalleled F1 insights
+Support Data Contact Privacy Terms
+Connect on Socials
+Subscribe to our Newsletter
+Get the latest insights and updates delivered directly to your inbox!
+Prefer a new tab? Open the newsletter on Substack.
+TracingInsights and this website are unofficial and are not associated in any way with the Formula 1 companies. F1, FORMULA ONE, FORMULA 1, FIA FORMULA ONE WORLD CHAMPIONSHIP, GRAND PRIX and related marks are trade marks of Formula One Licensing B.V. This is a fan-made application. Data is used under fair use. All product and company names are trademarks™ or registered® trademarks of their respective holders. Use of them does not imply any affiliation with or endorsement by them.
+Any product names, logos, brands, and other trademarks or images featured or referred to within the app are the property of their respective trademark holders. These trademark holders are not affiliated with TracingInsights or its contributors. They do not sponsor or endorse TracingInsights or any of our products.
+"F1 TV®", "Formula 1®", "F1®", "Alfa Romeo®", "AlphaTauri®", "Alpine®", "Aston Martin®", "Ferrari®", "Haas®", "Haas F1 Team®", "McLaren®", "Mercedes®", "Red Bull®", "Red Bull Racing®", "Williams®" are trademarks of their respective owners and are not affiliated, endorsed, connected or sponsored in any way to this app.
+Some links on this website are affiliate links. This means that if you click on the link and purchase the item, it supports the development of TracingInsights. This is at no additional cost to you.
