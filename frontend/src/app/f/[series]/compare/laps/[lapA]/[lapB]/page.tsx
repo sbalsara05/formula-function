@@ -11,6 +11,10 @@ const COMPARISON_REGISTRY: Partial<Record<Series, Record<string, typeof vettelWe
   },
 }
 
+const COMPARISON_BACK_DRIVER_SLUGS: Record<string, string> = {
+  [vettelWebberSuzuka2009.id]: 'vettel',
+}
+
 export default async function CompareRoute({
   params,
 }: {
@@ -24,7 +28,10 @@ export default async function CompareRoute({
   const data = COMPARISON_REGISTRY[series]?.[key]
   if (!data) notFound()
 
-  const backHref = `/f/${seriesParam}/driver/${lapA.split('-')[0]}/laps/${lapA}`
+  const backDriverSlug = COMPARISON_BACK_DRIVER_SLUGS[data.id]
+  if (!backDriverSlug) notFound()
+
+  const backHref = `/f/${seriesParam}/driver/${backDriverSlug}/laps/${lapA}`
 
   return <ComparePageClient data={data} seriesNum={seriesParam} backHref={backHref} />
 }
