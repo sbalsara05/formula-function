@@ -376,35 +376,23 @@ All 23 current-circuit fingerprints were re-scored from one consistent 2025 sour
 
 ---
 
-## ITEMS STILL REQUIRING MANUAL INPUT
+## Current-driver stats pass (Jolpica, through 2026 round 16)
 
-The following fields were flagged `[VERIFY]` and could not be definitively confirmed from available data. These need manual review using the linked sources:
+All 23 current F1 `DriverStats` blocks were rewritten from Jolpica (`scripts/audit_driver_stats.py`). Data through the 2026 Bahrain Grand Prix in Malaysia, 2026-10-04. Raw pages are in `scripts/driver_audit_cache/`; the before/after report is `scripts/driver_stats_audit.json`.
 
-### `teams.ts`
-| Team | Field | Current Value | Source to check |
-|------|-------|--------------|-----------------|
-| Ferrari | `podiums: 815` | 815 | formula1.com/en/results/constructor/ferrari |
-| Mercedes | `wins: 125` | 125 | en.wikipedia.org/wiki/Mercedes-Benz_in_Formula_One |
-| Mercedes | `podiums: 320` | 320 | en.wikipedia.org/wiki/Mercedes-Benz_in_Formula_One |
+Definitions: race wins and podiums only (sprints excluded); poles are Grand Prix grid slot 1, except 2022 sprint weekends where pole is the Friday qualifying winner; points include sprint points; titles are seasons finished P1, excluding the season in progress. Fastest laps come from Jolpica (recorded from 2004) plus Alonso's 2003 Canadian GP, from gpracingstats.com.
 
-### `drivers.ts`
-| Driver | Fields | Source |
-|--------|--------|--------|
-| Hamilton | poles, podiums, racesEntered, fastestLaps, pointsScored | formula1.com/en/drivers/lewis-hamilton |
-| Verstappen | poles, podiums, fastestLaps, pointsScored | formula1.com/en/drivers/max-verstappen |
-| Leclerc | All stats (wins stale — actual 8 through 2024, 0 in 2025) | formula1.com/en/drivers/charles-leclerc |
-| Piastri | All stats (wins stale — actual ~9 through 2024 + 7 in 2025) | formula1.com/en/drivers/oscar-piastri |
-| Pérez | wins, podiums | formula1.com/en/drivers/sergio-perez |
-| Bottas | All stats | formula1.com/en/drivers/valtteri-bottas |
-| Sainz | racesEntered (~233 through 2025), podiums (~29), pointsScored (~1337) | formula1.com/en/drivers/carlos-sainz |
-| Alonso | All stats except titles/wins | formula1.com/en/drivers/fernando-alonso |
-| Russell | podiums, pointsScored | formula1.com/en/drivers/george-russell |
+Notable corrections: Pérez 27 wins / 66 podiums was 6 / 39. Norris is a champion (2025) with 13 wins, not 8. Stroll has 1 pole and 3 podiums, not 3 and 12. Tsunoda has 0 podiums, not 2. Alonso has 26 fastest laps, not 23.
 
-### `drivers.ts` — Slide caption placeholders still needing sources
-Any field containing `[VERIFY · search: "..."]` needs the caption text verified against race records and replaced with confirmed text.
+Era win counts that contradicted the same data were corrected in the same file (Pérez 26 Red Bull wins → 5, Sainz's Williams "win" → 0, Alonso's Alpine "win" → the 2021 Qatar podium, Hamilton's first Ferrari win added). Highlight text that named a wrong result was fixed where the cache showed it: Stroll's Baku 2017 finish was P3, Hülkenberg's 2010 Brazil pole was his 18th race, Colapinto's 2024 best was P8 at Baku, Bottas did not take pole at Silverstone 2017.
 
-### `drivers.ts` and `teams.ts` — Quote placeholders
-Any field containing `[QUOTE PLACEHOLDER · NEEDS SOURCE · search: "..."]` needs a real sourced quote from the-race.com, autosport.com, or motorsport.com.
+### Team totals — not applied
+
+`teams.ts` already cites formula1.com Team Summary, and those figures disagree with Jolpica's per-driver result counts (Ferrari podiums 647 vs 858, Mercedes wins 130 vs 142, McLaren wins 203 vs 201). The earlier `[VERIFY]` values (Ferrari 815, Mercedes 125 / 320) are no longer in the file. Jolpica counts each driver finish; formula1.com's summary is a different number. Left as published on formula1.com until that definition is confirmed.
+
+### Still open
+
+`teams.ts` still has `[QUOTE PLACEHOLDER · NEEDS SOURCE]` on the deferred Toro Rosso, AlphaTauri and Sauber lineage entries. No `[VERIFY]` captions remain in `drivers.ts`.
 
 ---
 
@@ -451,14 +439,231 @@ Following `EDITING_PROTOCOL.md`, image URLs and narrative bullets added or touch
 
 ---
 
+## Track orientation pass (official F1 course layouts)
+
+Source SVGs are north-up drawings from julesr0y/f1-circuits-svg. Compared each outline to the official "F1 CourseLayout" SVG on Wikimedia Commons (2022/2023), used only as an orientation reference and not shown on the site. Shanghai has no official file, so it was matched to the Wikipedia circuit diagram. Las Vegas's Commons file is a turn diagram, not a course outline; the existing path already matched it and was left alone.
+
+Rotated in `venues.ts` with `scripts/rotate_track_path.py` (clockwise degrees on screen):
+
+| Venue | Rotation | Notes |
+|-------|----------|-------|
+| Spa | 90° counter-clockwise | `spaHotspots` moved with the path. Browse-card flips for Spa removed from `page.tsx`. |
+| Monaco | 46° clockwise | |
+| Silverstone | 97° counter-clockwise | |
+| Interlagos | 90° clockwise | |
+| Abu Dhabi | 90° clockwise | |
+| Melbourne | 47° counter-clockwise | |
+| Shanghai | 25° clockwise | Wikipedia diagram, not an official F1 file |
+| Montreal | 66° counter-clockwise | |
+| Barcelona | 58° clockwise | |
+| Hungaroring | 38° counter-clockwise | |
+| Zandvoort | 8° clockwise | |
+| Baku | 71° clockwise | |
+| COTA | 23° clockwise | |
+
+Monza was rotated 90° counter-clockwise in the earlier pass. Suzuka, Bahrain, Jeddah, Miami, Imola, Singapore, Mexico, Qatar and Las Vegas already matched and were not changed.
+
+After the rotations, every compared outline is closest to its reference at 0° (`scripts/audit_track_orientation.py`).
+
+---
+
+## Corner moments (photo and description)
+
+The map click no longer opens the schematic racing lines. `MomentOverlay` now carries `body`, an optional `imageUrl`, and an optional `imageNote` for when the picture is the race rather than the pass. `TrackMap` fills the panel with the photo (`object-fit: cover`) and falls back to the dark glow if the image is missing or fails to load. The "click corners" line and the moment/legendary key render only when that venue has those dots.
+
+Spa's four clicks were corrected. The old La Source entry said Leclerc passed Hamilton there in 2019; the lap-1 incident was Verstappen hitting Räikkönen (formula1.com race report, 1 Sep 2019). The old Bus Stop entry said Webber passed Alonso on the last lap in 2011; Webber's pass on Alonso was through Eau Rouge, which stays a label. The Bus Stop click is now Hamilton cutting the chicane on lap 42 in 2008 (FIA International Court of Appeal, 22 Sep 2008; formula1.com result: Massa classified first, Hamilton third). Kemmel is Vettel passing Button for the lead in 2011. Les Combes stays Häkkinen on Schumacher, lap 41, 2000.
+
+Each of the other 22 venues has three clicks. Copy is a reported incident at that place. Where a famous result could not be pinned to a corner, it is either left off or told at the start/finish line as taking the flag. Fatal crashes are not illustrated with the accident: Imola 1994 uses the existing Senna cockpit portrait and says so.
+
+### Images
+
+Corner photos are self-hosted JPEGs from Flickr Creative Commons, not Wikipedia or Wikimedia. Each one was opened and checked for the car and the year. The note on the panel says when the frame is the race rather than the corner itself. No FOM, Getty, LAT, or motorsport.com CDN frames. A Flickr upload whose caption credited LAT Photographic was not used.
+
+| File | What it is |
+|------|------------|
+| `spa-busstop-2008.jpg` | Flickr, ph-stop, CC BY-SA. After the Bus Stop cut, Hamilton's McLaren and Räikkönen's Ferrari on the straight, Hamilton lifting. 1024×683. |
+| `silverstone-hamilton-2021.jpg` | Flickr, mrtnutt, CC BY-NC-SA. Hamilton's Mercedes during the 2021 British Grand Prix. 1024×683. Not the Copse contact. |
+| `abu-dhabi-mercedes-2021.jpg` | Flickr, Automotive Rhythms, CC BY-NC-ND. A Mercedes at Yas Marina, 2021. 1024×671. Not the pass at Turn 5. |
+| `shanghai-hamilton-2007.jpg` | Flickr, ev0, CC BY-NC-SA. Hamilton's McLaren in the wet at Shanghai, 2007. 1024×682. Not the pit-entry gravel. |
+| `singapore-alonso-vettel-2012.jpg` | Flickr, CC BY-NC-SA. Alonso and Vettel after the 2012 Singapore Grand Prix. 1024×646. Not Turn 1. |
+| `cota-hamilton-2012.jpg` | Flickr, CC BY. Hamilton's McLaren, number 4, at the 2012 United States Grand Prix. 1024×683. Not Turn 1. |
+| `interlagos-2008-wet.jpg` | Flickr, CC BY-SA. The 2008 Brazilian Grand Prix in the wet. 1024×640. Not the pass on Glock. |
+| `spa-schumacher-2011.jpg` | Flickr, p_c_w, CC BY-ND. Schumacher's Mercedes at Eau Rouge, 2011 Belgian Grand Prix. 1024×682. The Kemmel panel says this is not the pass on Button. |
+| `albert-park-ferrari-2003.jpg` | Flickr, RobiNZ, CC BY-NC. Ferrari pit stop at the 2003 Australian Grand Prix. 1024×692. Not Coulthard taking the flag. |
+
+Wikipedia lead images under about 400 pixels wide were taken off the corner panel. Stretched across the map they looked soft, and they came from Wikipedia. The panel uses the dark glow for those clicks. The archive grid still uses the same small files. That includes the 2020 Monza Gasly podium, the 2020 Bahrain Grosjean fire, and the 2008 Singapore crash, which had no sharp non-Wikipedia replacement. The Singapore crash is no longer a Wikimedia hotlink on the corner panel.
+
+Sharp files already in the project, 800 pixels or wider, stay on the panel when Flickr had no better frame of that race. `monaco-senna-1992.jpg` is the podium, not the hairpin, and the panel says so.
+
+`npx tsc --noEmit` in `frontend/`: exit 0.
+
+---
+
+## Corner markers (official corners)
+
+Hotspot `x`/`y` are percentages of the 500×500 track. Only those two fields changed. Moment copy is unchanged.
+
+Numbered corners come from the Wikimedia "F1 CourseLayout" SVGs already used for orientation (2022/2023 files in the corner-number group). Each numbered circle was aligned to the venue outline and snapped to a point on that corner, not to the nearest stroke if that stroke was a different corner. Spa's names also follow the circuit guide (spa-francorchamps.be, "The corners of the Spa-Francorchamps circuit") and the formula1.com Spa corner-name article: La Source, Eau Rouge/Raidillon, Kemmel, Les Combes, Pouhon, Stavelot, Blanchimont, Bus Stop. Shanghai uses the Wikipedia circuit diagram (no official course-layout file). Las Vegas uses the 2023 turn diagram; the Strip is the long straight and Turn 1 is the corner at the end of it.
+
+| Venue | Marker | Old | New |
+|-------|--------|-----|-----|
+| Spa | Eau Rouge / Raidillon | 13, 52 | 21.5, 44.4 |
+| Spa | Les Combes | 46, 30 | 79.9, 22.5 |
+| Spa | Bus Stop | 83, 79 | 26.8, 55.3 |
+| Spa | Pouhon | 82, 23 | 63.7, 41.9 |
+| Spa | Stavelot | 96, 38 | 84.6, 79.2 |
+| Spa | Blanchimont | 88, 33 | 49, 51.6 |
+| Spa | La Source, Kemmel | 3, 66 and 38, 34 | unchanged |
+| Monaco | Loews Hairpin | 4, 65 | 88.1, 48.5 |
+| Monaco | Portier | 16, 41 | 96.5, 45.9 |
+| Monaco | Rascasse | 90, 49 | 9.5, 68.7 |
+| Monza | Rettifilo | 94, 70 | 32, 71.8 |
+| Monza | Curva Grande | 62, 63 | 13.1, 66.3 |
+| Monza | Pit entry | 78, 76 | 51.4, 74.3 |
+| Silverstone | Copse | 96.5, 50 | 3.1, 39.1 |
+| Silverstone | Stowe | 81.4, 69 | 96.8, 48.5 |
+| Silverstone | Abbey | 17.7, 67 | 51.7, 61.5 |
+| Suzuka | Turn 1 | 10.8, 26 | 96.9, 69.8 |
+| Suzuka | Hairpin | 94, 73 | 3.1, 26.5 |
+| Suzuka | Casio chicane | 61, 38 | unchanged |
+| Interlagos | Senna S | 6, 41 | 7.9, 42 |
+| Interlagos | Junção | 68, 80 | 97, 49.7 |
+| Interlagos | Start/finish | 28, 72 | 25.8, 26.6 |
+| Bahrain | Turn 1 | 7, 78 | 7.2, 78.7 |
+| Bahrain | Turn 3 | 12, 45 | 8.9, 64 |
+| Bahrain | Start/finish | 50, 80 | 62, 80.2 |
+| Abu Dhabi | Turn 5 | 48, 64 | 96.9, 48.9 |
+| Abu Dhabi | Hotel section | 32, 55 | 31.5, 55.3 |
+| Abu Dhabi | Start/finish | 70, 52 | 44.1, 46.3 |
+| Jeddah | Last corner | 62, 49 | 92.2, 25.3 |
+| Jeddah | Main straight | 40, 62 | 75, 36.3 |
+| Jeddah | Start/finish | 20, 68 | 67.7, 42.3 |
+| Melbourne | Turn 1 | 8, 65 | 38, 70.1 |
+| Melbourne | Start/finish | 28, 74 | 53.7, 72.5 |
+| Melbourne | Pit straight | 70, 73 | 69.8, 72 |
+| Shanghai | Pit entry | 28, 72 | 29, 71.5 |
+| Shanghai | Hairpin | 7, 75 | 7.3, 76.2 |
+| Shanghai | Start/finish | 55, 68 | 38.2, 48.2 |
+| Miami | Turn 1 | 17, 36 | 60.9, 51.5 |
+| Miami | Hairpin | 93, 37 | 17.2, 35.2 |
+| Miami | Start/finish | 60, 52 | 39.9, 37.6 |
+| Imola | Tamburello (1994) | 28, 31 | 27.4, 31.6 |
+| Imola | Tamburello (2021) | 20, 37 | 25.6, 34.7 |
+| Imola | Start/finish | 50, 68 | 39.4, 28.4 |
+| Montreal | Wall of Champions | 93, 54 | 60.7, 43.2 |
+| Montreal | Pit lane | 60, 43 | 71.2, 47 |
+| Montreal | Start/finish | 30, 50 | 87.1, 51.4 |
+| Barcelona | Last corner | 87, 56 | 92.3, 63.7 |
+| Barcelona | Turn 3 | 34, 37 | 3, 45.2 |
+| Barcelona | Turn 1 | 14, 57 | 18.1, 63.7 |
+| Hungaroring | Turn 1 | 5, 95 | 5.1, 94.5 |
+| Hungaroring | Start/finish | 48, 82 | 54.6, 96.9 |
+| Hungaroring | Last corner | 90, 90 | 90.9, 90.7 |
+| Zandvoort | Tarzan | 25, 87 | 39, 11.8 |
+| Zandvoort | Banked last corner | 34, 57 | 8.2, 85.3 |
+| Zandvoort | Hugenholtz | 22, 45 | 21.7, 45.7 |
+| Baku | Main straight | 50, 70 | 68.4, 64.1 |
+| Baku | Turn 1 | 92, 76 | 92.4, 75.9 |
+| Baku | Castle | 32, 45 | 32.1, 44.8 |
+| Singapore | Turn 17 | 20, 80 | 45.5, 57.2 |
+| Singapore | Start/finish | 70, 60 | 96.5, 60.5 |
+| Singapore | Turn 1 | 92, 63 | 92, 23.5 |
+| COTA | Turn 1 | 93, 26 | 36.9, 75.1 |
+| COTA | Esses | 40, 44 | 46.8, 52.8 |
+| COTA | Start/finish | 55, 44 | 13.1, 57 |
+| Mexico | Stadium | 15, 23 | 3.1, 23.6 |
+| Mexico | Turn 1 | 16, 35 | 94.4, 28.2 |
+| Mexico | Start/finish | 50, 45 | 25.4, 16.6 |
+| Las Vegas | The Strip | 40, 39 | 38.9, 74.8 |
+| Las Vegas | Turn 1 | 7, 61 | 90.1, 76.5 |
+| Las Vegas | Start/finish | 80, 30 | 59.6, 76 |
+| Qatar | Turn 1 | 14, 74 | 14.1, 73.9 |
+| Qatar | Start/finish | 45, 50 | 32.6, 80.6 |
+| Qatar | Turn 6 | 26, 43 | 27.8, 42.4 |
+
+Every marker is within 3px of the rendered stroke.
+
+---
+
+## Moment photos (the click, not the archive grid)
+
+Each of the 70 map clicks was checked against the incident in its `body`. A frame stays on the panel only when it shows that driver, that year, and either the incident or the result the copy describes (the finish, the podium, or the car immediately afterwards). A sharp photo of a different car from the same weekend was taken off the panel. The archive grid was not changed. Imola 1994 stays the cockpit portrait.
+
+### New files
+
+| File | Source | What it shows |
+|------|--------|----------------|
+| `monza-verstappen-hamilton-2021.jpg` | Public repost of Andrej Isakovic's frame (`i.redd.it/6xt2vmoi4b5c1.jpg`). 1080×1346. | Verstappen's Red Bull on Hamilton's Mercedes at the 2021 Rettifilo. |
+| `monza-vettel-2011-podium.jpg` | Commons, `File:Vettel Podio Monza 2011.jpg`. | Vettel on the 2011 Monza podium. The panel says it is not the Curva Grande pass. |
+| `monaco-senna-1992-race.jpg` | Commons, `File:Ayrton Senna 1992 Monaco.jpg`. 1024×683. | Senna's McLaren at Monaco in 1992. The panel says it is not the moment alongside Mansell. Replaces the trophy. |
+| `interlagos-hamilton-2008-title.jpg` | Commons, `File:Hamilton Brazil 2008 celebrations.jpg`. | Hamilton with McLaren after the 2008 title. The panel says it is not the pass on Glock. |
+| `canada-hamilton-2008-wreck.jpg` | Commons, `File:The Remains of the MP4-23.jpg`. | Hamilton's McLaren being lifted after the pit-lane crash. |
+| `bahrain-mercedes-2014.jpg` | Commons, `File:First lap 2014 Bahrain Grand Prix (3).jpg`. | The two Mercedes at the front. The panel says it is not the last-lap touch. |
+| `bahrain-grosjean-2020-remains.jpg` | Commons, `File:Romain Grosjean Haas VF-20 Remains at Formula 1 Exhibition, London 01.jpg`. | The burned Haas chassis. |
+| `singapore-alonso-2008-podium.jpg` | Commons, `File:2008 Singapore Grand Prix podium.jpg`. | Alonso on the podium. The panel says it is not Piquet's crash. |
+
+### Non-Wikimedia fills (37 empty clicks)
+
+| File | Source | What it shows |
+|------|--------|----------------|
+| `silverstone-copse-2021.jpg` | Reddit / Imgur | Hamilton–Verstappen Copse contact or Verstappen in the barrier, 2021. |
+| `silverstone-zhou-2022.jpg` | Reddit / Imgur | Zhou's car against the fence after the Abbey roll, 2022. |
+| `suzuka-senna-prost-1990-walk.jpg` | Reddit | Aftermath of the Senna–Prost Turn 1 collision, 1990. |
+| `suzuka-schumacher-2000-title.jpg` | Reddit | Schumacher celebrating the third title at Suzuka, 2000. |
+| `abu-dhabi-verstappen-hamilton-2021-t5.jpg` | Reddit | Verstappen passing Hamilton at Turn 5, 2021. |
+| `abu-dhabi-alonso-petrov-2010.jpg` | Reddit | Alonso stuck behind Petrov, 2010. |
+| `jeddah-hamilton-verstappen-2021.jpg` | Reddit `i.redd.it` | Hamilton's front wing into Verstappen's rear after the straight slow-down, 2021. |
+| `miami-norris-2024-trophy.jpg` | Reddit | Norris with the trophy after his first GP win, Miami 2024. |
+| `cota-raikkonen-2018.jpg` | Reddit | Räikkönen after his last win at COTA, 2018. |
+| `las-vegas-verstappen-2024-title.jpg` | Reddit | Verstappen celebrating the fourth title, Las Vegas 2024. |
+| `mexico-hamilton-2016-win.jpg` | Reddit `i.redd.it` | Hamilton's victory leap after the 2016 Mexican GP. |
+| `hungary-alonso-2003-podium.jpg` | Period race photo via Reddit staging | Alonso on the Hungaroring podium after winning at 22, 2003. |
+| `shanghai-hamilton-2007-gravel.jpg` | Reddit `i.redd.it` via Wayback | Hamilton beside the McLaren in the pit-entry gravel, China 2007. |
+| `zandvoort-verstappen-2022-win.jpg` | Reddit `i.redd.it/6o3ke3rczvl91.jpg` | Verstappen and Red Bull celebrating the 2022 Dutch GP. |
+| `zandvoort-verstappen-2023-win.jpg` | Reddit `i.redd.it/thxh9d70lpkb1.jpg` | Verstappen celebrating after the 2023 Dutch GP. |
+| `interlagos-senna-1991-podium.jpg` | Reddit `i.redd.it/6hezzuhqamo41.jpg` | Senna lifting the trophy on the 1991 Interlagos podium. |
+| `imola-verstappen-2022-sprint.jpg` | Reddit `i.redd.it/9l2meuy5rav81.jpg` | Verstappen passing Leclerc in the 2022 Imola sprint. |
+| `miami-verstappen-2022-after.jpg` | Reddit `i.redd.it/2jj83aal3dy81.jpg` | Verstappen after the inaugural Miami GP (gold Miami boots). |
+| `shanghai-verstappen-2024-flag.jpg` | Reddit `i.redd.it/h5ingalmzd8e1.jpeg` | Verstappen taking the chequered flag at Shanghai 2024. |
+| `barcelona-verstappen-2021.jpg` | Verstappen.com / Red Bull Content Pool (already self-hosted) | Verstappen in the RB16B during the 2021 Spanish GP weekend. |
+
+### Taken off the panel
+
+The click now uses the dark glow. The file is still on the archive grid where that grid already used it.
+
+- Spa, Kemmel 2011: Schumacher's Mercedes, not Vettel's pass.
+- Melbourne 2003: a Ferrari pit stop, not Coulthard taking the flag.
+
+### Still without a photo
+
+No sharp, accurate non-Wikimedia still of the incident turned up from official / Reddit / Imgur / Pinterest. Wrong sharp photos (memes, result graphics, wrong year, on-track cars that are not the incident) were rejected. These clicks stay on the glow:
+
+- Spa 2019 La Source (Verstappen–Räikkönen contact)
+- Spa 2011 Kemmel (Vettel past Button)
+- Spa 2000 Les Combes (Häkkinen–Zonta–Schumacher; parc-ferme and meme frames rejected)
+- Monaco 1988 Portier (Senna in the barrier)
+- Monaco 2006 Rascasse (Schumacher stopped in qualifying)
+- Monza 2020 pit entry (Hamilton into the closed pit lane)
+- Jeddah 2021 last-corner restart (both off; the straight-contact still is wired to the other Jeddah click)
+- Bahrain 2021 (body claims Verstappen won; Hamilton won — left empty)
+- Melbourne 2003 (Coulthard win; only undersized archive still available)
+- Melbourne 2024 (body claims Leclerc pole; Verstappen took pole — left empty)
+- Miami 2023 (body claims a first-lap stoppage; the race ran green — left empty)
+- Imola 2021 Tamburello (both in the gravel; wet side-by-side rejected)
+- Montreal 1999 Wall of Champions
+- COTA 2021 (Verstappen holding Hamilton / taking the flag)
+- Qatar 2021 Hamilton win; Qatar 2023 title; Qatar 2023 Alonso podium
+
+---
+
 ## TECHNICAL NOTES
 
-- **TypeScript validation** (`npx tsc --noEmit`) was run after each phase and after all Phase 4 edits. Result: **0 errors** at all checkpoints.
+- **TypeScript validation** (`cd frontend && ./node_modules/.bin/tsc --noEmit`) was run after the non-Wikimedia moment-photo wiring. Result reported in-session.
 - All `upload.wikimedia.org` image URLs were verified to load before being added.
-- Local images are served from `/frontend/public/drivers/` and referenced as `/drivers/filename.ext` (Next.js root-relative paths).
+- Local images are served from `/frontend/public/drivers/` and `/frontend/public/images/venues/` and referenced as root-relative paths.
 - Fingerprint bar ratings are editorial judgements and are now marked accordingly in the code.
 - The `[EDITORIAL · based on: ...]` pattern is used for all 23 venue fingerprint bar arrays.
 
 ---
 
-*Last updated: teams verification pass (`teams.ts` · team bundles · DATA_AUDIT_LOG section) · April 2026.*
+*Last updated: non-Wikimedia moment-click photos for the 37 empty overlays (`venues.ts` MomentOverlay imageUrl) · October 2026.*
