@@ -193,6 +193,7 @@ export const spaHotspots: Hotspot[] = [
 export const spaMomentOverlays: MomentOverlay[] = [
   {
     // formula1.com, 1 Sep 2019: Verstappen hit Räikkönen at La Source on lap 1, then crashed at Eau Rouge.
+    // Photo: RaceFans / XPB — Verstappen's RB15 smoking after the lap-1 damage.
     momentId: "verstappen-spa-2019",
     title: "Verstappen and Räikkönen at La Source",
     year: 2019,
@@ -201,10 +202,12 @@ export const spaMomentOverlays: MomentOverlay[] = [
     cornerLabel: "La Source",
     description: "LAP 1 COLLISION",
     body: "Verstappen dived inside at La Source on the opening lap and hit Räikkönen. The Alfa was pitched up, Verstappen's steering was damaged, and he went into the barrier at Eau Rouge. The safety car came out.",
+    imageUrl: "/images/venues/spa-verstappen-raikkonen-2019.jpg",
+    imageNote: "Verstappen's Red Bull smoking after the lap-1 damage. Not the La Source contact itself.",
   },
   {
     // formula1.com, 2011 Belgian Grand Prix: after the Red Bull pit cycle Button led, and Vettel passed him for the lead on the Kemmel Straight. Vettel won; Button finished third.
-    // No sharp still of the pass. The Eau Rouge Schumacher frame was the wrong car.
+    // Photo: RaceFans / XPB — Vettel leads the Spa 2011 start. Not the Kemmel pass on Button.
     momentId: "vettel-spa-2011",
     title: "Vettel takes the lead on Kemmel",
     year: 2011,
@@ -213,9 +216,12 @@ export const spaMomentOverlays: MomentOverlay[] = [
     cornerLabel: "Kemmel Straight",
     description: "RED BULL over McLAREN",
     body: "Button led after the Red Bulls pitted. Vettel went past him on the Kemmel Straight and won the race. Button came back to third.",
+    imageUrl: "/images/venues/spa-vettel-2011.jpg",
+    imageNote: "Vettel leads the Spa 2011 start. Not the pass on Button on the Kemmel Straight.",
   },
   {
     // 2000 Belgian GP, lap 41: Schumacher moved to lap Zonta and Häkkinen went the other side at Les Combes. Häkkinen won.
+    // Photo: period race still of the three-wide on the Kemmel Straight into Les Combes (non-Wikimedia staging).
     momentId: "hakkinen-spa-2000",
     title: "Häkkinen on Schumacher — the Zonta lap",
     year: 2000,
@@ -224,6 +230,7 @@ export const spaMomentOverlays: MomentOverlay[] = [
     cornerLabel: "Les Combes",
     description: "McLAREN over FERRARI",
     body: "On lap 41 Schumacher moved aside to lap Ricardo Zonta. Häkkinen went the other side at Les Combes and took the lead. He won the race.",
+    imageUrl: "/images/venues/spa-hakkinen-zonta-2000.jpg",
   },
   {
     // FIA International Court of Appeal, 22 Sep 2008: on lap 42 Hamilton drew level into turn 19, cut the chicane, gave the place back, then retook it at La Source. 25 seconds added. formula1.com result: Massa classified first, Hamilton third.
@@ -403,6 +410,7 @@ export const monacoMomentOverlays: MomentOverlay[] = [
   },
   {
     // 1988 Monaco GP: Senna retired from a large lead after hitting the barrier at Portier. Prost won.
+    // Photo: Commons period still — Senna's MP4/4 at Monaco in 1988. Not the Portier barrier.
     momentId: "senna-monaco-1988",
     title: "Senna hits the wall at Portier",
     year: 1988,
@@ -411,9 +419,12 @@ export const monacoMomentOverlays: MomentOverlay[] = [
     cornerLabel: "Portier",
     description: "SENNA RETIRES",
     body: "With a large lead, Senna hit the barrier at Portier and retired. His McLaren teammate Alain Prost won the race.",
+    imageUrl: "/images/venues/monaco-senna-1988-portier.jpg",
+    imageNote: "Senna's McLaren MP4/4 at Monaco in 1988. Not the moment he hit the barrier at Portier.",
   },
   {
     // 2006 Monaco GP qualifying: stewards deleted Schumacher's times after he stopped at Rascasse. Alonso took pole and won the race.
+    // Photo: RaceFans / XPB — marshals push Schumacher's Ferrari after he stopped in qualifying.
     momentId: "schumacher-monaco-2006",
     title: "Schumacher stops at Rascasse",
     year: 2006,
@@ -422,6 +433,8 @@ export const monacoMomentOverlays: MomentOverlay[] = [
     cornerLabel: "Rascasse",
     description: "TIMES DELETED",
     body: "In qualifying Schumacher stopped his Ferrari at Rascasse and blocked the lap. The stewards deleted his times. Alonso took pole and won the race.",
+    imageUrl: "/images/venues/monaco-schumacher-rascasse-2006.jpg",
+    imageNote: "Marshals push Schumacher's Ferrari after he stopped in qualifying.",
   },
 ];
 
@@ -540,6 +553,7 @@ export const monzaMomentOverlays: MomentOverlay[] = [
   },
   {
     // formula1.com, 6 Sep 2020: Hamilton entered the pit lane while it was closed and took a 10-second stop-and-go. Gasly won.
+    // Photo: formula1.com CDN / Getty — Gasly with the trophy after the win.
     momentId: "hamilton-monza-2020",
     title: "Hamilton enters a closed pit lane",
     year: 2020,
@@ -548,6 +562,8 @@ export const monzaMomentOverlays: MomentOverlay[] = [
     cornerLabel: "Pit entry",
     description: "10s STOP-AND-GO",
     body: "Under the safety car Hamilton drove into the pit lane while it was closed. He was given a 10-second stop-and-go. Pierre Gasly won the race.",
+    imageUrl: "/images/venues/monza-gasly-2020-win.jpg",
+    imageNote: "Gasly with the trophy after winning. Not Hamilton entering the closed pit lane.",
   },
 ];
 
@@ -1050,15 +1066,17 @@ export const bahrainMomentOverlays: MomentOverlay[] = [
     imageNote: "The remains of Grosjean's Haas after the Turn 3 fire.",
   },
   {
-    // 2021 Bahrain GP: Verstappen won the first race of the championship fight.
+    // 2021 Bahrain GP: Hamilton won the season opener after a late duel with Verstappen. formula1.com race result.
+    // Photo: Hamilton celebrating the win under the Bahrain night fireworks (non-Wikimedia).
     momentId: "verstappen-bahrain-2021",
-    title: "Verstappen wins the opener",
+    title: "Hamilton wins the opener",
     year: 2021,
-    driver1Id: "verstappen",
-    driver2Id: "hamilton",
+    driver1Id: "hamilton",
+    driver2Id: "verstappen",
     cornerLabel: "Start/finish",
     description: "SEASON OPENER",
-    body: "Verstappen took the flag to win the first race of the 2021 season, with Hamilton second.",
+    body: "Hamilton and Verstappen dueled into the closing laps. Hamilton took the flag to win the first race of the 2021 season, with Verstappen second.",
+    imageUrl: "/images/venues/bahrain-hamilton-2021-win.jpg",
   },
 ];
 
@@ -1272,6 +1290,7 @@ export const jeddahHotspots: Hotspot[] = [
 export const jeddahMomentOverlays: MomentOverlay[] = [
   {
     // 2021 Saudi Arabian GP: Hamilton and Verstappen touched on the final restart and both left the track. Hamilton won.
+    // Photo: formula1.com CDN / Getty — Hamilton on the podium with the trophy; Verstappen behind.
     momentId: "hamilton-jeddah-2021",
     title: "Hamilton and Verstappen on the restart",
     year: 2021,
@@ -1280,6 +1299,8 @@ export const jeddahMomentOverlays: MomentOverlay[] = [
     cornerLabel: "Last corner",
     description: "BOTH OFF",
     body: "On the final restart Hamilton and Verstappen touched and both left the track. Hamilton won the race.",
+    imageUrl: "/images/venues/jeddah-hamilton-2021-win.jpg",
+    imageNote: "Hamilton on the podium after the win, with Verstappen behind. Not the last-corner restart.",
   },
   {
     // 2021 Saudi Arabian GP: Verstappen slowed suddenly in front of Hamilton and was penalised.
@@ -1402,7 +1423,7 @@ export const melbourneMomentOverlays: MomentOverlay[] = [
   },
   {
     // formula1.com race result, 9 Mar 2003: Coulthard won the season opener.
-    // Photo: RobiNZ, Flickr, CC BY-NC. Ferrari in the pits that weekend, not the flag.
+    // Photo: RaceFans / XPB — Coulthard's McLaren takes the chequered flag at Albert Park.
     momentId: "coulthard-melbourne-2003",
     title: "Coulthard wins the opener",
     year: 2003,
@@ -1410,16 +1431,20 @@ export const melbourneMomentOverlays: MomentOverlay[] = [
     cornerLabel: "Start/finish",
     description: "SEASON OPENER",
     body: "Coulthard took the flag to win the 2003 season opener.",
+    imageUrl: "/images/venues/albert-park-coulthard-2003-win.jpg",
   },
   {
-    // 2024 Australian GP: Leclerc's pole lap of 1:19.813 is the Albert Park lap record. The pit straight is where that lap starts and ends.
+    // 2024 Australian GP: Verstappen took pole. Leclerc set the race lap record of 1:19.813 on the rebuilt Albert Park.
+    // Photo: RaceFans / XPB — Leclerc's Ferrari SF-24 at Albert Park during the race.
     momentId: "leclerc-melbourne-2024",
     title: "Leclerc's lap record",
     year: 2024,
     driver1Id: "leclerc",
     cornerLabel: "Pit straight",
     description: "1:19.813",
-    body: "Leclerc's pole lap, 1:19.813, starts and finishes on the pit straight. It is the lap record on the rebuilt Albert Park.",
+    body: "Verstappen took pole. In the race Leclerc set a 1:19.813 — the lap record on the rebuilt Albert Park — starting and finishing on the pit straight.",
+    imageUrl: "/images/venues/albert-park-leclerc-2024-lap.jpg",
+    imageNote: "Leclerc's Ferrari during the race at Albert Park. Not the exact lap-record lap.",
   },
 ];
 export const melbourneIconicMoments: VenueIconicMoment[] = [
@@ -1657,14 +1682,17 @@ export const miamiMomentOverlays: MomentOverlay[] = [
     imageNote: "Norris with the winner's trophy after his first grand prix win.",
   },
   {
-    // 2023 Miami GP: a first-lap crash brought out a red flag. Verstappen had started ninth and won the restarted race.
+    // 2023 Miami GP: Verstappen started ninth and won under green-flag conditions. formula1.com race result.
+    // Photo: formula1.com CDN — Verstappen's RB19 in the Miami 2023 special livery during the race.
     momentId: "verstappen-miami-2023",
     title: "Verstappen from ninth",
     year: 2023,
     driver1Id: "verstappen",
     cornerLabel: "Start/finish",
     description: "FROM P9",
-    body: "A first-lap crash stopped the race. Verstappen, who had started ninth, won the restart.",
+    body: "Verstappen started ninth. He climbed through the field under green flags and took the flag ahead of Perez and Alonso.",
+    imageUrl: "/images/venues/miami-verstappen-2023.jpg",
+    imageNote: "Verstappen's Red Bull during the 2023 Miami Grand Prix, not the podium.",
   },
 ];
 export const miamiIconicMoments: VenueIconicMoment[] = [
@@ -1760,15 +1788,17 @@ export const imolaMomentOverlays: MomentOverlay[] = [
     imageNote: "Senna in the Williams cockpit in 1994, not the accident.",
   },
   {
-    // 2021 Emilia-Romagna GP: on the restart Hamilton and Verstappen both went off at Tamburello and continued.
+    // 2021 Emilia Romagna GP: at the wet start Verstappen went past Hamilton into Tamburello; Hamilton was forced onto the kerbs. Verstappen won.
+    // Photo: wet-start side-by-side into Tamburello (non-Wikimedia).
     momentId: "hamilton-imola-2021",
-    title: "Both off at Tamburello",
+    title: "Side by side at Tamburello",
     year: 2021,
     driver1Id: "hamilton",
     driver2Id: "verstappen",
     cornerLabel: "Tamburello",
-    description: "RESTART",
-    body: "On the restart Hamilton and Verstappen arrived side by side at Tamburello and both went into the gravel. Both rejoined. Verstappen won the race.",
+    description: "WET START",
+    body: "At the wet start Verstappen drew alongside Hamilton into Tamburello and took the lead. Hamilton was forced onto the kerbs. Verstappen won the race.",
+    imageUrl: "/images/venues/imola-hamilton-verstappen-2021.jpg",
   },
   {
     // 2022 Emilia-Romagna GP: Verstappen won the sprint and the race.
@@ -1870,6 +1900,7 @@ export const montrealHotspots: Hotspot[] = [
 export const montrealMomentOverlays: MomentOverlay[] = [
   {
     // 1999 Canadian GP: Damon Hill, Michael Schumacher and Jacques Villeneuve all hit the wall at the final chicane. It has been called the Wall of Champions since.
+    // Photo: Commons — the Wall of Champions barrier at Circuit Gilles Villeneuve.
     momentId: "wall-montreal-1999",
     title: "Three champions in the wall",
     year: 1999,
@@ -1878,6 +1909,8 @@ export const montrealMomentOverlays: MomentOverlay[] = [
     cornerLabel: "Wall of Champions",
     description: "FINAL CHICANE",
     body: "Damon Hill, Michael Schumacher and Jacques Villeneuve each hit the wall at the final chicane. The wall has carried their name since.",
+    imageUrl: "/images/venues/montreal-wall-of-champions.jpg",
+    imageNote: "The Wall of Champions barrier. Not the 1999 crashes themselves.",
   },
   {
     // 2008 Canadian GP: Hamilton pulled out of his pit box into Räikkönen. Both retired from the incident. Robert Kubica won.
@@ -2619,6 +2652,7 @@ export const cotaMomentOverlays: MomentOverlay[] = [
   },
   {
     // 2021 United States GP: Verstappen held off Hamilton to win.
+    // Photo: Dave Wilson Photography — Verstappen and Hamilton on the COTA podium after the 2021 race.
     momentId: "verstappen-cota-2021",
     title: "Verstappen holds off Hamilton",
     year: 2021,
@@ -2627,6 +2661,8 @@ export const cotaMomentOverlays: MomentOverlay[] = [
     cornerLabel: "Esses",
     description: "RED BULL over MERCEDES",
     body: "Hamilton attacked through the esses and never got ahead. Verstappen took the flag and kept the championship lead.",
+    imageUrl: "/images/venues/cota-verstappen-podium-2021.jpg",
+    imageNote: "Verstappen and Hamilton on the podium after the 2021 United States Grand Prix.",
   },
   {
     // 2018 United States GP: Räikkönen won, his last grand prix victory.
@@ -2965,6 +3001,7 @@ export const qatarHotspots: Hotspot[] = [
 export const qatarMomentOverlays: MomentOverlay[] = [
   {
     // 2021 Qatar GP: Hamilton won from pole.
+    // Photo: formula1.com CDN / Sutton — Hamilton celebrating after the 2021 Qatar win (Pride helmet).
     momentId: "hamilton-qatar-2021",
     title: "Hamilton from pole",
     year: 2021,
@@ -2972,9 +3009,11 @@ export const qatarMomentOverlays: MomentOverlay[] = [
     cornerLabel: "Turn 1",
     description: "FROM POLE",
     body: "Hamilton led from pole into Turn 1 and won the race.",
+    imageUrl: "/images/venues/qatar-hamilton-2021-win.jpg",
   },
   {
     // 2023 Qatar GP: Verstappen clinched the title in the sprint, the first Saturday title since 1983, and won the grand prix the next day.
+    // Photo: formula1.com CDN — Verstappen with Piastri after the Sprint that sealed the 2023 title.
     momentId: "verstappen-qatar-2023",
     title: "Title on Saturday, win on Sunday",
     year: 2023,
@@ -2982,17 +3021,22 @@ export const qatarMomentOverlays: MomentOverlay[] = [
     cornerLabel: "Start/finish",
     description: "THIRD TITLE",
     body: "Verstappen sealed the championship in the sprint on Saturday, the first title decided on a Saturday since 1983. He won the grand prix on Sunday.",
+    imageUrl: "/images/venues/qatar-verstappen-2023-title.jpg",
+    imageNote: "Verstappen after the Sprint that sealed the 2023 title, with Sprint winner Piastri.",
   },
   {
-    // 2023 Qatar GP: Alonso finished on the podium and was later given a penalty in a separate stewards matter over his car.
+    // 2023 Qatar GP: Alonso finished sixth. formula1.com race result. Stewards also looked at a rejoining incident.
+    // Photo: RaceFans / XPB — Alonso's Aston Martin AMR23 at Lusail during the race.
     momentId: "alonso-qatar-2023",
-    title: "Alonso on the podium",
+    title: "Alonso finishes sixth",
     year: 2023,
     driver1Id: "alonso",
     driver2Id: "verstappen",
     cornerLabel: "Turn 6",
-    description: "PODIUM",
-    body: "Alonso raced Verstappen through the first sector, including the Turn 6 kink, and finished on the podium.",
+    description: "P6",
+    body: "Alonso raced through the first sector, including the Turn 6 kink, and finished sixth behind Verstappen and the two McLarens.",
+    imageUrl: "/images/venues/qatar-alonso-2023-race.jpg",
+    imageNote: "Alonso's Aston Martin at Lusail during the race. Not a specific Turn 6 frame.",
   },
 ];
 export const qatarIconicMoments: VenueIconicMoment[] = [

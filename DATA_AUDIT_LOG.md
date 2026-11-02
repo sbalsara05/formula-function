@@ -627,32 +627,51 @@ Each of the 70 map clicks was checked against the incident in its `body`. A fram
 | `shanghai-verstappen-2024-flag.jpg` | Reddit `i.redd.it/h5ingalmzd8e1.jpeg` | Verstappen taking the chequered flag at Shanghai 2024. |
 | `barcelona-verstappen-2021.jpg` | Verstappen.com / Red Bull Content Pool (already self-hosted) | Verstappen in the RB16B during the 2021 Spanish GP weekend. |
 
+### Remaining-17 fill (bodies fixed, then photos)
+
+Body corrections before photos:
+
+- `verstappen-bahrain-2021` — retitled to Hamilton’s opener win after the late duel (Hamilton won; Verstappen P2).
+- `leclerc-melbourne-2024` — retitled to Leclerc’s race lap record (1:19.813); Verstappen took pole.
+- `verstappen-miami-2023` — retitled to the drive from P9 under green flags (no first-lap stoppage).
+- `alonso-qatar-2023` — body corrected to P6 (not podium). Left on the glow.
+- `hamilton-imola-2021` — body corrected to the wet-start side-by-side at Tamburello (not both in the gravel).
+
+| File | Source | What it shows |
+|------|--------|----------------|
+| `spa-hakkinen-zonta-2000.jpg` | Period race still (non-Wikimedia staging). 1280×949. | Three-wide Häkkinen / Zonta / Schumacher on the Kemmel Straight into Les Combes, 2000. |
+| `monaco-schumacher-rascasse-2006.jpg` | RaceFans / XPB. 1920×1280. | Marshals push Schumacher’s Ferrari after he stopped in Monaco 2006 qualifying. |
+| `bahrain-hamilton-2021-win.jpg` | Non-Wikimedia celebration still. 5248×2952. | Hamilton celebrating the 2021 Bahrain win under the night fireworks. |
+| `miami-verstappen-2023.jpg` | formula1.com CDN (`perez-verstappen-miami-2.webp`). 1920×1080. | Verstappen’s RB19 in the Miami 2023 special livery during the race. |
+| `imola-hamilton-verstappen-2021.jpg` | Non-Wikimedia wet-start still. 3198×2000. | Verstappen alongside Hamilton into Tamburello at the wet 2021 Imola start. |
+| `cota-verstappen-podium-2021.jpg` | Dave Wilson Photography. 1536×1152. | Verstappen and Hamilton on the COTA podium after the 2021 United States GP. |
+| `qatar-hamilton-2021-win.jpg` | formula1.com CDN / Sutton (`…/Qatar/Sunday/1354693079.webp`). 2048×1152. | Hamilton celebrating after the 2021 Qatar win (Pride helmet). |
+| `qatar-verstappen-2023-title.jpg` | formula1.com CDN (`…/F1_Grand_Prix_of_Qatar___Sprint/1722724879.webp`). 2048×1152. | Verstappen with Sprint winner Piastri after the Sprint that sealed the 2023 title. |
+
+### Remaining-9 glow fill (non-wiki first, Wikimedia fallback)
+
+| File | Source | What it shows |
+|------|--------|----------------|
+| `spa-verstappen-raikkonen-2019.jpg` | RaceFans / XPB. 1920×1280. | Verstappen’s RB15 smoking after the lap-1 damage at Spa 2019. Panel notes it is not the La Source contact. |
+| `spa-vettel-2011.jpg` | RaceFans / XPB. 1920×1280. | Vettel leads the Spa 2011 start. Panel notes it is not the Kemmel pass on Button. |
+| `monaco-senna-1988-portier.jpg` | Wikimedia Commons period still. 1219×789. | Senna’s MP4/4 at Monaco in 1988. Panel notes it is not the Portier barrier. |
+| `monza-gasly-2020-win.jpg` | formula1.com CDN / Getty. 2048×1365. | Gasly with the trophy after the Monza 2020 win. Panel notes it is not Hamilton’s closed-pit entry. |
+| `jeddah-hamilton-2021-win.jpg` | formula1.com CDN / Getty. 1920×1080. | Hamilton on the podium after the 2021 Saudi win, Verstappen behind. Panel notes it is not the last-corner restart. |
+| `albert-park-coulthard-2003-win.jpg` | RaceFans / XPB. 1920×1382. | Coulthard’s McLaren taking the chequered flag at Albert Park, 2003. |
+| `albert-park-leclerc-2024-lap.jpg` | RaceFans / XPB. 1920×1282. | Leclerc’s Ferrari SF-24 at Albert Park 2024. Panel notes it is not the exact lap-record lap. |
+| `montreal-wall-of-champions.jpg` | Wikimedia Commons. 2048×1536. | The Wall of Champions barrier at Circuit Gilles Villeneuve. Panel notes it is not the 1999 crashes. |
+| `qatar-alonso-2023-race.jpg` | RaceFans / XPB. 1920×1282. | Alonso’s Aston Martin AMR23 at Lusail 2023. Panel notes it is not a specific Turn 6 frame. |
+
 ### Taken off the panel
 
 The click now uses the dark glow. The file is still on the archive grid where that grid already used it.
 
-- Spa, Kemmel 2011: Schumacher's Mercedes, not Vettel's pass.
-- Melbourne 2003: a Ferrari pit stop, not Coulthard taking the flag.
+- Spa, Kemmel 2011: Schumacher's Mercedes, not Vettel's pass. (Replaced by `spa-vettel-2011.jpg`.)
+- Melbourne 2003: a Ferrari pit stop, not Coulthard taking the flag. (Replaced by `albert-park-coulthard-2003-win.jpg`.)
 
 ### Still without a photo
 
-No sharp, accurate non-Wikimedia still of the incident turned up from official / Reddit / Imgur / Pinterest. Wrong sharp photos (memes, result graphics, wrong year, on-track cars that are not the incident) were rejected. These clicks stay on the glow:
-
-- Spa 2019 La Source (Verstappen–Räikkönen contact)
-- Spa 2011 Kemmel (Vettel past Button)
-- Spa 2000 Les Combes (Häkkinen–Zonta–Schumacher; parc-ferme and meme frames rejected)
-- Monaco 1988 Portier (Senna in the barrier)
-- Monaco 2006 Rascasse (Schumacher stopped in qualifying)
-- Monza 2020 pit entry (Hamilton into the closed pit lane)
-- Jeddah 2021 last-corner restart (both off; the straight-contact still is wired to the other Jeddah click)
-- Bahrain 2021 (body claims Verstappen won; Hamilton won — left empty)
-- Melbourne 2003 (Coulthard win; only undersized archive still available)
-- Melbourne 2024 (body claims Leclerc pole; Verstappen took pole — left empty)
-- Miami 2023 (body claims a first-lap stoppage; the race ran green — left empty)
-- Imola 2021 Tamburello (both in the gravel; wet side-by-side rejected)
-- Montreal 1999 Wall of Champions
-- COTA 2021 (Verstappen holding Hamilton / taking the flag)
-- Qatar 2021 Hamilton win; Qatar 2023 title; Qatar 2023 Alonso podium
+None of the remaining-17 glow gaps are left empty after the remaining-9 fill.
 
 ---
 
@@ -666,4 +685,4 @@ No sharp, accurate non-Wikimedia still of the incident turned up from official /
 
 ---
 
-*Last updated: non-Wikimedia moment-click photos for the 37 empty overlays (`venues.ts` MomentOverlay imageUrl) · October 2026.*
+*Last updated: remaining-9 glow fill (9 accepts wired) · October 2026.*
