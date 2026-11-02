@@ -653,8 +653,8 @@ export const damsF2: Team = {
   entityColor: "dams",
   liveryHex: "#CC2200",
   bio: "Founded in 1988 near Le Mans by Jean-Paul Driot and Hugues de Chaunac, DAMS (Driot-Arnoux Motorsport) is one of the most storied names in European junior motorsport. Two GP2 driver titles — Davide Valsecchi (2012) and Jolyon Palmer (2014) — anchor their legacy. In the F2 era they have developed Alex Albon, Jack Doohan, and a string of Red Bull and Williams-backed juniors without yet adding to their title count.",
-  quote: "[QUOTE PLACEHOLDER · NEEDS SOURCE · search: \"Cédric Vasseur DAMS F2 quote\" OR \"DAMS team principal 2024 quote site:fiaformula2.com\"]",
-  quoteContext: "",
+  quote: "Our objective is to consistently compete at the front of the grid.",
+  quoteContext: "Charles Pic, DAMS Lucas Oil Team Owner — fiaformula2.com, Jak Crawford 2025 retention announcement",
 };
 
 export const damsF2Stats: TeamStats = {
@@ -2249,6 +2249,7 @@ export const premaReelSlides: ReelSlide[] = [
     headline: "Mick Schumacher",
     meta: "F3 '18 · F2 '20 · BACK-TO-BACK TITLES",
     svgPath: "",
+    imageUrl: "/images/drivers/mick-schumacher-prema-f2-title-sakhir-2020.jpg",
   },
   {
     slotLabel: "GRADUATE · 05",
@@ -2268,6 +2269,7 @@ export const premaReelSlides: ReelSlide[] = [
     headline: "Kimi Antonelli",
     meta: "HAMILTON'S REPLACEMENT AT 18 · YOUNGEST MERCEDES STARTER",
     svgPath: "",
+    imageUrl: "/images/drivers/antonelli-prema-f2-silverstone-win-2024.jpg",
   },
 ];
 
@@ -3962,8 +3964,8 @@ export const cadillacAcademy: TeamAcademyDriver[] = [
 
 export const cadillacIconicCars: TeamIconicCar[] = [
   { name: "MAC-26", year: 2026, subtitle: "Grid debut livery", meta: "PÉREZ / BOTTAS · FERRARI PU", imageUrl: "/images/drivers/perez-cadillac-2026.jpg" },
-  { name: "V-Series.R", year: 2026, subtitle: "GM motorsport lineage", meta: "DETROIT OEM BACKING" },
-  { name: "Andretti link", year: 2026, subtitle: "US racing pedigree", meta: "ANDRETTI GLOBAL OPS" },
+  { name: "V-Series.R", year: 2026, subtitle: "GM motorsport lineage", meta: "DETROIT OEM BACKING", imageUrl: "/images/teams/cadillac-v-series-r-le-mans.jpg" },
+  { name: "Andretti link", year: 2026, subtitle: "US racing pedigree", meta: "ANDRETTI GLOBAL OPS", imageUrl: "/images/teams/andretti-autosport-marco-andretti-detroit.jpg" },
 ];
 
 /* ─── Haas F1 Team ──────────────────────────────────────────────────────────── */

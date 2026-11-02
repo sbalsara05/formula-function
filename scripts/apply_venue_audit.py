@@ -212,6 +212,7 @@ def main() -> None:
     parser.add_argument("--weather", action="store_true")
     parser.add_argument("--fingerprints", action="store_true")
     parser.add_argument("--only", help="Comma-separated browse slugs")
+    parser.add_argument("--skip-fit", action="store_true", help="Leave driverFit arrays untouched")
     args = parser.parse_args()
 
     audit = json.loads(AUDIT.read_text()) if AUDIT.exists() else {"circuits": {}}
@@ -227,7 +228,9 @@ def main() -> None:
         const = SLUG_CONST[slug]
         vid = VENUE_ID_FIELD[slug]
 
-        if slug in audit.get("circuits", {}):
+        if args.skip_fit:
+            pass
+        elif slug in audit.get("circuits", {}):
             block = render_fit(const, vid, audit["circuits"][slug]["driverFit"])
             text = replace_const_array(text, const, block)
             print(f"updated {const}DriverFit")

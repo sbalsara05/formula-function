@@ -837,3 +837,62 @@ Total flagged: **103** (Drivers: **32**, Teams: **9**, Venues: **62**)
 1. **Venues (62 broken)** — nearly every venue slide uses cdn-N.motorsport.com or motorsport.nextgen-auto.com; these are all showing broken images in production
 2. **Drivers W+ shorthands (32 broken)** — Prost (4), Mansell (4), Hill (3), Button (3), Häkkinen (2), Senna (2), Schumacher (2), Bearman (2), Russell F2 (3), Piastri F2 (1), Bortoleto (2), Leclerc F2 (1), Magnussen (1), Lawson path (1)
 3. **Teams W_HAAS shorthands (7 broken)** — all Haas era cards and reel slides
+
+---
+
+## PLACEHOLDER PASS (`fix/fill-in-placeholders`)
+
+Audit of visible gradient/text placeholders across all routes. All images are self-hosted and
+non-Wikimedia; per-file source, author and license are in `IMAGE_SOURCES.md`.
+
+### Filled
+- [x] **Leclerc (F2)** — `portraitUrl` → `/images/drivers/leclerc-f2-champion-jerez-2017.jpg`
+- [x] **Russell (F2)** — `portraitUrl` → `/images/drivers/russell-art-f2-champion-abu-dhabi-2018.jpg`
+- [x] **Piastri (F2)** — `portraitUrl` → `/images/drivers/piastri-prema-f2-portrait-2021.jpg`
+- [x] **Prema reel** — Mick Schumacher slide and Kimi Antonelli slide `imageUrl`
+- [x] **Cadillac iconic cars** — "V-Series.R" and "Andretti link" `imageUrl`
+- [x] **Auto-built F1 driver pages** (`DRIVER_IMAGE_MAP`, 32 entries) — piquet, zhou, de_vries, latifi,
+  kubica, ralf_schumacher, hill (Graham), montoya, alesi, berger, andretti, fittipaldi, ascari, moss,
+  villeneuve (Jacques), gilles_villeneuve, scheckter, jones, brabham, hulme, rindt, ickx, regazzoni,
+  reutemann, patrese, arnoux, pironi, laffite, trulli, fisichella, irvine, de_la_rosa
+
+### Text placeholders fixed
+- [x] Leclerc F2 reel `[VERIFY]` subtitle → verified Jerez 2017 title-clinch copy; slot label corrected to `JEREZ · 2017`
+- [x] DAMS F2 placeholder quote → sourced Charles Pic quote (fiaformula2.com)
+
+### Quality follow-ups (optional)
+- Ascari (500×359) and Pironi (500×292) are the only low-resolution sources available under open licenses.
+- Six images are CC non-commercial (see license notes in `IMAGE_SOURCES.md`).
+
+---
+
+## CURRENT CIRCUITS PASS
+
+> **Stale note:** the SUMMARY above lists 62 venue images on motorsport.com / nextgen-auto / wp-content
+> hosts. Current `venues.ts` has **none** of those; every venue image is either self-hosted or Wikimedia.
+
+### Replaced (2014 onward, now self-hosted, non-Wikimedia)
+- [x] Monza `leclerc-2019` → `/images/venues/monza-leclerc-2019.jpg`
+- [x] Silverstone `hamilton-2016` → `/images/venues/silverstone-hamilton-2016.jpg`
+- [x] Silverstone `norris-2024` → swapped for `hamilton-2024-sil` (`/images/venues/silverstone-hamilton-2024.jpg`)
+- [x] Mexico `verstappen-title-2017` → `/images/venues/mexico-verstappen-2017.jpg`
+
+### Left in place (historic, pre-2014 Wikimedia; out of scope for this pass)
+- Monaco: `senna-monaco-1992`, `panis-1996`, `senna-monaco-1993`
+- Monza: `peterson-1978`, `vettel-2008` (an unused `monza-vettel-2008.jpg` already exists in `public/images/venues/`)
+- Interlagos: `glock-2008-bra`
+- Bahrain: `bahrain-2004`
+- Abu Dhabi: `alonso-2010-petrov`
+- Shanghai: `hamilton-2008-sha`
+- Montreal: `alonso-2005-mon`
+- Hungaroring: `alonso-2003-hun`
+- Singapore: `crashgate-2008`, `vettel-2012-sin`
+- COTA: `hamilton-2012-cota`, `vettel-2013-cota`
+
+### Caption errors (fixed)
+- [x] Monza `leclerc-2019` said "maiden F1 victory"; his first win was Spa 2019. Now "Leclerc ends Ferrari's Monza drought" (first Ferrari win at Monza since 2010).
+- [x] Silverstone `norris-2024` said "Norris first British GP victory"; Hamilton won, and Norris was 3rd. Replaced with `hamilton-2024-sil`, "Hamilton's record 9th British GP win" (`RECORD` badge).
+- [x] COTA `vettel-2013-cota` said "Vettel wins 4th title in Texas"; he clinched the 2013 title in India. Now "Vettel's 8th straight win — season record" (`RECORD` badge; image unchanged).
+
+### Current circuits with no page
+- Madrid (Madring) and Red Bull Ring have no venue data, so their routes return `notFound()`.
