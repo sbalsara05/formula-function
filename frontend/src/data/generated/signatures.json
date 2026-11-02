@@ -1,0 +1,4731 @@
+{
+ "generatedAt": "2026-11-02T21:38:12.596143+00:00",
+ "pipelineVersion": "timing-0.1.0",
+ "source": "OpenF1 historical API (official F1 live-timing feed)",
+ "seasons": [
+  2023,
+  2024,
+  2025,
+  2026
+ ],
+ "axes": [
+  "Steering Smoothness",
+  "Entry Aggression",
+  "Tyre Management",
+  "Throttle Application",
+  "Braking",
+  "Consistency"
+ ],
+ "eras": [
+  {
+   "id": "2022-2025",
+   "label": "Ground effect",
+   "span": "2022–2025",
+   "seasons": "2023–2025"
+  },
+  {
+   "id": "2026-",
+   "label": "Active aero",
+   "span": "2026 onwards",
+   "seasons": "2026"
+  }
+ ],
+ "drivers": {
+  "albon": {
+   "name": "Alexander Albon",
+   "defaultEra": "2026-",
+   "signatures": {
+    "2022-2025": {
+     "driverId": "albon",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": 28
+      },
+      {
+       "label": "Tyre Management",
+       "value": 85
+      },
+      {
+       "label": "Throttle Application",
+       "value": 1
+      },
+      {
+       "label": "Braking",
+       "value": 30
+      },
+      {
+       "label": "Consistency",
+       "value": 45
+      }
+     ],
+     "cohortAverage": [
+      null,
+      48.7,
+      47.4,
+      50.0,
+      51.1,
+      48.1
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       48.7,
+       47.4,
+       50.0,
+       51.1,
+       48.1
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       87.5,
+       60.0,
+       77.0,
+       69.0,
+       86.0
+      ],
+      "teammates": [
+       null,
+       30.5,
+       33.6,
+       21.2,
+       24.3,
+       40.1
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      31,
+      94,
+      2,
+      40,
+      80
+     ],
+     "confidenceScore": 0.75,
+     "sampleSize": 1818,
+     "era": {
+      "id": "2022-2025",
+      "label": "Ground effect",
+      "seasons": "2023–2025",
+      "span": "2022–2025",
+      "rules": "Most downforce comes from two Venturi tunnels under the floor, with simplified wings and 18-inch low-profile tyres, so that cars can follow each other more closely."
+     },
+     "source": "timing"
+    },
+    "2026-": {
+     "driverId": "albon",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": 5
+      },
+      {
+       "label": "Tyre Management",
+       "value": 32
+      },
+      {
+       "label": "Throttle Application",
+       "value": 3
+      },
+      {
+       "label": "Braking",
+       "value": 1
+      },
+      {
+       "label": "Consistency",
+       "value": 23
+      }
+     ],
+     "cohortAverage": [
+      null,
+      51.5,
+      53.2,
+      50.0,
+      48.7,
+      52.4
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       51.5,
+       53.2,
+       50.0,
+       48.7,
+       52.4
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       87.5,
+       60.0,
+       77.0,
+       69.0,
+       86.0
+      ],
+      "teammates": [
+       null,
+       14.0,
+       64.0,
+       28.0,
+       3.0,
+       29.0
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      10,
+      88,
+      6,
+      19,
+      40
+     ],
+     "confidenceScore": 0.69,
+     "sampleSize": 584,
+     "era": {
+      "id": "2026-",
+      "label": "Active aero",
+      "seasons": "2026",
+      "span": "2026 onwards",
+      "rules": "Front and rear wings switch between a corner mode and a low-drag straight mode, replacing DRS. Cars are shorter, narrower and lighter (768 kg), the floor tunnels are gone, and power is split roughly half and half between combustion and electric, with the MGU-H removed and fully sustainable fuel.",
+      "caveat": "Energy recovery is a bigger part of each lap: drivers lift off before braking to recharge and cars harvest at full throttle at the end of straights. Throttle and braking traces reflect energy management as well as driving style."
+     },
+     "source": "timing"
+    }
+   }
+  },
+  "alonso": {
+   "name": "Fernando Alonso",
+   "defaultEra": "2026-",
+   "signatures": {
+    "2022-2025": {
+     "driverId": "alonso",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": 34
+      },
+      {
+       "label": "Tyre Management",
+       "value": 95
+      },
+      {
+       "label": "Throttle Application",
+       "value": 61
+      },
+      {
+       "label": "Braking",
+       "value": 80
+      },
+      {
+       "label": "Consistency",
+       "value": 39
+      }
+     ],
+     "cohortAverage": [
+      null,
+      48.7,
+      47.4,
+      50.0,
+      51.1,
+      48.1
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       48.7,
+       47.4,
+       50.0,
+       51.1,
+       48.1
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       87.5,
+       60.0,
+       77.0,
+       69.0,
+       86.0
+      ],
+      "teammates": [
+       null,
+       18.0,
+       23.0,
+       84.0,
+       78.0,
+       67.0
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      42,
+      98,
+      69,
+      88,
+      68
+     ],
+     "confidenceScore": 0.79,
+     "sampleSize": 2283,
+     "era": {
+      "id": "2022-2025",
+      "label": "Ground effect",
+      "seasons": "2023–2025",
+      "span": "2022–2025",
+      "rules": "Most downforce comes from two Venturi tunnels under the floor, with simplified wings and 18-inch low-profile tyres, so that cars can follow each other more closely."
+     },
+     "source": "timing"
+    },
+    "2026-": {
+     "driverId": "alonso",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": 11
+      },
+      {
+       "label": "Tyre Management",
+       "value": 50
+      },
+      {
+       "label": "Throttle Application",
+       "value": 86
+      },
+      {
+       "label": "Braking",
+       "value": 86
+      },
+      {
+       "label": "Consistency",
+       "value": 7
+      }
+     ],
+     "cohortAverage": [
+      null,
+      51.5,
+      53.2,
+      50.0,
+      48.7,
+      52.4
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       51.5,
+       53.2,
+       50.0,
+       48.7,
+       52.4
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       87.5,
+       60.0,
+       77.0,
+       69.0,
+       86.0
+      ],
+      "teammates": [
+       null,
+       3.0,
+       38.0,
+       95.0,
+       76.0,
+       13.0
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      21,
+      94,
+      98,
+      96,
+      28
+     ],
+     "confidenceScore": 0.62,
+     "sampleSize": 491,
+     "era": {
+      "id": "2026-",
+      "label": "Active aero",
+      "seasons": "2026",
+      "span": "2026 onwards",
+      "rules": "Front and rear wings switch between a corner mode and a low-drag straight mode, replacing DRS. Cars are shorter, narrower and lighter (768 kg), the floor tunnels are gone, and power is split roughly half and half between combustion and electric, with the MGU-H removed and fully sustainable fuel.",
+      "caveat": "Energy recovery is a bigger part of each lap: drivers lift off before braking to recharge and cars harvest at full throttle at the end of straights. Throttle and braking traces reflect energy management as well as driving style."
+     },
+     "source": "timing"
+    }
+   }
+  },
+  "antonelli": {
+   "name": "Kimi Antonelli",
+   "defaultEra": "2026-",
+   "signatures": {
+    "2022-2025": {
+     "driverId": "antonelli",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": 74
+      },
+      {
+       "label": "Tyre Management",
+       "value": 91
+      },
+      {
+       "label": "Throttle Application",
+       "value": 59
+      },
+      {
+       "label": "Braking",
+       "value": 61
+      },
+      {
+       "label": "Consistency",
+       "value": 81
+      }
+     ],
+     "cohortAverage": [
+      null,
+      48.7,
+      47.4,
+      50.0,
+      51.1,
+      48.1
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       48.7,
+       47.4,
+       50.0,
+       51.1,
+       48.1
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       87.5,
+       60.0,
+       77.0,
+       69.0,
+       86.0
+      ],
+      "teammates": [
+       null,
+       72.0,
+       72.0,
+       70.0,
+       70.0,
+       91.0
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      77,
+      98,
+      77,
+      81,
+      92
+     ],
+     "confidenceScore": 0.69,
+     "sampleSize": 628,
+     "era": {
+      "id": "2022-2025",
+      "label": "Ground effect",
+      "seasons": "2025",
+      "span": "2022–2025",
+      "rules": "Most downforce comes from two Venturi tunnels under the floor, with simplified wings and 18-inch low-profile tyres, so that cars can follow each other more closely."
+     },
+     "source": "timing"
+    },
+    "2026-": {
+     "driverId": "antonelli",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": 91
+      },
+      {
+       "label": "Tyre Management",
+       "value": 97
+      },
+      {
+       "label": "Throttle Application",
+       "value": 89
+      },
+      {
+       "label": "Braking",
+       "value": 51
+      },
+      {
+       "label": "Consistency",
+       "value": 85
+      }
+     ],
+     "cohortAverage": [
+      null,
+      51.5,
+      53.2,
+      50.0,
+      48.7,
+      52.4
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       51.5,
+       53.2,
+       50.0,
+       48.7,
+       52.4
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       87.5,
+       60.0,
+       77.0,
+       69.0,
+       86.0
+      ],
+      "teammates": [
+       null,
+       89.0,
+       74.0,
+       78.0,
+       55.0,
+       73.0
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      94,
+      98,
+      96,
+      60,
+      96
+     ],
+     "confidenceScore": 0.82,
+     "sampleSize": 732,
+     "era": {
+      "id": "2026-",
+      "label": "Active aero",
+      "seasons": "2026",
+      "span": "2026 onwards",
+      "rules": "Front and rear wings switch between a corner mode and a low-drag straight mode, replacing DRS. Cars are shorter, narrower and lighter (768 kg), the floor tunnels are gone, and power is split roughly half and half between combustion and electric, with the MGU-H removed and fully sustainable fuel.",
+      "caveat": "Energy recovery is a bigger part of each lap: drivers lift off before braking to recharge and cars harvest at full throttle at the end of straights. Throttle and braking traces reflect energy management as well as driving style."
+     },
+     "source": "timing"
+    }
+   }
+  },
+  "bearman": {
+   "name": "Oliver Bearman",
+   "defaultEra": "2026-",
+   "signatures": {
+    "2022-2025": {
+     "driverId": "bearman",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": 51
+      },
+      {
+       "label": "Tyre Management",
+       "value": 89
+      },
+      {
+       "label": "Throttle Application",
+       "value": 26
+      },
+      {
+       "label": "Braking",
+       "value": 39
+      },
+      {
+       "label": "Consistency",
+       "value": 59
+      }
+     ],
+     "cohortAverage": [
+      null,
+      48.7,
+      47.4,
+      50.0,
+      51.1,
+      48.1
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       48.7,
+       47.4,
+       50.0,
+       51.1,
+       48.1
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       87.5,
+       60.0,
+       77.0,
+       69.0,
+       86.0
+      ],
+      "teammates": [
+       null,
+       26.5,
+       45.4,
+       16.2,
+       14.3,
+       50.5
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      67,
+      98,
+      44,
+      48,
+      84
+     ],
+     "confidenceScore": 0.59,
+     "sampleSize": 647,
+     "era": {
+      "id": "2022-2025",
+      "label": "Ground effect",
+      "seasons": "2024–2025",
+      "span": "2022–2025",
+      "rules": "Most downforce comes from two Venturi tunnels under the floor, with simplified wings and 18-inch low-profile tyres, so that cars can follow each other more closely."
+     },
+     "source": "timing"
+    },
+    "2026-": {
+     "driverId": "bearman",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": 55
+      },
+      {
+       "label": "Tyre Management",
+       "value": 42
+      },
+      {
+       "label": "Throttle Application",
+       "value": 9
+      },
+      {
+       "label": "Braking",
+       "value": 14
+      },
+      {
+       "label": "Consistency",
+       "value": 65
+      }
+     ],
+     "cohortAverage": [
+      null,
+      51.5,
+      53.2,
+      50.0,
+      48.7,
+      52.4
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       51.5,
+       53.2,
+       50.0,
+       48.7,
+       52.4
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       87.5,
+       60.0,
+       77.0,
+       69.0,
+       86.0
+      ],
+      "teammates": [
+       null,
+       26.0,
+       5.0,
+       16.0,
+       16.0,
+       31.0
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      69,
+      92,
+      25,
+      33,
+      88
+     ],
+     "confidenceScore": 0.55,
+     "sampleSize": 466,
+     "era": {
+      "id": "2026-",
+      "label": "Active aero",
+      "seasons": "2026",
+      "span": "2026 onwards",
+      "rules": "Front and rear wings switch between a corner mode and a low-drag straight mode, replacing DRS. Cars are shorter, narrower and lighter (768 kg), the floor tunnels are gone, and power is split roughly half and half between combustion and electric, with the MGU-H removed and fully sustainable fuel.",
+      "caveat": "Energy recovery is a bigger part of each lap: drivers lift off before braking to recharge and cars harvest at full throttle at the end of straights. Throttle and braking traces reflect energy management as well as driving style."
+     },
+     "source": "timing"
+    }
+   }
+  },
+  "bortoleto": {
+   "name": "Gabriel Bortoleto",
+   "defaultEra": "2026-",
+   "signatures": {
+    "2022-2025": {
+     "driverId": "bortoleto",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": 9
+      },
+      {
+       "label": "Tyre Management",
+       "value": 9
+      },
+      {
+       "label": "Throttle Application",
+       "value": 55
+      },
+      {
+       "label": "Braking",
+       "value": 20
+      },
+      {
+       "label": "Consistency",
+       "value": 25
+      }
+     ],
+     "cohortAverage": [
+      null,
+      48.7,
+      47.4,
+      50.0,
+      51.1,
+      48.1
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       48.7,
+       47.4,
+       50.0,
+       51.1,
+       48.1
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       87.5,
+       60.0,
+       77.0,
+       69.0,
+       86.0
+      ],
+      "teammates": [
+       null,
+       32.0,
+       21.0,
+       51.0,
+       45.0,
+       19.0
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      21,
+      65,
+      67,
+      38,
+      74
+     ],
+     "confidenceScore": 0.59,
+     "sampleSize": 575,
+     "era": {
+      "id": "2022-2025",
+      "label": "Ground effect",
+      "seasons": "2025",
+      "span": "2022–2025",
+      "rules": "Most downforce comes from two Venturi tunnels under the floor, with simplified wings and 18-inch low-profile tyres, so that cars can follow each other more closely."
+     },
+     "source": "timing"
+    },
+    "2026-": {
+     "driverId": "bortoleto",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": 61
+      },
+      {
+       "label": "Tyre Management",
+       "value": 34
+      },
+      {
+       "label": "Throttle Application",
+       "value": 39
+      },
+      {
+       "label": "Braking",
+       "value": 41
+      },
+      {
+       "label": "Consistency",
+       "value": 61
+      }
+     ],
+     "cohortAverage": [
+      null,
+      51.5,
+      53.2,
+      50.0,
+      48.7,
+      52.4
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       51.5,
+       53.2,
+       50.0,
+       48.7,
+       52.4
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       87.5,
+       60.0,
+       77.0,
+       69.0,
+       86.0
+      ],
+      "teammates": [
+       null,
+       68.0,
+       99.0,
+       24.0,
+       72.0,
+       27.0
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      73,
+      86,
+      54,
+      50,
+      84
+     ],
+     "confidenceScore": 0.56,
+     "sampleSize": 507,
+     "era": {
+      "id": "2026-",
+      "label": "Active aero",
+      "seasons": "2026",
+      "span": "2026 onwards",
+      "rules": "Front and rear wings switch between a corner mode and a low-drag straight mode, replacing DRS. Cars are shorter, narrower and lighter (768 kg), the floor tunnels are gone, and power is split roughly half and half between combustion and electric, with the MGU-H removed and fully sustainable fuel.",
+      "caveat": "Energy recovery is a bigger part of each lap: drivers lift off before braking to recharge and cars harvest at full throttle at the end of straights. Throttle and braking traces reflect energy management as well as driving style."
+     },
+     "source": "timing"
+    }
+   }
+  },
+  "bottas": {
+   "name": "Valtteri Bottas",
+   "defaultEra": "2026-",
+   "signatures": {
+    "2022-2025": {
+     "driverId": "bottas",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": 30
+      },
+      {
+       "label": "Tyre Management",
+       "value": 7
+      },
+      {
+       "label": "Throttle Application",
+       "value": 43
+      },
+      {
+       "label": "Braking",
+       "value": 32
+      },
+      {
+       "label": "Consistency",
+       "value": 17
+      }
+     ],
+     "cohortAverage": [
+      null,
+      48.7,
+      47.4,
+      50.0,
+      51.1,
+      48.1
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       48.7,
+       47.4,
+       50.0,
+       51.1,
+       48.1
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       87.5,
+       60.0,
+       77.0,
+       69.0,
+       86.0
+      ],
+      "teammates": [
+       null,
+       16.0,
+       54.0,
+       20.0,
+       47.0,
+       21.0
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      42,
+      18,
+      50,
+      44,
+      32
+     ],
+     "confidenceScore": 0.78,
+     "sampleSize": 1348,
+     "era": {
+      "id": "2022-2025",
+      "label": "Ground effect",
+      "seasons": "2023–2024",
+      "span": "2022–2025",
+      "rules": "Most downforce comes from two Venturi tunnels under the floor, with simplified wings and 18-inch low-profile tyres, so that cars can follow each other more closely."
+     },
+     "source": "timing"
+    },
+    "2026-": {
+     "driverId": "bottas",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": 1
+      },
+      {
+       "label": "Tyre Management",
+       "value": 3
+      },
+      {
+       "label": "Throttle Application",
+       "value": 11
+      },
+      {
+       "label": "Braking",
+       "value": 7
+      },
+      {
+       "label": "Consistency",
+       "value": 3
+      }
+     ],
+     "cohortAverage": [
+      null,
+      51.5,
+      53.2,
+      50.0,
+      48.7,
+      52.4
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       51.5,
+       53.2,
+       50.0,
+       48.7,
+       52.4
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       87.5,
+       60.0,
+       77.0,
+       69.0,
+       86.0
+      ],
+      "teammates": [
+       null,
+       7.0,
+       36.0,
+       34.0,
+       9.0,
+       1.0
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      12,
+      6,
+      44,
+      19,
+      24
+     ],
+     "confidenceScore": 0.81,
+     "sampleSize": 509,
+     "era": {
+      "id": "2026-",
+      "label": "Active aero",
+      "seasons": "2026",
+      "span": "2026 onwards",
+      "rules": "Front and rear wings switch between a corner mode and a low-drag straight mode, replacing DRS. Cars are shorter, narrower and lighter (768 kg), the floor tunnels are gone, and power is split roughly half and half between combustion and electric, with the MGU-H removed and fully sustainable fuel.",
+      "caveat": "Energy recovery is a bigger part of each lap: drivers lift off before braking to recharge and cars harvest at full throttle at the end of straights. Throttle and braking traces reflect energy management as well as driving style."
+     },
+     "source": "timing"
+    }
+   }
+  },
+  "colapinto": {
+   "name": "Franco Colapinto",
+   "defaultEra": "2026-",
+   "signatures": {
+    "2022-2025": {
+     "driverId": "colapinto",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": 39
+      },
+      {
+       "label": "Tyre Management",
+       "value": 26
+      },
+      {
+       "label": "Throttle Application",
+       "value": 5
+      },
+      {
+       "label": "Braking",
+       "value": 18
+      },
+      {
+       "label": "Consistency",
+       "value": 37
+      }
+     ],
+     "cohortAverage": [
+      null,
+      48.7,
+      47.4,
+      50.0,
+      51.1,
+      48.1
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       48.7,
+       47.4,
+       50.0,
+       51.1,
+       48.1
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       87.5,
+       60.0,
+       77.0,
+       69.0,
+       86.0
+      ],
+      "teammates": [
+       null,
+       64.2,
+       37.7,
+       57.3,
+       48.8,
+       65.9
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      44,
+      80,
+      6,
+      21,
+      80
+     ],
+     "confidenceScore": 0.66,
+     "sampleSize": 841,
+     "era": {
+      "id": "2022-2025",
+      "label": "Ground effect",
+      "seasons": "2024–2025",
+      "span": "2022–2025",
+      "rules": "Most downforce comes from two Venturi tunnels under the floor, with simplified wings and 18-inch low-profile tyres, so that cars can follow each other more closely."
+     },
+     "source": "timing"
+    },
+    "2026-": {
+     "driverId": "colapinto",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": 41
+      },
+      {
+       "label": "Tyre Management",
+       "value": 66
+      },
+      {
+       "label": "Throttle Application",
+       "value": 18
+      },
+      {
+       "label": "Braking",
+       "value": 5
+      },
+      {
+       "label": "Consistency",
+       "value": 35
+      }
+     ],
+     "cohortAverage": [
+      null,
+      51.5,
+      53.2,
+      50.0,
+      48.7,
+      52.4
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       51.5,
+       53.2,
+       50.0,
+       48.7,
+       52.4
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       87.5,
+       60.0,
+       77.0,
+       69.0,
+       86.0
+      ],
+      "teammates": [
+       null,
+       59.0,
+       87.0,
+       49.0,
+       22.0,
+       79.0
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      42,
+      94,
+      31,
+      15,
+      76
+     ],
+     "confidenceScore": 0.61,
+     "sampleSize": 606,
+     "era": {
+      "id": "2026-",
+      "label": "Active aero",
+      "seasons": "2026",
+      "span": "2026 onwards",
+      "rules": "Front and rear wings switch between a corner mode and a low-drag straight mode, replacing DRS. Cars are shorter, narrower and lighter (768 kg), the floor tunnels are gone, and power is split roughly half and half between combustion and electric, with the MGU-H removed and fully sustainable fuel.",
+      "caveat": "Energy recovery is a bigger part of each lap: drivers lift off before braking to recharge and cars harvest at full throttle at the end of straights. Throttle and braking traces reflect energy management as well as driving style."
+     },
+     "source": "timing"
+    }
+   }
+  },
+  "de-vries": {
+   "name": "Nyck De Vries",
+   "defaultEra": "2022-2025",
+   "signatures": {
+    "2022-2025": {
+     "driverId": "de-vries",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": null
+      },
+      {
+       "label": "Tyre Management",
+       "value": 11
+      },
+      {
+       "label": "Throttle Application",
+       "value": null
+      },
+      {
+       "label": "Braking",
+       "value": null
+      },
+      {
+       "label": "Consistency",
+       "value": 33
+      }
+     ],
+     "cohortAverage": [
+      null,
+      48.7,
+      47.4,
+      50.0,
+      51.1,
+      48.1
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       48.7,
+       47.4,
+       50.0,
+       51.1,
+       48.1
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       87.5,
+       60.0,
+       77.0,
+       69.0,
+       86.0
+      ],
+      "teammates": [
+       null,
+       45.0,
+       19.0,
+       66.0,
+       89.0,
+       41.0
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      null,
+      88,
+      null,
+      null,
+      76
+     ],
+     "confidenceScore": 0.25,
+     "sampleSize": 298,
+     "era": {
+      "id": "2022-2025",
+      "label": "Ground effect",
+      "seasons": "2023",
+      "span": "2022–2025",
+      "rules": "Most downforce comes from two Venturi tunnels under the floor, with simplified wings and 18-inch low-profile tyres, so that cars can follow each other more closely."
+     },
+     "source": "timing"
+    }
+   }
+  },
+  "doohan": {
+   "name": "Jack Doohan",
+   "defaultEra": "2022-2025",
+   "signatures": {
+    "2022-2025": {
+     "driverId": "doohan",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": null
+      },
+      {
+       "label": "Tyre Management",
+       "value": null
+      },
+      {
+       "label": "Throttle Application",
+       "value": null
+      },
+      {
+       "label": "Braking",
+       "value": null
+      },
+      {
+       "label": "Consistency",
+       "value": 5
+      }
+     ],
+     "cohortAverage": [
+      null,
+      48.7,
+      47.4,
+      50.0,
+      51.1,
+      48.1
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       48.7,
+       47.4,
+       50.0,
+       51.1,
+       48.1
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       87.5,
+       60.0,
+       77.0,
+       69.0,
+       86.0
+      ],
+      "teammates": [
+       null,
+       80.0,
+       17.0,
+       82.0,
+       57.0,
+       75.0
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      60
+     ],
+     "confidenceScore": 0.4,
+     "sampleSize": 170,
+     "era": {
+      "id": "2022-2025",
+      "label": "Ground effect",
+      "seasons": "2024–2025",
+      "span": "2022–2025",
+      "rules": "Most downforce comes from two Venturi tunnels under the floor, with simplified wings and 18-inch low-profile tyres, so that cars can follow each other more closely."
+     },
+     "source": "timing"
+    }
+   }
+  },
+  "gasly": {
+   "name": "Pierre Gasly",
+   "defaultEra": "2026-",
+   "signatures": {
+    "2022-2025": {
+     "driverId": "gasly",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": 80
+      },
+      {
+       "label": "Tyre Management",
+       "value": 17
+      },
+      {
+       "label": "Throttle Application",
+       "value": 82
+      },
+      {
+       "label": "Braking",
+       "value": 57
+      },
+      {
+       "label": "Consistency",
+       "value": 75
+      }
+     ],
+     "cohortAverage": [
+      null,
+      48.7,
+      47.4,
+      50.0,
+      51.1,
+      48.1
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       48.7,
+       47.4,
+       50.0,
+       51.1,
+       48.1
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       87.5,
+       60.0,
+       77.0,
+       69.0,
+       86.0
+      ],
+      "teammates": [
+       null,
+       28.4,
+       40.2,
+       11.4,
+       13.0,
+       43.1
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      83,
+      55,
+      88,
+      67,
+      84
+     ],
+     "confidenceScore": 0.75,
+     "sampleSize": 1874,
+     "era": {
+      "id": "2022-2025",
+      "label": "Ground effect",
+      "seasons": "2023–2025",
+      "span": "2022–2025",
+      "rules": "Most downforce comes from two Venturi tunnels under the floor, with simplified wings and 18-inch low-profile tyres, so that cars can follow each other more closely."
+     },
+     "source": "timing"
+    },
+    "2026-": {
+     "driverId": "gasly",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": 59
+      },
+      {
+       "label": "Tyre Management",
+       "value": 87
+      },
+      {
+       "label": "Throttle Application",
+       "value": 49
+      },
+      {
+       "label": "Braking",
+       "value": 22
+      },
+      {
+       "label": "Consistency",
+       "value": 79
+      }
+     ],
+     "cohortAverage": [
+      null,
+      51.5,
+      53.2,
+      50.0,
+      48.7,
+      52.4
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       51.5,
+       53.2,
+       50.0,
+       48.7,
+       52.4
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       87.5,
+       60.0,
+       77.0,
+       69.0,
+       86.0
+      ],
+      "teammates": [
+       null,
+       41.0,
+       66.0,
+       18.0,
+       5.0,
+       35.0
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      71,
+      98,
+      56,
+      40,
+      94
+     ],
+     "confidenceScore": 0.6,
+     "sampleSize": 593,
+     "era": {
+      "id": "2026-",
+      "label": "Active aero",
+      "seasons": "2026",
+      "span": "2026 onwards",
+      "rules": "Front and rear wings switch between a corner mode and a low-drag straight mode, replacing DRS. Cars are shorter, narrower and lighter (768 kg), the floor tunnels are gone, and power is split roughly half and half between combustion and electric, with the MGU-H removed and fully sustainable fuel.",
+      "caveat": "Energy recovery is a bigger part of each lap: drivers lift off before braking to recharge and cars harvest at full throttle at the end of straights. Throttle and braking traces reflect energy management as well as driving style."
+     },
+     "source": "timing"
+    }
+   }
+  },
+  "hadjar": {
+   "name": "Isack Hadjar",
+   "defaultEra": "2026-",
+   "signatures": {
+    "2022-2025": {
+     "driverId": "hadjar",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": 66
+      },
+      {
+       "label": "Tyre Management",
+       "value": 52
+      },
+      {
+       "label": "Throttle Application",
+       "value": 76
+      },
+      {
+       "label": "Braking",
+       "value": 82
+      },
+      {
+       "label": "Consistency",
+       "value": 57
+      }
+     ],
+     "cohortAverage": [
+      null,
+      48.7,
+      47.4,
+      50.0,
+      51.1,
+      48.1
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       48.7,
+       47.4,
+       50.0,
+       51.1,
+       48.1
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       87.5,
+       60.0,
+       77.0,
+       69.0,
+       86.0
+      ],
+      "teammates": [
+       null,
+       48.7,
+       72.9,
+       71.6,
+       51.9,
+       67.0
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      73,
+      88,
+      85,
+      88,
+      88
+     ],
+     "confidenceScore": 0.59,
+     "sampleSize": 724,
+     "era": {
+      "id": "2022-2025",
+      "label": "Ground effect",
+      "seasons": "2025",
+      "span": "2022–2025",
+      "rules": "Most downforce comes from two Venturi tunnels under the floor, with simplified wings and 18-inch low-profile tyres, so that cars can follow each other more closely."
+     },
+     "source": "timing"
+    },
+    "2026-": {
+     "driverId": "hadjar",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": 70
+      },
+      {
+       "label": "Tyre Management",
+       "value": 68
+      },
+      {
+       "label": "Throttle Application",
+       "value": 53
+      },
+      {
+       "label": "Braking",
+       "value": 97
+      },
+      {
+       "label": "Consistency",
+       "value": 55
+      }
+     ],
+     "cohortAverage": [
+      null,
+      51.5,
+      53.2,
+      50.0,
+      48.7,
+      52.4
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       51.5,
+       53.2,
+       50.0,
+       48.7,
+       52.4
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       87.5,
+       60.0,
+       77.0,
+       69.0,
+       86.0
+      ],
+      "teammates": [
+       null,
+       86.0,
+       81.0,
+       91.0,
+       91.0,
+       99.0
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      75,
+      98,
+      67,
+      98,
+      84
+     ],
+     "confidenceScore": 0.58,
+     "sampleSize": 476,
+     "era": {
+      "id": "2026-",
+      "label": "Active aero",
+      "seasons": "2026",
+      "span": "2026 onwards",
+      "rules": "Front and rear wings switch between a corner mode and a low-drag straight mode, replacing DRS. Cars are shorter, narrower and lighter (768 kg), the floor tunnels are gone, and power is split roughly half and half between combustion and electric, with the MGU-H removed and fully sustainable fuel.",
+      "caveat": "Energy recovery is a bigger part of each lap: drivers lift off before braking to recharge and cars harvest at full throttle at the end of straights. Throttle and braking traces reflect energy management as well as driving style."
+     },
+     "source": "timing"
+    }
+   }
+  },
+  "hamilton": {
+   "name": "Lewis Hamilton",
+   "defaultEra": "2026-",
+   "signatures": {
+    "2022-2025": {
+     "driverId": "hamilton",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": 47
+      },
+      {
+       "label": "Tyre Management",
+       "value": 48
+      },
+      {
+       "label": "Throttle Application",
+       "value": 41
+      },
+      {
+       "label": "Braking",
+       "value": 66
+      },
+      {
+       "label": "Consistency",
+       "value": 43
+      }
+     ],
+     "cohortAverage": [
+      null,
+      48.7,
+      47.4,
+      50.0,
+      51.1,
+      48.1
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       48.7,
+       47.4,
+       50.0,
+       51.1,
+       48.1
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       87.5,
+       60.0,
+       77.0,
+       69.0,
+       86.0
+      ],
+      "teammates": [
+       null,
+       74.1,
+       66.5,
+       56.8,
+       66.2,
+       84.1
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      54,
+      71,
+      44,
+      75,
+      70
+     ],
+     "confidenceScore": 0.73,
+     "sampleSize": 2185,
+     "era": {
+      "id": "2022-2025",
+      "label": "Ground effect",
+      "seasons": "2023–2025",
+      "span": "2022–2025",
+      "rules": "Most downforce comes from two Venturi tunnels under the floor, with simplified wings and 18-inch low-profile tyres, so that cars can follow each other more closely."
+     },
+     "source": "timing"
+    },
+    "2026-": {
+     "driverId": "hamilton",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": 84
+      },
+      {
+       "label": "Tyre Management",
+       "value": 40
+      },
+      {
+       "label": "Throttle Application",
+       "value": 64
+      },
+      {
+       "label": "Braking",
+       "value": 95
+      },
+      {
+       "label": "Consistency",
+       "value": 89
+      }
+     ],
+     "cohortAverage": [
+      null,
+      51.5,
+      53.2,
+      50.0,
+      48.7,
+      52.4
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       51.5,
+       53.2,
+       50.0,
+       48.7,
+       52.4
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       87.5,
+       60.0,
+       77.0,
+       69.0,
+       86.0
+      ],
+      "teammates": [
+       null,
+       93.0,
+       28.0,
+       80.0,
+       99.0,
+       97.0
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      92,
+      88,
+      75,
+      98,
+      100
+     ],
+     "confidenceScore": 0.71,
+     "sampleSize": 613,
+     "era": {
+      "id": "2026-",
+      "label": "Active aero",
+      "seasons": "2026",
+      "span": "2026 onwards",
+      "rules": "Front and rear wings switch between a corner mode and a low-drag straight mode, replacing DRS. Cars are shorter, narrower and lighter (768 kg), the floor tunnels are gone, and power is split roughly half and half between combustion and electric, with the MGU-H removed and fully sustainable fuel.",
+      "caveat": "Energy recovery is a bigger part of each lap: drivers lift off before braking to recharge and cars harvest at full throttle at the end of straights. Throttle and braking traces reflect energy management as well as driving style."
+     },
+     "source": "timing"
+    }
+   }
+  },
+  "hulkenberg": {
+   "name": "Nico Hulkenberg",
+   "defaultEra": "2026-",
+   "signatures": {
+    "2022-2025": {
+     "driverId": "hulkenberg",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": 32
+      },
+      {
+       "label": "Tyre Management",
+       "value": 21
+      },
+      {
+       "label": "Throttle Application",
+       "value": 51
+      },
+      {
+       "label": "Braking",
+       "value": 45
+      },
+      {
+       "label": "Consistency",
+       "value": 19
+      }
+     ],
+     "cohortAverage": [
+      null,
+      48.7,
+      47.4,
+      50.0,
+      51.1,
+      48.1
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       48.7,
+       47.4,
+       50.0,
+       51.1,
+       48.1
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       87.5,
+       60.0,
+       77.0,
+       69.0,
+       86.0
+      ],
+      "teammates": [
+       null,
+       18.4,
+       14.3,
+       41.9,
+       25.6,
+       18.9
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      42,
+      59,
+      56,
+      54,
+      32
+     ],
+     "confidenceScore": 0.77,
+     "sampleSize": 2033,
+     "era": {
+      "id": "2022-2025",
+      "label": "Ground effect",
+      "seasons": "2023–2025",
+      "span": "2022–2025",
+      "rules": "Most downforce comes from two Venturi tunnels under the floor, with simplified wings and 18-inch low-profile tyres, so that cars can follow each other more closely."
+     },
+     "source": "timing"
+    },
+    "2026-": {
+     "driverId": "hulkenberg",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": 68
+      },
+      {
+       "label": "Tyre Management",
+       "value": 99
+      },
+      {
+       "label": "Throttle Application",
+       "value": 24
+      },
+      {
+       "label": "Braking",
+       "value": 72
+      },
+      {
+       "label": "Consistency",
+       "value": 27
+      }
+     ],
+     "cohortAverage": [
+      null,
+      51.5,
+      53.2,
+      50.0,
+      48.7,
+      52.4
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       51.5,
+       53.2,
+       50.0,
+       48.7,
+       52.4
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       87.5,
+       60.0,
+       77.0,
+       69.0,
+       86.0
+      ],
+      "teammates": [
+       null,
+       61.0,
+       34.0,
+       39.0,
+       41.0,
+       61.0
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      73,
+      100,
+      42,
+      85,
+      60
+     ],
+     "confidenceScore": 0.7,
+     "sampleSize": 427,
+     "era": {
+      "id": "2026-",
+      "label": "Active aero",
+      "seasons": "2026",
+      "span": "2026 onwards",
+      "rules": "Front and rear wings switch between a corner mode and a low-drag straight mode, replacing DRS. Cars are shorter, narrower and lighter (768 kg), the floor tunnels are gone, and power is split roughly half and half between combustion and electric, with the MGU-H removed and fully sustainable fuel.",
+      "caveat": "Energy recovery is a bigger part of each lap: drivers lift off before braking to recharge and cars harvest at full throttle at the end of straights. Throttle and braking traces reflect energy management as well as driving style."
+     },
+     "source": "timing"
+    }
+   }
+  },
+  "lawson": {
+   "name": "Liam Lawson",
+   "defaultEra": "2026-",
+   "signatures": {
+    "2022-2025": {
+     "driverId": "lawson",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": 49
+      },
+      {
+       "label": "Tyre Management",
+       "value": 77
+      },
+      {
+       "label": "Throttle Application",
+       "value": 72
+      },
+      {
+       "label": "Braking",
+       "value": 49
+      },
+      {
+       "label": "Consistency",
+       "value": 69
+      }
+     ],
+     "cohortAverage": [
+      null,
+      48.7,
+      47.4,
+      50.0,
+      51.1,
+      48.1
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       48.7,
+       47.4,
+       50.0,
+       51.1,
+       48.1
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       87.5,
+       60.0,
+       77.0,
+       69.0,
+       86.0
+      ],
+      "teammates": [
+       null,
+       60.7,
+       43.2,
+       74.3,
+       83.0,
+       54.6
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      62,
+      94,
+      83,
+      54,
+      84
+     ],
+     "confidenceScore": 0.66,
+     "sampleSize": 978,
+     "era": {
+      "id": "2022-2025",
+      "label": "Ground effect",
+      "seasons": "2023–2025",
+      "span": "2022–2025",
+      "rules": "Most downforce comes from two Venturi tunnels under the floor, with simplified wings and 18-inch low-profile tyres, so that cars can follow each other more closely."
+     },
+     "source": "timing"
+    },
+    "2026-": {
+     "driverId": "lawson",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": 57
+      },
+      {
+       "label": "Tyre Management",
+       "value": 93
+      },
+      {
+       "label": "Throttle Application",
+       "value": 45
+      },
+      {
+       "label": "Braking",
+       "value": 34
+      },
+      {
+       "label": "Consistency",
+       "value": 87
+      }
+     ],
+     "cohortAverage": [
+      null,
+      51.5,
+      53.2,
+      50.0,
+      48.7,
+      52.4
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       51.5,
+       53.2,
+       50.0,
+       48.7,
+       52.4
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       87.5,
+       60.0,
+       77.0,
+       69.0,
+       86.0
+      ],
+      "teammates": [
+       null,
+       42.9,
+       62.9,
+       92.7,
+       43.6,
+       59.4
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      67,
+      98,
+      58,
+      48,
+      100
+     ],
+     "confidenceScore": 0.72,
+     "sampleSize": 710,
+     "era": {
+      "id": "2026-",
+      "label": "Active aero",
+      "seasons": "2026",
+      "span": "2026 onwards",
+      "rules": "Front and rear wings switch between a corner mode and a low-drag straight mode, replacing DRS. Cars are shorter, narrower and lighter (768 kg), the floor tunnels are gone, and power is split roughly half and half between combustion and electric, with the MGU-H removed and fully sustainable fuel.",
+      "caveat": "Energy recovery is a bigger part of each lap: drivers lift off before braking to recharge and cars harvest at full throttle at the end of straights. Throttle and braking traces reflect energy management as well as driving style."
+     },
+     "source": "timing"
+    }
+   }
+  },
+  "leclerc": {
+   "name": "Charles Leclerc",
+   "defaultEra": "2026-",
+   "signatures": {
+    "2022-2025": {
+     "driverId": "leclerc",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": 78
+      },
+      {
+       "label": "Tyre Management",
+       "value": 56
+      },
+      {
+       "label": "Throttle Application",
+       "value": 32
+      },
+      {
+       "label": "Braking",
+       "value": 59
+      },
+      {
+       "label": "Consistency",
+       "value": 71
+      }
+     ],
+     "cohortAverage": [
+      null,
+      48.7,
+      47.4,
+      50.0,
+      51.1,
+      48.1
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       48.7,
+       47.4,
+       50.0,
+       51.1,
+       48.1
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       87.5,
+       60.0,
+       77.0,
+       69.0,
+       86.0
+      ],
+      "teammates": [
+       null,
+       44.5,
+       71.0,
+       44.6,
+       38.8,
+       68.8
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      83,
+      80,
+      44,
+      67,
+      82
+     ],
+     "confidenceScore": 0.72,
+     "sampleSize": 2370,
+     "era": {
+      "id": "2022-2025",
+      "label": "Ground effect",
+      "seasons": "2023–2025",
+      "span": "2022–2025",
+      "rules": "Most downforce comes from two Venturi tunnels under the floor, with simplified wings and 18-inch low-profile tyres, so that cars can follow each other more closely."
+     },
+     "source": "timing"
+    },
+    "2026-": {
+     "driverId": "leclerc",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": 93
+      },
+      {
+       "label": "Tyre Management",
+       "value": 28
+      },
+      {
+       "label": "Throttle Application",
+       "value": 80
+      },
+      {
+       "label": "Braking",
+       "value": 99
+      },
+      {
+       "label": "Consistency",
+       "value": 97
+      }
+     ],
+     "cohortAverage": [
+      null,
+      51.5,
+      53.2,
+      50.0,
+      48.7,
+      52.4
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       51.5,
+       53.2,
+       50.0,
+       48.7,
+       52.4
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       87.5,
+       60.0,
+       77.0,
+       69.0,
+       86.0
+      ],
+      "teammates": [
+       null,
+       84.0,
+       40.0,
+       64.0,
+       95.0,
+       89.0
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      94,
+      86,
+      85,
+      100,
+      100
+     ],
+     "confidenceScore": 0.77,
+     "sampleSize": 676,
+     "era": {
+      "id": "2026-",
+      "label": "Active aero",
+      "seasons": "2026",
+      "span": "2026 onwards",
+      "rules": "Front and rear wings switch between a corner mode and a low-drag straight mode, replacing DRS. Cars are shorter, narrower and lighter (768 kg), the floor tunnels are gone, and power is split roughly half and half between combustion and electric, with the MGU-H removed and fully sustainable fuel.",
+      "caveat": "Energy recovery is a bigger part of each lap: drivers lift off before braking to recharge and cars harvest at full throttle at the end of straights. Throttle and braking traces reflect energy management as well as driving style."
+     },
+     "source": "timing"
+    }
+   }
+  },
+  "lindblad": {
+   "name": "Arvid Lindblad",
+   "defaultEra": "2026-",
+   "signatures": {
+    "2026-": {
+     "driverId": "lindblad",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": 36
+      },
+      {
+       "label": "Tyre Management",
+       "value": 60
+      },
+      {
+       "label": "Throttle Application",
+       "value": 93
+      },
+      {
+       "label": "Braking",
+       "value": 36
+      },
+      {
+       "label": "Consistency",
+       "value": 53
+      }
+     ],
+     "cohortAverage": [
+      null,
+      51.5,
+      53.2,
+      50.0,
+      48.7,
+      52.4
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       51.5,
+       53.2,
+       50.0,
+       48.7,
+       52.4
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       87.5,
+       60.0,
+       77.0,
+       69.0,
+       86.0
+      ],
+      "teammates": [
+       null,
+       57.0,
+       93.0,
+       45.0,
+       34.0,
+       87.0
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      42,
+      92,
+      98,
+      44,
+      82
+     ],
+     "confidenceScore": 0.61,
+     "sampleSize": 652,
+     "era": {
+      "id": "2026-",
+      "label": "Active aero",
+      "seasons": "2026",
+      "span": "2026 onwards",
+      "rules": "Front and rear wings switch between a corner mode and a low-drag straight mode, replacing DRS. Cars are shorter, narrower and lighter (768 kg), the floor tunnels are gone, and power is split roughly half and half between combustion and electric, with the MGU-H removed and fully sustainable fuel.",
+      "caveat": "Energy recovery is a bigger part of each lap: drivers lift off before braking to recharge and cars harvest at full throttle at the end of straights. Throttle and braking traces reflect energy management as well as driving style."
+     },
+     "source": "timing"
+    }
+   }
+  },
+  "magnussen": {
+   "name": "Kevin Magnussen",
+   "defaultEra": "2022-2025",
+   "signatures": {
+    "2022-2025": {
+     "driverId": "magnussen",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": 22
+      },
+      {
+       "label": "Tyre Management",
+       "value": 15
+      },
+      {
+       "label": "Throttle Application",
+       "value": 36
+      },
+      {
+       "label": "Braking",
+       "value": 28
+      },
+      {
+       "label": "Consistency",
+       "value": 15
+      }
+     ],
+     "cohortAverage": [
+      null,
+      48.7,
+      47.4,
+      50.0,
+      51.1,
+      48.1
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       48.7,
+       47.4,
+       50.0,
+       51.1,
+       48.1
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       87.5,
+       60.0,
+       77.0,
+       69.0,
+       86.0
+      ],
+      "teammates": [
+       null,
+       32.0,
+       21.0,
+       51.0,
+       45.0,
+       19.0
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      29,
+      76,
+      48,
+      42,
+      32
+     ],
+     "confidenceScore": 0.68,
+     "sampleSize": 1294,
+     "era": {
+      "id": "2022-2025",
+      "label": "Ground effect",
+      "seasons": "2023–2024",
+      "span": "2022–2025",
+      "rules": "Most downforce comes from two Venturi tunnels under the floor, with simplified wings and 18-inch low-profile tyres, so that cars can follow each other more closely."
+     },
+     "source": "timing"
+    }
+   }
+  },
+  "norris": {
+   "name": "Lando Norris",
+   "defaultEra": "2026-",
+   "signatures": {
+    "2022-2025": {
+     "driverId": "norris",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": 99
+      },
+      {
+       "label": "Tyre Management",
+       "value": 62
+      },
+      {
+       "label": "Throttle Application",
+       "value": 57
+      },
+      {
+       "label": "Braking",
+       "value": 74
+      },
+      {
+       "label": "Consistency",
+       "value": 77
+      }
+     ],
+     "cohortAverage": [
+      null,
+      48.7,
+      47.4,
+      50.0,
+      51.1,
+      48.1
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       48.7,
+       47.4,
+       50.0,
+       51.1,
+       48.1
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       87.5,
+       60.0,
+       77.0,
+       69.0,
+       86.0
+      ],
+      "teammates": [
+       null,
+       97.0,
+       79.0,
+       30.0,
+       84.0,
+       49.0
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      100,
+      86,
+      67,
+      83,
+      84
+     ],
+     "confidenceScore": 0.74,
+     "sampleSize": 2438,
+     "era": {
+      "id": "2022-2025",
+      "label": "Ground effect",
+      "seasons": "2023–2025",
+      "span": "2022–2025",
+      "rules": "Most downforce comes from two Venturi tunnels under the floor, with simplified wings and 18-inch low-profile tyres, so that cars can follow each other more closely."
+     },
+     "source": "timing"
+    },
+    "2026-": {
+     "driverId": "norris",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": 95
+      },
+      {
+       "label": "Tyre Management",
+       "value": 30
+      },
+      {
+       "label": "Throttle Application",
+       "value": 74
+      },
+      {
+       "label": "Braking",
+       "value": 93
+      },
+      {
+       "label": "Consistency",
+       "value": 93
+      }
+     ],
+     "cohortAverage": [
+      null,
+      51.5,
+      53.2,
+      50.0,
+      48.7,
+      52.4
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       51.5,
+       53.2,
+       50.0,
+       48.7,
+       52.4
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       87.5,
+       60.0,
+       77.0,
+       69.0,
+       86.0
+      ],
+      "teammates": [
+       null,
+       82.0,
+       44.0,
+       22.0,
+       68.0,
+       47.0
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      98,
+      86,
+      88,
+      96,
+      100
+     ],
+     "confidenceScore": 0.72,
+     "sampleSize": 475,
+     "era": {
+      "id": "2026-",
+      "label": "Active aero",
+      "seasons": "2026",
+      "span": "2026 onwards",
+      "rules": "Front and rear wings switch between a corner mode and a low-drag straight mode, replacing DRS. Cars are shorter, narrower and lighter (768 kg), the floor tunnels are gone, and power is split roughly half and half between combustion and electric, with the MGU-H removed and fully sustainable fuel.",
+      "caveat": "Energy recovery is a bigger part of each lap: drivers lift off before braking to recharge and cars harvest at full throttle at the end of straights. Throttle and braking traces reflect energy management as well as driving style."
+     },
+     "source": "timing"
+    }
+   }
+  },
+  "ocon": {
+   "name": "Esteban Ocon",
+   "defaultEra": "2026-",
+   "signatures": {
+    "2022-2025": {
+     "driverId": "ocon",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": 24
+      },
+      {
+       "label": "Tyre Management",
+       "value": 46
+      },
+      {
+       "label": "Throttle Application",
+       "value": 14
+      },
+      {
+       "label": "Braking",
+       "value": 11
+      },
+      {
+       "label": "Consistency",
+       "value": 51
+      }
+     ],
+     "cohortAverage": [
+      null,
+      48.7,
+      47.4,
+      50.0,
+      51.1,
+      48.1
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       48.7,
+       47.4,
+       50.0,
+       51.1,
+       48.1
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       87.5,
+       60.0,
+       77.0,
+       69.0,
+       86.0
+      ],
+      "teammates": [
+       null,
+       69.4,
+       43.3,
+       61.5,
+       50.4,
+       69.1
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      31,
+      76,
+      21,
+      19,
+      80
+     ],
+     "confidenceScore": 0.7,
+     "sampleSize": 1919,
+     "era": {
+      "id": "2022-2025",
+      "label": "Ground effect",
+      "seasons": "2023–2025",
+      "span": "2022–2025",
+      "rules": "Most downforce comes from two Venturi tunnels under the floor, with simplified wings and 18-inch low-profile tyres, so that cars can follow each other more closely."
+     },
+     "source": "timing"
+    },
+    "2026-": {
+     "driverId": "ocon",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": 26
+      },
+      {
+       "label": "Tyre Management",
+       "value": 5
+      },
+      {
+       "label": "Throttle Application",
+       "value": 16
+      },
+      {
+       "label": "Braking",
+       "value": 16
+      },
+      {
+       "label": "Consistency",
+       "value": 31
+      }
+     ],
+     "cohortAverage": [
+      null,
+      51.5,
+      53.2,
+      50.0,
+      48.7,
+      52.4
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       51.5,
+       53.2,
+       50.0,
+       48.7,
+       52.4
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       87.5,
+       60.0,
+       77.0,
+       69.0,
+       86.0
+      ],
+      "teammates": [
+       null,
+       55.0,
+       42.0,
+       9.0,
+       14.0,
+       65.0
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      42,
+      18,
+      44,
+      33,
+      74
+     ],
+     "confidenceScore": 0.64,
+     "sampleSize": 547,
+     "era": {
+      "id": "2026-",
+      "label": "Active aero",
+      "seasons": "2026",
+      "span": "2026 onwards",
+      "rules": "Front and rear wings switch between a corner mode and a low-drag straight mode, replacing DRS. Cars are shorter, narrower and lighter (768 kg), the floor tunnels are gone, and power is split roughly half and half between combustion and electric, with the MGU-H removed and fully sustainable fuel.",
+      "caveat": "Energy recovery is a bigger part of each lap: drivers lift off before braking to recharge and cars harvest at full throttle at the end of straights. Throttle and braking traces reflect energy management as well as driving style."
+     },
+     "source": "timing"
+    }
+   }
+  },
+  "perez": {
+   "name": "Sergio Perez",
+   "defaultEra": "2026-",
+   "signatures": {
+    "2022-2025": {
+     "driverId": "perez",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": 53
+      },
+      {
+       "label": "Tyre Management",
+       "value": 13
+      },
+      {
+       "label": "Throttle Application",
+       "value": 99
+      },
+      {
+       "label": "Braking",
+       "value": 43
+      },
+      {
+       "label": "Consistency",
+       "value": 63
+      }
+     ],
+     "cohortAverage": [
+      null,
+      48.7,
+      47.4,
+      50.0,
+      51.1,
+      48.1
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       48.7,
+       47.4,
+       50.0,
+       51.1,
+       48.1
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       87.5,
+       60.0,
+       77.0,
+       69.0,
+       86.0
+      ],
+      "teammates": [
+       null,
+       76.0,
+       58.0,
+       97.0,
+       64.0,
+       95.0
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      65,
+      45,
+      100,
+      48,
+      80
+     ],
+     "confidenceScore": 0.75,
+     "sampleSize": 1376,
+     "era": {
+      "id": "2022-2025",
+      "label": "Ground effect",
+      "seasons": "2023–2024",
+      "span": "2022–2025",
+      "rules": "Most downforce comes from two Venturi tunnels under the floor, with simplified wings and 18-inch low-profile tyres, so that cars can follow each other more closely."
+     },
+     "source": "timing"
+    },
+    "2026-": {
+     "driverId": "perez",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": 7
+      },
+      {
+       "label": "Tyre Management",
+       "value": 36
+      },
+      {
+       "label": "Throttle Application",
+       "value": 34
+      },
+      {
+       "label": "Braking",
+       "value": 9
+      },
+      {
+       "label": "Consistency",
+       "value": 1
+      }
+     ],
+     "cohortAverage": [
+      null,
+      51.5,
+      53.2,
+      50.0,
+      48.7,
+      52.4
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       51.5,
+       53.2,
+       50.0,
+       48.7,
+       52.4
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       87.5,
+       60.0,
+       77.0,
+       69.0,
+       86.0
+      ],
+      "teammates": [
+       null,
+       1.0,
+       3.0,
+       11.0,
+       7.0,
+       3.0
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      12,
+      92,
+      56,
+      21,
+      2
+     ],
+     "confidenceScore": 0.67,
+     "sampleSize": 568,
+     "era": {
+      "id": "2026-",
+      "label": "Active aero",
+      "seasons": "2026",
+      "span": "2026 onwards",
+      "rules": "Front and rear wings switch between a corner mode and a low-drag straight mode, replacing DRS. Cars are shorter, narrower and lighter (768 kg), the floor tunnels are gone, and power is split roughly half and half between combustion and electric, with the MGU-H removed and fully sustainable fuel.",
+      "caveat": "Energy recovery is a bigger part of each lap: drivers lift off before braking to recharge and cars harvest at full throttle at the end of straights. Throttle and braking traces reflect energy management as well as driving style."
+     },
+     "source": "timing"
+    }
+   }
+  },
+  "piastri": {
+   "name": "Oscar Piastri",
+   "defaultEra": "2026-",
+   "signatures": {
+    "2022-2025": {
+     "driverId": "piastri",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": 97
+      },
+      {
+       "label": "Tyre Management",
+       "value": 79
+      },
+      {
+       "label": "Throttle Application",
+       "value": 30
+      },
+      {
+       "label": "Braking",
+       "value": 84
+      },
+      {
+       "label": "Consistency",
+       "value": 49
+      }
+     ],
+     "cohortAverage": [
+      null,
+      48.7,
+      47.4,
+      50.0,
+      51.1,
+      48.1
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       48.7,
+       47.4,
+       50.0,
+       51.1,
+       48.1
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       87.5,
+       60.0,
+       77.0,
+       69.0,
+       86.0
+      ],
+      "teammates": [
+       null,
+       99.0,
+       62.0,
+       57.0,
+       74.0,
+       77.0
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      98,
+      92,
+      42,
+      88,
+      80
+     ],
+     "confidenceScore": 0.78,
+     "sampleSize": 2416,
+     "era": {
+      "id": "2022-2025",
+      "label": "Ground effect",
+      "seasons": "2023–2025",
+      "span": "2022–2025",
+      "rules": "Most downforce comes from two Venturi tunnels under the floor, with simplified wings and 18-inch low-profile tyres, so that cars can follow each other more closely."
+     },
+     "source": "timing"
+    },
+    "2026-": {
+     "driverId": "piastri",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": 82
+      },
+      {
+       "label": "Tyre Management",
+       "value": 44
+      },
+      {
+       "label": "Throttle Application",
+       "value": 22
+      },
+      {
+       "label": "Braking",
+       "value": 68
+      },
+      {
+       "label": "Consistency",
+       "value": 47
+      }
+     ],
+     "cohortAverage": [
+      null,
+      51.5,
+      53.2,
+      50.0,
+      48.7,
+      52.4
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       51.5,
+       53.2,
+       50.0,
+       48.7,
+       52.4
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       87.5,
+       60.0,
+       77.0,
+       69.0,
+       86.0
+      ],
+      "teammates": [
+       null,
+       95.0,
+       30.0,
+       74.0,
+       93.0,
+       93.0
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      90,
+      76,
+      31,
+      83,
+      82
+     ],
+     "confidenceScore": 0.62,
+     "sampleSize": 629,
+     "era": {
+      "id": "2026-",
+      "label": "Active aero",
+      "seasons": "2026",
+      "span": "2026 onwards",
+      "rules": "Front and rear wings switch between a corner mode and a low-drag straight mode, replacing DRS. Cars are shorter, narrower and lighter (768 kg), the floor tunnels are gone, and power is split roughly half and half between combustion and electric, with the MGU-H removed and fully sustainable fuel.",
+      "caveat": "Energy recovery is a bigger part of each lap: drivers lift off before braking to recharge and cars harvest at full throttle at the end of straights. Throttle and braking traces reflect energy management as well as driving style."
+     },
+     "source": "timing"
+    }
+   }
+  },
+  "ricciardo": {
+   "name": "Daniel Ricciardo",
+   "defaultEra": "2022-2025",
+   "signatures": {
+    "2022-2025": {
+     "driverId": "ricciardo",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": 64
+      },
+      {
+       "label": "Tyre Management",
+       "value": 70
+      },
+      {
+       "label": "Throttle Application",
+       "value": 68
+      },
+      {
+       "label": "Braking",
+       "value": 53
+      },
+      {
+       "label": "Consistency",
+       "value": 9
+      }
+     ],
+     "cohortAverage": [
+      null,
+      48.7,
+      47.4,
+      50.0,
+      51.1,
+      48.1
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       48.7,
+       47.4,
+       50.0,
+       51.1,
+       48.1
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       87.5,
+       60.0,
+       77.0,
+       69.0,
+       86.0
+      ],
+      "teammates": [
+       null,
+       45.0,
+       19.0,
+       66.0,
+       89.0,
+       41.0
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      73,
+      92,
+      81,
+      60,
+      32
+     ],
+     "confidenceScore": 0.65,
+     "sampleSize": 710,
+     "era": {
+      "id": "2022-2025",
+      "label": "Ground effect",
+      "seasons": "2023–2024",
+      "span": "2022–2025",
+      "rules": "Most downforce comes from two Venturi tunnels under the floor, with simplified wings and 18-inch low-profile tyres, so that cars can follow each other more closely."
+     },
+     "source": "timing"
+    }
+   }
+  },
+  "russell": {
+   "name": "George Russell",
+   "defaultEra": "2026-",
+   "signatures": {
+    "2022-2025": {
+     "driverId": "russell",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": 72
+      },
+      {
+       "label": "Tyre Management",
+       "value": 72
+      },
+      {
+       "label": "Throttle Application",
+       "value": 70
+      },
+      {
+       "label": "Braking",
+       "value": 70
+      },
+      {
+       "label": "Consistency",
+       "value": 91
+      }
+     ],
+     "cohortAverage": [
+      null,
+      48.7,
+      47.4,
+      50.0,
+      51.1,
+      48.1
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       48.7,
+       47.4,
+       50.0,
+       51.1,
+       48.1
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       87.5,
+       60.0,
+       77.0,
+       69.0,
+       86.0
+      ],
+      "teammates": [
+       null,
+       56.1,
+       62.4,
+       47.0,
+       64.3,
+       55.8
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      73,
+      88,
+      81,
+      81,
+      96
+     ],
+     "confidenceScore": 0.83,
+     "sampleSize": 2448,
+     "era": {
+      "id": "2022-2025",
+      "label": "Ground effect",
+      "seasons": "2023–2025",
+      "span": "2022–2025",
+      "rules": "Most downforce comes from two Venturi tunnels under the floor, with simplified wings and 18-inch low-profile tyres, so that cars can follow each other more closely."
+     },
+     "source": "timing"
+    },
+    "2026-": {
+     "driverId": "russell",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": 89
+      },
+      {
+       "label": "Tyre Management",
+       "value": 74
+      },
+      {
+       "label": "Throttle Application",
+       "value": 78
+      },
+      {
+       "label": "Braking",
+       "value": 55
+      },
+      {
+       "label": "Consistency",
+       "value": 73
+      }
+     ],
+     "cohortAverage": [
+      null,
+      51.5,
+      53.2,
+      50.0,
+      48.7,
+      52.4
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       51.5,
+       53.2,
+       50.0,
+       48.7,
+       52.4
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       87.5,
+       60.0,
+       77.0,
+       69.0,
+       86.0
+      ],
+      "teammates": [
+       null,
+       91.0,
+       97.0,
+       89.0,
+       51.0,
+       85.0
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      94,
+      94,
+      94,
+      69,
+      88
+     ],
+     "confidenceScore": 0.61,
+     "sampleSize": 616,
+     "era": {
+      "id": "2026-",
+      "label": "Active aero",
+      "seasons": "2026",
+      "span": "2026 onwards",
+      "rules": "Front and rear wings switch between a corner mode and a low-drag straight mode, replacing DRS. Cars are shorter, narrower and lighter (768 kg), the floor tunnels are gone, and power is split roughly half and half between combustion and electric, with the MGU-H removed and fully sustainable fuel.",
+      "caveat": "Energy recovery is a bigger part of each lap: drivers lift off before braking to recharge and cars harvest at full throttle at the end of straights. Throttle and braking traces reflect energy management as well as driving style."
+     },
+     "source": "timing"
+    }
+   }
+  },
+  "sainz": {
+   "name": "Carlos Sainz",
+   "defaultEra": "2026-",
+   "signatures": {
+    "2022-2025": {
+     "driverId": "sainz",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": 43
+      },
+      {
+       "label": "Tyre Management",
+       "value": 83
+      },
+      {
+       "label": "Throttle Application",
+       "value": 47
+      },
+      {
+       "label": "Braking",
+       "value": 24
+      },
+      {
+       "label": "Consistency",
+       "value": 83
+      }
+     ],
+     "cohortAverage": [
+      null,
+      48.7,
+      47.4,
+      50.0,
+      51.1,
+      48.1
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       48.7,
+       47.4,
+       50.0,
+       51.1,
+       48.1
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       87.5,
+       60.0,
+       77.0,
+       69.0,
+       86.0
+      ],
+      "teammates": [
+       null,
+       60.9,
+       65.9,
+       21.4,
+       49.1,
+       62.1
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      48,
+      92,
+      54,
+      38,
+      92
+     ],
+     "confidenceScore": 0.82,
+     "sampleSize": 2310,
+     "era": {
+      "id": "2022-2025",
+      "label": "Ground effect",
+      "seasons": "2023–2025",
+      "span": "2022–2025",
+      "rules": "Most downforce comes from two Venturi tunnels under the floor, with simplified wings and 18-inch low-profile tyres, so that cars can follow each other more closely."
+     },
+     "source": "timing"
+    },
+    "2026-": {
+     "driverId": "sainz",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": 14
+      },
+      {
+       "label": "Tyre Management",
+       "value": 64
+      },
+      {
+       "label": "Throttle Application",
+       "value": 28
+      },
+      {
+       "label": "Braking",
+       "value": 3
+      },
+      {
+       "label": "Consistency",
+       "value": 29
+      }
+     ],
+     "cohortAverage": [
+      null,
+      51.5,
+      53.2,
+      50.0,
+      48.7,
+      52.4
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       51.5,
+       53.2,
+       50.0,
+       48.7,
+       52.4
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       87.5,
+       60.0,
+       77.0,
+       69.0,
+       86.0
+      ],
+      "teammates": [
+       null,
+       5.0,
+       32.0,
+       3.0,
+       1.0,
+       23.0
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      21,
+      92,
+      44,
+      19,
+      68
+     ],
+     "confidenceScore": 0.59,
+     "sampleSize": 611,
+     "era": {
+      "id": "2026-",
+      "label": "Active aero",
+      "seasons": "2026",
+      "span": "2026 onwards",
+      "rules": "Front and rear wings switch between a corner mode and a low-drag straight mode, replacing DRS. Cars are shorter, narrower and lighter (768 kg), the floor tunnels are gone, and power is split roughly half and half between combustion and electric, with the MGU-H removed and fully sustainable fuel.",
+      "caveat": "Energy recovery is a bigger part of each lap: drivers lift off before braking to recharge and cars harvest at full throttle at the end of straights. Throttle and braking traces reflect energy management as well as driving style."
+     },
+     "source": "timing"
+    }
+   }
+  },
+  "sargeant": {
+   "name": "Logan Sargeant",
+   "defaultEra": "2022-2025",
+   "signatures": {
+    "2022-2025": {
+     "driverId": "sargeant",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": 20
+      },
+      {
+       "label": "Tyre Management",
+       "value": 1
+      },
+      {
+       "label": "Throttle Application",
+       "value": 7
+      },
+      {
+       "label": "Braking",
+       "value": 26
+      },
+      {
+       "label": "Consistency",
+       "value": 11
+      }
+     ],
+     "cohortAverage": [
+      null,
+      48.7,
+      47.4,
+      50.0,
+      51.1,
+      48.1
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       48.7,
+       47.4,
+       50.0,
+       51.1,
+       48.1
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       87.5,
+       60.0,
+       77.0,
+       69.0,
+       86.0
+      ],
+      "teammates": [
+       null,
+       28.0,
+       85.0,
+       1.0,
+       30.0,
+       45.0
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      21,
+      6,
+      15,
+      40,
+      30
+     ],
+     "confidenceScore": 0.85,
+     "sampleSize": 1033,
+     "era": {
+      "id": "2022-2025",
+      "label": "Ground effect",
+      "seasons": "2023–2024",
+      "span": "2022–2025",
+      "rules": "Most downforce comes from two Venturi tunnels under the floor, with simplified wings and 18-inch low-profile tyres, so that cars can follow each other more closely."
+     },
+     "source": "timing"
+    }
+   }
+  },
+  "stroll": {
+   "name": "Lance Stroll",
+   "defaultEra": "2026-",
+   "signatures": {
+    "2022-2025": {
+     "driverId": "stroll",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": 18
+      },
+      {
+       "label": "Tyre Management",
+       "value": 23
+      },
+      {
+       "label": "Throttle Application",
+       "value": 84
+      },
+      {
+       "label": "Braking",
+       "value": 78
+      },
+      {
+       "label": "Consistency",
+       "value": 67
+      }
+     ],
+     "cohortAverage": [
+      null,
+      48.7,
+      47.4,
+      50.0,
+      51.1,
+      48.1
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       48.7,
+       47.4,
+       50.0,
+       51.1,
+       48.1
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       87.5,
+       60.0,
+       77.0,
+       69.0,
+       86.0
+      ],
+      "teammates": [
+       null,
+       34.0,
+       95.0,
+       61.0,
+       80.0,
+       39.0
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      23,
+      71,
+      90,
+      88,
+      80
+     ],
+     "confidenceScore": 0.7,
+     "sampleSize": 1915,
+     "era": {
+      "id": "2022-2025",
+      "label": "Ground effect",
+      "seasons": "2023–2025",
+      "span": "2022–2025",
+      "rules": "Most downforce comes from two Venturi tunnels under the floor, with simplified wings and 18-inch low-profile tyres, so that cars can follow each other more closely."
+     },
+     "source": "timing"
+    },
+    "2026-": {
+     "driverId": "stroll",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": 3
+      },
+      {
+       "label": "Tyre Management",
+       "value": 38
+      },
+      {
+       "label": "Throttle Application",
+       "value": 95
+      },
+      {
+       "label": "Braking",
+       "value": 76
+      },
+      {
+       "label": "Consistency",
+       "value": 13
+      }
+     ],
+     "cohortAverage": [
+      null,
+      51.5,
+      53.2,
+      50.0,
+      48.7,
+      52.4
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       51.5,
+       53.2,
+       50.0,
+       48.7,
+       52.4
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       87.5,
+       60.0,
+       77.0,
+       69.0,
+       86.0
+      ],
+      "teammates": [
+       null,
+       11.0,
+       50.0,
+       86.0,
+       86.0,
+       7.0
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      13,
+      92,
+      100,
+      94,
+      40
+     ],
+     "confidenceScore": 0.61,
+     "sampleSize": 375,
+     "era": {
+      "id": "2026-",
+      "label": "Active aero",
+      "seasons": "2026",
+      "span": "2026 onwards",
+      "rules": "Front and rear wings switch between a corner mode and a low-drag straight mode, replacing DRS. Cars are shorter, narrower and lighter (768 kg), the floor tunnels are gone, and power is split roughly half and half between combustion and electric, with the MGU-H removed and fully sustainable fuel.",
+      "caveat": "Energy recovery is a bigger part of each lap: drivers lift off before braking to recharge and cars harvest at full throttle at the end of straights. Throttle and braking traces reflect energy management as well as driving style."
+     },
+     "source": "timing"
+    }
+   }
+  },
+  "tsunoda": {
+   "name": "Yuki Tsunoda",
+   "defaultEra": "2022-2025",
+   "signatures": {
+    "2022-2025": {
+     "driverId": "tsunoda",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": 45
+      },
+      {
+       "label": "Tyre Management",
+       "value": 19
+      },
+      {
+       "label": "Throttle Application",
+       "value": 66
+      },
+      {
+       "label": "Braking",
+       "value": 89
+      },
+      {
+       "label": "Consistency",
+       "value": 41
+      }
+     ],
+     "cohortAverage": [
+      null,
+      48.7,
+      47.4,
+      50.0,
+      51.1,
+      48.1
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       48.7,
+       47.4,
+       50.0,
+       51.1,
+       48.1
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       87.5,
+       60.0,
+       77.0,
+       69.0,
+       86.0
+      ],
+      "teammates": [
+       null,
+       66.2,
+       58.8,
+       79.6,
+       57.3,
+       49.0
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      56,
+      63,
+      73,
+      94,
+      74
+     ],
+     "confidenceScore": 0.73,
+     "sampleSize": 1881,
+     "era": {
+      "id": "2022-2025",
+      "label": "Ground effect",
+      "seasons": "2023–2025",
+      "span": "2022–2025",
+      "rules": "Most downforce comes from two Venturi tunnels under the floor, with simplified wings and 18-inch low-profile tyres, so that cars can follow each other more closely."
+     },
+     "source": "timing"
+    }
+   }
+  },
+  "verstappen": {
+   "name": "Max Verstappen",
+   "defaultEra": "2026-",
+   "signatures": {
+    "2022-2025": {
+     "driverId": "verstappen",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": 76
+      },
+      {
+       "label": "Tyre Management",
+       "value": 58
+      },
+      {
+       "label": "Throttle Application",
+       "value": 97
+      },
+      {
+       "label": "Braking",
+       "value": 64
+      },
+      {
+       "label": "Consistency",
+       "value": 95
+      }
+     ],
+     "cohortAverage": [
+      null,
+      48.7,
+      47.4,
+      50.0,
+      51.1,
+      48.1
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       48.7,
+       47.4,
+       50.0,
+       51.1,
+       48.1
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       87.5,
+       60.0,
+       77.0,
+       69.0,
+       86.0
+      ],
+      "teammates": [
+       null,
+       50.4,
+       16.4,
+       88.0,
+       57.6,
+       56.2
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      81,
+      86,
+      98,
+      73,
+      100
+     ],
+     "confidenceScore": 0.79,
+     "sampleSize": 2914,
+     "era": {
+      "id": "2022-2025",
+      "label": "Ground effect",
+      "seasons": "2023–2025",
+      "span": "2022–2025",
+      "rules": "Most downforce comes from two Venturi tunnels under the floor, with simplified wings and 18-inch low-profile tyres, so that cars can follow each other more closely."
+     },
+     "source": "timing"
+    },
+    "2026-": {
+     "driverId": "verstappen",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": 86
+      },
+      {
+       "label": "Tyre Management",
+       "value": 81
+      },
+      {
+       "label": "Throttle Application",
+       "value": 91
+      },
+      {
+       "label": "Braking",
+       "value": 91
+      },
+      {
+       "label": "Consistency",
+       "value": 99
+      }
+     ],
+     "cohortAverage": [
+      null,
+      51.5,
+      53.2,
+      50.0,
+      48.7,
+      52.4
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       51.5,
+       53.2,
+       50.0,
+       48.7,
+       52.4
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       87.5,
+       60.0,
+       77.0,
+       69.0,
+       86.0
+      ],
+      "teammates": [
+       null,
+       68.0,
+       71.9,
+       51.8,
+       87.2,
+       60.0
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      94,
+      94,
+      98,
+      94,
+      100
+     ],
+     "confidenceScore": 0.79,
+     "sampleSize": 602,
+     "era": {
+      "id": "2026-",
+      "label": "Active aero",
+      "seasons": "2026",
+      "span": "2026 onwards",
+      "rules": "Front and rear wings switch between a corner mode and a low-drag straight mode, replacing DRS. Cars are shorter, narrower and lighter (768 kg), the floor tunnels are gone, and power is split roughly half and half between combustion and electric, with the MGU-H removed and fully sustainable fuel.",
+      "caveat": "Energy recovery is a bigger part of each lap: drivers lift off before braking to recharge and cars harvest at full throttle at the end of straights. Throttle and braking traces reflect energy management as well as driving style."
+     },
+     "source": "timing"
+    }
+   }
+  },
+  "zhou": {
+   "name": "Guanyu Zhou",
+   "defaultEra": "2022-2025",
+   "signatures": {
+    "2022-2025": {
+     "driverId": "zhou",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": 16
+      },
+      {
+       "label": "Tyre Management",
+       "value": 54
+      },
+      {
+       "label": "Throttle Application",
+       "value": 20
+      },
+      {
+       "label": "Braking",
+       "value": 47
+      },
+      {
+       "label": "Consistency",
+       "value": 21
+      }
+     ],
+     "cohortAverage": [
+      null,
+      48.7,
+      47.4,
+      50.0,
+      51.1,
+      48.1
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       48.7,
+       47.4,
+       50.0,
+       51.1,
+       48.1
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       87.5,
+       60.0,
+       77.0,
+       69.0,
+       86.0
+      ],
+      "teammates": [
+       null,
+       30.0,
+       7.0,
+       43.0,
+       32.0,
+       17.0
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      23,
+      88,
+      31,
+      54,
+      32
+     ],
+     "confidenceScore": 0.69,
+     "sampleSize": 1364,
+     "era": {
+      "id": "2022-2025",
+      "label": "Ground effect",
+      "seasons": "2023–2024",
+      "span": "2022–2025",
+      "rules": "Most downforce comes from two Venturi tunnels under the floor, with simplified wings and 18-inch low-profile tyres, so that cars can follow each other more closely."
+     },
+     "source": "timing"
+    }
+   }
+  }
+ }
+}

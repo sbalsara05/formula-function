@@ -73,7 +73,7 @@ export default function VenuePage({
             <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: 1.5, color: '#555' }}>
               <Link href={`/f/${series.replace('f', '')}`} style={{ textDecoration: 'none', color: '#666' }}>{SERIES_LABELS[series]}</Link>
               <span style={{ color: '#333' }}>/</span>
-              <span>VENUES</span>
+              <Link href={`/f/${series.replace('f', '')}/venues`} style={{ textDecoration: 'none', color: '#666' }}>VENUES</Link>
               <span style={{ color: '#333' }}>/</span>
               <span style={{ color: '#aaa' }}>{venue.name.toUpperCase()}</span>
             </div>

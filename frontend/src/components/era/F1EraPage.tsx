@@ -48,7 +48,7 @@ function EraHeader({ era }: { era: F1EraDetail }) {
         }}>
           <Link href="/f/1" style={{ textDecoration: 'none', color: 'inherit' }}>f(1)</Link>
           <span style={{ color: '#333' }}>/</span>
-          <Link href="/f/1#eras" style={{ textDecoration: 'none', color: 'inherit' }}>ERAS</Link>
+          <Link href="/f/1/eras" style={{ textDecoration: 'none', color: 'inherit' }}>ERAS</Link>
           <span style={{ color: '#333' }}>/</span>
           <span style={{ color: era.color }}>{era.name.toUpperCase()}</span>
         </div>

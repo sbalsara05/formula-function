@@ -673,6 +673,99 @@ The click now uses the dark glow. The file is still on the archive grid where th
 
 None of the remaining-17 glow gaps are left empty after the remaining-9 fill.
 
+## Corner pin accuracy pass
+
+Rule: a clickable pin stays only if its moment happened at that corner. Start/finish pins may carry flag or title moments. Race results attached to an unrelated corner were removed, not replaced with filler. 70 clickable pins went to 53, then to 56 after the follow-up below.
+
+### Removed (pin and overlay)
+
+| Venue | Pin | Was | Why |
+|-------|-----|-----|-----|
+| Monaco | Loews Hairpin | `senna-monaco-1992` | Mansell's pressure lasted whole laps, not one corner. |
+| Suzuka | Hairpin | `schumacher-suzuka-2000` | Title win, not a hairpin event. |
+| Interlagos | Senna S | `vettel-interlagos-2012` | Vettel's contact with Bruno Senna was at Turn 4. Restored on a Turn 4 pin (follow-up). |
+| Abu Dhabi | Hotel section | `alonso-abudhabi-2010` | Stuck behind Petrov for the whole stint, not one place. |
+| Jeddah | Main straight | `verstappen-jeddah-2021` moved; `hamilton-jeddah-2021` removed | The brake-test contact was at Turn 26, so it moved to the Last corner pin. The old Last corner overlay ("touched on the final restart, both off") was inaccurate. |
+| Melbourne | Pit straight | `leclerc-melbourne-2024` | A lap record is the whole lap. |
+| Shanghai | Hairpin | `hamilton-shanghai-2011` | No source puts the lap-52 pass on Vettel at the hairpin. |
+| Miami | Turn 1 | `verstappen-miami-2022` | Race win; body also had the late safety car order wrong. |
+| Miami | Hairpin | `norris-miami-2024` | Win under the safety car, not a hairpin event. |
+| Hungaroring | Last corner | `hamilton-hungary-2020` | Wet-race win. |
+| Zandvoort | Banked last corner | `verstappen-zandvoort-2022` | Win framing; "led every lap" was false (Hamilton led under the late safety car). |
+| Zandvoort | Hugenholtz | `verstappen-zandvoort-2023` | Wet-race win. |
+| Baku | Castle | `perez-baku-2021` | Race win. |
+| Singapore | Turn 1 | `vettel-singapore-2012` | Hamilton's gearbox failed later in the lap; Vettel's win was not a Turn 1 event. Pin restored with the 2017 start crash (follow-up). |
+| COTA | Esses | `verstappen-cota-2021` moved; `hamilton-cota-2012` removed | "Attacked through the esses" race win; the 2021 overlay moved to Turn 1. The old Turn 1 overlay ("Hamilton led away", 2012) was false: Vettel led from pole. |
+| Mexico | Stadium | `verstappen-mexico-2017` | Race and title result. Pin restored as Hamilton's title celebration in the stadium (follow-up). |
+| Qatar | Turn 6 | `alonso-qatar-2023` | Sixth place, nothing at Turn 6. |
+
+### Corrected in place
+
+- `hamilton-bahrain-2014` — no last-lap contact. Now the repeated Rosberg moves into Turn 1 (Wikipedia race report).
+- `verstappen-jeddah-2021` — now on the Last corner pin: Verstappen braked at Turn 26, Hamilton hit him, 10s penalty.
+- `hamilton-montreal-2008` — Hamilton hit Räikkönen at the pit-exit red light, not leaving his box.
+- `senna-barcelona-1991` — Mansell won. Now Senna's lap-13 spin at the last corner (the-race.com; Autosport).
+- `verstappen-barcelona-2016` — collision started out of Turn 3 and ended at Turn 4.
+- `hamilton-barcelona-2021` — Verstappen took the lead at Turn 1; Hamilton won after a second stop (formula1.com).
+- `verstappen-cota-2021` — now on Turn 1: Hamilton took the lead from pole-sitter Verstappen at the start.
+- `hamilton-mexico-2016` — Hamilton ran wide at Turn 1 from pole; Wehrlein knocked off at the same corner.
+- `verstappen-mexico-2022` — record 14th win of the season.
+- `verstappen-vegas-2023` — Verstappen forced Leclerc off at Turn 1, five-second penalty.
+- Miami start/finish pin pointed at `sainz-miami-2023`, which never existed. Relinked to `verstappen-miami-2023`.
+
+### Follow-up: restored or replaced on request
+
+Each moment below was checked against its corner before it went back on the map. Corner positions come from the official Wikimedia "F1 CourseLayout" SVGs: each layout was fitted to our track path (similarity fit, mean error under 4px of 500), then the numbered corner was mapped across and snapped to our stroke.
+
+| Venue | Pin | Moment | Source | Position |
+|-------|-----|--------|--------|----------|
+| Qatar | Turn 1 | `hamilton-russell-qatar-2023` replaces `hamilton-qatar-2021` | formula1.com, 8 Oct 2023: Hamilton went around the outside into Turn 1 on lap 1, hit Russell, and retired in the gravel; he took full responsibility. Russell pitted and finished fourth (race result). | Unchanged (14.1, 73.9), on Turn 1. |
+| Interlagos | Turn 4 (new id `interlagos-t4`) | `vettel-interlagos-2012`, rewritten | Autosport, 26 Nov 2012, and the FIA race report: Bruno Senna hit Vettel on the entry to Turn 4 on lap 1; Vettel was last after lap 1, finished sixth, and won the title. | 70.1, 79.8 (Turn 4, Descida do Lago). The old Senna S pin is not restored. |
+| Singapore | Turn 1 | `vettel-singapore-2017` (new) | formula1.com, 17 Sep 2017: Verstappen was squeezed between Vettel and Räikkönen on the run to Turn 1; Räikkönen and Verstappen slid off at Turn 1 and collected Alonso; Vettel spun out before the end of the lap. Hamilton won from fifth. | Unchanged (92, 23.5), on Turn 1. |
+| Mexico | Stadium | `hamilton-mexico-2017` replaces `verstappen-mexico-2017` | FIA post-race press conference (formula1.com): Hamilton ninth and champion, Verstappen won. Doughnuts in the Foro Sol and a walk round it with a Union Jack: El Buen Tono, 30 Oct 2017; GPToday, 7 Nov 2017; The Guardian live blog. No tier 1–4 source names the stadium. | 3.1, 23.6 (Turn 16) to 10.5, 25.4 (Turn 14). Sources disagree on whether Turn 16 is in the stadium (12–16 or 13–15); Turn 14 is inside under both. |
+
+New photos (formula1.com CDN, tier 3, self-hosted):
+
+| File | Source | Shows |
+|------|--------|-------|
+| `qatar-hamilton-russell-2023.jpg` | `media.formula1.com/.../trackside-images/2023/F1_Grand_Prix_of_Qatar/1724498790` | Hamilton walking away from his car in the Turn 1 gravel. |
+| `singapore-start-crash-2017.jpg` | `media.formula1.com/.../sutton/2017/Singapore/Sunday/dcc1717se590` | Räikkönen's Ferrari lifted away after the start, Verstappen's Red Bull behind. |
+
+Reused: `interlagos-vettel-2012.jpg` (title celebration, not the contact) and `mexico-verstappen-2017.jpg` (Hamilton's title doughnuts; the file name is historical).
+
+### Junção pin moved
+
+Interlagos `interlagos-juncao` was at 97, 49.7, which the course-layout fit puts on Turn 13. Junção is Turn 12. Moved to 92.4, 60.7. formula1.com ("Classic onboard - ride with Glock", Brazil 2008) puts the pass at the entry to Junção: Hamilton went up the inside of Glock's Toyota there. The moment copy is unchanged.
+
+### Still open
+
+Archive-grid cards were out of scope. `senna-mansell-1991-bar` ("Senna pushes Mansell to the line") is wrong: Mansell won and Senna was fifth.
+
+---
+
+## Driving signatures (official timing data, pipeline v0.1)
+
+The 41 hand-typed F1 signatures in `drivers.ts` (every one with the same `cohortAverage: [78, 73, 74, 79, 80, 76]`) and the `buildSignatureFromStats` fallback (axes from win and pole rates) were removed. Signatures now come from `backend/pipeline/signature/` and are written to `frontend/src/data/generated/signatures.json`. Definitions are in `backend/pipeline/signature/SPEC.md`.
+
+- **Source:** the official F1 live-timing feed through the OpenF1 historical API (car data, position, laps, stints, intervals, race control). It starts in 2023; FastF1 now needs an F1 TV login for 2018-2022.
+- **Coverage:** 2023-2026 through 2026 round 19 (Mexico City). 84 qualifying sessions and 88 races scored. Skipped: wet qualifying at Spa 2024, São Paulo 2024, Las Vegas 2025 and mixed-conditions Zandvoort 2023; the wet São Paulo 2024 race has no dry stints; OpenF1 has no lap data for Baku 2025 qualifying.
+- **Pages:** 24 of 34 F1 driver pages show a signature (most recent regulation era: 2026 for the current grid, 2023-24 for Ricciardo, 2023-25 for Tsunoda). Button, Häkkinen, Hill, Mansell, Prost, Räikkönen, Rosberg, Schumacher, Senna and Vettel show "signature pending". Steering Smoothness is pending for everyone (needs onboard video).
+- **Review gate (Leclerc, Verstappen, Norris, 2023-25):** Norris has the highest Entry Aggression (99th percentile, 6.3 km/h more speed off the brake than the field). Verstappen leads Throttle Application (97th, full throttle 8 m sooner after the apex) and Consistency (95th). Leclerc is strong on entry (78th) and weak on throttle (32nd).
+- **Teammate check:** the direction of each driver's Braking and Entry Aggression difference to a teammate was compared with their qualifying head-to-head. It agreed in 68 of 88 cases for 2023-25 and 38 of 44 for 2026. Entry Aggression agrees about 90% of the time and Braking about 70%; the braking point is not adjusted for approach speed (SPEC known limitations).
+- **Fixes made during the run:** yellow and double-yellow periods now exclude laps, as the plan specified; the qualifying session cutoff moved from 105% to the regulations' 107%, because 105% removed the slowest teams (Cadillac, Aston Martin) from 19 driver-sessions in 2026.
+
+### Era definitions and full metrics page
+
+The driver page has a "How is this calculated?" panel (the era, why eras, the field, the selected comparison) and FULL METRICS now opens `/f/1/driver/<slug>/signature`. The era text shown on the site lives in `backend/pipeline/signature/eras.py`:
+
+| Era | Claim | Source |
+|-----|-------|--------|
+| Late hybrid (2018–2021) | 1.6-litre V6 turbo hybrids since 2014; wider, higher-downforce cars and tyres from 2017 | formula1.com, "A new dawn rises – the 2017 F1 season preview" (cars 1,800→2,000 mm wide, tyres about 25% wider) |
+| Ground effect (2022–2025) | Two Venturi tunnels under the floor, simplified wings, 18-inch low-profile tyres, aimed at closer following | formula1.com, "10 things you need to know about the all-new 2022 F1 car" and "Tech Tuesday: how new floors could enhance wheel-to-wheel action" |
+| Active aero (2026–) | Corner and straight wing modes replacing DRS; wheelbase 200 mm shorter, 768 kg minimum; floor tunnels removed; MGU-H removed, MGU-K 120→350 kW, roughly 50/50 power split; sustainable fuel; lift-off and full-throttle harvesting | formula1.com, "12 rule changes you need to know in 2026", "The beginner's guide to the 2026 regulations", "All you need to know about F1's new power units"; corp.formula1.com 2026 terminology update |
+
+Every threshold quoted in the page's methodology section is exported from the pipeline constants, not typed by hand.
+
 ---
 
 ## TECHNICAL NOTES

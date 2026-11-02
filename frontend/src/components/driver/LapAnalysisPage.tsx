@@ -102,7 +102,7 @@ export default function LapAnalysisPage({
           <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: 1.5, color: '#666' }}>
             <Link href={`/f/${seriesNum}`} style={{ textDecoration: 'none', color: 'inherit' }}>f({seriesNum})</Link>
             <span style={{ color: '#333' }}>/</span>
-            <span>DRIVERS</span>
+            <Link href={`/f/${seriesNum}/drivers`} style={{ textDecoration: 'none', color: 'inherit' }}>DRIVERS</Link>
             <span style={{ color: '#333' }}>/</span>
             <Link href={`/f/${seriesNum}/driver/${driverId}`} style={{ textDecoration: 'none', color: '#666' }}>
               {driverShortName.toUpperCase()}

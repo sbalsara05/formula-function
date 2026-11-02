@@ -136,6 +136,9 @@ ENV/
 env.bak/
 venv.bak/
 
+# Driving-signature pipeline: downloaded inputs and intermediate outputs
+backend/pipeline/signature/data/
+
 # Spyder project settings
 .spyderproject
 .spyproject

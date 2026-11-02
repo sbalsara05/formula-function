@@ -4,7 +4,6 @@ import type {
   DriverEra,
   TeammateRecord,
   TrackRecord,
-  DrivingSignature,
   ReelSlide,
   ScoutingReport,
   TrajectoryPrediction,
@@ -180,22 +179,6 @@ export const vettelTracks: TrackRecord[] = [
   },
 ];
 
-export const vettelSignature: DrivingSignature = {
-  driverId: "vettel",
-  series: "f1",
-  axes: [
-    { label: "Steering Smoothness", value: 94 },
-    { label: "Entry Aggression", value: 71 },
-    { label: "Tyre Management", value: 96 },
-    { label: "Throttle Application", value: 92 },
-    { label: "Braking", value: 89 },
-    { label: "Consistency", value: 97 },
-  ],
-  cohortAverage: [78, 73, 74, 79, 80, 76],
-  confidenceScore: 0.94,
-  sampleSize: 1847,
-};
-
 export const vettelReelSlides: ReelSlide[] = [
   {
     slotLabel: "SV · 05",
@@ -341,22 +324,6 @@ export const leclerStats: DriverStats = {
   pointsScored: 1863,
 };
 
-export const leclerSignature: DrivingSignature = {
-  driverId: "leclerc",
-  series: "f1",
-  axes: [
-    { label: "Steering Smoothness", value: 82 },
-    { label: "Entry Aggression", value: 92 },
-    { label: "Tyre Management", value: 76 },
-    { label: "Throttle Application", value: 88 },
-    { label: "Braking", value: 95 },
-    { label: "Consistency", value: 80 },
-  ],
-  cohortAverage: [78, 73, 74, 79, 80, 76],
-  confidenceScore: 0.88,
-  sampleSize: 892,
-};
-
 /* ─── Bearman ──────────────────────────────────────────────────────────────── */
 
 export const bearman: Driver = {
@@ -439,22 +406,6 @@ export const bearmanEras: DriverEra[] = [
     imageUrl: "/images/drivers/bearman-haas-2025.jpg",
   },
 ];
-
-export const bearmanSignature: DrivingSignature = {
-  driverId: "bearman",
-  series: "f2",
-  axes: [
-    { label: "Steering Smoothness", value: 82 },
-    { label: "Entry Discipline", value: 80 },
-    { label: "Tyre Management", value: 50 },
-    { label: "Race Craft", value: 80 },
-    { label: "Quali Pace", value: 75 },
-    { label: "Consistency", value: 60 },
-  ],
-  cohortAverage: [60, 70, 70, 68, 70, 70],
-  confidenceScore: 0.62,
-  sampleSize: 134,
-};
 
 export const bearmanReelSlides: ReelSlide[] = [
   {
@@ -1081,22 +1032,6 @@ export const hamiltonEras: DriverEra[] = [
   },
 ];
 
-export const hamiltonSignature: DrivingSignature = {
-  driverId: "hamilton",
-  series: "f1",
-  axes: [
-    { label: "Steering Smoothness",   value: 96 },
-    { label: "Entry Aggression",      value: 87 },
-    { label: "Tyre Management",       value: 97 },
-    { label: "Throttle Application",  value: 91 },
-    { label: "Braking",               value: 96 },
-    { label: "Consistency",           value: 95 },
-  ],
-  cohortAverage: [78, 73, 74, 79, 80, 76],
-  confidenceScore: 0.96,
-  sampleSize: 2847,
-};
-
 export const hamiltonReelSlides: ReelSlide[] = [
   {
     slotLabel: "LH · 44",
@@ -1247,22 +1182,6 @@ export const verstappenEras: DriverEra[] = [
   },
 ];
 
-export const verstappenSignature: DrivingSignature = {
-  driverId: "max_verstappen",
-  series: "f1",
-  axes: [
-    { label: "Steering Smoothness",   value: 82 },
-    { label: "Entry Aggression",      value: 98 },
-    { label: "Tyre Management",       value: 84 },
-    { label: "Throttle Application",  value: 95 },
-    { label: "Braking",               value: 96 },
-    { label: "Consistency",           value: 93 },
-  ],
-  cohortAverage: [78, 73, 74, 79, 80, 76],
-  confidenceScore: 0.95,
-  sampleSize: 2124,
-};
-
 export const verstappenReelSlides: ReelSlide[] = [
   {
     slotLabel: "MV · 33",
@@ -1389,22 +1308,6 @@ export const leclercF2Eras: DriverEra[] = [
   },
 ];
 
-export const leclercF2Signature: DrivingSignature = {
-  driverId: "leclerc-f2",
-  series: "f2",
-  axes: [
-    { label: "Steering Smoothness", value: 88 },
-    { label: "Entry Discipline", value: 92 },
-    { label: "Tyre Management", value: 78 },
-    { label: "Race Craft", value: 85 },
-    { label: "Quali Pace", value: 90 },
-    { label: "Consistency", value: 84 },
-  ],
-  cohortAverage: [68, 70, 68, 70, 70, 70],
-  confidenceScore: 0.88,
-  sampleSize: 21,
-};
-
 export const leclercF2ReelSlides: ReelSlide[] = [
   {
     slotLabel: "BAKU · 2017",
@@ -1509,22 +1412,6 @@ export const russellF2Eras: DriverEra[] = [
     imageUrl: "/images/drivers/russell-art-f2-2018.jpg",
   },
 ];
-
-export const russellF2Signature: DrivingSignature = {
-  driverId: "russell-f2",
-  series: "f2",
-  axes: [
-    { label: "Steering Smoothness", value: 90 },
-    { label: "Entry Discipline", value: 84 },
-    { label: "Tyre Management", value: 88 },
-    { label: "Race Craft", value: 91 },
-    { label: "Quali Pace", value: 82 },
-    { label: "Consistency", value: 94 },
-  ],
-  cohortAverage: [68, 70, 68, 70, 70, 70],
-  confidenceScore: 0.86,
-  sampleSize: 21,
-};
 
 export const russellF2ReelSlides: ReelSlide[] = [
   {
@@ -1631,22 +1518,6 @@ export const piastriF2Eras: DriverEra[] = [
     imageUrl: "/images/drivers/piastri-f2-prema-2021.jpg",
   },
 ];
-
-export const piastriF2Signature: DrivingSignature = {
-  driverId: "piastri-f2",
-  series: "f2",
-  axes: [
-    { label: "Steering Smoothness", value: 92 },
-    { label: "Entry Discipline", value: 87 },
-    { label: "Tyre Management", value: 90 },
-    { label: "Race Craft", value: 88 },
-    { label: "Quali Pace", value: 86 },
-    { label: "Consistency", value: 93 },
-  ],
-  cohortAverage: [68, 70, 68, 70, 70, 70],
-  confidenceScore: 0.91,
-  sampleSize: 24,
-};
 
 export const piastriF2ReelSlides: ReelSlide[] = [
   {
@@ -1776,22 +1647,6 @@ export const bortoletoEras: DriverEra[] = [
   },
 ];
 
-export const bortoletoSignature: DrivingSignature = {
-  driverId: "bortoleto",
-  series: "f2",
-  axes: [
-    { label: "Steering Smoothness", value: 85 },
-    { label: "Entry Discipline", value: 88 },
-    { label: "Tyre Management", value: 80 },
-    { label: "Race Craft", value: 87 },
-    { label: "Quali Pace", value: 86 },
-    { label: "Consistency", value: 84 },
-  ],
-  cohortAverage: [68, 70, 68, 70, 70, 70],
-  confidenceScore: 0.78,
-  sampleSize: 51,
-};
-
 export const bortoletoReelSlides: ReelSlide[] = [
   {
     slotLabel: "SPA · 2023",
@@ -1896,19 +1751,6 @@ export const norrisEras: DriverEra[] = [
   { driverId:"norris", teamId:"mclaren", teamName:"McLaren", seasons:"2019–present", highlights:["First win Miami 2024","4 wins in 2024 season","2025 world champion — 7 wins"], titles:1, wins:13, teamLiveryHex:"#FF8000", teamAccentHex:"#FFD700", statLabel:"13W · 19P", imageUrl:"/images/drivers/norris-mclaren-2024.jpg" },
 ]
 
-export const norrisSignature: DrivingSignature = {
-  driverId:"norris", series:"f1",
-  axes:[
-    { label:"Steering Smoothness", value:91 },
-    { label:"Entry Aggression", value:88 },
-    { label:"Tyre Management", value:85 },
-    { label:"Throttle Application", value:93 },
-    { label:"Braking", value:90 },
-    { label:"Consistency", value:89 },
-  ],
-  cohortAverage:[78,73,74,79,80,76], confidenceScore:0.87, sampleSize:1124,
-}
-
 export const norrisReelSlides: ReelSlide[] = [
   { slotLabel:"LN · 24", label:"FIRST WIN", glowColor:"#FF8000", tags:"MIAMI GP · MAIDEN FORMULA 1 VICTORY", title:"Miami GP", subtitle:"2024 · McLAREN · THE WAIT IS OVER", svgPath:"M 30 160 L 80 160 Q 100 145 115 110 L 160 110 Q 180 125 195 160 L 235 160 Q 255 175 270 205 L 310 205 Q 330 185 350 155 L 380 155", imageUrl:"/images/drivers/norris-china-2024-race.jpg" },
   { slotLabel:"LN · 24", label:"4 WINS", glowColor:"#FF8000", tags:"MONACO · NETHERLANDS · SINGAPORE · DOMINANT SEASON", title:"2024 Campaign", subtitle:"2024 · McLAREN · WDC RUNNER-UP", svgPath:"M 30 120 Q 60 110 85 85 L 145 85 Q 175 98 195 120 L 255 120 Q 285 105 310 80 L 370 80", imageUrl:"/images/drivers/norris-netherlands-2024.jpg" },
@@ -1946,19 +1788,6 @@ export const piastriF1Stats: DriverStats = { driverId:"piastri", series:"f1", ti
 export const piastriF1Eras: DriverEra[] = [
   { driverId:"piastri", teamId:"mclaren", teamName:"McLaren", seasons:"2023–present", highlights:["First win Hungary 2024","First pole China 2025","2 wins in 2024, 7 in 2025"], titles:0, wins:9, teamLiveryHex:"#FF8000", teamAccentHex:"#FFD700", statLabel:"9W · 6P", imageUrl:"/images/drivers/piastri-mclaren-2024.jpg" },
 ]
-
-export const piastriF1Signature: DrivingSignature = {
-  driverId:"piastri", series:"f1",
-  axes:[
-    { label:"Steering Smoothness", value:93 },
-    { label:"Entry Aggression", value:82 },
-    { label:"Tyre Management", value:90 },
-    { label:"Throttle Application", value:89 },
-    { label:"Braking", value:87 },
-    { label:"Consistency", value:94 },
-  ],
-  cohortAverage:[78,73,74,79,80,76], confidenceScore:0.82, sampleSize:780,
-}
 
 export const piastriF1ReelSlides: ReelSlide[] = [
   { slotLabel:"OP · 24", label:"FIRST WIN", glowColor:"#FF8000", tags:"HUNGARIAN GP · LIGHTS TO FLAG · MAIDEN VICTORY", title:"Hungarian GP", subtitle:"2024 · McLAREN · FIRST F1 WIN", svgPath:"M 30 140 L 60 140 Q 75 130 85 90 L 120 90 Q 140 105 155 140 L 195 140 Q 215 155 230 195 L 260 198 Q 275 180 290 140 L 330 140 Q 345 120 360 80 L 380 80", imageUrl:"/images/drivers/piastri-china-2024.jpg" },
@@ -1999,19 +1828,6 @@ export const russellF1Eras: DriverEra[] = [
   { driverId:"russell", teamId:"mercedes", teamName:"Mercedes", seasons:"2022–present", highlights:["First win Brazil 2022","8 wins with Mercedes (5 through 2025)","First pole Hungary 2022"], titles:0, wins:8, teamLiveryHex:"#00D2BE", teamAccentHex:"#FFD700", statLabel:"8W · 12P", imageUrl:"/images/drivers/russell-mercedes-2022.jpg" },
 ]
 
-export const russellF1Signature: DrivingSignature = {
-  driverId:"russell", series:"f1",
-  axes:[
-    { label:"Steering Smoothness", value:87 },
-    { label:"Entry Aggression", value:80 },
-    { label:"Tyre Management", value:86 },
-    { label:"Throttle Application", value:85 },
-    { label:"Braking", value:84 },
-    { label:"Consistency", value:92 },
-  ],
-  cohortAverage:[78,73,74,79,80,76], confidenceScore:0.85, sampleSize:960,
-}
-
 export const russellF1ReelSlides: ReelSlide[] = [
   { label:"PEAK ERA", glowColor:"#00D2BE", tags:"MERCEDES #1 DRIVER · BRITISH GRAND PRIX 2024", title:"Peak Russell", subtitle:"2024 · MERCEDES · W15 · 36-0 QUALI RECORD", svgPath:"M 30 150 L 80 150 Q 110 138 130 100 L 175 100 Q 195 115 210 150 L 260 150 Q 290 170 315 200 L 370 200", imageUrl: '/images/drivers/russell-silverstone-2024.jpg' },
   { label:"SAKHIR 2020", glowColor:"#005AFF", tags:"MERCEDES STAND-IN · TYRE MIX-UP · LATE PUNCTURE", title:"Sakhir GP", subtitle:"2020 · MERCEDES SUB · WIN SLIPPED AWAY", svgPath:"M 30 160 L 90 160 Q 112 148 130 105 L 190 105 Q 215 122 235 160 L 290 160 Q 315 138 335 104 L 370 104", imageUrl: '/images/drivers/russell-mercedes-w11-sakhir-2020.jpg' },
@@ -2049,19 +1865,6 @@ export const antonelliStats: DriverStats = { driverId:"antonelli", series:"f1", 
 export const antonelliEras: DriverEra[] = [
   { driverId:"antonelli", teamId:"mercedes", teamName:"Mercedes", seasons:"2025–present", highlights:["Youngest driver on 2025 grid","First win and first pole: China 2026","8 wins in 2026 through round 16"], titles:0, wins:8, teamLiveryHex:"#00D2BE", statLabel:"8W · 6P", imageUrl:"/images/drivers/antonelli-mercedes-2025.jpg" },
 ]
-
-export const antonelliSignature: DrivingSignature = {
-  driverId:"antonelli", series:"f1",
-  axes:[
-    { label:"Steering Smoothness", value:78 },
-    { label:"Entry Aggression", value:86 },
-    { label:"Tyre Management", value:72 },
-    { label:"Throttle Application", value:84 },
-    { label:"Braking", value:85 },
-    { label:"Consistency", value:74 },
-  ],
-  cohortAverage:[78,73,74,79,80,76], confidenceScore:0.55, sampleSize:380,
-}
 
 export const antonelliReelSlides: ReelSlide[] = [
   { slotLabel:"KA · 25", label:"DEBUT", glowColor:"#00D2BE", tags:"2025 · MERCEDES · DEBUT SEASON", title:"2025 Debut", subtitle:"2025 · MERCEDES · DEBUT SEASON", svgPath:"M 30 160 L 90 160 Q 112 148 130 105 L 190 105 Q 215 122 235 160 L 290 160 Q 315 138 335 104 L 370 104", imageUrl:"/images/drivers/antonelli-imola-2025.jpg" },
@@ -2107,19 +1910,6 @@ export const alonsoEras: DriverEra[] = [
   { driverId:"alonso", teamId:"aston_martin", teamName:"Aston Martin", seasons:"2023–present", highlights:["8 podiums in debut Aston Martin season 2023","P4 championship in 2023"], titles:0, wins:0, teamLiveryHex:"#006F62", statLabel:"8 PODS · P4", imageUrl:"/images/drivers/alonso-aston-martin-2023.jpg" },
 ]
 
-export const alonsoSignature: DrivingSignature = {
-  driverId:"alonso", series:"f1",
-  axes:[
-    { label:"Steering Smoothness", value:96 },
-    { label:"Entry Aggression", value:89 },
-    { label:"Tyre Management", value:97 },
-    { label:"Throttle Application", value:94 },
-    { label:"Braking", value:93 },
-    { label:"Consistency", value:98 },
-  ],
-  cohortAverage:[78,73,74,79,80,76], confidenceScore:0.96, sampleSize:3250,
-}
-
 export const alonsoReelSlides: ReelSlide[] = [
   { slotLabel:"FA · 05", label:"CHAMPION", glowColor:"#FFD700", tags:"2005 WORLD CHAMPION · YOUNGEST AT THE TIME", title:"Renault 2005", subtitle:"2005 · RENAULT · 7 WINS · FIRST TITLE", svgPath:"M 30 160 L 80 160 Q 100 145 115 110 L 160 110 Q 180 125 195 160 L 235 160 Q 255 175 270 205 L 310 205 Q 330 185 350 155 L 380 155", imageUrl:"/images/drivers/alonso-canada-2005.jpg" },
   { slotLabel:"FA · 12", label:"ALMOST", glowColor:"#DC0000", tags:"2012 TITLE DUEL · 3 POINTS BEHIND VETTEL", title:"Ferrari 2012", subtitle:"2012 · FERRARI · CLOSEST MISS · 11 WINS", svgPath:"M 30 120 Q 60 110 85 85 L 145 85 Q 175 98 195 120 L 255 120 Q 285 105 310 80 L 370 80", imageUrl:"/images/drivers/alonso-malaysia-2012.jpg" },
@@ -2159,19 +1949,6 @@ export const strollEras: DriverEra[] = [
   { driverId:"stroll", teamId:"racing_point", teamName:"Force India / Racing Point", seasons:"2018–2020", highlights:["Pole Monza 2020 (wet)","Pole Turkey 2020","2 podiums Racing Point"], titles:0, wins:0, teamLiveryHex:"#FF80C7", statLabel:"3 POLES", imageUrl:"/images/drivers/stroll-hungary.jpg" },
   { driverId:"stroll", teamId:"aston_martin", teamName:"Aston Martin", seasons:"2021–present", highlights:["Pole position Baku 2021","Multiple top-5 finishes 2023"], titles:0, wins:0, teamLiveryHex:"#006F62", statLabel:"1P · AM", imageUrl:"/images/drivers/stroll-austria-2023.jpg" },
 ]
-
-export const strollSignature: DrivingSignature = {
-  driverId:"stroll", series:"f1",
-  axes:[
-    { label:"Steering Smoothness", value:78 },
-    { label:"Entry Aggression", value:72 },
-    { label:"Tyre Management", value:80 },
-    { label:"Throttle Application", value:76 },
-    { label:"Braking", value:74 },
-    { label:"Consistency", value:70 },
-  ],
-  cohortAverage:[78,73,74,79,80,76], confidenceScore:0.75, sampleSize:1140,
-}
 
 export const strollReelSlides: ReelSlide[] = [
   { slotLabel:"LS · 17", label:"P3 DEBUT", glowColor:"#005AFF", tags:"BAKU 2017 · PODIUM ON F1 DEBUT SEASON", title:"Baku GP", subtitle:"2017 · WILLIAMS · YOUNGEST CANADIAN IN F1", svgPath:"M 30 160 L 90 160 Q 112 148 130 105 L 190 105 Q 215 122 235 160 L 290 160 Q 315 138 335 104 L 370 104", imageUrl:"/images/drivers/stroll-baku-2017.png" },
@@ -2214,19 +1991,6 @@ export const gaslyEras: DriverEra[] = [
   { driverId:"gasly", teamId:"alpine", teamName:"Alpine", seasons:"2023–present", highlights:["Dutch GP 2023: podium (P3)","São Paulo 2024: podium (P3)"], titles:0, wins:0, teamLiveryHex:"#0090FF", statLabel:"2 PODS", imageUrl:"/images/drivers/gasly-alpine-2024.jpg" },
 ]
 
-export const gaslySignature: DrivingSignature = {
-  driverId:"gasly", series:"f1",
-  axes:[
-    { label:"Steering Smoothness", value:82 },
-    { label:"Entry Aggression", value:84 },
-    { label:"Tyre Management", value:80 },
-    { label:"Throttle Application", value:83 },
-    { label:"Braking", value:87 },
-    { label:"Consistency", value:79 },
-  ],
-  cohortAverage:[78,73,74,79,80,76], confidenceScore:0.78, sampleSize:1120,
-}
-
 export const gaslyReelSlides: ReelSlide[] = [
   { slotLabel:"PG · 20", label:"RACE WINNER", glowColor:"#4169E1", tags:"MONZA 2020 · ALPHATAURI · SHOCK WIN", title:"Italian GP", subtitle:"2020 · ALPHATAURI · FIRST F1 WIN", svgPath:"M 30 155 Q 65 140 98 155 L 155 155 Q 185 140 218 155 L 275 155 Q 305 140 340 155 L 375 155", imageUrl:"/images/drivers/gasly-alphatauri-2020.jpg" },
   { slotLabel:"PG · 21", label:"P3", glowColor:"#4169E1", tags:"SÃO PAULO 2021 · ALPHATAURI · CAREER PODIUM #3", title:"São Paulo GP", subtitle:"2021 · ALPHATAURI · P3 IN BRAZIL", svgPath:"M 30 120 L 90 120 Q 112 108 130 70 L 180 70 Q 210 88 230 120 L 290 120 Q 310 104 325 72 L 370 72", imageUrl:"/images/drivers/gasly-austria-2021.jpg" },
@@ -2266,19 +2030,6 @@ export const colapintoEras: DriverEra[] = [
   { driverId:"colapinto", teamId:"alpine", teamName:"Alpine", seasons:"2025–present", highlights:["Full-season contract 2026","Argentina following his every race"], titles:0, wins:0, teamLiveryHex:"#0090FF", statLabel:"FULL SEASON", imageUrl:"/images/drivers/colapinto-alpine-2025.jpg" },
 ]
 
-export const colapintoSignature: DrivingSignature = {
-  driverId:"colapinto", series:"f1",
-  axes:[
-    { label:"Steering Smoothness", value:74 },
-    { label:"Entry Aggression", value:82 },
-    { label:"Tyre Management", value:72 },
-    { label:"Throttle Application", value:79 },
-    { label:"Braking", value:80 },
-    { label:"Consistency", value:68 },
-  ],
-  cohortAverage:[78,73,74,79,80,76], confidenceScore:0.42, sampleSize:210,
-}
-
 export const colapintoReelSlides: ReelSlide[] = [
   { slotLabel:"FC · 24", label:"DEBUT", glowColor:"#005AFF", tags:"WILLIAMS DEBUT · FIRST ARGENTINE IN F1 SINCE 2001", title:"F1 Debut", subtitle:"2024 · WILLIAMS · ARGENTINA WATCHES", svgPath:"M 30 160 L 90 160 Q 112 148 130 105 L 190 105 Q 215 122 235 160 L 290 160 Q 315 138 335 104 L 370 104", imageUrl:"/images/drivers/colapinto-italy-2025.jpg" },
   { slotLabel:"FC · 24", label:"P6", glowColor:"#005AFF", tags:"SINGAPORE P6 · BREAKTHROUGH RESULT IN 3RD RACE", title:"Singapore GP", subtitle:"2024 · WILLIAMS · BEST F1 RESULT", svgPath:"M 30 120 Q 60 110 85 85 L 145 85 Q 175 98 195 120 L 255 120 Q 285 105 310 80 L 370 80", imageUrl:"/images/drivers/colapinto-imola-2025.jpg" },
@@ -2317,19 +2068,6 @@ export const albonEras: DriverEra[] = [
   { driverId:"albon", teamId:"toro_rosso", teamName:"Toro Rosso / Red Bull", seasons:"2019–2020", highlights:["Promoted to Red Bull mid-2019","2 podiums (Bahrain P3, Abu Dhabi P3)","Released after 2020 season"], titles:0, wins:0, teamLiveryHex:"#1E3A8A", statLabel:"2 PODS", imageUrl:"/images/drivers/albon-redbull-2020.jpg" },
   { driverId:"albon", teamId:"williams", teamName:"Williams", seasons:"2022–present", highlights:["Points in non-points Williams","Driver of the Year candidates multiple times","Team leader and car developer"], titles:0, wins:0, teamLiveryHex:"#005AFF", teamAccentHex:"#FFFFFF", statLabel:"TEAM LEADER", imageUrl:"/images/drivers/albon-williams-2022.jpg" },
 ]
-
-export const albonSignature: DrivingSignature = {
-  driverId:"albon", series:"f1",
-  axes:[
-    { label:"Steering Smoothness", value:85 },
-    { label:"Entry Aggression", value:78 },
-    { label:"Tyre Management", value:84 },
-    { label:"Throttle Application", value:82 },
-    { label:"Braking", value:80 },
-    { label:"Consistency", value:87 },
-  ],
-  cohortAverage:[78,73,74,79,80,76], confidenceScore:0.76, sampleSize:880,
-}
 
 export const albonReelSlides: ReelSlide[] = [
   { slotLabel:"AA · 20", label:"P3", glowColor:"#1E3A8A", tags:"BAHRAIN P3 · RED BULL ERA HIGHLIGHT", title:"Bahrain GP", subtitle:"2020 · RED BULL · CAREER BEST RESULT", svgPath:"M 30 160 L 90 160 Q 112 148 130 105 L 190 105 Q 215 122 235 160 L 290 160 Q 315 138 335 104 L 370 104", imageUrl:"/images/drivers/albon-tuscany-2020.jpg" },
@@ -2373,19 +2111,6 @@ export const sainzEras: DriverEra[] = [
   { driverId:"sainz", teamId:"williams", teamName:"Williams", seasons:"2025–present", highlights:["Elevated Williams to mid-field force","Podiums at Baku and Qatar 2025"], titles:0, wins:0, teamLiveryHex:"#005AFF", statLabel:"2 PODS", imageUrl:"/images/drivers/sainz-austria-2025.jpg" },
 ]
 
-export const sainzSignature: DrivingSignature = {
-  driverId:"sainz", series:"f1",
-  axes:[
-    { label:"Steering Smoothness", value:88 },
-    { label:"Entry Aggression", value:85 },
-    { label:"Tyre Management", value:88 },
-    { label:"Throttle Application", value:87 },
-    { label:"Braking", value:86 },
-    { label:"Consistency", value:90 },
-  ],
-  cohortAverage:[78,73,74,79,80,76], confidenceScore:0.89, sampleSize:1580,
-}
-
 export const sainzReelSlides: ReelSlide[] = [
   { slotLabel:"CS · 22", label:"FIRST WIN", glowColor:"#DC0000", tags:"SILVERSTONE IN THE RAIN · FIRST F1 WIN", title:"British GP", subtitle:"2022 · FERRARI · EMOTIONAL MAIDEN WIN", svgPath:"M 30 120 L 80 120 Q 112 108 130 70 L 180 70 Q 210 88 230 120 L 290 120 Q 310 104 325 72 L 370 72", imageUrl:"/images/drivers/sainz-silverstone-2022.jpg" },
   { slotLabel:"CS · 23", label:"SINGAPORE", glowColor:"#DC0000", tags:"SINGAPORE MASTERCLASS · PERFECT RACE EXECUTION", title:"Singapore GP", subtitle:"2023 · FERRARI · POLE TO WIN", svgPath:"M 30 150 L 85 150 Q 108 132 130 92 L 180 88 Q 208 106 230 150 L 288 150 Q 312 133 338 92 L 375 90", imageUrl:"/images/drivers/sainz-austria-2023.jpg" },
@@ -2411,19 +2136,6 @@ export const sainzScoutingReport: ScoutingReport = {
 /* ─── Bearman F1 ───────────────────────────────────────────────────────────── */
 
 export const bearmanF1Stats: DriverStats = { driverId:"bearman", series:"f1", titles:0, wins:0, poles:0, podiums:0, careerSpan:"2024–present", racesEntered:43, fastestLaps:0, pointsScored:68 }
-
-export const bearmanF1Signature: DrivingSignature = {
-  driverId:"bearman", series:"f1",
-  axes:[
-    { label:"Steering Smoothness", value:80 },
-    { label:"Entry Aggression", value:87 },
-    { label:"Tyre Management", value:75 },
-    { label:"Throttle Application", value:83 },
-    { label:"Braking", value:86 },
-    { label:"Consistency", value:76 },
-  ],
-  cohortAverage:[78,73,74,79,80,76], confidenceScore:0.58, sampleSize:420,
-}
 
 export const bearmanF1ReelSlides: ReelSlide[] = [
   { slotLabel:"OB · 24", label:"F1 DEBUT", glowColor:"#DC0000", tags:"SAUDI ARABIA · P7 · FERRARI SUBSTITUTE AT 18", title:"Saudi GP", subtitle:"2024 · FERRARI SUB · SCORINGON DEBUT", svgPath:"M 30 160 L 80 160 Q 100 145 115 110 L 160 110 Q 180 125 195 160 L 235 160 Q 255 175 270 205 L 310 205 Q 330 185 350 155 L 380 155", imageUrl:"/images/drivers/bearman-austria-f2-2024.jpg" },
@@ -2465,19 +2177,6 @@ export const oconEras: DriverEra[] = [
   { driverId:"ocon", teamId:"alpine", teamName:"Alpine", seasons:"2021–2024", highlights:["HUNGARY 2021 WIN","Held off Hamilton in final laps","4 career podiums total"], titles:0, wins:1, teamLiveryHex:"#0090FF", teamAccentHex:"#FFD700", statLabel:"1W", imageUrl:"/images/drivers/ocon-alpine-2021.jpg" },
   { driverId:"ocon", teamId:"haas", teamName:"Haas", seasons:"2026–present", highlights:["New team 2026","Alongside Bearman at Haas"], titles:0, wins:0, teamLiveryHex:"#B6BABD", statLabel:"HAAS 26", imageUrl:"/images/drivers/ocon-haas-2025.jpg" },
 ]
-
-export const oconSignature: DrivingSignature = {
-  driverId:"ocon", series:"f1",
-  axes:[
-    { label:"Steering Smoothness", value:82 },
-    { label:"Entry Aggression", value:80 },
-    { label:"Tyre Management", value:85 },
-    { label:"Throttle Application", value:80 },
-    { label:"Braking", value:82 },
-    { label:"Consistency", value:82 },
-  ],
-  cohortAverage:[78,73,74,79,80,76], confidenceScore:0.78, sampleSize:1250,
-}
 
 export const oconReelSlides: ReelSlide[] = [
   { slotLabel:"EO · 21", label:"WIN", glowColor:"#0090FF", tags:"HUNGARIAN GP · LIGHTS-TO-FLAG · HELD HAMILTON", title:"Hungarian GP", subtitle:"2021 · ALPINE · ONLY F1 WIN", svgPath:"M 30 160 L 90 160 Q 112 148 130 105 L 190 105 Q 215 122 235 160 L 290 160 Q 315 138 335 104 L 370 104", imageUrl:"/images/drivers/ocon-austria-2021.jpg" },
@@ -2521,19 +2220,6 @@ export const hulkenbergEras: DriverEra[] = [
   { driverId:"hulkenberg", teamId:"audi", teamName:"Audi", seasons:"2026–present", highlights:["Audi project lead driver","New chapter with German marque"], titles:0, wins:0, teamLiveryHex:"#BB1C2A", statLabel:"AUDI ERA", imageUrl:"/images/drivers/hulkenberg-audi-2026.jpg" },
 ]
 
-export const hulkenbergSignature: DrivingSignature = {
-  driverId:"hulkenberg", series:"f1",
-  axes:[
-    { label:"Steering Smoothness", value:86 },
-    { label:"Entry Aggression", value:82 },
-    { label:"Tyre Management", value:86 },
-    { label:"Throttle Application", value:84 },
-    { label:"Braking", value:85 },
-    { label:"Consistency", value:88 },
-  ],
-  cohortAverage:[78,73,74,79,80,76], confidenceScore:0.85, sampleSize:1820,
-}
-
 export const hulkenbergReelSlides: ReelSlide[] = [
   { slotLabel:"NH · 10", label:"POLE", glowColor:"#005AFF", tags:"BRAZIL 2010 · POLE ON 3RD F1 START", title:"Brazil Quali", subtitle:"2010 · WILLIAMS · SHOCK POLE SITTER", svgPath:"M 30 160 L 90 160 Q 112 148 130 105 L 190 105 Q 215 122 235 160 L 290 160 Q 315 138 335 104 L 370 104", imageUrl:"/images/drivers/hulkenberg-canada-2010-b.jpg" },
   { slotLabel:"NH · 23", label:"P6 WDC", glowColor:"#B6BABD", tags:"CAREER BEST CHAMPIONSHIP · HAAS ERA REVIVAL", title:"2023 Season", subtitle:"2023 · HAAS · P6 IN WDC", svgPath:"M 30 120 Q 60 110 85 85 L 145 85 Q 175 98 195 120 L 255 120 Q 285 105 310 80 L 370 80", imageUrl:"/images/drivers/hulkenberg-silverstone-2024.jpg" },
@@ -2559,19 +2245,6 @@ export const hulkenbergScoutingReport: ScoutingReport = {
 /* ─── Bortoleto F1 ─────────────────────────────────────────────────────────── */
 
 export const bortoletoF1Stats: DriverStats = { driverId:"bortoleto", series:"f1", titles:0, wins:0, poles:0, podiums:0, careerSpan:"2025–present", racesEntered:40, fastestLaps:0, pointsScored:29 }
-
-export const bortoletoF1Signature: DrivingSignature = {
-  driverId:"bortoleto", series:"f1",
-  axes:[
-    { label:"Steering Smoothness", value:82 },
-    { label:"Entry Aggression", value:84 },
-    { label:"Tyre Management", value:78 },
-    { label:"Throttle Application", value:83 },
-    { label:"Braking", value:82 },
-    { label:"Consistency", value:80 },
-  ],
-  cohortAverage:[78,73,74,79,80,76], confidenceScore:0.55, sampleSize:380,
-}
 
 export const bortoletoF1ReelSlides: ReelSlide[] = [
   { slotLabel:"GB · 25", label:"F1 DEBUT", glowColor:"#52E252", tags:"SAUBER/AUDI DEBUT · MELBOURNE 2025", title:"F1 Debut", subtitle:"2025 · SAUBER · START OF F1 CHAPTER", svgPath:"M 30 155 L 88 155 Q 112 140 145 98 L 192 98 Q 215 116 240 155 L 295 155 Q 318 139 348 98 L 375 98", imageUrl:"/images/drivers/bortoleto-imola-2025.jpg" },
@@ -2611,19 +2284,6 @@ export const tsunodaEras: DriverEra[] = [
   { driverId:"tsunoda", teamId:"alphatauri", teamName:"AlphaTauri / Racing Bulls", seasons:"2021–present", highlights:["Bahrain 2021 debut — points scored","Rapid pace maturation through 2022–2024","Race podiums as machinery allowed"], titles:0, wins:0, teamLiveryHex:"#6692FF", statLabel:"POINTS SCORER", imageUrl:"/images/drivers/tsunoda-austria-2021.jpg" },
 ]
 
-export const tsunodaSignature: DrivingSignature = {
-  driverId:"tsunoda", series:"f1",
-  axes:[
-    { label:"Steering Smoothness", value:77 },
-    { label:"Entry Aggression", value:90 },
-    { label:"Tyre Management", value:76 },
-    { label:"Throttle Application", value:85 },
-    { label:"Braking", value:88 },
-    { label:"Consistency", value:74 },
-  ],
-  cohortAverage:[78,73,74,79,80,76], confidenceScore:0.72, sampleSize:780,
-}
-
 export const tsunodaReelSlides: ReelSlide[] = [
   { slotLabel:"YT · 21", label:"DEBUT PTS", glowColor:"#6692FF", tags:"BAHRAIN 2021 · DEBUT POINTS · JAPAN WATCHES", title:"Bahrain debut", subtitle:"2021 · ALPHATAURI · DEBUT SEASON", svgPath:"M 30 160 L 90 160 Q 112 148 130 105 L 190 105 Q 215 122 235 160 L 290 160 Q 315 138 335 104 L 370 104", imageUrl:"/images/drivers/tsunoda-austria-2021.jpg" },
   { slotLabel:"YT · 24", label:"MATURING", glowColor:"#6692FF", tags:"2024 · RACING BULLS · STRONGEST SEASON YET", title:"2024 Campaign", subtitle:"2024 · RACING BULLS · CONSISTENT SCORER", svgPath:"M 30 120 Q 60 110 85 85 L 145 85 Q 175 98 195 120 L 255 120 Q 285 105 310 80 L 370 80", imageUrl:"/images/drivers/tsunoda-silverstone-2024.jpg" },
@@ -2661,19 +2321,6 @@ export const hadjarStats: DriverStats = { driverId:"hadjar", series:"f1", titles
 export const hadjarEras: DriverEra[] = [
   { driverId:"hadjar", teamId:"rb", teamName:"Racing Bulls", seasons:"2025–present", highlights:["F1 debut 2025","F2 runner-up 2024 — strong junior platform","Red Bull academy training"], titles:0, wins:0, teamLiveryHex:"#6692FF", statLabel:"ROOKIE", imageUrl:"/images/drivers/hadjar-racing-bulls-2025.jpg" },
 ]
-
-export const hadjarSignature: DrivingSignature = {
-  driverId:"hadjar", series:"f1",
-  axes:[
-    { label:"Steering Smoothness", value:78 },
-    { label:"Entry Aggression", value:83 },
-    { label:"Tyre Management", value:74 },
-    { label:"Throttle Application", value:80 },
-    { label:"Braking", value:82 },
-    { label:"Consistency", value:72 },
-  ],
-  cohortAverage:[78,73,74,79,80,76], confidenceScore:0.42, sampleSize:260,
-}
 
 export const hadjarReelSlides: ReelSlide[] = [
   { slotLabel:"IH · 25", label:"DEBUT", glowColor:"#6692FF", tags:"RACING BULLS DEBUT · 2025 SEASON OPENER", title:"F1 Debut", subtitle:"2025 · RACING BULLS · START OF F1 CAREER", svgPath:"M 30 160 L 90 160 Q 112 148 130 105 L 190 105 Q 215 122 235 160 L 290 160 Q 315 138 335 104 L 370 104", imageUrl:"/images/drivers/hadjar-imola-2025.jpg" },
@@ -2713,19 +2360,6 @@ export const lawsonEras: DriverEra[] = [
   { driverId:"lawson", teamId:"red_bull", teamName:"Red Bull", seasons:"2025", highlights:["Promoted to Red Bull as Verstappen's teammate","2 rounds only — Australia and China GPs 2025","Returned to Racing Bulls from Round 3 after difficult start"], titles:0, wins:0, teamLiveryHex:"#1E3A8A", statLabel:"2 ROUNDS", imageUrl:"/images/drivers/lawson-redbull-2025.jpg" },
   { driverId:"lawson", teamId:"racing_bulls", teamName:"Racing Bulls", seasons:"2025–present", highlights:["Returned to Racing Bulls from Round 3, 2025","Rebuilt form — secured 2026 contract at Austrian GP inflection point","Racing Bulls 2026 alongside rookie Arvid Lindblad (#41)"], titles:0, wins:0, teamLiveryHex:"#6692FF", statLabel:"ONGOING", imageUrl:"/images/drivers/lawson-rb-vcarb-2024.jpg" },
 ]
-
-export const lawsonSignature: DrivingSignature = {
-  driverId:"lawson", series:"f1",
-  axes:[
-    { label:"Steering Smoothness", value:80 },
-    { label:"Entry Aggression", value:85 },
-    { label:"Tyre Management", value:76 },
-    { label:"Throttle Application", value:83 },
-    { label:"Braking", value:84 },
-    { label:"Consistency", value:78 },
-  ],
-  cohortAverage:[78,73,74,79,80,76], confidenceScore:0.52, sampleSize:350,
-}
 
 export const lawsonReelSlides: ReelSlide[] = [
   { slotLabel:"LL · 40", label:"F1 DEBUT", glowColor:"#6692FF", tags:"ZANDVOORT SUB DEBUT · DUTCH GP 2023 · CALLED UP MID-WEEKEND", title:"Dutch GP debut", subtitle:"2023 · ALPHATAURI · RICCIARDO HAND INJURY · LAWSON CALLED UP", svgPath:"M 30 155 Q 65 140 98 155 L 155 155 Q 185 140 218 155 L 275 155 Q 305 140 340 155 L 375 155", imageUrl:"/images/drivers/lawson-rb-vcarb-2024.jpg" },
@@ -2767,19 +2401,6 @@ export const perezEras: DriverEra[] = [
   { driverId:"perez", teamId:"cadillac", teamName:"Cadillac", seasons:"2026–present", highlights:["Pioneer driver for new F1 constructor","Mexico's hero joins American team"], titles:0, wins:0, teamLiveryHex:"#C8A951", statLabel:"CADILLAC ERA", imageUrl:"/images/drivers/perez-cadillac-2026.jpg" },
 ]
 
-export const perezSignature: DrivingSignature = {
-  driverId:"perez", series:"f1",
-  axes:[
-    { label:"Steering Smoothness", value:89 },
-    { label:"Entry Aggression", value:80 },
-    { label:"Tyre Management", value:94 },
-    { label:"Throttle Application", value:87 },
-    { label:"Braking", value:85 },
-    { label:"Consistency", value:86 },
-  ],
-  cohortAverage:[78,73,74,79,80,76], confidenceScore:0.88, sampleSize:2140,
-}
-
 export const perezReelSlides: ReelSlide[] = [
   { slotLabel:"SP · 20", label:"SAKHIR WIN", glowColor:"#FF80C7", tags:"SAKHIR GP · AGAINST ALL ODDS · EMOTIONAL FIRST WIN", title:"Sakhir GP", subtitle:"2020 · RACING POINT · FIRST VICTORY", svgPath:"M 30 160 L 80 160 Q 100 145 115 110 L 160 110 Q 180 125 195 160 L 235 160 Q 255 175 270 205 L 310 205 Q 330 185 350 155 L 380 155", imageUrl:"/images/drivers/perez-racing-point-2020.jpg" },
   { slotLabel:"SP · 23", label:"P2 WDC", glowColor:"#1E3A8A", tags:"2023 BEST SEASON · P2 IN WDC · 9 RACE WINS", title:"2023 Season", subtitle:"2023 · RED BULL · CAREER BEST CHAMPIONSHIP", svgPath:"M 30 120 Q 60 110 85 85 L 145 85 Q 175 98 195 120 L 255 120 Q 285 105 310 80 L 370 80", imageUrl:"/images/drivers/perez-netherlands-2024.jpg" },
@@ -2820,19 +2441,6 @@ export const bottasEras: DriverEra[] = [
   { driverId:"bottas", teamId:"alfa_romeo", teamName:"Alfa Romeo / Sauber", seasons:"2022–2025", highlights:["Team leader at Alfa Romeo","Mentored Bortoleto in 2024","Consistent midfield presence"], titles:0, wins:0, teamLiveryHex:"#900000", statLabel:"TEAM LEADER", imageUrl:"/images/drivers/bottas-alfa-romeo-2022.jpg" },
   { driverId:"bottas", teamId:"cadillac", teamName:"Cadillac", seasons:"2026–present", highlights:["Pioneer Cadillac driver alongside Perez","New chapter at 36"], titles:0, wins:0, teamLiveryHex:"#C8A951", statLabel:"CADILLAC 26", imageUrl:"/images/drivers/bottas-cadillac-2026.jpg" },
 ]
-
-export const bottasSignature: DrivingSignature = {
-  driverId:"bottas", series:"f1",
-  axes:[
-    { label:"Steering Smoothness", value:90 },
-    { label:"Entry Aggression", value:82 },
-    { label:"Tyre Management", value:87 },
-    { label:"Throttle Application", value:88 },
-    { label:"Braking", value:86 },
-    { label:"Consistency", value:88 },
-  ],
-  cohortAverage:[78,73,74,79,80,76], confidenceScore:0.90, sampleSize:1840,
-}
 
 export const bottasReelSlides: ReelSlide[] = [
   { slotLabel:"VB · 17", label:"FIRST WIN", glowColor:"#00D2BE", tags:"RUSSIA GP · FIRST CAREER WIN · DOMINANT PACE", title:"Russian GP", subtitle:"2017 · MERCEDES · MAIDEN VICTORY", svgPath:"M 30 160 L 90 160 Q 112 148 130 105 L 190 105 Q 215 122 235 160 L 290 160 Q 315 138 335 104 L 370 104", imageUrl:"/images/drivers/bottas-russia-2017.jpg" },
@@ -2907,19 +2515,6 @@ export const prostEras: DriverEra[] = [
     statLabel: "FINAL TITLE",
   },
 ]
-
-export const prostSignature: DrivingSignature = {
-  driverId: "prost", series: "f1",
-  axes: [
-    { label: "Steering Smoothness", value: 98 },
-    { label: "Entry Aggression", value: 72 },
-    { label: "Tyre Management", value: 97 },
-    { label: "Throttle Application", value: 95 },
-    { label: "Braking", value: 94 },
-    { label: "Consistency", value: 99 },
-  ],
-  cohortAverage: [78, 73, 74, 79, 80, 76], confidenceScore: 0.94, sampleSize: 2020,
-}
 
 export const prostReelSlides: ReelSlide[] = [
   {
@@ -3069,22 +2664,6 @@ export const schumacherEras: DriverEra[] = [
     imageUrl: "/images/drivers/schumacher-mercedes-2012.jpg",
   },
 ]
-
-export const schumacherSignature: DrivingSignature = {
-  driverId: "schumacher",
-  series: "f1",
-  axes: [
-    { label: "Steering Smoothness", value: 91 },
-    { label: "Entry Aggression", value: 93 },
-    { label: "Tyre Management", value: 88 },
-    { label: "Throttle Application", value: 95 },
-    { label: "Braking", value: 97 },
-    { label: "Consistency", value: 98 },
-  ],
-  cohortAverage: [78, 73, 74, 79, 80, 76],
-  confidenceScore: 0.97,
-  sampleSize: 2100,
-}
 
 export const schumacherReelSlides: ReelSlide[] = [
   {
@@ -3239,22 +2818,6 @@ export const sennaEras: DriverEra[] = [
     imageUrl: "/images/drivers/senna-williams-1994.jpg",
   },
 ]
-
-export const sennaSignature: DrivingSignature = {
-  driverId: "senna",
-  series: "f1",
-  axes: [
-    { label: "Steering Smoothness", value: 82 },
-    { label: "Entry Aggression", value: 99 },
-    { label: "Tyre Management", value: 75 },
-    { label: "Throttle Application", value: 94 },
-    { label: "Braking", value: 98 },
-    { label: "Consistency", value: 91 },
-  ],
-  cohortAverage: [78, 73, 74, 79, 80, 76],
-  confidenceScore: 0.95,
-  sampleSize: 1400,
-}
 
 export const sennaReelSlides: ReelSlide[] = [
   {
@@ -3433,22 +2996,6 @@ export const raikkonenEras: DriverEra[] = [
   },
 ]
 
-export const raikkonenSignature: DrivingSignature = {
-  driverId: "raikkonen",
-  series: "f1",
-  axes: [
-    { label: "Steering Smoothness", value: 86 },
-    { label: "Entry Aggression", value: 84 },
-    { label: "Tyre Management", value: 80 },
-    { label: "Throttle Application", value: 88 },
-    { label: "Braking", value: 91 },
-    { label: "Consistency", value: 85 },
-  ],
-  cohortAverage: [78, 73, 74, 79, 80, 76],
-  confidenceScore: 0.96,
-  sampleSize: 2800,
-}
-
 export const raikkonenReelSlides: ReelSlide[] = [
   {
     slotLabel: "KR · 07",
@@ -3592,22 +3139,6 @@ export const buttonEras: DriverEra[] = [
   },
 ]
 
-export const buttonSignature: DrivingSignature = {
-  driverId: "button",
-  series: "f1",
-  axes: [
-    { label: "Steering Smoothness", value: 95 },
-    { label: "Entry Aggression", value: 68 },
-    { label: "Tyre Management", value: 98 },
-    { label: "Throttle Application", value: 90 },
-    { label: "Braking", value: 82 },
-    { label: "Consistency", value: 94 },
-  ],
-  cohortAverage: [78, 73, 74, 79, 80, 76],
-  confidenceScore: 0.95,
-  sampleSize: 2200,
-}
-
 export const buttonReelSlides: ReelSlide[] = [
   {
     slotLabel: "JB · 22",
@@ -3730,22 +3261,6 @@ export const hakkinenEras: DriverEra[] = [
     imageUrl: "/images/drivers/hakkinen-mclaren-1995.jpg",
   },
 ]
-
-export const hakkinenSignature: DrivingSignature = {
-  driverId: "hakkinen",
-  series: "f1",
-  axes: [
-    { label: "Steering Smoothness", value: 93 },
-    { label: "Entry Aggression", value: 80 },
-    { label: "Tyre Management", value: 85 },
-    { label: "Throttle Application", value: 92 },
-    { label: "Braking", value: 89 },
-    { label: "Consistency", value: 91 },
-  ],
-  cohortAverage: [78, 73, 74, 79, 80, 76],
-  confidenceScore: 0.93,
-  sampleSize: 1200,
-}
 
 export const hakkinenReelSlides: ReelSlide[] = [
   {
@@ -3893,22 +3408,6 @@ export const damonHillEras: DriverEra[] = [
     imageUrl: "/images/drivers/hill-jordan-1998.jpg",
   },
 ]
-
-export const damonHillSignature: DrivingSignature = {
-  driverId: "hill",
-  series: "f1",
-  axes: [
-    { label: "Steering Smoothness", value: 85 },
-    { label: "Entry Aggression", value: 80 },
-    { label: "Tyre Management", value: 82 },
-    { label: "Throttle Application", value: 86 },
-    { label: "Braking", value: 84 },
-    { label: "Consistency", value: 88 },
-  ],
-  cohortAverage: [78, 73, 74, 79, 80, 76],
-  confidenceScore: 0.88,
-  sampleSize: 900,
-}
 
 export const damonHillReelSlides: ReelSlide[] = [
   {
@@ -4085,22 +3584,6 @@ export const mansellEras: DriverEra[] = [
   },
 ]
 
-export const mansellSignature: DrivingSignature = {
-  driverId: "mansell",
-  series: "f1",
-  axes: [
-    { label: "Steering Smoothness", value: 74 },
-    { label: "Entry Aggression", value: 96 },
-    { label: "Tyre Management", value: 72 },
-    { label: "Throttle Application", value: 92 },
-    { label: "Braking", value: 94 },
-    { label: "Consistency", value: 80 },
-  ],
-  cohortAverage: [78, 73, 74, 79, 80, 76],
-  confidenceScore: 0.90,
-  sampleSize: 1600,
-}
-
 export const mansellReelSlides: ReelSlide[] = [
   {
     slotLabel: "NM · 05",
@@ -4224,22 +3707,6 @@ export const nicoRosbergEras: DriverEra[] = [
     imageUrl: "/images/drivers/rosberg-mercedes-2016.jpg",
   },
 ]
-
-export const nicoRosbergSignature: DrivingSignature = {
-  driverId: "rosberg",
-  series: "f1",
-  axes: [
-    { label: "Steering Smoothness", value: 88 },
-    { label: "Entry Aggression", value: 76 },
-    { label: "Tyre Management", value: 89 },
-    { label: "Throttle Application", value: 85 },
-    { label: "Braking", value: 84 },
-    { label: "Consistency", value: 93 },
-  ],
-  cohortAverage: [78, 73, 74, 79, 80, 76],
-  confidenceScore: 0.94,
-  sampleSize: 1600,
-}
 
 export const nicoRosbergReelSlides: ReelSlide[] = [
   {
@@ -4403,22 +3870,6 @@ export const ricciardoEras: DriverEra[] = [
   },
 ]
 
-export const ricciardoSignature: DrivingSignature = {
-  driverId: "ricciardo",
-  series: "f1",
-  axes: [
-    { label: "Steering Smoothness", value: 82 },
-    { label: "Entry Aggression", value: 92 },
-    { label: "Tyre Management", value: 80 },
-    { label: "Throttle Application", value: 88 },
-    { label: "Braking", value: 97 },
-    { label: "Consistency", value: 78 },
-  ],
-  cohortAverage: [78, 73, 74, 79, 80, 76],
-  confidenceScore: 0.93,
-  sampleSize: 1900,
-}
-
 export const ricciardoReelSlides: ReelSlide[] = [
   {
     badge: "FIRST WIN",
@@ -4493,19 +3944,6 @@ export const magnussenEras: DriverEra[] = [
   { driverId:"magnussen", teamId:"haas", teamName:"Haas", seasons:"2022–2024", highlights:["Sao Paulo 2022 pole — Haas first-ever front row","Strong early 2022 campaign","Replaced by Ocon and Bearman for 2025"], titles:0, wins:0, teamLiveryHex:"#B6BABD", statLabel:"SAO PAULO POLE", imageUrl:"/images/drivers/magnussen-haas-2022.jpg" },
 ]
 
-export const magnussenSignature: DrivingSignature = {
-  driverId:"magnussen", series:"f1",
-  axes:[
-    { label:"Steering Smoothness", value:72 },
-    { label:"Entry Aggression", value:92 },
-    { label:"Tyre Management", value:74 },
-    { label:"Throttle Application", value:82 },
-    { label:"Braking", value:88 },
-    { label:"Consistency", value:74 },
-  ],
-  cohortAverage:[78,73,74,79,80,76], confidenceScore:0.82, sampleSize:1430,
-}
-
 export const magnussenReelSlides: ReelSlide[] = [
   { slotLabel:"KM · 14", label:"DEBUT P2", glowColor:"#E8002D", tags:"AUSTRALIA 2014 · McLAREN DEBUT · SECOND PLACE", title:"Australia debut", subtitle:"2014 · McLAREN · P2 ON FIRST F1 START", svgPath:"M 30 160 L 90 160 Q 112 148 130 105 L 190 105 Q 215 122 235 160 L 290 160 Q 315 138 335 104 L 370 104", imageUrl: '/images/drivers/magnussen-singapore-2014.jpg' },
   { slotLabel:"KM · 22", label:"HAAS POLE", glowColor:"#B6BABD", tags:"SAO PAULO 2022 · FIRST HAAS POLE IN F1 HISTORY", title:"Sao Paulo quali", subtitle:"2022 · HAAS · SAO PAULO POLE POSITION", svgPath:"M 30 120 Q 60 110 85 85 L 145 85 Q 175 98 195 120 L 255 120 Q 285 105 310 80 L 370 80", imageUrl: "/images/drivers/magnussen-austria-2022.jpg" },
@@ -4544,19 +3982,6 @@ export const doohanEras: DriverEra[] = [
   { driverId:"doohan", teamId:"alpine", teamName:"Alpine", seasons:"2024–2025", highlights:["F1 debut Abu Dhabi 2024","6 races in 2025 before Colapinto replacement","Rounds 1–6 of 2025 season"], titles:0, wins:0, teamLiveryHex:"#0090FF", statLabel:"7 RACES", imageUrl:"/images/drivers/doohan-alpine-2025.jpg" },
 ]
 
-export const doohanSignature: DrivingSignature = {
-  driverId:"doohan", series:"f1",
-  axes:[
-    { label:"Steering Smoothness", value:74 },
-    { label:"Entry Aggression", value:80 },
-    { label:"Tyre Management", value:70 },
-    { label:"Throttle Application", value:78 },
-    { label:"Braking", value:78 },
-    { label:"Consistency", value:68 },
-  ],
-  cohortAverage:[78,73,74,79,80,76], confidenceScore:0.30, sampleSize:95,
-}
-
 export const doohanReelSlides: ReelSlide[] = [
   { slotLabel:"JD · 24", label:"F1 DEBUT", glowColor:"#0090FF", tags:"ABU DHABI 2024 · ALPINE DEBUT · REPLACING OCON", title:"F1 Debut", subtitle:"2024 · ALPINE · ONE RACE AT ABU DHABI", svgPath:"M 30 160 L 90 160 Q 112 148 130 105 L 190 105 Q 215 122 235 160 L 290 160 Q 315 138 335 104 L 370 104", imageUrl: '/images/drivers/doohan-japan-2025.jpg' },
   { slotLabel:"JD · 25", label:"ALPINE R1-6", glowColor:"#0090FF", tags:"2025 · ALPINE · ROUNDS 1–6 · REPLACED BY COLAPINTO", title:"Alpine 2025", subtitle:"2025 · ALPINE · SIX ROUNDS BEFORE COLAPINTO", svgPath:"M 30 120 Q 60 110 85 85 L 145 85 Q 175 98 195 120 L 255 120 Q 285 105 310 80 L 370 80", imageUrl: '/images/drivers/doohan-japan-2025.jpg' },
@@ -4593,19 +4018,6 @@ export const lindbladStats: DriverStats = { driverId:"lindblad", series:"f1", ti
 export const lindbladEras: DriverEra[] = [
   { driverId:"lindblad", teamId:"rb", teamName:"Racing Bulls", seasons:"2026–present", highlights:["F1 debut 2026 Australian GP — P8, first points","Youngest British F1 driver ever (surpassed Bearman)","FP1 appearances at 2025 British and Mexico GPs for Red Bull"], titles:0, wins:0, teamLiveryHex:"#6692FF", statLabel:"ROOKIE", imageUrl:"/images/drivers/lindblad-racing-bulls-2026.jpg" },
 ]
-
-export const lindbladSignature: DrivingSignature = {
-  driverId:"lindblad", series:"f1",
-  axes:[
-    { label:"Steering Smoothness", value:76 },
-    { label:"Entry Aggression", value:84 },
-    { label:"Tyre Management", value:68 },
-    { label:"Throttle Application", value:80 },
-    { label:"Braking", value:82 },
-    { label:"Consistency", value:70 },
-  ],
-  cohortAverage:[78,73,74,79,80,76], confidenceScore:0.28, sampleSize:65,
-}
 
 export const lindbladReelSlides: ReelSlide[] = [
   { slotLabel:"AL · 25", label:"F2 YOUNGEST WIN", glowColor:"#6692FF", tags:"JEDDAH F2 2025 · YOUNGEST F2 RACE WINNER IN HISTORY · 17Y 254D", title:"F2 Jeddah", subtitle:"2025 · CAMPOS · YOUNGEST F2 WINNER EVER · 17Y 254D", svgPath:"M 30 160 L 90 160 Q 112 148 130 105 L 190 105 Q 215 122 235 160 L 290 160 Q 315 138 335 104 L 370 104", imageUrl: '/images/drivers/lindblad-austria-f2-2025.jpg' },

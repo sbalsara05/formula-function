@@ -388,26 +388,11 @@ export const monacoDriverFit: DriverTrackFit[] = [
 ];
 
 export const monacoHotspots: Hotspot[] = [
-  { id: "monaco-loews", venueId: "monaco", cornerLabel: "Loews Hairpin", x: 88.1, y: 48.5, type: "iconic", momentId: "senna-monaco-1992" },
   { id: "monaco-portier", venueId: "monaco", cornerLabel: "Portier", x: 96.5, y: 45.9, type: "iconic", momentId: "senna-monaco-1988" },
   { id: "monaco-rascasse", venueId: "monaco", cornerLabel: "Rascasse", x: 9.5, y: 68.7, type: "iconic", momentId: "schumacher-monaco-2006" },
 ];
 
 export const monacoMomentOverlays: MomentOverlay[] = [
-  {
-    // 1992 Monaco GP: Senna won by 0.215s with Mansell behind him.
-    // Photo: Commons, File:Ayrton Senna 1992 Monaco.jpg. Senna on track that weekend, not alongside Mansell.
-    momentId: "senna-monaco-1992",
-    title: "Senna holds Mansell at the hairpin",
-    year: 1992,
-    driver1Id: "senna",
-    driver2Id: "mansell",
-    cornerLabel: "Loews Hairpin",
-    description: "WON BY 0.215s",
-    body: "Mansell spent the closing laps on Senna's gearbox and never found a way through. Senna won by 0.215 seconds.",
-    imageUrl: "/images/venues/monaco-senna-1992-race.jpg",
-    imageNote: "Senna's McLaren at Monaco in 1992. Not the moment alongside Mansell.",
-  },
   {
     // 1988 Monaco GP: Senna retired from a large lead after hitting the barrier at Portier. Prost won.
     // Photo: Commons period still — Senna's MP4/4 at Monaco in 1988. Not the Portier barrier.
@@ -779,7 +764,6 @@ export const suzukaDriverFit: DriverTrackFit[] = [
 export const suzukaHotspots: Hotspot[] = [
   { id: "suzuka-t1", venueId: "suzuka", cornerLabel: "Turn 1", x: 96.9, y: 69.8, type: "iconic", momentId: "senna-suzuka-1990" },
   { id: "suzuka-casio", venueId: "suzuka", cornerLabel: "Casio chicane", x: 61, y: 38, type: "iconic", momentId: "senna-suzuka-1989" },
-  { id: "suzuka-hairpin", venueId: "suzuka", cornerLabel: "Hairpin", x: 3.1, y: 26.5, type: "iconic", momentId: "schumacher-suzuka-2000" },
 ];
 
 export const suzukaMomentOverlays: MomentOverlay[] = [
@@ -809,19 +793,6 @@ export const suzukaMomentOverlays: MomentOverlay[] = [
     body: "Senna and Prost collided at the chicane. Prost retired. Senna rejoined and was later disqualified, and Prost was world champion.",
     imageUrl: "/images/venues/suzuka-senna-prost-1989.jpg",
     imageNote: "Senna's McLaren after the chicane collision, front wing gone. Prost walks away.",
-  },
-  {
-    // 2000 Japanese GP: Schumacher won from pole. That win sealed his third world title. The hairpin is the last slow corner before the run to the flag.
-    // Photo: i.redd.it/7sdp2c6vla821.jpg — Schumacher's Ferrari taking the flag at Suzuka as Ferrari pit wall celebrates.
-    momentId: "schumacher-suzuka-2000",
-    title: "Schumacher takes a third title",
-    year: 2000,
-    driver1Id: "schumacher",
-    cornerLabel: "Hairpin",
-    description: "THIRD TITLE",
-    body: "Schumacher won from pole. The hairpin is the last slow corner before the straight to the flag, and that win made him world champion for the third time.",
-    imageUrl: "/images/venues/suzuka-schumacher-2000-title.jpg",
-    imageNote: "Schumacher taking the flag at Suzuka. The hairpin is the last slow corner before that straight.",
   },
 ];
 
@@ -906,23 +877,24 @@ export const interlagosDriverFit: DriverTrackFit[] = [
 ];
 
 export const interlagosHotspots: Hotspot[] = [
-  { id: "interlagos-senna-s", venueId: "interlagos", cornerLabel: "Senna S", x: 7.9, y: 42, type: "iconic", momentId: "vettel-interlagos-2012" },
-  { id: "interlagos-juncao", venueId: "interlagos", cornerLabel: "Junção", x: 97, y: 49.7, type: "iconic", momentId: "hamilton-interlagos-2008" },
+  { id: "interlagos-t4", venueId: "interlagos", cornerLabel: "Turn 4", x: 70.1, y: 79.8, type: "iconic", momentId: "vettel-interlagos-2012" },
+  { id: "interlagos-juncao", venueId: "interlagos", cornerLabel: "Junção", x: 92.4, y: 60.7, type: "iconic", momentId: "hamilton-interlagos-2008" },
   { id: "interlagos-line", venueId: "interlagos", cornerLabel: "Start/finish", x: 25.8, y: 26.6, type: "iconic", momentId: "senna-interlagos-1991" },
 ];
 
 export const interlagosMomentOverlays: MomentOverlay[] = [
   {
-    // 2012 Brazilian GP: Vettel was hit at the Senna S on lap 1, recovered to sixth, and won the title.
+    // Autosport, 26 Nov 2012 and FIA race report: on lap 1 Bruno Senna hit Vettel on the entry to Turn 4. Vettel spun, was last at the end of the lap with sidepod and exhaust damage, finished sixth and won the title.
     momentId: "vettel-interlagos-2012",
-    title: "Vettel hit at the Senna S",
+    title: "Vettel spun at Turn 4",
     year: 2012,
     driver1Id: "vettel",
-    cornerLabel: "Senna S",
-    description: "TITLE FROM P6",
-    body: "Vettel was hit at the Senna S on the opening lap and dropped to the back. He finished sixth, which was enough to win the championship.",
+    driver2Id: "bruno_senna",
+    cornerLabel: "Turn 4",
+    description: "TITLE FROM LAST",
+    body: "On the opening lap Bruno Senna hit Vettel at Turn 4 and spun him round. Vettel was last at the end of the lap with a damaged car. He came back to finish sixth, which was enough to win the championship.",
     imageUrl: "/images/venues/interlagos-vettel-2012.jpg",
-    imageNote: "Vettel celebrating the 2012 title. Not the hit at the Senna S.",
+    imageNote: "Vettel celebrating the 2012 title. Not the contact at Turn 4.",
   },
   {
     // formula1.com race result, 2 Nov 2008: Hamilton finished fifth after passing Glock on the last lap and won the championship. Massa won the race.
@@ -1041,17 +1013,17 @@ export const bahrainHotspots: Hotspot[] = [
 
 export const bahrainMomentOverlays: MomentOverlay[] = [
   {
-    // 2014 Bahrain GP: on the last lap Hamilton and Rosberg touched at Turn 1. Hamilton won.
+    // 2014 Bahrain GP: Rosberg outbraked Hamilton into Turn 1 on consecutive laps around lap 19 and again after the late safety car; Hamilton switched back underneath each time and won. No last-lap contact.
     momentId: "hamilton-bahrain-2014",
     title: "Hamilton and Rosberg at Turn 1",
     year: 2014,
     driver1Id: "hamilton",
     driver2Id: "rosberg",
     cornerLabel: "Turn 1",
-    description: "LAST LAP",
-    body: "On the last lap Hamilton and Rosberg touched at Turn 1. Hamilton won the race.",
+    description: "MERCEDES vs MERCEDES",
+    body: "Rosberg kept diving down the inside into Turn 1. Each time, Hamilton switched back underneath him on the way out and kept the lead. Hamilton won.",
     imageUrl: "/images/venues/bahrain-mercedes-2014.jpg",
-    imageNote: "The two Mercedes at the front of the 2014 Bahrain Grand Prix. Not the last-lap touch.",
+    imageNote: "The two Mercedes at the front of the 2014 Bahrain Grand Prix. Not a Turn 1 move.",
   },
   {
     // 2020 Bahrain GP: Grosjean hit the barrier at Turn 3 on lap 1. The car split and caught fire. He got out.
@@ -1159,7 +1131,6 @@ export const abuDhabiDriverFit: DriverTrackFit[] = [
 
 export const abuDhabiHotspots: Hotspot[] = [
   { id: "abudhabi-t5", venueId: "abu-dhabi", cornerLabel: "Turn 5", x: 96.9, y: 48.9, type: "iconic", momentId: "verstappen-abudhabi-2021" },
-  { id: "abudhabi-hotel", venueId: "abu-dhabi", cornerLabel: "Hotel section", x: 31.5, y: 55.3, type: "iconic", momentId: "alonso-abudhabi-2010" },
   { id: "abudhabi-line", venueId: "abu-dhabi", cornerLabel: "Start/finish", x: 44.1, y: 46.3, type: "iconic", momentId: "rosberg-abudhabi-2016" },
 ];
 
@@ -1176,19 +1147,6 @@ export const abuDhabiMomentOverlays: MomentOverlay[] = [
     description: "LAST LAP · TITLE",
     body: "On the one-lap restart Verstappen passed Hamilton on the inside of Turn 5. He won the race and the championship.",
     imageUrl: "/images/venues/abu-dhabi-verstappen-hamilton-2021-t5.jpg",
-  },
-  {
-    // 2010 Abu Dhabi GP: Alonso finished behind Petrov and lost the title. Vettel won the race and the championship.
-    // Photo: i.redd.it/btf1angitsxz.jpg — Petrov's Renault ahead of Alonso's Ferrari at Yas Marina.
-    momentId: "alonso-abudhabi-2010",
-    title: "Alonso behind Petrov",
-    year: 2010,
-    driver1Id: "alonso",
-    driver2Id: "petrov",
-    cornerLabel: "Hotel section",
-    description: "TITLE LOST",
-    body: "Alonso spent the last stint behind Petrov through the slow hotel section and never got alongside. He finished seventh. Vettel won the race and the title.",
-    imageUrl: "/images/venues/abu-dhabi-alonso-petrov-2010.jpg",
   },
   {
     // 2016 Abu Dhabi GP: Rosberg finished second, which won him the title. He retired after the season.
@@ -1282,38 +1240,24 @@ export const jeddahDriverFit: DriverTrackFit[] = [
 ];
 
 export const jeddahHotspots: Hotspot[] = [
-  { id: "jeddah-last", venueId: "jeddah", cornerLabel: "Last corner", x: 92.2, y: 25.3, type: "iconic", momentId: "hamilton-jeddah-2021" },
-  { id: "jeddah-straight", venueId: "jeddah", cornerLabel: "Main straight", x: 75, y: 36.3, type: "iconic", momentId: "verstappen-jeddah-2021" },
+  { id: "jeddah-last", venueId: "jeddah", cornerLabel: "Last corner", x: 92.2, y: 25.3, type: "iconic", momentId: "verstappen-jeddah-2021" },
   { id: "jeddah-line", venueId: "jeddah", cornerLabel: "Start/finish", x: 67.7, y: 42.3, type: "iconic", momentId: "verstappen-jeddah-2022" },
 ];
 
 export const jeddahMomentOverlays: MomentOverlay[] = [
   {
-    // 2021 Saudi Arabian GP: Hamilton and Verstappen touched on the final restart and both left the track. Hamilton won.
-    // Photo: formula1.com CDN / Getty — Hamilton on the podium with the trophy; Verstappen behind.
-    momentId: "hamilton-jeddah-2021",
-    title: "Hamilton and Verstappen on the restart",
-    year: 2021,
-    driver1Id: "hamilton",
-    driver2Id: "verstappen",
-    cornerLabel: "Last corner",
-    description: "BOTH OFF",
-    body: "On the final restart Hamilton and Verstappen touched and both left the track. Hamilton won the race.",
-    imageUrl: "/images/venues/jeddah-hamilton-2021-win.jpg",
-    imageNote: "Hamilton on the podium after the win, with Verstappen behind. Not the last-corner restart.",
-  },
-  {
-    // 2021 Saudi Arabian GP: Verstappen slowed suddenly in front of Hamilton and was penalised.
-    // Photo: i.redd.it/69bzsmssqtc81.jpg — Hamilton's front wing into Verstappen's rear after the slow-down.
+    // 2021 Saudi Arabian GP, lap 37: told to let Hamilton by before the last corner, Verstappen braked suddenly at Turn 26 and Hamilton hit his left-rear. 10-second penalty for erratic braking. Hamilton won.
+    // Photo: i.redd.it/69bzsmssqtc81.jpg — Hamilton's broken front wing alongside Verstappen just after the contact.
     momentId: "verstappen-jeddah-2021",
-    title: "Verstappen slows on the straight",
+    title: "Verstappen brakes before the last corner",
     year: 2021,
     driver1Id: "verstappen",
     driver2Id: "hamilton",
-    cornerLabel: "Main straight",
-    description: "TIME PENALTY",
-    body: "Verstappen slowed suddenly in front of Hamilton on the straight. The stewards gave him a time penalty.",
+    cornerLabel: "Last corner",
+    description: "10s PENALTY",
+    body: "Told to give the lead back before the last corner, Verstappen braked suddenly at Turn 26. Hamilton ran into his rear and broke his front wing. Verstappen got a 10-second penalty, and Hamilton won.",
     imageUrl: "/images/venues/jeddah-hamilton-verstappen-2021.jpg",
+    imageNote: "Hamilton's broken front wing alongside Verstappen just after the contact.",
   },
   {
     // 2022 Saudi Arabian GP: Verstappen beat Leclerc and took the flag.
@@ -1405,7 +1349,6 @@ export const melbourneDriverFit: DriverTrackFit[] = [
 export const melbourneHotspots: Hotspot[] = [
   { id: "melbourne-t1", venueId: "melbourne", cornerLabel: "Turn 1", x: 38, y: 70.1, type: "iconic", momentId: "ralf-melbourne-2002" },
   { id: "melbourne-line", venueId: "melbourne", cornerLabel: "Start/finish", x: 53.7, y: 72.5, type: "iconic", momentId: "coulthard-melbourne-2003" },
-  { id: "melbourne-record", venueId: "melbourne", cornerLabel: "Pit straight", x: 69.8, y: 72, type: "iconic", momentId: "leclerc-melbourne-2024" },
 ];
 
 export const melbourneMomentOverlays: MomentOverlay[] = [
@@ -1432,19 +1375,6 @@ export const melbourneMomentOverlays: MomentOverlay[] = [
     description: "SEASON OPENER",
     body: "Coulthard took the flag to win the 2003 season opener.",
     imageUrl: "/images/venues/albert-park-coulthard-2003-win.jpg",
-  },
-  {
-    // 2024 Australian GP: Verstappen took pole. Leclerc set the race lap record of 1:19.813 on the rebuilt Albert Park.
-    // Photo: RaceFans / XPB — Leclerc's Ferrari SF-24 at Albert Park during the race.
-    momentId: "leclerc-melbourne-2024",
-    title: "Leclerc's lap record",
-    year: 2024,
-    driver1Id: "leclerc",
-    cornerLabel: "Pit straight",
-    description: "1:19.813",
-    body: "Verstappen took pole. In the race Leclerc set a 1:19.813 — the lap record on the rebuilt Albert Park — starting and finishing on the pit straight.",
-    imageUrl: "/images/venues/albert-park-leclerc-2024-lap.jpg",
-    imageNote: "Leclerc's Ferrari during the race at Albert Park. Not the exact lap-record lap.",
   },
 ];
 export const melbourneIconicMoments: VenueIconicMoment[] = [
@@ -1525,7 +1455,6 @@ export const shanghaiDriverFit: DriverTrackFit[] = [
 
 export const shanghaiHotspots: Hotspot[] = [
   { id: "shanghai-pit", venueId: "shanghai", cornerLabel: "Pit entry", x: 29, y: 71.5, type: "iconic", momentId: "hamilton-shanghai-2007" },
-  { id: "shanghai-hairpin", venueId: "shanghai", cornerLabel: "Hairpin", x: 7.3, y: 76.2, type: "iconic", momentId: "hamilton-shanghai-2011" },
   { id: "shanghai-line", venueId: "shanghai", cornerLabel: "Start/finish", x: 38.2, y: 48.2, type: "iconic", momentId: "verstappen-shanghai-2024" },
 ];
 
@@ -1543,19 +1472,6 @@ export const shanghaiMomentOverlays: MomentOverlay[] = [
     // Source: Reddit i.redd.it via Wayback (Hamilton standing by the McLaren in the pit-entry gravel)
     imageUrl: "/images/venues/shanghai-hamilton-2007-gravel.jpg",
     imageNote: "Hamilton beside the McLaren after sliding into the pit-entry gravel.",
-  },
-  {
-    // 2011 Chinese GP: Hamilton stopped three times and beat Vettel, who had started from pole.
-    momentId: "hamilton-shanghai-2011",
-    title: "Hamilton beats Vettel",
-    year: 2011,
-    driver1Id: "hamilton",
-    driver2Id: "vettel",
-    cornerLabel: "Hairpin",
-    description: "THREE STOPS",
-    body: "Vettel started from pole. Hamilton stopped three times and won. The hairpin at the end of the back straight is the corner where a pass at Shanghai has to be finished.",
-    imageUrl: "/images/venues/shanghai-hamilton-2011.jpg",
-    imageNote: "Hamilton in the McLaren at Shanghai in 2011, the race he won.",
   },
   {
     // 2024 Chinese GP: Verstappen won the sprint and the race.
@@ -1648,39 +1564,10 @@ export const miamiDriverFit: DriverTrackFit[] = [
 ];
 
 export const miamiHotspots: Hotspot[] = [
-  { id: "miami-t1", venueId: "miami", cornerLabel: "Turn 1", x: 60.9, y: 51.5, type: "iconic", momentId: "verstappen-miami-2022" },
-  { id: "miami-hairpin", venueId: "miami", cornerLabel: "Hairpin", x: 17.2, y: 35.2, type: "iconic", momentId: "norris-miami-2024" },
-  { id: "miami-line", venueId: "miami", cornerLabel: "Start/finish", x: 39.9, y: 37.6, type: "iconic", momentId: "sainz-miami-2023" },
+  { id: "miami-line", venueId: "miami", cornerLabel: "Start/finish", x: 39.9, y: 37.6, type: "iconic", momentId: "verstappen-miami-2023" },
 ];
 
 export const miamiMomentOverlays: MomentOverlay[] = [
-  {
-    // 2022 Miami GP: Verstappen won the first race at Miami.
-    momentId: "verstappen-miami-2022",
-    title: "Verstappen wins the first Miami GP",
-    year: 2022,
-    driver1Id: "verstappen",
-    driver2Id: "leclerc",
-    cornerLabel: "Turn 1",
-    description: "INAUGURAL RACE",
-    body: "Leclerc led the early laps. After a late safety car Verstappen was ahead, and he took the flag in the first Miami Grand Prix.",
-    // Source: Reddit i.redd.it/2jj83aal3dy81.jpg — Verstappen after the inaugural Miami GP (gold Miami boots)
-    imageUrl: "/images/venues/miami-verstappen-2022-after.jpg",
-    imageNote: "Verstappen after taking the flag in the first Miami Grand Prix.",
-  },
-  {
-    // 2024 Miami GP: Norris won his first grand prix.
-    // Photo: i.redd.it/wsp12fvzysyc1.jpeg — Norris with the Miami winner's trophy.
-    momentId: "norris-miami-2024",
-    title: "Norris's first win",
-    year: 2024,
-    driver1Id: "norris",
-    cornerLabel: "Hairpin",
-    description: "FIRST WIN",
-    body: "Norris took the lead during a safety car and won his first grand prix. The hairpin is the slow corner at the end of the long straight, where the field bunched.",
-    imageUrl: "/images/venues/miami-norris-2024-trophy.jpg",
-    imageNote: "Norris with the winner's trophy after his first grand prix win.",
-  },
   {
     // 2023 Miami GP: Verstappen started ninth and won under green-flag conditions. formula1.com race result.
     // Photo: formula1.com CDN — Verstappen's RB19 in the Miami 2023 special livery during the race.
@@ -1913,7 +1800,7 @@ export const montrealMomentOverlays: MomentOverlay[] = [
     imageNote: "The Wall of Champions barrier. Not the 1999 crashes themselves.",
   },
   {
-    // 2008 Canadian GP: Hamilton pulled out of his pit box into Räikkönen. Both retired from the incident. Robert Kubica won.
+    // 2008 Canadian GP: under the safety car, Räikkönen and Kubica stopped at the red light at the pit exit. Hamilton saw it too late and hit the back of Räikkönen's Ferrari. Both retired. Robert Kubica won.
     momentId: "hamilton-montreal-2008",
     title: "Hamilton and Räikkönen in the pit lane",
     year: 2008,
@@ -1921,7 +1808,7 @@ export const montrealMomentOverlays: MomentOverlay[] = [
     driver2Id: "raikkonen",
     cornerLabel: "Pit lane",
     description: "BOTH OUT",
-    body: "Hamilton left his pit box into Räikkönen's path. Both were out. Robert Kubica won the race.",
+    body: "Räikkönen and Kubica were waiting at the red light at the end of the pit lane. Hamilton saw it too late and ran into the back of Räikkönen's Ferrari. Both were out. Kubica won the race.",
     imageUrl: "/images/venues/canada-hamilton-2008-wreck.jpg",
     imageNote: "Hamilton's McLaren after the pit-lane crash.",
   },
@@ -2025,43 +1912,45 @@ export const barcelonaHotspots: Hotspot[] = [
 
 export const barcelonaMomentOverlays: MomentOverlay[] = [
   {
-    // 1991 Spanish GP: Senna and Mansell fought through the last corner. Senna won.
+    // the-race.com, "Mansell magic beyond that Senna pass – F1 Revisited"; Autosport, "Grand Prix Gold: Spain 1991": rain returned and Senna spun coming out of the final corner at the end of lap 13, rejoining from the grass in sixth. Mansell won; Senna finished fifth.
+    // Photo: Mansell and Senna wheel to wheel on the main straight earlier in the race. Not the spin.
     momentId: "senna-barcelona-1991",
-    title: "Senna and Mansell at the last corner",
+    title: "Senna spins at the last corner",
     year: 1991,
     driver1Id: "senna",
     driver2Id: "mansell",
     cornerLabel: "Last corner",
-    description: "McLAREN over WILLIAMS",
-    body: "Mansell drew alongside into the last corner. Senna held the line and won the race.",
+    description: "LAP 13 SPIN",
+    body: "Rain came back at the end of lap 13 and Senna spun coming out of the last corner. Mansell and Schumacher got by, and Senna rejoined from the grass in sixth. Mansell won the race; Senna finished fifth.",
     imageUrl: "/images/venues/barcelona-senna-mansell-1991.jpg",
+    imageNote: "Mansell and Senna wheel to wheel down the main straight earlier in the race. Not the spin.",
   },
   {
-    // 2016 Spanish GP: Hamilton and Rosberg collided on the opening lap and both retired. Verstappen won on his Red Bull debut, the youngest grand prix winner.
+    // 2016 Spanish GP, lap 1: coming out of Turn 3 Hamilton tried to retake the lead, went onto the grass as Rosberg defended, spun, and the two collided at Turn 4. Both retired. Verstappen won on his Red Bull debut, the youngest grand prix winner.
     momentId: "verstappen-barcelona-2016",
-    title: "Mercedes collide, Verstappen wins",
+    title: "The Mercedes collide out of Turn 3",
     year: 2016,
     driver1Id: "verstappen",
     driver2Id: "hamilton",
     cornerLabel: "Turn 3",
-    description: "YOUNGEST WINNER",
-    body: "Hamilton and Rosberg hit each other at Turn 3 on the first lap and both retired. Verstappen won on his first weekend with Red Bull. He was 18.",
+    description: "BOTH MERCEDES OUT",
+    body: "On the first lap Hamilton went for the lead coming out of Turn 3. Rosberg moved across, Hamilton put two wheels on the grass and spun, and the two Mercedes collided at Turn 4. Verstappen won on his first weekend with Red Bull. He was 18.",
     imageUrl: "/images/venues/barcelona-verstappen-2016.jpg",
     imageNote: "Verstappen with the trophy from his first Red Bull win. Not the Mercedes collision.",
   },
   {
-    // 2021 Spanish GP: Verstappen won after Hamilton's extra stop.
+    // formula1.com, 9 May 2021, "Late pass secures Hamilton victory in Spain after race-long battle with Verstappen": Verstappen took the lead from pole-sitter Hamilton at Turn 1. Hamilton made a second stop and passed him on lap 60 to win.
     momentId: "hamilton-barcelona-2021",
-    title: "Verstappen wins after the extra stop",
+    title: "Verstappen takes the lead at Turn 1",
     year: 2021,
     driver1Id: "verstappen",
     driver2Id: "hamilton",
     cornerLabel: "Turn 1",
     description: "RED BULL over MERCEDES",
-    body: "Hamilton led from Turn 1. An extra stop dropped him behind, and Verstappen took the flag.",
+    body: "Hamilton started from pole. Verstappen beat him into Turn 1 and took the lead. Mercedes later gave Hamilton a second stop, and he passed Verstappen on lap 60 to win.",
     // Source: Verstappen.com / Red Bull Content Pool (already self-hosted for archive grid)
     imageUrl: "/images/venues/barcelona-verstappen-2021.jpg",
-    imageNote: "Verstappen in the RB16B at the 2021 Spanish Grand Prix weekend.",
+    imageNote: "Verstappen in the RB16B at the 2021 Spanish Grand Prix weekend. Not the Turn 1 move.",
   },
 ];
 export const barcelonaIconicMoments: VenueIconicMoment[] = [
@@ -2145,7 +2034,6 @@ export const hungaroringDriverFit: DriverTrackFit[] = [
 export const hungaroringHotspots: Hotspot[] = [
   { id: "hungary-t1", venueId: "hungaroring", cornerLabel: "Turn 1", x: 5.1, y: 94.5, type: "iconic", momentId: "ocon-hungary-2021" },
   { id: "hungary-line", venueId: "hungaroring", cornerLabel: "Start/finish", x: 54.6, y: 96.9, type: "iconic", momentId: "alonso-hungary-2003" },
-  { id: "hungary-last", venueId: "hungaroring", cornerLabel: "Last corner", x: 90.9, y: 90.7, type: "iconic", momentId: "hamilton-hungary-2020" },
 ];
 
 export const hungaroringMomentOverlays: MomentOverlay[] = [
@@ -2174,18 +2062,6 @@ export const hungaroringMomentOverlays: MomentOverlay[] = [
     // Source: Reddit / period race photo (Hungaroring podium after 2003 win)
     imageUrl: "/images/venues/hungary-alonso-2003-podium.jpg",
     imageNote: "Alonso on the 2003 Hungarian Grand Prix podium.",
-  },
-  {
-    // 2020 Hungarian GP: Hamilton won from pole on a wet-to-dry afternoon.
-    momentId: "hamilton-hungary-2020",
-    title: "Hamilton in the wet",
-    year: 2020,
-    driver1Id: "hamilton",
-    cornerLabel: "Last corner",
-    description: "WET TO DRY",
-    body: "The race started wet. Hamilton led from pole and was still ahead when the track dried. He took the flag.",
-    imageUrl: "/images/venues/hungary-hamilton-2020.jpg",
-    imageNote: "Hamilton celebrating the 2020 Hungarian Grand Prix.",
   },
 ];
 export const hungaroringIconicMoments: VenueIconicMoment[] = [
@@ -2268,8 +2144,6 @@ export const zandvoortDriverFit: DriverTrackFit[] = [
 
 export const zandvoortHotspots: Hotspot[] = [
   { id: "zandvoort-tarzan", venueId: "zandvoort", cornerLabel: "Tarzan", x: 39, y: 11.8, type: "iconic", momentId: "verstappen-zandvoort-2021" },
-  { id: "zandvoort-bank", venueId: "zandvoort", cornerLabel: "Banked last corner", x: 8.2, y: 85.3, type: "iconic", momentId: "verstappen-zandvoort-2022" },
-  { id: "zandvoort-t3", venueId: "zandvoort", cornerLabel: "Hugenholtz", x: 21.7, y: 45.7, type: "iconic", momentId: "verstappen-zandvoort-2023" },
 ];
 
 export const zandvoortMomentOverlays: MomentOverlay[] = [
@@ -2284,31 +2158,6 @@ export const zandvoortMomentOverlays: MomentOverlay[] = [
     body: "Verstappen started from pole and led into Tarzan. He won the first Dutch Grand Prix since 1985.",
     imageUrl: "/images/venues/zandvoort-verstappen-2021.jpg",
     imageNote: "Verstappen celebrating his win in the first Dutch Grand Prix since 1985.",
-  },
-  {
-    // 2022 Dutch GP: Verstappen led every lap. The lap ends through the banked final corner.
-    momentId: "verstappen-zandvoort-2022",
-    title: "Every lap from the front",
-    year: 2022,
-    driver1Id: "verstappen",
-    cornerLabel: "Banked last corner",
-    description: "LED EVERY LAP",
-    body: "Verstappen led every lap from pole. Each of them finished through the banked last corner, and he took the flag.",
-    // Source: Reddit i.redd.it/6o3ke3rczvl91.jpg — Red Bull celebrating the 2022 Dutch GP win
-    imageUrl: "/images/venues/zandvoort-verstappen-2022-win.jpg",
-    imageNote: "Verstappen and Red Bull celebrating the 2022 Dutch Grand Prix win.",
-  },
-  {
-    // 2023 Dutch GP: the race was wet. Verstappen won again from pole.
-    momentId: "verstappen-zandvoort-2023",
-    title: "Verstappen in the wet",
-    year: 2023,
-    driver1Id: "verstappen",
-    cornerLabel: "Hugenholtz",
-    description: "WET RACE",
-    body: "Rain made the banked Hugenholtz corner the committed one. Verstappen started from pole and won again.",
-    // Source: Reddit i.redd.it/thxh9d70lpkb1.jpg — "THE BIG 9" celebration after the 2023 Dutch GP
-    imageUrl: "/images/venues/zandvoort-verstappen-2023-win.jpg",
   },
 ];
 export const zandvoortIconicMoments: VenueIconicMoment[] = [
@@ -2391,7 +2240,6 @@ export const bakuDriverFit: DriverTrackFit[] = [
 export const bakuHotspots: Hotspot[] = [
   { id: "baku-straight", venueId: "baku", cornerLabel: "Main straight", x: 68.4, y: 64.1, type: "iconic", momentId: "verstappen-baku-2021" },
   { id: "baku-t1", venueId: "baku", cornerLabel: "Turn 1", x: 92.4, y: 75.9, type: "iconic", momentId: "hamilton-baku-2021" },
-  { id: "baku-castle", venueId: "baku", cornerLabel: "Castle", x: 32.1, y: 44.8, type: "iconic", momentId: "perez-baku-2021" },
 ];
 
 export const bakuMomentOverlays: MomentOverlay[] = [
@@ -2418,18 +2266,6 @@ export const bakuMomentOverlays: MomentOverlay[] = [
     body: "On the standing restart Hamilton pressed the wrong button on the wheel and ran straight on at Turn 1. He dropped to the back.",
     imageUrl: "/images/venues/baku-hamilton-2021.jpg",
     imageNote: "Hamilton runs straight on at Turn 1 while the field turns in.",
-  },
-  {
-    // 2021 Azerbaijan GP: Pérez won after the late stoppage.
-    momentId: "perez-baku-2021",
-    title: "Pérez wins",
-    year: 2021,
-    driver1Id: "perez",
-    cornerLabel: "Castle",
-    description: "MAIDEN WIN",
-    body: "With Verstappen out and Hamilton off at the restart, Pérez was in front through the castle section and took the flag for his first win.",
-    imageUrl: "/images/venues/baku-perez-2021.jpg",
-    imageNote: "Pérez takes the flag for his first win.",
   },
 ];
 export const bakuIconicMoments: VenueIconicMoment[] = [
@@ -2510,7 +2346,7 @@ export const singaporeDriverFit: DriverTrackFit[] = [
 export const singaporeHotspots: Hotspot[] = [
   { id: "singapore-t17", venueId: "singapore", cornerLabel: "Turn 17", x: 45.5, y: 57.2, type: "iconic", momentId: "piquet-singapore-2008" },
   { id: "singapore-line", venueId: "singapore", cornerLabel: "Start/finish", x: 96.5, y: 60.5, type: "iconic", momentId: "sainz-singapore-2023" },
-  { id: "singapore-t1", venueId: "singapore", cornerLabel: "Turn 1", x: 92, y: 23.5, type: "iconic", momentId: "vettel-singapore-2012" },
+  { id: "singapore-t1", venueId: "singapore", cornerLabel: "Turn 1", x: 92, y: 23.5, type: "iconic", momentId: "vettel-singapore-2017" },
 ];
 
 export const singaporeMomentOverlays: MomentOverlay[] = [
@@ -2540,18 +2376,18 @@ export const singaporeMomentOverlays: MomentOverlay[] = [
     imageNote: "Sainz celebrating the win on the car.",
   },
   {
-    // formula1.com, 23 Sep 2012: Hamilton led until a gearbox failure. Vettel won, Alonso was second.
-    // Photo: Flickr, CC BY-NC-SA. Parc fermé, not Turn 1.
-    momentId: "vettel-singapore-2012",
-    title: "Hamilton's gearbox, Vettel wins",
-    year: 2012,
+    // formula1.com, 17 Sep 2017: in the wet, Vettel moved left off pole and Verstappen was squeezed between him and Räikkönen on the run to Turn 1. Räikkönen and Verstappen slid off at Turn 1 and collected Alonso; Vettel spun out before the end of the lap. Stewards called it a racing incident. Hamilton won from fifth on the grid.
+    // Photo: formula1.com CDN / Sutton — Räikkönen's Ferrari lifted away after the start, Verstappen's Red Bull behind.
+    momentId: "vettel-singapore-2017",
+    title: "Three-car crash into Turn 1",
+    year: 2017,
     driver1Id: "vettel",
-    driver2Id: "hamilton",
+    driver2Id: "verstappen",
     cornerLabel: "Turn 1",
-    description: "GEARBOX",
-    body: "Hamilton led from the start, through Turn 1 and the rest of the lap, until the gearbox failed. Vettel won.",
-    imageUrl: "/images/venues/singapore-alonso-vettel-2012.jpg",
-    imageNote: "Vettel and Alonso after the race. Hamilton's McLaren, stopped by the gearbox, is behind them.",
+    description: "WET START",
+    body: "In the wet, Vettel moved left off pole and Verstappen was squeezed between him and Räikkönen. All three touched. Räikkönen and Verstappen slid off at Turn 1 and took Alonso with them, and Vettel spun out before the lap was over. Hamilton won from fifth.",
+    imageUrl: "/images/venues/singapore-start-crash-2017.jpg",
+    imageNote: "Räikkönen's Ferrari being lifted away after the start, with Verstappen's Red Bull behind. Not the moment of contact.",
   },
 ];
 export const singaporeIconicMoments: VenueIconicMoment[] = [
@@ -2631,38 +2467,24 @@ export const cotaDriverFit: DriverTrackFit[] = [
 ];
 
 export const cotaHotspots: Hotspot[] = [
-  { id: "cota-t1", venueId: "cota", cornerLabel: "Turn 1", x: 36.9, y: 75.1, type: "iconic", momentId: "hamilton-cota-2012" },
-  { id: "cota-esses", venueId: "cota", cornerLabel: "Esses", x: 46.8, y: 52.8, type: "iconic", momentId: "verstappen-cota-2021" },
+  { id: "cota-t1", venueId: "cota", cornerLabel: "Turn 1", x: 36.9, y: 75.1, type: "iconic", momentId: "verstappen-cota-2021" },
   { id: "cota-line", venueId: "cota", cornerLabel: "Start/finish", x: 13.1, y: 57, type: "iconic", momentId: "raikkonen-cota-2018" },
 ];
 
 export const cotaMomentOverlays: MomentOverlay[] = [
   {
-    // formula1.com, 18 Nov 2012: Hamilton won the first United States Grand Prix at the Circuit of the Americas.
-    // Photo: Flickr, CC BY. Hamilton's McLaren, number 4, not Turn 1.
-    momentId: "hamilton-cota-2012",
-    title: "Hamilton wins the first COTA race",
-    year: 2012,
-    driver1Id: "hamilton",
-    cornerLabel: "Turn 1",
-    description: "INAUGURAL RACE",
-    body: "The lap opens with the climb to Turn 1. Hamilton led away and won the first United States Grand Prix at this circuit.",
-    imageUrl: "/images/venues/cota-hamilton-2012.jpg",
-    imageNote: "Hamilton leading the first United States Grand Prix at this circuit.",
-  },
-  {
-    // 2021 United States GP: Verstappen held off Hamilton to win.
+    // 2021 United States GP (Autocourse 2021-22; formula1.com race result): Hamilton passed pole-sitter Verstappen at the first corner. Red Bull undercut Mercedes at the stops and Verstappen won by 1.333s.
     // Photo: Dave Wilson Photography — Verstappen and Hamilton on the COTA podium after the 2021 race.
     momentId: "verstappen-cota-2021",
-    title: "Verstappen holds off Hamilton",
+    title: "Hamilton takes the lead at Turn 1",
     year: 2021,
     driver1Id: "verstappen",
     driver2Id: "hamilton",
-    cornerLabel: "Esses",
-    description: "RED BULL over MERCEDES",
-    body: "Hamilton attacked through the esses and never got ahead. Verstappen took the flag and kept the championship lead.",
+    cornerLabel: "Turn 1",
+    description: "MERCEDES over RED BULL",
+    body: "Verstappen started from pole. Hamilton got the better start and took the lead into Turn 1. Red Bull undercut him at the stops, and Verstappen held on to win by 1.3 seconds.",
     imageUrl: "/images/venues/cota-verstappen-podium-2021.jpg",
-    imageNote: "Verstappen and Hamilton on the podium after the 2021 United States Grand Prix.",
+    imageNote: "Hamilton and Verstappen on the podium after the race. Not the Turn 1 move.",
   },
   {
     // 2018 United States GP: Räikkönen won, his last grand prix victory.
@@ -2754,47 +2576,47 @@ export const mexicoDriverFit: DriverTrackFit[] = [
 ];
 
 export const mexicoHotspots: Hotspot[] = [
-  { id: "mexico-stadium", venueId: "mexico", cornerLabel: "Stadium", x: 3.1, y: 23.6, type: "iconic", momentId: "verstappen-mexico-2017" },
+  { id: "mexico-stadium", venueId: "mexico", cornerLabel: "Stadium", x: 10.5, y: 25.4, type: "iconic", momentId: "hamilton-mexico-2017" },
   { id: "mexico-t1", venueId: "mexico", cornerLabel: "Turn 1", x: 94.4, y: 28.2, type: "iconic", momentId: "hamilton-mexico-2016" },
   { id: "mexico-line", venueId: "mexico", cornerLabel: "Start/finish", x: 25.4, y: 16.6, type: "iconic", momentId: "verstappen-mexico-2022" },
 ];
 
 export const mexicoMomentOverlays: MomentOverlay[] = [
   {
-    // 2017 Mexican GP: Verstappen won the race. Hamilton's finish was enough for him to win the championship.
-    momentId: "verstappen-mexico-2017",
-    title: "Verstappen wins, Hamilton is champion",
+    // 2017 Mexican GP: Hamilton finished ninth and clinched his fourth title; Verstappen won (FIA post-race press conference, formula1.com). Hamilton did doughnuts in the Foro Sol stadium, then walked around it with a Union Jack (El Buen Tono, 30 Oct 2017; GPToday, 7 Nov 2017; The Guardian live blog, 29 Oct 2017).
+    momentId: "hamilton-mexico-2017",
+    title: "Title doughnuts in the stadium",
     year: 2017,
-    driver1Id: "verstappen",
-    driver2Id: "hamilton",
+    driver1Id: "hamilton",
     cornerLabel: "Stadium",
-    description: "TITLE FOR HAMILTON",
-    body: "The lap drops into the stadium section. Verstappen won the race. Hamilton's finish was enough for him to be world champion.",
+    description: "FOURTH TITLE",
+    body: "Hamilton finished ninth, which was enough for his fourth world title. After the flag he did doughnuts in the Foro Sol stadium, then walked around it waving a Union Jack. Verstappen won the race.",
     imageUrl: "/images/venues/mexico-verstappen-2017.jpg",
-    imageNote: "Hamilton celebrating the 2017 title after the race. Verstappen won it.",
+    imageNote: "Hamilton's title doughnuts after the race.",
   },
   {
-    // 2016 Mexican GP: Hamilton won a rough race and closed on Rosberg in the championship.
+    // 2016 Mexican GP (BBC Sport, 30 Oct 2016): from pole Hamilton ran wide at the first corner at the start but kept the lead; Wehrlein was punted off at the same corner and the safety car came out. Hamilton won, Rosberg second.
     momentId: "hamilton-mexico-2016",
-    title: "Hamilton wins a rough race",
+    title: "Hamilton runs wide at Turn 1",
     year: 2016,
     driver1Id: "hamilton",
     driver2Id: "rosberg",
     cornerLabel: "Turn 1",
-    description: "TITLE RACE",
-    body: "Turn 1 was messy off the line. Hamilton came through to win and arrived at the last two races still in the title fight.",
+    description: "LAP 1",
+    body: "From pole Hamilton ran wide at Turn 1 at the start but kept the lead. Wehrlein was knocked off at the same corner and the safety car came out. Hamilton won, with Rosberg second.",
     // Source: Getty / Motorsport Images via Reddit i.redd.it (victory leap after 2016 Mexican GP win)
     imageUrl: "/images/venues/mexico-hamilton-2016-win.jpg",
+    imageNote: "Hamilton's victory leap after the race. Not the Turn 1 moment.",
   },
   {
-    // 2022 Mexican GP: Verstappen won and extended a record points season.
+    // 2022 Mexico City GP: Verstappen won from pole for his 14th win of 2022, a new record for wins in a season (SFGate / AP, 30 Oct 2022; formula1.com race result).
     momentId: "verstappen-mexico-2022",
-    title: "Verstappen wins again",
+    title: "A record 14th win",
     year: 2022,
     driver1Id: "verstappen",
     cornerLabel: "Start/finish",
-    description: "RED BULL",
-    body: "Verstappen took the flag, another win in the season he set the points record.",
+    description: "RECORD SEASON",
+    body: "Verstappen won from pole. It was his 14th win of 2022, a new record for wins in a season.",
     imageUrl: "/images/venues/mexico-verstappen-2022.jpg",
     imageNote: "Verstappen celebrating the 2022 Mexico City Grand Prix.",
   },
@@ -2893,16 +2715,17 @@ export const lasVegasMomentOverlays: MomentOverlay[] = [
     imageNote: "The damaged Ferrari in first practice.",
   },
   {
-    // 2023 Las Vegas GP: Verstappen won the inaugural race.
+    // 2023 Las Vegas GP: Leclerc started from pole. At the first corner Verstappen forced him off the track and was given a five-second penalty. Verstappen won the inaugural race.
     momentId: "verstappen-vegas-2023",
-    title: "Verstappen wins the first Las Vegas GP",
+    title: "Verstappen forces Leclerc off at Turn 1",
     year: 2023,
     driver1Id: "verstappen",
+    driver2Id: "leclerc",
     cornerLabel: "Turn 1",
-    description: "INAUGURAL RACE",
-    body: "After the practice stoppage, Verstappen won the first Las Vegas Grand Prix.",
+    description: "5s PENALTY",
+    body: "Leclerc started from pole. Verstappen forced him off the track at Turn 1 to take the lead and was given a five-second penalty. He still won the first Las Vegas Grand Prix.",
     imageUrl: "/images/venues/las-vegas-verstappen-2023.jpg",
-    imageNote: "Verstappen celebrating the first Las Vegas Grand Prix on the car.",
+    imageNote: "Verstappen celebrating on the car after the race. Not the Turn 1 move.",
   },
   {
     // 2024 Las Vegas GP: Verstappen's result clinched a fourth straight title.
@@ -2993,23 +2816,24 @@ export const qatarDriverFit: DriverTrackFit[] = [
 ];
 
 export const qatarHotspots: Hotspot[] = [
-  { id: "qatar-t1", venueId: "qatar", cornerLabel: "Turn 1", x: 14.1, y: 73.9, type: "iconic", momentId: "hamilton-qatar-2021" },
+  { id: "qatar-t1", venueId: "qatar", cornerLabel: "Turn 1", x: 14.1, y: 73.9, type: "iconic", momentId: "hamilton-russell-qatar-2023" },
   { id: "qatar-line", venueId: "qatar", cornerLabel: "Start/finish", x: 32.6, y: 80.6, type: "iconic", momentId: "verstappen-qatar-2023" },
-  { id: "qatar-t6", venueId: "qatar", cornerLabel: "Turn 6", x: 27.8, y: 42.4, type: "iconic", momentId: "alonso-qatar-2023" },
 ];
 
 export const qatarMomentOverlays: MomentOverlay[] = [
   {
-    // 2021 Qatar GP: Hamilton won from pole.
-    // Photo: formula1.com CDN / Sutton — Hamilton celebrating after the 2021 Qatar win (Pride helmet).
-    momentId: "hamilton-qatar-2021",
-    title: "Hamilton from pole",
-    year: 2021,
+    // formula1.com, 8 Oct 2023: on lap 1 Hamilton tried to go around the outside into Turn 1 and hit Russell, who was squeezed between him and Verstappen. Hamilton's right-rear tyre was destroyed and he retired in the gravel; he took full responsibility. Russell pitted and finished fourth (formula1.com race result).
+    // Photo: formula1.com CDN — Hamilton walking away from his car in the Turn 1 gravel.
+    momentId: "hamilton-russell-qatar-2023",
+    title: "Mercedes team mates collide at Turn 1",
+    year: 2023,
     driver1Id: "hamilton",
+    driver2Id: "russell",
     cornerLabel: "Turn 1",
-    description: "FROM POLE",
-    body: "Hamilton led from pole into Turn 1 and won the race.",
-    imageUrl: "/images/venues/qatar-hamilton-2021-win.jpg",
+    description: "LAP 1 CLASH",
+    body: "Hamilton went around the outside into Turn 1 and hit Russell, who was squeezed against Verstappen. Hamilton spun into the gravel and was out. Russell pitted and recovered to fourth. Hamilton took the blame.",
+    imageUrl: "/images/venues/qatar-hamilton-russell-2023.jpg",
+    imageNote: "Hamilton walking away from his car in the Turn 1 gravel. Not the moment of contact.",
   },
   {
     // 2023 Qatar GP: Verstappen clinched the title in the sprint, the first Saturday title since 1983, and won the grand prix the next day.
@@ -3023,20 +2847,6 @@ export const qatarMomentOverlays: MomentOverlay[] = [
     body: "Verstappen sealed the championship in the sprint on Saturday, the first title decided on a Saturday since 1983. He won the grand prix on Sunday.",
     imageUrl: "/images/venues/qatar-verstappen-2023-title.jpg",
     imageNote: "Verstappen after the Sprint that sealed the 2023 title, with Sprint winner Piastri.",
-  },
-  {
-    // 2023 Qatar GP: Alonso finished sixth. formula1.com race result. Stewards also looked at a rejoining incident.
-    // Photo: RaceFans / XPB — Alonso's Aston Martin AMR23 at Lusail during the race.
-    momentId: "alonso-qatar-2023",
-    title: "Alonso finishes sixth",
-    year: 2023,
-    driver1Id: "alonso",
-    driver2Id: "verstappen",
-    cornerLabel: "Turn 6",
-    description: "P6",
-    body: "Alonso raced through the first sector, including the Turn 6 kink, and finished sixth behind Verstappen and the two McLarens.",
-    imageUrl: "/images/venues/qatar-alonso-2023-race.jpg",
-    imageNote: "Alonso's Aston Martin at Lusail during the race. Not a specific Turn 6 frame.",
   },
 ];
 export const qatarIconicMoments: VenueIconicMoment[] = [

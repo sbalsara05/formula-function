@@ -1,4 +1,5 @@
 import type { CSSProperties } from 'react'
+import Link from 'next/link'
 import FallbackImg from '@/components/ui/FallbackImg'
 import type { F1NewsItem } from '@/lib/f1-news'
 
@@ -185,10 +186,12 @@ export function F1NewsSection({
   items,
   fetchedAt,
   accentColor,
+  viewAllHref,
 }: {
   items: F1NewsItem[]
   fetchedAt: string
   accentColor: string
+  viewAllHref?: string
 }) {
   const [featured, ...rest] = items
   const sideStories = rest.slice(0, 2)
@@ -196,11 +199,9 @@ export function F1NewsSection({
 
   return (
     <section
-      id="news"
       style={{
         padding: '2.5rem 1.75rem 3rem',
         borderTop: '0.5px solid #1a1a1a',
-        scrollMarginTop: 64,
         background: '#000',
         isolation: 'isolate',
         overflow: 'hidden',
@@ -212,9 +213,19 @@ export function F1NewsSection({
         <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: 2, color: accentColor, margin: 0 }}>
           LATEST NEWS
         </p>
-        <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, color: '#333', margin: 0 }}>
-          UPDATED · {formatRelativeTime(fetchedAt)} · SOURCE · FORMULA1.COM
-        </p>
+        <div style={{ display: 'flex', alignItems: 'baseline', gap: 18 }}>
+          <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, color: '#333', margin: 0 }}>
+            UPDATED · {formatRelativeTime(fetchedAt)} · SOURCE · FORMULA1.COM
+          </p>
+          {viewAllHref && (
+            <Link href={viewAllHref} style={{
+              fontFamily: 'var(--font-mono)', fontSize: 9, letterSpacing: 1.5, color: accentColor,
+              textDecoration: 'none', whiteSpace: 'nowrap',
+            }}>
+              VIEW ALL →
+            </Link>
+          )}
+        </div>
       </div>
 
       {items.length === 0 ? (

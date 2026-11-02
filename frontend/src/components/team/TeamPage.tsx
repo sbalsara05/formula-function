@@ -84,7 +84,7 @@ function TeamHeader({ team, series }: { team: Team; series: Series }) {
         <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: 1.5, color: '#666' }}>
           <Link href={`/f/${seriesNum}`} style={{ textDecoration: 'none', color: 'inherit' }}>f({seriesNum})</Link>
           <span style={{ color: '#333' }}>/</span>
-          <span>TEAMS</span>
+          <Link href={`/f/${seriesNum}/teams`} style={{ textDecoration: 'none', color: 'inherit' }}>TEAMS</Link>
           <span style={{ color: '#333' }}>/</span>
           <span style={{ color: '#aaa' }}>{team.shortName.toUpperCase()}</span>
         </div>
