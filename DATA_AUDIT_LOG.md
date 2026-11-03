@@ -766,6 +766,17 @@ The driver page has a "How is this calculated?" panel (the era, why eras, the fi
 
 Every threshold quoted in the page's methodology section is exported from the pipeline constants, not typed by hand.
 
+### 2018–2022 added (no F1 TV account)
+
+Seasons 2018–2022 now come from TracingInsights' public extraction of the official live-timing feed (`github.com/TracingInsights/<season>`, made with FastF1), read by `tracinginsights_source.py`. Only the files the pipeline uses are downloaded (9,664 requests for 103 weekends).
+
+- **Validation before use:** four 2023 weekends (Bahrain, Miami, Singapore, Japan) ingested from both TracingInsights and OpenF1 selected identical qualifying laps with identical lap times and the same corners. Per-driver session scores correlated at 0.992–1.000 for Braking, Entry Aggression and Throttle Application, and 0.976–1.000 for Consistency and Tyre Management.
+- **Cross-check against the official archive (F1 TV sign-in, FastF1):** 2019 Bahrain matched TracingInsights on every axis (0.997–1.000; race stints identical) and 2018 Bahrain qualifying matched (0.997–1.000). The archive itself has no lap start dates for the 2018 Bahrain race, so the TracingInsights version with dates rebuilt from the chequered flag (56 VSC laps excluded) is the one used.
+- **Method change found by the validation:** the traffic filter (1.5 s to the car ahead) now uses line-crossing times for every season instead of OpenF1's interval feed, which was missing on 20–40 laps per race. 2023–2026 race axes were recomputed with it.
+- **Source fixes:** their telemetry interleaves interpolated position samples, so only genuine car-data samples are kept; driver numbers and names missing from some driver lists come from the lap tables and Jolpica; 2018 Bahrain's race has no lap dates, so they are rebuilt from the chequered flag.
+- **Not scored:** 2018 Australia (no race-control messages in the source, so flags cannot be applied), and wet or mixed qualifying at Styria and Turkey 2020, Belgium and Russia 2021, Canada and Britain 2022.
+- **Result:** 180 qualifying sessions and 186 races across 2018–2026; 42 drivers have signatures. Hamilton gains a Late Hybrid (2018–2021) era, and Vettel and Räikkönen no longer show "signature pending". The 2018–2021 teammate check agrees with the qualifying head-to-head in 86 of 116 cases.
+
 ---
 
 ## TECHNICAL NOTES

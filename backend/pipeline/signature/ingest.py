@@ -34,6 +34,9 @@ from openf1 import OpenF1Client
 PIPELINE_VERSION = "timing-0.1.0"
 COVERAGE_PATH = DATA_DIR / "coverage.json"
 LOCK_PATH = DATA_DIR / ".ingest.lock"
+FASTF1_CACHE_DIR = DATA_DIR / "fastf1_cache"
+OPENF1_FIRST_SEASON = 2023  # earlier seasons: TracingInsights' public copy of the same feed (or FastF1 with F1 TV)
+SOURCES = ("auto", "openf1", "tracinginsights", "fastf1")
 
 QUALI_LAPS_PER_DRIVER = 3
 QUALI_PERSONAL_CUTOFF = 1.01
@@ -333,7 +336,7 @@ def process_quali(client: OpenF1Client, session: dict, raw: Path, rnd: int) -> d
     rc = client.get("race_control", f"session_key={sk}")
     stints = pd.DataFrame(client.get("stints", f"session_key={sk}"))
     if laps.empty:
-        return {"status": "skipped", "reason": "no laps", "drivers": drivers}
+        return {"status": "skipped", "reason": getattr(client, "skip_reason", None) or "no laps", "drivers": drivers}
 
     (raw / f"{rnd:02d}_Q_race_control.json").write_text(json.dumps(rc))
     laps["date_start"] = to_utc(laps.date_start)
@@ -354,7 +357,10 @@ def process_quali(client: OpenF1Client, session: dict, raw: Path, rnd: int) -> d
     if info["drivers_selected"] < 10:
         return {**info, "status": "skipped", "reason": f"only {info['drivers_selected']} drivers with dry push laps"}
 
-    tel, tel_info = fetch_lap_telemetry(client, sk, sel)
+    if hasattr(client, "lap_telemetry"):
+        tel, tel_info = client.lap_telemetry(sel, CAR_DATA_HZ * MIN_SAMPLE_COVERAGE)
+    else:
+        tel, tel_info = fetch_lap_telemetry(client, sk, sel)
     kept = tel[["driver_number", "lap_number"]].drop_duplicates() if len(tel) else pd.DataFrame(columns=["driver_number", "lap_number"])
     sel = sel.merge(kept, on=["driver_number", "lap_number"])
     sel["team"] = sel.driver_number.astype(str).map(lambda n: drivers.get(n, {}).get("team"))
@@ -393,7 +399,7 @@ def process_race(client: OpenF1Client, session: dict, raw: Path, rnd: int) -> di
     stints = pd.DataFrame(client.get("stints", f"session_key={sk}"))
     intervals = pd.DataFrame(client.get("intervals", f"session_key={sk}"))
     if laps.empty:
-        return {"status": "skipped", "reason": "no laps", "drivers": drivers}
+        return {"status": "skipped", "reason": getattr(client, "skip_reason", None) or "no laps", "drivers": drivers}
 
     (raw / f"{rnd:02d}_R_race_control.json").write_text(json.dumps(rc))
     laps = laps.sort_values(["driver_number", "lap_number"]).reset_index(drop=True)
@@ -486,6 +492,7 @@ def process_weekend(client: OpenF1Client, wk: dict, force: bool) -> dict:
     meta.update({k: wk[k] for k in ("season", "round", "meeting_key", "meeting_name",
                                     "circuit_key", "circuit_short_name", "country_name")})
     meta["pipeline_version"] = PIPELINE_VERSION
+    meta["source"] = getattr(client, "name", "openf1")
     if "corner_labels" not in meta:
         meta["corner_labels"] = fetch_corner_labels(wk["circuit_key"], wk["season"])
 
@@ -521,6 +528,8 @@ def process_weekend(client: OpenF1Client, wk: dict, force: bool) -> dict:
             meta["metrics"] = {"error": f"{exc.__class__.__name__}: {exc}", "trace": traceback.format_exc(limit=4)}
         log(f"  metrics {meta['metrics']}")
     meta_path.write_text(json.dumps(meta, indent=1, default=str))
+    if hasattr(client, "release"):
+        client.release()
     return meta
 
 
@@ -570,12 +579,31 @@ def main() -> None:
     parser.add_argument("--seasons", nargs="+", required=True, help="e.g. 2024 or 2023-2026")
     parser.add_argument("--rounds", type=int, nargs="*", help="only these round numbers")
     parser.add_argument("--force", action="store_true", help="re-download weekends that are already complete")
+    parser.add_argument("--source", choices=SOURCES, default="auto",
+                        help="auto = OpenF1 from 2023, TracingInsights before; forcing tracinginsights on 2023+ "
+                             "is how that source is validated (use SIGNATURE_DATA_DIR to keep it separate)")
     args = parser.parse_args()
 
     ensure_single_instance()
-    client = OpenF1Client()
+    clients: dict[str, object] = {}
+
+    def client_for(season: int):
+        name = args.source if args.source != "auto" else (
+            "openf1" if season >= OPENF1_FIRST_SEASON else "tracinginsights")
+        if name not in clients:
+            if name == "openf1":
+                clients[name] = OpenF1Client()
+            elif name == "tracinginsights":
+                from tracinginsights_source import TracingInsightsClient
+                clients[name] = TracingInsightsClient()
+            else:
+                from fastf1_source import FastF1Client
+                clients[name] = FastF1Client(FASTF1_CACHE_DIR)
+        return clients[name]
+
     try:
         for season in parse_seasons(args.seasons):
+            client = client_for(season)
             weekends = season_weekends(client, season)
             if args.rounds:
                 weekends = [w for w in weekends if w["round"] in args.rounds]
@@ -589,7 +617,7 @@ def main() -> None:
                 f"quali_ok={cov.get('quali_ok')} "
                 f"race_ok={cov.get('race_ok')} quali laps {cov.get('quali_laps_with_telemetry')}/{cov.get('quali_laps_total')} "
                 f"race clean laps {cov.get('race_clean_laps')}/{cov.get('race_laps_total')} problems={len(cov.get('problems', []))}")
-        log(f"Done. OpenF1 requests this run: {client.calls}")
+        log("Done. Requests this run: " + ", ".join(f"{name} {c.calls}" for name, c in clients.items()))
     finally:
         LOCK_PATH.unlink(missing_ok=True)
 

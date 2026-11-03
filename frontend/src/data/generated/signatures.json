@@ -1,8 +1,13 @@
 {
- "generatedAt": "2026-11-02T21:38:12.596143+00:00",
+ "generatedAt": "2026-11-02T23:18:13.741698+00:00",
  "pipelineVersion": "timing-0.1.0",
- "source": "OpenF1 historical API (official F1 live-timing feed)",
+ "source": "Official F1 live-timing feed, read through TracingInsights' public FastF1 extraction (2018–2022) and the OpenF1 historical API (2023–2026)",
  "seasons": [
+  2018,
+  2019,
+  2020,
+  2021,
+  2022,
   2023,
   2024,
   2025,
@@ -18,10 +23,16 @@
  ],
  "eras": [
   {
+   "id": "2018-2021",
+   "label": "Late hybrid",
+   "span": "2018–2021",
+   "seasons": "2018–2021"
+  },
+  {
    "id": "2022-2025",
    "label": "Ground effect",
    "span": "2022–2025",
-   "seasons": "2023–2025"
+   "seasons": "2022–2025"
   },
   {
    "id": "2026-",
@@ -35,7 +46,7 @@
    "name": "Alexander Albon",
    "defaultEra": "2026-",
    "signatures": {
-    "2022-2025": {
+    "2018-2021": {
      "driverId": "albon",
      "series": "f1",
      "axes": [
@@ -45,41 +56,41 @@
       },
       {
        "label": "Entry Aggression",
-       "value": 28
+       "value": 77
       },
       {
        "label": "Tyre Management",
-       "value": 85
+       "value": 63
       },
       {
        "label": "Throttle Application",
-       "value": 1
+       "value": 39
       },
       {
        "label": "Braking",
-       "value": 30
+       "value": 38
       },
       {
        "label": "Consistency",
-       "value": 45
+       "value": 40
       }
      ],
      "cohortAverage": [
       null,
-      48.7,
-      47.4,
-      50.0,
-      51.1,
-      48.1
+      46.5,
+      52.6,
+      49.7,
+      49.2,
+      48.9
      ],
      "cohorts": {
       "era": [
        null,
-       48.7,
-       47.4,
-       50.0,
-       51.1,
-       48.1
+       46.5,
+       52.6,
+       49.7,
+       49.2,
+       48.9
       ],
       "allTime": [
        null,
@@ -91,35 +102,126 @@
       ],
       "champions": [
        null,
-       87.5,
-       60.0,
-       77.0,
-       69.0,
-       86.0
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
       ],
       "teammates": [
        null,
-       30.5,
-       33.6,
-       21.2,
-       24.3,
-       40.1
+       76.2,
+       37.3,
+       95.0,
+       75.3,
+       85.0
       ]
      },
      "uncertaintyEnvelope": [
       null,
-      31,
-      94,
-      2,
-      40,
-      80
+      83,
+      88,
+      48,
+      44,
+      76
      ],
-     "confidenceScore": 0.75,
-     "sampleSize": 1818,
+     "confidenceScore": 0.67,
+     "sampleSize": 1132,
+     "era": {
+      "id": "2018-2021",
+      "label": "Late hybrid",
+      "seasons": "2019–2020",
+      "span": "2018–2021",
+      "rules": "1.6-litre V6 turbo hybrid power units, used since 2014, in the wider, higher-downforce cars on wider tyres introduced in 2017.",
+      "caveat": "The era starts in 2018, the first season of the official timing archive, although its car rules date from 2017."
+     },
+     "source": "timing"
+    },
+    "2022-2025": {
+     "driverId": "albon",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": 29
+      },
+      {
+       "label": "Tyre Management",
+       "value": 65
+      },
+      {
+       "label": "Throttle Application",
+       "value": 3
+      },
+      {
+       "label": "Braking",
+       "value": 22
+      },
+      {
+       "label": "Consistency",
+       "value": 62
+      }
+     ],
+     "cohortAverage": [
+      null,
+      51.0,
+      46.5,
+      49.2,
+      50.7,
+      48.8
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       51.0,
+       46.5,
+       49.2,
+       50.7,
+       48.8
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
+      ],
+      "teammates": [
+       null,
+       27.6,
+       23.1,
+       20.3,
+       23.6,
+       36.4
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      33,
+      87,
+      5,
+      33,
+      77
+     ],
+     "confidenceScore": 0.74,
+     "sampleSize": 2372,
      "era": {
       "id": "2022-2025",
       "label": "Ground effect",
-      "seasons": "2023–2025",
+      "seasons": "2022–2025",
       "span": "2022–2025",
       "rules": "Most downforce comes from two Venturi tunnels under the floor, with simplified wings and 18-inch low-profile tyres, so that cars can follow each other more closely."
      },
@@ -135,19 +237,19 @@
       },
       {
        "label": "Entry Aggression",
-       "value": 5
+       "value": 9
       },
       {
        "label": "Tyre Management",
-       "value": 32
+       "value": 35
       },
       {
        "label": "Throttle Application",
-       "value": 3
+       "value": 7
       },
       {
        "label": "Braking",
-       "value": 1
+       "value": 4
       },
       {
        "label": "Consistency",
@@ -156,20 +258,20 @@
      ],
      "cohortAverage": [
       null,
+      53.5,
+      51.2,
       51.5,
-      53.2,
-      50.0,
-      48.7,
-      52.4
+      50.3,
+      53.2
      ],
      "cohorts": {
       "era": [
        null,
+       53.5,
+       51.2,
        51.5,
-       53.2,
-       50.0,
-       48.7,
-       52.4
+       50.3,
+       53.2
       ],
       "allTime": [
        null,
@@ -181,31 +283,31 @@
       ],
       "champions": [
        null,
-       87.5,
-       60.0,
-       77.0,
-       69.0,
-       86.0
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
       ],
       "teammates": [
        null,
-       14.0,
-       64.0,
-       28.0,
-       3.0,
-       29.0
+       18.0,
+       53.0,
+       29.0,
+       6.0,
+       27.0
       ]
      },
      "uncertaintyEnvelope": [
       null,
+      11,
+      87,
       10,
-      88,
-      6,
-      19,
-      40
+      20,
+      46
      ],
-     "confidenceScore": 0.69,
-     "sampleSize": 584,
+     "confidenceScore": 0.7,
+     "sampleSize": 572,
      "era": {
       "id": "2026-",
       "label": "Active aero",
@@ -222,7 +324,7 @@
    "name": "Fernando Alonso",
    "defaultEra": "2026-",
    "signatures": {
-    "2022-2025": {
+    "2018-2021": {
      "driverId": "alonso",
      "series": "f1",
      "axes": [
@@ -232,41 +334,41 @@
       },
       {
        "label": "Entry Aggression",
-       "value": 34
+       "value": 40
       },
       {
        "label": "Tyre Management",
-       "value": 95
+       "value": 93
       },
       {
        "label": "Throttle Application",
-       "value": 61
+       "value": 76
       },
       {
        "label": "Braking",
-       "value": 80
+       "value": 60
       },
       {
        "label": "Consistency",
-       "value": 39
+       "value": 45
       }
      ],
      "cohortAverage": [
       null,
-      48.7,
-      47.4,
-      50.0,
-      51.1,
-      48.1
+      46.5,
+      52.6,
+      49.7,
+      49.2,
+      48.9
      ],
      "cohorts": {
       "era": [
        null,
-       48.7,
-       47.4,
-       50.0,
-       51.1,
-       48.1
+       46.5,
+       52.6,
+       49.7,
+       49.2,
+       48.9
       ],
       "allTime": [
        null,
@@ -278,35 +380,126 @@
       ],
       "champions": [
        null,
-       87.5,
-       60.0,
-       77.0,
-       69.0,
-       86.0
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
       ],
       "teammates": [
        null,
-       18.0,
-       23.0,
-       84.0,
-       78.0,
-       67.0
+       32.4,
+       88.4,
+       38.7,
+       44.4,
+       82.6
       ]
      },
      "uncertaintyEnvelope": [
       null,
-      42,
-      98,
-      69,
-      88,
-      68
+      46,
+      99,
+      86,
+      77,
+      77
      ],
-     "confidenceScore": 0.79,
-     "sampleSize": 2283,
+     "confidenceScore": 0.73,
+     "sampleSize": 1278,
+     "era": {
+      "id": "2018-2021",
+      "label": "Late hybrid",
+      "seasons": "2018–2021",
+      "span": "2018–2021",
+      "rules": "1.6-litre V6 turbo hybrid power units, used since 2014, in the wider, higher-downforce cars on wider tyres introduced in 2017.",
+      "caveat": "The era starts in 2018, the first season of the official timing archive, although its car rules date from 2017."
+     },
+     "source": "timing"
+    },
+    "2022-2025": {
+     "driverId": "alonso",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": 41
+      },
+      {
+       "label": "Tyre Management",
+       "value": 96
+      },
+      {
+       "label": "Throttle Application",
+       "value": 72
+      },
+      {
+       "label": "Braking",
+       "value": 76
+      },
+      {
+       "label": "Consistency",
+       "value": 38
+      }
+     ],
+     "cohortAverage": [
+      null,
+      51.0,
+      46.5,
+      49.2,
+      50.7,
+      48.8
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       51.0,
+       46.5,
+       49.2,
+       50.7,
+       48.8
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
+      ],
+      "teammates": [
+       null,
+       22.4,
+       38.1,
+       70.1,
+       54.9,
+       71.4
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      44,
+      99,
+      75,
+      83,
+      65
+     ],
+     "confidenceScore": 0.81,
+     "sampleSize": 2826,
      "era": {
       "id": "2022-2025",
       "label": "Ground effect",
-      "seasons": "2023–2025",
+      "seasons": "2022–2025",
       "span": "2022–2025",
       "rules": "Most downforce comes from two Venturi tunnels under the floor, with simplified wings and 18-inch low-profile tyres, so that cars can follow each other more closely."
      },
@@ -322,41 +515,41 @@
       },
       {
        "label": "Entry Aggression",
-       "value": 11
+       "value": 14
       },
       {
        "label": "Tyre Management",
-       "value": 50
+       "value": 52
       },
       {
        "label": "Throttle Application",
-       "value": 86
+       "value": 88
       },
       {
        "label": "Braking",
-       "value": 86
+       "value": 85
       },
       {
        "label": "Consistency",
-       "value": 7
+       "value": 10
       }
      ],
      "cohortAverage": [
       null,
+      53.5,
+      51.2,
       51.5,
-      53.2,
-      50.0,
-      48.7,
-      52.4
+      50.3,
+      53.2
      ],
      "cohorts": {
       "era": [
        null,
+       53.5,
+       51.2,
        51.5,
-       53.2,
-       50.0,
-       48.7,
-       52.4
+       50.3,
+       53.2
       ],
       "allTime": [
        null,
@@ -368,31 +561,31 @@
       ],
       "champions": [
        null,
-       87.5,
-       60.0,
-       77.0,
-       69.0,
-       86.0
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
       ],
       "teammates": [
        null,
-       3.0,
-       38.0,
-       95.0,
-       76.0,
-       13.0
+       8.0,
+       24.0,
+       96.0,
+       81.0,
+       15.0
       ]
      },
      "uncertaintyEnvelope": [
       null,
-      21,
-      94,
-      98,
+      22,
       96,
-      28
+      95,
+      94,
+      25
      ],
-     "confidenceScore": 0.62,
-     "sampleSize": 491,
+     "confidenceScore": 0.66,
+     "sampleSize": 482,
      "era": {
       "id": "2026-",
       "label": "Active aero",
@@ -419,19 +612,19 @@
       },
       {
        "label": "Entry Aggression",
-       "value": 74
+       "value": 78
       },
       {
        "label": "Tyre Management",
-       "value": 91
+       "value": 85
       },
       {
        "label": "Throttle Application",
-       "value": 59
+       "value": 65
       },
       {
        "label": "Braking",
-       "value": 61
+       "value": 62
       },
       {
        "label": "Consistency",
@@ -440,20 +633,20 @@
      ],
      "cohortAverage": [
       null,
-      48.7,
-      47.4,
-      50.0,
-      51.1,
-      48.1
+      51.0,
+      46.5,
+      49.2,
+      50.7,
+      48.8
      ],
      "cohorts": {
       "era": [
        null,
-       48.7,
-       47.4,
-       50.0,
-       51.1,
-       48.1
+       51.0,
+       46.5,
+       49.2,
+       50.7,
+       48.8
       ],
       "allTime": [
        null,
@@ -465,31 +658,31 @@
       ],
       "champions": [
        null,
-       87.5,
-       60.0,
-       77.0,
-       69.0,
-       86.0
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
       ],
       "teammates": [
        null,
+       76.0,
+       71.0,
+       81.0,
        72.0,
-       72.0,
-       70.0,
-       70.0,
-       91.0
+       93.0
       ]
      },
      "uncertaintyEnvelope": [
       null,
-      77,
+      83,
       98,
-      77,
-      81,
-      92
+      80,
+      83,
+      96
      ],
-     "confidenceScore": 0.69,
-     "sampleSize": 628,
+     "confidenceScore": 0.64,
+     "sampleSize": 615,
      "era": {
       "id": "2022-2025",
       "label": "Ground effect",
@@ -513,37 +706,37 @@
       },
       {
        "label": "Tyre Management",
-       "value": 97
+       "value": 95
       },
       {
        "label": "Throttle Application",
-       "value": 89
+       "value": 90
       },
       {
        "label": "Braking",
-       "value": 51
+       "value": 52
       },
       {
        "label": "Consistency",
-       "value": 85
+       "value": 92
       }
      ],
      "cohortAverage": [
       null,
+      53.5,
+      51.2,
       51.5,
-      53.2,
-      50.0,
-      48.7,
-      52.4
+      50.3,
+      53.2
      ],
      "cohorts": {
       "era": [
        null,
+       53.5,
+       51.2,
        51.5,
-       53.2,
-       50.0,
-       48.7,
-       52.4
+       50.3,
+       53.2
       ],
       "allTime": [
        null,
@@ -555,31 +748,31 @@
       ],
       "champions": [
        null,
-       87.5,
-       60.0,
-       77.0,
-       69.0,
-       86.0
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
       ],
       "teammates": [
        null,
-       89.0,
-       74.0,
-       78.0,
-       55.0,
-       73.0
+       88.0,
+       70.0,
+       83.0,
+       57.0,
+       77.0
       ]
      },
      "uncertaintyEnvelope": [
       null,
-      94,
-      98,
-      96,
-      60,
-      96
+      93,
+      100,
+      95,
+      58,
+      99
      ],
-     "confidenceScore": 0.82,
-     "sampleSize": 732,
+     "confidenceScore": 0.84,
+     "sampleSize": 720,
      "era": {
       "id": "2026-",
       "label": "Active aero",
@@ -610,37 +803,37 @@
       },
       {
        "label": "Tyre Management",
-       "value": 89
+       "value": 90
       },
       {
        "label": "Throttle Application",
-       "value": 26
+       "value": 28
       },
       {
        "label": "Braking",
-       "value": 39
+       "value": 41
       },
       {
        "label": "Consistency",
-       "value": 59
+       "value": 36
       }
      ],
      "cohortAverage": [
       null,
-      48.7,
-      47.4,
-      50.0,
-      51.1,
-      48.1
+      51.0,
+      46.5,
+      49.2,
+      50.7,
+      48.8
      ],
      "cohorts": {
       "era": [
        null,
-       48.7,
-       47.4,
-       50.0,
-       51.1,
-       48.1
+       51.0,
+       46.5,
+       49.2,
+       50.7,
+       48.8
       ],
       "allTime": [
        null,
@@ -652,31 +845,31 @@
       ],
       "champions": [
        null,
-       87.5,
-       60.0,
-       77.0,
-       69.0,
-       86.0
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
       ],
       "teammates": [
        null,
-       26.5,
-       45.4,
-       16.2,
-       14.3,
-       50.5
+       36.0,
+       63.2,
+       17.4,
+       23.1,
+       79.9
       ]
      },
      "uncertaintyEnvelope": [
       null,
-      67,
-      98,
-      44,
-      48,
-      84
+      69,
+      99,
+      41,
+      51,
+      76
      ],
-     "confidenceScore": 0.59,
-     "sampleSize": 647,
+     "confidenceScore": 0.61,
+     "sampleSize": 641,
      "era": {
       "id": "2022-2025",
       "label": "Ground effect",
@@ -696,41 +889,41 @@
       },
       {
        "label": "Entry Aggression",
-       "value": 55
+       "value": 56
       },
       {
        "label": "Tyre Management",
-       "value": 42
+       "value": 34
       },
       {
        "label": "Throttle Application",
-       "value": 9
+       "value": 12
       },
       {
        "label": "Braking",
-       "value": 14
+       "value": 13
       },
       {
        "label": "Consistency",
-       "value": 65
+       "value": 54
       }
      ],
      "cohortAverage": [
       null,
+      53.5,
+      51.2,
       51.5,
-      53.2,
-      50.0,
-      48.7,
-      52.4
+      50.3,
+      53.2
      ],
      "cohorts": {
       "era": [
        null,
+       53.5,
+       51.2,
        51.5,
-       53.2,
-       50.0,
-       48.7,
-       52.4
+       50.3,
+       53.2
       ],
       "allTime": [
        null,
@@ -742,31 +935,31 @@
       ],
       "champions": [
        null,
-       87.5,
-       60.0,
-       77.0,
-       69.0,
-       86.0
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
       ],
       "teammates": [
        null,
-       26.0,
-       5.0,
-       16.0,
-       16.0,
-       31.0
+       30.0,
+       3.0,
+       19.0,
+       17.0,
+       26.0
       ]
      },
      "uncertaintyEnvelope": [
       null,
-      69,
-      92,
-      25,
-      33,
-      88
+      73,
+      88,
+      27,
+      40,
+      92
      ],
-     "confidenceScore": 0.55,
-     "sampleSize": 466,
+     "confidenceScore": 0.54,
+     "sampleSize": 471,
      "era": {
       "id": "2026-",
       "label": "Active aero",
@@ -793,11 +986,11 @@
       },
       {
        "label": "Entry Aggression",
-       "value": 9
+       "value": 12
       },
       {
        "label": "Tyre Management",
-       "value": 9
+       "value": 5
       },
       {
        "label": "Throttle Application",
@@ -805,7 +998,7 @@
       },
       {
        "label": "Braking",
-       "value": 20
+       "value": 23
       },
       {
        "label": "Consistency",
@@ -814,20 +1007,20 @@
      ],
      "cohortAverage": [
       null,
-      48.7,
-      47.4,
-      50.0,
-      51.1,
-      48.1
+      51.0,
+      46.5,
+      49.2,
+      50.7,
+      48.8
      ],
      "cohorts": {
       "era": [
        null,
-       48.7,
-       47.4,
-       50.0,
-       51.1,
-       48.1
+       51.0,
+       46.5,
+       49.2,
+       50.7,
+       48.8
       ],
       "allTime": [
        null,
@@ -839,31 +1032,31 @@
       ],
       "champions": [
        null,
-       87.5,
-       60.0,
-       77.0,
-       69.0,
-       86.0
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
       ],
       "teammates": [
        null,
-       32.0,
-       21.0,
-       51.0,
-       45.0,
+       35.0,
+       23.0,
+       48.0,
+       48.0,
        19.0
       ]
      },
      "uncertaintyEnvelope": [
       null,
       21,
-      65,
-      67,
-      38,
-      74
+      53,
+      75,
+      42,
+      65
      ],
-     "confidenceScore": 0.59,
-     "sampleSize": 575,
+     "confidenceScore": 0.63,
+     "sampleSize": 573,
      "era": {
       "id": "2022-2025",
       "label": "Ground effect",
@@ -883,41 +1076,41 @@
       },
       {
        "label": "Entry Aggression",
-       "value": 61
+       "value": 62
       },
       {
        "label": "Tyre Management",
-       "value": 34
+       "value": 43
       },
       {
        "label": "Throttle Application",
-       "value": 39
+       "value": 34
       },
       {
        "label": "Braking",
-       "value": 41
+       "value": 44
       },
       {
        "label": "Consistency",
-       "value": 61
+       "value": 69
       }
      ],
      "cohortAverage": [
       null,
+      53.5,
+      51.2,
       51.5,
-      53.2,
-      50.0,
-      48.7,
-      52.4
+      50.3,
+      53.2
      ],
      "cohorts": {
       "era": [
        null,
+       53.5,
+       51.2,
        51.5,
-       53.2,
-       50.0,
-       48.7,
-       52.4
+       50.3,
+       53.2
       ],
       "allTime": [
        null,
@@ -929,31 +1122,31 @@
       ],
       "champions": [
        null,
-       87.5,
-       60.0,
-       77.0,
-       69.0,
-       86.0
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
       ],
       "teammates": [
        null,
-       68.0,
-       99.0,
-       24.0,
        72.0,
-       27.0
+       99.0,
+       25.0,
+       75.0,
+       28.0
       ]
      },
      "uncertaintyEnvelope": [
       null,
-      73,
-      86,
-      54,
-      50,
-      84
+      75,
+      88,
+      47,
+      52,
+      92
      ],
-     "confidenceScore": 0.56,
-     "sampleSize": 507,
+     "confidenceScore": 0.54,
+     "sampleSize": 501,
      "era": {
       "id": "2026-",
       "label": "Active aero",
@@ -970,7 +1163,7 @@
    "name": "Valtteri Bottas",
    "defaultEra": "2026-",
    "signatures": {
-    "2022-2025": {
+    "2018-2021": {
      "driverId": "bottas",
      "series": "f1",
      "axes": [
@@ -980,41 +1173,41 @@
       },
       {
        "label": "Entry Aggression",
-       "value": 30
+       "value": 99
       },
       {
        "label": "Tyre Management",
-       "value": 7
+       "value": 10
       },
       {
        "label": "Throttle Application",
-       "value": 43
+       "value": 75
       },
       {
        "label": "Braking",
-       "value": 32
+       "value": 86
       },
       {
        "label": "Consistency",
-       "value": 17
+       "value": 44
       }
      ],
      "cohortAverage": [
       null,
-      48.7,
-      47.4,
-      50.0,
-      51.1,
-      48.1
+      46.5,
+      52.6,
+      49.7,
+      49.2,
+      48.9
      ],
      "cohorts": {
       "era": [
        null,
-       48.7,
-       47.4,
-       50.0,
-       51.1,
-       48.1
+       46.5,
+       52.6,
+       49.7,
+       49.2,
+       48.9
       ],
       "allTime": [
        null,
@@ -1026,35 +1219,126 @@
       ],
       "champions": [
        null,
-       87.5,
-       60.0,
-       77.0,
-       69.0,
-       86.0
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
       ],
       "teammates": [
        null,
-       16.0,
-       54.0,
-       20.0,
-       47.0,
-       21.0
+       97.0,
+       59.1,
+       59.7,
+       96.1,
+       56.5
       ]
      },
      "uncertaintyEnvelope": [
       null,
-      42,
-      18,
-      50,
-      44,
-      32
+      100,
+      24,
+      83,
+      91,
+      72
      ],
-     "confidenceScore": 0.78,
-     "sampleSize": 1348,
+     "confidenceScore": 0.82,
+     "sampleSize": 2928,
+     "era": {
+      "id": "2018-2021",
+      "label": "Late hybrid",
+      "seasons": "2018–2021",
+      "span": "2018–2021",
+      "rules": "1.6-litre V6 turbo hybrid power units, used since 2014, in the wider, higher-downforce cars on wider tyres introduced in 2017.",
+      "caveat": "The era starts in 2018, the first season of the official timing archive, although its car rules date from 2017."
+     },
+     "source": "timing"
+    },
+    "2022-2025": {
+     "driverId": "bottas",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": 31
+      },
+      {
+       "label": "Tyre Management",
+       "value": 14
+      },
+      {
+       "label": "Throttle Application",
+       "value": 41
+      },
+      {
+       "label": "Braking",
+       "value": 36
+      },
+      {
+       "label": "Consistency",
+       "value": 21
+      }
+     ],
+     "cohortAverage": [
+      null,
+      51.0,
+      46.5,
+      49.2,
+      50.7,
+      48.8
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       51.0,
+       46.5,
+       49.2,
+       50.7,
+       48.8
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
+      ],
+      "teammates": [
+       null,
+       23.0,
+       31.0,
+       14.0,
+       54.0,
+       20.0
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      37,
+      57,
+      52,
+      43,
+      29
+     ],
+     "confidenceScore": 0.76,
+     "sampleSize": 1830,
      "era": {
       "id": "2022-2025",
       "label": "Ground effect",
-      "seasons": "2023–2024",
+      "seasons": "2022–2024",
       "span": "2022–2025",
       "rules": "Most downforce comes from two Venturi tunnels under the floor, with simplified wings and 18-inch low-profile tyres, so that cars can follow each other more closely."
      },
@@ -1070,41 +1354,41 @@
       },
       {
        "label": "Entry Aggression",
-       "value": 1
-      },
-      {
-       "label": "Tyre Management",
-       "value": 3
-      },
-      {
-       "label": "Throttle Application",
-       "value": 11
-      },
-      {
-       "label": "Braking",
        "value": 7
       },
       {
+       "label": "Tyre Management",
+       "value": 2
+      },
+      {
+       "label": "Throttle Application",
+       "value": 17
+      },
+      {
+       "label": "Braking",
+       "value": 8
+      },
+      {
        "label": "Consistency",
-       "value": 3
+       "value": 8
       }
      ],
      "cohortAverage": [
       null,
+      53.5,
+      51.2,
       51.5,
-      53.2,
-      50.0,
-      48.7,
-      52.4
+      50.3,
+      53.2
      ],
      "cohorts": {
       "era": [
        null,
+       53.5,
+       51.2,
        51.5,
-       53.2,
-       50.0,
-       48.7,
-       52.4
+       50.3,
+       53.2
       ],
       "allTime": [
        null,
@@ -1116,31 +1400,31 @@
       ],
       "champions": [
        null,
-       87.5,
-       60.0,
-       77.0,
-       69.0,
-       86.0
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
       ],
       "teammates": [
        null,
-       7.0,
-       36.0,
-       34.0,
-       9.0,
-       1.0
+       10.0,
+       25.0,
+       33.0,
+       12.0,
+       2.0
       ]
      },
      "uncertaintyEnvelope": [
       null,
-      12,
-      6,
-      44,
-      19,
-      24
+      15,
+      5,
+      36,
+      21,
+      23
      ],
-     "confidenceScore": 0.81,
-     "sampleSize": 509,
+     "confidenceScore": 0.83,
+     "sampleSize": 502,
      "era": {
       "id": "2026-",
       "label": "Active aero",
@@ -1167,15 +1451,15 @@
       },
       {
        "label": "Entry Aggression",
-       "value": 39
+       "value": 38
       },
       {
        "label": "Tyre Management",
-       "value": 26
+       "value": 21
       },
       {
        "label": "Throttle Application",
-       "value": 5
+       "value": 8
       },
       {
        "label": "Braking",
@@ -1183,25 +1467,25 @@
       },
       {
        "label": "Consistency",
-       "value": 37
+       "value": 39
       }
      ],
      "cohortAverage": [
       null,
-      48.7,
-      47.4,
-      50.0,
-      51.1,
-      48.1
+      51.0,
+      46.5,
+      49.2,
+      50.7,
+      48.8
      ],
      "cohorts": {
       "era": [
        null,
-       48.7,
-       47.4,
-       50.0,
-       51.1,
-       48.1
+       51.0,
+       46.5,
+       49.2,
+       50.7,
+       48.8
       ],
       "allTime": [
        null,
@@ -1213,31 +1497,31 @@
       ],
       "champions": [
        null,
-       87.5,
-       60.0,
-       77.0,
-       69.0,
-       86.0
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
       ],
       "teammates": [
        null,
-       64.2,
-       37.7,
-       57.3,
-       48.8,
-       65.9
+       65.9,
+       38.6,
+       56.6,
+       51.2,
+       73.8
       ]
      },
      "uncertaintyEnvelope": [
       null,
-      44,
-      80,
-      6,
-      21,
-      80
+      47,
+      73,
+      10,
+      26,
+      81
      ],
      "confidenceScore": 0.66,
-     "sampleSize": 841,
+     "sampleSize": 830,
      "era": {
       "id": "2022-2025",
       "label": "Ground effect",
@@ -1257,41 +1541,41 @@
       },
       {
        "label": "Entry Aggression",
-       "value": 41
+       "value": 39
       },
       {
        "label": "Tyre Management",
-       "value": 66
+       "value": 58
       },
       {
        "label": "Throttle Application",
-       "value": 18
+       "value": 20
       },
       {
        "label": "Braking",
-       "value": 5
+       "value": 7
       },
       {
        "label": "Consistency",
-       "value": 35
+       "value": 37
       }
      ],
      "cohortAverage": [
       null,
+      53.5,
+      51.2,
       51.5,
-      53.2,
-      50.0,
-      48.7,
-      52.4
+      50.3,
+      53.2
      ],
      "cohorts": {
       "era": [
        null,
+       53.5,
+       51.2,
        51.5,
-       53.2,
-       50.0,
-       48.7,
-       52.4
+       50.3,
+       53.2
       ],
       "allTime": [
        null,
@@ -1303,31 +1587,31 @@
       ],
       "champions": [
        null,
-       87.5,
-       60.0,
-       77.0,
-       69.0,
-       86.0
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
       ],
       "teammates": [
        null,
-       59.0,
-       87.0,
-       49.0,
-       22.0,
-       79.0
+       60.0,
+       80.0,
+       46.0,
+       25.0,
+       74.0
       ]
      },
      "uncertaintyEnvelope": [
       null,
-      42,
-      94,
-      31,
-      15,
-      76
+      46,
+      95,
+      32,
+      16,
+      78
      ],
      "confidenceScore": 0.61,
-     "sampleSize": 606,
+     "sampleSize": 592,
      "era": {
       "id": "2026-",
       "label": "Active aero",
@@ -1358,7 +1642,7 @@
       },
       {
        "label": "Tyre Management",
-       "value": 11
+       "value": 12
       },
       {
        "label": "Throttle Application",
@@ -1375,20 +1659,20 @@
      ],
      "cohortAverage": [
       null,
-      48.7,
-      47.4,
-      50.0,
-      51.1,
-      48.1
+      51.0,
+      46.5,
+      49.2,
+      50.7,
+      48.8
      ],
      "cohorts": {
       "era": [
        null,
-       48.7,
-       47.4,
-       50.0,
-       51.1,
-       48.1
+       51.0,
+       46.5,
+       49.2,
+       50.7,
+       48.8
       ],
       "allTime": [
        null,
@@ -1400,35 +1684,35 @@
       ],
       "champions": [
        null,
-       87.5,
-       60.0,
-       77.0,
-       69.0,
-       86.0
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
       ],
       "teammates": [
        null,
-       45.0,
-       19.0,
-       66.0,
-       89.0,
-       41.0
+       43.0,
+       40.8,
+       63.8,
+       77.7,
+       37.9
       ]
      },
      "uncertaintyEnvelope": [
       null,
       null,
-      88,
+      83,
       null,
       null,
-      76
+      80
      ],
      "confidenceScore": 0.25,
-     "sampleSize": 298,
+     "sampleSize": 296,
      "era": {
       "id": "2022-2025",
       "label": "Ground effect",
-      "seasons": "2023",
+      "seasons": "2022–2023",
       "span": "2022–2025",
       "rules": "Most downforce comes from two Venturi tunnels under the floor, with simplified wings and 18-inch low-profile tyres, so that cars can follow each other more closely."
      },
@@ -1466,25 +1750,25 @@
       },
       {
        "label": "Consistency",
-       "value": 5
+       "value": 9
       }
      ],
      "cohortAverage": [
       null,
-      48.7,
-      47.4,
-      50.0,
-      51.1,
-      48.1
+      51.0,
+      46.5,
+      49.2,
+      50.7,
+      48.8
      ],
      "cohorts": {
       "era": [
        null,
-       48.7,
-       47.4,
-       50.0,
-       51.1,
-       48.1
+       51.0,
+       46.5,
+       49.2,
+       50.7,
+       48.8
       ],
       "allTime": [
        null,
@@ -1496,19 +1780,19 @@
       ],
       "champions": [
        null,
-       87.5,
-       60.0,
-       77.0,
-       69.0,
-       86.0
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
       ],
       "teammates": [
        null,
-       80.0,
-       17.0,
        82.0,
-       57.0,
-       75.0
+       27.0,
+       80.0,
+       64.0,
+       79.0
       ]
      },
      "uncertaintyEnvelope": [
@@ -1517,10 +1801,10 @@
       null,
       null,
       null,
-      60
+      76
      ],
-     "confidenceScore": 0.4,
-     "sampleSize": 170,
+     "confidenceScore": 0.24,
+     "sampleSize": 165,
      "era": {
       "id": "2022-2025",
       "label": "Ground effect",
@@ -1532,12 +1816,12 @@
     }
    }
   },
-  "gasly": {
-   "name": "Pierre Gasly",
-   "defaultEra": "2026-",
+  "ericsson": {
+   "name": "Marcus Ericsson",
+   "defaultEra": "2018-2021",
    "signatures": {
-    "2022-2025": {
-     "driverId": "gasly",
+    "2018-2021": {
+     "driverId": "ericsson",
      "series": "f1",
      "axes": [
       {
@@ -1546,41 +1830,41 @@
       },
       {
        "label": "Entry Aggression",
-       "value": 80
+       "value": 65
       },
       {
        "label": "Tyre Management",
-       "value": 17
+       "value": 84
       },
       {
        "label": "Throttle Application",
-       "value": 82
+       "value": 61
       },
       {
        "label": "Braking",
-       "value": 57
+       "value": 55
       },
       {
        "label": "Consistency",
-       "value": 75
+       "value": 22
       }
      ],
      "cohortAverage": [
       null,
-      48.7,
-      47.4,
-      50.0,
-      51.1,
-      48.1
+      46.5,
+      52.6,
+      49.7,
+      49.2,
+      48.9
      ],
      "cohorts": {
       "era": [
        null,
-       48.7,
-       47.4,
-       50.0,
-       51.1,
-       48.1
+       46.5,
+       52.6,
+       49.7,
+       49.2,
+       48.9
       ],
       "allTime": [
        null,
@@ -1592,35 +1876,223 @@
       ],
       "champions": [
        null,
-       87.5,
-       60.0,
-       77.0,
-       69.0,
-       86.0
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
       ],
       "teammates": [
        null,
-       28.4,
-       40.2,
-       11.4,
-       13.0,
-       43.1
+       59.0,
+       18.0,
+       30.0,
+       59.0,
+       64.0
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      75,
+      99,
+      78,
+      68,
+      33
+     ],
+     "confidenceScore": 0.63,
+     "sampleSize": 631,
+     "era": {
+      "id": "2018-2021",
+      "label": "Late hybrid",
+      "seasons": "2018",
+      "span": "2018–2021",
+      "rules": "1.6-litre V6 turbo hybrid power units, used since 2014, in the wider, higher-downforce cars on wider tyres introduced in 2017.",
+      "caveat": "The era starts in 2018, the first season of the official timing archive, although its car rules date from 2017."
+     },
+     "source": "timing"
+    }
+   }
+  },
+  "gasly": {
+   "name": "Pierre Gasly",
+   "defaultEra": "2026-",
+   "signatures": {
+    "2018-2021": {
+     "driverId": "gasly",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": 81
+      },
+      {
+       "label": "Tyre Management",
+       "value": 49
+      },
+      {
+       "label": "Throttle Application",
+       "value": 87
+      },
+      {
+       "label": "Braking",
+       "value": 90
+      },
+      {
+       "label": "Consistency",
+       "value": 67
+      }
+     ],
+     "cohortAverage": [
+      null,
+      46.5,
+      52.6,
+      49.7,
+      49.2,
+      48.9
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       46.5,
+       52.6,
+       49.7,
+       49.2,
+       48.9
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
+      ],
+      "teammates": [
+       null,
+       57.5,
+       61.8,
+       89.4,
+       83.6,
+       60.9
       ]
      },
      "uncertaintyEnvelope": [
       null,
       83,
-      55,
-      88,
-      67,
-      84
+      82,
+      90,
+      94,
+      87
      ],
-     "confidenceScore": 0.75,
-     "sampleSize": 1874,
+     "confidenceScore": 0.73,
+     "sampleSize": 2305,
+     "era": {
+      "id": "2018-2021",
+      "label": "Late hybrid",
+      "seasons": "2018–2021",
+      "span": "2018–2021",
+      "rules": "1.6-litre V6 turbo hybrid power units, used since 2014, in the wider, higher-downforce cars on wider tyres introduced in 2017.",
+      "caveat": "The era starts in 2018, the first season of the official timing archive, although its car rules date from 2017."
+     },
+     "source": "timing"
+    },
+    "2022-2025": {
+     "driverId": "gasly",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": 82
+      },
+      {
+       "label": "Tyre Management",
+       "value": 27
+      },
+      {
+       "label": "Throttle Application",
+       "value": 80
+      },
+      {
+       "label": "Braking",
+       "value": 64
+      },
+      {
+       "label": "Consistency",
+       "value": 79
+      }
+     ],
+     "cohortAverage": [
+      null,
+      51.0,
+      46.5,
+      49.2,
+      50.7,
+      48.8
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       51.0,
+       46.5,
+       49.2,
+       50.7,
+       48.8
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
+      ],
+      "teammates": [
+       null,
+       38.3,
+       51.0,
+       27.3,
+       36.1,
+       59.4
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      84,
+      56,
+      86,
+      77,
+      87
+     ],
+     "confidenceScore": 0.79,
+     "sampleSize": 2417,
      "era": {
       "id": "2022-2025",
       "label": "Ground effect",
-      "seasons": "2023–2025",
+      "seasons": "2022–2025",
       "span": "2022–2025",
       "rules": "Most downforce comes from two Venturi tunnels under the floor, with simplified wings and 18-inch low-profile tyres, so that cars can follow each other more closely."
      },
@@ -1636,41 +2108,41 @@
       },
       {
        "label": "Entry Aggression",
-       "value": 59
+       "value": 60
       },
       {
        "label": "Tyre Management",
-       "value": 87
+       "value": 80
       },
       {
        "label": "Throttle Application",
-       "value": 49
+       "value": 46
       },
       {
        "label": "Braking",
-       "value": 22
+       "value": 25
       },
       {
        "label": "Consistency",
-       "value": 79
+       "value": 74
       }
      ],
      "cohortAverage": [
       null,
+      53.5,
+      51.2,
       51.5,
-      53.2,
-      50.0,
-      48.7,
-      52.4
+      50.3,
+      53.2
      ],
      "cohorts": {
       "era": [
        null,
+       53.5,
+       51.2,
        51.5,
-       53.2,
-       50.0,
-       48.7,
-       52.4
+       50.3,
+       53.2
       ],
       "allTime": [
        null,
@@ -1682,30 +2154,30 @@
       ],
       "champions": [
        null,
-       87.5,
-       60.0,
-       77.0,
-       69.0,
-       86.0
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
       ],
       "teammates": [
        null,
-       41.0,
-       66.0,
-       18.0,
-       5.0,
-       35.0
+       39.0,
+       58.0,
+       20.0,
+       7.0,
+       37.0
       ]
      },
      "uncertaintyEnvelope": [
       null,
-      71,
+      75,
       98,
-      56,
-      40,
-      94
+      60,
+      43,
+      89
      ],
-     "confidenceScore": 0.6,
+     "confidenceScore": 0.56,
      "sampleSize": 593,
      "era": {
       "id": "2026-",
@@ -1714,6 +2186,200 @@
       "span": "2026 onwards",
       "rules": "Front and rear wings switch between a corner mode and a low-drag straight mode, replacing DRS. Cars are shorter, narrower and lighter (768 kg), the floor tunnels are gone, and power is split roughly half and half between combustion and electric, with the MGU-H removed and fully sustainable fuel.",
       "caveat": "Energy recovery is a bigger part of each lap: drivers lift off before braking to recharge and cars harvest at full throttle at the end of straights. Throttle and braking traces reflect energy management as well as driving style."
+     },
+     "source": "timing"
+    }
+   }
+  },
+  "giovinazzi": {
+   "name": "Antonio Giovinazzi",
+   "defaultEra": "2018-2021",
+   "signatures": {
+    "2018-2021": {
+     "driverId": "giovinazzi",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": 33
+      },
+      {
+       "label": "Tyre Management",
+       "value": 15
+      },
+      {
+       "label": "Throttle Application",
+       "value": 22
+      },
+      {
+       "label": "Braking",
+       "value": 29
+      },
+      {
+       "label": "Consistency",
+       "value": 51
+      }
+     ],
+     "cohortAverage": [
+      null,
+      46.5,
+      52.6,
+      49.7,
+      49.2,
+      48.9
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       46.5,
+       52.6,
+       49.7,
+       49.2,
+       48.9
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
+      ],
+      "teammates": [
+       null,
+       23.1,
+       44.6,
+       34.7,
+       32.3,
+       46.4
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      41,
+      72,
+      30,
+      43,
+      76
+     ],
+     "confidenceScore": 0.67,
+     "sampleSize": 1850,
+     "era": {
+      "id": "2018-2021",
+      "label": "Late hybrid",
+      "seasons": "2019–2021",
+      "span": "2018–2021",
+      "rules": "1.6-litre V6 turbo hybrid power units, used since 2014, in the wider, higher-downforce cars on wider tyres introduced in 2017.",
+      "caveat": "The era starts in 2018, the first season of the official timing archive, although its car rules date from 2017."
+     },
+     "source": "timing"
+    }
+   }
+  },
+  "grosjean": {
+   "name": "Romain Grosjean",
+   "defaultEra": "2018-2021",
+   "signatures": {
+    "2018-2021": {
+     "driverId": "grosjean",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": 25
+      },
+      {
+       "label": "Tyre Management",
+       "value": 47
+      },
+      {
+       "label": "Throttle Application",
+       "value": 66
+      },
+      {
+       "label": "Braking",
+       "value": 61
+      },
+      {
+       "label": "Consistency",
+       "value": 34
+      }
+     ],
+     "cohortAverage": [
+      null,
+      46.5,
+      52.6,
+      49.7,
+      49.2,
+      48.9
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       46.5,
+       52.6,
+       49.7,
+       49.2,
+       48.9
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
+      ],
+      "teammates": [
+       null,
+       27.0,
+       75.0,
+       27.0,
+       10.0,
+       32.0
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      36,
+      81,
+      77,
+      77,
+      73
+     ],
+     "confidenceScore": 0.64,
+     "sampleSize": 1739,
+     "era": {
+      "id": "2018-2021",
+      "label": "Late hybrid",
+      "seasons": "2018–2020",
+      "span": "2018–2021",
+      "rules": "1.6-litre V6 turbo hybrid power units, used since 2014, in the wider, higher-downforce cars on wider tyres introduced in 2017.",
+      "caveat": "The era starts in 2018, the first season of the official timing archive, although its car rules date from 2017."
      },
      "source": "timing"
     }
@@ -1733,15 +2399,15 @@
       },
       {
        "label": "Entry Aggression",
-       "value": 66
+       "value": 71
       },
       {
        "label": "Tyre Management",
-       "value": 52
+       "value": 51
       },
       {
        "label": "Throttle Application",
-       "value": 76
+       "value": 82
       },
       {
        "label": "Braking",
@@ -1749,25 +2415,25 @@
       },
       {
        "label": "Consistency",
-       "value": 57
+       "value": 55
       }
      ],
      "cohortAverage": [
       null,
-      48.7,
-      47.4,
-      50.0,
-      51.1,
-      48.1
+      51.0,
+      46.5,
+      49.2,
+      50.7,
+      48.8
      ],
      "cohorts": {
       "era": [
        null,
-       48.7,
-       47.4,
-       50.0,
-       51.1,
-       48.1
+       51.0,
+       46.5,
+       49.2,
+       50.7,
+       48.8
       ],
       "allTime": [
        null,
@@ -1779,31 +2445,31 @@
       ],
       "champions": [
        null,
-       87.5,
-       60.0,
-       77.0,
-       69.0,
-       86.0
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
       ],
       "teammates": [
        null,
-       48.7,
-       72.9,
-       71.6,
-       51.9,
-       67.0
+       49.9,
+       73.8,
+       76.6,
+       53.6,
+       68.0
       ]
      },
      "uncertaintyEnvelope": [
       null,
-      73,
+      75,
+      87,
+      86,
       88,
-      85,
-      88,
-      88
+      93
      ],
-     "confidenceScore": 0.59,
-     "sampleSize": 724,
+     "confidenceScore": 0.58,
+     "sampleSize": 720,
      "era": {
       "id": "2022-2025",
       "label": "Ground effect",
@@ -1823,41 +2489,41 @@
       },
       {
        "label": "Entry Aggression",
-       "value": 70
+       "value": 75
       },
       {
        "label": "Tyre Management",
-       "value": 68
+       "value": 69
       },
       {
        "label": "Throttle Application",
-       "value": 53
+       "value": 49
       },
       {
        "label": "Braking",
-       "value": 97
+       "value": 96
       },
       {
        "label": "Consistency",
-       "value": 55
+       "value": 43
       }
      ],
      "cohortAverage": [
       null,
+      53.5,
+      51.2,
       51.5,
-      53.2,
-      50.0,
-      48.7,
-      52.4
+      50.3,
+      53.2
      ],
      "cohorts": {
       "era": [
        null,
+       53.5,
+       51.2,
        51.5,
-       53.2,
-       50.0,
-       48.7,
-       52.4
+       50.3,
+       53.2
       ],
       "allTime": [
        null,
@@ -1869,31 +2535,31 @@
       ],
       "champions": [
        null,
-       87.5,
-       60.0,
-       77.0,
-       69.0,
-       86.0
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
       ],
       "teammates": [
        null,
-       86.0,
-       81.0,
+       87.0,
+       82.0,
+       92.0,
        91.0,
-       91.0,
-       99.0
+       98.0
       ]
      },
      "uncertaintyEnvelope": [
       null,
+      79,
+      99,
       75,
       98,
-      67,
-      98,
-      84
+      92
      ],
-     "confidenceScore": 0.58,
-     "sampleSize": 476,
+     "confidenceScore": 0.51,
+     "sampleSize": 472,
      "era": {
       "id": "2026-",
       "label": "Active aero",
@@ -1910,7 +2576,7 @@
    "name": "Lewis Hamilton",
    "defaultEra": "2026-",
    "signatures": {
-    "2022-2025": {
+    "2018-2021": {
      "driverId": "hamilton",
      "series": "f1",
      "axes": [
@@ -1920,41 +2586,41 @@
       },
       {
        "label": "Entry Aggression",
-       "value": 47
+       "value": 98
       },
       {
        "label": "Tyre Management",
-       "value": 48
+       "value": 59
       },
       {
        "label": "Throttle Application",
-       "value": 41
+       "value": 60
       },
       {
        "label": "Braking",
-       "value": 66
+       "value": 97
       },
       {
        "label": "Consistency",
-       "value": 43
+       "value": 57
       }
      ],
      "cohortAverage": [
       null,
-      48.7,
-      47.4,
-      50.0,
-      51.1,
-      48.1
+      46.5,
+      52.6,
+      49.7,
+      49.2,
+      48.9
      ],
      "cohorts": {
       "era": [
        null,
-       48.7,
-       47.4,
-       50.0,
-       51.1,
-       48.1
+       46.5,
+       52.6,
+       49.7,
+       49.2,
+       48.9
       ],
       "allTime": [
        null,
@@ -1966,35 +2632,126 @@
       ],
       "champions": [
        null,
-       87.5,
-       60.0,
-       77.0,
-       69.0,
-       86.0
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
       ],
       "teammates": [
        null,
-       74.1,
-       66.5,
-       56.8,
-       66.2,
-       84.1
+       99.0,
+       10.0,
+       75.0,
+       86.0,
+       44.0
       ]
      },
      "uncertaintyEnvelope": [
       null,
-      54,
-      71,
-      44,
-      75,
-      70
+      100,
+      83,
+      68,
+      98,
+      76
+     ],
+     "confidenceScore": 0.76,
+     "sampleSize": 3159,
+     "era": {
+      "id": "2018-2021",
+      "label": "Late hybrid",
+      "seasons": "2018–2021",
+      "span": "2018–2021",
+      "rules": "1.6-litre V6 turbo hybrid power units, used since 2014, in the wider, higher-downforce cars on wider tyres introduced in 2017.",
+      "caveat": "The era starts in 2018, the first season of the official timing archive, although its car rules date from 2017."
+     },
+     "source": "timing"
+    },
+    "2022-2025": {
+     "driverId": "hamilton",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": 55
+      },
+      {
+       "label": "Tyre Management",
+       "value": 55
+      },
+      {
+       "label": "Throttle Application",
+       "value": 38
+      },
+      {
+       "label": "Braking",
+       "value": 77
+      },
+      {
+       "label": "Consistency",
+       "value": 46
+      }
+     ],
+     "cohortAverage": [
+      null,
+      51.0,
+      46.5,
+      49.2,
+      50.7,
+      48.8
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       51.0,
+       46.5,
+       49.2,
+       50.7,
+       48.8
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
+      ],
+      "teammates": [
+       null,
+       77.8,
+       63.1,
+       70.2,
+       70.7,
+       87.5
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      65,
+      73,
+      45,
+      84,
+      65
      ],
      "confidenceScore": 0.73,
-     "sampleSize": 2185,
+     "sampleSize": 2851,
      "era": {
       "id": "2022-2025",
       "label": "Ground effect",
-      "seasons": "2023–2025",
+      "seasons": "2022–2025",
       "span": "2022–2025",
       "rules": "Most downforce comes from two Venturi tunnels under the floor, with simplified wings and 18-inch low-profile tyres, so that cars can follow each other more closely."
      },
@@ -2010,41 +2767,41 @@
       },
       {
        "label": "Entry Aggression",
-       "value": 84
+       "value": 86
       },
       {
        "label": "Tyre Management",
-       "value": 40
+       "value": 42
       },
       {
        "label": "Throttle Application",
-       "value": 64
+       "value": 69
       },
       {
        "label": "Braking",
-       "value": 95
+       "value": 94
       },
       {
        "label": "Consistency",
-       "value": 89
+       "value": 91
       }
      ],
      "cohortAverage": [
       null,
+      53.5,
+      51.2,
       51.5,
-      53.2,
-      50.0,
-      48.7,
-      52.4
+      50.3,
+      53.2
      ],
      "cohorts": {
       "era": [
        null,
+       53.5,
+       51.2,
        51.5,
-       53.2,
-       50.0,
-       48.7,
-       52.4
+       50.3,
+       53.2
       ],
       "allTime": [
        null,
@@ -2056,31 +2813,31 @@
       ],
       "champions": [
        null,
-       87.5,
-       60.0,
-       77.0,
-       69.0,
-       86.0
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
       ],
       "teammates": [
        null,
-       93.0,
-       28.0,
-       80.0,
-       99.0,
-       97.0
+       92.0,
+       40.0,
+       85.0,
+       98.0,
+       99.0
       ]
      },
      "uncertaintyEnvelope": [
       null,
-      92,
-      88,
-      75,
+      93,
+      89,
+      79,
       98,
-      100
+      99
      ],
-     "confidenceScore": 0.71,
-     "sampleSize": 613,
+     "confidenceScore": 0.68,
+     "sampleSize": 598,
      "era": {
       "id": "2026-",
       "label": "Active aero",
@@ -2093,12 +2850,12 @@
     }
    }
   },
-  "hulkenberg": {
-   "name": "Nico Hulkenberg",
-   "defaultEra": "2026-",
+  "hartley": {
+   "name": "Brendon Hartley",
+   "defaultEra": "2018-2021",
    "signatures": {
-    "2022-2025": {
-     "driverId": "hulkenberg",
+    "2018-2021": {
+     "driverId": "hartley",
      "series": "f1",
      "axes": [
       {
@@ -2107,41 +2864,41 @@
       },
       {
        "label": "Entry Aggression",
-       "value": 32
+       "value": 46
       },
       {
        "label": "Tyre Management",
-       "value": 21
+       "value": 79
       },
       {
        "label": "Throttle Application",
-       "value": 51
+       "value": 73
       },
       {
        "label": "Braking",
-       "value": 45
+       "value": 99
       },
       {
        "label": "Consistency",
-       "value": 19
+       "value": 30
       }
      ],
      "cohortAverage": [
       null,
-      48.7,
-      47.4,
-      50.0,
-      51.1,
-      48.1
+      46.5,
+      52.6,
+      49.7,
+      49.2,
+      48.9
      ],
      "cohorts": {
       "era": [
        null,
-       48.7,
-       47.4,
-       50.0,
-       51.1,
-       48.1
+       46.5,
+       52.6,
+       49.7,
+       49.2,
+       48.9
       ],
       "allTime": [
        null,
@@ -2153,35 +2910,223 @@
       ],
       "champions": [
        null,
-       87.5,
-       60.0,
-       77.0,
-       69.0,
-       86.0
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
       ],
       "teammates": [
        null,
-       18.4,
-       14.3,
-       41.9,
-       25.6,
-       18.9
+       81.0,
+       49.0,
+       87.0,
+       90.0,
+       67.0
       ]
      },
      "uncertaintyEnvelope": [
       null,
-      42,
-      59,
-      56,
-      54,
-      32
+      58,
+      100,
+      86,
+      100,
+      66
      ],
-     "confidenceScore": 0.77,
-     "sampleSize": 2033,
+     "confidenceScore": 0.6,
+     "sampleSize": 536,
+     "era": {
+      "id": "2018-2021",
+      "label": "Late hybrid",
+      "seasons": "2018",
+      "span": "2018–2021",
+      "rules": "1.6-litre V6 turbo hybrid power units, used since 2014, in the wider, higher-downforce cars on wider tyres introduced in 2017.",
+      "caveat": "The era starts in 2018, the first season of the official timing archive, although its car rules date from 2017."
+     },
+     "source": "timing"
+    }
+   }
+  },
+  "hulkenberg": {
+   "name": "Nico Hulkenberg",
+   "defaultEra": "2026-",
+   "signatures": {
+    "2018-2021": {
+     "driverId": "hulkenberg",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": 73
+      },
+      {
+       "label": "Tyre Management",
+       "value": 88
+      },
+      {
+       "label": "Throttle Application",
+       "value": 56
+      },
+      {
+       "label": "Braking",
+       "value": 46
+      },
+      {
+       "label": "Consistency",
+       "value": 49
+      }
+     ],
+     "cohortAverage": [
+      null,
+      46.5,
+      52.6,
+      49.7,
+      49.2,
+      48.9
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       46.5,
+       52.6,
+       49.7,
+       49.2,
+       48.9
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
+      ],
+      "teammates": [
+       null,
+       69.3,
+       78.3,
+       64.3,
+       59.0,
+       78.1
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      75,
+      98,
+      73,
+      52,
+      76
+     ],
+     "confidenceScore": 0.71,
+     "sampleSize": 1212,
+     "era": {
+      "id": "2018-2021",
+      "label": "Late hybrid",
+      "seasons": "2018–2020",
+      "span": "2018–2021",
+      "rules": "1.6-litre V6 turbo hybrid power units, used since 2014, in the wider, higher-downforce cars on wider tyres introduced in 2017.",
+      "caveat": "The era starts in 2018, the first season of the official timing archive, although its car rules date from 2017."
+     },
+     "source": "timing"
+    },
+    "2022-2025": {
+     "driverId": "hulkenberg",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": 35
+      },
+      {
+       "label": "Tyre Management",
+       "value": 23
+      },
+      {
+       "label": "Throttle Application",
+       "value": 48
+      },
+      {
+       "label": "Braking",
+       "value": 48
+      },
+      {
+       "label": "Consistency",
+       "value": 19
+      }
+     ],
+     "cohortAverage": [
+      null,
+      51.0,
+      46.5,
+      49.2,
+      50.7,
+      48.8
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       51.0,
+       46.5,
+       49.2,
+       50.7,
+       48.8
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
+      ],
+      "teammates": [
+       null,
+       23.2,
+       16.2,
+       48.5,
+       31.7,
+       17.5
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      44,
+      56,
+      59,
+      53,
+      25
+     ],
+     "confidenceScore": 0.78,
+     "sampleSize": 2074,
      "era": {
       "id": "2022-2025",
       "label": "Ground effect",
-      "seasons": "2023–2025",
+      "seasons": "2022–2025",
       "span": "2022–2025",
       "rules": "Most downforce comes from two Venturi tunnels under the floor, with simplified wings and 18-inch low-profile tyres, so that cars can follow each other more closely."
      },
@@ -2197,7 +3142,7 @@
       },
       {
        "label": "Entry Aggression",
-       "value": 68
+       "value": 72
       },
       {
        "label": "Tyre Management",
@@ -2205,33 +3150,33 @@
       },
       {
        "label": "Throttle Application",
-       "value": 24
+       "value": 25
       },
       {
        "label": "Braking",
-       "value": 72
+       "value": 75
       },
       {
        "label": "Consistency",
-       "value": 27
+       "value": 28
       }
      ],
      "cohortAverage": [
       null,
+      53.5,
+      51.2,
       51.5,
-      53.2,
-      50.0,
-      48.7,
-      52.4
+      50.3,
+      53.2
      ],
      "cohorts": {
       "era": [
        null,
+       53.5,
+       51.2,
        51.5,
-       53.2,
-       50.0,
-       48.7,
-       52.4
+       50.3,
+       53.2
       ],
       "allTime": [
        null,
@@ -2243,31 +3188,31 @@
       ],
       "champions": [
        null,
-       87.5,
-       60.0,
-       77.0,
-       69.0,
-       86.0
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
       ],
       "teammates": [
        null,
-       61.0,
+       62.0,
+       43.0,
        34.0,
-       39.0,
-       41.0,
-       61.0
+       44.0,
+       69.0
       ]
      },
      "uncertaintyEnvelope": [
       null,
-      73,
+      75,
       100,
-      42,
-      85,
-      60
+      37,
+      84,
+      69
      ],
-     "confidenceScore": 0.7,
-     "sampleSize": 427,
+     "confidenceScore": 0.72,
+     "sampleSize": 419,
      "era": {
       "id": "2026-",
       "label": "Active aero",
@@ -2275,6 +3220,387 @@
       "span": "2026 onwards",
       "rules": "Front and rear wings switch between a corner mode and a low-drag straight mode, replacing DRS. Cars are shorter, narrower and lighter (768 kg), the floor tunnels are gone, and power is split roughly half and half between combustion and electric, with the MGU-H removed and fully sustainable fuel.",
       "caveat": "Energy recovery is a bigger part of each lap: drivers lift off before braking to recharge and cars harvest at full throttle at the end of straights. Throttle and braking traces reflect energy management as well as driving style."
+     },
+     "source": "timing"
+    }
+   }
+  },
+  "kubica": {
+   "name": "Robert Kubica",
+   "defaultEra": "2018-2021",
+   "signatures": {
+    "2018-2021": {
+     "driverId": "kubica",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": 1
+      },
+      {
+       "label": "Tyre Management",
+       "value": 8
+      },
+      {
+       "label": "Throttle Application",
+       "value": 2
+      },
+      {
+       "label": "Braking",
+       "value": 14
+      },
+      {
+       "label": "Consistency",
+       "value": 4
+      }
+     ],
+     "cohortAverage": [
+      null,
+      46.5,
+      52.6,
+      49.7,
+      49.2,
+      48.9
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       46.5,
+       52.6,
+       49.7,
+       49.2,
+       48.9
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
+      ],
+      "teammates": [
+       null,
+       23.0,
+       59.4,
+       33.8,
+       27.2,
+       20.2
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      1,
+      57,
+      5,
+      27,
+      8
+     ],
+     "confidenceScore": 0.82,
+     "sampleSize": 992,
+     "era": {
+      "id": "2018-2021",
+      "label": "Late hybrid",
+      "seasons": "2019–2021",
+      "span": "2018–2021",
+      "rules": "1.6-litre V6 turbo hybrid power units, used since 2014, in the wider, higher-downforce cars on wider tyres introduced in 2017.",
+      "caveat": "The era starts in 2018, the first season of the official timing archive, although its car rules date from 2017."
+     },
+     "source": "timing"
+    }
+   }
+  },
+  "kvyat": {
+   "name": "Daniil Kvyat",
+   "defaultEra": "2018-2021",
+   "signatures": {
+    "2018-2021": {
+     "driverId": "kvyat",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": 44
+      },
+      {
+       "label": "Tyre Management",
+       "value": 36
+      },
+      {
+       "label": "Throttle Application",
+       "value": 97
+      },
+      {
+       "label": "Braking",
+       "value": 70
+      },
+      {
+       "label": "Consistency",
+       "value": 66
+      }
+     ],
+     "cohortAverage": [
+      null,
+      46.5,
+      52.6,
+      49.7,
+      49.2,
+      48.9
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       46.5,
+       52.6,
+       49.7,
+       49.2,
+       48.9
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
+      ],
+      "teammates": [
+       null,
+       79.7,
+       53.7,
+       71.0,
+       72.7,
+       58.0
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      47,
+      77,
+      99,
+      84,
+      89
+     ],
+     "confidenceScore": 0.65,
+     "sampleSize": 983,
+     "era": {
+      "id": "2018-2021",
+      "label": "Late hybrid",
+      "seasons": "2019–2020",
+      "span": "2018–2021",
+      "rules": "1.6-litre V6 turbo hybrid power units, used since 2014, in the wider, higher-downforce cars on wider tyres introduced in 2017.",
+      "caveat": "The era starts in 2018, the first season of the official timing archive, although its car rules date from 2017."
+     },
+     "source": "timing"
+    }
+   }
+  },
+  "latifi": {
+   "name": "Nicholas Latifi",
+   "defaultEra": "2022-2025",
+   "signatures": {
+    "2018-2021": {
+     "driverId": "latifi",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": 6
+      },
+      {
+       "label": "Tyre Management",
+       "value": 54
+      },
+      {
+       "label": "Throttle Application",
+       "value": 18
+      },
+      {
+       "label": "Braking",
+       "value": 15
+      },
+      {
+       "label": "Consistency",
+       "value": 14
+      }
+     ],
+     "cohortAverage": [
+      null,
+      46.5,
+      52.6,
+      49.7,
+      49.2,
+      48.9
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       46.5,
+       52.6,
+       49.7,
+       49.2,
+       48.9
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
+      ],
+      "teammates": [
+       null,
+       22.0,
+       64.0,
+       35.0,
+       27.0,
+       17.0
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      10,
+      91,
+      31,
+      28,
+      28
+     ],
+     "confidenceScore": 0.7,
+     "sampleSize": 1358,
+     "era": {
+      "id": "2018-2021",
+      "label": "Late hybrid",
+      "seasons": "2020–2021",
+      "span": "2018–2021",
+      "rules": "1.6-litre V6 turbo hybrid power units, used since 2014, in the wider, higher-downforce cars on wider tyres introduced in 2017.",
+      "caveat": "The era starts in 2018, the first season of the official timing archive, although its car rules date from 2017."
+     },
+     "source": "timing"
+    },
+    "2022-2025": {
+     "driverId": "latifi",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": 3
+      },
+      {
+       "label": "Tyre Management",
+       "value": 7
+      },
+      {
+       "label": "Throttle Application",
+       "value": 6
+      },
+      {
+       "label": "Braking",
+       "value": 3
+      },
+      {
+       "label": "Consistency",
+       "value": 5
+      }
+     ],
+     "cohortAverage": [
+      null,
+      51.0,
+      46.5,
+      49.2,
+      50.7,
+      48.8
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       51.0,
+       46.5,
+       49.2,
+       50.7,
+       48.8
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
+      ],
+      "teammates": [
+       null,
+       29.0,
+       62.0,
+       3.0,
+       22.0,
+       60.3
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      10,
+      34,
+      7,
+      11,
+      10
+     ],
+     "confidenceScore": 0.87,
+     "sampleSize": 666,
+     "era": {
+      "id": "2022-2025",
+      "label": "Ground effect",
+      "seasons": "2022",
+      "span": "2022–2025",
+      "rules": "Most downforce comes from two Venturi tunnels under the floor, with simplified wings and 18-inch low-profile tyres, so that cars can follow each other more closely."
      },
      "source": "timing"
     }
@@ -2294,41 +3620,41 @@
       },
       {
        "label": "Entry Aggression",
-       "value": 49
+       "value": 50
       },
       {
        "label": "Tyre Management",
-       "value": 77
+       "value": 76
       },
       {
        "label": "Throttle Application",
-       "value": 72
+       "value": 77
       },
       {
        "label": "Braking",
-       "value": 49
+       "value": 51
       },
       {
        "label": "Consistency",
-       "value": 69
+       "value": 70
       }
      ],
      "cohortAverage": [
       null,
-      48.7,
-      47.4,
-      50.0,
-      51.1,
-      48.1
+      51.0,
+      46.5,
+      49.2,
+      50.7,
+      48.8
      ],
      "cohorts": {
       "era": [
        null,
-       48.7,
-       47.4,
-       50.0,
-       51.1,
-       48.1
+       51.0,
+       46.5,
+       49.2,
+       50.7,
+       48.8
       ],
       "allTime": [
        null,
@@ -2340,31 +3666,31 @@
       ],
       "champions": [
        null,
-       87.5,
-       60.0,
-       77.0,
-       69.0,
-       86.0
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
       ],
       "teammates": [
        null,
-       60.7,
-       43.2,
-       74.3,
-       83.0,
-       54.6
+       65.1,
+       49.2,
+       79.8,
+       82.0,
+       53.6
       ]
      },
      "uncertaintyEnvelope": [
       null,
-      62,
+      68,
       94,
-      83,
-      54,
-      84
+      86,
+      57,
+      89
      ],
-     "confidenceScore": 0.66,
-     "sampleSize": 978,
+     "confidenceScore": 0.63,
+     "sampleSize": 958,
      "era": {
       "id": "2022-2025",
       "label": "Ground effect",
@@ -2388,37 +3714,37 @@
       },
       {
        "label": "Tyre Management",
-       "value": 93
+       "value": 92
       },
       {
        "label": "Throttle Application",
-       "value": 45
+       "value": 43
       },
       {
        "label": "Braking",
-       "value": 34
+       "value": 39
       },
       {
        "label": "Consistency",
-       "value": 87
+       "value": 90
       }
      ],
      "cohortAverage": [
       null,
+      53.5,
+      51.2,
       51.5,
-      53.2,
-      50.0,
-      48.7,
-      52.4
+      50.3,
+      53.2
      ],
      "cohorts": {
       "era": [
        null,
+       53.5,
+       51.2,
        51.5,
-       53.2,
-       50.0,
-       48.7,
-       52.4
+       50.3,
+       53.2
       ],
       "allTime": [
        null,
@@ -2430,31 +3756,31 @@
       ],
       "champions": [
        null,
-       87.5,
-       60.0,
-       77.0,
-       69.0,
-       86.0
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
       ],
       "teammates": [
        null,
-       42.9,
-       62.9,
-       92.7,
-       43.6,
-       59.4
+       43.1,
+       64.8,
+       92.9,
+       47.1,
+       56.7
       ]
      },
      "uncertaintyEnvelope": [
       null,
-      67,
+      72,
       98,
-      58,
+      67,
       48,
-      100
+      99
      ],
      "confidenceScore": 0.72,
-     "sampleSize": 710,
+     "sampleSize": 708,
      "era": {
       "id": "2026-",
       "label": "Active aero",
@@ -2471,7 +3797,7 @@
    "name": "Charles Leclerc",
    "defaultEra": "2026-",
    "signatures": {
-    "2022-2025": {
+    "2018-2021": {
      "driverId": "leclerc",
      "series": "f1",
      "axes": [
@@ -2481,15 +3807,15 @@
       },
       {
        "label": "Entry Aggression",
-       "value": 78
+       "value": 59
       },
       {
        "label": "Tyre Management",
-       "value": 56
+       "value": 18
       },
       {
        "label": "Throttle Application",
-       "value": 32
+       "value": 30
       },
       {
        "label": "Braking",
@@ -2497,25 +3823,25 @@
       },
       {
        "label": "Consistency",
-       "value": 71
+       "value": 64
       }
      ],
      "cohortAverage": [
       null,
-      48.7,
-      47.4,
-      50.0,
-      51.1,
-      48.1
+      46.5,
+      52.6,
+      49.7,
+      49.2,
+      48.9
      ],
      "cohorts": {
       "era": [
        null,
-       48.7,
-       47.4,
-       50.0,
-       51.1,
-       48.1
+       46.5,
+       52.6,
+       49.7,
+       49.2,
+       48.9
       ],
       "allTime": [
        null,
@@ -2527,35 +3853,126 @@
       ],
       "champions": [
        null,
-       87.5,
-       60.0,
-       77.0,
-       69.0,
-       86.0
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
       ],
       "teammates": [
        null,
-       44.5,
-       71.0,
-       44.6,
-       38.8,
-       68.8
+       62.0,
+       51.4,
+       58.0,
+       47.8,
+       68.1
       ]
      },
      "uncertaintyEnvelope": [
       null,
-      83,
-      80,
-      44,
-      67,
-      82
+      73,
+      56,
+      36,
+      77,
+      81
      ],
-     "confidenceScore": 0.72,
-     "sampleSize": 2370,
+     "confidenceScore": 0.69,
+     "sampleSize": 2602,
+     "era": {
+      "id": "2018-2021",
+      "label": "Late hybrid",
+      "seasons": "2018–2021",
+      "span": "2018–2021",
+      "rules": "1.6-litre V6 turbo hybrid power units, used since 2014, in the wider, higher-downforce cars on wider tyres introduced in 2017.",
+      "caveat": "The era starts in 2018, the first season of the official timing archive, although its car rules date from 2017."
+     },
+     "source": "timing"
+    },
+    "2022-2025": {
+     "driverId": "leclerc",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": 83
+      },
+      {
+       "label": "Tyre Management",
+       "value": 41
+      },
+      {
+       "label": "Throttle Application",
+       "value": 40
+      },
+      {
+       "label": "Braking",
+       "value": 67
+      },
+      {
+       "label": "Consistency",
+       "value": 72
+      }
+     ],
+     "cohortAverage": [
+      null,
+      51.0,
+      46.5,
+      49.2,
+      50.7,
+      48.8
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       51.0,
+       46.5,
+       49.2,
+       50.7,
+       48.8
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
+      ],
+      "teammates": [
+       null,
+       54.2,
+       64.8,
+       46.6,
+       46.1,
+       77.0
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      88,
+      68,
+      48,
+      77,
+      81
+     ],
+     "confidenceScore": 0.75,
+     "sampleSize": 3038,
      "era": {
       "id": "2022-2025",
       "label": "Ground effect",
-      "seasons": "2023–2025",
+      "seasons": "2022–2025",
       "span": "2022–2025",
       "rules": "Most downforce comes from two Venturi tunnels under the floor, with simplified wings and 18-inch low-profile tyres, so that cars can follow each other more closely."
      },
@@ -2571,41 +3988,41 @@
       },
       {
        "label": "Entry Aggression",
-       "value": 93
+       "value": 92
       },
       {
        "label": "Tyre Management",
-       "value": 28
+       "value": 40
       },
       {
        "label": "Throttle Application",
-       "value": 80
+       "value": 85
       },
       {
        "label": "Braking",
-       "value": 99
+       "value": 98
       },
       {
        "label": "Consistency",
-       "value": 97
+       "value": 99
       }
      ],
      "cohortAverage": [
       null,
+      53.5,
+      51.2,
       51.5,
-      53.2,
-      50.0,
-      48.7,
-      52.4
+      50.3,
+      53.2
      ],
      "cohorts": {
       "era": [
        null,
+       53.5,
+       51.2,
        51.5,
-       53.2,
-       50.0,
-       48.7,
-       52.4
+       50.3,
+       53.2
       ],
       "allTime": [
        null,
@@ -2617,31 +4034,31 @@
       ],
       "champions": [
        null,
-       87.5,
-       60.0,
-       77.0,
-       69.0,
-       86.0
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
       ],
       "teammates": [
        null,
-       84.0,
-       40.0,
-       64.0,
-       95.0,
-       89.0
+       86.0,
+       42.0,
+       69.0,
+       94.0,
+       91.0
       ]
      },
      "uncertaintyEnvelope": [
       null,
       94,
+      83,
       86,
-      85,
       100,
       100
      ],
-     "confidenceScore": 0.77,
-     "sampleSize": 676,
+     "confidenceScore": 0.8,
+     "sampleSize": 675,
      "era": {
       "id": "2026-",
       "label": "Active aero",
@@ -2672,7 +4089,7 @@
       },
       {
        "label": "Tyre Management",
-       "value": 60
+       "value": 62
       },
       {
        "label": "Throttle Application",
@@ -2680,29 +4097,29 @@
       },
       {
        "label": "Braking",
-       "value": 36
+       "value": 40
       },
       {
        "label": "Consistency",
-       "value": 53
+       "value": 50
       }
      ],
      "cohortAverage": [
       null,
+      53.5,
+      51.2,
       51.5,
-      53.2,
-      50.0,
-      48.7,
-      52.4
+      50.3,
+      53.2
      ],
      "cohorts": {
       "era": [
        null,
+       53.5,
+       51.2,
        51.5,
-       53.2,
-       50.0,
-       48.7,
-       52.4
+       50.3,
+       53.2
       ],
       "allTime": [
        null,
@@ -2714,31 +4131,31 @@
       ],
       "champions": [
        null,
-       87.5,
-       60.0,
-       77.0,
-       69.0,
-       86.0
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
       ],
       "teammates": [
        null,
        57.0,
-       93.0,
-       45.0,
-       34.0,
-       87.0
+       92.0,
+       43.0,
+       39.0,
+       90.0
       ]
      },
      "uncertaintyEnvelope": [
       null,
-      42,
-      92,
-      98,
-      44,
-      82
+      46,
+      91,
+      99,
+      47,
+      83
      ],
      "confidenceScore": 0.61,
-     "sampleSize": 652,
+     "sampleSize": 650,
      "era": {
       "id": "2026-",
       "label": "Active aero",
@@ -2755,7 +4172,7 @@
    "name": "Kevin Magnussen",
    "defaultEra": "2022-2025",
    "signatures": {
-    "2022-2025": {
+    "2018-2021": {
      "driverId": "magnussen",
      "series": "f1",
      "axes": [
@@ -2765,41 +4182,41 @@
       },
       {
        "label": "Entry Aggression",
-       "value": 22
+       "value": 27
       },
       {
        "label": "Tyre Management",
-       "value": 15
+       "value": 75
       },
       {
        "label": "Throttle Application",
-       "value": 36
+       "value": 27
       },
       {
        "label": "Braking",
-       "value": 28
+       "value": 10
       },
       {
        "label": "Consistency",
-       "value": 15
+       "value": 32
       }
      ],
      "cohortAverage": [
       null,
-      48.7,
-      47.4,
-      50.0,
-      51.1,
-      48.1
+      46.5,
+      52.6,
+      49.7,
+      49.2,
+      48.9
      ],
      "cohorts": {
       "era": [
        null,
-       48.7,
-       47.4,
-       50.0,
-       51.1,
-       48.1
+       46.5,
+       52.6,
+       49.7,
+       49.2,
+       48.9
       ],
       "allTime": [
        null,
@@ -2811,35 +4228,410 @@
       ],
       "champions": [
        null,
-       87.5,
-       60.0,
-       77.0,
-       69.0,
-       86.0
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
       ],
       "teammates": [
        null,
-       32.0,
-       21.0,
-       51.0,
-       45.0,
-       19.0
+       25.0,
+       47.0,
+       66.0,
+       61.0,
+       34.0
       ]
      },
      "uncertaintyEnvelope": [
       null,
-      29,
-      76,
-      48,
-      42,
-      32
+      33,
+      91,
+      32,
+      19,
+      59
      ],
-     "confidenceScore": 0.68,
-     "sampleSize": 1294,
+     "confidenceScore": 0.74,
+     "sampleSize": 2120,
+     "era": {
+      "id": "2018-2021",
+      "label": "Late hybrid",
+      "seasons": "2018–2020",
+      "span": "2018–2021",
+      "rules": "1.6-litre V6 turbo hybrid power units, used since 2014, in the wider, higher-downforce cars on wider tyres introduced in 2017.",
+      "caveat": "The era starts in 2018, the first season of the official timing archive, although its car rules date from 2017."
+     },
+     "source": "timing"
+    },
+    "2022-2025": {
+     "driverId": "magnussen",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": 28
+      },
+      {
+       "label": "Tyre Management",
+       "value": 19
+      },
+      {
+       "label": "Throttle Application",
+       "value": 44
+      },
+      {
+       "label": "Braking",
+       "value": 34
+      },
+      {
+       "label": "Consistency",
+       "value": 11
+      }
+     ],
+     "cohortAverage": [
+      null,
+      51.0,
+      46.5,
+      49.2,
+      50.7,
+      48.8
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       51.0,
+       46.5,
+       49.2,
+       50.7,
+       48.8
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
+      ],
+      "teammates": [
+       null,
+       43.6,
+       25.7,
+       40.5,
+       39.4,
+       17.2
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      36,
+      68,
+      56,
+      43,
+      24
+     ],
+     "confidenceScore": 0.74,
+     "sampleSize": 1884,
      "era": {
       "id": "2022-2025",
       "label": "Ground effect",
-      "seasons": "2023–2024",
+      "seasons": "2022–2024",
+      "span": "2022–2025",
+      "rules": "Most downforce comes from two Venturi tunnels under the floor, with simplified wings and 18-inch low-profile tyres, so that cars can follow each other more closely."
+     },
+     "source": "timing"
+    }
+   }
+  },
+  "mazepin": {
+   "name": "Nikita Mazepin",
+   "defaultEra": "2018-2021",
+   "signatures": {
+    "2018-2021": {
+     "driverId": "mazepin",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": 2
+      },
+      {
+       "label": "Tyre Management",
+       "value": 4
+      },
+      {
+       "label": "Throttle Application",
+       "value": 1
+      },
+      {
+       "label": "Braking",
+       "value": 1
+      },
+      {
+       "label": "Consistency",
+       "value": 1
+      }
+     ],
+     "cohortAverage": [
+      null,
+      46.5,
+      52.6,
+      49.7,
+      49.2,
+      48.9
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       46.5,
+       52.6,
+       49.7,
+       49.2,
+       48.9
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
+      ],
+      "teammates": [
+       null,
+       13.0,
+       16.0,
+       4.0,
+       2.0,
+       3.0
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      2,
+      53,
+      4,
+      1,
+      6
+     ],
+     "confidenceScore": 0.87,
+     "sampleSize": 723,
+     "era": {
+      "id": "2018-2021",
+      "label": "Late hybrid",
+      "seasons": "2021",
+      "span": "2018–2021",
+      "rules": "1.6-litre V6 turbo hybrid power units, used since 2014, in the wider, higher-downforce cars on wider tyres introduced in 2017.",
+      "caveat": "The era starts in 2018, the first season of the official timing archive, although its car rules date from 2017."
+     },
+     "source": "timing"
+    }
+   }
+  },
+  "mick-schumacher": {
+   "name": "Mick Schumacher",
+   "defaultEra": "2022-2025",
+   "signatures": {
+    "2018-2021": {
+     "driverId": "mick-schumacher",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": 13
+      },
+      {
+       "label": "Tyre Management",
+       "value": 16
+      },
+      {
+       "label": "Throttle Application",
+       "value": 4
+      },
+      {
+       "label": "Braking",
+       "value": 2
+      },
+      {
+       "label": "Consistency",
+       "value": 3
+      }
+     ],
+     "cohortAverage": [
+      null,
+      46.5,
+      52.6,
+      49.7,
+      49.2,
+      48.9
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       46.5,
+       52.6,
+       49.7,
+       49.2,
+       48.9
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
+      ],
+      "teammates": [
+       null,
+       2.0,
+       4.0,
+       1.0,
+       1.0,
+       1.0
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      20,
+      83,
+      7,
+      2,
+      10
+     ],
+     "confidenceScore": 0.78,
+     "sampleSize": 765,
+     "era": {
+      "id": "2018-2021",
+      "label": "Late hybrid",
+      "seasons": "2021",
+      "span": "2018–2021",
+      "rules": "1.6-litre V6 turbo hybrid power units, used since 2014, in the wider, higher-downforce cars on wider tyres introduced in 2017.",
+      "caveat": "The era starts in 2018, the first season of the official timing archive, although its car rules date from 2017."
+     },
+     "source": "timing"
+    },
+    "2022-2025": {
+     "driverId": "mick-schumacher",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": 64
+      },
+      {
+       "label": "Tyre Management",
+       "value": 32
+      },
+      {
+       "label": "Throttle Application",
+       "value": 23
+      },
+      {
+       "label": "Braking",
+       "value": 19
+      },
+      {
+       "label": "Consistency",
+       "value": 13
+      }
+     ],
+     "cohortAverage": [
+      null,
+      51.0,
+      46.5,
+      49.2,
+      50.7,
+      48.8
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       51.0,
+       46.5,
+       49.2,
+       50.7,
+       48.8
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
+      ],
+      "teammates": [
+       null,
+       28.0,
+       19.0,
+       44.0,
+       34.0,
+       11.0
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      75,
+      83,
+      38,
+      40,
+      29
+     ],
+     "confidenceScore": 0.63,
+     "sampleSize": 536,
+     "era": {
+      "id": "2022-2025",
+      "label": "Ground effect",
+      "seasons": "2022",
       "span": "2022–2025",
       "rules": "Most downforce comes from two Venturi tunnels under the floor, with simplified wings and 18-inch low-profile tyres, so that cars can follow each other more closely."
      },
@@ -2851,7 +4643,7 @@
    "name": "Lando Norris",
    "defaultEra": "2026-",
    "signatures": {
-    "2022-2025": {
+    "2018-2021": {
      "driverId": "norris",
      "series": "f1",
      "axes": [
@@ -2861,41 +4653,41 @@
       },
       {
        "label": "Entry Aggression",
-       "value": 99
+       "value": 67
       },
       {
        "label": "Tyre Management",
-       "value": 62
+       "value": 81
       },
       {
        "label": "Throttle Application",
-       "value": 57
+       "value": 45
       },
       {
        "label": "Braking",
-       "value": 74
+       "value": 88
       },
       {
        "label": "Consistency",
-       "value": 77
+       "value": 87
       }
      ],
      "cohortAverage": [
       null,
-      48.7,
-      47.4,
-      50.0,
-      51.1,
-      48.1
+      46.5,
+      52.6,
+      49.7,
+      49.2,
+      48.9
      ],
      "cohorts": {
       "era": [
        null,
-       48.7,
-       47.4,
-       50.0,
-       51.1,
-       48.1
+       46.5,
+       52.6,
+       49.7,
+       49.2,
+       48.9
       ],
       "allTime": [
        null,
@@ -2907,35 +4699,126 @@
       ],
       "champions": [
        null,
-       87.5,
-       60.0,
-       77.0,
-       69.0,
-       86.0
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
       ],
       "teammates": [
        null,
-       97.0,
-       79.0,
-       30.0,
-       84.0,
-       49.0
+       66.1,
+       78.8,
+       63.9,
+       57.9,
+       81.2
       ]
      },
      "uncertaintyEnvelope": [
       null,
-      100,
-      86,
-      67,
-      83,
+      73,
+      91,
+      54,
+      94,
+      96
+     ],
+     "confidenceScore": 0.81,
+     "sampleSize": 2150,
+     "era": {
+      "id": "2018-2021",
+      "label": "Late hybrid",
+      "seasons": "2019–2021",
+      "span": "2018–2021",
+      "rules": "1.6-litre V6 turbo hybrid power units, used since 2014, in the wider, higher-downforce cars on wider tyres introduced in 2017.",
+      "caveat": "The era starts in 2018, the first season of the official timing archive, although its car rules date from 2017."
+     },
+     "source": "timing"
+    },
+    "2022-2025": {
+     "driverId": "norris",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": 97
+      },
+      {
+       "label": "Tyre Management",
+       "value": 57
+      },
+      {
+       "label": "Throttle Application",
+       "value": 52
+      },
+      {
+       "label": "Braking",
+       "value": 80
+      },
+      {
+       "label": "Consistency",
+       "value": 75
+      }
+     ],
+     "cohortAverage": [
+      null,
+      51.0,
+      46.5,
+      49.2,
+      50.7,
+      48.8
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       51.0,
+       46.5,
+       49.2,
+       50.7,
+       48.8
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
+      ],
+      "teammates": [
+       null,
+       89.8,
+       76.1,
+       37.4,
+       80.2,
+       50.3
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      98,
+      78,
+      62,
+      84,
       84
      ],
-     "confidenceScore": 0.74,
-     "sampleSize": 2438,
+     "confidenceScore": 0.77,
+     "sampleSize": 3048,
      "era": {
       "id": "2022-2025",
       "label": "Ground effect",
-      "seasons": "2023–2025",
+      "seasons": "2022–2025",
       "span": "2022–2025",
       "rules": "Most downforce comes from two Venturi tunnels under the floor, with simplified wings and 18-inch low-profile tyres, so that cars can follow each other more closely."
      },
@@ -2951,15 +4834,15 @@
       },
       {
        "label": "Entry Aggression",
-       "value": 95
+       "value": 94
       },
       {
        "label": "Tyre Management",
-       "value": 30
+       "value": 37
       },
       {
        "label": "Throttle Application",
-       "value": 74
+       "value": 78
       },
       {
        "label": "Braking",
@@ -2967,25 +4850,25 @@
       },
       {
        "label": "Consistency",
-       "value": 93
+       "value": 96
       }
      ],
      "cohortAverage": [
       null,
+      53.5,
+      51.2,
       51.5,
-      53.2,
-      50.0,
-      48.7,
-      52.4
+      50.3,
+      53.2
      ],
      "cohorts": {
       "era": [
        null,
+       53.5,
+       51.2,
        51.5,
-       53.2,
-       50.0,
-       48.7,
-       52.4
+       50.3,
+       53.2
       ],
       "allTime": [
        null,
@@ -2997,31 +4880,31 @@
       ],
       "champions": [
        null,
-       87.5,
-       60.0,
-       77.0,
-       69.0,
-       86.0
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
       ],
       "teammates": [
        null,
-       82.0,
-       44.0,
-       22.0,
-       68.0,
-       47.0
+       85.0,
+       29.0,
+       24.0,
+       69.0,
+       61.0
       ]
      },
      "uncertaintyEnvelope": [
       null,
       98,
-      86,
       88,
-      96,
+      89,
+      94,
       100
      ],
-     "confidenceScore": 0.72,
-     "sampleSize": 475,
+     "confidenceScore": 0.7,
+     "sampleSize": 456,
      "era": {
       "id": "2026-",
       "label": "Active aero",
@@ -3038,7 +4921,7 @@
    "name": "Esteban Ocon",
    "defaultEra": "2026-",
    "signatures": {
-    "2022-2025": {
+    "2018-2021": {
      "driverId": "ocon",
      "series": "f1",
      "axes": [
@@ -3048,41 +4931,41 @@
       },
       {
        "label": "Entry Aggression",
-       "value": 24
+       "value": 49
       },
       {
        "label": "Tyre Management",
-       "value": 46
+       "value": 86
       },
       {
        "label": "Throttle Application",
-       "value": 14
+       "value": 9
       },
       {
        "label": "Braking",
-       "value": 11
+       "value": 24
       },
       {
        "label": "Consistency",
-       "value": 51
+       "value": 85
       }
      ],
      "cohortAverage": [
       null,
-      48.7,
-      47.4,
-      50.0,
-      51.1,
-      48.1
+      46.5,
+      52.6,
+      49.7,
+      49.2,
+      48.9
      ],
      "cohorts": {
       "era": [
        null,
-       48.7,
-       47.4,
-       50.0,
-       51.1,
-       48.1
+       46.5,
+       52.6,
+       49.7,
+       49.2,
+       48.9
       ],
       "allTime": [
        null,
@@ -3094,35 +4977,126 @@
       ],
       "champions": [
        null,
-       87.5,
-       60.0,
-       77.0,
-       69.0,
-       86.0
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
       ],
       "teammates": [
        null,
-       69.4,
-       43.3,
-       61.5,
-       50.4,
-       69.1
+       55.9,
+       79.8,
+       69.3,
+       53.6,
+       58.2
       ]
      },
      "uncertaintyEnvelope": [
       null,
-      31,
-      76,
-      21,
-      19,
-      80
+      58,
+      94,
+      10,
+      42,
+      95
      ],
-     "confidenceScore": 0.7,
-     "sampleSize": 1919,
+     "confidenceScore": 0.79,
+     "sampleSize": 1573,
+     "era": {
+      "id": "2018-2021",
+      "label": "Late hybrid",
+      "seasons": "2018–2021",
+      "span": "2018–2021",
+      "rules": "1.6-litre V6 turbo hybrid power units, used since 2014, in the wider, higher-downforce cars on wider tyres introduced in 2017.",
+      "caveat": "The era starts in 2018, the first season of the official timing archive, although its car rules date from 2017."
+     },
+     "source": "timing"
+    },
+    "2022-2025": {
+     "driverId": "ocon",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": 34
+      },
+      {
+       "label": "Tyre Management",
+       "value": 66
+      },
+      {
+       "label": "Throttle Application",
+       "value": 15
+      },
+      {
+       "label": "Braking",
+       "value": 20
+      },
+      {
+       "label": "Consistency",
+       "value": 83
+      }
+     ],
+     "cohortAverage": [
+      null,
+      51.0,
+      46.5,
+      49.2,
+      50.7,
+      48.8
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       51.0,
+       46.5,
+       49.2,
+       50.7,
+       48.8
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
+      ],
+      "teammates": [
+       null,
+       63.8,
+       60.7,
+       63.5,
+       60.3,
+       57.4
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      44,
+      84,
+      21,
+      22,
+      93
+     ],
+     "confidenceScore": 0.77,
+     "sampleSize": 2537,
      "era": {
       "id": "2022-2025",
       "label": "Ground effect",
-      "seasons": "2023–2025",
+      "seasons": "2022–2025",
       "span": "2022–2025",
       "rules": "Most downforce comes from two Venturi tunnels under the floor, with simplified wings and 18-inch low-profile tyres, so that cars can follow each other more closely."
      },
@@ -3138,41 +5112,41 @@
       },
       {
        "label": "Entry Aggression",
-       "value": 26
+       "value": 30
       },
       {
        "label": "Tyre Management",
-       "value": 5
+       "value": 3
       },
       {
        "label": "Throttle Application",
-       "value": 16
+       "value": 19
       },
       {
        "label": "Braking",
-       "value": 16
+       "value": 17
       },
       {
        "label": "Consistency",
-       "value": 31
+       "value": 26
       }
      ],
      "cohortAverage": [
       null,
+      53.5,
+      51.2,
       51.5,
-      53.2,
-      50.0,
-      48.7,
-      52.4
+      50.3,
+      53.2
      ],
      "cohorts": {
       "era": [
        null,
+       53.5,
+       51.2,
        51.5,
-       53.2,
-       50.0,
-       48.7,
-       52.4
+       50.3,
+       53.2
       ],
       "allTime": [
        null,
@@ -3184,31 +5158,31 @@
       ],
       "champions": [
        null,
-       87.5,
-       60.0,
-       77.0,
-       69.0,
-       86.0
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
       ],
       "teammates": [
        null,
-       55.0,
-       42.0,
-       9.0,
-       14.0,
-       65.0
+       56.0,
+       34.0,
+       12.0,
+       13.0,
+       54.0
       ]
      },
      "uncertaintyEnvelope": [
       null,
-      42,
-      18,
       44,
-      33,
+      21,
+      47,
+      36,
       74
      ],
-     "confidenceScore": 0.64,
-     "sampleSize": 547,
+     "confidenceScore": 0.65,
+     "sampleSize": 541,
      "era": {
       "id": "2026-",
       "label": "Active aero",
@@ -3225,7 +5199,7 @@
    "name": "Sergio Perez",
    "defaultEra": "2026-",
    "signatures": {
-    "2022-2025": {
+    "2018-2021": {
      "driverId": "perez",
      "series": "f1",
      "axes": [
@@ -3235,41 +5209,41 @@
       },
       {
        "label": "Entry Aggression",
-       "value": 53
+       "value": 45
       },
       {
        "label": "Tyre Management",
-       "value": 13
+       "value": 60
       },
       {
        "label": "Throttle Application",
-       "value": 99
+       "value": 64
       },
       {
        "label": "Braking",
-       "value": 43
+       "value": 31
       },
       {
        "label": "Consistency",
-       "value": 63
+       "value": 60
       }
      ],
      "cohortAverage": [
       null,
-      48.7,
-      47.4,
-      50.0,
-      51.1,
-      48.1
+      46.5,
+      52.6,
+      49.7,
+      49.2,
+      48.9
      ],
      "cohorts": {
       "era": [
        null,
-       48.7,
-       47.4,
-       50.0,
-       51.1,
-       48.1
+       46.5,
+       52.6,
+       49.7,
+       49.2,
+       48.9
       ],
       "allTime": [
        null,
@@ -3281,35 +5255,126 @@
       ],
       "champions": [
        null,
-       87.5,
-       60.0,
-       77.0,
-       69.0,
-       86.0
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
       ],
       "teammates": [
        null,
-       76.0,
-       58.0,
-       97.0,
-       64.0,
-       95.0
+       46.7,
+       45.9,
+       54.4,
+       32.1,
+       77.2
       ]
      },
      "uncertaintyEnvelope": [
       null,
-      65,
-      45,
-      100,
       48,
-      80
+      83,
+      78,
+      43,
+      77
      ],
-     "confidenceScore": 0.75,
-     "sampleSize": 1376,
+     "confidenceScore": 0.68,
+     "sampleSize": 2323,
+     "era": {
+      "id": "2018-2021",
+      "label": "Late hybrid",
+      "seasons": "2018–2021",
+      "span": "2018–2021",
+      "rules": "1.6-litre V6 turbo hybrid power units, used since 2014, in the wider, higher-downforce cars on wider tyres introduced in 2017.",
+      "caveat": "The era starts in 2018, the first season of the official timing archive, although its car rules date from 2017."
+     },
+     "source": "timing"
+    },
+    "2022-2025": {
+     "driverId": "perez",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": 70
+      },
+      {
+       "label": "Tyre Management",
+       "value": 13
+      },
+      {
+       "label": "Throttle Application",
+       "value": 99
+      },
+      {
+       "label": "Braking",
+       "value": 45
+      },
+      {
+       "label": "Consistency",
+       "value": 52
+      }
+     ],
+     "cohortAverage": [
+      null,
+      51.0,
+      46.5,
+      49.2,
+      50.7,
+      48.8
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       51.0,
+       46.5,
+       49.2,
+       50.7,
+       48.8
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
+      ],
+      "teammates": [
+       null,
+       80.0,
+       48.0,
+       98.0,
+       56.0,
+       97.0
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      75,
+      26,
+      100,
+      51,
+      76
+     ],
+     "confidenceScore": 0.8,
+     "sampleSize": 2079,
      "era": {
       "id": "2022-2025",
       "label": "Ground effect",
-      "seasons": "2023–2024",
+      "seasons": "2022–2024",
       "span": "2022–2025",
       "rules": "Most downforce comes from two Venturi tunnels under the floor, with simplified wings and 18-inch low-profile tyres, so that cars can follow each other more closely."
      },
@@ -3325,41 +5390,41 @@
       },
       {
        "label": "Entry Aggression",
-       "value": 7
+       "value": 10
       },
       {
        "label": "Tyre Management",
-       "value": 36
+       "value": 25
       },
       {
        "label": "Throttle Application",
-       "value": 34
+       "value": 33
       },
       {
        "label": "Braking",
-       "value": 9
+       "value": 12
       },
       {
        "label": "Consistency",
-       "value": 1
+       "value": 2
       }
      ],
      "cohortAverage": [
       null,
+      53.5,
+      51.2,
       51.5,
-      53.2,
-      50.0,
-      48.7,
-      52.4
+      50.3,
+      53.2
      ],
      "cohorts": {
       "era": [
        null,
+       53.5,
+       51.2,
        51.5,
-       53.2,
-       50.0,
-       48.7,
-       52.4
+       50.3,
+       53.2
       ],
       "allTime": [
        null,
@@ -3371,31 +5436,31 @@
       ],
       "champions": [
        null,
-       87.5,
-       60.0,
-       77.0,
-       69.0,
-       86.0
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
       ],
       "teammates": [
        null,
-       1.0,
-       3.0,
-       11.0,
        7.0,
-       3.0
+       2.0,
+       17.0,
+       8.0,
+       8.0
       ]
      },
      "uncertaintyEnvelope": [
       null,
-      12,
-      92,
-      56,
-      21,
-      2
+      17,
+      89,
+      59,
+      22,
+      7
      ],
      "confidenceScore": 0.67,
-     "sampleSize": 568,
+     "sampleSize": 574,
      "era": {
       "id": "2026-",
       "label": "Active aero",
@@ -3422,41 +5487,41 @@
       },
       {
        "label": "Entry Aggression",
-       "value": 97
+       "value": 96
       },
       {
        "label": "Tyre Management",
-       "value": 79
+       "value": 77
       },
       {
        "label": "Throttle Application",
-       "value": 30
+       "value": 31
       },
       {
        "label": "Braking",
-       "value": 84
+       "value": 83
       },
       {
        "label": "Consistency",
-       "value": 49
+       "value": 56
       }
      ],
      "cohortAverage": [
       null,
-      48.7,
-      47.4,
-      50.0,
-      51.1,
-      48.1
+      51.0,
+      46.5,
+      49.2,
+      50.7,
+      48.8
      ],
      "cohorts": {
       "era": [
        null,
-       48.7,
-       47.4,
-       50.0,
-       51.1,
-       48.1
+       51.0,
+       46.5,
+       49.2,
+       50.7,
+       48.8
       ],
       "allTime": [
        null,
@@ -3468,31 +5533,31 @@
       ],
       "champions": [
        null,
-       87.5,
-       60.0,
-       77.0,
-       69.0,
-       86.0
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
       ],
       "teammates": [
        null,
-       99.0,
-       62.0,
+       97.0,
        57.0,
-       74.0,
-       77.0
+       52.0,
+       80.0,
+       75.0
       ]
      },
      "uncertaintyEnvelope": [
       null,
       98,
-      92,
-      42,
       88,
-      80
+      38,
+      88,
+      76
      ],
-     "confidenceScore": 0.78,
-     "sampleSize": 2416,
+     "confidenceScore": 0.79,
+     "sampleSize": 2401,
      "era": {
       "id": "2022-2025",
       "label": "Ground effect",
@@ -3512,41 +5577,41 @@
       },
       {
        "label": "Entry Aggression",
-       "value": 82
+       "value": 85
       },
       {
        "label": "Tyre Management",
-       "value": 44
+       "value": 29
       },
       {
        "label": "Throttle Application",
-       "value": 22
+       "value": 24
       },
       {
        "label": "Braking",
-       "value": 68
+       "value": 69
       },
       {
        "label": "Consistency",
-       "value": 47
+       "value": 61
       }
      ],
      "cohortAverage": [
       null,
+      53.5,
+      51.2,
       51.5,
-      53.2,
-      50.0,
-      48.7,
-      52.4
+      50.3,
+      53.2
      ],
      "cohorts": {
       "era": [
        null,
+       53.5,
+       51.2,
        51.5,
-       53.2,
-       50.0,
-       48.7,
-       52.4
+       50.3,
+       53.2
       ],
       "allTime": [
        null,
@@ -3558,30 +5623,30 @@
       ],
       "champions": [
        null,
-       87.5,
-       60.0,
-       77.0,
-       69.0,
-       86.0
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
       ],
       "teammates": [
        null,
-       95.0,
-       30.0,
-       74.0,
+       94.0,
+       37.0,
+       78.0,
        93.0,
-       93.0
+       96.0
       ]
      },
      "uncertaintyEnvelope": [
       null,
-      90,
-      76,
-      31,
+      91,
+      68,
+      32,
       83,
-      82
+      87
      ],
-     "confidenceScore": 0.62,
+     "confidenceScore": 0.64,
      "sampleSize": 629,
      "era": {
       "id": "2026-",
@@ -3595,12 +5660,12 @@
     }
    }
   },
-  "ricciardo": {
-   "name": "Daniel Ricciardo",
-   "defaultEra": "2022-2025",
+  "raikkonen": {
+   "name": "Kimi Räikkönen",
+   "defaultEra": "2018-2021",
    "signatures": {
-    "2022-2025": {
-     "driverId": "ricciardo",
+    "2018-2021": {
+     "driverId": "raikkonen",
      "series": "f1",
      "axes": [
       {
@@ -3609,41 +5674,41 @@
       },
       {
        "label": "Entry Aggression",
-       "value": 64
+       "value": 24
       },
       {
        "label": "Tyre Management",
-       "value": 70
+       "value": 46
       },
       {
        "label": "Throttle Application",
-       "value": 68
+       "value": 36
       },
       {
        "label": "Braking",
-       "value": 53
+       "value": 33
       },
       {
        "label": "Consistency",
-       "value": 9
+       "value": 48
       }
      ],
      "cohortAverage": [
       null,
-      48.7,
-      47.4,
-      50.0,
-      51.1,
-      48.1
+      46.5,
+      52.6,
+      49.7,
+      49.2,
+      48.9
      ],
      "cohorts": {
       "era": [
        null,
-       48.7,
-       47.4,
-       50.0,
-       51.1,
-       48.1
+       46.5,
+       52.6,
+       49.7,
+       49.2,
+       48.9
       ],
       "allTime": [
        null,
@@ -3655,35 +5720,223 @@
       ],
       "champions": [
        null,
-       87.5,
-       60.0,
-       77.0,
-       69.0,
-       86.0
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
       ],
       "teammates": [
        null,
-       45.0,
-       19.0,
-       66.0,
-       89.0,
-       41.0
+       41.8,
+       16.3,
+       30.6,
+       32.7,
+       59.8
       ]
      },
      "uncertaintyEnvelope": [
       null,
+      31,
       73,
-      92,
-      81,
-      60,
-      32
+      47,
+      42,
+      73
      ],
-     "confidenceScore": 0.65,
-     "sampleSize": 710,
+     "confidenceScore": 0.7,
+     "sampleSize": 2413,
+     "era": {
+      "id": "2018-2021",
+      "label": "Late hybrid",
+      "seasons": "2018–2021",
+      "span": "2018–2021",
+      "rules": "1.6-litre V6 turbo hybrid power units, used since 2014, in the wider, higher-downforce cars on wider tyres introduced in 2017.",
+      "caveat": "The era starts in 2018, the first season of the official timing archive, although its car rules date from 2017."
+     },
+     "source": "timing"
+    }
+   }
+  },
+  "ricciardo": {
+   "name": "Daniel Ricciardo",
+   "defaultEra": "2022-2025",
+   "signatures": {
+    "2018-2021": {
+     "driverId": "ricciardo",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": 90
+      },
+      {
+       "label": "Tyre Management",
+       "value": 87
+      },
+      {
+       "label": "Throttle Application",
+       "value": 67
+      },
+      {
+       "label": "Braking",
+       "value": 73
+      },
+      {
+       "label": "Consistency",
+       "value": 73
+      }
+     ],
+     "cohortAverage": [
+      null,
+      46.5,
+      52.6,
+      49.7,
+      49.2,
+      48.9
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       46.5,
+       52.6,
+       49.7,
+       49.2,
+       48.9
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
+      ],
+      "teammates": [
+       null,
+       71.5,
+       73.1,
+       53.1,
+       60.7,
+       78.0
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      93,
+      96,
+      75,
+      83,
+      86
+     ],
+     "confidenceScore": 0.74,
+     "sampleSize": 2447,
+     "era": {
+      "id": "2018-2021",
+      "label": "Late hybrid",
+      "seasons": "2018–2021",
+      "span": "2018–2021",
+      "rules": "1.6-litre V6 turbo hybrid power units, used since 2014, in the wider, higher-downforce cars on wider tyres introduced in 2017.",
+      "caveat": "The era starts in 2018, the first season of the official timing archive, although its car rules date from 2017."
+     },
+     "source": "timing"
+    },
+    "2022-2025": {
+     "driverId": "ricciardo",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": 69
+      },
+      {
+       "label": "Tyre Management",
+       "value": 73
+      },
+      {
+       "label": "Throttle Application",
+       "value": 59
+      },
+      {
+       "label": "Braking",
+       "value": 71
+      },
+      {
+       "label": "Consistency",
+       "value": 31
+      }
+     ],
+     "cohortAverage": [
+      null,
+      51.0,
+      46.5,
+      49.2,
+      50.7,
+      48.8
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       51.0,
+       46.5,
+       49.2,
+       50.7,
+       48.8
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
+      ],
+      "teammates": [
+       null,
+       70.2,
+       50.4,
+       62.4,
+       83.8,
+       57.0
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      75,
+      91,
+      74,
+      83,
+      76
+     ],
+     "confidenceScore": 0.63,
+     "sampleSize": 1249,
      "era": {
       "id": "2022-2025",
       "label": "Ground effect",
-      "seasons": "2023–2024",
+      "seasons": "2022–2024",
       "span": "2022–2025",
       "rules": "Most downforce comes from two Venturi tunnels under the floor, with simplified wings and 18-inch low-profile tyres, so that cars can follow each other more closely."
      },
@@ -3695,7 +5948,7 @@
    "name": "George Russell",
    "defaultEra": "2026-",
    "signatures": {
-    "2022-2025": {
+    "2018-2021": {
      "driverId": "russell",
      "series": "f1",
      "axes": [
@@ -3705,41 +5958,41 @@
       },
       {
        "label": "Entry Aggression",
-       "value": 72
+       "value": 22
       },
       {
        "label": "Tyre Management",
-       "value": 72
+       "value": 64
       },
       {
        "label": "Throttle Application",
-       "value": 70
+       "value": 35
       },
       {
        "label": "Braking",
-       "value": 70
+       "value": 27
       },
       {
        "label": "Consistency",
-       "value": 91
+       "value": 17
       }
      ],
      "cohortAverage": [
       null,
-      48.7,
-      47.4,
-      50.0,
-      51.1,
-      48.1
+      46.5,
+      52.6,
+      49.7,
+      49.2,
+      48.9
      ],
      "cohorts": {
       "era": [
        null,
-       48.7,
-       47.4,
-       50.0,
-       51.1,
-       48.1
+       46.5,
+       52.6,
+       49.7,
+       49.2,
+       48.9
       ],
       "allTime": [
        null,
@@ -3751,35 +6004,126 @@
       ],
       "champions": [
        null,
-       87.5,
-       60.0,
-       77.0,
-       69.0,
-       86.0
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
       ],
       "teammates": [
        null,
-       56.1,
-       62.4,
-       47.0,
-       64.3,
-       55.8
+       5.9,
+       36.2,
+       13.2,
+       16.0,
+       10.9
       ]
      },
      "uncertaintyEnvelope": [
       null,
-      73,
+      25,
       88,
-      81,
-      81,
-      96
+      47,
+      40,
+      28
      ],
-     "confidenceScore": 0.83,
-     "sampleSize": 2448,
+     "confidenceScore": 0.73,
+     "sampleSize": 1999,
+     "era": {
+      "id": "2018-2021",
+      "label": "Late hybrid",
+      "seasons": "2019–2021",
+      "span": "2018–2021",
+      "rules": "1.6-litre V6 turbo hybrid power units, used since 2014, in the wider, higher-downforce cars on wider tyres introduced in 2017.",
+      "caveat": "The era starts in 2018, the first season of the official timing archive, although its car rules date from 2017."
+     },
+     "source": "timing"
+    },
+    "2022-2025": {
+     "driverId": "russell",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": 76
+      },
+      {
+       "label": "Tyre Management",
+       "value": 71
+      },
+      {
+       "label": "Throttle Application",
+       "value": 81
+      },
+      {
+       "label": "Braking",
+       "value": 72
+      },
+      {
+       "label": "Consistency",
+       "value": 93
+      }
+     ],
+     "cohortAverage": [
+      null,
+      51.0,
+      46.5,
+      49.2,
+      50.7,
+      48.8
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       51.0,
+       46.5,
+       49.2,
+       50.7,
+       48.8
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
+      ],
+      "teammates": [
+       null,
+       61.0,
+       62.8,
+       45.0,
+       73.1,
+       55.1
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      79,
+      85,
+      86,
+      81,
+      98
+     ],
+     "confidenceScore": 0.84,
+     "sampleSize": 3184,
      "era": {
       "id": "2022-2025",
       "label": "Ground effect",
-      "seasons": "2023–2025",
+      "seasons": "2022–2025",
       "span": "2022–2025",
       "rules": "Most downforce comes from two Venturi tunnels under the floor, with simplified wings and 18-inch low-profile tyres, so that cars can follow each other more closely."
      },
@@ -3795,41 +6139,41 @@
       },
       {
        "label": "Entry Aggression",
-       "value": 89
+       "value": 88
       },
       {
        "label": "Tyre Management",
-       "value": 74
+       "value": 70
       },
       {
        "label": "Throttle Application",
-       "value": 78
+       "value": 83
       },
       {
        "label": "Braking",
-       "value": 55
+       "value": 57
       },
       {
        "label": "Consistency",
-       "value": 73
+       "value": 77
       }
      ],
      "cohortAverage": [
       null,
+      53.5,
+      51.2,
       51.5,
-      53.2,
-      50.0,
-      48.7,
-      52.4
+      50.3,
+      53.2
      ],
      "cohorts": {
       "era": [
        null,
+       53.5,
+       51.2,
        51.5,
-       53.2,
-       50.0,
-       48.7,
-       52.4
+       50.3,
+       53.2
       ],
       "allTime": [
        null,
@@ -3841,28 +6185,28 @@
       ],
       "champions": [
        null,
-       87.5,
-       60.0,
-       77.0,
-       69.0,
-       86.0
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
       ],
       "teammates": [
        null,
        91.0,
-       97.0,
-       89.0,
-       51.0,
-       85.0
+       95.0,
+       90.0,
+       52.0,
+       92.0
       ]
      },
      "uncertaintyEnvelope": [
       null,
+      93,
       94,
-      94,
-      94,
+      93,
       69,
-      88
+      95
      ],
      "confidenceScore": 0.61,
      "sampleSize": 616,
@@ -3882,7 +6226,7 @@
    "name": "Carlos Sainz",
    "defaultEra": "2026-",
    "signatures": {
-    "2022-2025": {
+    "2018-2021": {
      "driverId": "sainz",
      "series": "f1",
      "axes": [
@@ -3892,41 +6236,41 @@
       },
       {
        "label": "Entry Aggression",
-       "value": 43
+       "value": 52
       },
       {
        "label": "Tyre Management",
-       "value": 83
+       "value": 74
       },
       {
        "label": "Throttle Application",
-       "value": 47
+       "value": 62
       },
       {
        "label": "Braking",
-       "value": 24
+       "value": 49
       },
       {
        "label": "Consistency",
-       "value": 83
+       "value": 86
       }
      ],
      "cohortAverage": [
       null,
-      48.7,
-      47.4,
-      50.0,
-      51.1,
-      48.1
+      46.5,
+      52.6,
+      49.7,
+      49.2,
+      48.9
      ],
      "cohorts": {
       "era": [
        null,
-       48.7,
-       47.4,
-       50.0,
-       51.1,
-       48.1
+       46.5,
+       52.6,
+       49.7,
+       49.2,
+       48.9
       ],
       "allTime": [
        null,
@@ -3938,35 +6282,126 @@
       ],
       "champions": [
        null,
-       87.5,
-       60.0,
-       77.0,
-       69.0,
-       86.0
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
       ],
       "teammates": [
        null,
-       60.9,
+       66.4,
        65.9,
-       21.4,
-       49.1,
-       62.1
+       43.8,
+       69.2,
+       70.8
       ]
      },
      "uncertaintyEnvelope": [
       null,
-      48,
-      92,
-      54,
-      38,
-      92
+      58,
+      90,
+      75,
+      53,
+      93
      ],
-     "confidenceScore": 0.82,
-     "sampleSize": 2310,
+     "confidenceScore": 0.8,
+     "sampleSize": 2728,
+     "era": {
+      "id": "2018-2021",
+      "label": "Late hybrid",
+      "seasons": "2018–2021",
+      "span": "2018–2021",
+      "rules": "1.6-litre V6 turbo hybrid power units, used since 2014, in the wider, higher-downforce cars on wider tyres introduced in 2017.",
+      "caveat": "The era starts in 2018, the first season of the official timing archive, although its car rules date from 2017."
+     },
+     "source": "timing"
+    },
+    "2022-2025": {
+     "driverId": "sainz",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": 54
+      },
+      {
+       "label": "Tyre Management",
+       "value": 68
+      },
+      {
+       "label": "Throttle Application",
+       "value": 50
+      },
+      {
+       "label": "Braking",
+       "value": 35
+      },
+      {
+       "label": "Consistency",
+       "value": 89
+      }
+     ],
+     "cohortAverage": [
+      null,
+      51.0,
+      46.5,
+      49.2,
+      50.7,
+      48.8
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       51.0,
+       46.5,
+       49.2,
+       50.7,
+       48.8
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
+      ],
+      "teammates": [
+       null,
+       68.8,
+       47.3,
+       30.3,
+       55.2,
+       69.4
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      59,
+      83,
+      60,
+      43,
+      95
+     ],
+     "confidenceScore": 0.79,
+     "sampleSize": 2971,
      "era": {
       "id": "2022-2025",
       "label": "Ground effect",
-      "seasons": "2023–2025",
+      "seasons": "2022–2025",
       "span": "2022–2025",
       "rules": "Most downforce comes from two Venturi tunnels under the floor, with simplified wings and 18-inch low-profile tyres, so that cars can follow each other more closely."
      },
@@ -3982,41 +6417,41 @@
       },
       {
        "label": "Entry Aggression",
-       "value": 14
+       "value": 18
       },
       {
        "label": "Tyre Management",
-       "value": 64
+       "value": 53
       },
       {
        "label": "Throttle Application",
-       "value": 28
+       "value": 29
       },
       {
        "label": "Braking",
-       "value": 3
+       "value": 6
       },
       {
        "label": "Consistency",
-       "value": 29
+       "value": 27
       }
      ],
      "cohortAverage": [
       null,
+      53.5,
+      51.2,
       51.5,
-      53.2,
-      50.0,
-      48.7,
-      52.4
+      50.3,
+      53.2
      ],
      "cohorts": {
       "era": [
        null,
+       53.5,
+       51.2,
        51.5,
-       53.2,
-       50.0,
-       48.7,
-       52.4
+       50.3,
+       53.2
       ],
       "allTime": [
        null,
@@ -4028,31 +6463,31 @@
       ],
       "champions": [
        null,
-       87.5,
-       60.0,
-       77.0,
-       69.0,
-       86.0
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
       ],
       "teammates": [
        null,
-       5.0,
-       32.0,
-       3.0,
-       1.0,
+       9.0,
+       35.0,
+       7.0,
+       4.0,
        23.0
       ]
      },
      "uncertaintyEnvelope": [
       null,
+      23,
+      87,
+      40,
       21,
-      92,
-      44,
-      19,
-      68
+      58
      ],
-     "confidenceScore": 0.59,
-     "sampleSize": 611,
+     "confidenceScore": 0.65,
+     "sampleSize": 606,
      "era": {
       "id": "2026-",
       "label": "Active aero",
@@ -4087,33 +6522,33 @@
       },
       {
        "label": "Throttle Application",
-       "value": 7
+       "value": 10
       },
       {
        "label": "Braking",
-       "value": 26
+       "value": 28
       },
       {
        "label": "Consistency",
-       "value": 11
+       "value": 16
       }
      ],
      "cohortAverage": [
       null,
-      48.7,
-      47.4,
-      50.0,
-      51.1,
-      48.1
+      51.0,
+      46.5,
+      49.2,
+      50.7,
+      48.8
      ],
      "cohorts": {
       "era": [
        null,
-       48.7,
-       47.4,
-       50.0,
-       51.1,
-       48.1
+       51.0,
+       46.5,
+       49.2,
+       50.7,
+       48.8
       ],
       "allTime": [
        null,
@@ -4125,31 +6560,31 @@
       ],
       "champions": [
        null,
-       87.5,
-       60.0,
-       77.0,
-       69.0,
-       86.0
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
       ],
       "teammates": [
        null,
-       28.0,
-       85.0,
-       1.0,
-       30.0,
-       45.0
+       29.0,
+       65.0,
+       3.0,
+       22.0,
+       62.0
       ]
      },
      "uncertaintyEnvelope": [
       null,
-      21,
+      25,
       6,
-      15,
-      40,
-      30
+      21,
+      43,
+      29
      ],
-     "confidenceScore": 0.85,
-     "sampleSize": 1033,
+     "confidenceScore": 0.86,
+     "sampleSize": 1018,
      "era": {
       "id": "2022-2025",
       "label": "Ground effect",
@@ -4161,12 +6596,12 @@
     }
    }
   },
-  "stroll": {
-   "name": "Lance Stroll",
-   "defaultEra": "2026-",
+  "sirotkin": {
+   "name": "Sergey Sirotkin",
+   "defaultEra": "2018-2021",
    "signatures": {
-    "2022-2025": {
-     "driverId": "stroll",
+    "2018-2021": {
+     "driverId": "sirotkin",
      "series": "f1",
      "axes": [
       {
@@ -4175,41 +6610,41 @@
       },
       {
        "label": "Entry Aggression",
-       "value": 18
+       "value": 4
       },
       {
        "label": "Tyre Management",
-       "value": 23
+       "value": 9
       },
       {
        "label": "Throttle Application",
-       "value": 84
+       "value": 13
       },
       {
        "label": "Braking",
-       "value": 78
+       "value": 30
       },
       {
        "label": "Consistency",
-       "value": 67
+       "value": 7
       }
      ],
      "cohortAverage": [
       null,
-      48.7,
-      47.4,
-      50.0,
-      51.1,
-      48.1
+      46.5,
+      52.6,
+      49.7,
+      49.2,
+      48.9
      ],
      "cohorts": {
       "era": [
        null,
-       48.7,
-       47.4,
-       50.0,
-       51.1,
-       48.1
+       46.5,
+       52.6,
+       49.7,
+       49.2,
+       48.9
       ],
       "allTime": [
        null,
@@ -4221,35 +6656,223 @@
       ],
       "champions": [
        null,
-       87.5,
-       60.0,
-       77.0,
-       69.0,
-       86.0
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
       ],
       "teammates": [
        null,
-       34.0,
-       95.0,
-       61.0,
-       80.0,
-       39.0
+       17.0,
+       26.0,
+       57.0,
+       9.0,
+       63.0
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      10,
+      44,
+      32,
+      51,
+      19
+     ],
+     "confidenceScore": 0.74,
+     "sampleSize": 813,
+     "era": {
+      "id": "2018-2021",
+      "label": "Late hybrid",
+      "seasons": "2018",
+      "span": "2018–2021",
+      "rules": "1.6-litre V6 turbo hybrid power units, used since 2014, in the wider, higher-downforce cars on wider tyres introduced in 2017.",
+      "caveat": "The era starts in 2018, the first season of the official timing archive, although its car rules date from 2017."
+     },
+     "source": "timing"
+    }
+   }
+  },
+  "stroll": {
+   "name": "Lance Stroll",
+   "defaultEra": "2026-",
+   "signatures": {
+    "2018-2021": {
+     "driverId": "stroll",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": 17
+      },
+      {
+       "label": "Tyre Management",
+       "value": 26
+      },
+      {
+       "label": "Throttle Application",
+       "value": 57
+      },
+      {
+       "label": "Braking",
+       "value": 9
+      },
+      {
+       "label": "Consistency",
+       "value": 63
+      }
+     ],
+     "cohortAverage": [
+      null,
+      46.5,
+      52.6,
+      49.7,
+      49.2,
+      48.9
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       46.5,
+       52.6,
+       49.7,
+       49.2,
+       48.9
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
+      ],
+      "teammates": [
+       null,
+       40.2,
+       36.8,
+       47.8,
+       34.1,
+       51.9
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      22,
+      61,
+      74,
+      17,
+      82
+     ],
+     "confidenceScore": 0.68,
+     "sampleSize": 2371,
+     "era": {
+      "id": "2018-2021",
+      "label": "Late hybrid",
+      "seasons": "2018–2021",
+      "span": "2018–2021",
+      "rules": "1.6-litre V6 turbo hybrid power units, used since 2014, in the wider, higher-downforce cars on wider tyres introduced in 2017.",
+      "caveat": "The era starts in 2018, the first season of the official timing archive, although its car rules date from 2017."
+     },
+     "source": "timing"
+    },
+    "2022-2025": {
+     "driverId": "stroll",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": 19
+      },
+      {
+       "label": "Tyre Management",
+       "value": 30
+      },
+      {
+       "label": "Throttle Application",
+       "value": 86
+      },
+      {
+       "label": "Braking",
+       "value": 65
+      },
+      {
+       "label": "Consistency",
+       "value": 68
+      }
+     ],
+     "cohortAverage": [
+      null,
+      51.0,
+      46.5,
+      49.2,
+      50.7,
+      48.8
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       51.0,
+       46.5,
+       49.2,
+       50.7,
+       48.8
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
+      ],
+      "teammates": [
+       null,
+       41.2,
+       94.4,
+       67.3,
+       70.2,
+       45.3
       ]
      },
      "uncertaintyEnvelope": [
       null,
       23,
-      71,
-      90,
+      67,
       88,
-      80
+      79,
+      83
      ],
-     "confidenceScore": 0.7,
-     "sampleSize": 1915,
+     "confidenceScore": 0.71,
+     "sampleSize": 2438,
      "era": {
       "id": "2022-2025",
       "label": "Ground effect",
-      "seasons": "2023–2025",
+      "seasons": "2022–2025",
       "span": "2022–2025",
       "rules": "Most downforce comes from two Venturi tunnels under the floor, with simplified wings and 18-inch low-profile tyres, so that cars can follow each other more closely."
      },
@@ -4265,41 +6888,41 @@
       },
       {
        "label": "Entry Aggression",
-       "value": 3
+       "value": 8
       },
       {
        "label": "Tyre Management",
-       "value": 38
+       "value": 24
       },
       {
        "label": "Throttle Application",
-       "value": 95
+       "value": 96
       },
       {
        "label": "Braking",
-       "value": 76
+       "value": 81
       },
       {
        "label": "Consistency",
-       "value": 13
+       "value": 15
       }
      ],
      "cohortAverage": [
       null,
+      53.5,
+      51.2,
       51.5,
-      53.2,
-      50.0,
-      48.7,
-      52.4
+      50.3,
+      53.2
      ],
      "cohorts": {
       "era": [
        null,
+       53.5,
+       51.2,
        51.5,
-       53.2,
-       50.0,
-       48.7,
-       52.4
+       50.3,
+       53.2
       ],
       "allTime": [
        null,
@@ -4311,31 +6934,31 @@
       ],
       "champions": [
        null,
-       87.5,
-       60.0,
-       77.0,
-       69.0,
-       86.0
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
       ],
       "teammates": [
        null,
-       11.0,
-       50.0,
-       86.0,
-       86.0,
-       7.0
+       14.0,
+       52.0,
+       88.0,
+       85.0,
+       10.0
       ]
      },
      "uncertaintyEnvelope": [
       null,
-      13,
-      92,
+      19,
+      85,
       100,
       94,
-      40
+      39
      ],
-     "confidenceScore": 0.61,
-     "sampleSize": 375,
+     "confidenceScore": 0.63,
+     "sampleSize": 365,
      "era": {
       "id": "2026-",
       "label": "Active aero",
@@ -4352,6 +6975,97 @@
    "name": "Yuki Tsunoda",
    "defaultEra": "2022-2025",
    "signatures": {
+    "2018-2021": {
+     "driverId": "tsunoda",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": 61
+      },
+      {
+       "label": "Tyre Management",
+       "value": 98
+      },
+      {
+       "label": "Throttle Application",
+       "value": 91
+      },
+      {
+       "label": "Braking",
+       "value": 92
+      },
+      {
+       "label": "Consistency",
+       "value": 58
+      }
+     ],
+     "cohortAverage": [
+      null,
+      46.5,
+      52.6,
+      49.7,
+      49.2,
+      48.9
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       46.5,
+       52.6,
+       49.7,
+       49.2,
+       48.9
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
+      ],
+      "teammates": [
+       null,
+       81.0,
+       49.0,
+       87.0,
+       90.0,
+       67.0
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      75,
+      100,
+      96,
+      96,
+      92
+     ],
+     "confidenceScore": 0.75,
+     "sampleSize": 553,
+     "era": {
+      "id": "2018-2021",
+      "label": "Late hybrid",
+      "seasons": "2021",
+      "span": "2018–2021",
+      "rules": "1.6-litre V6 turbo hybrid power units, used since 2014, in the wider, higher-downforce cars on wider tyres introduced in 2017.",
+      "caveat": "The era starts in 2018, the first season of the official timing archive, although its car rules date from 2017."
+     },
+     "source": "timing"
+    },
     "2022-2025": {
      "driverId": "tsunoda",
      "series": "f1",
@@ -4362,41 +7076,41 @@
       },
       {
        "label": "Entry Aggression",
-       "value": 45
+       "value": 48
       },
       {
        "label": "Tyre Management",
-       "value": 19
+       "value": 45
       },
       {
        "label": "Throttle Application",
-       "value": 66
+       "value": 71
       },
       {
        "label": "Braking",
-       "value": 89
+       "value": 87
       },
       {
        "label": "Consistency",
-       "value": 41
+       "value": 42
       }
      ],
      "cohortAverage": [
       null,
-      48.7,
-      47.4,
-      50.0,
-      51.1,
-      48.1
+      51.0,
+      46.5,
+      49.2,
+      50.7,
+      48.8
      ],
      "cohorts": {
       "era": [
        null,
-       48.7,
-       47.4,
-       50.0,
-       51.1,
-       48.1
+       51.0,
+       46.5,
+       49.2,
+       50.7,
+       48.8
       ],
       "allTime": [
        null,
@@ -4408,37 +7122,134 @@
       ],
       "champions": [
        null,
-       87.5,
-       60.0,
-       77.0,
-       69.0,
-       86.0
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
       ],
       "teammates": [
        null,
-       66.2,
-       58.8,
-       79.6,
-       57.3,
-       49.0
+       73.2,
+       49.9,
+       77.7,
+       63.0,
+       63.0
       ]
      },
      "uncertaintyEnvelope": [
       null,
-      56,
-      63,
+      52,
       73,
-      94,
-      74
+      77,
+      91,
+      72
      ],
-     "confidenceScore": 0.73,
-     "sampleSize": 1881,
+     "confidenceScore": 0.72,
+     "sampleSize": 2395,
      "era": {
       "id": "2022-2025",
       "label": "Ground effect",
-      "seasons": "2023–2025",
+      "seasons": "2022–2025",
       "span": "2022–2025",
       "rules": "Most downforce comes from two Venturi tunnels under the floor, with simplified wings and 18-inch low-profile tyres, so that cars can follow each other more closely."
+     },
+     "source": "timing"
+    }
+   }
+  },
+  "vandoorne": {
+   "name": "Stoffel Vandoorne",
+   "defaultEra": "2018-2021",
+   "signatures": {
+    "2018-2021": {
+     "driverId": "vandoorne",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": 15
+      },
+      {
+       "label": "Tyre Management",
+       "value": 91
+      },
+      {
+       "label": "Throttle Application",
+       "value": 70
+      },
+      {
+       "label": "Braking",
+       "value": 66
+      },
+      {
+       "label": "Consistency",
+       "value": 80
+      }
+     ],
+     "cohortAverage": [
+      null,
+      46.5,
+      52.6,
+      49.7,
+      49.2,
+      48.9
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       46.5,
+       52.6,
+       49.7,
+       49.2,
+       48.9
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
+      ],
+      "teammates": [
+       null,
+       40.0,
+       93.0,
+       76.0,
+       60.0,
+       45.0
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      23,
+      99,
+      86,
+      83,
+      98
+     ],
+     "confidenceScore": 0.62,
+     "sampleSize": 641,
+     "era": {
+      "id": "2018-2021",
+      "label": "Late hybrid",
+      "seasons": "2018",
+      "span": "2018–2021",
+      "rules": "1.6-litre V6 turbo hybrid power units, used since 2014, in the wider, higher-downforce cars on wider tyres introduced in 2017.",
+      "caveat": "The era starts in 2018, the first season of the official timing archive, although its car rules date from 2017."
      },
      "source": "timing"
     }
@@ -4448,6 +7259,97 @@
    "name": "Max Verstappen",
    "defaultEra": "2026-",
    "signatures": {
+    "2018-2021": {
+     "driverId": "verstappen",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": 93
+      },
+      {
+       "label": "Tyre Management",
+       "value": 38
+      },
+      {
+       "label": "Throttle Application",
+       "value": 94
+      },
+      {
+       "label": "Braking",
+       "value": 78
+      },
+      {
+       "label": "Consistency",
+       "value": 95
+      }
+     ],
+     "cohortAverage": [
+      null,
+      46.5,
+      52.6,
+      49.7,
+      49.2,
+      48.9
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       46.5,
+       52.6,
+       49.7,
+       49.2,
+       48.9
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
+      ],
+      "teammates": [
+       null,
+       72.5,
+       66.1,
+       60.9,
+       53.9,
+       58.4
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      96,
+      57,
+      95,
+      84,
+      98
+     ],
+     "confidenceScore": 0.84,
+     "sampleSize": 2856,
+     "era": {
+      "id": "2018-2021",
+      "label": "Late hybrid",
+      "seasons": "2018–2021",
+      "span": "2018–2021",
+      "rules": "1.6-litre V6 turbo hybrid power units, used since 2014, in the wider, higher-downforce cars on wider tyres introduced in 2017.",
+      "caveat": "The era starts in 2018, the first season of the official timing archive, although its car rules date from 2017."
+     },
+     "source": "timing"
+    },
     "2022-2025": {
      "driverId": "verstappen",
      "series": "f1",
@@ -4458,41 +7360,41 @@
       },
       {
        "label": "Entry Aggression",
-       "value": 76
+       "value": 80
       },
       {
        "label": "Tyre Management",
-       "value": 58
+       "value": 48
       },
       {
        "label": "Throttle Application",
-       "value": 97
+       "value": 98
       },
       {
        "label": "Braking",
-       "value": 64
+       "value": 56
       },
       {
        "label": "Consistency",
-       "value": 95
+       "value": 97
       }
      ],
      "cohortAverage": [
       null,
-      48.7,
-      47.4,
-      50.0,
-      51.1,
-      48.1
+      51.0,
+      46.5,
+      49.2,
+      50.7,
+      48.8
      ],
      "cohorts": {
       "era": [
        null,
-       48.7,
-       47.4,
-       50.0,
-       51.1,
-       48.1
+       51.0,
+       46.5,
+       49.2,
+       50.7,
+       48.8
       ],
       "allTime": [
        null,
@@ -4504,35 +7406,35 @@
       ],
       "champions": [
        null,
-       87.5,
-       60.0,
-       77.0,
-       69.0,
-       86.0
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
       ],
       "teammates": [
        null,
-       50.4,
-       16.4,
-       88.0,
-       57.6,
-       56.2
+       64.3,
+       21.9,
+       91.9,
+       55.2,
+       49.9
       ]
      },
      "uncertaintyEnvelope": [
       null,
-      81,
-      86,
-      98,
-      73,
-      100
+      83,
+      71,
+      99,
+      63,
+      99
      ],
-     "confidenceScore": 0.79,
-     "sampleSize": 2914,
+     "confidenceScore": 0.84,
+     "sampleSize": 3679,
      "era": {
       "id": "2022-2025",
       "label": "Ground effect",
-      "seasons": "2023–2025",
+      "seasons": "2022–2025",
       "span": "2022–2025",
       "rules": "Most downforce comes from two Venturi tunnels under the floor, with simplified wings and 18-inch low-profile tyres, so that cars can follow each other more closely."
      },
@@ -4548,15 +7450,15 @@
       },
       {
        "label": "Entry Aggression",
-       "value": 86
+       "value": 87
       },
       {
        "label": "Tyre Management",
-       "value": 81
+       "value": 82
       },
       {
        "label": "Throttle Application",
-       "value": 91
+       "value": 92
       },
       {
        "label": "Braking",
@@ -4564,25 +7466,25 @@
       },
       {
        "label": "Consistency",
-       "value": 99
+       "value": 98
       }
      ],
      "cohortAverage": [
       null,
+      53.5,
+      51.2,
       51.5,
-      53.2,
-      50.0,
-      48.7,
-      52.4
+      50.3,
+      53.2
      ],
      "cohorts": {
       "era": [
        null,
+       53.5,
+       51.2,
        51.5,
-       53.2,
-       50.0,
-       48.7,
-       52.4
+       50.3,
+       53.2
       ],
       "allTime": [
        null,
@@ -4594,31 +7496,31 @@
       ],
       "champions": [
        null,
-       87.5,
-       60.0,
-       77.0,
-       69.0,
-       86.0
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
       ],
       "teammates": [
        null,
-       68.0,
-       71.9,
-       51.8,
-       87.2,
-       60.0
+       72.2,
+       72.6,
+       48.1,
+       87.1,
+       50.3
       ]
      },
      "uncertaintyEnvelope": [
       null,
-      94,
-      94,
-      98,
+      93,
+      95,
+      99,
       94,
       100
      ],
-     "confidenceScore": 0.79,
-     "sampleSize": 602,
+     "confidenceScore": 0.78,
+     "sampleSize": 603,
      "era": {
       "id": "2026-",
       "label": "Active aero",
@@ -4626,6 +7528,193 @@
       "span": "2026 onwards",
       "rules": "Front and rear wings switch between a corner mode and a low-drag straight mode, replacing DRS. Cars are shorter, narrower and lighter (768 kg), the floor tunnels are gone, and power is split roughly half and half between combustion and electric, with the MGU-H removed and fully sustainable fuel.",
       "caveat": "Energy recovery is a bigger part of each lap: drivers lift off before braking to recharge and cars harvest at full throttle at the end of straights. Throttle and braking traces reflect energy management as well as driving style."
+     },
+     "source": "timing"
+    }
+   }
+  },
+  "vettel": {
+   "name": "Sebastian Vettel",
+   "defaultEra": "2022-2025",
+   "signatures": {
+    "2018-2021": {
+     "driverId": "vettel",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": 66
+      },
+      {
+       "label": "Tyre Management",
+       "value": 20
+      },
+      {
+       "label": "Throttle Application",
+       "value": 54
+      },
+      {
+       "label": "Braking",
+       "value": 43
+      },
+      {
+       "label": "Consistency",
+       "value": 84
+      }
+     ],
+     "cohortAverage": [
+      null,
+      46.5,
+      52.6,
+      49.7,
+      49.2,
+      48.9
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       46.5,
+       52.6,
+       49.7,
+       49.2,
+       48.9
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
+      ],
+      "teammates": [
+       null,
+       38.8,
+       27.6,
+       38.5,
+       39.2,
+       59.4
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      73,
+      57,
+      62,
+      46,
+      94
+     ],
+     "confidenceScore": 0.75,
+     "sampleSize": 2585,
+     "era": {
+      "id": "2018-2021",
+      "label": "Late hybrid",
+      "seasons": "2018–2021",
+      "span": "2018–2021",
+      "rules": "1.6-litre V6 turbo hybrid power units, used since 2014, in the wider, higher-downforce cars on wider tyres introduced in 2017.",
+      "caveat": "The era starts in 2018, the first season of the official timing archive, although its car rules date from 2017."
+     },
+     "source": "timing"
+    },
+    "2022-2025": {
+     "driverId": "vettel",
+     "series": "f1",
+     "axes": [
+      {
+       "label": "Steering Smoothness",
+       "value": null
+      },
+      {
+       "label": "Entry Aggression",
+       "value": 43
+      },
+      {
+       "label": "Tyre Management",
+       "value": 97
+      },
+      {
+       "label": "Throttle Application",
+       "value": 51
+      },
+      {
+       "label": "Braking",
+       "value": 50
+      },
+      {
+       "label": "Consistency",
+       "value": 78
+      }
+     ],
+     "cohortAverage": [
+      null,
+      51.0,
+      46.5,
+      49.2,
+      50.7,
+      48.8
+     ],
+     "cohorts": {
+      "era": [
+       null,
+       51.0,
+       46.5,
+       49.2,
+       50.7,
+       48.8
+      ],
+      "allTime": [
+       null,
+       50.0,
+       50.0,
+       50.0,
+       50.0,
+       50.0
+      ],
+      "champions": [
+       null,
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
+      ],
+      "teammates": [
+       null,
+       19.0,
+       30.0,
+       86.0,
+       65.0,
+       68.0
+      ]
+     },
+     "uncertaintyEnvelope": [
+      null,
+      49,
+      100,
+      74,
+      56,
+      99
+     ],
+     "confidenceScore": 0.69,
+     "sampleSize": 476,
+     "era": {
+      "id": "2022-2025",
+      "label": "Ground effect",
+      "seasons": "2022",
+      "span": "2022–2025",
+      "rules": "Most downforce comes from two Venturi tunnels under the floor, with simplified wings and 18-inch low-profile tyres, so that cars can follow each other more closely."
      },
      "source": "timing"
     }
@@ -4645,41 +7734,41 @@
       },
       {
        "label": "Entry Aggression",
-       "value": 16
+       "value": 23
       },
       {
        "label": "Tyre Management",
-       "value": 54
+       "value": 31
       },
       {
        "label": "Throttle Application",
-       "value": 20
+       "value": 14
       },
       {
        "label": "Braking",
-       "value": 47
+       "value": 54
       },
       {
        "label": "Consistency",
-       "value": 21
+       "value": 20
       }
      ],
      "cohortAverage": [
       null,
-      48.7,
-      47.4,
-      50.0,
-      51.1,
-      48.1
+      51.0,
+      46.5,
+      49.2,
+      50.7,
+      48.8
      ],
      "cohorts": {
       "era": [
        null,
-       48.7,
-       47.4,
-       50.0,
-       51.1,
-       48.1
+       51.0,
+       46.5,
+       49.2,
+       50.7,
+       48.8
       ],
       "allTime": [
        null,
@@ -4691,35 +7780,35 @@
       ],
       "champions": [
        null,
-       87.5,
-       60.0,
-       77.0,
-       69.0,
-       86.0
+       92.0,
+       50.5,
+       76.0,
+       77.8,
+       81.0
       ],
       "teammates": [
        null,
-       30.0,
-       7.0,
-       43.0,
-       32.0,
-       17.0
+       31.0,
+       14.0,
+       41.0,
+       36.0,
+       21.0
       ]
      },
      "uncertaintyEnvelope": [
       null,
-      23,
-      88,
-      31,
-      54,
-      32
+      25,
+      80,
+      22,
+      64,
+      28
      ],
-     "confidenceScore": 0.69,
-     "sampleSize": 1364,
+     "confidenceScore": 0.75,
+     "sampleSize": 1690,
      "era": {
       "id": "2022-2025",
       "label": "Ground effect",
-      "seasons": "2023–2024",
+      "seasons": "2022–2024",
       "span": "2022–2025",
       "rules": "Most downforce comes from two Venturi tunnels under the floor, with simplified wings and 18-inch low-profile tyres, so that cars can follow each other more closely."
      },

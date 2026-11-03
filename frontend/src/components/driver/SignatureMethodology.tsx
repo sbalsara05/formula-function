@@ -104,8 +104,8 @@ export default function SignatureMethodology({ reference, eraId, entityHex }: {
                         )}
                         {era.seasonsMissing.length > 0 && (
                           <div style={{ color: '#666', marginTop: 4 }}>
-                            Not covered: {seasonsList(era.seasonsMissing)}. Official timing data is public from {firstSeason};
-                            earlier seasons need F1 TV access or onboard video.
+                            Not covered: {seasonsList(era.seasonsMissing)}. The official timing archive starts in 2018;
+                            2018–2022 need an F1 TV login to download.
                           </div>
                         )}
                       </td>
@@ -211,10 +211,9 @@ export default function SignatureMethodology({ reference, eraId, entityHex }: {
 
         <Block title="DATA AND COVERAGE">
           <p style={BODY}>
-            Source: the official F1 live-timing feed, read through the OpenF1 historical API: car data (speed, throttle,
-            brake on/off, gear) about 3.7 times a second, car positions, laps, tyre stints, gaps and race-control messages.
-            It does not carry steering angle or brake pressure. {reference.sessions.quali} qualifying sessions
-            and {reference.sessions.race} races are scored.
+            Source: {reference.source}. The feed gives car data (speed, throttle, brake on/off, gear) about 3.7 times a
+            second, car positions, laps, tyre stints, gaps and race-control messages. It does not carry steering angle or
+            brake pressure. {reference.sessions.quali} qualifying sessions and {reference.sessions.race} races are scored.
           </p>
           <div style={{ overflowX: 'auto' }}>
             <table style={{ width: '100%', borderCollapse: 'collapse' }}>

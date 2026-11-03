@@ -16,7 +16,7 @@ import numpy as np
 import pandas as pd
 import requests
 
-from eras import ERA_BY_ID, ERAS, era_for_season
+from eras import ERA_BY_ID, ERAS, era_for_season, seasons_label
 from ingest import PIPELINE_VERSION, driver_slug
 from metrics import DATA_DIR, METRICS_DIR, RAW_DIR
 
@@ -165,6 +165,21 @@ def build_session_scores() -> pd.DataFrame:
     df = df[df.slug.notna()]
     df["era"] = df.season.map(lambda s: era_for_season(int(s))["id"])
     return df
+
+
+SOURCE_NAMES = {"tracinginsights": "TracingInsights' public FastF1 extraction", "fastf1": "FastF1",
+                "openf1": "the OpenF1 historical API"}
+
+
+def source_label() -> str:
+    """Which client supplied which seasons, e.g. 'FastF1 (2018–2022) and the OpenF1 historical API (2023–2026)'."""
+    seasons: dict[str, set[int]] = defaultdict(set)
+    for meta_path in RAW_DIR.glob("*/*_meta.json"):
+        meta = json.loads(meta_path.read_text())
+        seasons[meta.get("source", "openf1")].add(int(meta["season"]))
+    parts = [f"{SOURCE_NAMES.get(src, src)} ({seasons_label(sorted(s))})"
+             for src, s in sorted(seasons.items(), key=lambda kv: min(kv[1]))]
+    return "Official F1 live-timing feed, read through " + " and ".join(parts)
 
 
 # ─── Champions ───────────────────────────────────────────────────────────────
@@ -350,7 +365,7 @@ def aggregate(scores: pd.DataFrame) -> dict:
     return {
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "pipeline_version": PIPELINE_VERSION,
-        "source": "OpenF1 historical API (official F1 live-timing feed)",
+        "source": source_label(),
         "axes": AXES,
         "seasons": sorted(int(s) for s in scores.season.unique()),
         "sessions": {"quali": int(scores[scores.kind == "Q"].session_id.nunique()),

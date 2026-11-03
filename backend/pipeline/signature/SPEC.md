@@ -8,7 +8,7 @@ This document defines what the six-axis driving signature measures, which driver
 cd backend/pipeline
 python3.13 -m venv .venv && .venv/bin/pip install -r signature/requirements.txt
 cd signature
-../.venv/bin/python ingest.py --seasons 2023-2026   # resumable, about 1 minute per weekend
+../.venv/bin/python ingest.py --seasons 2018-2026   # resumable; ~25 s per weekend before 2023, ~1 min after
 ../.venv/bin/python aggregate.py                     # session scores, driver-era scores, comparison groups
 ../.venv/bin/python export.py                        # writes signatures.json and signature-details.json for the frontend
 ../.venv/bin/python review.py --drivers leclerc verstappen norris --era 2022-2025
@@ -17,17 +17,28 @@ cd signature
 
 ## Data source
 
-The official F1 live-timing feed, read through the **OpenF1 historical API** (`api.openf1.org`, no account, seasons 2023 onwards). Per car it provides:
+The official F1 live-timing feed, from two readers of the same feed:
+
+| Seasons | Reader | Account |
+|---|---|---|
+| 2023 onwards | **OpenF1 historical API** (`api.openf1.org`, `openf1.py`) | none |
+| 2018-2022 | **TracingInsights' public extraction** (`github.com/TracingInsights/<season>`, `tracinginsights_source.py`), produced with FastF1 from the official archive | none |
+
+Per car the feed provides:
 
 - Car data at roughly 3.7 Hz: speed, throttle (0-100), brake (on/off only), gear, RPM, DRS.
 - Position data at roughly 3.7 Hz: X/Y/Z on track (decimetres).
-- Laps (lap and sector times, pit-out flag), stints (compound, tyre age), intervals to the car ahead, race-control messages (flags, safety car, deleted laps).
+- Laps (lap and sector times, pit-out flag), stints (compound, tyre age), race-control messages (flags, safety car, deleted laps).
 
 It does **not** provide steering angle or brake pressure. Sessions used: the main Qualifying and the main Race of each Grand Prix weekend. Sprint sessions are excluded in v0.1.
 
-**Why not FastF1.** The plan was FastF1 for 2018 onwards. Since FastF1 3.9 the live-timing archive (`livetiming.formula1.com/static`) answers 401 unless FastF1 signs in with an F1 account that has an active F1 TV subscription (`F1_USERNAME` / `F1_PASSWORD`), and FastF1's public mirror returns 404. OpenF1 serves the same feed without an account but only from 2023. Seasons 2018-2022 (the whole late-hybrid era and the first ground-effect season) therefore need either F1 TV credentials plus a FastF1 adapter in `ingest.py`, or the vision pipeline.
+Both readers answer the same queries inside `ingest.py`, so lap selection, flag periods and metrics are identical. TracingInsights publishes FastF1's merged telemetry (car samples interleaved with interpolated position samples); only the genuine car samples (whole km/h speed, interpolated position) are kept, which reproduces OpenF1's car data with position interpolated onto it. Some of their driver lists omit numbers and names; the car number then comes from the lap table and the names from Jolpica's season driver list.
 
-**Rate limit.** OpenF1 allows 30 requests per minute. `openf1.py` spaces requests 2.2 s apart and honours `retry-after` on 429. Qualifying telemetry is fetched for all cars at once in windows of at most 5 minutes around the selected laps (about 20 requests per weekend).
+**Validation.** Four 2023 weekends (Bahrain, Miami, Singapore, Japan) were ingested from both readers (`--source tracinginsights` with `SIGNATURE_DATA_DIR` pointing elsewhere). The qualifying laps selected and their lap times were identical, and the same corners were found. Per-driver session scores correlated at 0.992-1.000 for Braking, Entry Aggression and Throttle Application (brake point differences about 0.3 m against a field spread of about 4 m) and 0.976-1.000 for Consistency and Tyre Management, with clean-lap counts within 3 per race.
+
+**Why not FastF1 directly.** Since FastF1 3.9 (October 2026) the live-timing archive (`livetiming.formula1.com/static`) answers 401 unless FastF1 signs in with an F1 account that has an F1 TV Access subscription or higher. `fastf1_source.py` (`--source fastf1`) supports that route for anyone with an account. It was used to cross-check TracingInsights against the archive itself on 2019 Bahrain (identical qualifying laps and corners, every axis correlating at 0.997-1.000, identical race stints) and 2018 Bahrain qualifying (0.997-1.000). The archive has no lap start dates for the 2018 Bahrain race either; only the TracingInsights reader rebuilds them from the chequered flag, so use that reader for 2018-2022.
+
+**Rate limit.** OpenF1 allows 30 requests per minute. `openf1.py` spaces requests 2.2 s apart and honours `retry-after` on 429. Qualifying telemetry is fetched for all cars at once in windows of at most 5 minutes around the selected laps (about 20 requests per weekend). TracingInsights files are fetched one at a time, 0.25 s apart, from raw.githubusercontent.com: about 100 small files per weekend (session info, drivers, race control, each driver's lap table, and the selected qualifying laps' telemetry), never whole repositories.
 
 **Corner labels** come from the MultiViewer circuit API (the same source FastF1 uses for `get_circuit_info()`), one request per weekend. They are cosmetic; corners fall back to `C1..Cn`.
 
@@ -106,7 +117,7 @@ A race lap is clean when it is all of the following:
 - not lap 1, not an in-lap or out-lap
 - not overlapping a red flag, safety car, virtual safety car or yellow / double-yellow period
 - on a dry compound
-- at least 1.5 s behind the car ahead at the end of the lap (no traffic or DRS trains). The leader (gap to leader of 0) and lapped gaps count as clear air; laps with no interval reading in the previous 30 s are kept
+- at least 1.5 s behind the car ahead on the same lap when crossing the line (no traffic or DRS trains). The gap comes from the cars' line-crossing times (lap start + lap time), the same for every source; the leader counts as clear air, and the rare lap with no crossing time is kept. OpenF1's separate interval feed agrees to a median 0.03 s but is missing on 20-40 laps per race, so it is not used
 - within 107% of the median of that driver's stint
 
 Stint measurements:
@@ -127,7 +138,7 @@ These are separate from the storytelling eras in `frontend/src/data/f1-eras.ts`.
 
 Signatures are computed per driver per era. The driver page shows the driver's most recent era that has at least one scored axis.
 
-Each era in `eras.py` also carries `rules` (what defines the era's car regulations) and an optional `caveat`, shown in the driver page's "How is this calculated?" panel and on the full metrics page. Sources: formula1.com regulation explainers (the 2022 car; the 2026 rule changes and power units) and the F1 2026 terminology update (corp.formula1.com). The 2026 caveat matters for reading the axes: energy recovery (lifting before braking, harvesting at full throttle) shows up in throttle and braking traces. With OpenF1 as the source, `2018-2021` has no data and `2022-2025` is built from 2023-2025 only; the exported era carries the seasons it actually covers.
+Each era in `eras.py` also carries `rules` (what defines the era's car regulations) and an optional `caveat`, shown in the driver page's "How is this calculated?" panel and on the full metrics page. Sources: formula1.com regulation explainers (the 2022 car; the 2026 rule changes and power units) and the F1 2026 terminology update (corp.formula1.com). The 2026 caveat matters for reading the axes: energy recovery (lifting before braking, harvesting at full throttle) shows up in throttle and braking traces. The exported era carries the seasons it actually covers.
 
 ## From measurements to a 0-100 score
 
@@ -149,7 +160,7 @@ Each group is a polygon of mean percentiles over its members, per axis.
 | ERA AVG | Every driver-era in the same regulation era |
 | TEAMMATES | Drivers who shared a team with the subject in that era, weighted by sessions shared |
 | CHAMPIONS | Driver-eras of world champions in the eras they won titles (from final Jolpica standings of completed seasons) |
-| ALL-TIME | Every driver-era in the dataset (2023 onwards until F1 TV access or the vision pipeline extends it back) |
+| ALL-TIME | Every driver-era in the dataset (2018 onwards until the vision pipeline extends it back) |
 
 Because every measurement is relative to the field, ERA AVG and ALL-TIME sit near 50 on every axis: a "typical driver" reference ring. TEAMMATES and CHAMPIONS are where the comparison shape moves.
 
@@ -164,7 +175,6 @@ Because every measurement is relative to the field, ERA AVG and ALL-TIME sit nea
 ## Out of scope for v0.1
 
 - Steering Smoothness (vision pipeline).
-- Seasons 2018-2022 (need F1 TV credentials for FastF1, see "Why not FastF1").
 - Seasons before 2018, F2 and F3 (no public telemetry; vision pipeline).
 - Sprint sessions.
 - F2/F3 axis sets (Race Craft, Quali Pace, Wheel-to-Wheel, First-Lap Aggression).

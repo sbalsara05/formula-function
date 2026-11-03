@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 from pathlib import Path
 
 import numpy as np
@@ -16,7 +17,8 @@ import pandas as pd
 
 from corners import build_reference_line, detect_corners, project_lap, speed_distance
 
-DATA_DIR = Path(__file__).resolve().parent / "data"
+# SIGNATURE_DATA_DIR keeps a validation run (e.g. a second source for the same season) apart from the real data.
+DATA_DIR = Path(os.environ.get("SIGNATURE_DATA_DIR") or Path(__file__).resolve().parent / "data")
 RAW_DIR = DATA_DIR / "raw"
 METRICS_DIR = DATA_DIR / "metrics"
 
@@ -25,7 +27,8 @@ THROTTLE_LIFT_PCT = 10.0
 MIN_BRAKE_RUN_SAMPLES = 2
 MIN_BRAKE_DROP_KMH = 15.0
 
-DRY_COMPOUNDS = {"SOFT", "MEDIUM", "HARD"}
+# 2018 used named compounds (hypersoft to superhard); from 2019 the feed reports SOFT/MEDIUM/HARD.
+DRY_COMPOUNDS = {"HYPERSOFT", "ULTRASOFT", "SUPERSOFT", "SOFT", "MEDIUM", "HARD", "SUPERHARD"}
 FUEL_EFFECT_S_PER_LAP = 0.055
 MIN_GAP_AHEAD_S = 1.5
 STINT_PACE_CUTOFF = 1.07
@@ -132,8 +135,25 @@ def quali_corner_metrics(laps: pd.DataFrame, tel: pd.DataFrame,
 
 # ─── Race stints ─────────────────────────────────────────────────────────────
 
+def crossing_gaps(race_laps: pd.DataFrame) -> pd.Series:
+    """Seconds to the car ahead on the same lap when crossing the line (inf for the leader).
+
+    Computed from lap start + lap time (or the next lap's start), so every source gets the same
+    measurement; OpenF1's separate interval feed is sampled every few seconds and has gaps."""
+    laps = race_laps.sort_values(["driver_number", "lap_number"])
+    start = pd.to_datetime(laps.date_start, utc=True, format="ISO8601")
+    end = (start + pd.to_timedelta(laps.lap_duration, unit="s")).fillna(start.groupby(laps.driver_number).shift(-1))
+    gap = pd.Series(np.nan, index=laps.index)
+    crossed = end.notna()
+    for _, idx in laps[crossed].groupby("lap_number").groups.items():
+        order = end[idx].sort_values()
+        gap[order.index] = order.diff().dt.total_seconds().fillna(np.inf).to_numpy()
+    return gap.reindex(race_laps.index)
+
+
 def clean_race_laps(race_laps: pd.DataFrame) -> pd.DataFrame:
-    gap_ok = race_laps.gap_ahead.isna() | (race_laps.gap_ahead >= MIN_GAP_AHEAD_S)
+    gap = crossing_gaps(race_laps)
+    gap_ok = gap.isna() | (gap >= MIN_GAP_AHEAD_S)
     clean = race_laps[
         (race_laps.lap_number >= 2)
         & ~race_laps.pit_out & ~race_laps.in_lap & ~race_laps.neutralised & ~race_laps.yellow

@@ -219,7 +219,7 @@ export default function DrivingSignatureModule({
             </p>
             <p style={{ fontSize: 13, color: '#777', margin: '0 auto', maxWidth: 460, lineHeight: 1.6 }}>
               {series === 'f1'
-                ? 'Official timing telemetry covers Formula 1 from 2023 onwards, and a signature needs at least five sessions in one regulation era. Earlier careers will come from the onboard vision pipeline.'
+                ? 'Official timing telemetry covers Formula 1 from 2018 onwards, and a signature needs at least five sessions in one regulation era. Earlier careers will come from the onboard vision pipeline.'
                 : `There is no public telemetry for ${series.toUpperCase()}. This signature will come from the onboard vision pipeline.`}
             </p>
           </div>
