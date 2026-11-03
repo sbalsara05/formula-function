@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import CyclingReel from './CyclingReel'
 import EraImage from './EraImage'
-import RadarChart from './RadarChart'
+import DrivingSignatureModule from './DrivingSignatureModule'
 import TrajectoryModule from './TrajectoryModule'
 import FallbackImg from '@/components/ui/FallbackImg'
 import type {
@@ -18,7 +18,7 @@ import { SERIES_LABELS, SERIES_COLOR_VAR } from '@/lib/constants'
 
 /* ─── Entity color resolution ───────────────────────────────────────────────── */
 
-const ENTITY_COLOR_HEX: Record<string, string> = {
+export const ENTITY_COLOR_HEX: Record<string, string> = {
   // Named drivers
   vettel: '#1E3A8A', leclerc: '#DC0000', hamilton: '#00D2BE',
   senna: '#FF8700', norris: '#FF8000', verstappen: '#1E3A8A',
@@ -126,7 +126,7 @@ function DriverHeader({ driver, series }: { driver: Driver; series: Series }) {
         <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: 1.5, color: '#666' }}>
           <Link href={`/f/${seriesNum}`} style={{ textDecoration: 'none', color: 'inherit' }}>f({seriesNum})</Link>
           <span style={{ color: '#333' }}>/</span>
-          <span>DRIVERS</span>
+          <Link href={`/f/${seriesNum}/drivers`} style={{ textDecoration: 'none', color: 'inherit' }}>DRIVERS</Link>
           <span style={{ color: '#333' }}>/</span>
           <span style={{ color: '#aaa' }}>{driver.shortName.toUpperCase()}</span>
         </div>
@@ -356,88 +356,6 @@ function ErasStrip({ eras }: { eras: DriverEra[] }) {
   )
 }
 
-function DrivingSignatureModule({
-  signature, seriesColor, entityHex,
-}: {
-  signature: DrivingSignature
-  seriesColor: string
-  entityHex: string
-}) {
-  const sampleNote = signature.sampleSize
-    ? `Extracted from ${signature.sampleSize.toLocaleString()} onboard laps.`
-    : ''
-
-  return (
-    <div style={{ padding: '2.5rem 1.75rem 2rem' }}>
-      <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', marginBottom: 6 }}>
-        <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: 2, color: seriesColor, margin: 0 }}>
-          DRIVING SIGNATURE
-        </p>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontFamily: 'var(--font-mono)', fontSize: 9, color: '#555' }}>
-          <span>COMPARE:</span>
-          {['ERA AVG', 'ALL-TIME', 'CHAMPIONS', 'TEAMMATES'].map((pill, i) => (
-            <span key={pill} style={{
-              padding: '3px 8px',
-              border: i === 0 ? '0.5px solid #2a2a2a' : 'none',
-              borderRadius: 3,
-              color: i === 0 ? '#fff' : '#555',
-              background: i === 0 ? '#111' : 'transparent',
-              cursor: 'pointer',
-            }}>
-              {pill}
-            </span>
-          ))}
-        </div>
-      </div>
-      <p style={{ fontSize: 13, color: '#888', margin: '0 0 24px', maxWidth: 520, lineHeight: 1.6 }}>
-        The shape of their driving — {sampleNote} Compared against the era cohort.
-      </p>
-
-      <div style={{ background: '#080808', border: '1px solid #1a1a1a', borderRadius: 10, padding: 32 }}>
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 16 }}>
-          <div>
-            <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, letterSpacing: 1.5, color: '#555', margin: '0 0 4px' }}>
-              THE FINGERPRINT
-            </p>
-            <p style={{ fontSize: 15, color: '#ccc', margin: 0, fontWeight: 400 }}>
-              Six-axis breakdown: steering smoothness, entry aggression, tyre management, throttle application, braking, and consistency.
-            </p>
-          </div>
-          <div style={{ fontFamily: 'var(--font-mono)', fontSize: 9, color: '#666', letterSpacing: 1 }}>
-            vs. ERA AVG
-          </div>
-        </div>
-
-        <div style={{ display: 'flex', justifyContent: 'center', padding: '24px 0' }}>
-          <RadarChart signature={signature} entityColor={entityHex} />
-        </div>
-
-        {/* Legend */}
-        <div style={{ display: 'flex', gap: 20, justifyContent: 'center', marginTop: 4, fontFamily: 'var(--font-mono)', fontSize: 10 }}>
-          <span style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
-            <span style={{ width: 10, height: 10, background: entityHex, borderRadius: 1, display: 'inline-block' }} />
-            <span style={{ color: '#ccc', letterSpacing: 1 }}>DRIVER</span>
-          </span>
-          <span style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
-            <span style={{ width: 10, height: 10, border: '1px dashed #888', borderRadius: 1, display: 'inline-block' }} />
-            <span style={{ color: '#888', letterSpacing: 1 }}>ERA AVG</span>
-          </span>
-        </div>
-
-        <div style={{ borderTop: '0.5px solid #1a1a1a', marginTop: 28, paddingTop: 14, display: 'flex', justifyContent: 'flex-end' }}>
-          <button style={{
-            background: 'transparent', border: '0.5px solid #2a2a2a', color: '#aaa',
-            fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: 1,
-            padding: '7px 13px', borderRadius: 4, cursor: 'pointer',
-          }}>
-            FULL METRICS ↗
-          </button>
-        </div>
-      </div>
-    </div>
-  )
-}
-
 function SetupStyleModule({
   report, seriesColor, entityHex,
 }: {
@@ -540,7 +458,7 @@ export interface DriverPageProps {
   driver: Driver
   stats: DriverStats
   eras: DriverEra[]
-  signature: DrivingSignature
+  signature: DrivingSignature | null // null = no measured signature yet (shows "signature pending")
   reelSlides: ReelSlide[]
   scoutingReport: ScoutingReport
   series: Series
@@ -582,6 +500,7 @@ export default function DriverPage({
       <ErasStrip eras={eras} />
       <DrivingSignatureModule
         signature={signature}
+        series={series}
         seriesColor={seriesHex}
         entityHex={entityHex}
       />

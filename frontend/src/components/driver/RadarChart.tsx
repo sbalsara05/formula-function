@@ -3,6 +3,7 @@ import type { DrivingSignature } from '@/lib/types'
 interface Props {
   signature: DrivingSignature
   entityColor: string // resolved hex, e.g. "#1E3A8A"
+  comparison?: (number | null)[] // dashed comparison polygon; defaults to signature.cohortAverage
 }
 
 const R = 140 // outer ring radius
@@ -23,11 +24,11 @@ function hexPoints(radius: number): string {
   }).join(' ')
 }
 
-function dataPoints(values: number[]): string {
-  return values.map((v, i) => {
-    const [x, y] = polarPoint(v, i)
-    return `${x.toFixed(1)},${y.toFixed(1)}`
-  }).join(' ')
+// Null axes are skipped, so the polygon joins the measured neighbours directly.
+function dataPoints(values: (number | null)[]): string | null {
+  const points = values.flatMap((v, i) => (v === null ? [] : [polarPoint(v, i)]))
+  if (points.length < 3) return null
+  return points.map(([x, y]) => `${x.toFixed(1)},${y.toFixed(1)}`).join(' ')
 }
 
 function labelAnchor(axisIndex: number): 'middle' | 'start' | 'end' {
@@ -43,14 +44,15 @@ function labelBaseline(axisIndex: number): DominantBaseline {
   return 'middle'
 }
 
-export default function RadarChart({ signature, entityColor }: Props) {
+export default function RadarChart({ signature, entityColor, comparison }: Props) {
   const driverValues = signature.axes.map((a) => a.value)
-  const cohortValues = signature.cohortAverage
+  const cohortPoints = dataPoints(comparison ?? signature.cohortAverage)
+  const driverPoints = dataPoints(driverValues)
 
   return (
     <svg
-      viewBox="0 0 340 340"
-      style={{ width: '100%', maxWidth: 420, height: 'auto' }}
+      viewBox="-65 -20 470 372"
+      style={{ width: '100%', maxWidth: 580, height: 'auto' }}
       role="img"
       aria-label={`Driving signature radar chart`}
     >
@@ -80,26 +82,50 @@ export default function RadarChart({ signature, entityColor }: Props) {
       })}
 
       {/* Cohort average polygon (dashed gray) */}
-      <polygon
-        points={dataPoints(cohortValues)}
-        fill="#444"
-        fillOpacity={0.15}
-        stroke="#555"
-        strokeWidth={0.5}
-        strokeDasharray="2,2"
-      />
+      {cohortPoints && (
+        <polygon
+          points={cohortPoints}
+          fill="#444"
+          fillOpacity={0.15}
+          stroke="#555"
+          strokeWidth={0.5}
+          strokeDasharray="2,2"
+        />
+      )}
 
       {/* Driver polygon */}
-      <polygon
-        points={dataPoints(driverValues)}
-        fill={entityColor}
-        fillOpacity={0.18}
-        stroke={entityColor}
-        strokeWidth={1.5}
-      />
+      {driverPoints && (
+        <polygon
+          points={driverPoints}
+          fill={entityColor}
+          fillOpacity={0.18}
+          stroke={entityColor}
+          strokeWidth={1.5}
+        />
+      )}
+
+      {/* Pending axes: dashed spoke with a hollow end marker, no value */}
+      {driverValues.map((v, i) => {
+        if (v !== null) return null
+        const [x, y] = polarPoint(100, i)
+        return (
+          <g key={`pending-${i}`}>
+            <line
+              x1={CX} y1={CY}
+              x2={x.toFixed(1)} y2={y.toFixed(1)}
+              stroke={entityColor}
+              strokeOpacity={0.45}
+              strokeWidth={1}
+              strokeDasharray="3,3"
+            />
+            <circle cx={x.toFixed(1)} cy={y.toFixed(1)} r={3} fill="#000" stroke={entityColor} strokeWidth={1} />
+          </g>
+        )
+      })}
 
       {/* Vertex dots */}
       {driverValues.map((v, i) => {
+        if (v === null) return null
         const [x, y] = polarPoint(v, i)
         return <circle key={i} cx={x.toFixed(1)} cy={y.toFixed(1)} r={3} fill={entityColor} />
       })}
@@ -114,27 +140,45 @@ export default function RadarChart({ signature, entityColor }: Props) {
         // Split long labels to two tspan lines for the top axis
         const words = axis.label.toUpperCase().split(' ')
         const needsSplit = words.length > 1 && i === 0
+        // "PENDING" tag sits between the label and the outer ring
+        const pendingY = i === 0 ? y + 16 : i === 3 ? y - 9 : y + 11
         return (
-          <text
-            key={i}
-            x={x.toFixed(1)}
-            y={y.toFixed(1)}
-            textAnchor={labelAnchor(i)}
-            dominantBaseline={labelBaseline(i)}
-            fontFamily="monospace"
-            fontSize={9}
-            fill="#888"
-            letterSpacing={0.5}
-          >
-            {needsSplit ? (
-              <>
-                <tspan x={x.toFixed(1)} dy="-0.6em">{words.slice(0, Math.ceil(words.length / 2)).join(' ')}</tspan>
-                <tspan x={x.toFixed(1)} dy="1.2em">{words.slice(Math.ceil(words.length / 2)).join(' ')}</tspan>
-              </>
-            ) : (
-              axis.label.toUpperCase()
+          <g key={i}>
+            <text
+              x={x.toFixed(1)}
+              y={y.toFixed(1)}
+              textAnchor={labelAnchor(i)}
+              dominantBaseline={labelBaseline(i)}
+              fontFamily="monospace"
+              fontSize={9}
+              fill={axis.value === null ? '#555' : '#888'}
+              letterSpacing={0.5}
+            >
+              {needsSplit ? (
+                <>
+                  <tspan x={x.toFixed(1)} dy="-0.6em">{words.slice(0, Math.ceil(words.length / 2)).join(' ')}</tspan>
+                  <tspan x={x.toFixed(1)} dy="1.2em">{words.slice(Math.ceil(words.length / 2)).join(' ')}</tspan>
+                </>
+              ) : (
+                axis.label.toUpperCase()
+              )}
+            </text>
+            {axis.value === null && (
+              <text
+                x={x.toFixed(1)}
+                y={pendingY.toFixed(1)}
+                textAnchor={labelAnchor(i)}
+                dominantBaseline="middle"
+                fontFamily="monospace"
+                fontSize={7}
+                fill={entityColor}
+                fillOpacity={0.7}
+                letterSpacing={1}
+              >
+                PENDING
+              </text>
             )}
-          </text>
+          </g>
         )
       })}
     </svg>

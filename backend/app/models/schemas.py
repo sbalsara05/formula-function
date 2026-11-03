@@ -45,17 +45,32 @@ class DriverStats(BaseModel):
 
 class SignatureAxis(BaseModel):
     label: str
-    value: float = Field(ge=0, le=100)
+    value: Optional[float] = Field(default=None, ge=0, le=100)
+
+
+SignatureCohortKey = Literal["era", "allTime", "champions", "teammates"]
+
+
+class SignatureEra(BaseModel):
+    id: str
+    label: str
+    seasons: str
+    span: Optional[str] = None
+    rules: Optional[str] = None
+    caveat: Optional[str] = None
 
 
 class DrivingSignature(BaseModel):
     driver_id: str
     series: Series
     axes: list[SignatureAxis]
-    cohort_average: list[float]
-    uncertainty_envelope: Optional[list[float]] = None
-    confidence_score: float = Field(ge=0, le=1)
+    cohort_average: list[Optional[float]]
+    cohorts: Optional[dict[SignatureCohortKey, list[Optional[float]]]] = None
+    uncertainty_envelope: Optional[list[Optional[float]]] = None
+    confidence_score: Optional[float] = Field(default=None, ge=0, le=1)
     sample_size: Optional[int] = None
+    era: Optional[SignatureEra] = None
+    source: Optional[Literal["timing", "vision"]] = None
 
 
 # ─── Team ──────────────────────────────────────────────────────────────────────
